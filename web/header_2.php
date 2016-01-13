@@ -85,18 +85,18 @@
 </div>
 <div class="header2">
 
-	<img src="/images/logo.png" href="index.php" alt="Machinovate Logo" style="width:180px;height:100px;margin-left:50px;margin-top:-10px;"/>
+	<img src="/images/logo.png" href="/web/index.php/" alt="Machinovate Logo" style="width:180px;height:100px;margin-left:50px;margin-top:-10px;"/>
 	 <div class="header_buttons">
 	  <div class="navbar">	         
-	 <a href="index.php"  role="button">Home</a>
+	 <a href="/web/index.php/"  role="button">Home</a>
 	 <a style="font-size:20px;"><b>|</b> 
 	 <a href="index.html"  role="button">Products and Services</a>
 	 <a style="font-size:20px;"><b>|</b> 
-	 <a href="index.html"  role="button">Events</a>
+	 <a href="/web/events.php/"  role="button">Events</a>
 	 <a style="font-size:20px;"><b>|</b> 
-	 <a href="index.html"  role="button">About Us</a>
+	 <a href="/web/about.php/"  role="button">About Us</a>
 	 <a style="font-size:20px;"><b>|</b> 
-	 <a href="index.html"  role="button">Sitemap</a> 	 
+	 <a href="/web/sitemap.php/"  role="button">Sitemap</a> 	 
 	 </div>
 	 </div>
 	
