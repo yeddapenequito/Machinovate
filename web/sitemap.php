@@ -9,11 +9,17 @@
 <link rel="stylesheet" href='/bootstrap/css/bootstrap-responsive.min'/>
 <style>
 .text {
+	
     margin-left: auto;
-	margin-right: 30px;
-	margin-top:60px;
+	margin-right:50px;
+	margin-top:-400px;
     width:29em;
 	text-align: justify;
+}
+.sitemap{
+	
+	margin-left:80px;
+	margin-top: 30px;
 }
 
 </style>
@@ -21,7 +27,11 @@
 <body>
 <?php include 'header.php';?>
 <div id="container-fluid">
-	
+<div class="sitemap">
+<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+width="700" height="440" src="https://maps.google.com/maps?hl=en&q= King Center Bldg, Sgt.
+Rivera St, Quezon City, Metro Manila, Philippines&ie=UTF&&t=roadmap&z=19&iwloc=B&output=embed"></iframe>
+</div>
 	<div class="text">
 	<p><b>MACHINOVATE INTERNATIONAL INC.</b></p>
 	<p><b>Address</b></p>
