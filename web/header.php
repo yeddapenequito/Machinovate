@@ -71,13 +71,15 @@
 </head>
 <body>
 	<header class="container-fluid">
-	
+		<div class="container">
+		
+		</div>
 	</header>
 	<div class='container'>
 		<div class='row'>
 			
 			<div class="header">
-				<div class="contact"><p><span>Contact Us</span> <img id="s-Telephone_Image" alt="image" src="/images/phone.png" width="12" height="12"/> +632 404 6676/+632 623 2988</p>
+				<div class="contact"><p><span>Contact Us</span> +632 404 6676/+632 623 2988</p>
 					
 				</div>
 				
@@ -110,7 +112,7 @@
 									<div class="form-group" style="margin-top: -65px;margin-left: 1030px;">
 										<input type="text" class="form-control" placeholder="Search"></input>
 									</div>
-									<img src="/images/search.png" alt="Search" style="width:50px;height:50px;margin-left:1250px;margin-top:-80px;">
+									
 								</div>
 								
 							</div>
