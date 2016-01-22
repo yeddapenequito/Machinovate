@@ -4,9 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
 <link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css'/>
-<link rel="stylesheet" href='/bootstrap/css/bootstrap.css'/>
-<link rel="stylesheet" href='/bootstrap/css/bootstrap-responsive'/>
-<link rel="stylesheet" href='/bootstrap/css/bootstrap-responsive.min'/>
 </head>
 <style>
 @font-face {
