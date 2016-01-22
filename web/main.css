@@ -1,0 +1,28 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	/* based from footer height */
+	margin-bottom: 50px;
+}
+
+/* Footer styles
+------------------------------------------------- 
+This is modified and obtained from	https://getbootstrap.com/examples/sticky-footer/sticky-footer.css
+*/
+
+footer {
+	position: absolute;
+	bottom: 0;
+	clear: both;
+	width: 100%;
+	height: 50px;
+	color: white;
+	background-color: #132c55;
+}
+footer p {
+	padding: 1em;
+}
