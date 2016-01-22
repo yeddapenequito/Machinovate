@@ -8,7 +8,7 @@
 </head>
 <body>
 <footer>
-(c) Machinovate International Incorporated 2016
+	&copy; Machinovate International Incorporated 2016
 </footer>
 </body>
 </html>
