@@ -5,7 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./styles/bootstrap.min.css"/>
 		<title></title>
-		<link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css'/>
 	</head>
 	<style>
 		@font-face {
@@ -113,7 +112,7 @@
 								
 							</div>
 						</div>
-						<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
-						<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
-					</body>
-				</html>				
+		<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
+	</body>
+</html>				
