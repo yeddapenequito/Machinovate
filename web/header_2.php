@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
-<link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css'/>
-<link rel="stylesheet" href='/bootstrap/css/bootstrap.css'/>
-<link rel="stylesheet" href='/bootstrap/css/bootstrap-responsive'/>
-<link rel="stylesheet" href='/bootstrap/css/bootstrap-responsive.min'/>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./main.css">
+		<title></title>
 </head>
 <style>
 @font-face {
