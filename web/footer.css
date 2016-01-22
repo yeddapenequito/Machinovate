@@ -1,11 +1,3 @@
-@font-face {
-font-family: Roboto-Regular;
-src: url(fonts/Roboto-Regular.ttf);
-}
-@font-face {
-font-family:IOS8-Icons-Regular;
-src: url(fonts/IOS8-Icons-Regular.tff);
-}
 header {
 background-color:#153a7e;
 color:white;
