@@ -70,7 +70,8 @@
 	</style>
 </head>
 <body>
-	<header>
+	<header class="container-fluid">
+	
 	</header>
 	<div class='container'>
 		<div class='row'>
@@ -101,7 +102,7 @@
 								<a style="font-size:20px;"><b>|</b> 
 									<a href="/web/events.php/"  role="button">Events</a>
 									<a style="font-size:20px;"><b>|</b> 
-										<a href="/web/about.php/"  role="button">About Us</a>
+									<a href="/web/about.php/"  role="button">About Us</a>
 										<a style="font-size:20px;"><b>|</b> 
 											<a href="/web/sitemap.php/"  role="button">Sitemap</a> 	 
 										</div>
