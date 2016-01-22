@@ -7,7 +7,7 @@
 <title></title>
 </head>
 <body>
-<footer class="site-footer">
+<footer>
 (c) Machinovate International Incorporated 2016
 </footer>
 </body>
