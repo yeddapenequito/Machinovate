@@ -7,69 +7,6 @@
 		<link rel="stylesheet" href="./styles/main.css">
 		<title></title>
 	</head>
-	<style>
-		@font-face {
-        font-family: Roboto-Regular;
-        src: url(fonts/Roboto-Regular.ttf);
-		}
-		@font-face {
-		font-family:IOS8-Icons-Regular;
-        src: url(fonts/IOS8-Icons-Regular.tff);
-		}
-		
-		.header{
-		background-color:#153a7e;
-		color:white;
-		padding:0px; 
-		width:100%;
-		
-		width:1360px;
-		margin-left:-190px;
-		}
-		.header2{
-		background-color:#132c55;
-		color:white;
-		padding:0px; 
-		width:100%;
-		width:1360px;
-		margin-left:-190px;
-		height:80px;
-		
-		}
-		.contact{
-		text-align:left;
-		display:inline-block;
-		margin-left: 50px;
-		margin-top: 10px;
-		}
-		.employee{
-		text-align:right;
-		display:inline-block;
-		margin-top: -40px;
-		margin-left: 700px;
-		}-->
-		.login{
-		display:inline-block;
-		text-align:right;
-		display:inline-block;
-		margin-top: -40px;
-		margin-right: -10px;
-		}
-		.header_buttons{
-		display:inline-block;
-		margin-left: 200px;
-		font-color:white;
-		margin-top:0px;
-		}
-		.header_buttons a {
-		color:white;
-		}
-		.navbar{
-		margin-top:-10px;
-		
-		}
-	</style>
-</head>
 <body>
 	<header class="container-fluid">
 		<div class="container">
