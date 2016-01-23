@@ -9,8 +9,12 @@
 	</head>
 <body>
 	<header class="container-fluid">
-		<div class="container">
-		
+		<div class="panel panel-default">
+			<address class="panel-body">
+				Contact Us
+				<span class="glyphicon glyphicon-earphone"></span>	
+				<span class="text-info">+632 404 6676</span>/
+				<span class="text-info">+632 623 2988</span>
 		</div>
 	</header>
 	<div class='container'>
