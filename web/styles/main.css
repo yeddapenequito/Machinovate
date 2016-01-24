@@ -10,8 +10,9 @@ body {
 }
 
 /* Footer styles
-------------------------------------------------- 
-This is modified and obtained from	https://getbootstrap.com/examples/sticky-footer/sticky-footer.css
+	------------------------------------------------- 
+The following footer styles are modified and obtained from
+https://getbootstrap.com/examples/sticky-footer/sticky-footer.css
 */
 
 footer {
@@ -25,4 +26,26 @@ footer {
 }
 footer p {
 	padding: 1em;
+}
+
+
+/* Top header styles
+---------------------------------------------------*/
+
+#top-header {
+padding: .5em;
+}
+#top-header #contact-us {
+float: left;
+padding-top: .3em;
+}
+#top-header #employee-login {
+float: right;
+}
+#top-header #employee-login #are-you-an-employee {
+font-style: italic;
+margin-right: .5em;
+}
+#top-header #employee-login .btn {
+width: 5em;
 }
