@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="./styles/bootstrap.min.css">
-		<link rel="stylesheet" href="./main.css">
+		<link rel="stylesheet" href="/web/styles/styles/bootstrap.min.css">
+		<link rel="stylesheet" href="/web/styles/main.css">
 		<title></title>
 		<style>
 			.text {

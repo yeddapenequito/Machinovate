@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="./styles/bootstrap.min.css">
-		<link rel="stylesheet" href="./main.css">
+		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
+		<link rel="stylesheet" href="/web/styles/main.css">
 		<title></title>
 		<style>
 			.text {
@@ -38,8 +38,8 @@
 		</div>	
 		
 		<?php include 'footer.php';?>
-		<script type="text/javascript" src="/scripts/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
-		<script type="text/javascript" src="/scripts/bootstrap.js"></script>
+		<script type="text/javascript" src="/web/scripts/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/web/scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/web/scripts/bootstrap.js"></script>
 	</body>
 </html>

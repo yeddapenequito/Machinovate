@@ -3,17 +3,19 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="./styles/bootstrap.min.css">
-		<link rel="stylesheet" href="./main.css">
+		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
+		<link rel="stylesheet" href="/web/styles/main.css">
 		<title></title>
 		<style>
 			.row h3{
 			margin-left:350px;
-			margin-top:30px;
+			margin-top:180px;
+			position:absolute;
 			}
 			.row1{
-			margin-left:350px;
-			margin-top:30px;
+			margin-left:30px;
+			margin-top:220px;
+			
 			}
 		</style>
 	</head>

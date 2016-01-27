@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="./styles/bootstrap.min.css">
-		<link rel="stylesheet" href="./main.css">
+		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
+		<link rel="stylesheet" href="/web/styles/main.css">
 		<title></title>
 	</head>
 	<style>
@@ -22,9 +22,9 @@
 		color:white;
 		padding:0px; 
 		width:100%;
-		
+		position:absolute;
 		width:1360px;
-		margin-left:-190px;
+		margin-left:-100px;
 		}
 		.header2{
 		background-color:#132c55;
@@ -32,9 +32,10 @@
 		padding:0px; 
 		width:100%;
 		width:1360px;
-		margin-left:-190px;
+		margin-left:-100px;
 		height:80px;
-		
+		position:absolute;
+		margin-top:40px;
 		}
 		.contact{
 		text-align:left;
