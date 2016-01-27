@@ -6,60 +6,80 @@
 		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
 		<link rel="stylesheet" href="/web/styles/main.css">
 		<title></title>
+		<style>
+			#bottom-header {
+			background-color: #153a7e;
+			height: 5em;
+			}
+			#bottom-header .navbar-header .navbar-brand img{
+			width: 6em;
+			height: 2em;
+			}
+			#bottom-header .right-inner-addon {
+		    position: relative;
+			}
+			#bottom-header .right-inner-addon input {
+				padding-right: 30px;    
+			}
+			#bottom-header .right-inner-addon i {
+				position: absolute;
+				right: 0px;
+				padding: 10px 12px;
+				pointer-events: none;
+			}
+		</style>
 	</head>
-<body>
-	<header class="container-fluid">
-		<div class="panel panel-default">
-			<address class="panel-body">
+	<body>
+		<header id="top-header" class="container-fluid">
+			<address id="contact-us">
 				Contact Us
 				<span class="glyphicon glyphicon-earphone"></span>	
 				<span class="text-info">+632 404 6676</span>/
 				<span class="text-info">+632 623 2988</span>
-		</div>
-	</header>
-	<div class='container'>
-		<div class='row'>
-			
-			<div class="header">
-				<div class="contact"><p><span>Contact Us</span> +632 404 6676/+632 623 2988</p>
-					
+			</address>
+			<div id="employee-login">
+				<span id="are-you-an-employee">Are you an employee?</span>
+				<a href="/web/login.php/" class="btn btn-primary btn-sm" role="button">Login</a> 
+			</div>
+		</header>
+		
+		<!-- Static navbar -->
+		<nav id="bottom-header" class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="./images/machinovate-logo-1.png" alt="machinovate logo 1">
+					</a>
 				</div>
-				
-				<div class="employee">
-					<p><i>Are you an employee? </i></p> 
-				</div>
-				<div class="login">
-					<a>..
-						<a href="/web/login.php/" class="btn btn-info" role="button">Login</a>
-						
-					</div>
-					
-				</div>
-				<div class="header2">
-					
-					<img src="/images/logo.png" href="/web/index.php/" alt="Machinovate Logo" style="width:180px;height:100px;margin-left:50px;margin-top:-10px;"/>
-					<div class="header_buttons">
-						<div class="navbar">	         
-							<a href="/web/index.php/"  role="button">Home</a>
-							<a style="font-size:20px;"><b>|</b> 
-								<a href="index.html"  role="button">Products and Services</a>
-								<a style="font-size:20px;"><b>|</b> 
-									<a href="/web/events.php/"  role="button">Events</a>
-									<a style="font-size:20px;"><b>|</b> 
-									<a href="/web/about.php/"  role="button">About Us</a>
-										<a style="font-size:20px;"><b>|</b> 
-											<a href="/web/sitemap.php/"  role="button">Sitemap</a> 	 
-										</div>
-									</div>
-									<div class="form-group" style="margin-top: -65px;margin-left: 1030px;">
-										<input type="text" class="form-control" placeholder="Search"></input>
-									</div>
-									
-								</div>
-								
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="index.php">Home</a></li>
+						<li><a href="#">Products and Services</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Sitemap</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<div class="form-group">
+							<div class="right-inner-addon ">
+								<i class="glyphicon glyphicon-search"></i>
+								<input type="search"
+									   class="form-control" 
+									   placeholder="Search" />
 							</div>
 						</div>
-		<script type="text/javascript" src="/web/scripts/jquery-2.2.0.min.js"></script>
-		<script type="text/javascript" src="/web/scripts/bootstrap.min.js"></script>
+
+					</ul>
+				</div> <!-- /.navbar-collapse -->
+			</div>  <!-- /.container-fluid -->
+		</nav>
+		
+		<script type="text/javascript" src="./scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
+
 	</body>
-</html>				
+</html>									
