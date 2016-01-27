@@ -3,22 +3,22 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="./styles/bootstrap.min.css">
-		<link rel="stylesheet" href="./main.css">
+		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
+		<link rel="stylesheet" href="/web/styles/main.css">
 		<title></title>
 		<style>
-			.right{
+			.rightt{
 			position:absolute;
-			margin-top:70px;
+			margin-top:180px;
 			margin-left:500px;
 			}
 			.box
 			{
 			width: 400px;
-			height:380px;
+			height:430px;
 			padding: 25px;
 			border: 0.2em solid;
-			margin: 25px;
+			margin: 35px;
 			
 			}
 			.box{
@@ -26,10 +26,11 @@
 			margin-top:60px;
 			margin-left:-50px;
 			margin-bottom:10px;
+			margin-top:150px;
 			}
 			.right_buttons{
 			position:absolute;
-			margin-top:370px;
+			margin-top:470px;
 			margin-left:500px;
 			}
 		</style>
@@ -37,7 +38,7 @@
 	<body>
 		<?php include 'header_3.php';?>
 		<div class="container">
-			<div class="right">
+			<div class="rightt">
 				<h1><b>Announcements</b></h1>
 				<p>Place announcements here </p>
 			</div>
@@ -56,10 +57,10 @@
 				<div class="button1">
 					<input  value="Continue to Inventory" class="btn btn-primary" id="form-button">
 				</div>
-				<div class="button3"style=" margin-left:250px; margin-top:-20px;">
+				<div class="button3"style=" margin-left:240px; margin-top:-20px;">
 					<a>or</a>
 				</div>
-				<div class="button2" style=" margin-left:280px;margin-top:-30px;">
+				<div class="button2" style=" margin-left:290px;margin-top:-35px;">
 					<input  value="See List of Orders" class="btn btn-primary" id="form-button">
 				</div>
 				
