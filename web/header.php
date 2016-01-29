@@ -28,6 +28,8 @@
 			#bottom-header {
 			background-color: #153a7e;
 			height: 5em;
+			border-radius: 0;
+			border: none;
 			}
 			#bottom-header .navbar-header .navbar-brand img{
 			width: 6em;
@@ -62,7 +64,7 @@
 		</header>
 		
 		<!-- Static navbar -->
-		<nav id="bottom-header" class="navbar navbar-inverse">
+		<nav id="bottom-header" class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
