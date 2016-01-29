@@ -11,8 +11,8 @@ body {
 
 /* Footer styles
 	------------------------------------------------- 
-The following footer styles are modified and obtained from
-https://getbootstrap.com/examples/sticky-footer/sticky-footer.css
+	The following footer styles are modified and obtained from
+	https://getbootstrap.com/examples/sticky-footer/sticky-footer.css
 */
 
 footer {
@@ -33,19 +33,88 @@ footer p {
 ---------------------------------------------------*/
 
 #top-header {
-padding: .5em;
+	padding: .5em;
 }
 #top-header #contact-us {
-float: left;
-padding-top: .3em;
+	float: left;
+	padding-top: .3em;
 }
 #top-header #employee-login {
-float: right;
+	float: right;
 }
 #top-header #employee-login #are-you-an-employee {
-font-style: italic;
-margin-right: .5em;
+	font-style: italic;
+	margin-right: .5em;
 }
 #top-header #employee-login .btn {
-width: 5em;
+	width: 5em;
+}
+#top-header {
+	background-color: #132c55;
+	color: white;
+	height: 3em;
+}
+#top-header #login-button {
+	background: none;
+	border: 1px solid white;
+	border-radius: 1.25em;
+}
+#top-header #login-button:hover, 
+#top-header #login-button:focus {
+	background-color: #153a7e;
+}
+#top-header #login-button:active {
+	color: black;
+	border-color: black;
+}
+
+/* Bottom header styles
+---------------------------------------------------*/
+
+#bottom-header {
+	background-color: #153a7e;
+	height: 5em;
+	border-radius: 0;
+	border: none;
+}
+#bottom-header li {
+	border-right: 1px solid white;
+	padding: .5em;
+	margin-top: 10px;
+}
+#bottom-header li:hover {
+	background-color: #132c55;
+}
+#bottom-header li a {
+	color: white;
+	padding: .5em 1em;
+}
+#bottom-header #sitemap {
+	border: none;
+}
+#bottom-header .navbar-header .navbar-brand img{
+	width: 7em;
+	height: 2em;
+	position: absolute;
+	left: 1em;
+}
+#bottom-header .right-inner-addon {
+	position: relative;
+}
+#bottom-header .right-inner-addon input {
+	padding-right: 30px;    
+}
+#bottom-header .right-inner-addon i {
+	position: absolute;
+	right: 0px;
+	padding: 10px 12px;
+	pointer-events: none;
+}
+#bottom-header #search {
+	padding: 0 1.25em;
+	margin-top: 15px;
+}
+#bottom-header .navbar-collapse {
+	background-color: #153a7e;
+	border: none;
 }
