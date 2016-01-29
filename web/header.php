@@ -7,6 +7,11 @@
 		<link rel="stylesheet" href="/web/styles/main.css">
 		<title></title>
 		<style>
+			#top-header {
+			background-color: #132c55;
+			color: white;
+			height: 3em;
+			}
 			#top-header #login-button {
 			background: none;
 			border: 1px solid white;
