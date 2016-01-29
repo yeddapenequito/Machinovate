@@ -5,6 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
 		<link rel="stylesheet" href="/web/styles/main.css">
+		<script type="text/javascript" src="/web/scripts/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/web/scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/web/scripts/bootstrap.js"></script>
 		<title></title>
 		<style>
 			.row h3{
@@ -61,16 +64,23 @@
 					<div class="row2">
 						<p>Quantity:</p>
 						<div class="form-group">
-							<input type="text" name="Quantity" placeholder="Quantity" class="form-control" required autofocus> 
+							<input type="number" name="Quantity" placeholder="Quantity" class="form-control" required autofocus> 
 						</div>
 						<p>Price:</p>
 						<div class="form-group">
-							<input type="text" name="Price" placeholder="Price" class="form-control" required autofocus> 
+							<input type="number" name="Price" placeholder="Price" class="form-control" required autofocus> 
 						</div>
 						<p>Category:</p>
-						<div class="form-group">
-							<input type="text" name="Category" placeholder="Category" class="form-control" required autofocus> 
-						</div>
+						
+						<div class="dropdown">
+						   <!--can be bootstrap dropdown, but it wont work for me :( -yedda)-->
+						    <select class="form-control" required autofocus>
+						      <p>Category:</p>
+						      <option><a>Slitter</a></option>
+						      <option><a>Sheeter</a></option>
+						    </select>
+						    
+						  </div>
 						
 					</div>
 					<div class="row3">					
@@ -84,5 +94,6 @@
 			</div>
 		</div>
 		<?php include 'footer.php';?>
+		
 	</body>
 </html>

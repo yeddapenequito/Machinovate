@@ -9,7 +9,7 @@
 		<style>
 			.row h3{
 			margin-left:auto;
-			margin-top:130px;
+			margin-top:50px;
 			}
 			.row1{
 			position: absolute;
@@ -32,11 +32,11 @@
 		</style>
 	</head>
 	<body>
-		<?php include 'header_4.php';?>
+		<?php include 'header.php';?>
 		<div class="container">
 			
 			<div class="row">
-				<h3>Add New Employee</h3>
+				<h3>Shipment Details</h3>
 				
 					<form role="form" action="processadd.html" method="post" 
 					class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
@@ -49,13 +49,11 @@
 						<div class="form-group">
 							 <input type="text" name="firstname" placeholder="First Name" class="form-control" required autofocus> 
 						</div>
-						<p>Position:</p>
-						<div class="form-group">
-							<input type="text" name="position" placeholder="Position" class="form-control" required autofocus> 
-						</div>
+						
+						
 						<p>Address:</p>
 						<div class="form-group">
-							<input type="text" name="address" placeholder="Address" class="form-control" required autofocus> 
+							<input type="text" name="saddress" placeholder="Shipping Address" class="form-control" required autofocus> 
 						</div>
 					</div>
 					<div class="row2">
@@ -68,15 +66,12 @@
 						<div class="form-group">
 							<input type="email" name="emailadd" placeholder="Email Address" class="form-control" required autofocus> 
 						</div>
-						<p>Date of Birth:</p>
-						<div class="form-group">
-							<input type="date" name="dateofbirth" placeholder="MM/DD/YYYY" class="form-control" required autofocus> 
-						</div>	
+						
 					</div>
 					<div class="row3">					
-						<input type="submit" value="Add" class="btn btn-primary"
+						<input type="submit" value="Submit" class="btn btn-primary"
 						id="form-button">
-						<a href="/web/index_login.php" class="btn btn-primary"
+						<a href="/web/products.php" class="btn btn-primary"
 						id="form-button">Cancel</a>
 					</div>
 					</form>

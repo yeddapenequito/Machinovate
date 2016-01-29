@@ -54,14 +54,16 @@
 			</div>
 			
 			<div class="right_buttons">
-				<div class="button1">
-					<input  value="Continue to Inventory" class="btn btn-primary" id="form-button">
+				<div class="button1" style=" margin-left:50px;"> 
+					<a  href="/web/inventory.php" class="btn btn-primary" id="form-button">
+						Continue to Inventory</a>
 				</div>
 				<div class="button3"style=" margin-left:240px; margin-top:-20px;">
 					<a>or</a>
 				</div>
-				<div class="button2" style=" margin-left:290px;margin-top:-35px;">
-					<input  value="See List of Orders" class="btn btn-primary" id="form-button">
+				<div class="button2" style=" margin-left:290px;margin-top:-34px;">
+					<a href="#"  class="btn btn-primary" id="form-button">
+					See List of Orders</a>
 				</div>
 				
 			</div>

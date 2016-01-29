@@ -112,9 +112,9 @@
 						<div class="navbar">	         
 							<a href="/web/index_login.php/"  role="button">Home</a>
 							<a style="font-size:20px;"><b>|</b> 
-								<a href="index.html"  role="button">Inventory</a>
+								<a href="/web/inventory.php"  role="button">Inventory</a>
 								<a style="font-size:20px;"><b>|</b> 
-									<a href="/web/events.php/"  role="button">Others</a>
+									<a href="/web/order.php"  role="button">Orders</a>
 									
 									<div class="new">
 										<a href="/web/add_employee.php" class="btn btn-info" role="button">Add New Employee</a> 
