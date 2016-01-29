@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./styles/bootstrap.min.css">
 		<link rel="stylesheet" href="./styles/main.css">
-		<title></title>
+		<title>Machinovate | Home</title>
 		<style>
 			#container{
 			background-color:blue;

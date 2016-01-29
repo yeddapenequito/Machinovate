@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
-		<link rel="stylesheet" href="/web/styles/main.css">
+		<link rel="stylesheet" href="./styles/bootstrap.min.css">
+		<link rel="stylesheet" href="./styles/main.css">
 		<title></title>
 		<style>
 			#top-header {
@@ -25,14 +25,17 @@
 			color: black;
 			border-color: black;
 			}
+			
 			#bottom-header {
 			background-color: #153a7e;
-			height: 5em;
+			height: 5.5em;
+			border-radius: 0;
+			border: none;
 			}
 			#bottom-header .navbar-header .navbar-brand img{
-			width: 6em;
-			height: 2em;
-			}
+			width: 7em;
+			height: 2.5em;
+			} 
 			#bottom-header .right-inner-addon {
 		    position: relative;
 			}
@@ -61,8 +64,7 @@
 			</div>
 		</header>
 		
-		<!-- Static navbar -->
-		<nav id="bottom-header" class="navbar navbar-inverse">
+		<nav id="bottom-header" class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
