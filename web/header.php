@@ -7,6 +7,19 @@
 		<link rel="stylesheet" href="/web/styles/main.css">
 		<title></title>
 		<style>
+			#top-header #login-button {
+			background: none;
+			border: 1px solid white;
+			border-radius: 1.25em;
+			}
+			#top-header #login-button:hover, 
+			#top-header #login-button:focus {
+			background-color: #153a7e;
+			}
+			#top-header #login-button:active {
+			color: black;
+			border-color: black;
+			}
 			#bottom-header {
 			background-color: #153a7e;
 			height: 5em;
@@ -39,7 +52,7 @@
 			</address>
 			<div id="employee-login">
 				<span id="are-you-an-employee">Are you an employee?</span>
-				<a href="/web/login.php/" class="btn btn-primary btn-sm" role="button">Login</a> 
+				<a id="login-button" href="./login.php/" class="btn btn-primary btn-sm" role="button">Login</a> 
 			</div>
 		</header>
 		
