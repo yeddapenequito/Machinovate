@@ -79,8 +79,8 @@ footer p {
 }
 #bottom-header li {
 	border-right: 1px solid white;
-	padding: .5em;
-	margin-top: 10px;
+	padding: 0 .5em;
+	margin-top: 17px;
 }
 #bottom-header li:hover {
 	background-color: #132c55;
@@ -112,7 +112,7 @@ footer p {
 }
 #bottom-header #search {
 	padding: 0 1.25em;
-	margin-top: 15px;
+	margin-top: 17px;
 }
 #bottom-header .navbar-collapse {
 	background-color: #153a7e;
