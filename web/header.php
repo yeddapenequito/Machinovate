@@ -7,6 +7,24 @@
 		<link rel="stylesheet" href="/web/styles/main.css">
 		<title></title>
 		<style>
+			#top-header {
+			background-color: #132c55;
+			color: white;
+			height: 3em;
+			}
+			#top-header #login-button {
+			background: none;
+			border: 1px solid white;
+			border-radius: 1.25em;
+			}
+			#top-header #login-button:hover, 
+			#top-header #login-button:focus {
+			background-color: #153a7e;
+			}
+			#top-header #login-button:active {
+			color: black;
+			border-color: black;
+			}
 			#bottom-header {
 			background-color: #153a7e;
 			height: 5em;
@@ -34,12 +52,12 @@
 			<address id="contact-us">
 				Contact Us
 				<span class="glyphicon glyphicon-earphone"></span>	
-				<span class="text-info">+632 404 6676</span>/
-				<span class="text-info">+632 623 2988</span>
+				<span>+632 404 6676</span>/
+				<span>+632 623 2988</span>
 			</address>
 			<div id="employee-login">
 				<span id="are-you-an-employee">Are you an employee?</span>
-				<a href="/web/login.php/" class="btn btn-primary btn-sm" role="button">Login</a> 
+				<a id="login-button" href="./login.php/" class="btn btn-primary btn-sm" role="button">Login</a> 
 			</div>
 		</header>
 		
