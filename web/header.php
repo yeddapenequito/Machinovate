@@ -6,48 +6,6 @@
 		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
 		<link rel="stylesheet" href="/web/styles/main.css">
 		<title></title>
-		<style>
-			#top-header {
-			background-color: #132c55;
-			color: white;
-			height: 3em;
-			}
-			#top-header #login-button {
-			background: none;
-			border: 1px solid white;
-			border-radius: 1.25em;
-			}
-			#top-header #login-button:hover, 
-			#top-header #login-button:focus {
-			background-color: #153a7e;
-			}
-			#top-header #login-button:active {
-			color: black;
-			border-color: black;
-			}
-			#bottom-header {
-			background-color: #153a7e;
-			height: 5em;
-			border-radius: 0;
-			border: none;
-			}
-			#bottom-header .navbar-header .navbar-brand img{
-			width: 6em;
-			height: 2em;
-			}
-			#bottom-header .right-inner-addon {
-		    position: relative;
-			}
-			#bottom-header .right-inner-addon input {
-				padding-right: 30px;    
-			}
-			#bottom-header .right-inner-addon i {
-				position: absolute;
-				right: 0px;
-				padding: 10px 12px;
-				pointer-events: none;
-			}
-		</style>
 	</head>
 	<body>
 		<header id="top-header" class="container-fluid">
@@ -64,7 +22,7 @@
 		</header>
 		
 		<!-- Static navbar -->
-		<nav id="bottom-header" class="navbar navbar-default">
+		<nav id="bottom-header" class="navbar navbar-inverse" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -78,13 +36,13 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li><a href="index.php">Home</a></li>
-						<li><a href="#">Products and Services</a></li>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Sitemap</a></li>
+						<li id="home"><a href="index.php">Home</a></li>
+						<li id="products-and-services"><a href="#">Products and Services</a></li>
+						<li id="about-us"><a href="#">About Us</a></li>
+						<li id="sitemap"><a href="#">Sitemap</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<div class="form-group">
+						<div id="search" class="form-group">
 							<div class="right-inner-addon ">
 								<i class="glyphicon glyphicon-search"></i>
 								<input type="search"
@@ -92,7 +50,6 @@
 									   placeholder="Search" />
 							</div>
 						</div>
-
 					</ul>
 				</div> <!-- /.navbar-collapse -->
 			</div>  <!-- /.container-fluid -->

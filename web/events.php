@@ -25,7 +25,7 @@
 			position:absolute;
 			}
 			.three_w{
-			
+			position:absolute;
 			margin-right:50px;
 			}
 			.sidetext{
