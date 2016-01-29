@@ -34,8 +34,8 @@
 			<address id="contact-us">
 				Contact Us
 				<span class="glyphicon glyphicon-earphone"></span>	
-				<span class="text-info">+632 404 6676</span>/
-				<span class="text-info">+632 623 2988</span>
+				<span>+632 404 6676</span>/
+				<span>+632 623 2988</span>
 			</address>
 			<div id="employee-login">
 				<span id="are-you-an-employee">Are you an employee?</span>
