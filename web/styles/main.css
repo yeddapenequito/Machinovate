@@ -6,15 +6,8 @@ body {
 	margin: 0;
 	padding: 0;
 	/* based from footer height */
-	margin-bottom: 2em;
-	/* based from header height 
-		top-header 		3.0 em
-		bottom-header 	5.5 em
-						------
-						8.5 em
-						*/
-	margin-top: 8.5em;
-	}
+	margin-bottom: 50px;
+}
 
 /* Footer styles
 	------------------------------------------------- 
@@ -27,7 +20,7 @@ footer {
 	bottom: 0;
 	clear: both;
 	width: 100%;
-	height: 2em;
+	height: 50px;
 	color: white;
 	background-color: #132c55;
 }

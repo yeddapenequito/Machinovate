@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./styles/bootstrap.min.css">
 		<link rel="stylesheet" href="./styles/main.css">
-		<title>Machinovate | Home</title>
+		<title></title>
 		<style>
 		.carousel-caption{
 	      	margin: 0;
