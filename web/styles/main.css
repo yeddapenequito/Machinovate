@@ -6,7 +6,7 @@ body {
 	margin: 0;
 	padding: 0;
 	/* based from footer height */
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 /* Footer styles
@@ -20,12 +20,9 @@ footer {
 	bottom: 0;
 	clear: both;
 	width: 100%;
-	height: 50px;
+	height: 30px;
 	color: white;
 	background-color: #132c55;
-}
-footer p {
-	padding: 1em;
 }
 
 
@@ -112,6 +109,9 @@ footer p {
 }
 #bottom-header #search {
 	padding: 0 1.25em;
+	margin-top: 17px;
+}
+#bottom-header .navbar-toggle {
 	margin-top: 17px;
 }
 #bottom-header .navbar-collapse {
