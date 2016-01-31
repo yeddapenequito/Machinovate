@@ -47,6 +47,9 @@
 			</div>
 		</div>
 		
-		<?php include 'footer.php';?>
+		<?php include 'footer.php'; ?>
+		<script type="text/javascript">
+			document.getElementById("home").className = "active";
+		</script>
 	</body>
 </html>
