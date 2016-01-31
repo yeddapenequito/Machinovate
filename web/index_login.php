@@ -9,7 +9,7 @@
 		<style>
 			.rightt{
 			position:absolute;
-			margin-top:180px;
+			margin-top:40px;
 			margin-left:500px;
 			}
 			.box
@@ -26,11 +26,11 @@
 			margin-top:60px;
 			margin-left:-50px;
 			margin-bottom:10px;
-			margin-top:150px;
+			margin-top:60px;
 			}
 			.right_buttons{
 			position:absolute;
-			margin-top:470px;
+			margin-top:400px;
 			margin-left:500px;
 			}
 		</style>
