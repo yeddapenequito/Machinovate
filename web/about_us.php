@@ -3,19 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
-		<link rel="stylesheet" href="/web/styles/main.css">
-		<title></title>
-		<style>
-			.text {
-			margin-left: auto;
-			margin-right: auto;
-			margin-top:-250px;
-			width:33em;
-			text-align: justify;
-			}
-			
-		</style>
+		<link rel="stylesheet" href="./styles/bootstrap.min.css">
+		<link rel="stylesheet" href="./styles/main.css">
+		<title>Machinovate | About Us</title>
 	</head>
 	<body>
 		<?php include 'header.php';?>
@@ -38,8 +28,11 @@
 		</div>	
 		
 		<?php include 'footer.php';?>
-		<script type="text/javascript" src="/web/scripts/jquery-2.1.4.min.js"></script>
+
+		<script type="text/javascript" src="/web/scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="/web/scripts/bootstrap.min.js"></script>
-		<script type="text/javascript" src="/web/scripts/bootstrap.js"></script>
+		<script type="text/javascript">
+			document.getElementById("about-us").className = "active";
+		</script>
 	</body>
 </html>
