@@ -120,6 +120,11 @@ footer {
 #bottom-header .navbar-toggle {
 	margin-top: 17px;
 }
+#bottom-header .navbar-toggle:hover,
+#bottom-header .navbar-toggle:focus,
+#bottom-header .navbar-toggle:active {
+	background-color: #132c55;	
+}
 #bottom-header .navbar-collapse {
 	background-color: #153a7e;
 	border: none;
