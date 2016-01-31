@@ -13,8 +13,9 @@
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
 				<li id="home"><a href="index.php">Home</a></li>
-				<li id="products-and-services"><a href="products.php">Products and Services</a></li>
-				<li id="about-us"><a href="about_us.php">About Us</a></li>
+				<li id="products"><a href="products.php">Products and Services</a></li>
+				<li id="events"><a href="events.php">Events</a></li>
+				<li id="about_us"><a href="about_us.php">About Us</a></li>
 				<li id="sitemap"><a href="sitemap.php">Sitemap</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
