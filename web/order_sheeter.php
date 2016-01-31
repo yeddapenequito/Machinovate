@@ -21,6 +21,10 @@
 			
 			text-align:center;
 			}
+			.form-group{
+				margin-left: auto;
+				margin-right: auto;
+			}
 		</style>
 	</head>
 	<body><!--name in every checkbox are not yed properly named-->
