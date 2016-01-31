@@ -20,7 +20,7 @@
 			}
 			#content address dl dt {
 				text-align: left;
-				color: #132c55;
+				color: #153a7e;
 			}
 			#content address .glyphicon {
 				padding-right: 1em;
