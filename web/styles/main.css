@@ -67,7 +67,12 @@ footer {
 
 /* Bottom header styles
 ---------------------------------------------------*/
-
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 70px;
+    height: 70px;
+    padding-top: 0;
+}
 #bottom-header {
 	background-color: #153a7e;
 	height: 5em;
