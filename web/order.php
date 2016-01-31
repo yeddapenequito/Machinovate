@@ -21,7 +21,7 @@
 			}
 			.table-hover{
 				position: fixed;
-				margin-top:200px;
+				margin-top:80px;
 				margin-right:auto;
 				margin-left:40px;
 			}
@@ -31,7 +31,7 @@
 			}
 			.nav-pills{
 				position: fixed;
-				margin-top:150px;
+				margin-top:40px;
 			}
 
 		</style>

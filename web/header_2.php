@@ -72,39 +72,43 @@
 	</style>
 </head>
 <body>
-	<div class='container'>
-		<div class='row'>
+	
+		<header id="top-header" class="container-fluid">
+	<address id="contact-us">
+		Contact Us
+		<span class="glyphicon glyphicon-earphone"></span>	
+		<span>+632 404 6676</span>/
+		<span>+632 623 2988</span>
+	</address>
+	
+</header>
+			<nav id="bottom-header" class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+			<a class="navbar-brand" href="#">
+				<img src="./images/machinovate-logo-1.png" alt="machinovate logo 1">
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li id="home"><a href="index.php">Home</a></li>
+				<li id="products"><a href="products.php">Products and Services</a></li>
+				<li id="events"><a href="events.php">Events</a></li>
+				<li id="about_us"><a href="about_us.php">About Us</a></li>
+				<li id="sitemap"><a href="sitemap.php">Sitemap</a></li>
+			</ul>
 			
-			<div class="header">
-				<div class="contact"><p><span>Contact Us</span> <img id="s-Telephone_Image" alt="image" src="/images/phone.png" width="12" height="12"/> +632 404 6676/+632 623 2988</p>
-					
-				</div>
-				
-				
-				
-			</div>
-			<div class="header2">
-				
-				<img src="/images/logo.png" href="/web/index.php/" alt="Machinovate Logo" style="width:180px;height:100px;margin-left:50px;margin-top:-10px;"/>
-				<div class="header_buttons">
-					<div class="navbar">	         
-						<a href="/web/index.php/"  role="button">Home</a>
-						<a style="font-size:20px;"><b>|</b> 
-							<a href="index.html"  role="button">Products and Services</a>
-							<a style="font-size:20px;"><b>|</b> 
-								<a href="/web/events.php/"  role="button">Events</a>
-								<a style="font-size:20px;"><b>|</b> 
-									<a href="/web/about.php/"  role="button">About Us</a>
-									<a style="font-size:20px;"><b>|</b> 
-										<a href="/web/sitemap.php/"  role="button">Sitemap</a> 	 
-									</div>
-								</div>
-								
-							</div>
-							
-						</div>
-					</div>
+		</div> <!-- /.navbar-collapse -->
+	</div>  <!-- /.container-fluid -->
+</nav>
 					<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
 					<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 				</body>
 			</html>			
+
+	

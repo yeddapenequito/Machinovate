@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
-		<link rel="stylesheet" href="/web/styles/main.css">
+		<link rel="stylesheet" href="./styles/bootstrap.min.css">
+		<link rel="stylesheet" href="./styles/main.css">
 		<title></title>
 	</head>
 	<style>
@@ -43,12 +43,12 @@
 		margin-left: 50px;
 		margin-top: 10px;
 		}
-		.employee{
+		#employee-logout{
 		text-align:right;
 		display:inline-block;
-		margin-top: -40px;
+		margin-top:-80px;
 		margin-left: 700px;
-		}-->
+		}
 		.logout{
 		display:inline-block;
 		text-align:right;
@@ -75,9 +75,9 @@
 		display:inline-block;
 		text-align:right;
 		display:inline-block;
-		margin-top: -20px;
+		margin-top:20px;
 		margin-right: -10px;
-		margin-left:290px;
+		margin-left:490px;
 		
 		}
 		.right{
@@ -88,46 +88,46 @@
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			
-			<div class="header">
-				<div class="contact"><p><span>Contact Us</span> <img id="s-Telephone_Image" alt="image" src="/images/phone.png" width="12" height="12"/> +632 404 6676/+632 623 2988</p>
-					
-				</div>
-				<div class="employee">
-					<p><i>Hello, admin </i></p> 
-				</div>
-				<div class="logout">
-					<a>..
-						<a href="/web/login.php/" class="btn btn-info" role="button">Logout</a>
-					</div>
-					
-					
-				</div>
-				<div class="header2">
-					
-					<img src="/images/logo.png" href="/web/index.php/" alt="Machinovate Logo" style="width:180px;height:100px;margin-left:50px;margin-top:-10px;"/>
-					<div class="header_buttons">
-						<div class="navbar">	         
-							<a href="/web/index_login.php/"  role="button">Home</a>
-							<a style="font-size:20px;"><b>|</b> 
-								<a href="/web/inventory.php"  role="button">Inventory</a>
-								<a style="font-size:20px;"><b>|</b> 
-									<a href="/web/order.php"  role="button">Orders</a>
-									
-									<div class="new">
-										<a href="/web/add_employee.php" class="btn btn-info" role="button">Add New Employee</a> 
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						
-						
-					</div>
-				</div>
+		<header id="top-header" class="container-fluid">
+	<address id="contact-us">
+		Contact Us
+		<span class="glyphicon glyphicon-earphone"></span>	
+		<span>+632 404 6676</span>/
+		<span>+632 623 2988</span>
+	</address>
+	<div id="employee-logout">
+		<span id="hello-admin">Hello admin, </span>
+		<a></a>
+		<a id="logout-button" href="./index.php/" class="btn btn-primary btn-sm" role="button">Logout</a> 
+	</div>
+</header>
+			<nav id="bottom-header" class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+			<a class="navbar-brand" href="#">
+				<img src="./images/machinovate-logo-1.png" alt="machinovate logo 1">
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li id="home"><a href="index_login.php">Home</a></li>
+				<li id="inventory"><a href="inventory.php">Inventory</a></li>
+				<li id="orders"><a href="order.php">Orders</a></li>
+			</ul>
+			<div class="new">
+				<a href="/web/add_employee.php" class="btn btn-info" role="button">Add New Employee</a> 
+			</div>
+		</div> <!-- /.navbar-collapse -->
+	</div>  <!-- /.container-fluid -->
+</nav>
 				
+				
+					
 				<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
 				<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 			</body>

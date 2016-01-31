@@ -12,7 +12,7 @@
 		<style>
 			.row h3{
 			margin-left:auto;
-			margin-top:130px;
+			margin-top:40px;
 			}
 			.row1{
 			position: absolute;

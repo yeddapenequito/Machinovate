@@ -15,7 +15,7 @@
 				margin-bottom: 10px;
 			}
 			.table-hover{
-				margin-top:150px;
+				margin-top:50px;
 				margin-right:auto;
 				margin-left:auto;
 			}

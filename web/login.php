@@ -3,18 +3,18 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
-		<link rel="stylesheet" href="/web/styles/main.css">
+		<link rel="stylesheet" href="./styles/bootstrap.min.css">
+		<link rel="stylesheet" href="./styles/main.css">
 		<title></title>
 		<style>
 			.row h3{
 			margin-left:350px;
-			margin-top:180px;
+			margin-top:60px;
 			position:absolute;
 			}
 			.row1{
 			margin-left:30px;
-			margin-top:220px;
+			margin-top:100px;
 			
 			}
 		</style>
@@ -45,5 +45,8 @@
 			</div>
 		</div>
 		<?php include 'footer.php';?>
+		<script type="text/javascript" src="/scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+		<script type="text/javascript">
 	</body>
 </html>
