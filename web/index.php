@@ -19,7 +19,7 @@
 		<?php include 'header.php';?>
 		
 		<!-- carousel -->
-		<div id="my-carousel" class="carousel slide" data-ride="carousel">
+		<!--<div id="my-carousel" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#my-carousel" data-slide-to="0" class="active"></li>
 				<li data-target="#my-carousel" data-slide-to="1"></li>
@@ -27,7 +27,7 @@
 			</ol>
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<img alt="First slide" src="./images/cover-picture-1">
+					<img alt="First slide" src="./images/cover-picture-1.jpg">
 					<div class="carousel-caption">
 						<p>Our innovation + The latest technology</p>
 						<h3>Providing you the best</h3>
@@ -36,7 +36,16 @@
 					</div>
 				</div>
 				<div class="item">
-					<img alt="Second slide" src="./images/cover-picture-2">
+					<img alt="Second slide" src="./images/cover-picture-2.jpg">
+					<div class="carousel-caption">
+						<p>Our innovation + The latest technology</p>
+						<h3>Providing you the best</h3>
+						<h2>Paper Converting Machines</h2>
+						<a href="#" class="btn btn-large btn-primary">View our Products</a>
+					</div>
+				</div>
+			    <div class="item">
+					<img alt="Third slide" src="./images/cover-picture-3.jpg">
 					<div class="carousel-caption">
 						<p>Our innovation + The latest technology</p>
 						<h3>Providing you the best</h3>
@@ -45,7 +54,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		
 		<?php include 'footer.php'; ?>
 		<script type="text/javascript">
