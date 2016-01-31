@@ -35,13 +35,13 @@
 		    </div>
 		    <div class="col-md-3">
 		      <ul class="nav nav-pills nav-stacked">
-		        <li class="active"><a>Products</a></li>
+		        <li class="active"><a>Product Specification</a></li>
 		        <li><a href="/web/slitter.php">Slitter</a></li>
 		        <li><a href="/web/sheeter.php">Sheeter</a></li>
 		        <li class="divider"><a></a></li>
 		        <li class="active"><a href="#">Services</a></li>
 		        <li class="divider"><a></a></li>
-		        	<li class="dropdown-menu; active" role="menu"><a>Order Now</a></li>
+		        	<li class="dropdown-menu; active" role="menu"><a>Order Now!</a></li>
 		        	
 		        	<li role="presentation"><a role="menuitem" tabindex="-1" href="order_slitter.php">Slitter</a></li>
       				<li role="presentation"><a role="menuitem" tabindex="-1" href="order_sheeter.php">Sheeter</a></li>

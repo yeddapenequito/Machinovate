@@ -32,7 +32,7 @@
 			<!-- class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"-->
 			<div class="products_button">
 					
-					<a href="/web/products.php" class="btn btn-md btn-info" role="button">Go Back to Products page</a>
+					<a href="/web/products.php" class="btn btn-md btn-info" role="button"><span class="glyphicon glyphicon-triangle-left"></span> Go Back to Products page</a>
 				</div>
 			<form action="action_order.html">
 			<div class="form-group">

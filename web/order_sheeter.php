@@ -37,7 +37,7 @@
 			<!--put required later-->
 			<div class="products_button">
 					
-					<a href="/web/products.php" class="btn btn-md btn-info" role="button">Go Back to Products page</a>
+				<a href="/web/products.php" class="btn btn-md btn-info" role="button"><span class="glyphicon glyphicon-triangle-left"></span> Go Back to Products page</a>
 				</div>
 			<form action="action_order.html">
 			<div class="form-group">
