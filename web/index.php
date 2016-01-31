@@ -13,6 +13,7 @@
 		 <!-- Carousel
 	    ================================================== 
 		The following code is modified and obtained from https://getbootstrap.com/examples/carousel/-->
+		
 	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
 	      <!-- Indicators -->
 	      <ol class="carousel-indicators">
