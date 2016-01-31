@@ -158,3 +158,30 @@ footer {
   min-width: 100%;
   height: 500px;
 }
+
+/*content styles
+---------------------------------------------------*/
+
+.content {
+	margin: 2em 5em;
+} 
+.content address .page-header {
+	font-variant: small-caps;
+	font-weight: bold;
+}
+.content address dl dt,
+.content address dl dd {
+	padding: 1em;
+}
+.content address dl dt {
+	text-align: left;
+	color: #153a7e;
+}
+.content address .glyphicon {
+	padding-right: 1em;
+}
+.content .logo {
+	display: block;
+	height: 6em;
+	width: 100%;
+}
