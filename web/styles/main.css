@@ -73,6 +73,9 @@ footer {
     height: 70px;
     padding-top: 0;
 }
+#bottom-header .active a {
+	background-color: #132c55;
+}
 #bottom-header {
 	background-color: #153a7e;
 	height: 5em;
