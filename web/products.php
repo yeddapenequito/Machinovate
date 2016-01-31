@@ -38,20 +38,24 @@
 		        <li class="active"><a>Products</a></li>
 		        <li><a href="/web/slitter.php">Slitter</a></li>
 		        <li><a href="/web/sheeter.php">Sheeter</a></li>
+		        <li class="divider"><a></a></li>
 		        <li class="active"><a href="#">Services</a></li>
+		        <li class="divider"><a></a></li>
+		        	<li class="dropdown-menu; active" role="menu"><a>Order Now</a></li>
+		        	
+		        	<li role="presentation"><a role="menuitem" tabindex="-1" href="order_slitter.php">Slitter</a></li>
+      				<li role="presentation"><a role="menuitem" tabindex="-1" href="order_sheeter.php">Sheeter</a></li>
+		       
 		      </ul>
 		    </div>
 		    <div class="clearfix visible-lg"></div>
 		  </div>
 
 
-		    <div class="dropdown">
-			  <button type="button" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Order Now <span class="badge">Slitter /Sheeter </span> <span class="caret"></span></button>
-			  <ul class="dropdown-menu">
-			    <li><a href="/web/order_slitter.php">Slitter</a></li>
-			    <li><a href="/web/order_sheeter.php">Sheeter</a></li>
-			  </ul>
-			</div>
+		    
+			 <div class="btn-group">
+			      
+			    </div>
 		  <footer class="footer">
 		  	<p class="text-muted">*Our machines can be customized, but prices may differ. For details call +632 404 6676</p>
 		  </footer>
@@ -59,5 +63,8 @@
 		</div>
 		
 		<?php include 'footer.php';?>
+		<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./scripts/bootstrap.js"></script>
 	</body>
 </html>

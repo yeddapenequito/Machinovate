@@ -3,26 +3,29 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
-		<link rel="stylesheet" href="/web/styles/main.css">
+		<link rel="stylesheet" href="./styles/bootstrap.min.css">
+		<link rel="stylesheet" href="./styles/main.css">
 		<title></title>
 		<style>
 			
 			.table-hover{
 				position:absolute;
-				margin-top:30px;
+				margin-top:50px;
 				margin-right:auto;
 				margin-left:20px;
 			}
 			th{
-			
+				color:blue;
 				text-align:center;
 			}
 			.row h4{
 				
 				margin-left:500px;
 			}
-
+			.button{
+				margin-top: 20px;
+				margin-bottom: 10px;
+			}
 		</style>
 	</head>
 	<body>
@@ -32,18 +35,21 @@
 			
 			
 		
-	      <table class="table table-hover" style="width:95%">
+	      <table class="table table-hover" style="width:95%" border="1">
 	      	<thead><tr>
 	      		<td></td>
 	      		<td>SINGLE-FLY Sheeting Machine</td>
 	      		<td></td>
 	      		<td></td>
-	      		<td>SYNCHRO-FLY Sheeting Machine</td>		
+	      		<td>SYNCHRO-FLY Sheeting Machine</td>
+	      		<td></td>
+	      		<td></td>
+	      		<td></td>		
 
 	      	</tr></thead>
 			    <thead>
 			      <tr>
-			        <th style="text-align:center;">MODEL <p style="text-align:center;">(Bigger Sizes Available)</p></th>
+			        <th>MODEL<p style="text-align:center;">(Bigger Sizes Available)</p></th>
 			        <th>MACH-SRV 56</th>
 			        <th>MACH-SRV 66</th>
 			        <th>MACH-SRV 80</th>
@@ -157,19 +163,20 @@
 		    </tbody>
 		  </table>
                             <!--df-->
- 				<div class="dropdown">
-			  <button type="button" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Order Now</span> <span class="caret"></span></button>
-			  <ul class="dropdown-menu">
-			    <li><a href="/web/order_sheeter.php">Sheeter</a></li>
-			  </ul>
-			</div>
+                <div class="button">
+					
+					<a href="/web/order_sheeter.php" class="btn btn-md btn-info btn-block" role="button">Order Sheeter</a>
+				</div>
+			   
+			  
+			
 
  				
 		</div>	
 		
 		<!--<?php include 'footer.php';?>-->
-		<script type="text/javascript" src="/web/scripts/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="/web/scripts/bootstrap.min.js"></script>
-		<script type="text/javascript" src="/web/scripts/bootstrap.js"></script>
+		<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./scripts/bootstrap.js"></script>
 	</body>
 </html>
