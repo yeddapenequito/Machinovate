@@ -5,15 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./styles/bootstrap.min.css">
 		<link rel="stylesheet" href="./styles/main.css">
-		<title></title>
-		<style>
-		.carousel-caption{
-	      	margin: 0;
-	      	line-height: 1.25;
-	      	color: #fff;
-	      	text-shadow: 0 1px 1px rgba(0,0,0,.4);
-	    }
-		</style>
+		<title>Machinovate | Home</title>
 	</head>
 	<body>
 		<?php include 'header.php';?>
@@ -57,6 +49,8 @@
 		</div> -->
 		
 		<?php include 'footer.php'; ?>
+		<script type="text/javascript" src="./scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			document.getElementById("home").className = "active";
 		</script>
