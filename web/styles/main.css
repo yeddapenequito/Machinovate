@@ -95,10 +95,10 @@ footer {
 	border: none;
 }
 #bottom-header .navbar-brand img{
-	width: 7em;
-	height: 2em;
+	width: 8em;
+	height: 2.25em;
 	position: absolute;
-	left: 1em;
+	left: 4em;
 	top: .75em;
 }
 #bottom-header .right-inner-addon {
