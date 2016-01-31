@@ -1,4 +1,4 @@
-<nav id="bottom-header" class="navbar navbar-custom" role="navigation">
+<nav id="bottom-header" class="navbar navbar-inverse" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
