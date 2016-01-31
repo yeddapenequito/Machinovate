@@ -73,6 +73,9 @@ footer {
     height: 70px;
     padding-top: 0;
 }
+.navbar-nav li a:hover {
+	background-color: #132c55;
+}
 #bottom-header .active a {
 	background-color: #132c55;
 }
