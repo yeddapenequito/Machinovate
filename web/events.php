@@ -61,8 +61,6 @@
 		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			document.getElementById("events").className = "active";
-			  interval: 10000
-			});
 		</script>
 	</body>
 </html>
