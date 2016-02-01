@@ -10,7 +10,7 @@
 	<body>
 		<?php include 'header.php';?>
 
-		<div class="content" class="container">
+		<div id="events-content" class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-3">
 					<div>

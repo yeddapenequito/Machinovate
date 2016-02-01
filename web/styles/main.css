@@ -92,7 +92,7 @@ footer {
 #bottom-header li a {
 	color: white;
 }
-#bottom-header #sitemap {
+#bottom-header #sitemap-content {
 	border: none;
 }
 #bottom-header .navbar-brand img{
@@ -159,29 +159,43 @@ footer {
   height: 500px;
 }
 
-/*content styles
+/* Sitemap styles
 ---------------------------------------------------*/
-
-.content {
-	margin: 2em 5em;
-} 
-.content address .page-header {
+#sitemap-content {
+	margin-top: 2em;
+}
+#sitemap-content #map {
+	min-width: 100%;
+}
+#sitemap-content address .page-header {
 	font-variant: small-caps;
 	font-weight: bold;
 }
-.content address dl dt,
-.content address dl dd {
+#sitemap-content address dl dt,
+#sitemap-content address dl dd {
 	padding: 1em;
 }
-.content address dl dt {
+#sitemap-content address dl dt {
 	text-align: left;
 	color: #153a7e;
 }
-.content address .glyphicon {
+#sitemap-content address .glyphicon {
 	padding-right: 1em;
 }
-.content .logo {
+
+/* About us styles 
+---------------------------------------------------*/
+#about-us-content {
+	margin-top: 2em;
+}
+#about-us-content .logo {
 	display: block;
 	height: 6em;
 	width: 100%;
+}
+
+/* Events styles
+---------------------------------------------------*/
+#events-content {
+	margin-top: 2em;
 }

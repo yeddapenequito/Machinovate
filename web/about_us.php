@@ -10,7 +10,7 @@
 	<body>
 		<?php include 'header.php';?>
 
-		<div class="content" class="container">
+		<div id="about-us-content" class="container">
 			<div class="row">
 				<div class="col-xs-4 col-sm-3">
 					<img class="logo" src="./images/machinovate-logo-2.png">
