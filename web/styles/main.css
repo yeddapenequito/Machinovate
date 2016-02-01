@@ -36,14 +36,16 @@ footer {
 	float: left;
 	padding-top: .3em;
 }
-#top-header #employee-login {
+#top-header #employee-login,
+#top-header #employee-logout {
 	float: right;
 }
 #top-header #employee-login #are-you-an-employee {
 	font-style: italic;
 	margin-right: .5em;
 }
-#top-header #employee-login .btn {
+#top-header #employee-login .btn,
+#top-header #employee-logout .btn {
 	width: 5em;
 }
 #top-header {
@@ -51,16 +53,20 @@ footer {
 	color: white;
 	height: 3em;
 }
-#top-header #login-button {
+#top-header #login-button,
+#top-header #logout-button {
 	background: none;
 	border: 1px solid white;
 	border-radius: 1.25em;
 }
 #top-header #login-button:hover, 
-#top-header #login-button:focus {
+#top-header #login-button:focus,
+#top-header #logout-button:hover, 
+#top-header #logout-button:focus {
 	background-color: #153a7e;
 }
-#top-header #login-button:active {
+#top-header #login-button:active,
+#top-header #logout-button:active {
 	color: black;
 	border-color: black;
 }
@@ -92,14 +98,15 @@ footer {
 #bottom-header li a {
 	color: white;
 }
-#bottom-header #sitemap-content {
+#bottom-header #sitemap,
+#bottom-header #orders {
 	border: none;
 }
 #bottom-header .navbar-brand img{
 	width: 9em;
 	height: 2.25em;
 	position: absolute;
-	left: 4em;
+	left: 1em;
 	top: .75em;
 }
 #bottom-header .right-inner-addon {
@@ -114,9 +121,12 @@ footer {
 	padding: 10px 12px;
 	pointer-events: none;
 }
+#bottom-header #search,
+#bottom-header #create-new-account {
+	margin-top: 17px;
+}
 #bottom-header #search {
 	padding: 0 1.25em;
-	margin-top: 17px;
 }
 #bottom-header .navbar-toggle {
 	margin-top: 17px;

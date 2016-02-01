@@ -26,12 +26,6 @@
 							<label for="password">Password</label>
 							<input id="password" name="password" type="password" placeholder="Enter password" class="form-control" required> 
 						</div>
-
-						<div class="form-group">
-							<div class="checkbox">
-							  <label for="remember"><input id="remember" type="checkbox" value="remember">Remember Me</label>
-							</div>
-						</div>
 						
 						<!-- The following code for implementing captcha is obtained and modified from http://www.the-art-of-web.com/php/captcha/-->
 
@@ -44,6 +38,12 @@
 									<input id="captcha" type="text" name="captcha" class="form-control">
 								</div>
 								<small>Copy the digits from the image into this box</small>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="checkbox">
+							  <label for="remember"><input id="remember" type="checkbox" value="remember">Remember Me</label>
 							</div>
 						</div>
 
@@ -63,6 +63,8 @@
 		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 		<script>
 			$("#employee-login").remove();
+			$("#employee-logout").remove();
+			$(".after-login").remove();
 		</script>
 	</body>
 </html>

@@ -5,8 +5,12 @@
 		<span>+632 404 6676</span>/
 		<span>+632 623 2988</span>
 	</address>
-	<div id="employee-login">
+	<div class="before-login" id="employee-login">
 		<span id="are-you-an-employee">Are you an employee?</span>
 		<a id="login-button" href="./login.php" class="btn btn-primary btn-sm" role="button">Login</a> 
+	</div>
+	<div class="after-login" id="employee-logout">
+		<span id="hello-admin">Hello admin, </span>
+		<a id="logout-button" href="./index.php" class="btn btn-primary btn-sm" role="button">Logout</a>
 	</div>
 </header>

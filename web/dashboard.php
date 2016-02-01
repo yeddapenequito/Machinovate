@@ -3,40 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
-		<link rel="stylesheet" href="/web/styles/main.css">
-		<title></title>
-		<style>
-			.rightt{
-			position:absolute;
-			margin-top:40px;
-			margin-left:500px;
-			}
-			.box
-			{
-			width: 400px;
-			height:430px;
-			padding: 25px;
-			border: 0.2em solid;
-			margin: 35px;
-			
-			}
-			.box{
-			position:absolute;
-			margin-top:60px;
-			margin-left:-50px;
-			margin-bottom:10px;
-			margin-top:60px;
-			}
-			.right_buttons{
-			position:absolute;
-			margin-top:400px;
-			margin-left:500px;
-			}
-		</style>
+		<link rel="stylesheet" href="./styles/bootstrap.min.css">
+		<link rel="stylesheet" href="./styles/main.css">
+		<title>Machinovate | Dashboard</title>
 	</head>
 	<body>
-		<?php include 'header_3.php';?>
+		<?php include 'header.php';?>
 		<div class="container">
 			<div class="rightt">
 				<h1><b>Announcements</b></h1>
@@ -70,15 +42,12 @@
 			
 		</div>
 		
-		
-		
-		
-		
-		
-		
 		<?php include 'footer.php';?>
-		<script type="text/javascript" src="/scripts/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
-		<script type="text/javascript" src="/scripts/bootstrap.js"></script>
+
+		<script type="text/javascript" src="./scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
+		<script>
+			$(".before-login").remove();
+		</script>
 	</body>
 </html>

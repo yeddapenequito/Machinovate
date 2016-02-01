@@ -41,6 +41,7 @@
 		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			document.getElementById("sitemap").className = "active";
+			$(".after-login").remove();
 		</script>
 	</body>
 </html>

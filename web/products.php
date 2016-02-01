@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="./styles/bootstrap.min.css">
 		<link rel="stylesheet" href="./styles/main.css">
-		<title></title>
+		<title>Machinovate | Products</title>
 		<style>
 			.footer{
 				margin-bottom:50px;
@@ -63,8 +63,11 @@
 		</div>
 		
 		<?php include 'footer.php';?>
-		<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
+
+		<script type="text/javascript" src="./scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
-		<script type="text/javascript" src="./scripts/bootstrap.js"></script>
+		<script>
+			$(".after-login").remove();
+		</script>
 	</body>
 </html>
