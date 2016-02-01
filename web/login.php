@@ -13,18 +13,18 @@
 		<div class="container">
 			<div class="row">
 				<div class="row">
-					<form role="form" action="processlogin.html" method="post" class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+					<form role="form" action="form-handler" method="post" class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
 						
 						<h3 class="page-header">Login</h3>
 
 						<div class="form-group">
 							<label for="username">Username</label>
-							<input id="username" type="text" placeholder="Enter username" class="form-control" required autofocus> 
+							<input id="username" name="username" type="text" placeholder="Enter username" class="form-control" required autofocus> 
 						</div>
 
 						<div class="form-group">
 							<label for="password">Password</label>
-							<input id="password" type="password" placeholder="Enter password" class="form-control" required> 
+							<input id="password" name="password" type="password" placeholder="Enter password" class="form-control" required> 
 						</div>
 
 						<div class="form-group">
@@ -34,7 +34,7 @@
 						</div>
 						
 						<!-- The following code for implementing captcha is obtained and modified from http://www.the-art-of-web.com/php/captcha/-->
-						
+
 						<div class="form-horizontal">
 							<div class="form-group">
 								<label for="captcha" class="control-label col-sm-5">
