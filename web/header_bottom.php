@@ -14,8 +14,15 @@
 			<ul class="nav navbar-nav">
 				<!--Menu items BEFORE login-->
 				<li class="before-login" id="home"><a href="./index.php">Home</a></li>
-				<li class="before-login" id="products"><a href="./machines.php">Our Machines</a></li>
-				<li class="before-login" id="about-us"><a href="./order_now.php">Order Now</a></li>
+				<li class="dropdown" id="machines">
+				<a href="./our_machines.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Machines <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+					  <li><a href="./slitter.php">Slitter</a></li>
+					  <li><a href="./sheeter.php">Sheeter</a></li>
+					  <li><a href="./cuttter.php">Cutter</a></li>
+					  <li><a href="./other_products.php">Others</a></li>
+					</ul>
+				</li>
 				<li class="before-login" id="events"><a href="./events.php">Events</a></li>
 				<li class="before-login" id="contact-us"><a href="./contact-us.php">Contact Us</a></li>
 				<li class="before-login" id="agents"><a href="./agents.php">Agents</a></li>
