@@ -124,7 +124,7 @@
                             <!--df-->
  				<div class="button">
 					
-					<a href="/web/order_slitter.php" class="btn btn-md btn-info btn-block" role="button">Order Slitter</a>
+					<a href="./order_slitter.php" class="btn btn-md btn-info btn-block" role="button">Order Slitter</a>
 				</div>
 
  				
