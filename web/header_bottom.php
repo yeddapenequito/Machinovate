@@ -20,7 +20,7 @@
 					  <li><a href="./slitter.php">Slitter</a></li>
 					  <li><a href="./sheeter.php">Sheeter</a></li>
 					  <li><a href="./cuttter.php">Cutter</a></li>
-					  <li><a href="./other_products.php">Others</a></li>
+					  <li><a href="./other_products.php">Other Products</a></li>
 					</ul>
 				</li>
 				<li class="before-login" id="events"><a href="./events.php">Events</a></li>
