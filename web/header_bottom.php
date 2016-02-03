@@ -14,7 +14,7 @@
 			<ul class="nav navbar-nav">
 				<!--Menu items BEFORE login-->
 				<li class="before-login" id="home"><a href="./index.php">Home</a></li>
-				<li class="before-login" id="products"><a href="./machines.php">Machines</a></li>
+				<li class="before-login" id="products"><a href="./machines.php">Our Machines</a></li>
 				<li class="before-login" id="about-us"><a href="./about_us.php">Order Now</a></li>
 				<li class="before-login" id="events"><a href="./events.php">Events</a></li>
 				<li class="before-login" id="contact-us"><a href="./contact-us.php">Contact Us</a></li>
