@@ -106,14 +106,7 @@ footer {
 	width: 9em;
 	height: 4em;
 }
-#bottom-header .dropdown-menu li a {
-	color: black;
-}
-#bottom-header .dropdown-menu li a:hover {
-	color: white;
-	border: none;
-}
-#bottom-header .navbar-toggle {
+.navbar-toggle {
 	border: none;
 }
 #bottom-header .navbar-toggle:hover,
