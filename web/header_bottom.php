@@ -24,7 +24,7 @@
 					</ul>
 				</li>
 				<li class="before-login" id="events"><a href="./events.php">Events</a></li>
-				<li class="before-login" id="contact-us"><a href="./contact-us.php">Contact Us</a></li>
+				<li class="before-login" id="contact-us"><a href="./contact_us.php">Contact Us</a></li>
 				<li class="before-login" id="agents"><a href="./agents.php">Agents</a></li>
 
 				<!--Menu items AFTER login-->
