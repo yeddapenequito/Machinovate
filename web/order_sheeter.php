@@ -28,7 +28,7 @@
 		</style>
 	</head>
 	<body><!--name in every checkbox are not yed properly named-->
-		<?php include 'header.php';?>
+		<?php include 'header-bottom.php';?>
 		<div class="container-fluid">
 		  <div class="title">
 				<h2><b>Paper Sheeter Form Requirements</b></h2>
@@ -37,7 +37,7 @@
 			<!--put required later-->
 			<div class="products_button">
 					
-				<a href="/web/products.php" class="btn btn-md btn-info" role="button"><span class="glyphicon glyphicon-triangle-left"></span> Go Back to Products page</a>
+				<a href="/web/order_now.php" class="btn btn-md btn-info" role="button"><span class="glyphicon glyphicon-triangle-left"></span> Go Back </a>
 				</div>
 			<form action="action_order.html">
 			<div class="form-group">
@@ -154,6 +154,6 @@
 		</form>
 		  </div>
 		
-		<?php include 'footer.php';?>
+		<?php// include 'footer.php';?>
 	</body>
 </html>
