@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
-		<link rel="stylesheet" href="/web/styles/main.css">
+		<link rel="stylesheet" href="./styles/bootstrap.min.css">
+		<link rel="stylesheet" href="./styles/main.css">
 		<title></title>
 		<style>
 			.row h3{
@@ -32,7 +32,7 @@
 		</style>
 	</head>
 	<body>
-		<?php include 'header_4.php';?>
+		<?php include 'header_after_login.php';?>
 		<div class="container">
 			
 			<div class="row">
@@ -76,7 +76,7 @@
 					<div class="row3">					
 						<input type="submit" value="Add" class="btn btn-primary"
 						id="form-button">
-						<a href="/web/index_login.php" class="btn btn-primary"
+						<a href="./dashboard.php" class="btn btn-primary"
 						id="form-button">Cancel</a>
 					</div>
 					</form>
