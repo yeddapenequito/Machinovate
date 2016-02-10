@@ -10,7 +10,7 @@
 			
 			.table-hover{
 				position:absolute;
-				margin-top:40px;
+				margin-top:80px;
 				margin-right:auto;
 				margin-left:30px;
 			}
@@ -27,14 +27,49 @@
 				margin-top: 10px;
 				margin-bottom: 10px;
 			}
+			.list-group{
+				margin-top:-10px;
+				margin-right:auto;
+				margin-left:850px;
+				position:absolute;
+			}
+			#text{
+				text-align:justify;
+				position:absolute;
+				margin-top:10px;
+				margin-right:410px;
+				margin-left:30px;
+			}
+			.list-group-item hr { 
+		    display: block;
+		    margin-top: 0.5em;
+		    margin-bottom: 0.5em;
+		    margin-left: auto;
+		    margin-right: auto;
+		    border-style: inset;
+		    border-width: 1px;
+
+} 
 		</style>
 	</head>
 	<body>
-		<?php include 'header.php';?>
+		<?php include 'header-bottom.php';?>
 		<div id="container-fluid">
-			
-		
-	      <table class="table table-hover" style="width:90%" border="1">
+			<div id="pagination">
+				<ul class="pagination pagination"> 
+			    <li><a href="our_machines.php">Machines</a></li>
+			    <li><a  style="color:black;">></a></li>
+			    <li><a style="color:red;">Slitter</a></li>
+			    
+			  </ul>
+			</div>
+		<div id="text">
+			<p>
+			Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
+			</p>
+
+		</div>
+	      <table class="table table-hover" style="width:60%" border="1">
 			    <thead>
 			      <tr>
 			        <th>MODEL</th>
@@ -122,15 +157,32 @@
 		    </tbody>
 		  </table>
                             <!--df-->
- 				<div class="button">
+ 			<!--	<div class="button">
 					
 					<a href="./order_slitter.php" class="btn btn-md btn-info btn-block" role="button">Order Slitter</a>
-				</div>
-
+				</div>-->
+				<div class="list-group"style="height:500px; width:400px;">
+			    <a href="#" class="list-group-item">
+			    	<div class="photos"><h3>Photos</h3>
+			    	<hr>
+			    	<img src="/web/images/slitter_front.png" style="width:110px;height:128px;">
+			    	<img src="/web/images/slitter_front.png" style="width:110px;height:128px;">
+			    	<img src="/web/images/slitter_front.png" style="width:110px;height:128px;">
+			    	</div>
+			    </a>
+			    <a href="#" class="list-group-item">
+			    	<div class="videos"><h3>Videos</h3>
+			    	<hr>
+			    	<img src="/web/images/slitter_front.png" style="width:110px;height:128px;">
+			    	</div>
+			    </a>
+			    <a href="#" class="list-group-item"><h3>Catalog</h3>
+			    <hr></a>
+			  </div>
  				
 		</div>	
 		
-		<?php include 'footer.php';?>
+		<?php// include 'footer.php';?>
 		<script type="text/javascript" src="./scripts/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="./scripts/bootstrap.js"></script>
