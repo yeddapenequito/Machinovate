@@ -170,7 +170,8 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 
 
 /* Sitemap styles
----------------------------------------------------*/
+=================================================================*/
+
 #sitemap-content {
 	margin-top: 2em;
 }
@@ -193,8 +194,11 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 	padding-right: 1em;
 }
 
+
+
+
 /* About us styles 
----------------------------------------------------*/
+=================================================================*/
 #about-us-content {
 	margin-top: 2em;
 }
@@ -204,14 +208,20 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 	width: 100%;
 }
 
+
+
+
 /* Events styles
----------------------------------------------------*/
+=================================================================*/
 #events-content {
 	margin-top: 2em;
 }
 
+
+
+
 /* Dashboard styles
----------------------------------------------------*/
+=================================================================*/
 #dashboard-content {
 	margin-top: 2em;
 }
