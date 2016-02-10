@@ -8,7 +8,7 @@
 		<title>Machinovate | Events</title>
 	</head>
 	<body>
-		<?php include 'header.php';?>
+		<?php include 'header_before_login.php';?>
 
 		<div id="events-content" class="container">
 			<div class="row">

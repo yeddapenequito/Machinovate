@@ -8,7 +8,7 @@
 		<title>Machinovate | Dashboard</title>
 	</head>
 	<body>
-		<?php include 'header.php';?>
+		<?php include 'header_after_login.php';?>
 
 		<div id="dashboard-content" class="container">
 			<div class="row">
