@@ -14,6 +14,8 @@ body {
 	The following code is modified and obtained from
 	https://getbootstrap.com/examples/sticky-footer/sticky-footer.css
 */
+/*header styles
+=================================================================*/
 
 footer {
 	position: absolute;
@@ -22,101 +24,164 @@ footer {
 	width: 100%;
 	height: 30px;
 	color: white;
-	background-color: #132c55;
+header {
+	background-color: #153a7e;
+	border: 1px solid white;
+	border-bottom: none;
+}
+header #logo {
+	height: 125px;
+	width: 350px;
 }
 
-
-/* Top header styles
----------------------------------------------------*/
-
-#top-header {
+/*navbar styles
+=================================================================*/
+.navbar {
 	font-size: .9em;
 	background-color: #132c55;
 	color: white;
-	padding: .5em;
+	border: 1px solid white;
+	border-radius: 0;
 }
-/*#top-header #contact-us {
-	float: left;
-	margin-top: .3em;
+
+
+/*change navbar height
+----------------------------------------------------------------*/
+
+.navbar .navbar-nav > li > a {
+	line-height: 50px;
+    height: 50px;
+    padding-top: 0;
 }
-#top-header #employee-login,
-#top-header #employee-logout {
-	float: right;
-}*/
-#top-header #employee-login #are-you-an-employee {
+
+
+/*navbar brand styles
+----------------------------------------------------------------*/
+
+.navbar .navbar-brand img {
+	height: 60px;
+	width: 150px;
+	position: relative;
+	top: -18px;
+}
+
+
+/*navbar tabs styles for all screen sizes
+----------------------------------------------------------------*/
+
+.navbar .navbar-nav > li > a {
+	color: white;
+	letter-spacing: 1px;
+}
+.navbar .navbar-nav > li > a:hover, 
+.navbar .navbar-nav > li > a:active,
+.navbar .navbar-nav > li .active {
+	background-color: #bdc3c7;
+	color: black;
+}
+
+
+/*center navbar tabs
+----------------------------------------------------------------
+this code is obtained from 
+http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstrap-navbar*/ 
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: text-bottom;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+	/*navbar tabs styles for large devices only
+	----------------------------------------------------------------*/
+
+	.navbar .navbar-nav > li > a {
+		border-right: 1px solid white;
+	}
+	.navbar .navbar-nav #home,
+	.navbar .navbar-nav #dashboard {
+		border-left: 1px solid white;
+	}
+	.navbar .navbar-nav > li > a:hover,
+	.navbar .navbar-nav > li .active {
+		border-bottom: 7px solid #bdc3c7;
+		color: #bdc3c7;
+	}
+	.navbar .navbar-nav > li > a:active {
+		border-bottom: 7px solid gray;
+		color: gray;
+	}
+	.navbar .navbar-nav > li > a:hover,
+	.navbar .navbar-nav > li > a:active,
+	.navbar .navbar-nav > li .active {
+		background-color: #132c55;
+	}
+}
+
+
+/*navbar toggle styles
+----------------------------------------------------------------*/
+
+.navbar .navbar-toggle {
+	border: none;
+}
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:active,
+.navbar .navbar-toggle:focus {
+	background-color: transparent;
+}
+.navbar.navbar-toggle .icon-bar:hover {
+	color: white;
+}
+
+/*employee login styles
+----------------------------------------------------------------*/
+.navbar #employee-login,
+.navbar #employee-logout {
+	border: none;
+}
+.navbar #employee-login:hover,
+.navbar #employee-login:active,
+.navbar #employee-logout:hover,
+.navbar #employee-logout:active {
+	background-color: transparent;
+	color: white;
+}
+.navbar #employee-login #are-you-an-employee,
+.navbar #employee-logout #hello-user {
 	font-style: italic;
+	font-size: .85em;
 	margin-right: .5em;
 }
-#top-header #login-button,
-#top-header #logout-button {
+.navbar #login-button,
+.navbar #logout-button {
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	background: silver;
+	background-color: #bdc3c7;
 	color: #153a7e;
 	border: 1px solid transparent;
 	border-radius: 0;
-	font-size: .8em;
 	font-weight: bold;
+	font-size: .85em;
 }
-#top-header #login-button:hover, 
-#top-header #login-button:focus,
-#top-header #logout-button:hover, 
-#top-header #logout-button:focus {
+.navbar #login-button:hover, 
+.navbar #logout-button:hover {
 	background-color: transparent;
 	border: 1px solid silver;
 	color: silver;
 }
-#top-header #login-button:active,
-#top-header #logout-button:active {
-	cbackground-color: transparent;
+.navbar #login-button:active,
+.navbar #logout-button:active {
+	background-color: transparent;
 	border: 1px solid gray;
 	color: gray;
 }
 
-/* Bottom header styles
----------------------------------------------------*/
-.navbar-brand,
-.navbar-toggle,
-.navbar-nav li a {
-    line-height: 70px;
-    height: 70px;
-    padding-top: 0;
-}
-#bottom-header {
-	background-color: #153a7e;
-	border-radius: 0;
-	margin: 0;
-}
-#bottom-header .active a {
-	color: #153a7e;
-	background-color: silver;
-}
-#bottom-header li a:hover {
-	background-color: #153a7e; 
-	border-bottom: 3px groove silver;
-	color: white;
-}
-#bottom-header li a {
-	letter-spacing: 1px;
-	color: white;
-	padding: 0 2em;
-}
-#bottom-header .navbar-brand img{
-	width: 9em;
-	height: 4em;
-}
-.navbar-toggle {
-	border: none;
-}
-#bottom-header .navbar-toggle:hover,
-#bottom-header .navbar-toggle:focus,
-#bottom-header .navbar-toggle:active {
-	background-color: transparent;
-}
-#bottom-header .navbar-collapse {
-	background-color: #153a7e;
-	border: none;
-}
 
 /* Carousel styles 
 ---------------------------------------------------*/
