@@ -48,7 +48,7 @@
 			<div class="tab-content col-xs-12 col-sm-8">
 				<div id="menu0" class="tab-pane fade in active">
 					<div class="page-header">
-						<h3>Paperex India 2015<span class="label label-success">Upcoming</span></h3>
+						<h3>Paperex India 2015<span class="label label-success">Coming Soon</span></h3>
 					</div>
 
 					<img id="events-img-md" src="images/GeneratedCross-0.png" alt="upcoming event picture">
