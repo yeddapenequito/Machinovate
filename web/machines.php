@@ -73,7 +73,7 @@
 		<div class="container-fluid">
 			<div id="images">
                 <div>
-	                <!-- Sliiter-->
+	                <!-- Slitter-->
 			        <div class="row" class="col-sm-3 col-md-6">
 						<div id="image_1"class="col-sm-3 col-md-6">
 						<img src="images/slitter_front.png" style="width:310px;height:228px;">
