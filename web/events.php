@@ -6,43 +6,6 @@
 	<link rel="stylesheet" href="styles/bootstrap.min.css">
 	<link rel="stylesheet" href="styles/main.css">
 	<title>Machinovate | Events</title>
-	<style type="text/css">
-	#event-content #event-img-sm {
-		height: 65px;
-		width: 65px;
-	}
-	#event-content ul li:first-child {
-		font-size: .8em;
-	}
-	#event-content ul li {
-		border: 1px solid silver;
-		border-radius: 5px;
-		
-	}
-	#event-content table td, 
-	#event-content table th {
-		border: none;
-	}
-	#event-content table td {
-		padding-left: .5em;
-	}
-	#event-content table td:first-child {
-		font-weight: bold;
-	}
-	#event-content h5 {
-		color: white;
-		font-style: italic;
-	}
-	#event-content .tab-content img {
-		float: left;
-		margin-right: 1em;
-		height: 200px;
-		width: 350px;
-	}	
-	#event-content .nav-pills {
-		width: 25em;
-	}
-	</style>
 </head>
 <body>
 	<?php include 'header_before_login.php';?>

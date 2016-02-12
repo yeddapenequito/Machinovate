@@ -9,29 +9,29 @@ body {
 
 /*=================================================================
    header styles
-  =================================================================*/
+   =================================================================*/
 
-header {
-	background-color: #153a7e;
-	border: 1px solid white;
-	border-bottom: none;
-}
-header #logo {
-	height: 125px;
-	width: 350px;
-}
+   header {
+   	background-color: #153a7e;
+   	border: 1px solid white;
+   	border-bottom: none;
+   }
+   header #logo {
+   	height: 125px;
+   	width: 350px;
+   }
 
 /*=================================================================
   navbar styles
   =================================================================*/
 
-.navbar {
-	font-size: .9em;
-	background-color: #132c55;
-	color: white;
-	border: 1px solid white;
-	border-radius: 0;
-}
+  .navbar {
+  	font-size: .9em;
+  	background-color: #132c55;
+  	color: white;
+  	border: 1px solid white;
+  	border-radius: 0;
+  }
 
 
 /*change navbar height
@@ -39,8 +39,8 @@ header #logo {
 
 .navbar .navbar-nav > li > a {
 	line-height: 50px;
-    height: 50px;
-    padding-top: 0;
+	height: 50px;
+	padding-top: 0;
 }
 
 
@@ -76,15 +76,15 @@ this code is obtained from
 http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstrap-navbar*/ 
 
 @media (min-width: 768px) {
-    .navbar .navbar-nav {
-        display: inline-block;
-        float: none;
-        vertical-align: text-bottom;
-    }
+	.navbar .navbar-nav {
+		display: inline-block;
+		float: none;
+		vertical-align: text-bottom;
+	}
 
-    .navbar .navbar-collapse {
-        text-align: center;
-    }
+	.navbar .navbar-collapse {
+		text-align: center;
+	}
 
 	/*navbar tabs styles for large devices only
 	----------------------------------------------------------------*/
@@ -174,48 +174,78 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 /*=================================================================
   Contact us styles
   =================================================================*/
-#contact-us-content address {
-	border: 1px solid silver;
-	border-radius: 5px;
-	height: 425px;
-}
-#contact-us-content #map {
-	min-width: 100%;
-}
-#contact-us-content table td {
-	border: none;
-}
-#contact-us-content table td:first-child {
-	font-weight: bold;
-}
+  #contact-us-content address {
+  	border: 1px solid silver;
+  	border-radius: 5px;
+  	height: 425px;
+  }
+  #contact-us-content #map {
+  	min-width: 100%;
+  }
+  #contact-us-content table td {
+  	border: none;
+  }
+  #contact-us-content table td:first-child {
+  	font-weight: bold;
+  }
 
 
 /*=================================================================
   Events styles
   =================================================================*/
-
-/*#events-content {
-	margin-top: 2em;
-}*/
-
+  #event-content #event-img-sm {
+  	height: 65px;
+  	width: 65px;
+  }
+  #event-content ul li:first-child {
+  	font-size: .8em;
+  }
+  #event-content ul li {
+  	border: 1px solid silver;
+  	border-radius: 5px;
+  	
+  }
+  #event-content table td, 
+  #event-content table th {
+  	border: none;
+  }
+  #event-content table td {
+  	padding-left: .5em;
+  }
+  #event-content table td:first-child {
+  	font-weight: bold;
+  }
+  #event-content h5 {
+  	color: white;
+  	font-style: italic;
+  }
+  #event-content .tab-content img {
+  	float: left;
+  	margin-right: 1em;
+  	height: 200px;
+  	width: 350px;
+  }	
+  #event-content .nav-pills {
+  	width: 25em;
+  }
 
 
 /*=================================================================
   Dashboard styles
   =================================================================*/
 
-#dashboard-content {
-	margin-top: 2em;
-}
-#dashboard-content dt,
-#dashboard-content dd {
-	padding: .5em;
-}
-#dashboard-content dt {
-	text-align: left;
-}
-#dashboard-content #profile-picture {
-	width: 7em;
-	height: 7em;
-	margin: 1em;
-}
+  #dashboard-content {
+  	margin-top: 2em;
+  }
+  #dashboard-content dt,
+  #dashboard-content dd {
+  	padding: .5em;
+  }
+  #dashboard-content dt {
+  	text-align: left;
+  }
+  #dashboard-content #profile-picture {
+  	width: 7em;
+  	height: 7em;
+  	margin: 1em;
+  }
