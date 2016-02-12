@@ -16,6 +16,7 @@
 				<li><a id="dashboard" href="dashboard.php">Dashboard</a></li>
 				<li><a id="events" href="events.php">Events</a></li>
 				<li><a id="reports" href="reports.php">Reports</a></li>
+				<li><a id="employee" href="add_employee.php">Add New Employee</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>

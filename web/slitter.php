@@ -47,9 +47,10 @@
 		    margin-left: auto;
 		    margin-right: auto;
 		    border-style: inset;
-		    border-width: 1px;
-
-} 
+		    border-width: 1px;} 
+		    .cart{
+		    	text-align: center;
+		    }
 		</style>
 	</head>
 	<body>
@@ -165,19 +166,24 @@
 			    <a href="#" class="list-group-item">
 			    	<div class="photos"><h3>Photos</h3>
 			    	<hr>
-			    	<img src="/web/images/slitter_front.png" style="width:110px;height:128px;">
-			    	<img src="/web/images/slitter_front.png" style="width:110px;height:128px;">
-			    	<img src="/web/images/slitter_front.png" style="width:110px;height:128px;">
+			    	<img src="./images/slitter_front.png" style="width:110px;height:128px;">
+			    	<img src="./images/slitter_front.png" style="width:110px;height:128px;">
+			    	<img src="./images/slitter_front.png" style="width:110px;height:128px;">
 			    	</div>
 			    </a>
 			    <a href="#" class="list-group-item">
 			    	<div class="videos"><h3>Videos</h3>
 			    	<hr>
-			    	<img src="/web/images/slitter_front.png" style="width:110px;height:128px;">
+			    	<img src="./images/slitter_front.png" style="width:110px;height:128px;">
 			    	</div>
 			    </a>
 			    <a href="#" class="list-group-item"><h3>Catalog</h3>
 			    <hr></a>
+			    <a href="order_slitter.php" class="list-group-item">
+			    	<div class="cart"><h3>Order Now</h3>
+			    <hr>
+			   <img src="./images/order_now.png" style="width:110px;height:128px;">
+			    </a></div>
 			  </div>
  				
 		</div>	

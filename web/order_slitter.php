@@ -32,7 +32,16 @@
 			<!-- class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"-->
 			<div class="products_button">
 					
-					<a href="/web/order_now.php" class="btn btn-md btn-info" role="button"><span class="glyphicon glyphicon-triangle-left"></span> Go Back</a>
+				<div id="pagination">
+				<ul class="pagination pagination">
+				<li><a href="our_machines.php">Machines</a></li>
+				<li><a  style="color:black;">></a></li>
+			    <li><a href="slitter.php">Slitter</a></li>
+			    <li><a  style="color:black;">></a></li>
+			    <li><a style="color:red;">Order Now</a></li>
+			    
+			  </ul>
+			</div>
 				</div>
 			<form action="action_order.html">
 			<div class="form-group">
@@ -113,7 +122,7 @@
 
 			<div class="next_button">
 					
-					<a href="/web/shipment.php" class="btn btn-md btn-info" role="button">Next</a>
+					<a href="./shipment.php" class="btn btn-md btn-primary" role="button">Next</a>
 				</div>
 
 

@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
-		<link rel="stylesheet" href="/web/styles/main.css">
+		<link rel="stylesheet" href="./styles/bootstrap.min.css">
+		<link rel="stylesheet" href="./styles/main.css">
 		<title></title>
 		<style>
 			.row h3{
@@ -32,7 +32,7 @@
 		</style>
 	</head>
 	<body>
-		<?php include 'header.php';?>
+		<?php include 'header-bottom.php';?>
 		<div class="container">
 			
 			<div class="row">
@@ -71,7 +71,7 @@
 					<div class="row3">					
 						<input type="submit" value="Submit" class="btn btn-primary"
 						id="form-button">
-						<a href="/web/products.php" class="btn btn-primary"
+						<a href="./our_machines.php" class="btn btn-primary"
 						id="form-button">Cancel</a>
 					</div>
 					</form>

@@ -37,7 +37,13 @@
 			<!--put required later-->
 			<div class="products_button">
 					
-				<a href="/web/order_now.php" class="btn btn-md btn-info" role="button"><span class="glyphicon glyphicon-triangle-left"></span> Go Back </a>
+			<div id="pagination">
+				<ul class="pagination pagination">
+				<li><a href="our_machines.php">Machines</a></li>
+				<li><a  style="color:black;">></a></li>
+			    <li><a href="slitter.php">Sheeter</a></li>
+			    <li><a  style="color:black;">></a></li>
+			    <li><a style="color:red;">Order Now</a></li>
 				</div>
 			<form action="action_order.html">
 			<div class="form-group">
@@ -137,7 +143,7 @@
 
 				<div class="next_button">
 					
-					<a href="/web/shipment.php" class="btn btn-md btn-info" role="button">Next</a>
+					<a href="./shipment.php" class="btn btn-md btn-primary" role="button">Next</a>
 				</div>
 
 
