@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/web/styles/bootstrap.min.css">
-		<link rel="stylesheet" href="/web/styles/main.css">
-		<title>Machinovate | Products</title>
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/main.css">
+		<title>Machinovate | Machines</title>
 		<style>
 			.footer{
 				margin-bottom:50px;
@@ -69,37 +69,37 @@
 		</style>
 	</head>
 	<body>
-		<?php include 'header-bottom.php';?>
+		<?php include 'header_before_login.php';?>
 		<div class="container-fluid">
 			<div id="images">
                 <div>
 	                <!-- Sliiter-->
 			        <div class="row" class="col-sm-3 col-md-6">
 						<div id="image_1"class="col-sm-3 col-md-6">
-						<img src="/web/images/slitter_front.png" style="width:310px;height:228px;">
-						  <a href="/web/slitter.php" class="btn btn-info" role="button">Slitter</a>
+						<img src="images/slitter_front.png" style="width:310px;height:228px;">
+						  <a href="slitter.php" class="btn btn-info" role="button">Slitter</a>
 		    			</div>
 		    		</div>
 	                <!-- Sheeter -->
 			         <div class="row" class="col-sm-9 col-md-6">
 		    			<div id="image_2" class="col-sm-9 col-md-6">
-						<img src="/web/images/sheeter-servo.png" style="width:304px;height:228px;">
-						<a href="/web/sheeter.php" class="btn btn-info" role="button">Sheeter</a>
+						<img src="images/sheeter-servo.png" style="width:304px;height:228px;">
+						<a href="sheeter.php" class="btn btn-info" role="button">Sheeter</a>
 		    			</div>
 		    		</div>	
 		    		<!-- Cutter -->
 		    		<div class="row" class="col-sm-3 col-md-6" >
 						<div id="image_3"class="col-sm-3 col-md-6" >
-						<img src="/web/images/cutter.png" style="width:304px;height:228px;">
-						<a href="/web/cutter.php" class="btn btn-info" role="button">Cutter</a>
+						<img src="images/cutter.png" style="width:304px;height:228px;">
+						<a href="cutter.php" class="btn btn-info" role="button">Cutter</a>
 		    			</div>
     			
 		    		</div>
 	                <!-- Other Products -->
 			         <div class="row" class="col-sm-9 col-md-6">
 		    			<div id="image_4" class="col-sm-9 col-md-6">
-						<img src="/web/images/other.png" style="width:120px;height:178px;">
-						<a href="/web/other.php" class="btn btn-info" role="button">Other Products</a>
+						<img src="images/other.png" style="width:120px;height:178px;">
+						<a href="other.php" class="btn btn-info" role="button">Other Products</a>
 		    			</div>
 		    		</div>	
 	                
@@ -113,12 +113,10 @@
 
 		</div>
 		
-		<?php include 'footer.php';?>
-
-		<script type="text/javascript" src="/web/scripts/jquery-2.2.0.min.js"></script>
-		<script type="text/javascript" src="/web/scripts/bootstrap.min.js"></script>
-		<script>
-			$(".after-login").remove();
+		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			document.getElementById("machines").className = "active";
 		</script>
 	</body>
 </html>
