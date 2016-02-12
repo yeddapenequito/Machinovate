@@ -7,9 +7,6 @@
 	<link rel="stylesheet" href="styles/main.css">
 	<title>Machinovate | Events</title>
 	<style type="text/css">
-	/*#event-content {
-		margin-top: -1.4em;
-	}*/
 	#event-content #event-img-sm {
 		height: 65px;
 		width: 65px;
