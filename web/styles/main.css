@@ -204,7 +204,6 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   #event-content ul li {
   	border: 1px solid silver;
   	border-radius: 5px;
-  	
   }
   #event-content table td, 
   #event-content table th {
@@ -220,9 +219,13 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   	color: white;
   	font-style: italic;
   }
+  #event-content .nav-pills .active a {
+    background-color: #153a7e;
+  }
   #event-content .tab-content img {
   	float: left;
-  	margin-right: 1em;
+  	margin-right: 1.5em;
+    margin-bottom: 1.5em;
   	height: 200px;
   	width: 350px;
   }	
