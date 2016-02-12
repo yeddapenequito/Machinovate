@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="styles/bootstrap.min.css">
 		<link rel="stylesheet" href="styles/main.css">
-		<title>Machinovate | Order Now</title>
+		<title>Machinovate | Agents</title>
 	</head>
 	<body>
 		<?php include 'header_before_login.php';?>
