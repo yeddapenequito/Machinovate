@@ -36,12 +36,9 @@
 	#event-content .tab-content img {
 		float: left;
 		margin-right: 1em;
-		height: 250px;
-		width: 400px;
+		height: 200px;
+		width: 350px;
 	}	
-	/*#event-content .tab-content .page-header span {
-		display: inline;
-	}*/
 	#event-content .nav-pills {
 		width: 25em;
 	}
