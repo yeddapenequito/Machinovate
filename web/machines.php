@@ -71,24 +71,23 @@
 	<body>
 		<?php include 'header_before_login.php';?>
 		<div class="container-fluid">
-			<div id="images">
-                <div>
+                <div class="row">
 	                <!-- Slitter-->
-			        <div class="row" class="col-sm-3 col-md-6">
+			        <div class="col-sm-3 col-md-6">
 						<div id="image_1"class="col-sm-3 col-md-6">
 						<img src="images/slitter_front.png" style="width:310px;height:228px;">
 						  <a href="slitter.php" class="btn btn-info" role="button">Slitter</a>
 		    			</div>
 		    		</div>
 	                <!-- Sheeter -->
-			         <div class="row" class="col-sm-9 col-md-6">
+			         <div class="col-sm-9 col-md-6">
 		    			<div id="image_2" class="col-sm-9 col-md-6">
 						<img src="images/sheeter-servo.png" style="width:304px;height:228px;">
 						<a href="sheeter.php" class="btn btn-info" role="button">Sheeter</a>
 		    			</div>
 		    		</div>	
 		    		<!-- Cutter -->
-		    		<div class="row" class="col-sm-3 col-md-6" >
+		    		<div class="col-sm-3 col-md-6" >
 						<div id="image_3"class="col-sm-3 col-md-6" >
 						<img src="images/cutter.png" style="width:304px;height:228px;">
 						<a href="cutter.php" class="btn btn-info" role="button">Cutter</a>
@@ -96,22 +95,19 @@
     			
 		    		</div>
 	                <!-- Other Products -->
-			         <div class="row" class="col-sm-9 col-md-6">
+			         <div class="col-sm-9 col-md-6">
 		    			<div id="image_4" class="col-sm-9 col-md-6">
 						<img src="images/other.png" style="width:120px;height:178px;">
 						<a href="other.php" class="btn btn-info" role="button">Other Products</a>
 		    			</div>
 		    		</div>	
-	                
                 </div>
-
-		</div>
-
 		  <footer class="footer">
 		  	<p class="text-muted">*Our machines can be customized, but prices may differ. For details call +632 404 6676</p>
 		  </footer>
 
 		</div>
+		</div> <!-- /.container-fluid -->
 		
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
