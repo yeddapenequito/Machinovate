@@ -13,8 +13,11 @@
 	}
 	#event-content ul li:first-child {
 		font-size: .8em;
+	}
+	#event-content ul li {
 		border: 1px solid silver;
 		border-radius: 5px;
+		
 	}
 	#event-content table td, 
 	#event-content table th {
