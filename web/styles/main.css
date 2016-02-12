@@ -175,6 +175,9 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 /*=================================================================
   Contact us styles
   =================================================================*/
+  #contact-us-content {
+    margin-top: 3em;
+  }
   #contact-us-content address {
   	border: 1px solid silver;
   	border-radius: 5px;
