@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="./styles/bootstrap.min.css">
-		<link rel="stylesheet" href="./styles/main.css">
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/main.css">
 		<title>Machinovate | Login</title>
 	</head>
 	<body>
-		<?php include 'header.php';?>
+		<?php include 'header_before_login.php';?>
 
 		<div class="container">
 			<div class="row">
@@ -32,7 +32,7 @@
 						<div class="form-horizontal">
 							<div class="form-group">
 								<label for="captcha" class="control-label col-sm-5">
-									<img src="./captcha.php" alt="CAPTCHA">
+									<img src="captcha.php" alt="CAPTCHA">
 								</label>
 								<div class="col-sm-7">
 									<input id="captcha" type="text" name="captcha" class="form-control">
@@ -57,14 +57,7 @@
 			</div>
 		</div>
 
-		<?php include 'footer.php';?>
-
-		<script type="text/javascript" src="./scripts/jquery-2.2.0.min.js"></script>
-		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
-		<script>
-			$("#employee-login").remove();
-			$("#employee-logout").remove();
-			$(".after-login").remove();
-		</script>
+		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 	</body>
 </html>
