@@ -51,7 +51,7 @@
 		<div class="row">
 			<ul class="nav nav-pills nav-stacked col-xs-12 col-sm-4">
 				<li class="active">
-					<a data-toggle="pill" href="#home">
+					<a data-toggle="pill" href="#menu0">
 						<table class="table table-condensed row">
 							<thead class="col-xs-4">
 								<th colspan="2">
@@ -83,7 +83,7 @@
 			</ul> <!-- /.nav -->
 
 			<div class="tab-content col-xs-12 col-sm-8">
-				<div id="home" class="tab-pane fade in active">
+				<div id="menu0" class="tab-pane fade in active">
 					<div class="page-header">
 						<h3>Paperex India 2015<span class="label label-success">Upcoming</span></h3>
 					</div>
