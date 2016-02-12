@@ -172,29 +172,22 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 }
 
 /*=================================================================
-  Sitemap styles
+  Contact us styles
   =================================================================*/
 
-#sitemap-content {
+#contact-us-content {
 	margin-top: 2em;
 }
-#sitemap-content #map {
+#contact-us-content #map {
 	min-width: 100%;
 }
-#sitemap-content address .page-header {
-	font-variant: small-caps;
-	font-weight: bold;
-}
-#sitemap-content address dl dt,
-#sitemap-content address dl dd {
+#contact-us-content address dl dt,
+#contact-us-content address dl dd {
 	padding: 1em;
 }
-#sitemap-content address dl dt {
+#contact-us-content address dl dt {
 	text-align: left;
 	color: #153a7e;
-}
-#sitemap-content address .glyphicon {
-	padding-right: 1em;
 }
 
 
