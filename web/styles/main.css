@@ -174,22 +174,20 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 /*=================================================================
   Contact us styles
   =================================================================*/
-
-#contact-us-content {
-	margin-top: 2em;
+#contact-us-content address {
+	border: 1px solid silver;
+	border-radius: 5px;
+	height: 425px;
 }
 #contact-us-content #map {
 	min-width: 100%;
 }
-#contact-us-content address dl dt,
-#contact-us-content address dl dd {
-	padding: 1em;
+#contact-us-content table td {
+	border: none;
 }
-#contact-us-content address dl dt {
-	text-align: left;
-	color: #153a7e;
+#contact-us-content table td:first-child {
+	font-weight: bold;
 }
-
 
 
 /*=================================================================
