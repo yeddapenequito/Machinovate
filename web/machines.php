@@ -102,11 +102,6 @@
 		    			</div>
 		    		</div>	
                 </div>
-		  <footer class="footer">
-		  	<p class="text-muted">*Our machines can be customized, but prices may differ. For details call +632 404 6676</p>
-		  </footer>
-
-		</div>
 		</div> <!-- /.container-fluid -->
 		
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
