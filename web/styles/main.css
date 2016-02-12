@@ -191,21 +191,6 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 
 
 /*=================================================================
-  About us styles
-  =================================================================*/
-
-#about-us-content {
-	margin-top: 2em;
-}
-#about-us-content .logo {
-	display: block;
-	height: 6em;
-	width: 100%;
-}
-
-
-
-/*=================================================================
   Events styles
   =================================================================*/
 
