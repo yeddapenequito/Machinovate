@@ -18,9 +18,9 @@
 				<address class="col-sm-12 col-md-4 col-lg-5">
 					<h1 class="page-header">Contact Information</h1>
 					<dl class="dl-horizontal">
-						<dt><span class="glyphicon glyphicon-road"></span>Address</dt>
+						<dt>Address</dt>
 						<dd>Unit # 301-A King Center Bldg. Sgt Rivera St.Brgy. Manresa Quezon City Philippines 1115</dd>
-						<dt><span class="glyphicon glyphicon-phone-alt"></span>Telephone</dt>
+						<dt>Telephone</dt>
 						<dd>
 							<ul class="list-unstyled">
 								<li>+632 404 6676</li>
@@ -28,7 +28,7 @@
 								<li>+632 423 2988</li>
 							</ul>
 						</dd>
-						<dt><span class="glyphicon glyphicon-envelope"></span>E-mail</dt>
+						<dt>E-mail</dt>
 						<dd><a href="mailto:machinovate.international@gmail.com">machinovate.international@gmail.com</a></dd>
 					</dl>
 				</address>
