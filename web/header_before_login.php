@@ -22,10 +22,10 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a id="employee-login">
+					<div id="employee-login">
 						<span id="are-you-an-employee">Are you an employee?</span>
-						<button id="login-button" href="login.php" class="btn btn-primary btn-sm" role="button">Login</button> 
-					</a>
+						<a id="login-button" href="login.php" class="btn btn-sm" role="button">Login</a> 
+					</div>
 				</li>
 			</ul>
 		</div><!--/.nav-collapse -->

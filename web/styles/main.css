@@ -133,6 +133,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 .navbar #employee-login,
 .navbar #employee-logout {
 	border: none;
+  padding: 10px;
 }
 .navbar #employee-login:hover,
 .navbar #employee-login:active,

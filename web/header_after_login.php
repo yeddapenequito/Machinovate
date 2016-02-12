@@ -20,10 +20,10 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a id="employee-logout">
+					<div id="employee-logout">
 						<span id="hello-user">Hello, admin</span>
-						<button id="logout-button" href="login.php" class="btn btn-primary btn-sm" role="button">Logout</button> 
-					</a>
+						<a id="logout-button" href="logout.php" class="btn btn-sm" role="button">Logout</a> 
+					</div>
 				</li>
 			</ul>
 		</div><!--/.nav-collapse -->
