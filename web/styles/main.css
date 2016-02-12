@@ -225,8 +225,10 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   	height: 200px;
   	width: 350px;
   }	
-  #event-content .nav-pills {
-  	width: 25em;
+  @media (min-width: 768px) {
+    #event-content .nav-pills {
+    	width: 25em;
+    }
   }
 
 
