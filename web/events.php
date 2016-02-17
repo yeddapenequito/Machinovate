@@ -18,7 +18,7 @@
 						<table class="table table-condensed row">
 							<thead class="col-xs-4">
 								<th colspan="2">
-									<img id="event-img-sm" src="images/GeneratedCross-0.png" alt="upcoming event picture">
+									<img id="event-img-sm" src="images/paperex.jpg" alt="upcoming event picture">
 								</th>
 							</thead>
 							<tbody class="col-xs-8">
@@ -51,7 +51,7 @@
 						<h3>Paperex India 2015<span class="label label-success">Coming Soon</span></h3>
 					</div>
 
-					<img id="events-img-md" src="images/GeneratedCross-0.png" alt="upcoming event picture">
+					<img id="events-img-md" src="images/paperex.jpg" alt="upcoming event picture">
 
 					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo. Nam sit amet facilisis eros. Nullam maximus nunc dolor, quis hendrerit arcu rutrum sed. Maecenas eu lobortis arcu. Pellentesque egestas lectus et egestas vestibulum. Morbi placerat nunc eget tincidunt condimentum. In cursus varius ultricies. Phasellus commodo neque eu odio ullamcorper tempus. Curabitur finibus metus ac suscipit aliquet. Mauris sit amet convallis massa. Curabitur scelerisque a odio et hendrerit. Duis fringilla, massa eu cursus consectetur, massa eros eleifend dolor, in aliquam urna eros ac leo.</p>
 
