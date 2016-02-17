@@ -209,19 +209,9 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   	border: 1px solid silver;
   	border-radius: 5px;
   }
-  #event-content table td, 
-  #event-content table th {
-  	border: none;
-  }
-  #event-content table td {
-  	padding-left: .5em;
-  }
-  #event-content table td:first-child {
-  	font-weight: bold;
-  }
-  #event-content h5 {
-  	color: white;
-  	font-style: italic;
+  #event-content #event-name {
+    font-size: 1.5em;
+    font-weight: bold;
   }
   #event-content .nav-pills .active a {
     background-color: #153a7e;
