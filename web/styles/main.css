@@ -42,10 +42,10 @@ body {
 ----------------------------------------------------------------*/
 
 .navbar .navbar-brand img {
-	height: 60px;
-	width: 150px;
-	position: relative;
-	top: -18px;
+  height: 60px;
+  width: 150px;
+  position: relative;
+  top: -18px;
 }
 
 
@@ -64,8 +64,8 @@ body {
 .navbar .navbar-nav > li > a:hover, 
 .navbar .navbar-nav > li > a:active,
 .navbar .navbar-nav > li .active {
-	background-color: #bdc3c7;
-	color: black;
+  background-color: #bdc3c7;
+  color: black;
 }
 
 
@@ -103,15 +103,15 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     border-bottom: 7px solid white;
     color: white;
   }
-	.navbar .navbar-nav > li > a:active {
-		border-bottom: 7px solid gray;
-		color: gray;
-	}
-	.navbar .navbar-nav > li > a:hover,
-	.navbar .navbar-nav > li > a:active,
-	.navbar .navbar-nav > li .active {
-		background-color: #132c55;
-	}
+  .navbar .navbar-nav > li > a:active {
+    border-bottom: 7px solid gray;
+    color: gray;
+  }
+  .navbar .navbar-nav > li > a:hover,
+  .navbar .navbar-nav > li > a:active,
+  .navbar .navbar-nav > li .active {
+    background-color: #132c55;
+  }
 }
 
 
@@ -234,8 +234,8 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   	float: left;
   	margin-right: 1.5em;
     margin-bottom: 1.5em;
-  	height: 200px;
-  	width: 350px;
+    height: 200px;
+    width: 350px;
   }	
   @media (min-width: 768px) {
     #event-content .nav-pills {
