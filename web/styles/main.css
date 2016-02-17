@@ -13,7 +13,7 @@ body {
 
    header {
    	background-color: #153a7e;
-   	border: 1px solid white;
+   	border: none;
    	border-bottom: none;
    }
    header #logo {
