@@ -232,7 +232,6 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   #event-content .tab-content img {
   	float: left;
   	margin-right: 1.5em;
-    margin-bottom: 1.5em;
     height: 200px;
     width: 350px;
   }	
