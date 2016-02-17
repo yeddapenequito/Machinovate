@@ -147,7 +147,6 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 .navbar #employee-login #are-you-an-employee,
 .navbar #employee-logout #hello-user {
 	font-style: italic;
-	font-size: .85em;
 	margin-right: .5em;
 }
 .navbar #login-button,
