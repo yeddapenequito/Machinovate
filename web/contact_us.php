@@ -14,7 +14,7 @@
 			<div class="row">
 				<address class="col-sm-12 col-md-4">
 					<h2 class="page-header">Contact Information</h2>
-					<table class="table table-hover">
+					<table class="table">
 						<tbody>
 							<tr>
 								<td>Address</td>

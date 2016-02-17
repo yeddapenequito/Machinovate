@@ -15,14 +15,9 @@
 			<ul class="nav nav-pills nav-stacked col-xs-12 col-sm-4">
 				<li class="active">
 					<a data-toggle="pill" href="#menu0">
-						<table class="table table-condensed row">
-							<thead class="col-xs-4">
-								<th colspan="2">
-									<img id="event-img-sm" src="images/paperex.jpg" alt="upcoming event picture">
-								</th>
-							</thead>
-							<tbody class="col-xs-8">
-								<tr>
+						<!-- <table class="table table-condensed">
+							<tbody>
+								<tr id="event-name">
 									<td>What</td>
 									<td>Paperex India 2015</td>
 								</tr>
@@ -35,7 +30,12 @@
 									<td>Pragati, Maidan, New Delhi India</td>
 								</tr>
 							</tbody>
-						</table>
+						</table> -->
+						<ul class="list-unstyled">
+							<li class="event-name">Paperex India 2015</li>
+							<li>Pragati, Maidan, New Delhi India</li>
+							<li>Friday, 12 February</li>
+						</ul>
 					</a>
 				</li>
 				<li><a data-toggle="pill" href="#menu1">2014 - Event Name</a></li>
