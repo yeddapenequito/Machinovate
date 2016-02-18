@@ -153,7 +153,8 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 	margin-right: .5em;
 }
 .navbar #login-button,
-.navbar #logout-button {
+.navbar #logout-button,
+#login-content #login-button {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	background-color: #bdc3c7;
@@ -164,16 +165,21 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 	font-size: .85em;
 }
 .navbar #login-button:hover, 
-.navbar #logout-button:hover {
+.navbar #logout-button:hover,
+#login-content #login-button:hover {
 	background-color: transparent;
 	border: 1px solid silver;
 	color: silver;
 }
+#login-content #login-button:hover {
+  color: #153a7e;
+}
 .navbar #login-button:active,
-.navbar #logout-button:active {
-	background-color: transparent;
-	border: 1px solid gray;
-	color: gray;
+.navbar #logout-button:active,
+#login-content #login-button:active {
+  background-color: transparent;
+  border: 1px solid gray;
+  color: gray;
 }
 
 /*=================================================================

@@ -7,98 +7,84 @@
 	<link rel="stylesheet" href="styles/main.css">
 	<title>Machinovate | Machines</title>
 	<style>
-	.footer{
-		margin-bottom:50px;
-		background: none;
-
-	}
-	.btn-primary{
-		margin-top:0%;
-		margin-left:auto;
-		margin-right:0%;
-	}
-	#images #image_1{
-		margin-top:-2%;
-		margin-left:250px;
-		margin-right:0px;
-		position: absolute;
-		
-	}
-	#images #image_2{
-		margin-top:-2%;
-		margin-left:575px;
-		margin-right:auto;
-		position: absolute;
-		display: inline-block;
-	}
-	#images #image_3{
-		margin-top:18%;
-		margin-left:23%;
-		margin-right: auto;
-		position: absolute;
-		display: inline-block;
-	}
-	#images #image_4{
-		margin-top:18%;
-		margin-left:56%;
-		margin-right: auto;
-		position: absolute;
-		display: inline-block;
-	}
-	
-	.btn-info{
-		margin-top:35%;
-		margin-left:-26%;
-		margin-right:auto;
-		position: absolute;
-		display: inline-block;
-		background-color: #132C55;
-		border-radius: 0;
-
-	}
-	.btn-default{
-		margin-top:-2%;
-		margin-left:45%;
-		margin-right:auto;
-		position: absolute;
-		display: inline-block;
-		background-color: #132C55;
-		border-radius: 0;
-		font-color:white;
-	}
+		#machines-content .mach-img {
+			width: 225px;
+			height: 150px;
+			display: block;
+			margin: 0 auto;
+		}
+		#machines-content header {
+			background-color: transparent;
+		}
+		#machines-content #categories > div{
+			border: 1px solid silver;
+			border-radius: 5px;
+			margin: 1em 0;
+		}
+		#machines-content #categories > div .bar {
+			background-color: silver;
+		}
+		#machines-content #categories .div-hover {
+			-webkit-transition: all .3s ease; /* Safari and Chrome */
+		  	-moz-transition: all .3s ease; /* Firefox */
+		  	-o-transition: all .3s ease; /* IE 9 */
+		  	-ms-transition: all .3s ease; /* Opera */
+		  	transition: all .3s ease;
+		}
 	</style>
 </head>
 <body>
 	<?php include 'header_before_login.php';?>
-	<div class="container-fluid">
+	<div id="machines-content" class="container-fluid">
 		<div class="row">
-			<!-- Slitter-->
-			<div class="col-sm-3 col-md-6">
-				<div id="image_1"class="col-sm-3 col-md-6">
-					<img src="images/slitter_front.png" style="width:310px;height:228px;">
-					<a href="slitter.php" class="btn btn-info" role="button">Slitter</a>
+			<div id="categories" class="col-xs-12 col-sm-offset-2 col-sm-8">
+				<!-- Slitter-->
+				<div class="row div-hover">
+					<div class="col-xs-12 col-sm-8">
+						<header>
+							<h1>Slitter</h1>
+						</header>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 bar">
+						<img class="mach-img" alt="slitter" src="images/slitter-front.png">
+					</div>
 				</div>
-			</div>
-			<!-- Sheeter -->
-			<div class="col-sm-9 col-md-6">
-				<div id="image_2" class="col-sm-9 col-md-6">
-					<img src="images/sheeter-servo.png" style="width:304px;height:228px;">
-					<a href="sheeter.php" class="btn btn-info" role="button">Sheeter</a>
+				<!-- Sheeter -->
+				<div class="row div-hover">
+					<div class="col-xs-12 col-sm-8">
+						<header>
+							<h1>Sheeter</h1>
+						</header>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 bar">
+						<img class="mach-img" alt="sheeter" src="images/sheeter-servo.png">
+					</div>
 				</div>
-			</div>	
-			<!-- Cutter -->
-			<div class="col-sm-3 col-md-6" >
-				<div id="image_3"class="col-sm-3 col-md-6" >
-					<img src="images/cutter.png" style="width:304px;height:228px;">
-					<a href="cutter.php" class="btn btn-info" role="button">Cutter</a>
+				<!-- Cutter -->
+				<div class="row div-hover">
+					<div class="col-xs-12 col-sm-8">
+						<header>
+							<h1>Cutter</h1>
+						</header>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 bar">
+						<img class="mach-img" alt="cutter" src="images/cutter.png">
+					</div>
 				</div>
-				
-			</div>
-			<!-- Other Products -->
-			<div class="col-sm-9 col-md-6">
-				<div id="image_4" class="col-sm-9 col-md-6">
-					<img src="images/other.png" style="width:120px;height:178px;">
-					<a href="other.php" class="btn btn-info" role="button">Other Products</a>
+				<!-- Other Products -->
+				<div class="row div-hover">
+					<div class="col-xs-12 col-sm-8">
+						<header>
+							<h1>Other Products</h1>
+						</header>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
+					</div>
+					<div class="col-xs-12 col-sm-4 bar">
+						<img class="mach-img" alt="other-products" src="images/other-products.png">
+					</div>
 				</div>
 			</div>	
 		</div> <!-- /.row -->
@@ -108,6 +94,9 @@
 	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 	<script type="text/javascript">
 	document.getElementById("machines").className = "active";
+	function zoom(el) {
+		
+	}
 	</script>
 </body>
 </html>
