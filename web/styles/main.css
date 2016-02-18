@@ -232,7 +232,64 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     	width: 25em;
     }
   }
+/*=================================================================
+  Order now styles
+  =================================================================*/
+  #order-now-content #mach-img {
+      height: 500px;
+      width: 600px;
+    }
+    #order-now-content header {
+      background-color: transparent;
+    }
+    #order-now-content header h1 {
+      font-size: 1.6em;
+    }
+    #order-now-content .btn-group {
+      display: block;
+    }
+    #order-now-content .btn-group > a {
+      font-size: 1.25em;
+      margin: 1em;
+      border-radius: 5px;
+      text-align: left;
+      color: black;
+      background-color: transparent;
+      border: 1px solid silver;
+      width: inherit;
+    }
+    #order-now-content .btn-group > a small {
+      display: block;
+    }
+    #order-now-content .btn-group > a:hover {
+      border-color: #153a7e; 
+      color: #153a7e;
+    }
+    #order-now-content #continue-btn {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-color: #bdc3c7;
+      color: #153a7e;
+      border: 1px solid transparent;
+      border-radius: 0;
+      font-weight: bold;
+      margin-top: 2em;
+      margin-left: 18px;
+    }
+    #order-now-content #continue-btn:hover {
+      background-color: transparent;
+      border: 1px solid silver;
+      color: #153a7e;
+    }
+    #order-now-content #continue-btn:active {
+      background-color: transparent;
+      border: 1px solid gray;
+      color: gray;
 
+      -moz-box-shadow:    3px 3px 5px 6px #ccc;
+        -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+        box-shadow:         3px 3px 5px 6px #ccc;
+    }
 
 /*=================================================================
   Dashboard styles
