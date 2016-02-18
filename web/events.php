@@ -17,7 +17,7 @@
 					<a data-toggle="pill" href="#menu0">
 						<p id="event-name">2015 - Paperex India</p>
 						<p>Pragati, Maidan, New Delhi India</p>
-						<p>Friday, 12 February</p>
+						<p>Friday, February 12 </p>
 					</a>
 				</li>
 				<li><a data-toggle="pill" href="#menu1">2014 - Event Name</a></li>

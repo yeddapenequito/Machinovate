@@ -203,13 +203,6 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 /*=================================================================
   Events styles
   =================================================================*/
-  #event-content #event-img-sm {
-  	height: 65px;
-  	width: 65px;
-  }
-  #event-content ul li:first-child {
-  	font-size: .8em;
-  }
   #event-content ul li {
   	border: 1px solid silver;
   	border-radius: 5px;
@@ -219,16 +212,29 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     font-weight: bold;
   }
   #event-content .nav-pills .active a {
-    background-color: #153a7e;
+    background-color: #eee;
   }
   #event-content .nav-pills {
     margin-top: 2.75em;
   }
+  #event-content .nav-pills > li {
+    margin-bottom: 1em;
+  }
+  #event-content .nav-pills > li > a {
+    color: black;
+  }
+  #event-content .nav-pills > li:hover {
+    border-color: #153a7e; 
+  }
+  #event-content .nav-pills > li > a:hover {
+    background-color: transparent;
+    color: #153a7e;
+  }
   #event-content .tab-content img {
   	float: left;
-  	margin-right: 1.5em;
     height: 200px;
     width: 350px;
+    margin: .5em;
   }	
   @media (min-width: 768px) {
     #event-content .nav-pills {
