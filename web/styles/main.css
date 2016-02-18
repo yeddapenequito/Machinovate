@@ -182,10 +182,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   #contact-us-content {
     margin-top: 3em;
   }
-  #contact-us-content address {
-  	border: 1px solid silver;
-  	border-radius: 5px;
-  }
+
   #contact-us-content #map {
   	min-width: 100%;
   }
