@@ -17,10 +17,10 @@
 		<?php include 'header_before_login.php';?>
 		
 		<div class="container">
-			<img class="mach-img" src="images/slitter-front.png">
-			<img class="mach-img" src="images/sheeter-servo.png">
-			<img class="mach-img" src="images/cutter.png">
-			<img class="mach-img" src="images/other.png">
+			<img class="mach-img" alt="slitter" src="images/slitter-front.png">
+			<img class="mach-img" alt="sheeter" src="images/sheeter-servo.png">
+			<img class="mach-img" alt="cutter" src="images/cutter.png">
+			<img class="mach-img" alt="other-products" src="images/other-products.png">
 		</div> <!-- ./container -->
 
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
