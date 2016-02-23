@@ -218,9 +218,6 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   #event-content .nav-pills {
     margin-top: 2.75em;
   }
-  #event-content .nav-pills > li {
-    margin-bottom: 1em;
-  }
   #event-content .nav-pills > li > a {
     color: black;
   }
