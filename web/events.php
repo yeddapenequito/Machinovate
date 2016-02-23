@@ -15,7 +15,7 @@
 			<ul class="nav nav-pills nav-stacked col-xs-12 col-sm-4">
 				<li class="active">
 					<a data-toggle="pill" href="#menu0">
-						<p id="event-name">2015 - Paperex India</p>
+						<p id="event-name">2015 - Paperex India <span class="label label-success">Coming Soon</span></p>
 						<p>Pragati, Maidan, New Delhi India</p>
 						<p>Friday, February 12 </p>
 					</a>
@@ -30,7 +30,7 @@
 			<div class="tab-content col-xs-12 col-sm-8">
 				<div id="menu0" class="tab-pane fade in active">
 					<div class="page-header">
-						<h3>Paperex India 2015<span class="label label-success">Coming Soon</span></h3>
+						<h3>Paperex India 2015</h3>
 					</div>
 
 					<img id="events-img-md" src="images/paperex.jpg" alt="upcoming event picture">
