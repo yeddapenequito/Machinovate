@@ -19,7 +19,7 @@
 					</header>
 					<img class="mach-img" alt="cutter" src="images/cutter.png">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
-					<a href="" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
+					<a href="cutter.php" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
 				</div>
 			</div>
 
@@ -31,7 +31,7 @@
 					</header>
 					<img class="mach-img" alt="slitter" src="images/slitter-front.png">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
-					<a href="" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
+					<a href="slitter.php" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
 				</div>
 			</div>
 
@@ -43,7 +43,7 @@
 					</header>
 					<img class="mach-img" alt="sheeter" src="images/sheeter-servo.png">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
-					<a href="" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
+					<a href="sheeter.php" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
 				</div>
 			</div>
 
@@ -55,7 +55,7 @@
 					</header>
 					<img class="mach-img" alt="other-products" src="images/other-products.png">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
-					<a href="" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
+					<a href="other-products.php" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
 				</div>
 			</div>
 		</div> <!-- /.row -->
