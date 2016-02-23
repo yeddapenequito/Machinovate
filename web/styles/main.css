@@ -153,9 +153,10 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 	font-style: italic;
 	margin-right: .5em;
 }
-.navbar #login-button,
-.navbar #logout-button,
-#login-content #login-button {
+.navbar #login-btn,
+.navbar #logout-btn,
+#login-content #login-btn,
+#machines-content .learn-more-btn {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	background-color: #bdc3c7;
@@ -165,19 +166,22 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 	font-weight: bold;
 	font-size: .85em;
 }
-.navbar #login-button:hover, 
-.navbar #logout-button:hover,
-#login-content #login-button:hover {
+.navbar #login-btn:hover, 
+.navbar #logout-btn:hover,
+#login-content #login-btn:hover,
+#machines-content .learn-more-btn:hover {
 	background-color: transparent;
 	border: 1px solid silver;
 	color: silver;
 }
-#login-content #login-button:hover {
+#login-content #login-btn:hover,
+#machines-content .learn-more-btn:hover {
   color: #153a7e;
 }
-.navbar #login-button:active,
-.navbar #logout-button:active,
-#login-content #login-button:active {
+.navbar #login-btn:active,
+.navbar #logout-btn:active,
+#login-content #login-btn:active,
+#machines-content .learn-more-btn:active {
   background-color: transparent;
   border: 1px solid gray;
   color: gray;
