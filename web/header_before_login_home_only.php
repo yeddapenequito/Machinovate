@@ -31,7 +31,7 @@
 				<li>
 					<div id="employee-login">
 						<span id="are-you-an-employee">Are you an employee?</span>
-						<a id="login-button" href="login.php" class="btn btn-sm" role="button">Login</a> 
+						<a id="login-btn" href="login.php" class="btn btn-sm" role="button">Login</a> 
 					</div>
 				</li>
 			</ul>

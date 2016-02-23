@@ -33,6 +33,7 @@ body {
   	background-color: #132c55;
   	color: white;
   	border: none;
+    border-top: 1px solid white;
   	border-radius: 0;
 
     -webkit-box-shadow: 0 8px 6px -6px #999;
