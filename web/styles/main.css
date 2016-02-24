@@ -358,13 +358,8 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     margin-bottom: 2em;
   }
   #machines-content .minor {
-    /*background-color: #132c55;*/
-    /*color: white;*/
     margin-top: 2em;
   }
-  /*#machines-content .minor .learn-more-btn:hover {
-    color: white;
-  }*/
   #machines-content .minor h1 {
     font-size: 2em;
   }
