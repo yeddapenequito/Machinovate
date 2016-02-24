@@ -16,6 +16,11 @@
 
 				<h3 class="page-header">Login</h3>
 
+				<div class="alert alert-danger">
+				  	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				  	<strong>Warning!</strong> This page is for authorized employees only.
+				</div>
+
 				<div class="form-group">
 					<label for="username">Username</label>
 					<input id="username" name="username" type="text" placeholder="Enter username" class="form-control" required autofocus> 
