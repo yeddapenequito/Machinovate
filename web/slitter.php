@@ -12,11 +12,11 @@
 
 		<div id="machine-details" class="container">
 			<div class="row">
+				<ol class="breadcrumb">
+					<li><a href="machines.php">Machines</a></li>
+					<li class="active">Slitter</li>
+				</ol>
 				<div class="col-xs-12 col-md-8">
-					<ol class="breadcrumb">
-						<li><a href="machines.php">Machines</a></li>
-						<li class="active">Slitter</li>
-					</ol>
 					<div class="row">
 						<div class="col-xs-12 col-sm-4">
 							<img id="mach-img" src="images/slitter-front.png" alt="slitter">
