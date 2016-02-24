@@ -311,10 +311,6 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     background-color: transparent;
     border: 1px solid gray;
     color: gray;
-
-    -moz-box-shadow:    3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow:         3px 3px 5px 6px #ccc;
   }
 
 /*=================================================================
