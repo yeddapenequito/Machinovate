@@ -400,7 +400,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
       height: 300px;
     }
     #machine-details #sidebar {
-      background-color: #ecf0f1;
+      background-color: #eee;
       border-radius: 5px;
     }
     #machine-details #sidebar .page-header {

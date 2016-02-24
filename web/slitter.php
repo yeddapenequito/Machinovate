@@ -6,6 +6,16 @@
 		<link rel="stylesheet" href="styles/bootstrap.min.css">
 		<link rel="stylesheet" href="styles/main.css">
 		<title>Machinovate | Slitter</title>
+		<style type="text/css">
+			#or {
+				border:1px solid silver;
+				border-radius:100%;
+				position: relative;
+				top: .7em;
+				margin:1em;
+				padding:.25em .5em;
+			}
+		</style>
 	</head>
 	<body>
 		<?php include 'header_before_login.php';?>
@@ -29,6 +39,8 @@
 							<p id="application"><strong>Applications</strong>. Fax Paper and Cash Register</p>
 
 							<a id="order-now-btn" href="order_now.php" class="btn btn-primary btn-lg">Order This Machine</a>
+							<span id="or">or</span>
+							<a id="order-now-btn" href="contact_us.php" class="btn btn-primary btn-lg">Contact Us for More Details</a>
 						</div>
 					</div>
 
