@@ -6,36 +6,6 @@
 		<link rel="stylesheet" href="styles/bootstrap.min.css">
 		<link rel="stylesheet" href="styles/main.css">
 		<title>Machinovate | Slitter</title>
-		<style type="text/css">
-			#machine-details #mach-img{
-				height: 200px;
-				width: 250px;
-				display: block;
-				margin: 0 auto;
-			}
-			#machine-details table thead {
-				font-size: 1.5em;
-			}
-			#machine-details table caption {
-				font-size: 2em;
-			}
-			#machine-details #order-now-btn {
-				margin-top: 2em;
-			}
-			#machine-details #photos img {
-				height: 100px;
-				width: 100px;
-				border: 1px solid silver;
-				margin: .25em;
-			}
-			#machine-details #application {
-				font-size: 1.25em;
-			}
-			#machine-details #videos video {
-				width: 100%;
-				height: 300px;
-			}
-		</style>
 	</head>
 	<body>
 		<?php include 'header_before_login.php';?>
