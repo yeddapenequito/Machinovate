@@ -37,7 +37,7 @@
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			document.getElementById("order-now").className = "active";
-			document.getElementById("slitter").style.backgroundColor = "silver";
+			document.getElementById("slitter").style.backgroundColor = "#eee";
 
 			function changeImage(machine) {
 			    var image = document.getElementById('mach-img');
@@ -45,7 +45,7 @@
 			    	case 0:
 			    		image.src = "images/slitter-front.png";
 			    		image.alt = "slitter";
-			    		document.getElementById("slitter").style.backgroundColor = "silver";
+			    		document.getElementById("slitter").style.backgroundColor = "#eee";
 			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
 			    		document.getElementById("cutter").style.backgroundColor = "transparent";
 			    		document.getElementById("other-products").style.backgroundColor = "transparent";
@@ -54,7 +54,7 @@
 			    		image.src = "images/sheeter-servo.png";
 			    		image.alt = "sheeter";
 			    		document.getElementById("slitter").style.backgroundColor = "transparent";
-			    		document.getElementById("sheeter").style.backgroundColor = "silver";
+			    		document.getElementById("sheeter").style.backgroundColor = "#eee";
 			    		document.getElementById("cutter").style.backgroundColor = "transparent";
 			    		document.getElementById("other-products").style.backgroundColor = "transparent";
 			    		break;
@@ -63,7 +63,7 @@
 			    		image.alt = "cutter";
 			    		document.getElementById("slitter").style.backgroundColor = "transparent";
 			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
-			    		document.getElementById("cutter").style.backgroundColor = "silver";
+			    		document.getElementById("cutter").style.backgroundColor = "#eee";
 			    		document.getElementById("other-products").style.backgroundColor = "transparent";
 			    		break;
 			    	case 3:
@@ -72,7 +72,7 @@
 			    		document.getElementById("slitter").style.backgroundColor = "transparent";
 			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
 			    		document.getElementById("cutter").style.backgroundColor = "transparent";
-			    		document.getElementById("other-products").style.backgroundColor = "silver";
+			    		document.getElementById("other-products").style.backgroundColor = "#eee";
 			    }
 			}	
 		</script>
