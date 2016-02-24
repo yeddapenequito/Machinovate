@@ -13,7 +13,7 @@
 		<div class="row">
 			<!-- Cutter -->
 			<div class="col-xs-12 col-md-3">
-				<div class="minor">
+				<div class="minor right-shadow">
 					<header>
 						<h1>Cutter</h1>
 					</header>
@@ -25,7 +25,7 @@
 
 			<!-- Slitter-->
 			<div class="col-xs-12 col-md-3">
-				<div>
+				<div class="right-shadow">
 					<header>
 						<h1>Slitter</h1>
 					</header>
@@ -37,7 +37,7 @@
 
 			<!-- Sheeter -->
 			<div class="col-xs-12 col-md-3">
-				<div>
+				<div class="left-shadow">
 					<header>
 						<h1>Sheeter</h1>
 					</header>
@@ -49,7 +49,7 @@
 
 			<!-- Other Products -->
 			<div class="col-xs-12 col-md-3">
-				<div class="minor">
+				<div class="minor left-shadow">
 					<header>
 						<h1>Other Products</h1>
 					</header>
