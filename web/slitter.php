@@ -158,7 +158,7 @@
 					</table>
 				</div> <!-- /.col 1 -->
 
-				<div class="col-xs-12 col-md-4">
+				<div id="sidebar" class="col-xs-12 col-md-4">
 					<div id="photos">
 						<h3 class="page-header">Photos</h3>
 						<div class="img-popup">

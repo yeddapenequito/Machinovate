@@ -372,6 +372,17 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     width: 175px;
     height: 150px;
   }
+  
+  /*-----------------------------------------------------------------
+    Machine detail styles
+    -----------------------------------------------------------------*/
+  #machine-details #sidebar {
+    background-color: #ecf0f1;
+    border-radius: 5px;
+  }
+  #machine-details #sidebar .page-header {
+    border-color: #153a7e;
+  }
 /*=================================================================
   Dashboard styles
   =================================================================*/
