@@ -90,44 +90,61 @@
 
 							</tr>
 							<tr>	
-								<td rowspan="2">Core Diameter of Rewinding Reel</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
-
+								<td>Core Diameter of Rewinding Reel</td>
+								<td>
+									<p>76.20-305 mm</p>
+									<p>( 3" - 12" )</p>
+								</td>
+								<td>
+									<p>76.20-305 mm</p>
+									<p>( 3" - 12" )</p>
+								</td>
+								<td>
+									<p>76.20-305 mm</p>
+									<p>( 3" - 12" )</p>
+								</td>
+								<td>
+									<p>76.20-305 mm</p>
+									<p>( 3" - 12" )</p>
+								</td>
 							</tr>
 							<tr>	
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
+								<td >Core Diameter of Unwinding Reel</td>
+								<td>
+									<p>76.20-305 mm</p>
+									<p>( 3" - 12" )</p>
+								</td>
+								<td>
+									<p>76.20-305 mm</p>
+									<p>( 3" - 12" )</p>
+								</td>
+								<td>
+									<p>76.20-305 mm</p>
+									<p>( 3" - 12" )</p>
+								</td>
+								<td>
+									<p>76.20-305 mm</p>
+									<p>( 3" - 12" )</p>
+								</td>
 							</tr>
 							<tr>	
-								<td rowspan="2">Core Diameter of Unwinding Reel</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
-							</tr>
-							<tr>	
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
-							</tr>
-							<tr>	
-								<td rowspan="2">Total Power Requirement</td>
-								<td>220/380/440 Volts</td>
-								<td>220/380/440 Volts</td>
-								<td>220/380/440 Volts</td>
-								<td>220/380/440 Volts</td>
-							</tr>
-							<tr>	
-								<td>( 25 kW )</td>
-								<td>( 29 kW )</td>
-								<td>( 33 kW )</td>
-								<td>( 33 kW )</td>
+								<td>Total Power Requirement</td>
+								<td>
+									<p>220/380/440 Volts</p>
+									<p>( 25 kW )</p>
+								</td>
+								<td>
+									<p>220/380/440 Volts</p>
+									<p>( 29 kW )</p>
+								</td>
+								<td>
+									<p>220/380/440 Volts</p>
+									<p>( 33 kW )</p>
+								</td>
+								<td>
+									<p>220/380/440 Volts</p>
+									<p>( 33 kW )</p>
+								</td>
 							</tr>
 							<tr>	
 								<td>Machine Dimension</td> 
