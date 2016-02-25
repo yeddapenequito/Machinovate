@@ -336,7 +336,18 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     border-radius: 5px;
     padding: 1.25em;
     color: white;
+  }
+  #machines-content .row div:nth-child(1) div {
+    background-color: #2657a6;
+  }
+  #machines-content .row div:nth-child(2) div {
     background-color: #132c55;
+  }
+  #machines-content .row div:nth-child(3) div {
+    background-color: #1c417d;
+  }
+  #machines-content .row div:nth-child(4) div {
+    background-color: #2f6dd0;
   }
   #machines-content .right-shadow {
     -webkit-box-shadow: -16px 16px 20px -14px rgba(0,0,0,0.44);
