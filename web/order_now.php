@@ -11,6 +11,20 @@
 		<?php include 'header_before_login.php';?>
 		
 		<div id="order-now-content" class="container">
+			<ol class="breadcrumb">
+				<li class="active">
+					Step 1: Choose your machine
+				</li>
+				<li>
+					Step 2: Specify your machine's specs
+				</li>
+				<li>
+					Step 3: Enter e-mail
+				</li>
+				<li>
+					Step 4: Shipping details
+				</li>
+			</ol>
 			<div class="row">
 				<div class="col-md-6 visible-md-block visible-lg-block">
 					<img id="mach-img" alt="slitter" src="images/slitter-front.png">
