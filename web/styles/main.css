@@ -176,9 +176,11 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 	color: silver;
 }
 #login-content #login-btn:hover,
-#machines-content .learn-more-btn:hover,
 #machine-details #order-now-btn:hover {
   color: #153a7e;
+}
+#machines-content .learn-more-btn:hover {
+  color: white;
 }
 .navbar #login-btn:active,
 .navbar #logout-btn:active,
@@ -333,6 +335,8 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     border: 1px solid silver;
     border-radius: 5px;
     padding: 1.25em;
+    color: white;
+    background-color: #132c55;
   }
   #machines-content .right-shadow {
     -webkit-box-shadow: -16px 16px 20px -14px rgba(0,0,0,0.44);
