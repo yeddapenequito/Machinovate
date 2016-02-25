@@ -10,6 +10,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.breadcrumb .active {
+  color: #153a7e;
+  font-weight: bold;
+}
+
 /*=================================================================
    header styles
    =================================================================*/
