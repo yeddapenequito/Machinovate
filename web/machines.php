@@ -55,7 +55,7 @@
 					</header>
 					<img class="mach-img" alt="other-products" src="images/other-products.png">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
-					<a href="other-products.php" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
+					<a href="other_products.php" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
 				</div>
 			</div>
 		</div> <!-- /.row -->

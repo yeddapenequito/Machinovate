@@ -425,6 +425,32 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
       margin:1em;
       padding:.25em .5em;
     }
+    
+  /*-----------------------------------------------------------------
+    Machine categories styles
+    -----------------------------------------------------------------*/
+    #machine-category .row div a {
+      border: 1px solid silver;
+      border-radius: 5px;
+      width: 25em;
+      display: block;
+      padding: 3em 1em;
+      margin: 1em;
+      text-align: center;
+      color: black;
+    }
+    #machine-category .row div a:hover {
+      color: #153a7e;
+      border-color: #153a7e;
+
+    }
+    #machine-category .row div a h1 {
+      font-size: 1.5em;
+    }
+    #machine-category img {
+      width: 300px;
+      height: 200px;
+    }
 
 /*=================================================================
   Agents styles

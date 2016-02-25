@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/main.css">
+		<title>Machinovate | Sheeter</title>
+	</head>
+	<body>
+		<?php include 'header_before_login.php';?>
+
+		<div id="machine-category" class="container">
+			<ol class="breadcrumb">
+				<li><a href="machines.php">Machines</a></li>
+				<li class="active">Sheeter</li>
+			</ol>
+			<div class="row">
+				<div>
+					<a href="" class="col-xs-12 col-sm-3">
+						<img src="images/compact-machine.png" alt="Compact Machine">
+						<h1>Compact Machine</h1>
+					</a>
+				</div>
+				<div>
+					<a href="" class="col-xs-12 col-sm-3">
+						<img src="images/servo-drive-sheeter.png" alt="Servo Drive Sheeter Machine">
+						<h1>Servo Drive Sheeter Machine</h1>
+					</a>
+				</div>
+				<div>
+					<a href="" class="col-xs-12 col-sm-3">
+						<img src="images/machine-combi.php" alt="Sheeter Machine Combi">
+						<h1>Sheeter Machine Combi</h1>
+					</a>
+				</div>
+				<div>
+					<a href="" class="col-xs-12 col-sm-3">
+						<img src="images/sheeter-machine-with-h-type-reel-stand.png" alt="Sheeter Machine with H-Type Reel Stand">
+						<h1>Sheeter Machine with H-Type Reel Stand</h1>
+					</a>
+				</div>
+				<div>
+					<a href=""  class="col-xs-12 col-sm-3">
+						<img src="images/twin-knife-synchro-fly-sheeting-machine" alt="Twin Knife Synchro-Fly Sheeting Machine">
+						<h1>Twin Knife Synchro-Fly Sheeting Machine</h1>
+					</a>
+				</div>
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+	</body>
+</html>
