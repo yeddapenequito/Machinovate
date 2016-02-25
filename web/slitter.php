@@ -62,7 +62,7 @@
 
 							</tr>
 							<tr>	
-								<td>Maximum Unwinding Diamter</td>
+								<td>Maximum Unwinding Diameter</td>
 								<td>1800 mm</td>
 								<td>1800 mm</td>
 								<td>1800 mm</td>
