@@ -406,6 +406,14 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     #machine-details #sidebar .page-header {
       border-color: #153a7e;
     }
+    #machine-details #or {
+      border:1px solid silver;
+      border-radius:100%;
+      position: relative;
+      top: .7em;
+      margin:1em;
+      padding:.25em .5em;
+    }
 
 /*=================================================================
   Agents styles
