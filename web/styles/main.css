@@ -402,6 +402,23 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     #machine-details #sidebar .page-header {
       border-color: #153a7e;
     }
+
+/*=================================================================
+  Agents styles
+  =================================================================*/
+  #agents-content > .row {
+    padding: 1em;
+  } 
+  #agents-content > .row .agent {
+    padding: 0;
+    border: 1px solid silver;
+    border-radius: 5px;
+  }
+  #agents-content > .row .agent div {
+    padding-top: .5em;
+  }
+
+  
 /*=================================================================
   Dashboard styles
   =================================================================*/
