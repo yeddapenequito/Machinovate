@@ -27,10 +27,10 @@
 						  <a id="cutter" href="#" onclick="changeImage(2)" class="btn btn-primary">Cutter<small>Short description.</small></a>
 						  <a id="other-products" href="#" onclick="changeImage(3)" class="btn btn-primary">Other Products<small>Short description.</small></a>
 						</div>
-						<a href="#" id="continue-btn" class='btn btn-primary'>Continue</a>
+						<a id="continue-btn" class='btn btn-primary'>Continue</a>
 					</form>
 				</div>
-			</div>
+			</div> <!-- ./row -->
 		</div> <!-- ./container -->
 
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
@@ -38,9 +38,12 @@
 		<script type="text/javascript">
 			document.getElementById("order-now").className = "active";
 			document.getElementById("slitter").style.backgroundColor = "#eee";
+			document.getElementById("continue-btn").href = "order_slitter.php";
+
+			var image;
 
 			function changeImage(machine) {
-			    var image = document.getElementById('mach-img');
+			    image = document.getElementById('mach-img');
 			    switch(machine) {
 			    	case 0:
 			    		image.src = "images/slitter-front.png";
@@ -49,6 +52,7 @@
 			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
 			    		document.getElementById("cutter").style.backgroundColor = "transparent";
 			    		document.getElementById("other-products").style.backgroundColor = "transparent";
+			    		document.getElementById("continue-btn").href = "order_slitter.php";
 			    		break;
 			    	case 1: 
 			    		image.src = "images/sheeter-servo.png";
@@ -57,6 +61,7 @@
 			    		document.getElementById("sheeter").style.backgroundColor = "#eee";
 			    		document.getElementById("cutter").style.backgroundColor = "transparent";
 			    		document.getElementById("other-products").style.backgroundColor = "transparent";
+			    		document.getElementById("continue-btn").href = "order_sheeter.php";
 			    		break;
 			    	case 2:
 			    		image.src = "images/cutter.png";
@@ -65,6 +70,7 @@
 			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
 			    		document.getElementById("cutter").style.backgroundColor = "#eee";
 			    		document.getElementById("other-products").style.backgroundColor = "transparent";
+			    		document.getElementById("continue-btn").href = "order_cutter.php";
 			    		break;
 			    	case 3:
 			    		image.src = "images/other-products.png";
@@ -73,6 +79,7 @@
 			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
 			    		document.getElementById("cutter").style.backgroundColor = "transparent";
 			    		document.getElementById("other-products").style.backgroundColor = "#eee";
+			    		document.getElementById("continue-btn").href = "order_other_products.php";
 			    }
 			}	
 		</script>
