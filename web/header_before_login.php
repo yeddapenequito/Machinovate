@@ -20,14 +20,6 @@
 				<li><a id="contact-us" href="contact_us.php">Contact Us</a></li>
 				<li><a id="agents" href="agents.php">Agents</a></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li>
-					<div id="employee-login">
-						<span id="are-you-an-employee">Are you an employee?</span>
-						<a id="login-btn" href="login.php" class="btn btn-sm" role="button">Login</a> 
-					</div>
-				</li>
-			</ul>
 		</div><!--/.nav-collapse -->
 	</div><!--/.container-fluid -->
 </nav>

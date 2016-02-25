@@ -8,15 +8,14 @@
 				<span class="icon-bar"></span>
 			</button>
 			<div class="navbar-brand">
-				<a href="index.php"><img src="./images/machinovate-logo-white-no-border.png"></a>
+				<a href="index.php"><img src="../images/machinovate-logo-white-no-border.png"></a>
 			</div>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				<li><a id="dashboard" href="dashboard.php">Dashboard</a></li>
-				<li><a id="events" href="events.php">Events</a></li>
-				<li><a id="reports" href="reports.php">Reports</a></li>
-				<li><a id="employee" href="add_employee.php">Add New Employee</a></li>
+				<li><a id="order-list" href="order-list.php">Order List</a></li>
+				<li><a id="reports" href="generate-reports.php">Generate Reports</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
