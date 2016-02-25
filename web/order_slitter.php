@@ -3,142 +3,172 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="./styles/bootstrap.min.css">
-		<link rel="stylesheet" href="./styles/main.css">
-		<title></title>
-		<style>
-			.footer{
-				margin-bottom:50px;
-				background: none;
-
-			}
-			.btn-primary{
-				margin-top:0px;
-				margin-left:auto;
-				margin-right: auto;
-			}
-			.title h2{
-			
-			text-align:center;
-			}
-		</style>
+		<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/main.css">
+		<title>Machinovate | Order Now</title>
 	</head>
 	<body><!--name in every checkbox are not yed properly named-->
-		<?php include 'header-bottom.php';?>
-		<div class="container-fluid">
-		  <div class="title">
-				<h2><b>Paper Slitter Form Requirements</b></h2>
-			</div>
-			<!-- class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"-->
-			<div class="products_button">
-					
-				<div id="pagination">
-				<ul class="pagination pagination">
-				<li><a href="our_machines.php">Machines</a></li>
-				<li><a  style="color:black;">></a></li>
-			    <li><a href="slitter.php">Slitter</a></li>
-			    <li><a  style="color:black;">></a></li>
-			    <li><a style="color:red;">Order Now</a></li>
-			    
-			  </ul>
-			</div>
-				</div>
-			<form action="action_order.html">
-			<div class="form-group">
-				<h4>General Section</h4>
-				<p>Production Vol : <input type="number" id="prodvol"/> Tons per day </p>
-			</div>
-			<div class="form-group">
-				<p>Paper Type : <input type="number" id="papertype"/></p>
-			</div>
-			<div class="form-group">
-				<p>GSM: <input type="checkbox" name="gmin"> <b> MIN</b>
-					<input type="checkbox" name="gmax"> <b> MAX</b></p></p>
-			</div>
-			<div class="form-group">
-				<p>Roll Diameter: <input type="checkbox" name="rmin"><b> MIN</b>
-					<input type="checkbox" name="rmax"><b> MAX</b></p>
-			</div>
-			<div class="form-group">
-				<p>Slitting Width: <input type="number" id="width"/> mm <input type="checkbox" name="smin" ><b> MIN </b> <input type="number" id="width"/> mm <input type="checkbox" name="smax"> <b> MAX</b></p>
-			</div>
-			<div class="form-group">
-					<p>Type: </p><p> <input type="checkbox" name="type">Lexus-KGKM(Standard) </p>
-					<input type="checkbox" name="type">Lexus-KGKM(Heavy Duty) </p>
-					<input type="checkbox" name="type">Lexus-Compact </p>
-					<input type="checkbox" name="type">Customized </p>
-			</div>
+		<?php include 'header_before_login.php';?>
 
-			
-
-			<div class="form-group">
-				<h4>Cutting Section</h4>
-				<p>Slitter: </p> <p> <input type="checkbox" name="type">Standard[Five(5)]
-					Set Male/Female Circular Blade with Trim Removal Blower </p>
-					<input type="checkbox" name="type">Additional
-					<input type="number" name="additional"> set of one pair male/female </p>
-					<input type="checkbox" name="type">Core Cutter Machine </p>
-			</div>
-
-		<div class="form-group">
-			<h4>Unwind Roll Stand Section</h4>
-				<p>Reel Stand: </p> <p> <input type="checkbox" name="type">Hydraulic Shaftless with Air Break</p>
-					<input type="checkbox" name="type">Single </p>
-					<input type="checkbox" name="type">Customized <input type="text" name="additional"></p>
-					<input type="checkbox" name="type">Stationary Shaft Sand <input type="number" name="additional"> [Ton Capacity]</p>
-					<input type="checkbox" name="type">Others: <input type="text" name="additional"></p>
-
-
-		<div class="form-group">
-		<h4>Systems Section</h4>
-				   <p>Systems: </p> <p> <input type="checkbox" name="type">Heavy Duty Web Guide Hydraulic EPC Control System 
-					with Automation – Centring Sensor and Control, 4 pieces Roller and Roll Steering Guiding with Base
-					</p>
-					<input type="checkbox" name="type">Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing</p>
-					<input type="checkbox" name="type">Banana Roll and Tension Roller</p>
-					<input type="checkbox" name="type">Water Cooling Brake Systems</p>
-					<input type="checkbox" name="type">Fully Computerized Control System</p>
-					<input type="checkbox" name="type">Others: <input type="text" name="additional"></p>
-		</div>
-
-		<div class="form-group">
-		<h4>Terms Section</h4>
-				   <p>Delivery Basis: </p> <p> <input type="checkbox" name="type">FOB 
-					<input type="checkbox" name="type"> CBR</p>
-					<input type="checkbox" name="type">Others: <input type="text" name="additional"></p>
-					<p>Shipment:<input type="checkbox" name="type"><input type="number" name="additional"> Working Days after Initial Payment</p>
-					<p>Payment Terms:<input type="checkbox" name="type">Letter of Credit, Draft at sight</p>
-					<input type="checkbox" name="type">Telegraphic Transfer</p>
-					<input type="number" name="additional"> % Down Payment upon confirmation</p>
-					<input type="number" name="additional"> % before shipment</p>
-					<input type="number" name="additional"> % upon installation</p>
-		</div>
-		<div class="form-group">
-			<h4><span>Other Details: </span></h4>
-				<textarea name="message" rows="10" cols="30">
+		<div class="container">
+		  	<ol class="breadcrumb">
+				<li>
+					<a href="order_now.php">Step 1: Choose your machine</a>
+				</li>
+				<li class="active">
+					Step 2: Specify your machine's specs
+				</li>
+				<li>
+					Step 3: Enter e-mail
+				</li>
+				<li>
+					Step 4: Shipping details
+				</li>
+			</ol>
 				
-				</textarea>			
-			</div>
+			<h1 class="page-header">Paper Slitter Form Requirements</h1>
+			<p>Please bear with us. This is going to take long.</p>
+			<form action="action_order.html" role="form" class="form-horizontal">
+				<fieldset>
+					<legend>General Section</legend>
+					<div class="form-group">
+						<label for="Type" class="control-label col-sm-2">Type:</label>
+						<div class="col-sm-10">
+							<div class="radio">
+								<label><input type="radio" name="msr70">MSR 70</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="msr70">MSR 90</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="msr70">MSR 110</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="msr70">MSR 130</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="customized">Customized</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="production-vol" class="control-label col-sm-2">Production Vol:</label>
+						<div class="col-sm-10">
+							<input id="production-vol" type="number" class="form-control"/>Tons per day
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="paper-type" class="control-label col-sm-2">Paper Type:</label>
+						<div class="col-sm-10">
+							<input placeholder="e.g. Ledger, Newsprint, Carbonless" id="paper-type" type="text" class="form-control"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="gsm" class="control-label col-sm-2">GSM:</label>
+						<div data-role="rangeslider" class="col-sm-10	">
+							<!-- <input type="range" name="gsm-min" id="gsm-min" value="200" min="0" max="1000" class="form-control">
+							<input type="range" name="gsm-max" id="gsm-max" value="800" min="0" max="1000" class="form-control"> -->
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="roll-diameter" class="control-label col-sm-2">Roll Diameter:</label>
+						<div data-role="rangeslider" class="col-sm-10	">
+							<!-- <input type="range" name="roll-diameter-min" id="roll-diameter-min" value="200" min="0" max="1000" class="form-control">
+							<input type="range" name="roll-diameter-max" id="roll-diameter-max" value="800" min="0" max="1000" class="form-control"> -->
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="slitting-width" class="control-label col-sm-2">Slitting Width:</label>
+						<div class="col-sm-10">
+							<input id="slitting-width" type="number" class="form-control"/>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Cutting Section</legend>
+					<div class="form-group">
+						<label for="slitter" class="control-label col-sm-2">Slitter:</label>
+						<div class="col-sm-10">
+							<div class="radio">
+								<label><input type="radio" name="standard">Standard[Five(5)]
+					Set Male/Female Circular Blade with Trim Removal Blower</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="additional">Additional <input type="number" name="additional"> set of one pair male/female</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="core">Core Cutter Machine</label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
 
-			<div class="next_button">
-					
-					<a href="./shipment.php" class="btn btn-md btn-primary" role="button">Next</a>
-				</div>
+				<fieldset>
+					<legend>Unwind Roll Stand Section</legend>
+					<div class="form-group">
+						<label class="control-label col-sm-2">Reel Stand:</label>
+						<div class="col-sm-10">
+							<div class="radio">
+							  <label><input type="radio" value="hydraulic">Hydraulic Shaftless with Air Break</label>
+							</div>
+							<div class="radio">
+							  <label><input type="radio" value="single">Single</label>
+							</div>
+							<div class="radio">
+							  <label><input type="radio" value="customized">Customized</label>
+							</div>
+							<div class="radio">
+							  <label><input type="radio" value="stationary">Stationary Shaft Sand</label>
+							</div>
+							<div class="radio">
+							  <label><input type="radio" value="others">Others: <input type="text" name="additional"></label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
 
+				<fieldset>
+					<legend>Systems Section</legend>
+					<div class="form-group">
+						<label class="control-label col-sm-2">Systems:</label>
+						<div class="col-sm-10">
+							<div class="radio">
+							  <label><input type="radio" value="hydraulic">Heavy Duty Web Guide Hydraulic EPC Control System 
+					with Automation – Centring Sensor and Control, 4 pieces Roller and Roll Steering Guiding with Base</label>
+							</div>
+							<div class="radio">
+							  <label><input type="radio" value="single">Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing</label>
+							</div>
+							<div class="radio">
+							  <label><input type="radio" value="customized">Banana Roll and Tension Roller</label>
+							</div>
+							<div class="radio">
+							  <label><input type="radio" value="stationary">Water Cooling Brake Systems</label>
+							</div>
+							<div class="radio">
+							  <label><input type="radio" value="stationary">Fully Computerized Control System</label>
+							</div>
+							<div class="radio">
+							  <label><input type="radio" value="others">Others: <input type="text" name="additional"></label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
 
-
-
-		</div>
-
-
-
-
-
-
-		 </div>
-		</form>
-		  </div>
-		
-		<?php //include 'footer.php';?>
+				<fieldset>
+					<legend>Other Details</legend>
+					<div class="form-group">
+						<label for="comment" class="control-label col-sm-2">Details:</label>
+						<div class="col-sm-10">
+					  		<textarea class="form-control" rows="8" id="comment"></textarea>
+						</div>
+					</div>
+				</fieldset>
+				<button type="submit" class="btn btn-default col-sm-offset-2 col-sm-1">Submit</button>
+			</form>
+		</div> <!-- /.container -->
+		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 	</body>
 </html>
