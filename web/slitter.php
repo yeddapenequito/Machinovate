@@ -46,7 +46,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr><!--limitation: auto create tables?-->
+							<tr>
 								<td>Max. Unwind  Reel Width </td>
 								<td>1780 mm </td>
 								<td>2280 mm </td>
