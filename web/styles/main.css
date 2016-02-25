@@ -419,7 +419,10 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     border-radius: 5px;
   }
   #agents-content > .row .agent div {
-    padding-top: .5em;
+    padding-top: 1em;
+  }
+  #agents-content > .row .agent img {
+    padding: 0;
   }
 
   
