@@ -90,18 +90,6 @@ $q = "SELECT country, CONCAT(first_name, ' ', last_name) AS name, email, contact
 $r = @mysqli_query ($dbc, $q); // Run the query.
 
 if ($r) { // If it ran OK, display the records.
-
-	// Table header.
-	echo '<table align="center" cellspacing="3" cellpadding="3" width="75%">
-	<tr>
-		<td align="left"><b>Country</b></td>
-		<td align="left"><b>Name</b></td>
-		<td align="left"><b>Email Address</b></td>
-		<td align="left"><b>Contact Details</b></td>
-
-	</tr>
-';
-	
 	// Fetch and print all the records:
 	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 		echo '
