@@ -16,6 +16,7 @@
 				<li><a id="dashboard" href="dashboard.php">Dashboard</a></li>
 				<li><a id="order-list" href="order-list.php">Order List</a></li>
 				<li><a id="reports" href="generate-reports.php">Generate Reports</a></li>
+				<li><a id="reports" href="add-agents.php">Add New Agent</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
