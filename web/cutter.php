@@ -40,96 +40,188 @@
 						<thead>
 							<tr>
 								<th>MODEL</th>
-								<th>MSR 70</th>
-								<th>MSR 90</th>
-								<th>MSR 110</th>
-								<th>MSR 130</th>
+								<th colspan="2">CT-115E</th>
+								<th colspan="2">CT-137E</th>
+								<th colspan="2">CT-155E</th>
+								
 							</tr>
 						</thead>
 						<tbody>
 							<tr><!--limitation: auto create tables?-->
-								<td>Max. Unwind  Reel Width </td>
-								<td>1780 mm </td>
-								<td>2280 mm </td>
-								<td>2800 mm </td>
-								<td>3300 mm</td>
+								<td></td>
+								<td>cm</td>
+								<td>(inch)</td>
+								<td>cm</td>
+								<td>(inch)</td>
+								<td>cm</td>
+								<td>(inch)</td>
+								
+								
 							</tr>
 							<tr>   
-								<td>Designed Speed</td>
-								<td>600 M/Min</td>
-								<td>600 M/Min</td>
-								<td>800 M/Min</td>
-								<td>800 M/Min</td>
+								<td>A Cutting Width</td>
+								<td>115</td>
+								<td>(45.25)</td>
+								<td>137</td>
+								<td>(53.93)</td>
+								<td>155</td>
+								<td>(61)</td>
+								
 
 							</tr>
 							<tr>	
-								<td>Maximum Unwinding Diamter</td>
-								<td>1800 mm</td>
-								<td>1800 mm</td>
-								<td>1800 mm</td>
-								<td>1800 mm</td>
-
-
-							</tr>
-							<tr>	
-								<td>Maximum Rewinding Diameter</td>
-								<td>1500 mm</td>
-								<td>1500 mm</td>
-								<td>1500 mm</td>
-								<td>1500 mm</td>
+								<td>B Cutting Height</td>
+								<td>16.5</td>
+								<td>(6.3)</td>
+								<td>16.5</td>
+								<td>(6.3)</td>
+								<td>16.5</td>
+								<td>(6.3)</td>
+								
 
 
 							</tr>
 							<tr>	
-								<td rowspan="2">Core Diameter of Rewinding Reel</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
+								<td>C Cutting Length</td>
+								<td>115</td>
+								<td>(45.25)</td>
+								<td>137</td>
+								<td>(53.93)</td>
+								<td>155</td>
+								<td>(61)</td>
+															</tr>
+							<tr>	
+								<td>D Front Table Length</td>
+								<td>75</td>
+								<td>(29.5)</td>
+								<td>75</td>
+								<td>(29.5)</td>
+								<td>75</td>
+								<td>(29.5)</td>
+															</tr>
+							<tr>	
+								<td>E Table Height</td>
+								<td>90</td>
+								<td>(35.4)</td>
+								<td>90</td>
+								<td>(35.4)</td>
+								<td>90</td>
+								<td>(35.4)</td>
+								
+							</tr>
+							<tr>	
+								<td>F Machine Width</td>
+								<td>290</td>
+								<td>(114)</td>
+								<td>310</td>
+								<td>(122)</td>
+								<td>328</td>
+								<td>(129)</td>
+															</tr>
+							<tr>	
+								<td>G Machine Height</td>
+								<td>168</td>
+								<td>(66)</td>
+								<td>168</td>
+								<td>(66)</td>
+								<td>168</td>
+								<td>(66)</td>
+								
+							</tr>
+							<tr>	
+								<td>H Machine Lengthh</td>
+								<td>270</td>
+								<td>(106.3)</td>
+								<td>290</td>
+								<td>(114.2)</td>
+								<td>308</td>
+								<td>(121.3)</td>
+															</tr>
+							<tr>	
+								<td>K Machine Fromt Length</td>
+								<td>89</td>
+								<td>(35)</td>
+								<td>89</td>
+								<td>(35)</td>
+								<td>89</td>
+								<td>(35)</td
+															</tr>
+							<tr>	
+								<td>Smallest Cut-with clamp</td> 
+								<td>9</td>
+								<td>(3.54)</td>
+								<td>9</td>
+								<td>(3.54)</td>
+								<td>10</td>
+								<td>(3.94)</td>
+							
+							</tr>
+							<tr>	
+								<td>without clamp</td> 
+								<td>3</td>
+								<td>(1.18)</td>
+								<td>3</td>
+								<td>(1.18)</td>
+								<td>4</td>
+								<td>(1.57)</td>
+							
+							</tr>
+							<tr>	
+								<td>Cutting Cycle Per Minute</td> 
+								<td colspan="2">48</td>
+								<td colspan="2">48</td>
+								<td colspan="2">42</td>
+							
+							</tr>
+							<tr colspan="2">	
+								<td>Clamp Pressure</td> 
+								<td colspan="2" colspan="2"><p>400-4000 kg</p>
+								<p>(880.8800lb)</p></td>
+								<td colspan="2" colspan="2"><p>400-4000 kg</p>
+								<p>(880.8800lb)</p></td>
+								<td colspan="2" colspan="2"><p>400-4500 kg</p>
+								<p>(880.9900lb)</p></td>
+							</tr>
+							<tr>	
+								<td>Net Weight</td> 
+								<td colspan="2">4100 kg</td>
+								<td colspan="2">4500 kg</td>
+								<td colspan="2">5100 kg</td>
+							</tr>
+							<tr>	
+								<td>Main Motor</td> 
+								<td colspan="2">5.6 kw(7.5HP)</td>
+								<td colspan="2">5.6 kw(7.5HP)</td>
+								<td colspan="2">7.5 kw(10HP)</td>
+							
+							</tr>
+							<tr>	
+								<td>Backgauge Motor</td> 
+								<td colspan="2">0.5 kw(0.6HP)</td>
+								<td colspan="2">1 kw(1.34HP)</td>
+								<td colspan="2">1 kw(1.34HP)</td>
+							
+							</tr>
+							<tr>	
+								<td>Air Blower For Table</td> 
+								<td colspan="2">0.75 kw(1HP)</td>
+								<td colspan="2">0.75 kw(1HP)</td>
+								<td colspan="2">0.75 kw(1HP)</td>
+							
+							</tr>
 
-							</tr>
 							<tr>	
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
-							</tr>
-							<tr>	
-								<td rowspan="2">Core Diameter of Unwinding Reel</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
-								<td>76.20-305 mm</td>
-							</tr>
-							<tr>	
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
-								<td>( 3" - 12" )</td>
-							</tr>
-							<tr>	
-								<td rowspan="2">Total Power Requirement</td>
-								<td>220/380/440 Volts</td>
-								<td>220/380/440 Volts</td>
-								<td>220/380/440 Volts</td>
-								<td>220/380/440 Volts</td>
-							</tr>
-							<tr>	
-								<td>( 25 kW )</td>
-								<td>( 29 kW )</td>
-								<td>( 33 kW )</td>
-								<td>( 33 kW )</td>
-							</tr>
-							<tr>	
-								<td>Machine Dimension</td> 
-								<td>7.7 MX  4M  X 3.25M</td>
-								<td>7.7 MX  4M  X 3.25M</td>
-								<td>7.7 MX  5.5 X 3.25M</td>
-								<td>7.7 MX  6M  X 3.25M</td>
+								<td>Power Requirement</td> 
+								<td colspan="2">6.85 kw(9.19HP)</td>
+								<td colspan="2">7.35 kw(9.84HP)</td>
+								<td colspan="2">9.25 kw(12.34HP)</td>
+							
 							</tr>
 						</tbody>
 					</table>
+					<p id="footnote">*Specification could be changed for improvement without prior notice.</p>
 				</div> <!-- /.col 1 -->
+
 
 				<div id="sidebar" class="col-xs-12 col-md-4">
 					<div id="photos">
