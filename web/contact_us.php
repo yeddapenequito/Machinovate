@@ -18,15 +18,15 @@
 						<tbody>
 							<tr>
 								<td>Address</td>
-								<td>Unit # 301-A King Center Bldg. Sgt Rivera St.Brgy. Manresa Quezon City Philippines 1115</td>
+								<td>1645 G. San Roque St., Arty 3 Subdivision, Lawang Baro, Valenzuela City, Philippines</td>
 							</tr>
 							<tr>
 								<td>Telephone</td>
 								<td>
 									<ul class="list-unstyled">
-										<li>+632 404 6676</li>
-										<li>+632 623 2988</li>
-										<li>+632 423 2988</li>
+										<li>+404 6676</li>
+										<li>+355 4635</li>
+										
 									</ul>
 								</td>
 							</tr>
