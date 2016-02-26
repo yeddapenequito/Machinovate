@@ -104,13 +104,7 @@ if ($r) { // If it ran OK, display the records.
 	
 	// Fetch and print all the records:
 	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-		echo '<tr>
-			<td align="left">' . $row['country'] . '</td>
-			<td align="left">' . $row['name'] . '</td>
-			<td align="left">' . $row['email'] . '</td>
-			<td align="left">' . $row['contact'] . '</td>
-
-		</tr>
+		echo '
 		<div class="row">
 				<div class="col-xs-12 col-md-offset-3 col-md-6 agent">
 					<img class="col-xs-4" src="styles/flag-icon-css-master/flags/4x3/'. $row['country_num'] .'.svg">
