@@ -31,6 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (empty($_POST['country'])) {
 		$errors[] = 'You forgot to enter the country.';
 	} else {
+		$countrynum = $_POST['country'];
+
 		switch($_POST['country']){
 				case "af": $country = "Afghanistan"; break;
 				case "ax": $country = "Åland Islands";  break;
@@ -298,7 +300,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Register the agent in the database...
 		
 		// Make the query:
-		$q = "INSERT INTO agents (first_name, last_name, country, email, contact) VALUES ('$fn', '$ln', '$country', '$email', '$contact')";		
+		$q = "INSERT INTO agents (first_name, last_name, country, country_num, email, contact) VALUES ('$fn', '$ln', '$country', '$countrynum', '$email', '$contact')";		
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 		if ($r) { // If it ran OK.
 		

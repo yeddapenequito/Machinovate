@@ -86,7 +86,7 @@ echo '<h1>Registered Users</h1>';
 require ('../mysqli_connect.php'); // Connect to the db.
 		
 // Make the query:
-$q = "SELECT country, CONCAT(first_name, ' ', last_name) AS name, email, contact FROM agents";		
+$q = "SELECT country, CONCAT(first_name, ' ', last_name) AS name, email, contact, country_num FROM agents";		
 $r = @mysqli_query ($dbc, $q); // Run the query.
 
 if ($r) { // If it ran OK, display the records.
@@ -113,7 +113,7 @@ if ($r) { // If it ran OK, display the records.
 		</tr>
 		<div class="row">
 				<div class="col-xs-12 col-md-offset-3 col-md-6 agent">
-					<img class="col-xs-4" src="styles/flag-icon-css-master/flags/4x3/cn.svg">
+					<img class="col-xs-4" src="styles/flag-icon-css-master/flags/4x3/'. $row['country_num'] .'.svg">
 					<div class="col-xs-8">
 						<p><b><u>'. $row['country'] . '</u></b></p>
 						<p><b>Name: </b>  <a>' . $row['name'] . '</a></p>
