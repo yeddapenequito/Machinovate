@@ -386,11 +386,11 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
       width: 18em;
       margin-top: 3em;      
     }
-    #machine-details #btn-group #contact-us-btn {
+    #machine-details #btn-group #order-now-btn {
       background-color: #153a7e;
       color: #bdc3c7;
     }
-    #machine-details #btn-group #contact-us-btn:hover {
+    #machine-details #btn-group #order-now-btn:hover {
       background-color: transparent;
       color: #153a7e;
     }
