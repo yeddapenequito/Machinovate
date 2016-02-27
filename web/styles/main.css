@@ -451,7 +451,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     padding: 1em;
   } 
   #agents-content > .row .agent {
-    padding: .3em;
+    padding: 0;
     border: 1px solid silver;
     border-radius: 5px;
   }
