@@ -100,7 +100,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 		border-right: 1px solid white;
 	}
 	.navbar .navbar-nav #home,
-	.navbar .navbar-nav #dashboard {
+	.navbar .navbar-nav #order-list {
 		border-left: 1px solid white;
 	}
 	.navbar .navbar-nav > li > a:hover {
