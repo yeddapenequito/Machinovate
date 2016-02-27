@@ -23,8 +23,8 @@ body {
 .btn {
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color: #bdc3c7;
-  color: #153a7e;
+  background-color: #153a7e;
+  color: white;
   border: 1px solid transparent;
   border-radius: 0;
   font-weight: bold;
@@ -167,7 +167,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 	color: white;
 }
 
-/*employee login styles
+/*employee logout styles
 ----------------------------------------------------------------*/
 .navbar #employee-logout {
 	border: none;
@@ -182,10 +182,14 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 	font-style: italic;
 	margin-right: .5em;
 }
+.navbar #employee-logout #logout-btn {
+  background-color: #bdc3c7;
+  color: #153a7e;
+}
 .navbar #employee-logout #logout-btn:hover {
   color: white;  
+  background-color: transparent;
 }
-
 
 /*=================================================================
   Contact us styles
@@ -386,11 +390,11 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
       width: 18em;
       margin-top: 3em;      
     }
-    #machine-details #btn-group #order-now-btn {
-      background-color: #153a7e;
-      color: #bdc3c7;
+    #machine-details #btn-group #contact-us-btn {
+      background-color: #bdc3c7;
+      color: #153a7e;
     }
-    #machine-details #btn-group #order-now-btn:hover {
+    #machine-details #btn-group #contact-us-btn:hover {
       background-color: transparent;
       color: #153a7e;
     }
@@ -462,11 +466,11 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     Order now styles
     =================================================================*/
   
-  #order-slitter form #next-btn {
-    background-color: #153a7e;
-    color: #bdc3c7;
+  #order-slitter form #cancel-btn {
+    background-color: #bdc3c7;
+    color: #153a7e;
   }
-  #order-slitter form #next-btn:hover {
+  #order-slitter form #cancel-btn:hover {
     background-color: transparent;
     color: #153a7e;
   }
