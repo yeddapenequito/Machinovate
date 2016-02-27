@@ -29,6 +29,7 @@ body {
   border-radius: 0;
   font-weight: bold;
   font-size: .85em;
+  margin-right: .5em;
 }
 
 .btn:hover {
