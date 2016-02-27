@@ -463,22 +463,5 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   }
 
   
-/*=================================================================
-  Dashboard styles
-  =================================================================*/
-
-  #dashboard-content {
-  	margin-top: 2em;
   }
-  #dashboard-content dt,
-  #dashboard-content dd {
-  	padding: .5em;
-  }
-  #dashboard-content dt {
-  	text-align: left;
-  }
-  #dashboard-content #profile-picture {
-  	width: 7em;
-  	height: 7em;
-  	margin: 1em;
   }
