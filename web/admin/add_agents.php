@@ -633,7 +633,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-sm-10 col-sm-offset-3">
+						<div class="col-sm-9 col-sm-offset-3">
 							<button type="Add" class="btn btn-primary">Add agent</button>
 						</div>
 					</div>
