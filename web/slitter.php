@@ -28,7 +28,7 @@
 
 							<p id="application"><strong>Applications</strong>. Fax Paper and Cash Register</p>
 
-							<a id="order-now-btn" href="order_now.php" class="btn btn-primary btn-lg">Order This Machine</a>
+							<a id="order-now-btn" href="order_slitter.php" class="btn btn-primary btn-lg">Order This Machine</a>
 							<span id="or">or</span>
 							<a id="order-now-btn" href="contact_us.php" class="btn btn-primary btn-lg">Contact Us for More Details</a>
 						</div>
