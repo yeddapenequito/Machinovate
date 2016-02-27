@@ -380,17 +380,25 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     #machine-details table caption {
       font-size: 2em;
     }
-    #machine-details #order-now-btn {
-      margin-top: 2em;
+    
+    #machine-details #btn-group {
+      width: 18em;
+      margin-top: 3em;      
     }
-    #machine-details #photos img {
-      height: 100px;
-      width: 100px;
-      border: 1px solid silver;
-      margin: .25em;
+    #machine-details #btn-group #contact-us-btn {
+      background-color: #153a7e;
+      color: #bdc3c7;
     }
+    #machine-details #btn-group #contact-us-btn:hover {
+      background-color: transparent;
+      color: #153a7e;
     }
-    }
+    /*#machine-details #btn-group #or {
+      border:1px solid silver;
+      border-radius:100%;
+      padding:.25em .5em;
+    }*/
+
     #machine-details #sidebar {
       background-color: #eee;
       border-radius: 5px;
@@ -398,13 +406,6 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     #machine-details #sidebar .page-header {
       border-color: #153a7e;
     }
-    #machine-details #or {
-      border:1px solid silver;
-      border-radius:100%;
-      position: relative;
-      top: .7em;
-      margin:1em;
-      padding:.25em .5em;
     #machine-details #sidebar #photos img {
       height: 100px;
       width: 100px;
