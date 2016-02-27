@@ -165,9 +165,11 @@
 						</div>
 					</div>
 				</fieldset>
+
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-default">Next</button>
+						<a id="back-btn" href="order_now.php" class="btn btn-default">Back</a>
+						<button id="next-btn" type="submit" class="btn btn-default">Next</button>
 					</div>
 				</div>
 			</form>
