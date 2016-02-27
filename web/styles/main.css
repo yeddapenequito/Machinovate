@@ -462,6 +462,16 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     padding: .3em;
   }
 
+  /*=================================================================
+    Order now styles
+    =================================================================*/
   
+  #order-slitter form #next-btn {
+    background-color: #153a7e;
+    color: #bdc3c7;
   }
+  #order-slitter form #next-btn:hover {
+    background-color: transparent;
+    color: #153a7e;
   }
+
