@@ -8,7 +8,7 @@
 	<title>Machinovate | Login</title>
 </head>
 <body>
-	<?php include '../header_on_login.php';?>
+	<?php include 'header_on_login.php';?>
 
 	<div id="login-content" class="container">
 		<div class="row">
