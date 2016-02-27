@@ -26,7 +26,7 @@
 					Step 4: Shipping details
 				</li>
 			</ol>
-				
+			
 			<h1 class="page-header">Paper Slitter Form Requirements</h1>
 			<p>Please bear with us. This is going to take long.</p>
 			<form action="action_order.html" role="form" class="form-horizontal">
@@ -165,7 +165,11 @@
 						</div>
 					</div>
 				</fieldset>
-				<button type="submit" class="btn btn-default col-sm-offset-2 col-sm-1">Next</button>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Next</button>
+					</div>
+				</div>
 			</form>
 		</div> <!-- /.container -->
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
