@@ -351,9 +351,12 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     width: 13em;
     margin: 3em auto;
     margin-bottom: 2em;
+    background-color: #bdc3c7;
+    color: #153a7e;
   }
   #machines-content .learn-more-btn:hover {
     color: white;
+    background-color: transparent;
   }
   #machines-content .minor {
     margin-top: 2em;
