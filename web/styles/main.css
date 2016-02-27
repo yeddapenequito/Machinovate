@@ -279,6 +279,9 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     background-color: transparent;
     border: 1px solid silver;
     width: inherit;
+    text-transform: none;
+    font-weight: normal;
+    letter-spacing: normal;
   }
   #order-now-content .btn-group > a small {
     display: block;
@@ -286,6 +289,9 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   #order-now-content .btn-group > a:hover {
     border-color: #153a7e; 
     color: #153a7e;
+  }
+  #order-now-content form #continue-btn {
+    margin-left: 1.5em;
   }
 
 /*=================================================================
