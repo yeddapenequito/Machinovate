@@ -15,7 +15,7 @@
 			<div class="row">
 				<ol class="breadcrumb">
 					<li><a href="machines.php">Machines</a></li>
-					<li ><a href="other_products.php">Other Products</li>
+					<li ><a href="other_products.php">Other Products</a></li>
 					<li class="active">Smart Cart</li>
 				</ol>
 				<div class="col-xs-12 col-md-8">
@@ -40,182 +40,160 @@
 						<caption class="page-header">Specifications</caption>
 						<thead>
 							<tr>
-								<th>MODEL</th>
-								<th colspan="2">CT-115E</th>
-								<th colspan="2">CT-137E</th>
-								<th colspan="2">CT-155E</th>
+								<th  colspan="2">MODEL</th>
+								<th colspan="2">M2000-WB(S)</th>
+								<th colspan="2">M2500-WB(S)</th>
+								<th colspan="2">M3000-WB(S)</th>
+								<th>M3000-WB(S)</th>
+								<th>M3000-WB(S)</th>
 								
 							</tr>
 						</thead>
 						<tbody>
 							<tr><!--limitation: auto create tables?-->
+								<td  colspan="2">TYPE (FRAME)</td>
+								<td>wide</td>
+								<td>narrow</td>
+								<td>wide</td>
+								<td>narrow</td>
+								<td>wide</td>
+								<td>narrow</td>
+								<td>narrow</td>
+								<td>low profile</td>
+								
+								
+							</tr>
+							<tr>  
+								<td>CAPACITY</td>
+								<td>kgs</td>
+								<td>2000</td>
+								<td>2000</td>
+								<td>2500</td>
+								<td>2500</td>
+								<td>3000</td>
+								<td>3000</td>
+								<td>5000</td>
+								<td>2000</td>
+								
+
+							</tr>
+							<tr>	
+								<td>FRAME WIDTH</td>
+								<td>mm</td>
+								<td>680</td>
+								<td>540</td>
+								<td>680</td>
+								<td>540</td>
+								<td>680</td>
+								<td>540</td>
+
+								<td>580</td>
+								<td>680</td>
+								
+								
+
+
+							</tr>
+							<tr>	
+								<td>FORK LENGTH</td>
+								<td>mm</td>
+								<td>1220</td>
+								<td>1150</td>
+								<td>1220</td>
+								<td>1150</td>
+								<td>1220</td>
+								<td>1150</td>
+								<td>1150</td>
+								<td>1150</td>
+								
+															</tr>
+							<tr>	
+								<td>LOWERED HT.</td>
+								<td>mm</td>
+								<td colspan="6"><center>85 (or 75)</center></td>
+								
+								<td>90</td>
+								<td>55</td>
+															</tr>
+							<tr>	
+								<td>MAXIMUM LIFT</td>
+								<td>mm</td>
+								<td colspan="6"><center>205 (or 195)</center></td>
+								<td>200</td>
+								<td>170</td>
+								
+							</tr>
+							<tr>	
+								<td>WHEEL MATERIAL</td>
 								<td></td>
-								<td>cm</td>
-								<td>(inch)</td>
-								<td>cm</td>
-								<td>(inch)</td>
-								<td>cm</td>
-								<td>(inch)</td>
-								
-								
-							</tr>
-							<tr>   
-								<td>A Cutting Width</td>
-								<td>115</td>
-								<td>(45.25)</td>
-								<td>137</td>
-								<td>(53.93)</td>
-								<td>155</td>
-								<td>(61)</td>
-								
-
-							</tr>
-							<tr>	
-								<td>B Cutting Height</td>
-								<td>16.5</td>
-								<td>(6.3)</td>
-								<td>16.5</td>
-								<td>(6.3)</td>
-								<td>16.5</td>
-								<td>(6.3)</td>
-								
-
-
-							</tr>
-							<tr>	
-								<td>C Cutting Length</td>
-								<td>115</td>
-								<td>(45.25)</td>
-								<td>137</td>
-								<td>(53.93)</td>
-								<td>155</td>
-								<td>(61)</td>
+								<td colspan="6"><center>Polyurethane (PU) / Nylon</center></td>
+								<td>Steel</td>
+								<td>PU</td>
 															</tr>
 							<tr>	
-								<td>D Front Table Length</td>
-								<td>75</td>
-								<td>(29.5)</td>
-								<td>75</td>
-								<td>(29.5)</td>
-								<td>75</td>
-								<td>(29.5)</td>
-															</tr>
-							<tr>	
-								<td>E Table Height</td>
-								<td>90</td>
-								<td>(35.4)</td>
-								<td>90</td>
-								<td>(35.4)</td>
-								<td>90</td>
-								<td>(35.4)</td>
+								<td colspan="10">FEATURES:</td>
+								
 								
 							</tr>
 							<tr>	
-								<td>F Machine Width</td>
-								<td>290</td>
-								<td>(114)</td>
-								<td>310</td>
-								<td>(122)</td>
-								<td>328</td>
-								<td>(129)</td>
+								<td colspan="10">BUILT-IN OVERLOAD VALVE & TOTALLLY SEALED HYDRAULIC PUMP</td>
 															</tr>
 							<tr>	
-								<td>G Machine Height</td>
-								<td>168</td>
-								<td>(66)</td>
-								<td>168</td>
-								<td>(66)</td>
-								<td>168</td>
-								<td>(66)</td>
+								<td colspan="10">HEAVY DUTY 1 PIECE & REINFORCED "C" SECTION FORKS FOR STRENGTH & DURABILITY</td>
+															</tr>
+							<tr>	
+								<td colspan="10">2 NYLON ENTRY & EIT ROLLERS FOR EASY INSERTION AND EXERTION OF FORKS TO PALLET</td>
+							
+							</tr>
+							<tr>	
+								<td colspan="10">3 WAY HAND CONTROLS FOR EASY HANDLING</td>
+							
+							</tr>
+							<tr>	
+								<td colspan="10">MAINTENANCE FREEOL LESS BUSHINGS AT KEY POINTS</td>
+							
+							</tr>
+							<tr>	
+								<th colspan="4"><center>MODEL</center></th>
+								<th colspan="4"><center>M1500-PRT</center></th>
+								<th colspan="4"><center>M1800-PRT</center></th>
+							</tr>
+							<tr>	
+								<td colspan="4">CAPACITY</td> 
+								<td colspan="4">1500</td>
+								<td colspan="4">1800</td>
 								
 							</tr>
 							<tr>	
-								<td>H Machine Lengthh</td>
-								<td>270</td>
-								<td>(106.3)</td>
-								<td>290</td>
-								<td>(114.2)</td>
-								<td>308</td>
-								<td>(121.3)</td>
-															</tr>
-							<tr>	
-								<td>K Machine Fromt Length</td>
-								<td>89</td>
-								<td>(35)</td>
-								<td>89</td>
-								<td>(35)</td>
-								<td>89</td>
-								<td>(35)</td
-															</tr>
-							<tr>	
-								<td>Smallest Cut-with clamp</td> 
-								<td>9</td>
-								<td>(3.54)</td>
-								<td>9</td>
-								<td>(3.54)</td>
-								<td>10</td>
-								<td>(3.94)</td>
+								<td colspan="4">MIN. ROLL DIAMETER</td> 
+								<td colspan="4">700</td>
+								<td colspan="4">800</td>
+								
 							
 							</tr>
 							<tr>	
-								<td>without clamp</td> 
-								<td>3</td>
-								<td>(1.18)</td>
-								<td>3</td>
-								<td>(1.18)</td>
-								<td>4</td>
-								<td>(1.57)</td>
+								<td colspan="4">MAX. ROLL DIAMETER</td> 
+								<td colspan="4">1300</td>
+								<td colspan="4">1400</td>
+								
 							
 							</tr>
 							<tr>	
-								<td>Cutting Cycle Per Minute</td> 
-								<td colspan="2">48</td>
-								<td colspan="2">48</td>
-								<td colspan="2">42</td>
-							
-							</tr>
-							<tr colspan="2">	
-								<td>Clamp Pressure</td> 
-								<td colspan="2" colspan="2"><p>400-4000 kg</p>
-								<p>(880.8800lb)</p></td>
-								<td colspan="2" colspan="2"><p>400-4000 kg</p>
-								<p>(880.8800lb)</p></td>
-								<td colspan="2" colspan="2"><p>400-4500 kg</p>
-								<p>(880.9900lb)</p></td>
-							</tr>
-							<tr>	
-								<td>Net Weight</td> 
-								<td colspan="2">4100 kg</td>
-								<td colspan="2">4500 kg</td>
-								<td colspan="2">5100 kg</td>
-							</tr>
-							<tr>	
-								<td>Main Motor</td> 
-								<td colspan="2">5.6 kw(7.5HP)</td>
-								<td colspan="2">5.6 kw(7.5HP)</td>
-								<td colspan="2">7.5 kw(10HP)</td>
-							
-							</tr>
-							<tr>	
-								<td>Backgauge Motor</td> 
-								<td colspan="2">0.5 kw(0.6HP)</td>
-								<td colspan="2">1 kw(1.34HP)</td>
-								<td colspan="2">1 kw(1.34HP)</td>
-							
-							</tr>
-							<tr>	
-								<td>Air Blower For Table</td> 
-								<td colspan="2">0.75 kw(1HP)</td>
-								<td colspan="2">0.75 kw(1HP)</td>
-								<td colspan="2">0.75 kw(1HP)</td>
-							
+								<td colspan="4">MAX. ROLL LENGTH</td> 
+								<td colspan="4">1500</td>
+								<td colspan="4">1500</td>
 							</tr>
 
 							<tr>	
-								<td>Power Requirement</td> 
-								<td colspan="2">6.85 kw(9.19HP)</td>
-								<td colspan="2">7.35 kw(9.84HP)</td>
-								<td colspan="2">9.25 kw(12.34HP)</td>
+								<td colspan="4">FRAME WIDTH</td> 
+								<td colspan="4">990</td>
+								<td colspan="4">1030</td>
+							
+							</tr>
+							<tr>	
+								<td colspan="4">FORK LENGTH</td> 
+								<td colspan="4">1350</td>
+								<td colspan="4">1350</td>
 							
 							</tr>
 						</tbody>
