@@ -11,7 +11,7 @@
 	<body><!--name in every checkbox are not yed properly named-->
 		<?php include 'header_before_login.php';?>
 
-		<div class="container">
+		<div  id="order-slitter" class="container">
 		  	<ol class="breadcrumb">
 				<li>
 					<a href="order_now.php">Step 1: Choose your machine</a>
@@ -95,7 +95,7 @@
 					Set Male/Female Circular Blade with Trim Removal Blower</label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" name="additional">Additional <input type="number" name="additional"> set of one pair male/female</label>
+								<label><input type="radio">Additional <input type="number" name="additional"> set of one pair male/female</label>
 							</div>
 							<div class="radio">
 								<label><input type="radio" name="core">Core Cutter Machine</label>
@@ -122,7 +122,7 @@
 							  <label><input type="radio" value="stationary">Stationary Shaft Sand</label>
 							</div>
 							<div class="radio">
-							  <label><input type="radio" value="others">Others: <input type="text" name="additional"></label>
+							  <label><input type="radio">Others: <input type="text" name="others"></label>
 							</div>
 						</div>
 					</div>
@@ -150,7 +150,7 @@
 							  <label><input type="radio" value="stationary">Fully Computerized Control System</label>
 							</div>
 							<div class="radio">
-							  <label><input type="radio" value="others">Others: <input type="text" name="additional"></label>
+							  <label><input type="radio">Others: <input type="text" name="others"></label>
 							</div>
 						</div>
 					</div>
