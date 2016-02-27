@@ -10,9 +10,36 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/*=================================================================
+  Override bootstrap styles
+  =================================================================*/
+
 .breadcrumb .active {
   color: #153a7e;
   font-weight: bold;
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #bdc3c7;
+  color: #153a7e;
+  border: 1px solid transparent;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: .85em;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid silver;
+  color: #153a7e;
+}
+
+.btn:active {
+  background-color: transparent;
+  border: 1px solid gray;
+  color: gray;
 }
 
 /*=================================================================
@@ -140,62 +167,23 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 
 /*employee login styles
 ----------------------------------------------------------------*/
-.navbar #employee-login,
 .navbar #employee-logout {
 	border: none;
   padding: 10px;
 }
-.navbar #employee-login:hover,
-.navbar #employee-login:active,
 .navbar #employee-logout:hover,
 .navbar #employee-logout:active {
 	background-color: transparent;
 	color: white;
 }
-.navbar #employee-login #are-you-an-employee,
 .navbar #employee-logout #hello-user {
 	font-style: italic;
 	margin-right: .5em;
 }
-.navbar #login-btn,
-.navbar #logout-btn,
-#login-content #login-btn,
-#machines-content .learn-more-btn,
-#machine-details #order-now-btn {
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	background-color: #bdc3c7;
-	color: #153a7e;
-	border: 1px solid transparent;
-	border-radius: 0;
-	font-weight: bold;
-	font-size: .85em;
+.navbar #employee-logout #logout-btn:hover {
+  color: white;  
 }
-.navbar #login-btn:hover, 
-.navbar #logout-btn:hover,
-#login-content #login-btn:hover,
-#machines-content .learn-more-btn:hover,
-#machine-details #order-now-btn:hover {
-	background-color: transparent;
-	border: 1px solid silver;
-	color: silver;
-}
-#login-content #login-btn:hover,
-#machine-details #order-now-btn:hover {
-  color: #153a7e;
-}
-#machines-content .learn-more-btn:hover {
-  color: white;
-}
-.navbar #login-btn:active,
-.navbar #logout-btn:active,
-#login-content #login-btn:active,
-#machines-content .learn-more-btn:active,
-#machine-details #order-now-btn:active {
-  background-color: transparent;
-  border: 1px solid gray;
-  color: gray;
-}
+
 
 /*=================================================================
   Contact us styles
@@ -298,27 +286,6 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     border-color: #153a7e; 
     color: #153a7e;
   }
-  #order-now-content #continue-btn {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background-color: #bdc3c7;
-    color: #153a7e;
-    border: 1px solid transparent;
-    border-radius: 0;
-    font-weight: bold;
-    margin-top: 2em;
-    margin-left: 18px;
-  }
-  #order-now-content #continue-btn:hover {
-    background-color: transparent;
-    border: 1px solid silver;
-    color: #153a7e;
-  }
-  #order-now-content #continue-btn:active {
-    background-color: transparent;
-    border: 1px solid gray;
-    color: gray;
-  }
 
 /*=================================================================
   Machines styles
@@ -372,6 +339,9 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     width: 13em;
     margin: 3em auto;
     margin-bottom: 2em;
+  }
+  #machines-content .learn-more-btn:hover {
+    color: white;
   }
   #machines-content .minor {
     margin-top: 2em;
