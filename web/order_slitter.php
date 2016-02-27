@@ -165,7 +165,7 @@
 						</div>
 					</div>
 				</fieldset>
-				<button type="submit" class="btn btn-default col-sm-offset-2 col-sm-1">Submit</button>
+				<button type="submit" class="btn btn-default col-sm-offset-2 col-sm-1">Next</button>
 			</form>
 		</div> <!-- /.container -->
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
