@@ -629,7 +629,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<div class="form-group">
 						<label for="contact" class="col-sm-3 control-label">Mobile Number:</label>
 						<div class="col-sm-9">
-							<input id="contact" class="form-control" type="text" name="contact" size="10" maxlength="60" value="<?php if (isset($_POST['contact'])) echo $_POST['contact']; ?>"  />
+							<input id="contact" class="form-control" type="text" name="contact" maxlength="60" value="<?php if (isset($_POST['contact'])) echo $_POST['contact']; ?>"  />
 						</div>
 					</div>
 					<div class="form-group">
