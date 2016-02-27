@@ -11,20 +11,6 @@
 		<?php include 'header_before_login.php';?>
 
 		<div class="container">
-		  	<ol class="breadcrumb">
-				<li>
-					<a href="order_now.php">Step 1: Choose your machine</a>
-				</li>
-				<li>
-					Step 2: Specify your machine's specs
-				</li>
-				<li class="active">
-					Step 3: Enter e-mail
-				</li>
-				<li>
-					Step 4: Shipping details
-				</li>
-			</ol>
 			<div class="row">
 				<div class="col-sm-offset-3 col-sm-6">
 

@@ -12,21 +12,6 @@
 		<?php include 'header_before_login.php';?>
 
 		<div  id="order-slitter" class="container">
-		  	<ol class="breadcrumb">
-				<li>
-					<a href="order_now.php">Step 1: Choose your machine</a>
-				</li>
-				<li class="active">
-					Step 2: Specify your machine's specs
-				</li>
-				<li>
-					Step 3: Enter e-mail
-				</li>
-				<li>
-					Step 4: Shipping details
-				</li>
-			</ol>
-			
 			<h1 class="page-header">Paper Slitter Form Requirements</h1>
 			<p>Please bear with us. This is going to take long.</p>
 			<form action="order_email.php" role="form" class="form-horizontal">
