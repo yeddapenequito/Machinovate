@@ -357,8 +357,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<legend>Add Agents</legend>
 					</div>
 					<div class="form-group">
-						<label for="country" class="col-sm-2 control-label">Country:</label>
-						<div class="col-sm-10">
+						<label for="country" class="col-sm-3 control-label">Country:</label>
+						<div class="col-sm-9">
 							<select class="form-control" id="<?php if (isset($_POST['country'])) echo $country; ?>" name="country">
 								<option> Select Country... </option>
 								<option value="af">Afghanistan </option>
@@ -609,31 +609,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="last-name" class="col-sm-2 control-label">Last Name:</label>
-						<div class="col-sm-10">
+						<label for="last-name" class="col-sm-3 control-label">Last Name:</label>
+						<div class="col-sm-9">
 							<input placeholder="Enter agent's first name"type="text" class="form-control" id="last-name" name="last_name" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="first-name" class="col-sm-2 control-label">First Name:</label>
-						<div class="col-sm-10">
+						<label for="first-name" class="col-sm-3 control-label">First Name:</label>
+						<div class="col-sm-9">
 							<input placeholder="Enter agent's last name"type="text" class="form-control" id="first-name" name="first_name" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="email" class="col-sm-2 control-label">Email Address:</label>
-						<div class="col-sm-10">
+						<label for="email" class="col-sm-3 control-label">Email Address:</label>
+						<div class="col-sm-9">
 							<input type="email" class="form-control" id="email" name="email" maxlength="20" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"  />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="contact" class="col-sm-2 control-label">Mobile Number:</label>
-						<div class="col-sm-10">
+						<label for="contact" class="col-sm-3 control-label">Mobile Number:</label>
+						<div class="col-sm-9">
 							<input id="contact" class="form-control" type="text" name="contact" size="10" maxlength="60" value="<?php if (isset($_POST['contact'])) echo $_POST['contact']; ?>"  />
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-sm-10 col-sm-offset-2">
+						<div class="col-sm-10 col-sm-offset-3">
 							<button type="Add" class="btn btn-primary">Add agent</button>
 						</div>
 					</div>
