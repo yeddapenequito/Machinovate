@@ -27,7 +27,7 @@
 				<li>
 					<div id="employee-logout">
 						<span id="hello-user">Hello, admin</span>
-						<a id="logout-btn" href="login.php" class="btn btn-sm" role="button">Logout</a> 
+						<a id="logout-btn" href="index.php" class="btn btn-sm" role="button">Logout</a> 
 					</div>
 				</li>
 			</ul>
