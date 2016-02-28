@@ -35,27 +35,28 @@ form legend {
 /*=================================================================
   Navbar styles
   =================================================================*/
-  .navbar .navbar-nav #home,
-  .navbar .navbar-nav #order-list {
-    border-left: 1px solid black;
-  }
-  .navbar .navbar-nav > li > a:hover {
-    border-bottom: 7px solid #bdc3c7;
-    color: #bdc3c7;
-  }
-  .navbar .navbar-nav > li .active {
-    border-bottom: 7px solid white;
-    color: white;
-  }
-  .navbar .navbar-nav > li > a:active {
-    border-bottom: 7px solid gray;
-    color: gray;
-  }
-  .navbar .navbar-nav > li > a:hover,
-  .navbar .navbar-nav > li > a:active,
-  .navbar .navbar-nav > li .active {
-    background-color: #132c55;
-  }
+  @media (min-width: 768px) {
+    .navbar .navbar-nav #home,
+    .navbar .navbar-nav #order-list {
+      border-left: 1px solid black;
+    }
+    .navbar .navbar-nav > li > a:hover {
+      border-bottom: 7px solid #bdc3c7;
+      color: #bdc3c7;
+    }
+    .navbar .navbar-nav > li .active {
+      border-bottom: 7px solid white;
+      color: white;
+    }
+    .navbar .navbar-nav > li > a:active {
+      border-bottom: 7px solid gray;
+      color: gray;
+    }
+    .navbar .navbar-nav > li > a:hover,
+    .navbar .navbar-nav > li > a:active,
+    .navbar .navbar-nav > li .active {
+      background-color: #132c55;
+    }
 
   }
     .navbar #employee-logout #logout-btn {
