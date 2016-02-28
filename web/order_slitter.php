@@ -8,7 +8,7 @@
 		<title>Machinovate | Order Now</title>
 	</head>
 	<body>
-		<?php include 'header_before_login.php';?>
+		<?php include 'header_on_form_completion.php';?>
 
 		<div  id="order-slitter" class="container">
 			<h1 class="page-header">Paper Slitter Form Requirements</h1>
