@@ -40,7 +40,7 @@
 					</div>
 
 					<div id="btn-group">
-						<p><a id="#" href="order_slitter.php" class="btn btn-primary btn-block btn-lg">
+						<p><a target="_blank" href="order_slitter.php" class="btn btn-primary btn-block btn-lg">
 							<i class="glyphicon glyphicon-shopping-cart"></i> Add to Shopping Cart</a></p>
 						<p><a id="contact-us-btn" href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
 					</div>
