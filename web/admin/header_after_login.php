@@ -8,7 +8,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<div class="navbar-brand">
-				<a href="index.php"><img src="../images/machinovate-logo-white-no-border.png"></a>
+				<a href="index.php"><img src="../images/machinovate-logo-colored-with-border.png"></a>
 			</div>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">

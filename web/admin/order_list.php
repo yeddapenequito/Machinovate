@@ -5,12 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../styles/bootstrap.min.css">
 	<link rel="stylesheet" href="../styles/main.css">
+	<link rel="stylesheet" href="../styles/admin.css">
 	<title>Machinovate | Order List</title>
 </head>
 <body>
 	<?php include 'header_after_login.php';?>
 	
-	<div class="container">
+	<div id="order-list-content" class="container">
 		<ul class="nav nav-tabs">
 		  <li><a data-toggle="tab" href="#menu1">All</a></li>
 		  <li class="active"><a data-toggle="tab" href="#home">Pending</a></li>
