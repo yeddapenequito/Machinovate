@@ -19,7 +19,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Website <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="add_agents.php">Add Agents</a></li>
-						<li><a href="#">Add [Something]</a></li>
+						<li><a href="add_events.php">Add Events</a></li>
 					</ul>
 				</li>
 			</ul>
