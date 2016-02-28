@@ -1,70 +1,86 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="styles/bootstrap.min.css">
-	<link rel="stylesheet" href="styles/main.css">
-	<title>Machinovate | Machines</title>
-</head>
-<body>
-	<?php include 'header_before_login.php';?>
-	<div id="machines-content" class="container">
-		<div class="row">
-			<!-- Cutter -->
-			<div class="col-xs-12 col-md-3">
-				<div class="minor right-shadow">
-					<header>
-						<h1>Cutter</h1>
-					</header>
-					<img class="mach-img" alt="cutter" src="images/cutter.png">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
-					<a href="cutter.php" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/main.css">
+		<title>Machinovate | Machines</title>
+	</head>
+	<body>
+		<?php include 'header_before_login.php';?>
+		
+		<div id="order-now-content" class="container">
+			<div class="row">
+				<div class="col-md-6 visible-md-block visible-lg-block">
+					<img id="mach-img" alt="slitter" src="images/slitter-front.png">
 				</div>
-			</div>
 
-			<!-- Slitter-->
-			<div class="col-xs-12 col-md-3">
-				<div class="right-shadow">
-					<header>
-						<h1>Slitter</h1>
+				<div class="col-xs-12 col-md-6">
+					<header class="page-header">
+						<h1>Choose your machine</h1>
 					</header>
-					<img class="mach-img" alt="slitter" src="images/slitter-front.png">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
-					<a href="slitter.php" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
+					<form>
+						<div class="btn-group btn-group-vertical">
+						  <a id="slitter" href="#" onclick="changeImage(0)" class="btn btn-primary">Slitter<small>Short description.</small></a>
+						  <a id="sheeter" href="#" onclick="changeImage(1)" class="btn btn-primary">Sheeter<small>Short description.</small></a>
+						  <a id="cutter" href="#" onclick="changeImage(2)" class="btn btn-primary">Cutter<small>Short description.</small></a>
+						  <a id="other-products" href="#" onclick="changeImage(3)" class="btn btn-primary">Other Products<small>Short description.</small></a>
+						</div>
+						<a href="order_slitter.php" id="continue-btn" class="btn btn-primary">Continue</a>
+					</form>
 				</div>
-			</div>
+			</div> <!-- ./row -->
+		</div> <!-- ./container -->
 
-			<!-- Sheeter -->
-			<div class="col-xs-12 col-md-3">
-				<div class="left-shadow">
-					<header>
-						<h1>Sheeter</h1>
-					</header>
-					<img class="mach-img" alt="sheeter" src="images/sheeter-servo.png">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
-					<a href="sheeter.php" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
-				</div>
-			</div>
+		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			document.getElementById("machines").className = "active";
+			document.getElementById("slitter").style.backgroundColor = "#eee";	
 
-			<!-- Other Products -->
-			<div class="col-xs-12 col-md-3">
-				<div class="minor left-shadow">
-					<header>
-						<h1>Other Products</h1>
-					</header>
-					<img class="mach-img" alt="other-products" src="images/other-products.png">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla. Nunc sit amet erat sit amet justo aliquet vulputate non eu leo.</p>
-					<a href="other_products.php" class="btn btn-primary learn-more-btn">Learn More&gt;&gt;</a>
-				</div>
-			</div>
-		</div> <!-- /.row -->
-	</div> <!-- /.container-fluid -->
-	
-	<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
-	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-	<script type="text/javascript">
-		document.getElementById("machines").className = "active";
-	</script>
-</body>
+			var image;
+
+			function changeImage(machine) {
+			    image = document.getElementById('mach-img');
+			    switch(machine) {
+			    	case 0:
+			    		image.src = "images/slitter-front.png";
+			    		image.alt = "slitter";
+			    		document.getElementById("slitter").style.backgroundColor = "#eee";
+			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
+			    		document.getElementById("cutter").style.backgroundColor = "transparent";
+			    		document.getElementById("other-products").style.backgroundColor = "transparent";
+			    		document.getElementById("continue-btn").href = "slitter.php";
+			    		break;
+			    	case 1: 
+			    		image.src = "images/sheeter-servo.png";
+			    		image.alt = "sheeter";
+			    		document.getElementById("slitter").style.backgroundColor = "transparent";
+			    		document.getElementById("sheeter").style.backgroundColor = "#eee";
+			    		document.getElementById("cutter").style.backgroundColor = "transparent";
+			    		document.getElementById("other-products").style.backgroundColor = "transparent";
+			    		document.getElementById("continue-btn").href = "sheeter.php";
+			    		break;
+			    	case 2:
+			    		image.src = "images/cutter.png";
+			    		image.alt = "cutter";
+			    		document.getElementById("slitter").style.backgroundColor = "transparent";
+			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
+			    		document.getElementById("cutter").style.backgroundColor = "#eee";
+			    		document.getElementById("other-products").style.backgroundColor = "transparent";
+			    		document.getElementById("continue-btn").href = "cutter.php";
+			    		break;
+			    	case 3:
+			    		image.src = "images/other-products.png";
+			    		image.alt = "other products";
+			    		document.getElementById("slitter").style.backgroundColor = "transparent";
+			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
+			    		document.getElementById("cutter").style.backgroundColor = "transparent";
+			    		document.getElementById("other-products").style.backgroundColor = "#eee";
+			    		document.getElementById("continue-btn").href = "other_products.php";
+			    }
+			}	
+		</script>
+	</body>
 </html>
