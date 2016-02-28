@@ -36,7 +36,7 @@
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
-			document.getElementById("machine").className = "active";
+			document.getElementById("machines").className = "active";
 			document.getElementById("slitter").style.backgroundColor = "#eee";	
 
 			var image;
