@@ -71,3 +71,22 @@ CREATE TABLE sheeter_specs(
 	SYSTEMS VARCHAR NOT NULL,
 	PRIMARY KEY (model_id)
 );
+
+CREATE TABLE events (
+	event_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	event_date DATE NOT NULL,
+	event_name VARCHAR(60) NOT NULL,
+	event_place VARCHAR(60) NOT NULL,
+	PRIMARY KEY (event_id)
+	--
+) ENGINE=MyISAM;
+
+CREATE TABLE event_pictures (
+	pic_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	event_id INT UNSIGNED NOT NULL,
+	image_name VARCHAR(60) NOT NULL,
+	caption VARCHAR(255) NOT NULL,
+	PRIMARY KEY (pic_id)
+	--
+) ENGINE=MyISAM;
+
