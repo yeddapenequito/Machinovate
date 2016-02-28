@@ -22,7 +22,7 @@ CREATE TABLE agents (
 );
 
 /*----------------------------------------------
-TENTATIVE SQL QUERIES 
+TENTATIVE SQL QUERIES - DONT EXECUTE YET!!
 -----------------------------------------------*/
 
 CREATE TABLE misc_machine_pushcart_specs(
