@@ -149,13 +149,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<div class="form-group">
 						<label for="event_place" class="col-sm-3 control-label">Event Venue: </label>
 						<div class="col-sm-9">
-							<input type="event_place" class="form-control" id="event-place" name="event_place" maxlength="20" value="<?php if (isset($_POST['event_place'])) echo $_POST['event_place']; ?>"  />
+							<input placeholder="Enter the event's venue" type="event_place" class="form-control" id="event-place" name="event_place" maxlength="20" value="<?php if (isset($_POST['event_place'])) echo $_POST['event_place']; ?>"  />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="image" class="col-sm-3 control-label">image:</label>
+						<label for="image" class="col-sm-3 control-label">Upload Image:</label>
 						<div class="col-sm-9">
-							<input id="image" class="form-control" type="text" name="image" maxlength="60" value="<?php if (isset($_POST['image'])) echo $_POST['image']; ?>"  />
+							<input type="file" name="image" />
 						</div>
 					</div>
 					<div class="form-group">
