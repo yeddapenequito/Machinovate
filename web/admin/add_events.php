@@ -1,7 +1,7 @@
 <!--PHP -->
 
 <?php # Script 9.5 - register.php #2
-// This script performs an INSERT query to add a record to the agents table
+// This script performs an INSERT query to add a record to the events table
 
 $page_title = 'Machinovate | Add Events';
 include ('header_after_login.php');
@@ -42,31 +42,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 
 
-	//Check for the pictures:
-	if (empty($_POST['pictures'])) {
-		$errors[] = 'You forgot to enter the pictures.';
-	} else {
-		$pictures = mysqli_real_escape_string($dbc, trim($_POST['pictures']));
+	// Check for an image:
+	if (is_uploaded_file ($_FILES['image']['tmp_name'])) {
+
+		// Create a temporary file name:
+		$temp = '../../uploads/' . md5($_FILES['image']['name']);
+	
+		// Move the file over:
+		if (move_uploaded_file($_FILES['image']['tmp_name'], $temp)) {
+
+			echo '<p>The file has been uploaded!</p>';
+	
+			// Set the $image variable to the image's name:
+			$image = $_FILES['image']['name'];
+	
+		} else { // Couldn't move the file over.
+			$errors[] = 'The file could not be moved.';
+			$temp = $_FILES['image']['tmp_name'];
+		}
+
+	} else { // No uploaded file.
+		$errors[] = 'No file was uploaded.';
+		$temp = NULL;
 	}
 
 	if (empty($errors)) { // If everything's OK.
 	
-		// Register the agent in the database...
+		// Register the event in the database...
 		
 		// Make the query:
-		$q = "INSERT INTO events (event_name, date_start, date_end, event_place, pictures) VALUES ('$event_name', '$date_start', '$date_num', '$event_place', '$pictures')";		
+		$q = "INSERT INTO events (event_name, date_start, date_end, event_place, image) VALUES ('$event_name', '$date_start', '$date_num', '$event_place', '$image')";		
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 		if ($r) { // If it ran OK.
 		
 			// Print a message:
 			echo '<h1>Thank you!</h1>
-		<p>An agent has been registered!</p><p><br /></p>';	
+		<p>An event has been registered!</p><p><br /></p>';	
 		
 		} else { // If it did not run OK.
 			
 			// Public message:
 			echo '<h1>System Error</h1>
-			<p class="error">The agent could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
+			<p class="error">The event could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
 			
 			// Debugging message:
 			echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
@@ -107,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<body>
 		<div class="container">
 			<div class="row">
-				<form action="add_agents.php" method="post" class="form-horizontal col-sm-6" role="form">
+				<form action="add_events.php" method="post" class="form-horizontal col-sm-6" role="form">
 					<div class="form-group">
 						<legend>Add Events</legend>
 					</div>
@@ -136,14 +153,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="pictures" class="col-sm-3 control-label">Pictures:</label>
+						<label for="image" class="col-sm-3 control-label">image:</label>
 						<div class="col-sm-9">
-							<input id="pictures" class="form-control" type="text" name="pictures" maxlength="60" value="<?php if (isset($_POST['pictures'])) echo $_POST['pictures']; ?>"  />
+							<input id="image" class="form-control" type="text" name="image" maxlength="60" value="<?php if (isset($_POST['image'])) echo $_POST['image']; ?>"  />
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-9 col-sm-offset-3">
-							<button type="Add" class="btn btn-primary">Add agent</button>
+							<button type="Add" class="btn btn-primary">Add event</button>
 						</div>
 					</div>
 				</form>
