@@ -27,7 +27,7 @@
 						  <a id="cutter" href="#" onclick="changeImage(2)" class="btn btn-primary">Cutter<small>Short description.</small></a>
 						  <a id="other-products" href="#" onclick="changeImage(3)" class="btn btn-primary">Other Products<small>Short description.</small></a>
 						</div>
-						<a href="order_slitter.php" id="continue-btn" class="btn btn-primary">Continue</a>
+						<a href="slitter.php" id="continue-btn" class="btn btn-primary">Continue</a>
 					</form>
 				</div>
 			</div> <!-- ./row -->
