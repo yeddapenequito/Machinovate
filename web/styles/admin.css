@@ -20,6 +20,7 @@ form legend {
   =================================================================*/
   #login-content #captcha img {
   	height: 80px;
+    margin-bottom: 1em;
   }
   #login-content #login-btn {
   	background-color: #bdc3c7;
