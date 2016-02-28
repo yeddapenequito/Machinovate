@@ -4,36 +4,51 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="styles/bootstrap.min.css">
-		<link rel="stylesheet" href="styles/flag-icon-css-master/css/flag-icon.min.css">
 		<link rel="stylesheet" href="styles/main.css">
 		<title>Machinovate | Cutter</title>
 	</head>
 	<body>
 		<?php include 'header_before_login.php';?>
-
 		<div id="machine-details" class="container">
+			<ol class="breadcrumb">
+				<li><a href="machines.php">Machines</a></li>
+				<li class="active">Cutter</li>
+			</ol>
 			<div class="row">
-				<ol class="breadcrumb">
-					<li><a href="machines.php">Machines</a></li>
-					<li class="active">Cutter</li>
-				</ol>
-				<div class="col-xs-12 col-md-8">
-					<div class="row">
-						<div class="col-xs-12 col-sm-4">
-							<img id="mach-img" src="images/cutter.png" alt="cutter">
-						</div>
-						<div class="col-xs-12 col-sm-8">
-							<p class="text-justify">
-								Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
-							</p>
-
-							<p id="application"><strong>Applications</strong>. Fax Paper and Cash Register</p>
-
-							<a id="order-now-btn" href="order_now.php" class="btn btn-primary btn-lg">Order This Machine</a>
-							<span id="or">or</span>
-							<a id="order-now-btn" href="contact_us.php" class="btn btn-primary btn-lg">Contact Us for More Details</a>
-						</div>
+				<div class="col-sm-4">
+					<div id="lg-img">
+						<img id="focus-img" src="images/cutter.png" alt="cutter">
 					</div>
+					<div id="sm-img">
+						<img onclick="changeImage(0)" class="active" id="img0" alt="cutter" src="images/cutter.png"></img>
+						<img onclick="changeImage(1)" id="img1" alt="slitter back" src="images/slitter-back.png"></img>
+						<img onclick="changeImage(2)" id="img2" alt="slitter close up 1" src="images/slitter-close-up-1.jpg"></img>
+						<img onclick="changeImage(3)" id="img3" alt="slitter close up 2" src="images/slitter-close-up-2.jpg"></img>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<h1 class="page-header">Cutter</h1>
+					
+					<div id="description">
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
+						</p>
+					</div>
+
+					<div id="application">
+						<p><strong>Applications</strong>. Fax Paper and Cash Register</p>
+					</div>
+
+					<div id="btn-group">
+						<p><a target="_blank" href="order_cutter.php" class="btn btn-primary btn-block btn-lg">
+							<i class="glyphicon glyphicon-shopping-cart"></i> Add to Shopping Cart</a></p>
+						<p><a id="contact-us-btn" href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
+					</div>
+					
+					<!-- <div id="video">
+						<h2 class="page-header">Video</h2>
+						<video src=""></video>
+					</div> -->
 
 					<table class="table table-condensed table-hover table-bordered">
 						<caption class="page-header">Specifications</caption>
@@ -219,36 +234,44 @@
 							</tr>
 						</tbody>
 					</table>
-					<p id="footnote">*Specification could be changed for improvement without prior notice.</p>
-				</div> <!-- /.col 1 -->
-
-
-				<div id="sidebar" class="col-xs-12 col-md-4">
-					<div id="photos">
-						<h3 class="page-header">Photos</h3>
-						<div class="img-popup">
-							<img alt="slitter front" src="images/slitter-front.png"></img>
-							<img alt="slitter back" src="images/slitter-back.png"></img>
-							<img alt="slitter close up 1" src="images/slitter-close-up-1.jpg"></img>
-							<img alt="slitter close up 2" src="images/slitter-close-up-2.jpg"></img>
-						</div>
-					</div>
-
-					<div id="videos">
-						<h3 class="page-header">Videos</h3>
-						
-					</div>
-
-					<div id="catalog">
-						<h3 class="page-header">Brochures</h3>
-						<p>No brochure/s to display</p>
-					</div>
-				</div>	 <!-- /.col 2 -->
-			</div> <!-- /.row -->
-		</div> <!-- /.container -->
-			</div> <!-- ./row -->
+				</div>
+			</div>
+		</div>
 
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			function changeImage(imgNum) {
+			    switch(imgNum) {
+			    	case 0:
+			    		document.getElementById("focus-img").src = "images/cutter.png";
+			    		$("#img0").addClass("active");
+			    		$("#img1").removeClass("active");
+			    		$("#img2").removeClass("active");
+			    		$("#img3").removeClass("active");
+			    		break;
+			    	case 1: 
+			    		document.getElementById("focus-img").src = "images/slitter-back.png";
+			    		$("#img0").removeClass("active");
+			    		$("#img1").addClass("active");
+			    		$("#img2").removeClass("active");
+			    		$("#img3").removeClass("active");
+			    		break;
+			    	case 2:
+			    		document.getElementById("focus-img").src = "images/slitter-close-up-1.jpg";
+			    		$("#img0").removeClass("active");
+			    		$("#img1").removeClass("active");
+			    		$("#img2").addClass("active");
+			    		$("#img3").removeClass("active");
+			    		break;
+			    	case 3:
+			    		document.getElementById("focus-img").src = "images/slitter-close-up-2.jpg";
+			    		$("#img0").removeClass("active");
+			    		$("#img1").removeClass("active");
+			    		$("#img2").removeClass("active");
+			    		$("#img3").addClass("active");
+			    }
+			}	
+		</script>
 	</body>
 </html>
