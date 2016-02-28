@@ -363,7 +363,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   /*-----------------------------------------------------------------
     Machine categories styles
     -----------------------------------------------------------------*/
-   /*  #machine-category .row div a {
+     #machine-category .row div a {
      border: 1px solid silver;
      border-radius: 5px;
      width: 25em;
@@ -384,7 +384,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
    #machine-category img {
      width: 300px;
      height: 200px;
-   } */
+   } 
 
 /*=================================================================
   Agents styles
