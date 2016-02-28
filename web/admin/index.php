@@ -12,13 +12,15 @@
 
 	<div id="login-content" class="container">
 		<div class="row">
-			<form role="form" action="form-handler" method="post" class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
-
-				<h3 class="page-header">Login</h3>
-
-				<div class="alert alert-danger">
-				  	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-				  	<strong>Warning!</strong> This page is for authorized employees only.
+			<form role="form" action="form-handler" method="post" class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+				<div class="form-group">
+					<legend class="page-header">Login</legend>
+				</div>
+				<div class="form-group">
+					<div class="alert alert-danger">
+					  	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					  	<strong>Warning!</strong> This page is for authorized employees only.
+					</div>
 				</div>
 
 				<div class="form-group">
@@ -32,18 +34,17 @@
 				</div>
 
 				<!-- The following code for implementing captcha is obtained and modified from http://www.the-art-of-web.com/php/captcha/-->
-
-				<div class="form-horizontal">
-					<div class="form-group">
-						<label for="captcha" class="control-label col-sm-5">
-							<img src="captcha.php" alt="CAPTCHA">
-						</label>
-						<div class="col-sm-7">
-							<input id="captcha" type="text" name="captcha" class="form-control">
+				<fieldset>
+					<div class="form-group" id="captcha">
+						<div class="row">
+							<img src="captcha.php" alt="CAPTCHA" class="col-sm-6 control-label">
+							<div class="col-sm-6">
+								<input type="text" name="captcha" class="form-control">
+								<small>Copy the digits from the image into this box</small>
+							</div>
 						</div>
-						<small>Copy the digits from the image into this box</small>
 					</div>
-				</div>
+				</fieldset>
 
 				<div class="form-group">
 					<div class="checkbox">
@@ -57,12 +58,9 @@
 
 			</form>
 		</div> <!-- /.row -->
-	</div>
+	</div> <!-- /.container -->
 
 	<script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
-	<script type="text/javascript">
-	document.getElementById("employee-login").remove();
-	</script>
 </body>
 </html>

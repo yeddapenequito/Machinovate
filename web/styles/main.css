@@ -478,3 +478,9 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     color: #153a7e;
   }
 
+  /*=================================================================
+    Login styles
+    =================================================================*/
+    #login-content #captcha img {
+      height: 80px;
+    }
