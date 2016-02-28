@@ -138,39 +138,68 @@
 							<label><input type="radio" name="single">Single</label>
 							<label><input type="radio" name="double">Double</label>
 							<label><input type="radio" name="others">Others </label>
-							<label><input type="text" name="additional" class="form-control"></label>
+							<label><input placeholder="Others"type="text" name="additional" class="form-control"></label>
 							<label></label>
 							<label><input type="radio" name="auto-tension">Auto Tension Control with Decurler System</label>
 							
 							
 						</div>
-						
+					<label><input type="radio" name="standard-reel">Standard Reel Stand (H-Type)</label>
+					<div class="radio">	
+							<label><input type="radio" name="4rolls">Four (4) Rolls </label>
+							<label><input type="radio" name="8rolls">Eight (8) Rolls </label>
+							<label><input type="radio" name="10rolls">Ten (10) Rolls +</label>
+							<label><input type="number" id="nroll" class="form-control"></label>
+							<label>Rolls</label>
+							<label></label>
+							<label><input type="radio" name="indiv-auto">Individual Auto Tension for Stationary Stand</label>
+							
+							
+						</div>
+					</div> <!-- Some names in additional are the same -->
+				<label for="sheeter" class="control-label col-sm-2">Shaft:</label>
+					<div class="col-sm-10">
+					<label><input type="radio" name="mech-shaft"> Mechanical Shaft</label>
+						<div class="radio">	
+							<label><input type="radio" name="single-shaft">Single</label>
+							<label><input type="radio" name="double-shaft">Double</label>
+							<label><input type="text" name="additional" class="form-control"></label>
+							<label>Φ 3” /</label>
+							<label><input type="text" name="additional" class="form-control"></label>
+							<label>Φ 6” / </label>
+							<label><input type="text" name="additional" class="form-control"></label>
+							<label></label>
+							<label><input type="radio" name="others-shaft">Others </label>
+							<label><input placeholder="Others"type="text" name="additional" class="form-control"></label>
+							<label>Φ</label>
+							<label><input placeholder="Others"type="text" name="additional" class="form-control"></label>
+							<label></label>
+						</div>
+					<label><input type="radio" name="air-shaft"> Air Shaft (Heavy Duty)</label>
+					<div class="radio">	
+							<label><input type="radio" name="air-choice"></label>
+							<label>[<input type="number" id="core"/> "Core]</label>
+							<label></label>
+							<label><input type="radio" name="roll-weight">Roll Weight:</label>
+							<label>[<input type="number" id="tcapacity"/> Ton Capacity]</label>
+						</div>
 					</div>
-				
-					<input type="checkbox" name="type"><b>Standard Reel Stand (H-Type)</b></p>
-					<input type="checkbox" name="type">Four (4) Rolls 
-					<input type="checkbox" name="type">Eight (8) Rolls 
-					<input type="checkbox" name="type">Ten (10) Rolls  + <input type="number" id=""> Rolls</p>
-					<input type="checkbox" name="type">Individual Auto Tension for Stationary Stand</p>
-
-					<p>Shaft: </p> <p> <input type="checkbox" name="type"><b>Mechanical Shaft</b></p>
-					<input type="checkbox" name="type">Single
-					<input type="checkbox" name="type">Double
-					<input type="text" name="additional">Φ 3” / <input type="text" name="additional">Φ 6” / <input type="text" name="additional"></p>
-					<input type="checkbox" name="type">Others: <input type="text" name="additional">Φ <input type="text" name="additional">"</p>
-					
-					<input type="checkbox" name="type"><b>Air Shaft (Heavy Duty)</b></p>
-					<input type="checkbox" name="type">[<input type="number" id=""/> "Core]
-					<input type="checkbox" name="type">Roll Weight:[<input type="number" id=""/> Ton Capacity]</p>
-					
-		</div>
-
+			</fieldset>
+		<fieldset>
+			<legend>Systems Section</legend>
 		<div class="form-group">
-		<h4>Systems Section</h4>
-				   <p>Systems: </p> <p> <input type="checkbox" name="type">Computer Control with Auto Length Setting with Auto Square ness and Auto Quantity Control
-					</p>
-					<input type="checkbox" name="type">Web Guide Hydraulic EPC Control & Mechanism</p>
-					<input type="checkbox" name="type">Others: <input type="text" name="additional"></p>
+			<label for="sheeter" class="control-label col-sm-2">Systems:</label>
+			<div class="col-sm-10">
+					<div class="radio">	
+				   <label><input type="radio" name="comp-control">Computer Control with Auto Length Setting with Auto Square ness and Auto Quantity Control</label>
+				   <label></label>
+				   <label><input type="radio" name="web-guide">Web Guide Hydraulic EPC Control & Mechanism</label>
+				   <label></label>
+				   <label><input type="radio" name="systems-others">Others: </label>
+				   <label><input type="text" name="additional" class="form-control" placeholder="Others"></label>
+			
+					</div>
+				</div>
 		</div>
 
 		
