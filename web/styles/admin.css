@@ -57,15 +57,16 @@ form legend {
     background-color: #132c55;
   }
 
-  .navbar #employee-logout #logout-btn {
-  	background-color: #153a7e;
-  	color: white;
   }
-  .navbar #employee-logout #logout-btn:hover {
-  	color: #153a7e;  
-  	background-color: transparent;
-    border: 1px solid silver;
-  }
+    .navbar #employee-logout #logout-btn {
+    	background-color: #153a7e;
+    	color: white;
+    }
+    .navbar #employee-logout #logout-btn:hover {
+    	color: #153a7e;  
+    	background-color: transparent;
+      border: 1px solid silver;
+    }
 
 /*=================================================================
   Login styles
