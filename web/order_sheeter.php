@@ -28,53 +28,65 @@
 		</style>
 	</head>
 	<body><!--name in every checkbox are not yed properly named-->
-		<?php include 'header-bottom.php';?>
-		<div class="container-fluid">
-		  <div class="title">
-				<h2><b>Paper Sheeter Form Requirements</b></h2>
-			</div>
+		<?php include 'header_before_login.php';?>
+		<div  id="order-sheeter" class="container">
+			<h1 class="page-header">Paper Slitter Form Requirements</h1>
+			<p>Please bear with us. This is going to take long.</p>
 			<!-- class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"-->
 			<!--put required later-->
-			<div class="products_button">
-					
-			<div id="pagination">
-				<ul class="pagination pagination">
-				<li><a href="our_machines.php">Machines</a></li>
-				<li><a  style="color:black;">></a></li>
-			    <li><a href="slitter.php">Sheeter</a></li>
-			    <li><a  style="color:black;">></a></li>
-			    <li><a style="color:red;">Order Now</a></li>
+				<form action="order_email.php" role="form" class="form-horizontal">
+				<fieldset>
+					<legend>General Section</legend>
+					<div class="form-group">
+						<label for="Type" class="control-label col-sm-2">Type:</label>
+						<div class="col-sm-10">
+							<div class="radio">
+								<label><input type="radio" name="msr70">Lexus-KGM(Overlapping) </label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="msr70">Lexus-HSM(Servo-Overlapping) </label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="msr70">Lexus-Compact (Standard) </label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="msr70">Lexus- Sync(Twin Knife - Overlapping)</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="customized">Customized</label>
+							</div>
+						</div>
+					</div>
+			<div class="form-group">
+				<label for="production-vol" class="control-label col-sm-2">Production Vol:</label>
+				<div class="col-sm-10">
+							<input id="production-vol" type="number" class="form-control"/>Tons per day
+						</div>
 				</div>
-			<form action="action_order.html">
 			<div class="form-group">
-				<h4>General Section</h4>
-				<p>Production Vol : <input type="number" id="prodvol"/> Tons per day </p>
-			</div>
+						<label for="paper-type" class="control-label col-sm-2">Paper Type:</label>
+						<div class="col-sm-10">
+							<input placeholder="e.g. Ledger, Newsprint, Carbonless" id="paper-type" type="text" class="form-control"/>
+						</div>
 			<div class="form-group">
-				<p> Cut Paper Type : <input type="number" id="papertype"/></p>
-			</div>
+						<label for="gsm" class="control-label col-sm-2">GSM:</label>
+						<div data-role="rangeslider" class="col-sm-10	">
+							<!-- <input type="range" name="gsm-min" id="gsm-min" value="200" min="0" max="1000" class="form-control">
+							<input type="range" name="gsm-max" id="gsm-max" value="800" min="0" max="1000" class="form-control"> -->
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="roll-diameter" class="control-label col-sm-2">Roll Diameter:</label>
+						<div data-role="rangeslider" class="col-sm-10	">
+							<!-- <input type="range" name="roll-diameter-min" id="roll-diameter-min" value="200" min="0" max="1000" class="form-control">
+							<input type="range" name="roll-diameter-max" id="roll-diameter-max" value="800" min="0" max="1000" class="form-control"> -->
+						</div>
+					</div>
 			<div class="form-group">
-				<p>GSM: <input type="checkbox" name="gmin"> <b> MIN</b>
-					<input type="checkbox" name="gmax"> <b> MAX</b></p></p>
-			</div>
-			<div class="form-group">
-				<p>Roll Diameter: <input type="checkbox" name="rmin"><b> MIN</b>
-					<input type="checkbox" name="rmax"><b> MAX</b></p>
-			</div>
-			<div class="form-group">
-				<p>Cut Off Length: <input type="checkbox" name="rmin"><b> MIN</b>
-					<input type="checkbox" name="rmax"><b> MAX</b></p>
-			</div>
-			<div class="form-group">
-				<p>Web Width: <input type="checkbox" name="smin" >  <input type="number" id="width"/> mm </p>
-				<input type="checkbox" name="smin" > Others: <input type="number" id="width"/></p>
-			</div>
-			<div class="form-group">
-					<p>Model Type: </p><p> <input type="checkbox" name="type">Lexus-KGM(Overlapping) </p>
-					<input type="checkbox" name="type">Lexus-HSM(Servo-Overlapping) </p>
-					<input type="checkbox" name="type">Lexus-Compact (Standard) </p>
-					<input type="checkbox" name="type">Lexus- Sync(Twin Knife - Overlapping) </p>
-			</div>
+						<label for="web-width" class="control-label col-sm-2">Web Width:</label>
+						<div class="col-sm-10">
+							<input id="web-width" type="number" class="form-control"/>
+						</div>
 
 			
 
