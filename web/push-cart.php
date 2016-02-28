@@ -39,160 +39,40 @@
 					<table class="table table-condensed table-hover table-bordered">
 						<caption class="page-header">Specifications</caption>
 						<thead>
-							<tr>
-								<th  colspan="2">MODEL</th>
-								<th colspan="2">M2000-WB(S)</th>
-								<th colspan="2">M2500-WB(S)</th>
-								<th colspan="2">M3000-WB(S)</th>
-								<th>M3000-WB(S)</th>
-								<th>M3000-WB(S)</th>
-								
-							</tr>
-						</thead>
-						<tbody>
-							<tr><!--limitation: auto create tables?-->
-								<td  colspan="2">TYPE (FRAME)</td>
-								<td>wide</td>
-								<td>narrow</td>
-								<td>wide</td>
-								<td>narrow</td>
-								<td>wide</td>
-								<td>narrow</td>
-								<td>narrow</td>
-								<td>low profile</td>
-								
-								
-							</tr>
-							<tr>  
-								<td>CAPACITY</td>
-								<td>kgs</td>
-								<td>2000</td>
-								<td>2000</td>
-								<td>2500</td>
-								<td>2500</td>
-								<td>3000</td>
-								<td>3000</td>
-								<td>5000</td>
-								<td>2000</td>
-								
-
-							</tr>
-							<tr>	
-								<td>FRAME WIDTH</td>
-								<td>mm</td>
-								<td>680</td>
-								<td>540</td>
-								<td>680</td>
-								<td>540</td>
-								<td>680</td>
-								<td>540</td>
-
-								<td>580</td>
-								<td>680</td>
-								
-								
-
-
-							</tr>
-							<tr>	
-								<td>FORK LENGTH</td>
-								<td>mm</td>
-								<td>1220</td>
-								<td>1150</td>
-								<td>1220</td>
-								<td>1150</td>
-								<td>1220</td>
-								<td>1150</td>
-								<td>1150</td>
-								<td>1150</td>
-								
-															</tr>
-							<tr>	
-								<td>LOWERED HT.</td>
-								<td>mm</td>
-								<td colspan="6"><center>85 (or 75)</center></td>
-								
-								<td>90</td>
-								<td>55</td>
-															</tr>
-							<tr>	
-								<td>MAXIMUM LIFT</td>
-								<td>mm</td>
-								<td colspan="6"><center>205 (or 195)</center></td>
-								<td>200</td>
-								<td>170</td>
-								
-							</tr>
-							<tr>	
-								<td>WHEEL MATERIAL</td>
-								<td></td>
-								<td colspan="6"><center>Polyurethane (PU) / Nylon</center></td>
-								<td>Steel</td>
-								<td>PU</td>
-															</tr>
-							<tr>	
-								<td colspan="10">FEATURES:</td>
-								
-								
-							</tr>
-							<tr>	
-								<td colspan="10">BUILT-IN OVERLOAD VALVE & TOTALLLY SEALED HYDRAULIC PUMP</td>
-															</tr>
-							<tr>	
-								<td colspan="10">HEAVY DUTY 1 PIECE & REINFORCED "C" SECTION FORKS FOR STRENGTH & DURABILITY</td>
-															</tr>
-							<tr>	
-								<td colspan="10">2 NYLON ENTRY & EIT ROLLERS FOR EASY INSERTION AND EXERTION OF FORKS TO PALLET</td>
-							
-							</tr>
-							<tr>	
-								<td colspan="10">3 WAY HAND CONTROLS FOR EASY HANDLING</td>
-							
-							</tr>
-							<tr>	
-								<td colspan="10">MAINTENANCE FREEOL LESS BUSHINGS AT KEY POINTS</td>
-							
-							</tr>
 							<tr>	
 								<th colspan="4"><center>MODEL</center></th>
-								<th colspan="4"><center>M1500-PRT</center></th>
 								<th colspan="4"><center>M1800-PRT</center></th>
 							</tr>
+						</thead>
 							<tr>	
-								<td colspan="4">CAPACITY</td> 
-								<td colspan="4">1500</td>
+								<td colspan="4">CAPACITY</td>
 								<td colspan="4">1800</td>
 								
 							</tr>
 							<tr>	
-								<td colspan="4">MIN. ROLL DIAMETER</td> 
-								<td colspan="4">700</td>
+								<td colspan="4">MIN. ROLL DIAMETER</td>
 								<td colspan="4">800</td>
 								
 							
 							</tr>
 							<tr>	
-								<td colspan="4">MAX. ROLL DIAMETER</td> 
-								<td colspan="4">1300</td>
+								<td colspan="4">MAX. ROLL DIAMETER</td>
 								<td colspan="4">1400</td>
 								
 							
 							</tr>
 							<tr>	
-								<td colspan="4">MAX. ROLL LENGTH</td> 
-								<td colspan="4">1500</td>
+								<td colspan="4">MAX. ROLL LENGTH</td>
 								<td colspan="4">1500</td>
 							</tr>
 
 							<tr>	
-								<td colspan="4">FRAME WIDTH</td> 
-								<td colspan="4">990</td>
+								<td colspan="4">FRAME WIDTH</td>
 								<td colspan="4">1030</td>
 							
 							</tr>
 							<tr>	
-								<td colspan="4">FORK LENGTH</td> 
-								<td colspan="4">1350</td>
+								<td colspan="4">FORK LENGTH</td>
 								<td colspan="4">1350</td>
 							
 							</tr>
