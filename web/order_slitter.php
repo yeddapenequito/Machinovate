@@ -154,7 +154,8 @@
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
 						<a id="cancel-btn" href="order_now.php" class="btn btn-default">Cancel</a>
-						<button id="add-to-cart-btn" type="submit" class="btn btn-default">Add to Cart</button>
+						<button id="add-to-cart-btn" type="submit" class="btn btn-default">
+							<i class="glyphicon glyphicon-shopping-cart"></i> Add to Cart</button>
 					</div>
 				</div>
 			</form>
