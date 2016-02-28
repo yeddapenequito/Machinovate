@@ -182,14 +182,6 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 	font-style: italic;
 	margin-right: .5em;
 }
-.navbar #employee-logout #logout-btn {
-  background-color: #bdc3c7;
-  color: #153a7e;
-}
-.navbar #employee-logout #logout-btn:hover {
-  color: white;  
-  background-color: transparent;
-}
 
 /*=================================================================
   Contact us styles

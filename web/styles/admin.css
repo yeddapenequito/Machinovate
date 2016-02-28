@@ -15,18 +15,72 @@ form legend {
 	color: white;
 }
 
+.btn {
+  background-color: #bdc3c7;
+  color: #153a7e;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.btn:active {
+  background-color: transparent;
+  border: 1px solid gray;
+  color: gray;
+}
+
+/*=================================================================
+  Navbar styles
+  =================================================================*/
+  .navbar .navbar-nav #home,
+  .navbar .navbar-nav #order-list {
+    border-left: 1px solid black;
+  }
+  .navbar .navbar-nav > li > a:hover {
+    border-bottom: 7px solid #bdc3c7;
+    color: #bdc3c7;
+  }
+  .navbar .navbar-nav > li .active {
+    border-bottom: 7px solid white;
+    color: white;
+  }
+  .navbar .navbar-nav > li > a:active {
+    border-bottom: 7px solid gray;
+    color: gray;
+  }
+  .navbar .navbar-nav > li > a:hover,
+  .navbar .navbar-nav > li > a:active,
+  .navbar .navbar-nav > li .active {
+    background-color: #132c55;
+  }
+
+  .navbar #employee-logout #logout-btn {
+  	background-color: #153a7e;
+  	color: white;
+  }
+  .navbar #employee-logout #logout-btn:hover {
+  	color: #153a7e;  
+  	background-color: transparent;
+    border: 1px solid silver;
+  }
+
 /*=================================================================
   Login styles
   =================================================================*/
   #login-content #captcha img {
-  	height: 80px;
+    height: 80px;
     margin-bottom: 1em;
   }
-  #login-content #login-btn {
-  	background-color: #bdc3c7;
-  	color: #153a7e;
-  }
-  #login-content #login-btn:hover {
-  	color: white;  
-  	background-color: transparent;
-  }
+
+  /*=================================================================
+    Order list styles
+    =================================================================*/
+    #order-list-content .nav-tabs > li > a {
+      color: white;
+    }
+    #order-list-content .nav-tabs .active a {
+      color: #153a7e;
+    }
