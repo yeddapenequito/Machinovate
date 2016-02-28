@@ -17,22 +17,19 @@
 				<fieldset>
 					<legend>General Section</legend>
 					<div class="form-group">
-						<label for="Type" class="control-label col-sm-2">Type:</label>
+						<label for="type" class="control-label col-sm-2">Type:</label>
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input type="radio" name="msr70">MSR 70</label>
+								<label><input type="radio" id="type" name="type">MACH-MSR(Standard)</label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" name="msr70">MSR 90</label>
+								<label><input type="radio" id="type" name="type">MACH-MSR(Heavy Duty)</label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" name="msr70">MSR 110</label>
+								<label><input type="radio" id="type" name="type">MACH-CRS(Cash Register Slitter)</label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" name="msr70">MSR 130</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="customized">Customized</label>
+								<label><input type="radio" id="type" name="type">Customized</label>
 							</div>
 						</div>
 					</div>
