@@ -38,11 +38,12 @@ CREATE TABLE misc_machine_pushcart_specs(
 CREATE TABLE misc_machine_bailing_specs(
 	model_id VARCHAR(10) NOT NULL,
 	pressure SMALLINT NOT NULL,
-	inner_size_dimension 
-	pump
-	oil_pump
-	motor
-	weight 
+	inner_size_dimension VARCHAR NOT NULL,
+	pump VARCHAR NOT NULL,
+	oil_pump VARCHAR NOT NULL,
+	motor SMALLINT NOT NULL,
+	weight FLOAT(6, 2) NOT NULL,
+	PRIMARY KEY (model_id)
 );
 
 CREATE TABLE sheeter_specs(
@@ -67,5 +68,6 @@ CREATE TABLE sheeter_specs(
 	SHAFT_MECHANICAL_SHAFT VARCHAR, 
 	SHAFT_AIR_SHAFT_CORE FLOAT(6, 2),
 	SHAFT_AIR_SHAFT_ROLL_WEIGHT FLOAT(6, 2),
-	SYSTEMS VARCHAR NOT NULL
+	SYSTEMS VARCHAR NOT NULL,
+	PRIMARY KEY (model_id)
 );
