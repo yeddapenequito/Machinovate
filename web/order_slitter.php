@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="styles/main.css">
 		<title>Machinovate | Order Now</title>
 	</head>
-	<body><!--name in every checkbox are not yed properly named-->
 		<?php include 'header_before_login.php';?>
 
 		<div  id="order-slitter" class="container">
