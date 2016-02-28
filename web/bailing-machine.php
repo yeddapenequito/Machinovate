@@ -4,126 +4,51 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="styles/bootstrap.min.css">
-		<link rel="stylesheet" href="styles/flag-icon-css-master/css/flag-icon.min.css">
 		<link rel="stylesheet" href="styles/main.css">
 		<title>Machinovate | Bailing Machine</title>
-		<style>
-			#myImg {
-			    border-radius:0px;
-			    cursor: pointer;
-			    transition: 0.3s;
-
-			}
-
-			#myImg:hover {opacity: 0.7;}
-			/* Not yet centered , therefore not yet moved to main.css*/
-			/* The Modal (background) */
-			.modal {
-			    display: none; /* Hidden by default */
-			    position: fixed; /* Stay in place */
-			    z-index: 1; /* Sit on top */
-			    padding-top: 100px; /* Location of the box */
-			    left: 0;
-			    top: 0;
-			    width: 100%; /* Full width */
-			    height: 100%; /* Full height */
-			    overflow: auto; /* Enable scroll if needed */
-			    background-color: rgb(0,0,0); /* Fallback color */
-			    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-			}
-
-			/* Modal Content (image) */
-			.modal-content {
-			    margin: auto;
-			    display: block;
-			    width: 80%;
-			    max-width: 700px;
-			    align-content: center;
-			}
-
-			/* Caption of Modal Image */
-			#caption {
-			    margin: auto;
-			    display: block;
-			    width: 80%;
-			    max-width: 700px;
-			    text-align: center;
-			    color: #ccc;
-			    padding: 10px 0;
-			    height: 150px;
-			}
-
-			/* Add Animation */
-			.modal-content, #caption {    
-			    -webkit-animation-name: zoom;
-			    -webkit-animation-duration: 0.6s;
-			    animation-name: zoom;
-			    animation-duration: 0.6s;
-			}
-
-			@-webkit-keyframes zoom {
-			    from {transform:scale(0)} 
-			    to {transform:scale(1)}
-			}
-
-			@keyframes zoom {
-			    from {transform:scale(0)} 
-			    to {transform:scale(1)}
-			}
-
-			/* The Close Button */
-			.close {
-			    position: absolute;
-			    top: 15px;
-			    right: 35px;
-			    color: #f1f1f1;
-			    font-size: 40px;
-			    font-weight: bold;
-			    transition: 0.3s;
-			}
-
-			.close:hover,
-			.close:focus {
-			    color: #bbb;
-			    text-decoration: none;
-			    cursor: pointer;
-			}
-
-			/* 100% Image Width on Smaller Screens */
-			@media only screen and (max-width: 700px){
-			    .modal-content {
-			        width: 100%;
-			    }
-			}
-</style>
 	</head>
 	<body>
 		<?php include 'header_before_login.php';?>
-
 		<div id="machine-details" class="container">
+			<ol class="breadcrumb">
+				<li><a href="machines.php">Machines</a></li>
+				<li class="active">Bailing Machine</li>
+			</ol>
 			<div class="row">
-				<ol class="breadcrumb">
-					<li><a href="machines.php">Machines</a></li>
-					<li ><a href="other_products.php">Other Products</a></li>
-					<li class="active">Bailing Machine</li>
-				</ol>
-				<div class="col-xs-12 col-md-8">
-					<div class="row">
-						<div class="col-xs-12 col-sm-4">
-							<img id="mach-img" src="images/bailing-machine.png" alt="bailing-machine">
-						</div>
-						<div class="col-xs-12 col-sm-8">
-							<p class="text-justify">
-								Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
-							</p>
-
-							<p id="application"><strong>Applications</strong>. Fax Paper and Cash Register</p>
-
-							<a id="order-now-btn" href="order_now.php" class="btn btn-primary btn-lg">Order This Machine</a>
-							<span id="or">or</span>
-							<a id="order-now-btn" href="contact_us.php" class="btn btn-primary btn-lg">Contact Us for More Details</a>
-						</div>
+				<div class="col-sm-4">
+					<div id="lg-img">
+						<img id="focus-img" src="images/bailing-machine.png" alt="bailing-machine">
 					</div>
+					<div id="sm-img">
+						<img onclick="changeImage(0)" class="active" id="img0" alt="bailing-machine" src="images/bailing-machine.png"></img>
+						<img onclick="changeImage(1)" id="img1" alt="slitter back" src="images/slitter-back.png"></img>
+						<img onclick="changeImage(2)" id="img2" alt="slitter close up 1" src="images/slitter-close-up-1.jpg"></img>
+						<img onclick="changeImage(3)" id="img3" alt="slitter close up 2" src="images/slitter-close-up-2.jpg"></img>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<h1 class="page-header">Bailing Machine</h1>
+					
+					<div id="description">
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
+						</p>
+					</div>
+
+					<div id="application">
+						<p><strong>Applications</strong>. Fax Paper and Cash Register</p>
+					</div>
+
+					<div id="btn-group">
+						<p><a target="_blank" href="order_bailing-mach.php" class="btn btn-primary btn-block btn-lg">
+							<i class="glyphicon glyphicon-shopping-cart"></i> Add to Shopping Cart</a></p>
+						<p><a id="contact-us-btn" target="_blank" href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
+					</div>
+					
+					<!-- <div id="video">
+						<h2 class="page-header">Video</h2>
+						<video src=""></video>
+					</div> -->
 
 					<table class="table table-condensed table-hover table-bordered">
 						<caption class="page-header">Specifications</caption>
@@ -164,62 +89,44 @@
 							  </tr>
 						</tbody>
 					</table>
-					<p id="footnote">*Specification could be changed for improvement without prior notice.</p>
-				</div> <!-- /.col 1 -->
-
-
-				<div id="sidebar" class="col-xs-12 col-md-4">
-					<div id="photos">
-						<h3 class="page-header">Photos</h3>
-						<div class="img-popup">
-							<img id="myImg" src="images/bailing-machine.png" alt="bailing-machine">
-						</div>
-						<!-- The Modal -->
-						<div id="myModal" class="modal">
-						  <span class="close">×</span>
-						  <img class="modal-content" id="bailing-machine">
-						  <div id="caption"></div>
-						</div>
-					</div>
-
-					<div id="videos">
-						<h3 class="page-header">Videos</h3>
-						
-					</div>
-
-					<div id="catalog">
-						<h3 class="page-header">Brochures</h3>
-						<p>No brochure/s to display</p>
-					</div>
-				</div>	 <!-- /.col 2 -->
-			</div> <!-- /.row -->
-		</div> <!-- /.container -->
-			</div> <!-- ./row -->
+				</div>
+			</div>
+		</div>
 
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-		<script>
-			// Get the modal
-			var modal = document.getElementById('myModal');
-
-			// Get the image and insert it inside the modal - use its "alt" text as a caption
-			var img = document.getElementById('myImg');
-			var modalImg = document.getElementById("bailing-machine");
-			var captionText = document.getElementById("caption");
-			img.onclick = function(){
-			    modal.style.display = "block";
-			    modalImg.src = this.src;
-			    modalImg.alt = this.alt;
-			    captionText.innerHTML = this.alt;
-			}
-
-			// Get the <span> element that closes the modal
-			var span = document.getElementsByClassName("close")[0];
-
-			// When the user clicks on <span> (x), close the modal
-			span.onclick = function() { 
-			    modal.style.display = "none";
-			}
-			</script>
+		<script type="text/javascript">
+			function changeImage(imgNum) {
+			    switch(imgNum) {
+			    	case 0:
+			    		document.getElementById("focus-img").src = "images/bailing-machine.png";
+			    		$("#img0").addClass("active");
+			    		$("#img1").removeClass("active");
+			    		$("#img2").removeClass("active");
+			    		$("#img3").removeClass("active");
+			    		break;
+			    	case 1: 
+			    		document.getElementById("focus-img").src = "images/slitter-back.png";
+			    		$("#img0").removeClass("active");
+			    		$("#img1").addClass("active");
+			    		$("#img2").removeClass("active");
+			    		$("#img3").removeClass("active");
+			    		break;
+			    	case 2:
+			    		document.getElementById("focus-img").src = "images/slitter-close-up-1.jpg";
+			    		$("#img0").removeClass("active");
+			    		$("#img1").removeClass("active");
+			    		$("#img2").addClass("active");
+			    		$("#img3").removeClass("active");
+			    		break;
+			    	case 3:
+			    		document.getElementById("focus-img").src = "images/slitter-close-up-2.jpg";
+			    		$("#img0").removeClass("active");
+			    		$("#img1").removeClass("active");
+			    		$("#img2").removeClass("active");
+			    		$("#img3").addClass("active");
+			    }
+			}	
+		</script>
 	</body>
 </html>

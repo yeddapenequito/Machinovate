@@ -42,7 +42,7 @@
 					<div id="btn-group">
 						<p><a target="_blank" href="order_cutter.php" class="btn btn-primary btn-block btn-lg">
 							<i class="glyphicon glyphicon-shopping-cart"></i> Add to Shopping Cart</a></p>
-						<p><a id="contact-us-btn" href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
+						<p><a id="contact-us-btn" target="_blank" href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
 					</div>
 					
 					<!-- <div id="video">
