@@ -30,7 +30,7 @@
 	<body><!--name in every checkbox are not yed properly named-->
 		<?php include 'header_before_login.php';?>
 		<div  id="order-sheeter" class="container">
-			<h1 class="page-header">Paper Slitter Form Requirements</h1>
+			<h1 class="page-header">Paper Sheeter Form Requirements</h1>
 			<p>Please bear with us. This is going to take long.</p>
 			<!-- class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"-->
 			<!--put required later-->
@@ -41,16 +41,16 @@
 						<label for="Type" class="control-label col-sm-2">Type:</label>
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input type="radio" name="msr70">Lexus-KGM(Overlapping) </label>
+								<label><input type="radio" name="lexus-kgm">Lexus-KGM(Overlapping) </label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" name="msr70">Lexus-HSM(Servo-Overlapping) </label>
+								<label><input type="radio" name="lexus-hsm">Lexus-HSM(Servo-Overlapping) </label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" name="msr70">Lexus-Compact (Standard) </label>
+								<label><input type="radio" name="lexus-compact">Lexus-Compact (Standard) </label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" name="msr70">Lexus- Sync(Twin Knife - Overlapping)</label>
+								<label><input type="radio" name="lexus-sync">Lexus- Sync(Twin Knife - Overlapping)</label>
 							</div>
 							<div class="radio">
 								<label><input type="radio" name="customized">Customized</label>
@@ -68,13 +68,14 @@
 						<div class="col-sm-10">
 							<input placeholder="e.g. Ledger, Newsprint, Carbonless" id="paper-type" type="text" class="form-control"/>
 						</div>
+			</div>
 			<div class="form-group">
 						<label for="gsm" class="control-label col-sm-2">GSM:</label>
 						<div data-role="rangeslider" class="col-sm-10	">
 							<!-- <input type="range" name="gsm-min" id="gsm-min" value="200" min="0" max="1000" class="form-control">
 							<input type="range" name="gsm-max" id="gsm-max" value="800" min="0" max="1000" class="form-control"> -->
 						</div>
-					</div>
+			</div>
 					<div class="form-group">
 						<label for="roll-diameter" class="control-label col-sm-2">Roll Diameter:</label>
 						<div data-role="rangeslider" class="col-sm-10	">
@@ -87,27 +88,65 @@
 						<div class="col-sm-10">
 							<input id="web-width" type="number" class="form-control"/>
 						</div>
-
-			
-
-			<div class="form-group">
-				<h4>Cutting Section</h4>
-				<p>Main Drive: <p> <input type="checkbox" name="type">Inverter <a></a>
-					<input type="checkbox" name="type">Servo Motor and Touch Screen Monitor </p>
-				<p>Knife: <p> <input type="checkbox" name="type">Single Knife <a></a>
-					<input type="checkbox" name="type">Twin Knife </p>
-				<p>Slitter: <p> <input type="checkbox" name="type">3 Station Slitter Attachement with <input type="number" id=""> max. Side Trim Removal Blower w/ Tab Inserter unit<a></a>
-				<p>Accessories: <input type="checkbox" name="type">Anti-Static Control (Static Eliminator) <a></a>
-					<input type="checkbox" name="type">Paper Dust Collector Control System </p>
 			</div>
+			
+				</fieldset>
+			
+				<fieldset>
+				<legend>Cutting Section</legend>
+			<div class="form-group">
+				<label for="sheeter" class="control-label col-sm-2">Main Drive:</label>
+					<div class="col-sm-10">
+						<div class="radio">
+							<label><input type="radio" name="inverter">Inverter </label>
+							<label><input type="radio" name="servo-motor-touch">Servo Motor and Touch Screen Monitor </label>
+						</div>
+					</div>
+				<label for="sheeter" class="control-label col-sm-2">Knife:</label>
+					<div class="col-sm-10">
+						<div class="radio">
+							<label><input type="radio" name="single-knife">Single Knife </label>
+							<label><input type="radio" name="twin-knife">Twin Knife </label>
+						</div>		
+					</div>
+				<label for="sheeter" class="control-label col-sm-2">Slitter:</label>
+					<div class="col-sm-10">
+						<div class="radio">
+							<label><input type="radio" name="station-slitter">3 Station Slitter Attachement with <input type="number" id="snum"class="form-control"> max. Side Trim Removal Blower w/ Tab Inserter unit</label>
+						</div>		
+					</div>
+				<label for="sheeter" class="control-label col-sm-2">Accessories:</label>
+					<div class="col-sm-10">
+						<div class="radio">
+							<label><input type="radio" name="anti-static">Anti-Static Control (Static Eliminator) </label>
+							<label><input type="radio" name="anti-static">Paper Dust Collector Control System </label>
+						</div>		
+					</div>
 
+				
+				</div>
+				</fieldset>
+				
+				
+			<fieldset>
+			<legend>Unwind Roll Stand Section</legend>
 		<div class="form-group">
-			<h4>Unwind Roll Stand Section</h4>
-				<p>Reel Stand: </p> <p> <input type="checkbox" name="type"><b>Hydraulic Shaft ess with Air Break </b></p>
-					<input type="checkbox" name="type">Single
-					<input type="checkbox" name="type">Double
-					<input type="checkbox" name="type">Others: <input type="text" name="additional"></p>
-					<input type="checkbox" name="type">Auto Tension Control with Decurler System</p>
+			<label for="sheeter" class="control-label col-sm-2">Reel Stand:</label>
+					<div class="col-sm-10">
+					<label><input type="radio" name="hydraulic">Hydraulic Shaftless with Air Break </label>
+						<div class="radio">	
+							<label><input type="radio" name="single">Single</label>
+							<label><input type="radio" name="double">Double</label>
+							<label><input type="radio" name="others">Others </label>
+							<label><input type="text" name="additional" class="form-control"></label>
+							<label></label>
+							<label><input type="radio" name="auto-tension">Auto Tension Control with Decurler System</label>
+							
+							
+						</div>
+						
+					</div>
+				
 					<input type="checkbox" name="type"><b>Standard Reel Stand (H-Type)</b></p>
 					<input type="checkbox" name="type">Four (4) Rolls 
 					<input type="checkbox" name="type">Eight (8) Rolls 
@@ -134,41 +173,24 @@
 					<input type="checkbox" name="type">Others: <input type="text" name="additional"></p>
 		</div>
 
-		<div class="form-group">
-		<h4>Terms Section</h4>
-				   <p>Delivery Basis: </p> <p> <input type="checkbox" name="type">FOB 
-					<input type="checkbox" name="type"> CIF</p>
-					<input type="checkbox" name="type">CFR</p>
-					<p>Shipment:<input type="checkbox" name="type"><input type="number" name="additional"> Working Days after Initial Payment</p>
-					<p>Payment Terms:<input type="checkbox" name="type">Letter of Credit, Draft at sight</p>
-					<input type="checkbox" name="type">Telegraphic Transfer</p>
-					30% Down Payment upon confirmation</p>
-					60% before shipment</p>
-					10% upon installation</p>
-		</div>
-		<div class="form-group">
-			<h4><span>Other Details: </span></h4>
-				<textarea name="message" rows="10" cols="30">
-				
-				</textarea>			
-			</div>
+		
+		<fieldset>
+					<legend>Other Details</legend>
+					<div class="form-group">
+						<label for="comment" class="control-label col-sm-2">Details:</label>
+						<div class="col-sm-10">
+					  		<textarea class="form-control" rows="8" id="comment"></textarea>
+						</div>
+					</div>
+				</fieldset>
 
-				<div class="next_button">
-					
-					<a href="./shipment.php" class="btn btn-md btn-primary" role="button">Next</a>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<a id="cancel-btn" href="order_now.php" class="btn btn-default">Cancel</a>
+						<button id="add-to-cart-btn" type="submit" class="btn btn-default">
+							<i class="glyphicon glyphicon-shopping-cart"></i> Add to Cart</button>
+					</div>
 				</div>
-
-
-
-
-		</div>
-
-
-
-
-
-
-		 </div>
 		</form>
 		  </div>
 		
