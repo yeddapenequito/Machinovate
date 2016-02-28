@@ -27,7 +27,7 @@
 				<div>
 					<a href="push-cart.php" class="col-xs-12 col-sm-3">
 						<img src="images/push-cart.png" alt="Push Cart">
-						<h1>Push Cart</h1>
+						<h1>Paper Roll Truck</h1>
 					</a>
 				</div>
 			</div> <!-- .row -->
