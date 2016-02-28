@@ -93,14 +93,16 @@ if ($r) { // If it ran OK, display the records.
 	// Fetch and print all the records:
 	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 		echo '
-		<div class="row">
-				<div class="col-xs-12 col-md-offset-3 col-md-6 agent">
-					<img class="col-xs-4" src="styles/flag-icon-css-master/flags/4x3/'. $row['country_num'] .'.svg">
-					<div class="col-xs-8">
-						<p><b><u>'. $row['country'] . '</u></b></p>
-						<p><b>Name: </b>  <a>' . $row['name'] . '</a></p>
-						<p><b>Email Address:</b> <a>' . $row['email'] . ' </a></p>
-						<p><b>Mobile No: </b> <a>' . $row['contact'] . '</a></p>
+			<div id="agents-content" class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-md-offset-3 col-md-6 agent">
+						<img class="col-xs-4" src="styles/flag-icon-css-master/flags/4x3/'. $row['country_num'] .'.svg">
+						<div class="col-xs-8">
+							<p><b><u>'. $row['country'] . '</u></b></p>
+							<p><b>Name: </b>  <a>' . $row['name'] . '</a></p>
+							<p><b>Email Address:</b> <a>' . $row['email'] . ' </a></p>
+							<p><b>Mobile No: </b> <a>' . $row['contact'] . '</a></p>
+						</div>
 					</div>
 				</div>
 			</div>
