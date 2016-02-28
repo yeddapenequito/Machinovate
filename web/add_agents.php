@@ -598,5 +598,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<p>Email Address: <input type="text" name="email" size="30" maxlength="60" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"  /> </p>
 	<p>Contact Details: <input type="text" name="contact" size="10" maxlength="60" value="<?php if (isset($_POST['contact'])) echo $_POST['contact']; ?>"  /></p>
 	<p><input type="submit" name="submit" value="Add Agent" /></p>
-</form>
 
+</form>
