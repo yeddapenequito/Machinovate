@@ -30,7 +30,6 @@
 
 							<div id="btn-group">
 								<p><a id="order-now-btn" href="order_slitter.php" class="btn btn-primary btn-block btn-lg">Order This Machine</a></p>
-								<!-- <p><span id="or">or</span></p> -->
 								<p><a id="contact-us-btn" href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
 							</div>
 						</div>
