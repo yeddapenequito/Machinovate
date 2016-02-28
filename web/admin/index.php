@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../styles/bootstrap.min.css">
 	<link rel="stylesheet" href="../styles/main.css">
+	<link rel="stylesheet" href="../styles/admin.css">
 	<title>Machinovate | Login</title>
 </head>
 <body>

@@ -1,0 +1,31 @@
+body {
+	background-color: #132c55;
+	color: white;
+}
+
+.navbar {
+	background-color: white;
+}
+.navbar .navbar-nav > li > a {
+	color: black;
+	border-color: black;
+}
+
+form legend {
+	color: white;
+}
+
+/*=================================================================
+  Login styles
+  =================================================================*/
+  #login-content #captcha img {
+  	height: 80px;
+  }
+  #login-content #login-btn {
+  	background-color: #bdc3c7;
+  	color: #153a7e;
+  }
+  #login-content #login-btn:hover {
+  	color: white;  
+  	background-color: transparent;
+  }
