@@ -27,7 +27,7 @@
 						  <a id="cutter" href="#" onclick="changeImage(2)" class="btn btn-primary">Cutter<small>Short description.</small></a>
 						  <a id="other-products" href="#" onclick="changeImage(3)" class="btn btn-primary">Other Products<small>Short description.</small></a>
 						</div>
-						<a id="continue-btn" class="btn btn-primary">Continue</a>
+						<a href="order_slitter.php" id="continue-btn" class="btn btn-primary">Continue</a>
 					</form>
 				</div>
 			</div> <!-- ./row -->
@@ -37,8 +37,7 @@
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			document.getElementById("machine").className = "active";
-			document.getElementById("slitter").style.backgroundColor = "#eee";
-			document.getElementById("continue-btn").href = "order_slitter.php";
+			document.getElementById("slitter").style.backgroundColor = "#eee";	
 
 			var image;
 
