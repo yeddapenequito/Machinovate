@@ -22,15 +22,17 @@
 							<img id="mach-img" src="images/slitter-front.png" alt="slitter">
 						</div>
 						<div class="col-xs-12 col-sm-8">
-							<p class="text-justify">
+							<p id="description" class="text-justify">
 								Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
 							</p>
 
 							<p id="application"><strong>Applications</strong>. Fax Paper and Cash Register</p>
 
-							<a id="order-now-btn" href="order_now.php" class="btn btn-primary btn-lg">Order This Machine</a>
-							<span id="or">or</span>
-							<a id="order-now-btn" href="contact_us.php" class="btn btn-primary btn-lg">Contact Us for More Details</a>
+							<div id="btn-group">
+								<p><a id="order-now-btn" href="order_slitter.php" class="btn btn-primary btn-block btn-lg">Order This Machine</a></p>
+								<!-- <p><span id="or">or</span></p> -->
+								<p><a id="contact-us-btn" href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
+							</div>
 						</div>
 					</div>
 

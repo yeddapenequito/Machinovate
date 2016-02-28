@@ -6,13 +6,42 @@ html {
 }
 body {
   margin: 0;
+  margin-bottom: 3em;
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
 
+/*=================================================================
+  Override bootstrap styles
+  =================================================================*/
+
 .breadcrumb .active {
   color: #153a7e;
   font-weight: bold;
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #153a7e;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: .85em;
+  margin-right: .5em;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid silver;
+  color: #153a7e;
+}
+
+.btn:active {
+  background-color: transparent;
+  border: 1px solid gray;
+  color: gray;
 }
 
 /*=================================================================
@@ -100,7 +129,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 		border-right: 1px solid white;
 	}
 	.navbar .navbar-nav #home,
-	.navbar .navbar-nav #dashboard {
+	.navbar .navbar-nav #order-list {
 		border-left: 1px solid white;
 	}
 	.navbar .navbar-nav > li > a:hover {
@@ -138,63 +167,28 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 	color: white;
 }
 
-/*employee login styles
+/*employee logout styles
 ----------------------------------------------------------------*/
-.navbar #employee-login,
 .navbar #employee-logout {
 	border: none;
   padding: 10px;
 }
-.navbar #employee-login:hover,
-.navbar #employee-login:active,
 .navbar #employee-logout:hover,
 .navbar #employee-logout:active {
 	background-color: transparent;
 	color: white;
 }
-.navbar #employee-login #are-you-an-employee,
 .navbar #employee-logout #hello-user {
 	font-style: italic;
 	margin-right: .5em;
 }
-.navbar #login-btn,
-.navbar #logout-btn,
-#login-content #login-btn,
-#machines-content .learn-more-btn,
-#machine-details #order-now-btn {
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	background-color: #bdc3c7;
-	color: #153a7e;
-	border: 1px solid transparent;
-	border-radius: 0;
-	font-weight: bold;
-	font-size: .85em;
-}
-.navbar #login-btn:hover, 
-.navbar #logout-btn:hover,
-#login-content #login-btn:hover,
-#machines-content .learn-more-btn:hover,
-#machine-details #order-now-btn:hover {
-	background-color: transparent;
-	border: 1px solid silver;
-	color: silver;
-}
-#login-content #login-btn:hover,
-#machine-details #order-now-btn:hover {
+.navbar #employee-logout #logout-btn {
+  background-color: #bdc3c7;
   color: #153a7e;
 }
-#machines-content .learn-more-btn:hover {
-  color: white;
-}
-.navbar #login-btn:active,
-.navbar #logout-btn:active,
-#login-content #login-btn:active,
-#machines-content .learn-more-btn:active,
-#machine-details #order-now-btn:active {
+.navbar #employee-logout #logout-btn:hover {
+  color: white;  
   background-color: transparent;
-  border: 1px solid gray;
-  color: gray;
 }
 
 /*=================================================================
@@ -290,6 +284,9 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     background-color: transparent;
     border: 1px solid silver;
     width: inherit;
+    text-transform: none;
+    font-weight: normal;
+    letter-spacing: normal;
   }
   #order-now-content .btn-group > a small {
     display: block;
@@ -298,26 +295,8 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     border-color: #153a7e; 
     color: #153a7e;
   }
-  #order-now-content #continue-btn {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background-color: #bdc3c7;
-    color: #153a7e;
-    border: 1px solid transparent;
-    border-radius: 0;
-    font-weight: bold;
-    margin-top: 2em;
-    margin-left: 18px;
-  }
-  #order-now-content #continue-btn:hover {
-    background-color: transparent;
-    border: 1px solid silver;
-    color: #153a7e;
-  }
-  #order-now-content #continue-btn:active {
-    background-color: transparent;
-    border: 1px solid gray;
-    color: gray;
+  #order-now-content form #continue-btn {
+    margin-left: 1.5em;
   }
 
 /*=================================================================
@@ -372,6 +351,12 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     width: 13em;
     margin: 3em auto;
     margin-bottom: 2em;
+    background-color: #bdc3c7;
+    color: #153a7e;
+  }
+  #machines-content .learn-more-btn:hover {
+    color: white;
+    background-color: transparent;
   }
   #machines-content .minor {
     margin-top: 2em;
@@ -389,32 +374,34 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     -----------------------------------------------------------------*/
     #machine-details #mach-img{
       height: 200px;
-      width: 250px;
+      width: auto;
       display: block;
       margin: 0 auto;
     }
+    #machine-details #application {
+      font-size: 1.25em;
+    }
+
     #machine-details table thead {
       font-size: 1.5em;
     }
     #machine-details table caption {
       font-size: 2em;
     }
-    #machine-details #order-now-btn {
-      margin-top: 2em;
+    
+    #machine-details #btn-group {
+      width: 18em;
+      margin-top: 3em;      
     }
-    #machine-details #photos img {
-      height: 100px;
-      width: 100px;
-      border: 1px solid silver;
-      margin: .25em;
+    #machine-details #btn-group #contact-us-btn {
+      background-color: #bdc3c7;
+      color: #153a7e;
     }
-    #machine-details #application {
-      font-size: 1.25em;
+    #machine-details #btn-group #contact-us-btn:hover {
+      background-color: transparent;
+      color: #153a7e;
     }
-    #machine-details #videos video {
-      width: 100%;
-      height: 300px;
-    }
+
     #machine-details #sidebar {
       background-color: #eee;
       border-radius: 5px;
@@ -422,14 +409,17 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     #machine-details #sidebar .page-header {
       border-color: #153a7e;
     }
-    #machine-details #or {
-      border:1px solid silver;
-      border-radius:100%;
-      position: relative;
-      top: .7em;
-      margin:1em;
-      padding:.25em .5em;
+    #machine-details #sidebar #photos img {
+      height: 100px;
+      width: 100px;
+      border: 1px solid silver;
+      margin: .25em;
     }
+    #machine-details #sidebar #videos video {
+      width: 100%;
+      height: 300px;
+    }
+    
     
   /*-----------------------------------------------------------------
     Machine categories styles
@@ -469,29 +459,22 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     border-radius: 5px;
   }
   #agents-content > .row .agent div {
-    padding-top: 1em;
+    padding: .5em;
   }
   #agents-content > .row .agent img {
-    padding: 0;
+    padding: .3em;
   }
 
+  /*=================================================================
+    Order now styles
+    =================================================================*/
   
-/*=================================================================
-  Dashboard styles
-  =================================================================*/
+  #order-slitter form #cancel-btn {
+    background-color: #bdc3c7;
+    color: #153a7e;
+  }
+  #order-slitter form #cancel-btn:hover {
+    background-color: transparent;
+    color: #153a7e;
+  }
 
-  #dashboard-content {
-  	margin-top: 2em;
-  }
-  #dashboard-content dt,
-  #dashboard-content dd {
-  	padding: .5em;
-  }
-  #dashboard-content dt {
-  	text-align: left;
-  }
-  #dashboard-content #profile-picture {
-  	width: 7em;
-  	height: 7em;
-  	margin: 1em;
-  }

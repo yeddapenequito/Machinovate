@@ -11,25 +11,10 @@
 	<body><!--name in every checkbox are not yed properly named-->
 		<?php include 'header_before_login.php';?>
 
-		<div class="container">
-		  	<ol class="breadcrumb">
-				<li>
-					<a href="order_now.php">Step 1: Choose your machine</a>
-				</li>
-				<li class="active">
-					Step 2: Specify your machine's specs
-				</li>
-				<li>
-					Step 3: Enter e-mail
-				</li>
-				<li>
-					Step 4: Shipping details
-				</li>
-			</ol>
-				
+		<div  id="order-slitter" class="container">
 			<h1 class="page-header">Paper Slitter Form Requirements</h1>
 			<p>Please bear with us. This is going to take long.</p>
-			<form action="action_order.html" role="form" class="form-horizontal">
+			<form action="order_email.php" role="form" class="form-horizontal">
 				<fieldset>
 					<legend>General Section</legend>
 					<div class="form-group">
@@ -95,7 +80,7 @@
 					Set Male/Female Circular Blade with Trim Removal Blower</label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" name="additional">Additional <input type="number" name="additional"> set of one pair male/female</label>
+								<label><input type="radio">Additional <input type="number" name="additional"> set of one pair male/female</label>
 							</div>
 							<div class="radio">
 								<label><input type="radio" name="core">Core Cutter Machine</label>
@@ -122,7 +107,7 @@
 							  <label><input type="radio" value="stationary">Stationary Shaft Sand</label>
 							</div>
 							<div class="radio">
-							  <label><input type="radio" value="others">Others: <input type="text" name="additional"></label>
+							  <label><input type="radio">Others: <input type="text" name="others"></label>
 							</div>
 						</div>
 					</div>
@@ -150,7 +135,7 @@
 							  <label><input type="radio" value="stationary">Fully Computerized Control System</label>
 							</div>
 							<div class="radio">
-							  <label><input type="radio" value="others">Others: <input type="text" name="additional"></label>
+							  <label><input type="radio">Others: <input type="text" name="others"></label>
 							</div>
 						</div>
 					</div>
@@ -165,7 +150,13 @@
 						</div>
 					</div>
 				</fieldset>
-				<button type="submit" class="btn btn-default col-sm-offset-2 col-sm-1">Submit</button>
+
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<a id="cancel-btn" href="order_now.php" class="btn btn-default">Cancel</a>
+						<button id="add-to-cart-btn" type="submit" class="btn btn-default">Add to Cart</button>
+					</div>
+				</div>
 			</form>
 		</div> <!-- /.container -->
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>

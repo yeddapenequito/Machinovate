@@ -13,16 +13,21 @@
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li><a id="dashboard" href="dashboard.php">Dashboard</a></li>
-				<li><a id="order-list" href="order-list.php">Order List</a></li>
-				<li><a id="reports" href="generate-reports.php">Generate Reports</a></li>
-				<li><a id="reports" href="add-agents.php">Add New Agent</a></li>
+				<li><a id="order-list" href="order_list.php">Order List</a></li>
+				<li><a id="generate-reports" href="generate_reports.php">Generate Reports</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Website <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="add_agents.php">Add Agents</a></li>
+						<li><a href="#">Add [Something]</a></li>
+					</ul>
+				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<div id="employee-logout">
 						<span id="hello-user">Hello, admin</span>
-						<a id="logout-btn" href="login.php" class="btn btn-sm" role="button">Logout</a> 
+						<a id="logout-btn" href="index.php" class="btn btn-sm" role="button">Logout</a> 
 					</div>
 				</li>
 			</ul>
