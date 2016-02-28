@@ -16,7 +16,7 @@
 			}
 
 			#myImg:hover {opacity: 0.7;}
-
+			/* Not yet centered , therefore not yet moved to main.css*/
 			/* The Modal (background) */
 			.modal {
 			    display: none; /* Hidden by default */
