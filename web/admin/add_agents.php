@@ -612,13 +612,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<div class="form-group">
 						<label for="last-name" class="col-sm-3 control-label">Last Name:</label>
 						<div class="col-sm-9">
-							<input placeholder="Enter agent's first name"type="text" class="form-control" id="last-name" name="last_name" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" />
+							<input placeholder="Enter agent's last name"type="text" class="form-control" id="last-name" name="last_name" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" />
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="first-name" class="col-sm-3 control-label">First Name:</label>
 						<div class="col-sm-9">
-							<input placeholder="Enter agent's last name"type="text" class="form-control" id="first-name" name="first_name" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" />
+							<input placeholder="Enter agent's first name"type="text" class="form-control" id="first-name" name="first_name" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" />
 						</div>
 					</div>
 					<div class="form-group">
