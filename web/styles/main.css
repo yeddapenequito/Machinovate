@@ -376,7 +376,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
    #machine-category .row div a:hover {
      color: #153a7e;
      border-color: #153a7e;
-   
+     text-decoration: none;
    }
    #machine-category .row div a h1 {
      font-size: 1.5em;
