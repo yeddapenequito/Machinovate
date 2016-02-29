@@ -42,23 +42,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 
 
-	// Check for an image:
-	if (is_uploaded_file ($_FILES['image']['tmp_name'])) {
+	// Check for an images:
+	if (is_uploaded_file ($_FILES['images']['tmp_name'])) {
 
 		// Create a temporary file name:
-		$temp = '../../uploads/' . md5($_FILES['image']['name']);
+		$temp = '../../uploads/' . md5($_FILES['images']['name']);
 	
 		// Move the file over:
-		if (move_uploaded_file($_FILES['image']['tmp_name'], $temp)) {
+		if (move_uploaded_file($_FILES['images']['tmp_name'], $temp)) {
 
 			echo '<p>The file has been uploaded!</p>';
 	
-			// Set the $image variable to the image's name:
-			$image = $_FILES['image']['name'];
+			// Set the $images variable to the images's name:
+			$images = $_FILES['images']['name'];
 	
 		} else { // Couldn't move the file over.
 			$errors[] = 'The file could not be moved.';
-			$temp = $_FILES['image']['tmp_name'];
+			$temp = $_FILES['images']['tmp_name'];
 		}
 
 	} else { // No uploaded file.
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Register the event in the database...
 		
 		// Make the query:
-		$q = "INSERT INTO events (event_name, date_start, date_end, event_place, image) VALUES ('$event_name', '$date_start', '$date_num', '$event_place', '$image')";		
+		$q = "INSERT INTO events (event_name, date_start, date_end, event_place, images) VALUES ('$event_name', '$date_start', '$date_num', '$event_place', '$images')";		
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 		if ($r) { // If it ran OK.
 		
@@ -153,9 +153,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="image" class="col-sm-3 control-label">Upload Image:</label>
+						<label for="images" class="col-sm-3 control-label">Upload Images:</label>
 						<div class="col-sm-9">
-							<input type="file" name="image" />
+							<input name="images[]" id="images" type="file" multiple="" />
 						</div>
 					</div>
 					<div class="form-group">
