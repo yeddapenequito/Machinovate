@@ -6,14 +6,14 @@
 		<link rel="stylesheet" href="styles/bootstrap.min.css">
 		<link rel="stylesheet" href="styles/main.css">
 		<title>Machinovate | Home</title>
-			<style>
-			img { 
-			    width:100%; 
-			    margin-left:0px;
-			    
+			<style type="text/css">
+			.container{
+				
 			}
-			.container-fluid{
-			background-color: #153a7e;}
+			#image-home{
+				width: 100%;
+				height: 360px;
+			}
 			</style>
 	</head>
 	<body>
@@ -21,10 +21,9 @@
 		
 		<!--insert slideshow or carousel code here -->
 		<!-- Tentative Image for homepage -->
-		<div class= "container-fluid">
-				<img src="images/Tentative_homepage.png" alt="homepage">
+		<div class="container">
+			<img src="images/Tentative_homepage.png" id="image-home">
 		</div>
-	
 		
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
