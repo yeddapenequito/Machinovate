@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -50,7 +51,7 @@
 						<video src=""></video>
 					</div> -->
 
-					<table class="table table-condensed table-hover table-bordered">
+					<table class="table table-condensed table-striped table-bordered">
 						<caption class="page-header">Specifications</caption>
 						<thead>
 							<tr>
