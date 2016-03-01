@@ -296,6 +296,7 @@
 				}
 				else {
 					document.getElementById("slitter-additional-checkbox").setAttribute("disabled", "disabled");
+					document.getElementById("slitter-additional-checkbox").setAttribute("checked", "unchecked");
 					document.getElementById("slitter-additional-text-field").setAttribute("disabled", "disabled");
 				}
 			};
