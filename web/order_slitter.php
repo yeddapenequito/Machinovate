@@ -69,17 +69,16 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<div class="input-group">
-									<input class="form-control" name="gsmMin" size="5" type="number">
-									<span class="input-group-addon">inches</span>
-								</div>
+								<input class="form-control" name="gsmMin" placeholder="Min" size="5" type="number">
 
 								<span>to</span>
 
-								<div class="input-group">
-									<input class="form-control" name="gsmMax" size="5" type="number">
-									<span class="input-group-addon">inches</span>
-								</div>
+								<input class="form-control" name="gsmMax" placeholder="Max" size="5" type="number">
+
+								<select class="form-control" name="gsmUnit"> 
+									<option value="inches">inches</option>
+									<option value="millimeters">millimeters</option>
+								</select>
 							</div>
 						</div>
 					</div>
@@ -92,17 +91,16 @@
 						<div class="col-sm-10">
 							<div class="form-inline">
 
-								<div class="input-group">
-									<input class="form-control" name="rollDiameterMin" size="5" type="number">
-									<span class="input-group-addon">inches</span>
-								</div>
+									<input class="form-control" name="rollDiameterMin" placeholder="Min" size="5" type="number">
 
-								<span>to</span>
+									<span>to</span>
 
-								<div class="input-group">
-									<input class="form-control" name="rollDiameterMax" size="5" type="number">
-									<span class="input-group-addon">inches</span>
-								</div>
+									<input class="form-control" name="rollDiameterMax" placeholder="Max" size="5" type="number">
+
+									<select class="form-control" name="rollDiameterUnit"> 
+										<option value="inches">inches</option>
+										<option value="millimeters">millimeters</option>
+									</select>
 							</div>
 						</div>
 					</div>
@@ -114,17 +112,16 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<div class="input-group">
-									<input class="form-control" name="slittingWidthMin" size="5" type="number">
-									<span class="input-group-addon">inches</span>
-								</div>
+								<input class="form-control" name="slittingWidthMin" placeholder="Min" size="5" type="number">
 
 								<span>to</span>
 
-								<div class="input-group">
-									<input class="form-control" name="slittingWidthMax" size="5" type="number">
-									<span class="input-group-addon">inches</span>
-								</div>
+								<input class="form-control" name="slittingWidthMax" placeholder="Max" size="5" type="number">
+
+								<select class="form-control" name="gsmUnit"> 
+									<option value="inches">inches</option>
+									<option value="millimeters">millimeters</option>
+								</select>
 							</div>
 						</div>
 					</div>
