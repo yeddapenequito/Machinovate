@@ -24,16 +24,16 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input type="radio" id="type" name="type">MACH-MSR (Standard)</label>
+								<label><input id="type" name="typeRadio" type="radio">MACH-MSR (Standard)</label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" id="type" name="type">MACH-MSR (Heavy Duty)</label>
+								<label><input id="type" name="typeRadio" type="radio">MACH-MSR (Heavy Duty)</label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" id="type" name="type">MACH-CRS (Cash Register Slitter)</label>
+								<label><input id="type" name="typeRadio" type="radio">MACH-CRS (Cash Register Slitter)</label>
 							</div>
 							<div class="radio">
-								<label><input type="radio" id="type" name="type">Customized</label>
+								<label><input id="type" name="typeRadio" type="radio">Customized</label>
 							</div>
 						</div>
 					</div>
@@ -41,52 +41,91 @@
 					<!-- Production Vol. -->
 					<div class="form-group">
 
-						<label for="production-vol" class="control-label col-sm-2">Production Vol:</label>
+						<label class="control-label col-sm-2" for="production-vol">Production Vol:</label>
 
 						<div class="col-sm-10">
-							<input id="production-vol" type="number" class="form-control"/>Tons per day
+							<div class="input-group">
+								
+								<input class="form-control" id="production-vol" name="productionVol" type="number"/>
+								<span class="input-group-addon">Tons per day</span>
+							</div>
 						</div>
 					</div>
 
 					<!-- Paper Type -->
 					<div class="form-group">
 
-						<label for="paper-type" class="control-label col-sm-2">Paper Type:</label>
+						<label class="control-label col-sm-2" for="paper-type">Paper Type:</label>
 
 						<div class="col-sm-10">
-							<input placeholder="e.g. Ledger, Newsprint, Carbonless" id="paper-type" type="text" class="form-control"/>
+							<input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text"/>
 						</div>
 					</div>
 
 					<!-- GSM -->
 					<div class="form-group">
 
-						<label for="gsm" class="control-label col-sm-2">GSM:</label>
+						<label  class="control-label col-sm-2" for="gsm">GSM:</label>
 
-						<div data-role="rangeslider" class="col-sm-10	">
-							<!-- <input type="range" name="gsm-min" id="gsm-min" value="200" min="0" max="1000" class="form-control">
-							<input type="range" name="gsm-max" id="gsm-max" value="800" min="0" max="1000" class="form-control"> -->
+						<div class="col-sm-10">
+							<div class="form-inline">
+								<div class="input-group">
+									<input class="form-control" name="gsmMin" size="5" type="number">
+									<span class="input-group-addon">inches</span>
+								</div>
+
+								<span>to</span>
+
+								<div class="input-group">
+									<input class="form-control" name="gsmMax" size="5" type="number">
+									<span class="input-group-addon">inches</span>
+								</div>
+							</div>
 						</div>
 					</div>
 
 					<!-- Roll Diameter -->
 					<div class="form-group">
 
-						<label for="roll-diameter" class="control-label col-sm-2">Roll Diameter:</label>
+						<label class="control-label col-sm-2" for="roll-diameter">Roll Diameter:</label>
 
-						<div data-role="rangeslider" class="col-sm-10	">
-							<!-- <input type="range" name="roll-diameter-min" id="roll-diameter-min" value="200" min="0" max="1000" class="form-control">
-							<input type="range" name="roll-diameter-max" id="roll-diameter-max" value="800" min="0" max="1000" class="form-control"> -->
+						<div class="col-sm-10">
+							<div class="form-inline">
+
+								<div class="input-group">
+									<input class="form-control" name="rollDiameterMin" size="5" type="number">
+									<span class="input-group-addon">inches</span>
+								</div>
+
+								<span>to</span>
+
+								<div class="input-group">
+									<input class="form-control" name="rollDiameterMax" size="5" type="number">
+									<span class="input-group-addon">inches</span>
+								</div>
+							</div>
 						</div>
 					</div>
 
 					<!-- Slitting Width -->
 					<div class="form-group">
 
-						<label for="slitting-width" class="control-label col-sm-2">Slitting Width:</label>
+						<label class="control-label col-sm-2" for="slitting-width">Slitting Width:</label>
 
 						<div class="col-sm-10">
-							<input id="slitting-width" type="number" class="form-control"/>
+							<div class="form-inline">
+								<div class="input-group">
+									<input class="form-control" name="slittingWidthMin" size="5" type="number">
+									<span class="input-group-addon">inches</span>
+								</div>
+
+								<span>to</span>
+
+								<div class="input-group">
+									<input class="form-control" name="slittingWidthMax" size="5" type="number">
+									<span class="input-group-addon">inches</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</fieldset>
@@ -98,34 +137,35 @@
 					<!-- Slitter -->
 					<div class="form-group">
 
-						<label for="slitter" class="control-label col-sm-2">Slitter:</label>
+						<label  class="control-label col-sm-2" for="slitter">Slitter:</label>
 
 						<div class="col-sm-10">
-							
 							<div class="checkbox">
-
+								
 								<label>
-									<input id="standard-checkbox" type="checkbox" value="standard" name="slitter">Standard[Five(5)] Set Male/Female Circular Blade with Trim Removal Blower
+									<input id="standard-checkbox" name="slitterCheckbox" type="checkbox" value="standard">Standard[Five(5)] Set Male/Female Circular Blade with Trim Removal Blower
 								</label>
 							</div>
 
 							<div class="checkbox">
-
-								<label><input id="slitter-additional-checkbox" type="checkbox" name="slitter" disabled>
+								
+								<label><input disabled id="slitter-additional-checkbox" name="slitterCheckbox" type="checkbox">
 									<div class="form-inline">
 										
 										<div class="form-group">
 											
-											<label for"slitter-additional-text-field" class="control-label">Additional</label>
-											<input id="slitter-additional-text-field" class="form-control" type="number" name="slitterAdditional" disabled> set of one pair male/female
+											<label class="control-label" for"slitter-additional-text-field">Additional</label>
+											<input class="form-control" disabled id="slitter-additional-text-field" name="slitterAdditional" type="number"> set of one pair male/female
 										</div>
 									</div>
 								</label>
 							</div>
 
 							<div class="checkbox">
-
-								<label><input id="core-cutter-checkbox" type="checkbox" value="core cutter" name="slitter">Core Cutter Machine</label>
+								
+								<label>
+									<input id="core-cutter-checkbox" name="slitterCheckbox" type="checkbox" value="core cutter">Core Cutter Machine
+								</label>
 							</div>
 						</div>
 					</div>
@@ -141,27 +181,27 @@
 						<div class="col-sm-10">
 
 							<div class="checkbox">
-								<label><input type="checkbox" value="hydraulic">Hydraulic Shaftless with Air Break</label>
+								<label><input type="checkbox" name="unwindRollStandCheckbox" value="hydraulic">Hydraulic Shaftless with Air Break</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" value="single">Single</label>
+								<label><input type="checkbox" name="unwindRollStandCheckbox" value="single">Single</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" value="customized">Customized</label>
+								<label><input type="checkbox" name="unwindRollStandCheckbox" value="customized">Customized</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" value="stationary">Stationary Shaft Stand</label>
+								<label><input type="checkbox" name="unwindRollStandCheckbox" value="stationary">Stationary Shaft Stand</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input id="reel-stand-others-checkbox" type="checkbox"> 
+								<label><input id="reel-stand-others-checkbox" name="unwindRollStandCheckbox" type="checkbox"> 
 									<div class="form-inline">
 										<div class="form-group">
-											<label for="reel-stand-others-text-field" class="control-label">Others:</label>
-											<input name="reelStandOthers" class="form-control" id="reel-stand-others-text-field" type="text" disabled>
+											<label class="control-label" for="reel-stand-others-text-field">Others:</label>
+											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers" type="text">
 										</div>
 									</div>
 								</label>
@@ -172,10 +212,13 @@
 					<!-- Ton Capacity -->
 					<div class="form-group">
 
-						<label for="ton-capacity" class="control-label col-sm-2">Ton Capacity:</label>
+						<label class="control-label col-sm-2" for="ton-capacity">Ton Capacity:</label>
 
 						<div class="col-sm-10">
-							<input name="tonCapacity" id="ton-capacity" type="text" class="form-control">
+							<div class="input-group">
+								<input class="form-control" id="ton-capacity"  name="tonCapacity"  type="text">
+								<span class="input-group-addon">Tons</span>
+							</div>
 						</div>
 					</div>
 				</fieldset>
@@ -191,31 +234,31 @@
 
 						<div class="col-sm-10">
 							<div class="checkbox">
-							  <label><input type="checkbox" value="heavy duty web">Heavy Duty Web Guide Hydraulic EPC Control System 
+							  <label><input name="systemsCheckbox" type="checkbox" value="heavy duty web">Heavy Duty Web Guide Hydraulic EPC Control System 
 					with Automation – Centring Sensor and Control, 4 pieces Roller and Roll Steering Guiding with Base</label>
 							</div>
 							<div class="checkbox">
-							  <label><input type="checkbox" value="heavy duty tension">Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing</label>
+							  <label><input name="systemsCheckbox" type="checkbox" value="heavy duty tension">Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input type="checkbox" value="banana roll">Banana Roll and Tension Roller</label>
+							  <label><input name="systemsCheckbox" type="checkbox" value="banana roll">Banana Roll and Tension Roller</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input type="checkbox" value="water cooling">Water Cooling Brake Systems</label>
+							  <label><input name="systemsCheckbox" type="checkbox" value="water cooling">Water Cooling Brake Systems</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input type="checkbox" value="fully computerized">Fully Computerized Control System</label>
+							  <label><input name="systemsCheckbox" type="checkbox" value="fully computerized">Fully Computerized Control System</label>
 							</div>
 							
 							<div class="checkbox">
-								<label><input id="systems-others-checkbox" type="checkbox" name="reel stand"> 
+								<label><input id="systems-others-checkbox" name="systemsCheckbox" type="checkbox"> 
 									<div class="form-inline">
 										<div class="form-group">
-											<label for="systems-others-text-field" class="control-label">Others:</label>
-											<input name="systemsOthers" class="form-control" id="systems-others-text-field" type="text" disabled>
+											<label class="control-label" for="systems-others-text-field">Others:</label>
+											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers" type="text">
 										</div>
 									</div>
 								</label>
@@ -230,7 +273,7 @@
 					<div class="form-group">
 
 						<div class="col-sm-offset-2 col-sm-10">
-					  		<textarea class="form-control" rows="8" id="comment"></textarea>
+					  		<textarea class="form-control" id="comment" rows="8" ></textarea>
 						</div>
 					</div>
 				</fieldset>
@@ -239,8 +282,8 @@
 
 					<div class="col-sm-offset-2 col-sm-10">
 
-						<a id="cancel-btn" href="order_now.php" class="btn btn-default">Cancel</a>
-						<button id="add-to-cart-btn" type="submit" class="btn btn-default">Finish</button>
+						<a class="btn btn-default" id="cancel-btn" href="order_now.php">Cancel</a>
+						<button class="btn btn-default" id="add-to-cart-btn" type="submit">Finish</button>
 					</div>
 				</div>
 			</form>
