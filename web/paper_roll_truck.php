@@ -21,9 +21,9 @@
 					</div>
 					<div id="sm-img">
 						<img onclick="changeImage(0)" class="active" id="img0" alt="push-cart" src="images/push-cart.png"></img>
-						<img onclick="changeImage(1)" id="img1" alt="slitter back" src="images/slitter-back.png"></img>
+						<!-- <img onclick="changeImage(1)" id="img1" alt="slitter back" src="images/slitter-back.png"></img>
 						<img onclick="changeImage(2)" id="img2" alt="slitter close up 1" src="images/slitter-close-up-1.jpg"></img>
-						<img onclick="changeImage(3)" id="img3" alt="slitter close up 2" src="images/slitter-close-up-2.jpg"></img>
+						<img onclick="changeImage(3)" id="img3" alt="slitter close up 2" src="images/slitter-close-up-2.jpg"></img> -->
 					</div>
 				</div>
 				<div class="col-sm-8">
