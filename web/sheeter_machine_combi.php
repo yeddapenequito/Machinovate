@@ -41,7 +41,7 @@
 					</div>
 
 					<div id="btn-group">
-						<p><a target="_blank" href="order_slitter.php" class="btn btn-primary btn-block btn-lg">
+						<p><a target="_blank" href="order_sheeter.php" class="btn btn-primary btn-block btn-lg">
 							<i class="glyphicon glyphicon-shopping-cart"></i> Add to Shopping Cart</a></p>
 						<p><a id="contact-us-btn" target="_blank" href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
 					</div>
@@ -53,115 +53,129 @@
 
 					<table class="table table-condensed table-bordered table-striped">
 						<caption class="page-header">Specifications</caption>
-						<thead>
-							<tr>
-								<th>MODEL</th>
-								<th>MSR 70</th>
-								<th>MSR 90</th>
-								<th>MSR 110</th>
-								<th>MSR 130</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Max. Unwind  Reel Width </td>
-								<td>1780 mm </td>
-								<td>2280 mm </td>
-								<td>2800 mm </td>
-								<td>3300 mm</td>
-							</tr>
-							<tr>   
-								<td>Designed Speed</td>
-								<td>600 M/Min</td>
-								<td>600 M/Min</td>
-								<td>800 M/Min</td>
-								<td>800 M/Min</td>
+				<thead>
+				<tr>
+	      		<td></td>
+	      		<td colspan="4">SINGLE-FLY Sheeting Machine</td>
+	      		
+	      		<td colspan="3">SYNCHRO-FLY Sheeting Machine</td>		
+				</tr>
+			</thead>
+			    <thead>
+			      <tr>
+			        <th style="text-align:center;">MODEL <p style="text-align:center;">(Bigger Sizes Available)</p></th>
+			        <th>MACH-SRV 56</th>
+			        <th>MACH-SRV 66</th>
+			        <th>MACH-SRV 80</th>
+			        <!--synchro-->
+			        <th>SYNC-1400</th>
+			        <th>SYNC-1600</th>	
+			        <th>SYNC-1800</th>	
+			        <th>SYNC-2000</th>
 
-							</tr>
-							<tr>	
-								<td>Maximum Unwinding Diameter</td>
-								<td>1800 mm</td>
-								<td>1800 mm</td>
-								<td>1800 mm</td>
-								<td>1800 mm</td>
+			      </tr>
+			    </thead>
+			<tbody>
+		      <tr><!--limitation: auto create tables?-->
+		     		<td>Max. Web Width</td>
+		     		<td>56" (1420mm) </td>
+					<td>66" (1680mm) </td>
+					<td>80" (2000mm) </td>
+					<td> 55"(1400mm)</td> 	
+					<td>63" (1600mm)</td> 	
+					<td>70" (1800mm)</td> 	
+					<td>80" (2000mm)</td>
+
+		     	</tr>
+	         <tr>   <td>Max. Unwinding Diameter</td>
+	         		<td></td>
+	         		<td></td>
+	         		<td></td>
+	         		<td></td>
+	         		<td></td>
+	         		<td></td>
+	         		 <td></td>
+	         </tr>
+			 <tr>	<td>H-Type (Min.4 reels) </td>
+			 		<td> 1300 mm x 4-20reels</td>
+			 		<td> 1300 mm x 4-20reels</td>
+			 		<td> 1500 mm x 4-20reels</td>
+			 		<td> 1300 mm x 4-20reels</td>
+			 		<td> 1300 mm x 4-20reels</td>
+			 		<td> 1500 mm x 4-20reels</td>
+			 		<td> 1500 mm x 4-20reels</td>
 
 
-							</tr>
-							<tr>	
-								<td>Maximum Rewinding Diameter</td>
-								<td>1500 mm</td>
-								<td>1500 mm</td>
-								<td>1500 mm</td>
-								<td>1500 mm</td>
+			 </tr>
+			 <tr>	<td>Hydraulic Shaftless(Single &Double) </td>
+			 		<td>1500 mm x 2-6 reels</td>
+			 		<td>1500 mm x 2-6 reels</td>
+			 		<td>1800 mm x 2-6 reels</td>
+			 		<td>1500 mm x 2-6 reels</td>
+			 		<td>1500 mm x 2-6 reels</td>
+			 		<td>1800 mm x 2-6 reels</td>
+			 		<td>1800 mm x 2-6 reels</td>
 
 
-							</tr>
-							<tr>	
-								<td>Core Diameter of Rewinding Reel</td>
-								<td>
-									<p>76.20-305 mm</p>
-									<p>( 3" - 12" )</p>
-								</td>
-								<td>
-									<p>76.20-305 mm</p>
-									<p>( 3" - 12" )</p>
-								</td>
-								<td>
-									<p>76.20-305 mm</p>
-									<p>( 3" - 12" )</p>
-								</td>
-								<td>
-									<p>76.20-305 mm</p>
-									<p>( 3" - 12" )</p>
-								</td>
-							</tr>
-							<tr>	
-								<td >Core Diameter of Unwinding Reel</td>
-								<td>
-									<p>76.20-305 mm</p>
-									<p>( 3" - 12" )</p>
-								</td>
-								<td>
-									<p>76.20-305 mm</p>
-									<p>( 3" - 12" )</p>
-								</td>
-								<td>
-									<p>76.20-305 mm</p>
-									<p>( 3" - 12" )</p>
-								</td>
-								<td>
-									<p>76.20-305 mm</p>
-									<p>( 3" - 12" )</p>
-								</td>
-							</tr>
-							<tr>	
-								<td>Total Power Requirement</td>
-								<td>
-									<p>220/380/440 Volts</p>
-									<p>( 25 kW )</p>
-								</td>
-								<td>
-									<p>220/380/440 Volts</p>
-									<p>( 29 kW )</p>
-								</td>
-								<td>
-									<p>220/380/440 Volts</p>
-									<p>( 33 kW )</p>
-								</td>
-								<td>
-									<p>220/380/440 Volts</p>
-									<p>( 33 kW )</p>
-								</td>
-							</tr>
-							<tr>	
-								<td>Machine Dimension</td> 
-								<td>7.7 MX  4M  X 3.25M</td>
-								<td>7.7 MX  4M  X 3.25M</td>
-								<td>7.7 MX  5.5 X 3.25M</td>
-								<td>7.7 MX  6M  X 3.25M</td>
-							</tr>
-						</tbody>
-					</table>
+			 </tr>
+			 <tr>	<td>Designed Speed(varies on Cut length and Materials) </td>
+			 		<td>300M/Min.</td>
+			 		<td>300M/Min.</td>
+			 		<td>300M/Min.</td>
+			 		<td>325M/Min.</td>
+			 		<td>325M/Min.</td>
+			 		<td>325M/Min.</td>
+			 		<td>325M/Min.</td>
+
+
+			 </tr>
+			 <tr>	<td>Min.- Max. knife load </td>
+			 		<td>40-500gsm </td>
+			 		<td>40-500gsm </td>
+			 		<td>40-500gsm </td>
+			 		<td>40-1000gsm </td>
+			 		<td>40-1000gsm </td>
+			 		<td>40-1000gsm </td>
+			 		<td>40-1000gsm </td>
+			 </tr>
+			 <tr>	<td>Sheet length range(Longer length upon request)</td>
+			 		<td>( 380-1700mm) </td>
+			 		<td>( 380-1700mm) </td>
+			 		<td>( 380-1700mm) </td>
+			 		<td>( 380-1700mm) </td>
+			 		<td>( 380-1700mm) </td>
+			 		<td>( 380-1700mm) </td>
+			 		<td>( 380-1700mm) </td>
+			 </tr>
+			 <tr>	<td>Cutting Tolerance</td>
+			 		<td>±0.5mm</td>
+			 		<td>±0.5mm</td>
+			 		<td>±0.5mm</td>
+			 		<td>±0.5mm</td>
+			 		<td>±0.5mm</td>
+			 		<td>±0.5mm</td>
+			 		<td>±0.5mm</td>
+			 </tr>
+			 <tr>	<td>Max. Pile Height (incl. Pallet)(can request Hi-Pile up to 1700mm) </td>
+			 		<td>51"(1300mm) </td>
+			 		<td>51"(1300mm) </td>
+			 		<td>51"(1300mm) </td>
+			 		<td>51"(1300mm) </td>
+			 		<td>51"(1300mm) </td>
+			 		<td>51"(1300mm) </td>
+			 		<td>51"(1300mm) </td>
+			 </tr>
+			 <tr>	<td>Max. Pile Weight </td> 
+			 		<td>1500kgs. </td>
+			 		<td>1500kgs. </td>
+			 		<td>2200kgs. </td>
+			 		<td>1500kgs. </td>
+			 		<td>1500kgs. </td>
+			 		<td>2200kgs. </td>
+			 		<td>2200kgs. </td>
+			 </tr>
+		    </tbody>
+		  </table>
 				</div>
 			</div>
 		</div>

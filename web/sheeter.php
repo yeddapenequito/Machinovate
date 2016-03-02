@@ -35,13 +35,13 @@
 					</a>
 				</div>
 				<div>
-					<a href="" class="col-xs-12 col-sm-3">
+					<a href="sheeter_machine_with_h-type_reel_stand.php" class="col-xs-12 col-sm-3">
 						<img src="images/sheeter-machine-with-h-type-reel-stand.png" alt="Sheeter Machine with H-Type Reel Stand">
 						<h1>Sheeter Machine with H-Type Reel Stand</h1>
 					</a>
 				</div>
 				<div>
-					<a href=""  class="col-xs-12 col-sm-3">
+					<a href="twin_knife_synchro_fly_sheeting_machine.php"  class="col-xs-12 col-sm-3">
 						<img src="images/twin-knife-synchro-fly-sheeting-machine.png" alt="Twin Knife Synchro-Fly Sheeting Machine">
 						<h1>Twin Knife Synchro-Fly Sheeting Machine</h1>
 					</a>
