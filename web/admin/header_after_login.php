@@ -26,7 +26,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<div id="employee-logout">
-						<span id="hello-user">Hello, admin</span>
+						<span id="hello-user" class="hidden-xs">Hello, admin</span>
 						<a id="logout-btn" href="index.php" class="btn btn-sm" role="button">Logout</a> 
 					</div>
 				</li>
