@@ -17,7 +17,7 @@
 			</ol>
 			<div class="row">
 				<div>
-					<a href="" class="col-xs-12 col-sm-3">
+					<a href="compact_machine.php" class="col-xs-12 col-sm-3">
 						<img src="images/compact-machine.png" alt="Compact Machine">
 						<h1>Compact Machine</h1>
 					</a>
