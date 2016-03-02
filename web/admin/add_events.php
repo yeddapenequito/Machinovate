@@ -2,13 +2,10 @@
 
 <?php # Script 9.5 - register.php #2
 // This script performs an INSERT query to add a record to the events table
-
 $page_title = 'Machinovate | Add Events';
 include ('header_after_login.php');
-
 // Check for form submission:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
 	require ('../../mysqli_connect.php'); // Connect to the db.
 		
 	$errors = array(); // Initialize an error array.
@@ -26,31 +23,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	} else {
 		$date_start = mysqli_real_escape_string($dbc, trim($_POST['date_start']));
 	}
-
 	// Check for a ending date:
 	if (empty($_POST['date_end'])) {
 		$errors[] = 'You forgot to enter the ending date.';
 	} else {
 		$date_end = mysqli_real_escape_string($dbc, trim($_POST['date_end']));
 	}
-
 	// Check for an event_place address:
 	if (empty($_POST['event_place'])) {
 		$errors[] = 'You forgot to enter your event place .';
 	} else {
 		$event_place = mysqli_real_escape_string($dbc, trim($_POST['event_place']));
 	}
-
-
 	// Check for an images:
 	if (is_uploaded_file ($_FILES['images']['tmp_name'])) {
-
 		// Create a temporary file name:
 		$temp = '../../uploads/' . md5($_FILES['images']['name']);
 	
 		// Move the file over:
 		if (move_uploaded_file($_FILES['images']['tmp_name'], $temp)) {
-
 			echo '<p>The file has been uploaded!</p>';
 	
 			// Set the $images variable to the images's name:
@@ -60,12 +51,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$errors[] = 'The file could not be moved.';
 			$temp = $_FILES['images']['tmp_name'];
 		}
-
 	} else { // No uploaded file.
 		$errors[] = 'No file was uploaded.';
 		$temp = NULL;
 	}
-
 	if (empty($errors)) { // If everything's OK.
 	
 		// Register the event in the database...
@@ -91,7 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		} // End of if ($r) IF.
 		
 		mysqli_close($dbc); // Close the database connection.
-
 		// Include the footer and quit the script:
 		exit();
 		
@@ -107,7 +95,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	} // End of if (empty($errors)) IF.
 	
 	mysqli_close($dbc); // Close the database connection.
-
 } // End of the main Submit conditional.
 ?>
 
@@ -189,5 +176,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		</script>
 	</body>
 </html>
-
 
