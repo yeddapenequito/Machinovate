@@ -12,7 +12,7 @@
 		<div id="machine-details" class="container">
 			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
-				<li>Sheeter</li>
+				<li><a href="sheeter.php">Sheeter</a></li>
 				<li class="active">Compact Machine</li>
 			</ol>
 			<div class="row">
