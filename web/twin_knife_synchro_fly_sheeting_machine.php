@@ -54,126 +54,62 @@
 					<table class="table table-condensed table-bordered table-striped">
 						<caption class="page-header">Specifications</caption>
 				<thead>
-				<tr>
-	      		<td></td>
-	      		<td colspan="4">SINGLE-FLY Sheeting Machine</td>
-	      		
-	      		<td colspan="3">SYNCHRO-FLY Sheeting Machine</td>		
-				</tr>
-			</thead>
-			    <thead>
-			      <tr>
-			        <th style="text-align:center;">MODEL <p style="text-align:center;">(Bigger Sizes Available)</p></th>
-			        <th>MACH-SRV 56</th>
-			        <th>MACH-SRV 66</th>
-			        <th>MACH-SRV 80</th>
-			        <!--synchro-->
-			        <th>SYNC-1400</th>
-			        <th>SYNC-1600</th>	
-			        <th>SYNC-1800</th>	
-			        <th>SYNC-2000</th>
-
-			      </tr>
-			    </thead>
-			<tbody>
-		      <tr><!--limitation: auto create tables?-->
-		     		<td>Max. Web Width</td>
-		     		<td>56" (1420mm) </td>
-					<td>66" (1680mm) </td>
-					<td>80" (2000mm) </td>
-					<td> 55"(1400mm)</td> 	
-					<td>63" (1600mm)</td> 	
-					<td>70" (1800mm)</td> 	
-					<td>80" (2000mm)</td>
-
-		     	</tr>
-	         <tr>   <td>Max. Unwinding Diameter</td>
-	         		<td></td>
-	         		<td></td>
-	         		<td></td>
-	         		<td></td>
-	         		<td></td>
-	         		<td></td>
-	         		 <td></td>
-	         </tr>
-			 <tr>	<td>H-Type (Min.4 reels) </td>
-			 		<td> 1300 mm x 4-20reels</td>
-			 		<td> 1300 mm x 4-20reels</td>
-			 		<td> 1500 mm x 4-20reels</td>
-			 		<td> 1300 mm x 4-20reels</td>
-			 		<td> 1300 mm x 4-20reels</td>
-			 		<td> 1500 mm x 4-20reels</td>
-			 		<td> 1500 mm x 4-20reels</td>
-
-
-			 </tr>
-			 <tr>	<td>Hydraulic Shaftless(Single &Double) </td>
-			 		<td>1500 mm x 2-6 reels</td>
-			 		<td>1500 mm x 2-6 reels</td>
-			 		<td>1800 mm x 2-6 reels</td>
-			 		<td>1500 mm x 2-6 reels</td>
-			 		<td>1500 mm x 2-6 reels</td>
-			 		<td>1800 mm x 2-6 reels</td>
-			 		<td>1800 mm x 2-6 reels</td>
-
-
-			 </tr>
-			 <tr>	<td>Designed Speed(varies on Cut length and Materials) </td>
-			 		<td>300M/Min.</td>
-			 		<td>300M/Min.</td>
-			 		<td>300M/Min.</td>
-			 		<td>325M/Min.</td>
-			 		<td>325M/Min.</td>
-			 		<td>325M/Min.</td>
-			 		<td>325M/Min.</td>
-
-
-			 </tr>
-			 <tr>	<td>Min.- Max. knife load </td>
-			 		<td>40-500gsm </td>
-			 		<td>40-500gsm </td>
-			 		<td>40-500gsm </td>
-			 		<td>40-1000gsm </td>
-			 		<td>40-1000gsm </td>
-			 		<td>40-1000gsm </td>
-			 		<td>40-1000gsm </td>
-			 </tr>
-			 <tr>	<td>Sheet length range(Longer length upon request)</td>
-			 		<td>( 380-1700mm) </td>
-			 		<td>( 380-1700mm) </td>
-			 		<td>( 380-1700mm) </td>
-			 		<td>( 380-1700mm) </td>
-			 		<td>( 380-1700mm) </td>
-			 		<td>( 380-1700mm) </td>
-			 		<td>( 380-1700mm) </td>
-			 </tr>
-			 <tr>	<td>Cutting Tolerance</td>
-			 		<td>±0.5mm</td>
-			 		<td>±0.5mm</td>
-			 		<td>±0.5mm</td>
-			 		<td>±0.5mm</td>
-			 		<td>±0.5mm</td>
-			 		<td>±0.5mm</td>
-			 		<td>±0.5mm</td>
-			 </tr>
-			 <tr>	<td>Max. Pile Height (incl. Pallet)(can request Hi-Pile up to 1700mm) </td>
-			 		<td>51"(1300mm) </td>
-			 		<td>51"(1300mm) </td>
-			 		<td>51"(1300mm) </td>
-			 		<td>51"(1300mm) </td>
-			 		<td>51"(1300mm) </td>
-			 		<td>51"(1300mm) </td>
-			 		<td>51"(1300mm) </td>
-			 </tr>
-			 <tr>	<td>Max. Pile Weight </td> 
-			 		<td>1500kgs. </td>
-			 		<td>1500kgs. </td>
-			 		<td>2200kgs. </td>
-			 		<td>1500kgs. </td>
-			 		<td>1500kgs. </td>
-			 		<td>2200kgs. </td>
-			 		<td>2200kgs. </td>
-			 </tr>
+				 <tr>
+				    <th>MODEL</th>
+				    <th>MACH-SYNCHRO 1400</th>
+				    <th>MACH-SYNCHRO 1600</th>
+				    <th>MACH-SYNCHRO 1800</th>
+				    <th>MACH-SYNCHRO 2000</th>
+				  </tr>
+				  <tr>
+				    <td>Maximum Web Width</td>
+				    <td>1400 mm</td>
+				    <td>1600 mm</td>
+				    <td>1800 mm</td>
+				    <td>2000 mm</td>
+				  </tr>
+			  <tr>
+			    <td>Maximum Unwinding Diameter</td>
+			    <td>1500 mm/roll x 2 Rolls</td>
+			    <td>1500 mm/roll x 2 Rolls</td>
+			    <td>1500 mm/roll x 2 Rolls</td>
+			    <td>1500 mm/roll x 2 Rolls</td>
+			  </tr>
+			  <tr>
+			    <td>Designed Speed (depending on cut length &amp; paper gsm quality)</td>
+			    <td>325 M/min</td>
+			    <td>325 M/min</td>
+			    <td>325 M/min</td>
+			    <td>325 M/min</td>
+			  </tr>
+			  <tr>
+			    <td>Min / Maximum Knife Load</td>
+			    <td>20 gsm - 1000 gsm</td>
+			    <td>20 gsm - 1000 gsm</td>
+			    <td>20 gsm - 1000 gsm</td>
+			    <td>20 gsm - 1000 gsm</td>
+			  </tr>
+			  <tr>
+			    <td>Sheet Length Range</td>
+			    <td>15" - 60" (380-1500 mm)</td>
+			    <td>15" - 60" (380-1500 mm)</td>
+			    <td>15" - 60" (380-1500 mm)</td>
+			    <td>15" - 60" (380-1500 mm)</td>
+			  </tr>
+			  <tr>
+			    <td>Cutting Tolerance</td>
+			    <td>± 0.5 mm</td>
+			    <td>± 0.5 mm</td>
+			    <td>± 0.5 mm</td>
+			    <td>± 0.5 mm</td>
+			  </tr>
+			  <tr>
+			    <td>Maximum Pile Height (incl. Pallet)</td>
+			    <td>1500 mm</td>
+			    <td>1500 mm</td>
+			    <td>1500 mm</td>
+			    <td>1700 mm</td>
+			  </tr>
 		    </tbody>
 		  </table>
 				</div>
