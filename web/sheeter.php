@@ -24,13 +24,13 @@
 				</div>
 				<div>
 					<a href="" class="col-xs-12 col-sm-3">
-						<img src="images/servo-drive-sheeter.png" alt="Servo Drive Sheeter Machine">
+						<img src="images/servo-drive-sheeter.jpg" alt="Servo Drive Sheeter Machine">
 						<h1>Servo Drive Sheeter Machine</h1>
 					</a>
 				</div>
 				<div>
 					<a href="" class="col-xs-12 col-sm-3">
-						<img src="images/machine-combi.php" alt="Sheeter Machine Combi">
+						<img src="images/machine-combi.jpg" alt="Sheeter Machine Combi">
 						<h1>Sheeter Machine Combi</h1>
 					</a>
 				</div>
