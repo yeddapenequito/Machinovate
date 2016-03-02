@@ -42,7 +42,7 @@
 				</div>
 				<div>
 					<a href=""  class="col-xs-12 col-sm-3">
-						<img src="images/twin-knife-synchro-fly-sheeting-machine" alt="Twin Knife Synchro-Fly Sheeting Machine">
+						<img src="images/twin-knife-synchro-fly-sheeting-machine.png" alt="Twin Knife Synchro-Fly Sheeting Machine">
 						<h1>Twin Knife Synchro-Fly Sheeting Machine</h1>
 					</a>
 				</div>
