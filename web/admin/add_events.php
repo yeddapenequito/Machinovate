@@ -120,6 +120,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<link rel="stylesheet" href="../styles/bootstrap.min.css">
 		<link rel="stylesheet" href="../styles/main.css">
 		<link rel="stylesheet" href="../styles/admin.css">
+		<style type="text/css">
+			.item {
+			margin: 1em 0;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container">
@@ -155,7 +160,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<div class="form-group">
 						<label for="images" class="col-sm-3 control-label">Upload Images:</label>
 						<div class="col-sm-9">
-							<input name="images[]" id="images" type="file" multiple="" />
+							<div class="img-input">
+								
+								<input name="images[]" id="images" type="file" multiple="" class="item" value="Browse Image"/>
+							</div>
+							<button id="add-img-btn" type="button" class="btn btn-default">
+								<span class="glyphicon glyphicon-plus"></span>
+							</button>
 						</div>
 					</div>
 					<div class="form-group">
@@ -169,6 +180,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		<script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#add-img-btn').on('click',function() {
+					$('.img-input').append($('<input name="images[]" id="images" type="file" multiple="" class="item" value="Browse Image"/>'));
+				});
+			});
+		</script>
 	</body>
 </html>
 
