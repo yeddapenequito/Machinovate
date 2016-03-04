@@ -24,16 +24,16 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input id="type" name="typeRadio" type="radio">MACH-MSR (Standard)</label>
+								<label><input id="type" name="typeRadio" type="radio" value="mach-msr standard">MACH-MSR (Standard)</label>
 							</div>
 							<div class="radio">
-								<label><input id="type" name="typeRadio" type="radio">MACH-MSR (Heavy Duty)</label>
+								<label><input id="type" name="typeRadio" type="radio" value="mach-msr heavy duty">MACH-MSR (Heavy Duty)</label>
 							</div>
 							<div class="radio">
-								<label><input id="type" name="typeRadio" type="radio">MACH-CRS (Cash Register Slitter)</label>
+								<label><input id="type" name="typeRadio" type="radio" value="mach-crs">MACH-CRS (Cash Register Slitter)</label>
 							</div>
 							<div class="radio">
-								<label><input id="type" name="typeRadio" type="radio">Customized</label>
+								<label><input id="type" name="typeRadio" type="radio" value="customized">Customized</label>
 							</div>
 						</div>
 					</div>
