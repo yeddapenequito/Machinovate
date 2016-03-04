@@ -17,39 +17,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$event_name = mysqli_real_escape_string($dbc, trim($_POST['event_name']));
 	}
 	
-	// Check for a date_start:
-	if (empty($_POST['date_start'])) {
-		$errors[] = 'You forgot to enter the starting date.';
+	// Check for a event_date:
+	if (empty($_POST['event_date'])) {
+		$errors[] = 'You forgot to enter the event date.';
 	} else {
-		$date_start = mysqli_real_escape_string($dbc, trim($_POST['date_start']));
+		$event_date = mysqli_real_escape_string($dbc, trim($_POST['event_date']));
 	}
-	// Check for a ending date:
-	if (empty($_POST['date_end'])) {
-		$errors[] = 'You forgot to enter the ending date.';
-	} else {
-		$date_end = mysqli_real_escape_string($dbc, trim($_POST['date_end']));
-	}
+	
 	// Check for an event_place address:
 	if (empty($_POST['event_place'])) {
 		$errors[] = 'You forgot to enter your event place .';
 	} else {
 		$event_place = mysqli_real_escape_string($dbc, trim($_POST['event_place']));
 	}
-	// Check for an images:
-	if (is_uploaded_file ($_FILES['images']['tmp_name'])) {
+	// Check for an image_name:
+	if (is_uploaded_file ($_FILES['image_name']['tmp_name'])) {
 		// Create a temporary file name:
-		$temp = '../../uploads/' . md5($_FILES['images']['name']);
+		$temp = '../../uploads/' . md5($_FILES['image_name']['name']);
 	
 		// Move the file over:
-		if (move_uploaded_file($_FILES['images']['tmp_name'], $temp)) {
+		if (move_uploaded_file($_FILES['image_name']['tmp_name'], $temp)) {
 			echo '<p>The file has been uploaded!</p>';
 	
-			// Set the $images variable to the images's name:
-			$images = $_FILES['images']['name'];
+			// Set the $image_name variable to the image_name's name:
+			$image_name = $_FILES['image_name']['name'];
 	
 		} else { // Couldn't move the file over.
 			$errors[] = 'The file could not be moved.';
-			$temp = $_FILES['images']['tmp_name'];
+			$temp = $_FILES['image_name']['tmp_name'];
 		}
 	} else { // No uploaded file.
 		$errors[] = 'No file was uploaded.';
@@ -59,8 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 		// Register the event in the database...
 		
-		// Make the query:
-		$q = "INSERT INTO events (event_name, date_start, date_end, event_place, images) VALUES ('$event_name', '$date_start', '$date_num', '$event_place', '$images')";		
+		// Make the query: **made by drei*
+		$q = "INSERT INTO events (event_name, event_date, event_place) VALUES ('$event_name', '$event_date', '$date_num', '$event_place'); 
+			INSERT INTO event_pictures (event_id, image_name, caption) VALUES ((SELECT event_id FROM events), '$image_name', '$caption');
+  ;";		
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 		if ($r) { // If it ran OK.
 		
@@ -129,13 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<div class="form-group">
 						<label for="last-name" class="col-sm-3 control-label">Starting Date:</label>
 						<div class="col-sm-9">
-							<input placeholder="Enter event's starting date: "type="text" class="form-control" id="date-start" name="date_start" maxlength="40" value="<?php if (isset($_POST['date_start'])) echo $_POST['date_start']; ?>" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="first-name" class="col-sm-3 control-label">Ending Date:</label>
-						<div class="col-sm-9">
-							<input placeholder="Enter event's ending date"type="text" class="form-control" id="date-end" name="date_end" maxlength="20" value="<?php if (isset($_POST['date_end'])) echo $_POST['date_end']; ?>" />
+							<input placeholder="Enter event's starting date: "type="text" class="form-control" id="date-start" name="event_date" maxlength="40" value="<?php if (isset($_POST['event_date'])) echo $_POST['event_date']; ?>" />
 						</div>
 					</div>
 					<div class="form-group">
@@ -145,11 +136,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="images" class="col-sm-3 control-label">Upload Images:</label>
+						<label for="image_name" class="col-sm-3 control-label">Upload Image_name:</label>
 						<div class="col-sm-9">
 							<div class="img-input">
 								
-								<input name="images[]" id="images" type="file" multiple="" class="item" value="Browse Image"/>
+								<input name="image_name[]" id="image_name" type="file" multiple="" class="item" value="Browse Image"/>
 							</div>
 							<button id="add-img-btn" type="button" class="btn btn-default">
 								<span class="glyphicon glyphicon-plus"></span>
@@ -170,7 +161,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('#add-img-btn').on('click',function() {
-					$('.img-input').append($('<input name="images[]" id="images" type="file" multiple="" class="item" value="Browse Image"/>'));
+					$('.img-input').append($('<input name="image_name[]" id="image_name" type="file" multiple="" class="item" value="Browse Image"/>'));
 				});
 			});
 		</script>
