@@ -46,7 +46,7 @@
 						<div class="col-sm-10">
 							<div class="input-group">
 								
-								<input class="form-control" id="production-vol" name="productionVol" type="number"/>
+								<input class="form-control" id="production-vol" min="0" name="productionVol" step=".01" type="number"/>
 								<span class="input-group-addon">Tons per day</span>
 							</div>
 						</div>
@@ -69,11 +69,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" name="gsmMin" placeholder="Min" size="5" type="number">
+								<input class="form-control" min="0" name="gsmMin" placeholder="Min" size="5" step=".01" type="number">
 
 								<span>to</span>
 
-								<input class="form-control" name="gsmMax" placeholder="Max" size="5" type="number">
+								<input class="form-control" min="0" name="gsmMax" placeholder="Max" size="5" step=".01" type="number">
 
 								<select class="form-control" name="gsmUnit"> 
 									<option value="inches">inches</option>
@@ -91,11 +91,11 @@
 						<div class="col-sm-10">
 							<div class="form-inline">
 
-									<input class="form-control" name="rollDiameterMin" placeholder="Min" size="5" type="number">
+									<input class="form-control" min="0" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number">
 
 									<span>to</span>
 
-									<input class="form-control" name="rollDiameterMax" placeholder="Max" size="5" type="number">
+									<input class="form-control" min="0" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number">
 
 									<select class="form-control" name="rollDiameterUnit"> 
 										<option value="inches">inches</option>
@@ -112,11 +112,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" name="slittingWidthMin" placeholder="Min" size="5" type="number">
+								<input class="form-control" min="0" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number">
 
 								<span>to</span>
 
-								<input class="form-control" name="slittingWidthMax" placeholder="Max" size="5" type="number">
+								<input class="form-control" min="0" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number">
 
 								<select class="form-control" name="gsmUnit"> 
 									<option value="inches">inches</option>
@@ -152,7 +152,7 @@
 										<div class="form-group">
 											
 											<label class="control-label" for"slitter-additional-text-field">Additional</label>
-											<input class="form-control" disabled id="slitter-additional-text-field" name="slitterAdditional" type="number"> set of one pair male/female
+											<input class="form-control" disabled id="slitter-additional-text-field" min="0" name="slitterAdditional" step=".01" type="number"> set of one pair male/female
 										</div>
 									</div>
 								</label>
