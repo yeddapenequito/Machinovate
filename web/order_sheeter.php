@@ -6,26 +6,6 @@
 		<link rel="stylesheet" href="./styles/bootstrap.min.css">
 		<link rel="stylesheet" href="./styles/main.css">
 		<title></title>
-		<style>
-			.footer{
-				margin-bottom:50px;
-				background: none;
-
-			}
-			.btn-primary{
-				margin-top:0px;
-				margin-left:auto;
-				margin-right: auto;
-			}
-			.title h2{
-			
-			text-align:center;
-			}
-			.form-group{
-				margin-left: auto;
-				margin-right: auto;
-			}
-		</style>
 	</head>
 	<body><!--name in every checkbox are not yed properly named-->
 		<?php include 'header_before_login.php';?>
