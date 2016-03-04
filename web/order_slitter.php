@@ -118,7 +118,7 @@
 
 								<input class="form-control" min="0" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number">
 
-								<select class="form-control" name="gsmUnit"> 
+								<select class="form-control" name="slittingWidthUnit"> 
 									<option value="inches">inches</option>
 									<option value="millimeters">millimeters</option>
 								</select>
