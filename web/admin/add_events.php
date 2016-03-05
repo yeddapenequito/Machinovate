@@ -30,26 +30,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	} else {
 		$event_place = mysqli_real_escape_string($dbc, trim($_POST['event_place']));
 	}
-	// Check for an image_name:
+	// Check for an image:
 	if (is_uploaded_file ($_FILES['image_name']['tmp_name'])) {
+
 		// Create a temporary file name:
-		$temp = '../../uploads/' . md5($_FILES['image_name']['name']);
+		$temp = '../' . md5($_FILES['image_name']['name']);
 	
 		// Move the file over:
 		if (move_uploaded_file($_FILES['image_name']['tmp_name'], $temp)) {
+
 			echo '<p>The file has been uploaded!</p>';
 	
-			// Set the $image_name variable to the image_name's name:
-			$image_name = $_FILES['image_name']['name'];
+			// Set the $i variable to the image's name:
+			$i = $_FILES['image_name']['name'];
 	
 		} else { // Couldn't move the file over.
 			$errors[] = 'The file could not be moved.';
 			$temp = $_FILES['image_name']['tmp_name'];
 		}
+
 	} else { // No uploaded file.
 		$errors[] = 'No file was uploaded.';
 		$temp = NULL;
 	}
+
+
 	if (empty($errors)) { // If everything's OK.
 	
 		// Register the event in the database...
@@ -57,15 +62,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Make the query: **made by drei*
 		$q = "INSERT INTO events (event_name, event_date, event_place) VALUES ('$event_name', '$event_date', '$date_num', '$event_place'); 
 			INSERT INTO event_pictures (event_id, image_name, caption) VALUES ((SELECT event_id FROM events), '$image_name', '$caption');
-  ;";		
+ 			 ;";		
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 		if ($r) { // If it ran OK.
 		
 			// Print a message:
 			echo '<h1>Thank you!</h1>
-		<p>An event has been registered!</p><p><br /></p>';	
+			<p>An event has been registered!</p><p><br /></p>';	
+
+				// Print a message:
+				echo '<p>The print has been added.</p>';
 		
-		} else { // If it did not run OK.
+				// Clear $_POST:
+				$_POST = array();
+		} 
+		else { // If it did not run OK.
 			
 			// Public message:
 			echo '<h1>System Error</h1>
@@ -80,7 +91,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Include the footer and quit the script:
 		exit();
 		
-	} else { // Report the errors.
+	} 
+	else { // Report the errors.
 	
 		echo '<h1>Error!</h1>
 		<p class="error">The following error(s) occurred:<br />';
@@ -92,7 +104,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	} // End of if (empty($errors)) IF.
 	
 	mysqli_close($dbc); // Close the database connection.
+
+	// Delete the uploaded file if it still exists:
+	if ( isset($temp) && file_exists ($temp) && is_file($temp) ) {
+		unlink ($temp);
+	}
+
 } // End of the main Submit conditional.
+
+
 ?>
 
 
@@ -136,15 +156,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="image_name" class="col-sm-3 control-label">Upload Image_name:</label>
+						<label for="image_name" class="col-sm-3 control-label">Upload Image:</label>
 						<div class="col-sm-9">
 							<div class="img-input">
 								
-								<input name="image_name[]" id="image_name" type="file" multiple="" class="item" value="Browse Image"/>
+								<input name="image_name" id="image_name" type="file" class="item" value="Browse Image"/>
 							</div>
-							<button id="add-img-btn" type="button" class="btn btn-default">
+							<!--<button id="add-img-btn" type="button" class="btn btn-default">
 								<span class="glyphicon glyphicon-plus"></span>
-							</button>
+							</button>-->
 						</div>
 					</div>
 					<div class="form-group">
@@ -156,15 +176,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			</div> <!-- /.row -->
 		</div> <!-- /.container -->
 
-		<script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
+		<!--<script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$('#add-img-btn').on('click',function() {
-					$('.img-input').append($('<input name="image_name[]" id="image_name" type="file" multiple="" class="item" value="Browse Image"/>'));
+					$('.img-input').append($('<input name="image_name" id="image_name" type="file" class="item" value="Browse Image"/>'));
 				});
 			});
-		</script>
+		</script>-->
 	</body>
 </html>
 
