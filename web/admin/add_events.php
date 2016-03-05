@@ -30,23 +30,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	} else {
 		$event_place = mysqli_real_escape_string($dbc, trim($_POST['event_place']));
 	}
+	
 	// Check for an image:
-	if (is_uploaded_file ($_FILES['image_name']['tmp_name'])) {
+	if (is_uploaded_file ($_FILES['image']['tmp_name'])) {
 
 		// Create a temporary file name:
-		$temp = '../' . md5($_FILES['image_name']['name']);
+		$temp = '../' . md5($_FILES['image']['name']);
 	
 		// Move the file over:
-		if (move_uploaded_file($_FILES['image_name']['tmp_name'], $temp)) {
+		if (move_uploaded_file($_FILES['image']['tmp_name'], $temp)) {
 
 			echo '<p>The file has been uploaded!</p>';
 	
 			// Set the $i variable to the image's name:
-			$i = $_FILES['image_name']['name'];
+			$i = $_FILES['image']['name'];
 	
 		} else { // Couldn't move the file over.
 			$errors[] = 'The file could not be moved.';
-			$temp = $_FILES['image_name']['tmp_name'];
+			$temp = $_FILES['image']['tmp_name'];
 		}
 
 	} else { // No uploaded file.
@@ -60,11 +61,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Register the event in the database...
 		
 		// Make the query: **made by drei*
-		$q = "INSERT INTO events (event_name, event_date, event_place) VALUES ('$event_name', '$event_date', '$date_num', '$event_place'); 
-			INSERT INTO event_pictures (event_id, image_name, caption) VALUES ((SELECT event_id FROM events), '$image_name', '$caption');
- 			 ;";		
-		$r = @mysqli_query ($dbc, $q); // Run the query.
-		if ($r) { // If it ran OK.
+		$q = 'INSERT INTO events (event_name, event_date, event_place) VALUES (?,?,?,?);
+			INSERT INTO event_pictures (event_id, image_name, caption) VALUES ((SELECT event_id FROM events), ?, ?);
+			';
+		$stmt = mysqli_prepare($dbc, $q);
+		mysqli_stmt_bind_param($stmt, 'isdsss', $event_name, $event_date, $event_place, $i, $caption);
+		mysqli_stmt_execute($stmt);
+
+
+		if (mysqli_stmt_affected_rows($stmt) == 1) { // If it ran OK.
 		
 			// Print a message:
 			echo '<h1>Thank you!</h1>
@@ -83,13 +88,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<p class="error">The event could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
 			
 			// Debugging message:
-			echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+			echo '<p>' . mysqli_error($stmt) . '<br /><br />Query: ' . $q . '</p>';
 						
 		} // End of if ($r) IF.
 		
-		mysqli_close($dbc); // Close the database connection.
-		// Include the footer and quit the script:
-		exit();
+		mysqli_stmt_close($stmt); // Close the database connection
 		
 	} 
 	else { // Report the errors.
@@ -131,6 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		</style>
 	</head>
 	<body>
+		<input type="hidden" name="MAX_FILE_SIZE" value="524288" />
 		<div class="container">
 			<div class="row">
 				<form action="add_events.php" method="post" class="form-horizontal col-sm-6" role="form">
@@ -160,7 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<div class="col-sm-9">
 							<div class="img-input">
 								
-								<input name="image_name" id="image_name" type="file" class="item" value="Browse Image"/>
+								<input name="image" id="image" type="file" class="item" value="Browse Image"/>
 							</div>
 							<!--<button id="add-img-btn" type="button" class="btn btn-default">
 								<span class="glyphicon glyphicon-plus"></span>
