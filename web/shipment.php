@@ -119,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<h1 class="page-header">Shipment Details</h1>
 			<p>Please fill up necessary details.</p>
 	
-				<form role="form" action="processadd.php" method="post" 
+				<form role="form" action="summary_order.php" method="post" 
 					role="form" class="form-horizontal">
 					<fieldset>	
 						<p>Last Name:</p>
@@ -132,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						</div>
 						<p>Company Name:</p>
 						<div class="form-group">
-							<input type="text" name="company_name" placeholder="Shipping Address" class="form-control" required autofocus> 
+							<input type="text" name="company_name" placeholder="Company Name" class="form-control" required autofocus> 
 						</div>
 						
 						<p>Address:</p>
