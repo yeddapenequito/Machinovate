@@ -428,10 +428,11 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     =================================================================*/
   
   form #cancel-btn {
-    background-color: #bdc3c7;
+    background-color: transparent;
     color: #153a7e;
   }
   form #cancel-btn:hover {
-    background-color: transparent;
     color: #153a7e;
+    text-decoration: underline;
+    border: none;
   }
