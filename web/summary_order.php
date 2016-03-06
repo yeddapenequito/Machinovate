@@ -8,16 +8,14 @@
 		<link rel="stylesheet" href="styles/bootstrap.min.css">
 		<link rel="stylesheet" href="styles/flag-icon-css-master/css/flag-icon.min.css">
 		<link rel="stylesheet" href="styles/main.css">
-		<title>Machinovate | Agents</title>
+		<title>Machinovate | Order Summary</title>
 	</head>
 	<body>
 		<?php include 'header_before_login.php';?>
 
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-		<script type="text/javascript">
-		document.getElementById("agents").className = "active";
-		</script>
+		
 	</body>
 </html>
 
@@ -40,9 +38,9 @@ if ($r) { // If it ran OK, display the records.
 	// Fetch and print all the records:
 	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 		echo '
-			<div id="agents-content" class="container-fluid">
+			<div id="summary-content" class="container-fluid">
 				<div class="row">
-					<div class="col-xs-12 col-md-offset-3 col-md-6 agent">
+					<div class="col-xs-12 col-md-offset-3 col-md-6 summary">
 						<div class="col-xs-8">
 							<p><b>Last Name: </b>  <a>' . $row['last_name'] . '</a></p>
 							<p><b>First Name: </b>  <a>' . $row['first_name'] . '</a></p>
@@ -57,7 +55,7 @@ if ($r) { // If it ran OK, display the records.
 
 							<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> <a>' . $row['shipment'] . '%  upon shipment</a></p>
 							<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> <a>' . $row['installation'] . '%  upon installation</a></p>
-
+						<hr>
 						</div>
 					</div>
 				</div>

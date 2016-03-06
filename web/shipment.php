@@ -95,14 +95,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			// Print a message:
 			echo '<h1>Thank you!</h1>
 		<p>Shipping details has been processed</p><p><br /></p>';	
-		header('Location: /Machinovate/web/admin/account_successful.php');
+		header('Location: /Machinovate/web/summary_order.php');
 		
 		} else { // If it did not run OK.
 			
 			// Public message:
 			echo '<h1>System Error</h1>
 			<p class="error">The shipping details could not be processed due to a system error. We apologize for any inconvenience.</p>'; 
-			header('Location: /Machinovate/web/admin/account_failed.php');
+			header('Location: /Machinovate/web/add_failed.php');
 			// Debugging message:
 			echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
 						

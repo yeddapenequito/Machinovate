@@ -406,6 +406,24 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   }
 
   /*=================================================================
+  Order Summary styles
+  =================================================================*/
+  #summary-content > .row {
+    padding: 1em;
+  } 
+  #summary-content > .row .summary {
+    padding: 0;
+    border: 1px solid silver;
+    border-radius: 5px;
+  }
+  #summary-content > .row .summary div {
+    padding: .5em;
+  }
+  #summary-content > .row .summary img {
+    padding: .3em;
+  }
+
+  /*=================================================================
     Order now styles
     =================================================================*/
   
