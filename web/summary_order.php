@@ -32,8 +32,8 @@ $page_title = 'View the Summary';
 // Page header:
 require ('../mysqli_connect.php'); // Connect to the db.
 		
-// Make the query:
-$q = "SELECT CONCAT(first_name, ' ', last_name) AS name, company_name, address, contact_details, email FROM shipping_details";		
+// Make the query: $q = "INSERT INTO shipping_details (last_name, first_name, company_name, address, contact_details, email, delivery_basis, ship_day, term, confirmation, shipment, installation) 
+$q = "SELECT last_name, first_name company_name, address, contact_details, email, delivery_basis, ship_day, term, confirmation, shipment,installation FROM shipping_details";		
 $r = @mysqli_query ($dbc, $q); // Run the query.
 
 if ($r) { // If it ran OK, display the records.
@@ -44,12 +44,20 @@ if ($r) { // If it ran OK, display the records.
 				<div class="row">
 					<div class="col-xs-12 col-md-offset-3 col-md-6 agent">
 						<div class="col-xs-8">
-							<p><b>Name: </b>  <a>' . $row['name'] . '</a></p>
+							<p><b>Last Name: </b>  <a>' . $row['last_name'] . '</a></p>
+							<p><b>First Name: </b>  <a>' . $row['last_name'] . '</a></p>
 							<p><b>Company:</b> <a>' . $row['company_name'] . ' </a></p>
 							<p><b>Shipping Address:</b> <a>' . $row['address'] . ' </a></p>
 							<p><b>Contact Details: </b> <a>' . $row['contact_details'] . '</a></p>
 							<p><b>Email Address:</b> <a>' . $row['email'] . ' </a></p>
-							
+							<p><b>Delivery Basis: </b>  <a>' . $row['delivery_basis'] . '</a></p>
+							<p><b>Shipment:<a>' . $row['ship_day'] .' Working Days after Initial Payment </b>  </a></p>
+							<p><b>Payment Terms: </b> <a>' . $row['term'] . ' </a></p>
+							<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> <a>' . $row['confirmation'] . '%  down payment upon confirmation</a></p>
+
+							<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> <a>' . $row['shipment'] . '%  upon shipment</a></p>
+							<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> <a>' . $row['installation'] . '%  upon installation</a></p>
+
 						</div>
 					</div>
 				</div>
