@@ -90,3 +90,15 @@ CREATE TABLE event_pictures (
 	--
 ) ENGINE=MyISAM;
 
+CREATE TABLE shipping_details (
+	shipping_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	last_name VARCHAR(30) NOT NULL,
+	first_name VARCHAR(30) NOT NULL,
+    company_name VARCHAR(60) NOT NULL,
+    address VARCHAR(60) NOT NULL,
+	contact_details VARCHAR(30) NOT NULL,
+    email VARCHAR(30) NOT NULL,
+	PRIMARY KEY (shipping_id)
+	--
+) ENGINE=MyISAM;
+
