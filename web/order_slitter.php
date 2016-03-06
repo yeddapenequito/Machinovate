@@ -296,10 +296,10 @@
 
 					<div class="col-sm-offset-2 col-sm-10">
 
-						<a class="btn btn-default" id="cancel-btn" href="order_now.php">
-							Cancel</a>
 						<button class="btn btn-default" id="add-to-cart-btn" type="submit">
 							Finish</button>
+						<a class="btn btn-default" id="cancel-btn" href="order_now.php">
+							Cancel</a>
 					</div>
 				</div>
 			</form>
