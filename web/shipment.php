@@ -13,6 +13,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 	$errors = array(); // Initialize an error array.
 	
+
+	// Check for a last name:
+	if (empty($_POST['last_name'])) {
+		$errors[] = 'You forgot to enter the last name.';
+	} else {
+		$ln = mysqli_real_escape_string($dbc, trim($_POST['last_name']));
+	}
+	
+
 	// Check for a first name:
 	if (empty($_POST['first_name'])) {
 		$errors[] = 'You forgot to enter the first name.';
@@ -20,12 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$fn = mysqli_real_escape_string($dbc, trim($_POST['first_name']));
 	}
 	
-	// Check for a last name:
-	if (empty($_POST['last_name'])) {
-		$errors[] = 'You forgot to enter the last name.';
-	} else {
-		$ln = mysqli_real_escape_string($dbc, trim($_POST['last_name']));
-	}
 	
 	// Check for a company name:
 	if (empty($_POST['company_name'])) {
@@ -38,14 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (empty($_POST['address'])) {
 		$errors[] = "You forgot to enter the company's address.";
 	} else {
-		$add = mysqli_real_escape_string($dbc, trim($_POST['company_name']));
-	}
-
-	// Check for an email address:
-	if (empty($_POST['email'])) {
-		$errors[] = 'You forgot to enter your email address.';
-	} else {
-		$email = mysqli_real_escape_string($dbc, trim($_POST['email']));
+		$add = mysqli_real_escape_string($dbc, trim($_POST['address']));
 	}
 
 	//Check for the contact number:
@@ -54,13 +50,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	} else {
 		$contact = mysqli_real_escape_string($dbc, trim($_POST['contact_details']));
 	}
+	
+	// Check for an email address:
+	if (empty($_POST['email'])) {
+		$errors[] = 'You forgot to enter your email address.';
+	} else {
+		$email = mysqli_real_escape_string($dbc, trim($_POST['email']));
+	}
+
+	
 
 	if (empty($errors)) { // If everything's OK.
 	
 		// Register the shipping details in the database...
 		
 		// Make the query:
-		$q = "INSERT INTO shipping_details (last_name, first_name, company, address, email, contact) VALUES ('$ln', '$fn', '$cn', '$add', '$email', '$contact')";		
+		$q = "INSERT INTO shipping_details (last_name, first_name, company_name, address, contact_details, email) VALUES ('$ln', '$fn', '$cn', '$add', '$contact', '$email')";		
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 		if ($r) { // If it ran OK.
 		
@@ -119,16 +124,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<h1 class="page-header">Shipment Details</h1>
 			<p>Please fill up necessary details.</p>
 	
-				<form role="form" action="summary_order.php" method="post" 
+				<form role="form" action="shipment.php" method="post" 
 					role="form" class="form-horizontal">
 					<fieldset>	
 						<p>Last Name:</p>
 						<div class="form-group">
-							 <input type="text" name="lastname" placeholder="Last Name" class="form-control" required autofocus>
+							 <input type="text" name="last_name" placeholder="Last Name" class="form-control" required autofocus>
 						</div>
 						<p>First Name:</p>
 						<div class="form-group">
-							 <input type="text" name="firstname" placeholder="First Name" class="form-control" required autofocus> 
+							 <input type="text" name="first_name" placeholder="First Name" class="form-control" required autofocus> 
 						</div>
 						<p>Company Name:</p>
 						<div class="form-group">
@@ -140,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 							<input type="text" name="address" placeholder="Shipping Address" class="form-control" required autofocus> 
 						</div>
 					
-					
+
 
 						<p>Contact Details:</p>
 						<div class="form-group">
