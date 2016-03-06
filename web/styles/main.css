@@ -12,6 +12,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.table-borderless td {
+  border: none;
+}
+
+.table-borderless td:nth-child(2) {
+  font-weight: bold;
+}
+
 /*=================================================================
   Override bootstrap styles
   =================================================================*/

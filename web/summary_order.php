@@ -38,28 +38,58 @@ if ($r) { // If it ran OK, display the records.
 	// Fetch and print all the records:
 	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 		echo '
-			<div id="summary-content" class="container-fluid">
+			<div id="summary-content" class="container">
 				<div class="row">
-					<div class="col-xs-12 col-md-offset-3 col-md-6 summary">
-						<div class="col-xs-8">
-							<p><b>Last Name: </b>  <a>' . $row['last_name'] . '</a></p>
-							<p><b>First Name: </b>  <a>' . $row['first_name'] . '</a></p>
-							<p><b>Company:</b> <a>' . $row['company_name'] . ' </a></p>
-							<p><b>Shipping Address:</b> <a>' . $row['address'] . ' </a></p>
-							<p><b>Contact Details: </b> <a>' . $row['contact_details'] . '</a></p>
-							<p><b>Email Address:</b> <a>' . $row['email'] . ' </a></p>
-							<p><b>Delivery Basis: </b>  <a>' . $row['delivery_basis'] . '</a></p>
-							<p><b>Shipment:<a>' . $row['ship_day'] .' Working Days after Initial Payment </b>  </a></p>
-							<p><b>Payment Terms: </b> <a>' . $row['term'] . ' </a></p>
-							<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> <a>' . $row['confirmation'] . '%  down payment upon confirmation</a></p>
+					<table class="table table-borderless">
+						<tbody>
+							<tr>
+								<td>Name</td>
+								<td>:' . $row['last_name'] . ', ' . $row['first_name'] . '</td>
+							</tr>
+							<tr>
+								<td>Company Name</td>
+								<td>:' . $row['company_name'] . '</td>
+							</tr>
+							<tr>
+								<td>Shipping Address</td>
+								<td>:' . $row['address'] . '</td>
+							</tr>
+							<tr>
+								<tdContact Details></td>
+								<td>:' . $row['contact_details'] . '</td>
+							</tr>
+							<tr>
+								<td>Email Address</td>
+								<td>:' . $row['email'] . '</td>
+							</tr>
+							<tr>
+								<td>Delivery Basis</td>
+								<td>:' . $row['delivery_basis'] . '</td>
+							</tr>
+							<tr>
+								<td>Shipment</td>
+								<td>:' . $row['ship_day'] .' Working Days after Initial Payment</td>
+							</tr>
+							<tr>
+								<td>Payment Terms</td>
+								<td>:' . $row['term'] . '</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>:' . $row['confirmation'] . '%  down payment upon confirmation</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>:' . $row['shipment'] . '%  upon shipment</td>
+							</tr>
 
-							<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> <a>' . $row['shipment'] . '%  upon shipment</a></p>
-							<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b> <a>' . $row['installation'] . '%  upon installation</a></p>
-						<hr>
-						</div>
-					</div>
+								<td></td>
+								<td>:' . $row['installation'] . '%  upon installation</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-			</div>
+			</div> 
 		';
 	}
 
