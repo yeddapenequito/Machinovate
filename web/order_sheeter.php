@@ -14,7 +14,7 @@
 		<h1 class="page-header">Paper Sheeter Form Requirements</h1>
 		<p>Please bear with us. This is going to take long.</p>
 
-		<form action="order_email.php" role="form" class="form-horizontal">
+		<form action="shipment.php" role="form" class="form-horizontal">
 			<fieldset>
 				<legend>General Section</legend>
 
