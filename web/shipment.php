@@ -138,15 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<link rel="stylesheet" href="styles/bootstrap.min.css">
 		<link rel="stylesheet" href="styles/main.css">
 		<title>Machinovate | Shipment</title>
-		<style>
-
-
-		body{
-			background-color: #bdc3c7;
-		}
-		</style>
 	</head>
-		
 
 	<body>
 		<?php include 'header_on_form_completion.php';?>
@@ -157,107 +149,137 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<form role="form" action="shipment.php" method="post" 
 					role="form" class="form-horizontal">
 					<fieldset>	
-						<p>Last Name:</p>
 						<div class="form-group">
-							 <input type="text" name="last_name" placeholder="Last Name" class="form-control" required autofocus>
+
+							<label class="col-sm-2 control-label">
+								Name:</label>
+							<div class="col-sm-10">
+								<div class="form-inline">	
+							 		<input autofocus class="form-control" required name="last_name" placeholder="Last Name" type="text">
+							 		<input class="form-control" name="first_name" placeholder="First Name" required type="text"> 
+								</div>	
+							</div>
 						</div>
-						<p>First Name:</p>
+
 						<div class="form-group">
-							 <input type="text" name="first_name" placeholder="First Name" class="form-control" required autofocus> 
-						</div>
-						<p>Company Name:</p>
-						<div class="form-group">
-							<input type="text" name="company_name" placeholder="Company Name" class="form-control" required autofocus> 
+
+							<label class="col-sm-2 control-label">
+								Company Name:</label>
+							<div class="col-sm-10">	
+								<input class="form-control" name="company_name" required type="text"> 
+							</div>
 						</div>
 						
-						<p>Address:</p>
 						<div class="form-group">
-							<input type="text" name="address" placeholder="Shipping Address" class="form-control" required autofocus> 
+
+							<label class="col-sm-2 control-label">
+								Address:</label>
+							<div class="col-sm-10">	
+								<input class="form-control" name="address" placeholder="[Building House_No Street_Name District_Name] Barangay, Municipality/Province" required type="text"> 
+							</div>
 						</div>
 					
-						<p>Contact Details:</p>
 						<div class="form-group">
-							<input type="text" name="contact_details" placeholder="Contact Details" class="form-control" required autofocus> 
+
+							<label class="col-sm-2 control-label">
+								Mobile Number:</label>
+							<div class="col-sm-10">	
+								<input class="form-control" name="contact_details" required type="text"> 
+							</div>
 						</div>
 					
-						<p>Email Address:</p>
 						<div class="form-group">
-							<input type="email" name="email" placeholder="Email Address" class="form-control" required autofocus> 
+
+							<label class="col-sm-2 control-label">
+								Email Address:</label>
+							<div class="col-sm-10">	
+								<input class="form-control" name="email" required type="email"> 
+							</div>
 						</div>
-				</fieldset>
-				<!-- Shipping Terms Section -->
-				<fieldset>
+					</fieldset>
+
+					<!-- Shipping Terms Section -->
+					<fieldset>
 						<legend>Shipping Terms Section:</legend>
-						
+
+						<!-- Shipping Delivery Basis -->
 						<div class="form-group">
-						<label class="control-label col-sm-2" for="ship-basis">Shipping Delivery Basis:</label>
-								<div class="col-sm-10">
-									<div class="radio">
-										<label><input type="radio" name="delivery_basis" value="Free On Board"> Free on Board (FOB)</label>
-									</div>
-									<div class="radio">
-										<label><input type="radio" name="delivery_basis" value="Cost Insurance and Freight"> Cost, Insurance and Freight (CIF) </label>
-									</div>
-									<div class="radio">
-										<label><input type="radio" name="delivery_basis" value="Cost and Freight"> Cost and Freight </label>
-									</div>
+							<label class="control-label col-sm-2" for="ship-basis">
+								Shipping Delivery Basis: </label>
+							<div class="col-sm-10">
+								<div class="radio">
+									<label><input type="radio" name="delivery_basis" value="Free On Board">
+										Free on Board (FOB) </label>
 								</div>
+								<div class="radio">
+									<label><input type="radio" name="delivery_basis" value="Cost Insurance and Freight">
+										Cost, Insurance and Freight (CIF) </label>
+								</div>
+								<div class="radio">
+									<label><input type="radio" name="delivery_basis" value="Cost and Freight">
+										Cost and Freight </label>
+								</div>
+							</div>
 						</div>	
 
 						<!--Shipment -->
+						<div class="form-group">
+
+							<label class="control-label col-sm-2" for="shipment">
+								Shipment: </label>
+							<div class="col-sm-10">
+								<div class="input-group">
+									<input class="form-control"  placeholder="No. of Days" min="1" type="number" name="ship_day"  required>
+									<span class="input-group-addon">Working days after initial payment.</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Payment Terms -->
+						<div class="form-group">
+
+							<label class="control-label col-sm-2" for="payment">
+								Payment Terms: </label>
+							<div class="col-sm-10">
+								<div class="radio">
+									<label><input type="radio" name="term" id= "credit" value="Letter of Credit, Draft at Sight"> Letter of Credit, Draft at Sight </label>
+								</div>
+
+								<div class="radio">
+									<label><input type="radio" name="term" value="Telegraphic Transfer" id="transfer">Telegraphic Transfer </label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<div class="input-group">
+									<input class="form-control" id="telegraphic-transfer-a" disabled type="number" name="confirmation" required/>
+									<span class="input-group-addon">% downpayment upon confirmation</span>
+								</div>
+
+								<div class="input-group">
+									<input class="form-control" id="telegraphic-transfer-b" disabled type="number" name="shipment" required/>
+									<span class="input-group-addon">% before shipment</span>
+								</div>
+
+								<div class="input-group">
+									<input class="form-control" id="telegraphic-transfer-c"  disabled type="number" name="installation" required/>
+									<span class="input-group-addon">% upon installation</span>
+								</div>
+							</div>
+						</div>
+					</fieldset>		
+
+					<!-- Submit Button -->
 					<div class="form-group">
-
-						<label class="control-label col-sm-2" for="shipment">Shipment: </label>
-
-						<div class="col-sm-10">
-							<div class="input-group">
-								
-								<input class="form-control"  placeholder="No. of Days" min="1" type="number" name="ship_day"  required autofocus/>
-								<span class="input-group-addon">  Working days after initial payment.</span>
-							</div>
-						</div>
-					</div>
-
-					<!-- Payment Terms -->
-					<div class="form-group">
-
-					<label class="control-label col-sm-2" for="payment">Payment Terms: </label>
-
-					<div class="col-sm-10">
-							<div class="radio">
-								<label><input type="radio" name="term" id= "credit" value="Letter of Credit, Draft at Sight"> Letter of Credit, Draft at Sight </label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="term" value="Telegraphic Transfer" id="transfer">Telegraphic Transfer </label>
-
-							</div>
-							<div class="input-group">
-
-							<input class="form-control" id="telegraphic-transfer-a" disabled type="number" name="confirmation" required autofocus/><span class="input-group-addon">  % downpayment upon confirmation</span>
-							
-						</div>
-						<div class="input-group">
-							
-							<input class="form-control" id="telegraphic-transfer-b" disabled type="number" name="shipment" required autofocus/><span class="input-group-addon">% before shipment</span>
-							  
-						</div>
-						<div class="input-group">
-							<input class="form-control" id="telegraphic-transfer-c"  disabled type="number" name="installation" required autofocus/><span class="input-group-addon">  % upon installation</span>
-						</div>
+					<div class="col-sm-offset-2 col-sm-10">
+					<button class="btn btn-primary" value="Submit" type="submit">
+							Submit</button>
+					<a class="btn btn-default" id="cancel-btn" href="machines.php">
+							Cancel</a>
 						
 					</div>
-					</div>
-
-				</fieldset>		
-						<!-- Submit Button -->
-						<div class="form-group">
-						<div class="col-sm-offset-2 col-sm-10">
-						<button class="btn btn-primary" value="Submit" type="submit">
-								Submit</button>
-						<a class="btn btn-default" id="cancel-btn" href="machines.php">
-								Cancel</a>
-							
-						</div>
 					</form>
 				
 					
@@ -283,8 +305,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					
 					document.getElementById("telegraphic-transfer-c").setAttribute("disabled", "disabled");
 					document.getElementById("telegraphic-transfer-c").value = "";
-					
-					
 			
 				}
 			};
