@@ -150,7 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	<body>
 		<?php include 'header_on_form_completion.php';?>
-		<div  id="order-slitter" class="container">
+		<div class="container">
 			<h1 class="page-header">Shipment Details</h1>
 			<p>Please fill up necessary details.</p>
 	
