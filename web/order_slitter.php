@@ -24,16 +24,20 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input id="type" name="typeRadio" type="radio" value="mach-msr standard">MACH-MSR (Standard)</label>
+								<label><input class="type" name="typeRadio" type="radio" value="mach-msr standard">
+									MACH-MSR (Standard)</label>
 							</div>
 							<div class="radio">
-								<label><input id="type" name="typeRadio" type="radio" value="mach-msr heavy duty">MACH-MSR (Heavy Duty)</label>
+								<label><input class="type" name="typeRadio" type="radio" value="mach-msr heavy duty">
+									MACH-MSR (Heavy Duty)</label>
 							</div>
 							<div class="radio">
-								<label><input id="type" name="typeRadio" type="radio" value="mach-crs">MACH-CRS (Cash Register Slitter)</label>
+								<label><input class="type" name="typeRadio" type="radio" value="mach-crs">
+									MACH-CRS (Cash Register Slitter)</label>
 							</div>
 							<div class="radio">
-								<label><input id="type" name="typeRadio" type="radio" value="customized">Customized</label>
+								<label><input class="type" name="typeRadio" type="radio" value="customized">
+									Customized</label>
 							</div>
 						</div>
 					</div>
@@ -140,7 +144,8 @@
 							<div class="checkbox">
 								
 								<label>
-									<input id="standard-checkbox" name="slitterCheckbox" type="checkbox" value="standard">Standard[Five(5)] Set Male/Female Circular Blade with Trim Removal Blower
+									<input id="standard-checkbox" name="slitterCheckbox" type="checkbox" value="standard">
+									Standard[Five(5)] Set Male/Female Circular Blade with Trim Removal Blower
 								</label>
 							</div>
 
@@ -161,7 +166,8 @@
 							<div class="checkbox">
 								
 								<label>
-									<input id="core-cutter-checkbox" name="slitterCheckbox" type="checkbox" value="core cutter">Core Cutter Machine
+									<input id="core-cutter-checkbox" name="slitterCheckbox" type="checkbox" value="core cutter">
+									Core Cutter Machine
 								</label>
 							</div>
 						</div>
@@ -178,26 +184,31 @@
 						<div class="col-sm-10">
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="unwindRollStandCheckbox" value="hydraulic">Hydraulic Shaftless with Air Break</label>
+								<label><input type="checkbox" name="unwindRollStandCheckbox" value="hydraulic">
+									Hydraulic Shaftless with Air Break</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="unwindRollStandCheckbox" value="single">Single</label>
+								<label><input type="checkbox" name="unwindRollStandCheckbox" value="single">
+									Single</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="unwindRollStandCheckbox" value="customized">Customized</label>
+								<label><input type="checkbox" name="unwindRollStandCheckbox" value="customized">
+									Customized</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="unwindRollStandCheckbox" value="stationary">Stationary Shaft Stand</label>
+								<label><input type="checkbox" name="unwindRollStandCheckbox" value="stationary">
+									Stationary Shaft Stand</label>
 							</div>
 
 							<div class="checkbox">
 								<label><input id="reel-stand-others-checkbox" name="unwindRollStandCheckbox" type="checkbox"> 
 									<div class="form-inline">
 										<div class="form-group">
-											<label class="control-label" for="reel-stand-others-text-field">Others:</label>
+											<label class="control-label" for="reel-stand-others-text-field">
+												Others:</label>
 											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers" type="text">
 										</div>
 									</div>
@@ -231,30 +242,36 @@
 
 						<div class="col-sm-10">
 							<div class="checkbox">
-							  <label><input name="systemsCheckbox" type="checkbox" value="heavy duty web">Heavy Duty Web Guide Hydraulic EPC Control System 
+							  <label><input name="systemsCheckbox" type="checkbox" value="heavy duty web">
+							  	Heavy Duty Web Guide Hydraulic EPC Control System 
 					with Automation – Centring Sensor and Control, 4 pieces Roller and Roll Steering Guiding with Base</label>
 							</div>
 							<div class="checkbox">
-							  <label><input name="systemsCheckbox" type="checkbox" value="heavy duty tension">Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing</label>
+							  <label><input name="systemsCheckbox" type="checkbox" value="heavy duty tension">
+							  	Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systemsCheckbox" type="checkbox" value="banana roll">Banana Roll and Tension Roller</label>
+							  <label><input name="systemsCheckbox" type="checkbox" value="banana roll">
+							  	Banana Roll and Tension Roller</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systemsCheckbox" type="checkbox" value="water cooling">Water Cooling Brake Systems</label>
+							  <label><input name="systemsCheckbox" type="checkbox" value="water cooling">
+							  	Water Cooling Brake Systems</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systemsCheckbox" type="checkbox" value="fully computerized">Fully Computerized Control System</label>
+							  <label><input name="systemsCheckbox" type="checkbox" value="fully computerized">
+							  	Fully Computerized Control System</label>
 							</div>
 							
 							<div class="checkbox">
 								<label><input id="systems-others-checkbox" name="systemsCheckbox" type="checkbox"> 
 									<div class="form-inline">
 										<div class="form-group">
-											<label class="control-label" for="systems-others-text-field">Others:</label>
+											<label class="control-label" for="systems-others-text-field">
+												Others:</label>
 											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers" type="text">
 										</div>
 									</div>
@@ -279,8 +296,10 @@
 
 					<div class="col-sm-offset-2 col-sm-10">
 
-						<a class="btn btn-default" id="cancel-btn" href="order_now.php">Cancel</a>
-						<button class="btn btn-default" id="add-to-cart-btn" type="submit">Finish</button>
+						<a class="btn btn-default" id="cancel-btn" href="order_now.php">
+							Cancel</a>
+						<button class="btn btn-default" id="add-to-cart-btn" type="submit">
+							Finish</button>
 					</div>
 				</div>
 			</form>

@@ -3,206 +3,387 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./styles/bootstrap.min.css">
-	<link rel="stylesheet" href="./styles/main.css">
-	<title></title>
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<title>Machinovate | Order Sheeter</title>
 </head>
-<body><!--name in every checkbox are not yed properly named-->
-	<?php include 'header_before_login.php';?>
+<body>
+	<?php include 'header_on_form_completion.php';?>
 	<div  id="order-sheeter" class="container">
+
 		<h1 class="page-header">Paper Sheeter Form Requirements</h1>
 		<p>Please bear with us. This is going to take long.</p>
-		<!-- class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"-->
-		<!--put required later-->
+
 		<form action="order_email.php" role="form" class="form-horizontal">
 			<fieldset>
 				<legend>General Section</legend>
-				<div class="form-group">
-					<label for="Type" class="control-label col-sm-2">Type:</label>
-					<div class="col-sm-10">
-						<div class="radio">
-							<label><input type="radio" name="lexus-kgm">Lexus-KGM(Overlapping) </label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="lexus-hsm">Lexus-HSM(Servo-Overlapping) </label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="lexus-compact">Lexus-Compact (Standard) </label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="lexus-sync">Lexus- Sync(Twin Knife - Overlapping)</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="customized">Customized</label>
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="production-vol" class="control-label col-sm-2">Production Vol:</label>
-					<div class="col-sm-10">
-						<input id="production-vol" type="number" class="form-control"/>Tons per day
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="paper-type" class="control-label col-sm-2">Paper Type:</label>
-					<div class="col-sm-10">
-						<input placeholder="e.g. Ledger, Newsprint, Carbonless" id="paper-type" type="text" class="form-control"/>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="gsm" class="control-label col-sm-2">GSM:</label>
-					<div data-role="rangeslider" class="col-sm-10	">
-							<!-- <input type="range" name="gsm-min" id="gsm-min" value="200" min="0" max="1000" class="form-control">
-							<input type="range" name="gsm-max" id="gsm-max" value="800" min="0" max="1000" class="form-control"> -->
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="roll-diameter" class="control-label col-sm-2">Roll Diameter:</label>
-						<div data-role="rangeslider" class="col-sm-10	">
-							<!-- <input type="range" name="roll-diameter-min" id="roll-diameter-min" value="200" min="0" max="1000" class="form-control">
-							<input type="range" name="roll-diameter-max" id="roll-diameter-max" value="800" min="0" max="1000" class="form-control"> -->
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="web-width" class="control-label col-sm-2">Web Width:</label>
-						<div class="col-sm-10">
-							<input id="web-width" type="number" class="form-control"/>
-						</div>
-					</div>
-					
-				</fieldset>
-				
-				<fieldset>
-					<legend>Cutting Section</legend>
-					<div class="form-group">
-						<label for="sheeter" class="control-label col-sm-2">Main Drive:</label>
-						<div class="col-sm-10">
-							<div class="radio">
-								<label><input type="radio" name="inverter">Inverter </label>
-								<label><input type="radio" name="servo-motor-touch">Servo Motor and Touch Screen Monitor </label>
-							</div>
-						</div>
-						<label for="sheeter" class="control-label col-sm-2">Knife:</label>
-						<div class="col-sm-10">
-							<div class="radio">
-								<label><input type="radio" name="single-knife">Single Knife </label>
-								<label><input type="radio" name="twin-knife">Twin Knife </label>
-							</div>		
-						</div>
-						<label for="sheeter" class="control-label col-sm-2">Slitter:</label>
-						<div class="col-sm-10">
-							<div class="radio">
-								<label><input type="radio" name="station-slitter">3 Station Slitter Attachement with <input type="number" id="snum"class="form-control"> max. Side Trim Removal Blower w/ Tab Inserter unit</label>
-							</div>		
-						</div>
-						<label for="sheeter" class="control-label col-sm-2">Accessories:</label>
-						<div class="col-sm-10">
-							<div class="radio">
-								<label><input type="radio" name="anti-static">Anti-Static Control (Static Eliminator) </label>
-								<label><input type="radio" name="anti-static">Paper Dust Collector Control System </label>
-							</div>		
-						</div>
 
+				<!-- Type -->
+				<div class="form-group">
+
+					<label for="type" class="control-label col-sm-2">Type:</label>
+
+					<div class="col-sm-10">
+						<div class="radio">
+							<label><input id="type" name="typeRadio" type="radio" value="mach-sv">
+								MACH-SV (PIV - Overlapping)</label>
+						</div>
+						<div class="radio">
+							<label><input id="type" name="typeRadio" type="radio" value="mach-srv">
+								MACH-SRV (Servo - Overlapping)</label>
+						</div>
+						<div class="radio">
+							<label><input id="type" name="typeRadio" type="radio" value="mach-compact">
+								MACH-Compact (Standard)</label>
+						</div>
+						<div class="radio">
+							<label><input id="type" name="typeRadio" type="radio" value="mach-sync">
+								MACH-Sync (Twin Knife - Overlapping)</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- Production Vol. -->
+				<div class="form-group">
+
+					<label class="control-label col-sm-2" for="production-vol">Production Vol:</label>
+
+					<div class="col-sm-10">
+						<div class="input-group">
+							
+							<input class="form-control" id="production-vol" min="0" name="productionVol" step=".01" type="number"/>
+							<span class="input-group-addon">Tons per day</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Cut Paper Type -->
+				<div class="form-group">
+
+					<label class="control-label col-sm-2" for="paper-type">Cut Paper Type:</label>
+
+					<div class="col-sm-10">
+						<input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text"/>
+					</div>
+				</div>
+
+				<!-- GSM -->
+				<div class="form-group">
+
+					<label  class="control-label col-sm-2" for="cutOffLength">GSM:</label>
+
+					<div class="col-sm-10">
+						<div class="form-inline">
+							<input class="form-control" min="0" name="cutOffLengthMin" placeholder="Min" size="5" step=".01" type="number">
+
+							<span>to</span>
+
+							<input class="form-control" min="0" name="cutOffLengthMax" placeholder="Max" size="5" step=".01" type="number">
+
+							<select class="form-control" name="cutOffLengthUnit"> 
+								<option value="inches">inches</option>
+								<option value="millimeters">millimeters</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Roll Diameter -->
+				<div class="form-group">
+
+					<label class="control-label col-sm-2" for="roll-diameter">Roll Diameter:</label>
+
+					<div class="col-sm-10">
+						<div class="form-inline">
+
+								<input class="form-control" min="0" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number">
+
+								<span>to</span>
+
+								<input class="form-control" min="0" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number">
+
+								<select class="form-control" name="rollDiameterUnit"> 
+									<option value="inches">inches</option>
+									<option value="millimeters">millimeters</option>
+								</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- Cut off Length -->
+				<div class="form-group">
+
+					<label  class="control-label col-sm-2" for="gsm">Cut off Length:</label>
+
+					<div class="col-sm-10">
+						<div class="form-inline">
+							<input class="form-control" min="0" name="gsmMin" placeholder="Min" size="5" step=".01" type="number">
+
+							<span>to</span>
+
+							<input class="form-control" min="0" name="gsmMax" placeholder="Max" size="5" step=".01" type="number">
+
+							<select class="form-control" name="gsmUnit"> 
+								<option value="inches">inches</option>
+								<option value="millimeters">millimeters</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- Web Width -->
+				<div class="form-group">
+
+					<label class="control-label col-sm-2" for="web-width">Slitting Width:</label>
+
+					<div class="col-sm-10">
+						<div class="form-inline">
+							<input class="form-control" min="0" name="webWidthMin" placeholder="Min" size="5" step=".01" type="number">
+
+							<span>to</span>
+
+							<input class="form-control" min="0" name="webWidthMax" placeholder="Max" size="5" step=".01" type="number">
+
+							<select class="form-control" name="webWidthUnit"> 
+								<option value="inches">inches</option>
+								<option value="millimeters">millimeters</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Cutting Section</legend>
+				
+				<!-- Main Drive -->
+				<div class="form-group">
+
+					<label for="main-drive" class="control-label col-sm-2">Main Drive:</label>
+
+					<div class="col-sm-10">
+						<div class="radio">
+							<label><input id="main-drive" name="mainDriveRadio" type="radio" value="inverter">
+								Inverter</label>
+						</div>
+						<div class="radio">
+							<label><input id="main-drive" name="mainDriveRadio" type="radio" value="servo-and-touch">
+								Servo Motor and Touch Screen</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- Knife -->
+				<div class="form-group">
+
+					<label for="knife" class="control-label col-sm-2">Knife:</label>
+
+					<div class="col-sm-10">
+						<div class="radio">
+							<label><input id="knife" name="knifeRadio" type="radio" value="single">
+								Single Knife</label>
+						</div>
+						<div class="radio">
+							<label><input id="knife" name="knifeRadio" type="radio" value="twin">
+								Twin Knife</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slitter -->
+				<div class="form-group">
+					<label class="control-label col-sm-2">Slitter:</label>
+					<div class="col-sm-10">
 						
-					</div>
-				</fieldset>
-				
-				
-				<fieldset>
-					<legend>Unwind Roll Stand Section</legend>
-					<div class="form-group">
-						<label for="sheeter" class="control-label col-sm-2">Reel Stand:</label>
-						<div class="col-sm-10">
-							<label><input type="radio" name="hydraulic">Hydraulic Shaftless with Air Break </label>
-							<div class="radio">	
-								<label><input type="radio" name="single">Single</label>
-								<label><input type="radio" name="double">Double</label>
-								<label><input type="radio" name="others">Others </label>
-								<label><input placeholder="Others"type="text" name="additional" class="form-control"></label>
-								<label></label>
-								<label><input type="radio" name="auto-tension">Auto Tension Control with Decurler System</label>
-								
-								
-							</div>
-							<label><input type="radio" name="standard-reel">Standard Reel Stand (H-Type)</label>
-							<div class="radio">	
-								<label><input type="radio" name="4rolls">Four (4) Rolls </label>
-								<label><input type="radio" name="8rolls">Eight (8) Rolls </label>
-								<label><input type="radio" name="10rolls">Ten (10) Rolls +</label>
-								<label><input type="number" id="nroll" class="form-control"></label>
-								<label>Rolls</label>
-								<label></label>
-								<label><input type="radio" name="indiv-auto">Individual Auto Tension for Stationary Stand</label>
-								
-								
-							</div>
-						</div> <!-- Some names in additional are the same -->
-						<label for="sheeter" class="control-label col-sm-2">Shaft:</label>
-						<div class="col-sm-10">
-							<label><input type="radio" name="mech-shaft"> Mechanical Shaft</label>
-							<div class="radio">	
-								<label><input type="radio" name="single-shaft">Single</label>
-								<label><input type="radio" name="double-shaft">Double</label>
-								<label><input type="text" name="additional" class="form-control"></label>
-								<label>Φ 3” /</label>
-								<label><input type="text" name="additional" class="form-control"></label>
-								<label>Φ 6” / </label>
-								<label><input type="text" name="additional" class="form-control"></label>
-								<label></label>
-								<label><input type="radio" name="others-shaft">Others </label>
-								<label><input placeholder="Others"type="text" name="additional" class="form-control"></label>
-								<label>Φ</label>
-								<label><input placeholder="Others"type="text" name="additional" class="form-control"></label>
-								<label></label>
-							</div>
-							<label><input type="radio" name="air-shaft"> Air Shaft (Heavy Duty)</label>
-							<div class="radio">	
-								<label><input type="radio" name="air-choice"></label>
-								<label>[<input type="number" id="core"/> "Core]</label>
-								<label></label>
-								<label><input type="radio" name="roll-weight">Roll Weight:</label>
-								<label>[<input type="number" id="tcapacity"/> Ton Capacity]</label>
-							</div>
-						</div>
-					</fieldset>
-					<fieldset>
-						<legend>Systems Section</legend>
-						<div class="form-group">
-							<label for="sheeter" class="control-label col-sm-2">Systems:</label>
-							<div class="col-sm-10">
-								<div class="radio">	
-									<label><input type="radio" name="comp-control">Computer Control with Auto Length Setting with Auto Square ness and Auto Quantity Control</label>
-									<label></label>
-									<label><input type="radio" name="web-guide">Web Guide Hydraulic EPC Control & Mechanism</label>
-									<label></label>
-									<label><input type="radio" name="systems-others">Others: </label>
-									<label><input type="text" name="additional" class="form-control" placeholder="Others"></label>
-									
+						<div class="checkbox">
+							<label><input id="slitter" name="slitterCheckbox" type="checkbox">
+								<div class="form-inline">
+									<div class="form-group">
+
+										<label class="control-label" for="slitter-max">
+											3 Station Slitter Attachment with
+											<input class="form-control" disabled id="slitter-max" name="slitterMax" type="text">
+											max. Side Trim Removal Blower w/ Tab Inserter Unit
+										</label>
+									</div>
 								</div>
-							</div>
+							</label>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			
+			
+			<fieldset>
+				<legend>Unwind Roll Stand Section</legend>
+				
+				<!-- Reel Stand -->
+				<div class="form-group">
+					<label for="sheeter" class="control-label col-sm-2">Reel Stand:</label>
+					<div class="col-sm-10">
+						<div class="checkbox">
+							
+							<label>
+								<input id="reel-stand-checkbox" name="reelStandCheckbox" type="checkbox" value="hydraulic">
+								Hydraulic Shaftless with Air
+
+								<div class="radio">
+									<label><input disabled name="reelHydraulicRadio" type="radio" value="single">
+										Single</label>
+								</div>
+								<div class="radio">
+									<label><input disabled name="reelHydraulicRadio" type="radio" value="double">
+										Double</label>
+								</div>
+								<div class="radio">
+									<label><input disabled name="reelHydraulicRadio" type="radio" value="others">
+										Others</label>
+								</div>
+							</label>
 						</div>
 
-						
-						<fieldset>
-							<legend>Other Details</legend>
-							<div class="form-group">
-								<label for="comment" class="control-label col-sm-2">Details:</label>
-								<div class="col-sm-10">
-									<textarea class="form-control" rows="8" id="comment"></textarea>
-								</div>
-							</div>
-						</fieldset>
+						<div class="checkbox">
+							
+							<label>
+								<input id="reel-stand-checkbox" name="reelStandCheckbox" type="checkbox" value="standard">
+								Standard Reel Stand (H-Type)
 
-						<div class="form-group">
-							<div class="col-sm-offset-2 col-sm-10">
-								<a id="cancel-btn" href="order_now.php" class="btn btn-default">Cancel</a>
-								<button id="add-to-cart-btn" type="submit" class="btn btn-default">
-									<i class="glyphicon glyphicon-shopping-cart"></i> Add to Cart</button>
+								<div class="radio">
+									<label><input disabled name="reelStandardRadio" type="radio" value="4">
+										Four(4) Rolls</label>
 								</div>
-							</div>
-						</form>
+								<div class="radio">
+									<label><input disabled name="reelStandardRadio" type="radio" value="8">
+										Eight(8) Rolls</label>
+								</div>
+								<div class="radio">
+									<label>
+										<div class="form-inline">
+											
+											<input disabled name="reelStandardRadio" type="radio" value="10">
+											Ten(10) Rolls + <input class="form-control" disabled name="noOfAdditionalRolls" type="number"> Rolls
+										</div>
+									</label>
+								</div>
+							</label>
+						</div>
+
+						<div class="checkbox">
+							
+							<label>
+								<input id="reel-stand-checkbox" name="reelStandCheckbox" type="checkbox" value="auto tension">
+								Auto Tension Control with Decurler System
+							</label>
+						</div>
+
+						<div class="checkbox">
+							
+							<label>
+								<input id="reel-stand-checkbox" name="reelStandCheckbox" type="checkbox" value="individual auto tension">
+								Individual Auto Tension for Stationary Stand
+							</label>
+						</div>
 					</div>
+				</div>
+
+				<!-- Shaft -->
+				<div class="form-group">
 					
-					<?php// include 'footer.php';?>
-				</body>
-				</html>
+					<label for="sheeter" class="col-sm-2 control-label">Shaft:</label>
+
+					<div class="col-sm-10">
+						<div class="checkbox">
+							<label>
+								<input disabled name="shaftCheckbox" type="checkbox" value="mechanical shaft">
+								Mechanical Shaft
+							</label>
+						</div>	
+						<div class="checkbox">
+							<label>
+								<input disabled name="shaftCheckbox" type="checkbox" value="air shaft">
+								Air Shaft (Heavy Duty)
+							</label>
+						</div>	
+						<div class="checkbox">
+							<label>
+								<input disabled name="shaftCheckbox" type="checkbox" value="others">
+								Others
+							</label>
+						</div>							
+					</div>
+				</div>
+
+				<!-- Roll Weight -->
+				<div class="form-group">
+
+					<label for="roll-weight" class="col-sm-2 control-label">Roll Weight:</label>
+					
+					<div class="col-sm-10">
+						<div class="input-group">
+							<input class="form-control" id="roll-weight"  name="rollWeight"  type="text">
+							<span class="input-group-addon">Tons</span>
+						</div>
+					</div>
+				</div>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Systems Section</legend>
+					<div class="form-group">
+						<label for="sheeter" class="col-sm-2 control-label ">Systems:</label>
+						<div class="col-sm-10">
+							<div class="checkbox">
+								<label>
+									<input name="systemsCheckbox" type="checkbox" value="computer control">
+									Computer Control with Auto Length Setting with Auto Squareness and Auto Quantity Control
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input name="systemsCheckbox" type="checkbox" value="web guide">
+									Web Guide Hydraulic EPC Control and Mechanism
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
+									<input name="systemsCheckbox" type="checkbox" value="others">
+									<div class="form-inline">
+										Others
+										<input disabled class="form-control" type="text">
+									</div>
+								</label>
+							</div>
+						</div>
+					</div>
+			</fieldset>
+
+
+			<fieldset>
+				<legend>Other Details</legend>
+				<div class="form-group">
+					<label for="comment" class="control-label col-sm-2">Details:</label>
+					<div class="col-sm-10">
+						<textarea class="form-control" rows="8" id="comment"></textarea>
+					</div>
+				</div>
+			</fieldset>
+
+			<div class="form-group">
+
+				<div class="col-sm-offset-2 col-sm-10">
+
+					<a class="btn btn-default" id="cancel-btn" href="order_now.php">
+						Cancel</a>
+					<button class="btn btn-default" id="add-to-cart-btn" type="submit">
+						Finish</button>
+				</div>
+			</div>
+		</form>
+	</div> <!-- /.container -->
+
+	<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+</body>
+</html>

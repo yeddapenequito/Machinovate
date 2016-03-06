@@ -408,11 +408,11 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     Order now styles
     =================================================================*/
   
-  #order-slitter form #cancel-btn {
+  form #cancel-btn {
     background-color: #bdc3c7;
     color: #153a7e;
   }
-  #order-slitter form #cancel-btn:hover {
+  form #cancel-btn:hover {
     background-color: transparent;
     color: #153a7e;
   }
