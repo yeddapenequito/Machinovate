@@ -9,43 +9,20 @@
     	<link href="styles/freelancer.css" rel="stylesheet">
 
 		<title>Machinovate | Home</title>
-			<style type="text/css">
-			/*.container{
-				background-image:url(images/homepage.png);
-				background-repeat: no-repeat;
-				background-position: center;
-				position:fixed;
-				margin-top:-15px;
-				height:580px;
-				width: 100%;
-				background-color: #132c55;
-			}
-			#image-home{
-				
-
-			}*/
-			</style>
+			
 	</head>
 	<body>
 		<?php include 'header_before_login_home_only.php';?>
-		
-		<!-- <!--insert slideshow or carousel code here 
-		Tentative Image for homepage
-		<div class="container"> 
-		<img src="images/homepage.png"> 
-		</div> -->
-
-
 	 <!-- Header -->
-    <header>
+    <header class="header-container">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="images/picture1.jpg" alt="">
+                    <img class="img-responsive" src="images/mach-colored.png" alt="">
                     <div class="intro-text">
-                        <span class="name">Machinovate International Inc.</span>
-                        <hr class="star-light">
-                        <span class="skills">Innovating Through Generation</span>
+                        <span class="name">Innovating Through Generation</span>
+                        <hr>
+                        <span class="skills">Machinovate International Inc.</span>
                     </div>
                 </div>
             </div>
@@ -57,8 +34,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Best</h2>
-                    <hr class="star-primary">
+                    <h2>Good Stuffs</h2>
+                    <hr>
                 </div>
             </div>
             <div class="row">
@@ -69,7 +46,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="images/cutter.png" class="img-responsive" alt="">
+                        <img src="images/picture1.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -79,7 +56,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="images/cutter.png" class="img-responsive" alt="">
+                        <img src="images/picture2.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -89,39 +66,10 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="images/cutter.png" class="img-responsive" alt="">
+                        <img src="images/cover-picture-3.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/cutter.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/cutter.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="images/cutter.png" class="img-responsive" alt="">
-                    </a>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -132,7 +80,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>About Machinovate</h2>
-                    <hr class="star-light">
+                    <hr>
+                    
                 </div>
             </div>
             <div class="row">
@@ -159,15 +108,10 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>1645 G. San Roque St., Arty 3 Subdivision, Lawang Bato, <br>Valenzuela City, Philippines</p>
-                        
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Links</h3>
+                        <h3>Get Started</h3>
                         <p><a href="index.php">Home</a></p>
                         <p><a href="machines.php">Our Machines</a></p>
-                        <p><a href="">Contact Us</a></p>
+                        
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>FAQ</h3>
@@ -176,6 +120,16 @@
                         <p><a href="#">How can you contact us?</a></p>
                         
                     </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Location
+                          <a style="color:black;"href="contact_us.php">
+				          <span class="glyphicon glyphicon-map-marker"></span>
+				        </a>
+                        </h3>
+                        <p>1645 G. San Roque St., Arty 3 Subdivision, Lawang Bato, Valenzuela City, Philippines</p>
+                        
+                    </div>
+                    
                     <!-- <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
@@ -466,11 +420,6 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
 	</body>
