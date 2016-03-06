@@ -8,7 +8,7 @@
 	<title>Machinovate | Order Sheeter</title>
 </head>
 <body>
-	<?php include 'header_on_form_completion.php';?>
+	<?php include "header_on_form_completion.php";?>
 	<div  id="order-sheeter" class="container">
 
 		<h1 class="page-header">Paper Sheeter Form Requirements</h1>
@@ -225,7 +225,7 @@
 						<div class="checkbox">
 							
 							<label>
-								<input id="reel-stand-checkbox" name="reelStandCheckbox" type="checkbox" value="hydraulic">
+								<input class="reel-stand-checkbox" id="reel-stand-hydraulic" name="reelStandCheckbox" type="checkbox" value="hydraulic">
 								Hydraulic Shaftless with Air
 
 								<div class="radio">
@@ -246,7 +246,7 @@
 						<div class="checkbox">
 							
 							<label>
-								<input id="reel-stand-checkbox" name="reelStandCheckbox" type="checkbox" value="standard">
+								<input class="reel-stand-checkbox" id="reel-stand-standard" name="reelStandCheckbox" type="checkbox" value="standard">
 								Standard Reel Stand (H-Type)
 
 								<div class="radio">
@@ -272,7 +272,7 @@
 						<div class="checkbox">
 							
 							<label>
-								<input id="reel-stand-checkbox" name="reelStandCheckbox" type="checkbox" value="auto tension">
+								<input class="reel-stand-checkbox" name="reelStandCheckbox" type="checkbox" value="auto tension">
 								Auto Tension Control with Decurler System
 							</label>
 						</div>
@@ -280,7 +280,7 @@
 						<div class="checkbox">
 							
 							<label>
-								<input id="reel-stand-checkbox" name="reelStandCheckbox" type="checkbox" value="individual auto tension">
+								<input class="reel-stand-checkbox" name="reelStandCheckbox" type="checkbox" value="individual auto tension">
 								Individual Auto Tension for Stationary Stand
 							</label>
 						</div>
@@ -385,5 +385,31 @@
 
 	<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		document.getElementById("slitter").onchange = function() {
+				
+			if(document.getElementById("slitter").checked) {
+				document.getElementById("slitter-max").removeAttribute("disabled");
+			}
+			else {
+				document.getElementById("slitter-max").setAttribute("disabled", "disabled");
+				document.getElementById("slitter-max").value = "";
+			}
+		};
+
+		document.getElementById("reel-stand-hydraulic").onchange = function() {
+			if(document.getElementById("reel-stand-hydraulic").checked) {
+				var radioButtons = document.getElementsByClassName("radio");
+				for (var i = 0; i < radioButtons.length; i++) {
+					radioButtons[i].removeAttribute("disabled");
+				};
+			}
+			else {
+				this.getElementsByClassName("radio").setAttribute("disabled", "disabled");
+				this.getElementsByClassName("radio").setAttribute("checked", "false");
+			}
+		};
+
+	</script>
 </body>
 </html>
