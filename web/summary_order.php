@@ -33,7 +33,7 @@ $page_title = 'View the Summary';
 require ('../mysqli_connect.php'); // Connect to the db.
 		
 // Make the query: $q = "INSERT INTO shipping_details (last_name, first_name, company_name, address, contact_details, email, delivery_basis, ship_day, term, confirmation, shipment, installation) 
-$q = "SELECT last_name, first_name company_name, address, contact_details, email, delivery_basis, ship_day, term, confirmation, shipment,installation FROM shipping_details";		
+$q = "SELECT last_name, first_name, company_name, address, contact_details, email, delivery_basis, ship_day, term, confirmation, shipment,installation FROM shipping_details";		
 $r = @mysqli_query ($dbc, $q); // Run the query.
 
 if ($r) { // If it ran OK, display the records.
@@ -45,7 +45,7 @@ if ($r) { // If it ran OK, display the records.
 					<div class="col-xs-12 col-md-offset-3 col-md-6 agent">
 						<div class="col-xs-8">
 							<p><b>Last Name: </b>  <a>' . $row['last_name'] . '</a></p>
-							<p><b>First Name: </b>  <a>' . $row['last_name'] . '</a></p>
+							<p><b>First Name: </b>  <a>' . $row['first_name'] . '</a></p>
 							<p><b>Company:</b> <a>' . $row['company_name'] . ' </a></p>
 							<p><b>Shipping Address:</b> <a>' . $row['address'] . ' </a></p>
 							<p><b>Contact Details: </b> <a>' . $row['contact_details'] . '</a></p>
