@@ -98,6 +98,12 @@ CREATE TABLE shipping_details (
     address VARCHAR(60) NOT NULL,
 	contact_details VARCHAR(30) NOT NULL,
     email VARCHAR(30) NOT NULL,
+    delivery_basis VARCHAR(30) NOT NULL,
+    ship_day TINYINT(3) NOT NULL,
+    term VARCHAR(30) NOT NULL,
+    confirmation TINYINT(2),
+    shipment TINYINT(2),
+    installation TINYINT(2),
 	PRIMARY KEY (shipping_id)
 	--
 ) ENGINE=MyISAM;

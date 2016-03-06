@@ -4,7 +4,7 @@
 // This script performs an INSERT query to add a record to the shipping_details table
 
 $page_title = 'Machinovate | Add shipping details';
-include ('header_before_login.php');
+
 
 // Check for form submission:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -58,14 +58,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$email = mysqli_real_escape_string($dbc, trim($_POST['email']));
 	}
 
-	
+	// Check for delivery basis:
+	if (empty($_POST['delivery_basis'])) {
+		$errors[] = 'You forgot to choose your delivery basis.';
+	} else {
+		$db = mysqli_real_escape_string($dbc, trim($_POST['delivery_basis']));
+	}
 
+	// Check for shipment day:
+	if (empty($_POST['ship_day'])) {
+		$errors[] = 'You forgot to enter the shipment day.';
+	} else {
+		$sd = mysqli_real_escape_string($dbc, trim($_POST['ship_day']));
+	}
+
+	// Check for term:
+	if (empty($_POST['term'])) {
+		$errors[] = 'You forgot to choose your shipping term.';
+	} else {
+		$term = mysqli_real_escape_string($dbc, trim($_POST['term']));
+	}
+
+	$confirmation = mysqli_real_escape_string($dbc, trim($_POST['confirmation']));
+	$shipment = mysqli_real_escape_string($dbc, trim($_POST['shipment']));
+	$installation = mysqli_real_escape_string($dbc, trim($_POST['installation']));
+	
 	if (empty($errors)) { // If everything's OK.
 	
 		// Register the shipping details in the database...
 		
 		// Make the query:
-		$q = "INSERT INTO shipping_details (last_name, first_name, company_name, address, contact_details, email) VALUES ('$ln', '$fn', '$cn', '$add', '$contact', '$email')";		
+		$q = "INSERT INTO shipping_details (last_name, first_name, company_name, address, contact_details, email, delivery_basis, ship_day, term, confirmation, shipment, installation) VALUES ('$ln', '$fn', '$cn', '$add', '$contact', '$email', '$db', '$sd', '$term', '$confirmation', '$shipment', '$installation')";		
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 		if ($r) { // If it ran OK.
 		
@@ -145,21 +168,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 							<input type="text" name="address" placeholder="Shipping Address" class="form-control" required autofocus> 
 						</div>
 					
-
-
 						<p>Contact Details:</p>
 						<div class="form-group">
 							<input type="text" name="contact_details" placeholder="Contact Details" class="form-control" required autofocus> 
 						</div>
+					
 						<p>Email Address:</p>
 						<div class="form-group">
 							<input type="email" name="email" placeholder="Email Address" class="form-control" required autofocus> 
 						</div>
-										
+						
+						<h3> Shipping Terms Section: </h3>
+						<p><b>Shipping Delivery Basis:</b></p>
+						<div class="form-group">
+							<input type="radio" name="delivery_basis" value="Free On Board"> Free on Board (FOB) <br>
+							<input type="radio" name="delivery_basis" value="Cost Insurance and Freight"> Cost, Insurance and Freight (CIF) <br>
+							<input type="radio" name="delivery_basis" value="Cost and Freight"> Cost and Freight <br>
+						</div>			
+						
+						<p>Shipment: <input type="text" name="ship_day" placeholder="No. of Days" required autofocus>  Working days after initial payment.</p>
+
+						<p><b>Payment Terms: </b></p>
+						<div class="form-group">
+							<input type="radio" name="term" value="Letter of Credit, Draft at Sight"> Letter of Credit, Draft at Sight <br>
+							<input type="radio" name="term" value="Telegraphic Transfer">Telegraphic Transfer <br>
+							
+							<i><font color="red">Guys note lng.. etong susunod dpt under ng Telegraphic transfer.. dpt choosable lng cya kpg pinili ung telegraphic transfer</font></i>
+
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="confirmation" autofocus>  % downpayment upon confirmation</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="shipment"  autofocus>  % before shipment</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="installation" autofocus>  % upon installation</p>
+
+
+						</div>
+
+						<!-- Submit Button-->
 						<input type="submit" value="Submit" class="btn btn-primary"
 						id="form-button">
 						<a href="machines.php" class="btn btn-primary"
 						id="form-button">Cancel</a>
+
+						
 					
 					</form>
 				
