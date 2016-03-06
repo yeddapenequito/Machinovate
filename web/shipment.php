@@ -138,6 +138,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<link rel="stylesheet" href="styles/bootstrap.min.css">
 		<link rel="stylesheet" href="styles/main.css">
 		<title>Machinovate | Shipment</title>
+		<style>
+
+
+		body{
+			background-color: #bdc3c7;
+		}
+		</style>
 	</head>
 		
 
@@ -177,44 +184,110 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<div class="form-group">
 							<input type="email" name="email" placeholder="Email Address" class="form-control" required autofocus> 
 						</div>
+				</fieldset>
+				<!-- Shipping Terms Section -->
+				<fieldset>
+						<legend>Shipping Terms Section:</legend>
 						
-						<h3> Shipping Terms Section: </h3>
-						<p><b>Shipping Delivery Basis:</b></p>
 						<div class="form-group">
-							<input type="radio" name="delivery_basis" value="Free On Board"> Free on Board (FOB) <br>
-							<input type="radio" name="delivery_basis" value="Cost Insurance and Freight"> Cost, Insurance and Freight (CIF) <br>
-							<input type="radio" name="delivery_basis" value="Cost and Freight"> Cost and Freight <br>
-						</div>			
-						
-						<p>Shipment: <input type="text" name="ship_day" placeholder="No. of Days" required autofocus>  Working days after initial payment.</p>
+						<label class="control-label col-sm-2" for="ship-basis">Shipping Delivery Basis:</label>
+								<div class="col-sm-10">
+									<div class="radio">
+										<label><input type="radio" name="delivery_basis" value="Free On Board"> Free on Board (FOB)</label>
+									</div>
+									<div class="radio">
+										<label><input type="radio" name="delivery_basis" value="Cost Insurance and Freight"> Cost, Insurance and Freight (CIF) </label>
+									</div>
+									<div class="radio">
+										<label><input type="radio" name="delivery_basis" value="Cost and Freight"> Cost and Freight </label>
+									</div>
+								</div>
+						</div>	
 
-						<p><b>Payment Terms: </b></p>
-						<div class="form-group">
-							<input type="radio" name="term" value="Letter of Credit, Draft at Sight"> Letter of Credit, Draft at Sight <br>
-							<input type="radio" name="term" value="Telegraphic Transfer">Telegraphic Transfer <br>
-							
-							<i><font color="red">Guys note lng.. etong susunod dpt under ng Telegraphic transfer.. dpt choosable lng cya kpg pinili ung telegraphic transfer</font></i>
+						<!--Shipment -->
+					<div class="form-group">
 
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="confirmation" autofocus>  % downpayment upon confirmation</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="shipment"  autofocus>  % before shipment</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="installation" autofocus>  % upon installation</p>
+						<label class="control-label col-sm-2" for="shipment">Shipment: </label>
 
-
+						<div class="col-sm-10">
+							<div class="input-group">
+								
+								<input class="form-control"  placeholder="No. of Days" min="1" type="number" name="ship_day"  required autofocus/>
+								<span class="input-group-addon">  Working days after initial payment.</span>
+							</div>
 						</div>
+					</div>
 
-						<!-- Submit Button-->
-						<input type="submit" value="Submit" class="btn btn-primary"
-						id="form-button">
-						<a href="machines.php" class="btn btn-primary"
-						id="form-button">Cancel</a>
+					<!-- Payment Terms -->
+					<div class="form-group">
 
+					<label class="control-label col-sm-2" for="payment">Payment Terms: </label>
+
+					<div class="col-sm-10">
+							<div class="radio">
+								<label><input type="radio" name="term" id= "credit" value="Letter of Credit, Draft at Sight"> Letter of Credit, Draft at Sight </label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="term" value="Telegraphic Transfer" id="transfer">Telegraphic Transfer </label>
+
+							</div>
+							<div class="input-group">
+
+							<input class="form-control" id="telegraphic-transfer-a" disabled type="number" name="confirmation" required autofocus/><span class="input-group-addon">  % downpayment upon confirmation</span>
+							
+						</div>
+						<div class="input-group">
+							
+							<input class="form-control" id="telegraphic-transfer-b" disabled type="number" name="shipment" required autofocus/><span class="input-group-addon">% before shipment</span>
+							  
+						</div>
+						<div class="input-group">
+							<input class="form-control" id="telegraphic-transfer-c"  disabled type="number" name="installation" required autofocus/><span class="input-group-addon">  % upon installation</span>
+						</div>
 						
-					
+					</div>
+					</div>
+
+				</fieldset>		
+						<!-- Submit Button -->
+						<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+						<button class="btn btn-primary" value="Submit" type="submit">
+								Submit</button>
+						<a class="btn btn-default" id="cancel-btn" href="machines.php">
+								Cancel</a>
+							
+						</div>
 					</form>
 				
-					</fieldset>
+					
 		</div>
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript">
+
+			document.getElementById("transfer").onchange = function() {
+			
+				if(document.getElementById("transfer").checked) {
+					document.getElementById("telegraphic-transfer-a").removeAttribute("disabled");
+					document.getElementById("telegraphic-transfer-b").removeAttribute("disabled");
+					document.getElementById("telegraphic-transfer-c").removeAttribute("disabled");
+				}
+				};
+			document.getElementById("credit").onchange = function() {
+				if(document.getElementById("credit").checked){
+					document.getElementById("telegraphic-transfer-a").setAttribute("disabled", "disabled");
+					document.getElementById("telegraphic-transfer-a").value = "";
+					document.getElementById("telegraphic-transfer-b").setAttribute("disabled", "disabled");
+					document.getElementById("telegraphic-transfer-b").value = "";
+					
+					document.getElementById("telegraphic-transfer-c").setAttribute("disabled", "disabled");
+					document.getElementById("telegraphic-transfer-c").value = "";
+					
+					
+			
+				}
+			};
+	    </script>
 	</body>
 </html>

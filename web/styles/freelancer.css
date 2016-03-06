@@ -88,12 +88,15 @@ header {
     text-align: center;
     color: #fff;
     background: #153a7e;
+
 }
 
 
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
+    position: sticky;
+    top: 0px;
 }
 
 header img {
