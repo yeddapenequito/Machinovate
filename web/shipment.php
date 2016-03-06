@@ -4,12 +4,12 @@
 // This script performs an INSERT query to add a record to the shipping_details table
 
 $page_title = 'Machinovate | Add shipping details';
-include ('header_after_login.php');
+include ('header_before_login.php');
 
 // Check for form submission:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-	require ('../../mysqli_connect.php'); // Connect to the db.
+	require ('../mysqli_connect.php'); // Connect to the db.
 		
 	$errors = array(); // Initialize an error array.
 	
@@ -153,11 +153,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<div class="form-group">
 							 <input type="text" name="firstname" placeholder="First Name" class="form-control" required autofocus> 
 						</div>
-						
+						<p>Company Name:</p>
+						<div class="form-group">
+							<input type="text" name="company_name" placeholder="Shipping Address" class="form-control" required autofocus> 
+						</div>
 						
 						<p>Address:</p>
 						<div class="form-group">
-							<input type="text" name="saddress" placeholder="Shipping Address" class="form-control" required autofocus> 
+							<input type="text" name="address" placeholder="Shipping Address" class="form-control" required autofocus> 
 						</div>
 					</div>
 					<div class="row2">
