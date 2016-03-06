@@ -148,14 +148,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						</div>
 						<p>Email Address:</p>
 						<div class="form-group">
-<<<<<<< HEAD
-							<input type="email" class="form-control" id="email" placeholder="Enter your email here">
-=======
 							<input type="email" name="email" placeholder="Email Address" class="form-control" required autofocus> 
->>>>>>> refs/remotes/origin/master
 						</div>
-						
-					
 										
 						<input type="submit" value="Submit" class="btn btn-primary"
 						id="form-button">
