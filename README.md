@@ -100,7 +100,7 @@ CREATE TABLE shipping_details (
     email VARCHAR(30) NOT NULL,
     delivery_basis VARCHAR(30) NOT NULL,
     ship_day TINYINT(3) NOT NULL,
-    term VARCHAR(30) NOT NULL,
+    term VARCHAR(50) NOT NULL,
     confirmation TINYINT(2),
     shipment TINYINT(2),
     installation TINYINT(2),
