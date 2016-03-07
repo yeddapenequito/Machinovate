@@ -625,7 +625,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<div class="form-group">
 						<label for="email" class="col-sm-3 control-label">Email Address:</label>
 						<div class="col-sm-9">
-							<input type="email" class="form-control" id="email" name="email" maxlength="20" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"  />
+							<input type="email" class="form-control" id="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"  />
 						</div>
 					</div>
 					<div class="form-group">
