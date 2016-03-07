@@ -4,11 +4,12 @@ html {
 	position: relative;
 	min-height: 100%;
 }
+
 body {
   margin: 0;
   margin-top: 0em;
   margin-bottom: 0em;
-  padding: 0;
+  padding-top: 4em;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -208,7 +209,6 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   #contact-us-content table td:first-child {
   	font-weight: bold;
   }
-
 
 /*=================================================================
   Events styles
