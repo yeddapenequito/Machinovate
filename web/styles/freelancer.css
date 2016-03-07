@@ -4,7 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
+ body {
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     background-color: #bdc3c7;
@@ -36,7 +36,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-   font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
 
 }
