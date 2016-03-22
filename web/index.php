@@ -12,7 +12,7 @@
 			
 	</head>
 	<body>
-		<?php include 'header_before_login_home_only.php';?>
+		<?php include 'header_before_login.php';?>
 	 <!-- Header -->
     <header class="header-container">
         <div class="container">
