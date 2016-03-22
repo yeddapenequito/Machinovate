@@ -72,6 +72,11 @@ CREATE TABLE sheeter_specs(
 	PRIMARY KEY (model_id)
 );
 
+
+/*-------------------------------------------------------
+SURE TABLES NA UNG SA BABA :)
+-------------------------------------------------------*/
+
 CREATE TABLE events (
 	event_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	event_date DATE NOT NULL,
@@ -84,7 +89,7 @@ CREATE TABLE events (
 CREATE TABLE event_pictures (
 	pic_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	event_id INT UNSIGNED NOT NULL,
-	image_name VARCHAR(60) NOT NULL,
+	image blob NOT NULL,
 	caption VARCHAR(255) NOT NULL,
 	PRIMARY KEY (pic_id)
 	--

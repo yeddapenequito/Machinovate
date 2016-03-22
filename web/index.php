@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="styles/bootstrap.min.css">
-		<link rel="stylesheet" href="styles/main.css">
+		 <link rel="stylesheet" href="styles/main.css">
 		 <!-- Custom CSS -->
     	<link href="styles/freelancer.css" rel="stylesheet">
 
@@ -115,7 +115,7 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>FAQ</h3>
-                        <p><a href="#">How to Order?</a></p>
+                        <p><a href="faq_order.php">How to Order?</a></p>
                         <p><a href="#">Specifications of Machines</a></p>
                         <p><a href="#">How can you contact us?</a></p>
                         
