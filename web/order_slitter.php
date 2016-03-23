@@ -298,7 +298,7 @@
 
 						<button class="btn btn-default" id="add-to-cart-btn" type="submit">
 							Finish</button>
-						<a class="btn btn-default" id="cancel-btn" href="order_now.php">
+						<a class="btn btn-default" id="cancel-btn" href="slitter.php">
 							Cancel</a>
 					</div>
 				</div>

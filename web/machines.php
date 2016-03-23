@@ -21,10 +21,18 @@
 					</header>
 					<form>
 						<div class="btn-group btn-group-vertical">
-						  <a id="slitter" href="#" onclick="changeImage(0)" class="btn btn-primary">Slitter<small>Short description.</small></a>
-						  <a id="sheeter" href="#" onclick="changeImage(1)" class="btn btn-primary">Sheeter<small>Short description.</small></a>
-						  <a id="cutter" href="#" onclick="changeImage(2)" class="btn btn-primary">Cutter<small>Short description.</small></a>
-						  <a id="other-products" href="#" onclick="changeImage(3)" class="btn btn-primary">Other Products<small>Short description.</small></a>
+						  <a id="slitter" href="#" onclick="changeImage(0)" class="btn btn-primary">Slitter
+						  	<small>Slit down and wound up large rolls into several smaller rolls</small>
+						  </a>
+						  <a id="sheeter" href="#" onclick="changeImage(1)" class="btn btn-primary">Sheeter
+						  	<small>Sheet down long layers of paper into thin sheets</small>
+						  </a>
+						  <a id="cutter" href="#" onclick="changeImage(2)" class="btn btn-primary">Cutter
+						  	<small>Cut large sets of paper at once</small>
+						  </a>
+						  <a id="other-products" href="#" onclick="changeImage(3)" class="btn btn-primary">Other Products
+						  	<small>Assorted products ranging from sizes</small>
+						  </a>
 						</div>
 						<a href="slitter.php" id="continue-btn" class="btn btn-primary">Continue</a>
 					</form>

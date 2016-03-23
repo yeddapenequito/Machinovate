@@ -12,7 +12,7 @@
 			
 	</head>
 	<body>
-		<?php include 'header_before_login_home_only.php';?>
+		<?php include 'header_before_login.php';?>
 	 <!-- Header -->
     <header class="header-container">
         <div class="container">
@@ -115,7 +115,7 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>FAQ</h3>
-                        <p><a href="#">How to Order?</a></p>
+                        <p><a href="faq_order.php">How to Order?</a></p>
                         <p><a href="#">Specifications of Machines</a></p>
                         <p><a href="#">How can you contact us?</a></p>
                         
