@@ -74,6 +74,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			// Print a message:
 			echo '<h1>Thank you!</h1>
 			<p>An event has been registered!</p><p><br /></p>';	
+			
+			
+			// Rename the image:
+			$id = mysqli_stmt_insert_id($stmt); // Get the print ID.
+			rename ($temp, "../uploads/$id");
 
 				// Print a message:
 				echo '<p>The print has been added.</p>';
