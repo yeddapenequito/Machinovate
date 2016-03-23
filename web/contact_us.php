@@ -21,7 +21,8 @@
 								<td>1645 G. San Roque St., Arty 3 Subdivision, Lawang Bato, Valenzuela City, Philippines</td>
 							</tr>
 							<tr>
-								<td>Telephone</td>
+								 
+								<td>Telephone <a  class="glyphicon glyphicon-phone-alt"></a></td>
 								<td>
 									<ul class="list-unstyled">
 										<li>+404 6676</li>

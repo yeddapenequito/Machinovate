@@ -457,21 +457,5 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     text-align: center;
     top:0px;
    }
-   h1{
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: white;
-    text-align: center;
-    margin-top: -50px;
-    
-    }
-    header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
-    position: sticky;
-    top: 0px;
-    height: 180px;
-    line-height: 80px;
-    }
    
+  
