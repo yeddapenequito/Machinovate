@@ -22,6 +22,7 @@
 						<li><a href="add_events.php">Add Events</a></li>
 					</ul>
 				</li>
+				<li><a id="faq" href="faq_admin.php">FAQ</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>

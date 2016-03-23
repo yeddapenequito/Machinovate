@@ -18,8 +18,8 @@
     <h1 style="text-align: center;"><small>Frequently Asked Questions</small></h1>
 	</div>
 
-<!-- Bootstrap FAQ - START -->
-<div class="container">
+	<!-- Bootstrap FAQ - START -->
+	<div class="container">
     <div class="panel-group" id="accordion">
         <div class="faqHeader">General</div>
         <div class="panel panel-default">
@@ -58,12 +58,12 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">What are your contact details?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">Where can I find your company?</a>
                 </h4>
             </div>
             <div id="collapseEleven" class="panel-collapse collapse">
                 <div class="panel-body">
-                    You could see our contact details in <strong>Contact Us</strong> page in the tab above.
+                    You could see our location by going to <strong>Contact Us</strong> page in the tab above.
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">**</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">How will I pay?</a>
                 </h4>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse">
@@ -158,7 +158,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">**</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">When will I get my order?</a>
                 </h4>
             </div>
             <div id="collapseFour" class="panel-collapse collapse">
