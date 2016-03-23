@@ -223,32 +223,20 @@
 					<label for="sheeter" class="control-label col-sm-2">Reel Stand:</label>
 					<div class="col-sm-10">
 						<div class="checkbox">
-							
+							<label>
 								<input class="reel-stand-checkbox" id="reel-stand-hydraulic" name="reelStandCheckbox" type="checkbox" value="hydraulic">
 								Hydraulic Shaftless with Air
 
 								<div class="radio">
-<<<<<<< HEAD
-									<label class="control-label" for="reel-radio"><input disabled id="reel-radio" name="reelHydraulicRadio" type="radio" value="single">
-=======
 									<label><input disabled class="reel-hydraulic-radio" name="reelHydraulicRadio" type="radio" value="single">
->>>>>>> branch 'master' of https://github.com/yeddapenequito/Machinovate.git
 										Single</label>
 								</div>
 								<div class="radio">
-<<<<<<< HEAD
-									<label class="control-label" for="reel-radio"><input disabled id="reel-radio" name="reelHydraulicRadio" type="radio" value="double">
-=======
 									<label><input disabled class="reel-hydraulic-radio" name="reelHydraulicRadio" type="radio" value="double">
->>>>>>> branch 'master' of https://github.com/yeddapenequito/Machinovate.git
 										Double</label>
 								</div>
 								<div class="radio">
-<<<<<<< HEAD
-									<label class="control-label" for="reel-radio"><input disabled id="reel-radio" name="reelHydraulicRadio" type="radio" value="others">
-=======
 									<label><input disabled class="reel-hydraulic-radio" name="reelHydraulicRadio" type="radio" value="others">
->>>>>>> branch 'master' of https://github.com/yeddapenequito/Machinovate.git
 										Others</label>
 								</div>
 							</label>
