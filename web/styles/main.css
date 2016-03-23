@@ -261,22 +261,22 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     }
   }
 /*=================================================================
-  Order now styles
+  machines content styles
   =================================================================*/
-  #order-now-content #mach-img {
+  #machines-content #mach-img {
     height: 500px;
     width: 600px;
   }
-  #order-now-content header {
+  #machines-content header {
     background-color: transparent;
   }
-  #order-now-content header h1 {
+  #machines-content header h1 {
     font-size: 1.6em;
   }
-  #order-now-content .btn-group {
+  #machines-content .btn-group {
     display: block;
   }
-  #order-now-content .btn-group > a {
+  #machines-content .btn-group > a {
     font-size: 1.25em;
     margin: 1em;
     border-radius: 5px;
@@ -289,14 +289,14 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     font-weight: normal;
     letter-spacing: normal;
   }
-  #order-now-content .btn-group > a small {
+  #machines-content .btn-group > a small {
     display: block;
   }
-  #order-now-content .btn-group > a:hover {
+  #machines-content .btn-group > a:hover {
     border-color: #153a7e; 
     color: #153a7e;
   }
-  #order-now-content form #continue-btn {
+  #machines-content form #continue-btn {
     margin-left: 1.5em;
   }
 

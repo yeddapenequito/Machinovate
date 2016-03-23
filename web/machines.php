@@ -10,7 +10,7 @@
 	<body>
 		<?php include 'header_before_login.php';?>
 		
-		<div id="order-now-content" class="container">
+		<div id="machines-content" class="container">
 			<div class="row">
 				<div class="col-md-6 visible-md-block visible-lg-block">
 					<img id="mach-img" alt="slitter" src="images/slitter-front.png">
