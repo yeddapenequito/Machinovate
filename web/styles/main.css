@@ -261,42 +261,42 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     }
   }
 /*=================================================================
-  Order now styles
+  machines content styles
   =================================================================*/
-  #order-now-content #mach-img {
+  #machines-content #mach-img {
     height: 500px;
     width: 600px;
   }
-  #order-now-content header {
+  #machines-content header {
     background-color: transparent;
   }
-  #order-now-content header h1 {
+  #machines-content header h1 {
     font-size: 1.6em;
   }
-  #order-now-content .btn-group {
+  #machines-content .btn-group {
     display: block;
   }
-  #order-now-content .btn-group > a {
-    font-size: 1.25em;
-    margin: 1em;
-    border-radius: 5px;
-    text-align: left;
-    color: black;
+  #machines-content .btn-group > a {
     background-color: transparent;
+    border-radius: 5px;
     border: 1px solid silver;
-    width: inherit;
-    text-transform: none;
+    color: black;
+    font-size: 1.2em;
     font-weight: normal;
     letter-spacing: normal;
+    margin: 1em;
+    padding: 0.75em 1em;
+    text-align: left;
+    text-transform: none;
+    width: inherit;
   }
-  #order-now-content .btn-group > a small {
+  #machines-content .btn-group > a small {
     display: block;
   }
-  #order-now-content .btn-group > a:hover {
-    border-color: #153a7e; 
-    color: #153a7e;
+  #machines-content .btn-group > a:hover {
+    border-color: black; 
   }
-  #order-now-content form #continue-btn {
+  #machines-content form #continue-btn {
     margin-left: 1.5em;
   }
 

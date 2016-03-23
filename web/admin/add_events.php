@@ -8,7 +8,6 @@ include ('header_after_login.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require ('../../mysqli_connect.php'); // Connect to the db.
         
-    $dbc = mysqli_connect("localhost", "username", "password", "machinovate");
     $errors = array(); // Initialize an error array.
     
      // Check for a event_date:
@@ -74,70 +73,52 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     
 
-    if (empty($errors)) 
-    { // If everything's OK.
+    if (empty($errors)) { // If everything's OK.
     
-        // Register the event in the database...
+        // Register the agent in the database...
         
-        // Make the query: **made by drei*
-        $q = "INSERT INTO events (event_date, event_name, event_place) VALUES (?, ?, ?);";
-        $q .= "INSERT INTO event_pictures (event_id, image_name) VALUES ((SELECT event_id FROM events WHERE event_date = ?), ?);";
+        // Make the query:
+        $q = "INSERT INTO events (event_date, event_name, event_place) VALUES ('$event_date', '$event_name', '$event_place');";
+        $q .= "INSERT INTO event_pictures (event_id, image_name) VALUES ((SELECT event_id FROM events WHERE event_date='$event_date' ), '$i');";
 
-        $stmt = mysqli_multi_query($dbc, $q);
-
-        mysqli_stmt_bind_param($stmt, 'sssss', $event_date, $event_name, $event_place, $event_date, $i);
-        mysqli_stmt_execute($stmt);
-
-        //Check the results...
-        if (mysqli_stmt_affected_rows($stmt) === 1) 
-        { // If it ran OK.
+        $r = @mysqli_multi_query ($dbc, $q); // Run the query.
+        if ($r) { // If it ran OK.
         
             // Print a message:
             echo '<h1>Thank you!</h1>
-            <p>An event has been added!!</p><p><br /></p>'; 
-            
-            // Rename the image:
-            $id = mysqli_stmt_insert_id($dbc); // Get the print ID.
-           
-            rename ($temp, "../../uploads/$id");
-                // Clear $_POST:
-                $_POST = array();
-        } 
-        else 
-        { // If it did not run OK.
+        <p>An agent has been registered!</p><p><br /></p>'; 
+        header('Location: /Machinovate/web/admin/account_successful.php');
+        
+        } else { // If it did not run OK.
             
             // Public message:
             echo '<h1>System Error</h1>
-            <p class="error">The event could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
-            
+            <p class="error">The agent could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
+            header('Location: /Machinovate/web/admin/account_failed.php');
             // Debugging message:
             echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
                         
         } // End of if ($r) IF.
         
-        mysqli_close($stmt);
-        
-    } //end of $errors IF 
+        mysqli_close($dbc); // Close the database connection.
 
-    // Delete the uploaded file if it still exists:
-    if ( isset($temp) && file_exists ($temp) && is_file($temp) )
-    {
-        unlink ($temp);
-    }
+        // Include the footer and quit the script:
+        exit();
+        
+    } else { // Report the errors.
     
-} //End of Submission IF
+        echo '<h1>Error!</h1>
+        <p class="error">The following error(s) occurred:<br />';
+        foreach ($errors as $msg) { // Print each error.
+            echo " - $msg<br />\n";
+        }
+        echo '</p><p>Please try again.</p><p><br /></p>';
+        
+    } // End of if (empty($errors)) IF.
     
-// Check for any errors and print them:
-if ( !empty($errors) && is_array($errors) ) 
-{
-    echo '<h1>Error!</h1>
-    <p style="font-weight: bold; color: #C00">The following error(s) occurred:<br />';
-    foreach ($errors as $msg) 
-    {
-        echo " - $msg<br />\n";
-    }
-    echo 'Please reselect the print image and try again.</p>';
-}
+    mysqli_close($dbc); // Close the database connection.
+
+} // End of the main Submit conditional.
 
 ?>
 

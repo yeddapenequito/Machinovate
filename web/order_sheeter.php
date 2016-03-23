@@ -228,15 +228,27 @@
 								Hydraulic Shaftless with Air
 
 								<div class="radio">
+<<<<<<< HEAD
 									<label class="control-label" for="reel-radio"><input disabled id="reel-radio" name="reelHydraulicRadio" type="radio" value="single">
+=======
+									<label><input disabled class="reel-hydraulic-radio" name="reelHydraulicRadio" type="radio" value="single">
+>>>>>>> branch 'master' of https://github.com/yeddapenequito/Machinovate.git
 										Single</label>
 								</div>
 								<div class="radio">
+<<<<<<< HEAD
 									<label class="control-label" for="reel-radio"><input disabled id="reel-radio" name="reelHydraulicRadio" type="radio" value="double">
+=======
+									<label><input disabled class="reel-hydraulic-radio" name="reelHydraulicRadio" type="radio" value="double">
+>>>>>>> branch 'master' of https://github.com/yeddapenequito/Machinovate.git
 										Double</label>
 								</div>
 								<div class="radio">
+<<<<<<< HEAD
 									<label class="control-label" for="reel-radio"><input disabled id="reel-radio" name="reelHydraulicRadio" type="radio" value="others">
+=======
+									<label><input disabled class="reel-hydraulic-radio" name="reelHydraulicRadio" type="radio" value="others">
+>>>>>>> branch 'master' of https://github.com/yeddapenequito/Machinovate.git
 										Others</label>
 								</div>
 							</label>
@@ -249,19 +261,19 @@
 								Standard Reel Stand (H-Type)
 
 								<div class="radio">
-									<label><input disabled name="reelStandardRadio" type="radio" value="4">
+									<label><input class="reel-standard-radio" disabled name="reelStandardRadio" type="radio" value="4">
 										Four(4) Rolls</label>
 								</div>
 								<div class="radio">
-									<label><input disabled name="reelStandardRadio" type="radio" value="8">
+									<label><input class="reel-standard-radio" disabled name="reelStandardRadio" type="radio" value="8">
 										Eight(8) Rolls</label>
 								</div>
 								<div class="radio">
 									<label>
 										<div class="form-inline">
 											
-											<input disabled name="reelStandardRadio" type="radio" value="10">
-											Ten(10) Rolls + <input class="form-control" disabled name="noOfAdditionalRolls" type="number"> Rolls
+											<input class="reel-standard-radio" disabled id="ten-rolls-radio" name="reelStandardRadio" type="radio" value="10">
+											Ten(10) Rolls + <input class="form-control" disabled id="ten-rolls-text" name="noOfAdditionalRolls" type="number"> Rolls
 										</div>
 									</label>
 								</div>
@@ -294,19 +306,19 @@
 					<div class="col-sm-10">
 						<div class="checkbox">
 							<label>
-								<input disabled name="shaftCheckbox" type="checkbox" value="mechanical shaft">
+								<input disabled class="shaft-check" name="shaftCheckbox" type="checkbox" value="mechanical shaft">
 								Mechanical Shaft
 							</label>
 						</div>	
 						<div class="checkbox">
 							<label>
-								<input disabled name="shaftCheckbox" type="checkbox" value="air shaft">
+								<input disabled class="shaft-check" name="shaftCheckbox" type="checkbox" value="air shaft">
 								Air Shaft (Heavy Duty)
 							</label>
 						</div>	
 						<div class="checkbox">
 							<label>
-								<input disabled name="shaftCheckbox" type="checkbox" value="others">
+								<input disabled class="shaft-check" name="shaftCheckbox" type="checkbox" value="others">
 								Others
 							</label>
 						</div>							
@@ -347,10 +359,10 @@
 							</div>
 							<div class="checkbox">
 								<label>
-									<input name="systemsCheckbox" type="checkbox" value="others">
+									<input id="systems-others-check" name="systemsCheckbox" type="checkbox" value="others">
 									<div class="form-inline">
 										Others
-										<input disabled class="form-control" type="text">
+										<input disabled class="form-control" id="systems-others-text" type="text">
 									</div>
 								</label>
 							</div>
@@ -396,18 +408,68 @@
 			}
 		};
 
+		document.getElementById("ten-rolls-radio").onchange = function() {
+				
+			if(document.getElementById("ten-rolls-radio").checked) {
+				document.getElementById("ten-rolls-text").removeAttribute("disabled");
+			}
+			else {
+				document.getElementById("ten-rolls-text").setAttribute("disabled", "disabled");
+				document.getElementById("ten-rolls-text").value = "";
+			}
+		};
+
+		document.getElementById("systems-others-check").onchange = function() {
+				
+			if(document.getElementById("systems-others-check").checked) {
+				document.getElementById("systems-others-text").removeAttribute("disabled");
+			}
+			else {
+				document.getElementById("systems-others-text").setAttribute("disabled", "disabled");
+				document.getElementById("systems-others-text").value = "";
+			}
+		};
+
 		document.getElementById("reel-stand-hydraulic").onchange = function() {
+			var radioButtons = document.getElementsByClassName("reel-hydraulic-radio");
 			if(document.getElementById("reel-stand-hydraulic").checked) {
-				var radioButtons = document.getElementsByClassName("radio");
 				for (var i = 0; i < radioButtons.length; i++) {
 					radioButtons[i].removeAttribute("disabled");
 				};
 			}
 			else {
-				this.getElementsByClassName("radio").setAttribute("disabled", "disabled");
-				this.getElementsByClassName("radio").setAttribute("checked", "false");
+				for (var i = 0; i < radioButtons.length; i++) {
+					radioButtons[i].setAttribute("disabled", "disabled");
+					radioButtons[i].checked = false;
+				};
 			}
 		};
+
+		document.getElementById("reel-stand-standard").onchange = function() {
+			var radioButtons = document.getElementsByClassName("reel-standard-radio");
+			var checkBox = document.getElementsByClassName("shaft-check");
+			if(document.getElementById("reel-stand-standard").checked) {
+				for (var i = 0; i < radioButtons.length; i++) {
+					radioButtons[i].removeAttribute("disabled");
+				};
+				for (var i = 0; i < checkBox.length; i++) {
+					checkBox[i].removeAttribute("disabled");
+				};
+			}
+			else {
+				for (var i = 0; i < radioButtons.length; i++) {
+					radioButtons[i].setAttribute("disabled", "disabled");
+					radioButtons[i].checked = false;
+				};
+				for (var i = 0; i < checkBox.length; i++) {
+					checkBox[i].setAttribute("disabled", "disabled");
+					checkBox[i].checked = false;
+				};
+				document.getElementById("ten-rolls-text").setAttribute("disabled", "disabled");
+				document.getElementById("ten-rolls-text").value = "";
+			}
+		};
+
 
 	</script>
 </body>

@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		
-		<div id="order-now-content" class="container">
+		<div id="machines-content" class="container">
 			<div class="row">
 				<div class="col-md-6 visible-md-block visible-lg-block">
 					<img id="mach-img" alt="slitter" src="images/slitter-front.png">
@@ -44,7 +44,7 @@
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			document.getElementById("machines").className = "active";
-			document.getElementById("slitter").style.backgroundColor = "#eee";	
+			document.getElementById("slitter").style.border = "2px solid #153a7e";
 
 			var image;
 
@@ -54,40 +54,46 @@
 			    	case 0:
 			    		image.src = "images/slitter-front.png";
 			    		image.alt = "slitter";
-			    		document.getElementById("slitter").style.backgroundColor = "#eee";
-			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
-			    		document.getElementById("cutter").style.backgroundColor = "transparent";
-			    		document.getElementById("other-products").style.backgroundColor = "transparent";
+			    		document.getElementById("slitter").style.border = "2px solid #153a7e";
+			    		document.getElementById("sheeter").style.border = "1px solid silver";
+			    		document.getElementById("cutter").style.border = "1px solid silver";
+			    		document.getElementById("other-products").style.border = "1px solid silver";
 			    		document.getElementById("continue-btn").href = "slitter.php";
 			    		break;
 			    	case 1: 
 			    		image.src = "images/sheeter-servo.png";
 			    		image.alt = "sheeter";
-			    		document.getElementById("slitter").style.backgroundColor = "transparent";
-			    		document.getElementById("sheeter").style.backgroundColor = "#eee";
-			    		document.getElementById("cutter").style.backgroundColor = "transparent";
-			    		document.getElementById("other-products").style.backgroundColor = "transparent";
+			    		document.getElementById("slitter").style.border = "1px solid silver";
+			    		document.getElementById("sheeter").style.border = "2px solid #153a7e";
+			    		document.getElementById("cutter").style.border = "1px solid silver";
+			    		document.getElementById("other-products").style.border = "1px solid silver";
 			    		document.getElementById("continue-btn").href = "sheeter.php";
 			    		break;
 			    	case 2:
 			    		image.src = "images/cutter.png";
 			    		image.alt = "cutter";
-			    		document.getElementById("slitter").style.backgroundColor = "transparent";
-			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
-			    		document.getElementById("cutter").style.backgroundColor = "#eee";
-			    		document.getElementById("other-products").style.backgroundColor = "transparent";
+			    		document.getElementById("slitter").style.border = "1px solid silver";
+			    		document.getElementById("sheeter").style.border = "1px solid silver";
+			    		document.getElementById("cutter").style.border = "2px solid #153a7e";
+			    		document.getElementById("other-products").style.border = "1px solid silver";
 			    		document.getElementById("continue-btn").href = "cutter.php";
 			    		break;
 			    	case 3:
 			    		image.src = "images/other-products.png";
 			    		image.alt = "other products";
-			    		document.getElementById("slitter").style.backgroundColor = "transparent";
-			    		document.getElementById("sheeter").style.backgroundColor = "transparent";
-			    		document.getElementById("cutter").style.backgroundColor = "transparent";
-			    		document.getElementById("other-products").style.backgroundColor = "#eee";
+			    		document.getElementById("slitter").style.border = "1px solid silver";
+			    		document.getElementById("sheeter").style.border = "1px solid silver";
+			    		document.getElementById("cutter").style.border = "1px solid silver";
+			    		document.getElementById("other-products").style.border = "2px solid #153a7e";
 			    		document.getElementById("continue-btn").href = "other_products.php";
 			    }
 			}	
+		</script>
+		<script>
+		$("a").hover(function(){
+		    $(this).css("border-color", "black");
+		    } 
+		});
 		</script>
 	</body>
 </html>
