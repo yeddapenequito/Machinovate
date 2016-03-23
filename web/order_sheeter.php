@@ -224,20 +224,19 @@
 					<div class="col-sm-10">
 						<div class="checkbox">
 							
-							<label>
 								<input class="reel-stand-checkbox" id="reel-stand-hydraulic" name="reelStandCheckbox" type="checkbox" value="hydraulic">
 								Hydraulic Shaftless with Air
 
 								<div class="radio">
-									<label><input disabled name="reelHydraulicRadio" type="radio" value="single">
+									<label class="control-label" for="reel-radio"><input disabled id="reel-radio" name="reelHydraulicRadio" type="radio" value="single">
 										Single</label>
 								</div>
 								<div class="radio">
-									<label><input disabled name="reelHydraulicRadio" type="radio" value="double">
+									<label class="control-label" for="reel-radio"><input disabled id="reel-radio" name="reelHydraulicRadio" type="radio" value="double">
 										Double</label>
 								</div>
 								<div class="radio">
-									<label><input disabled name="reelHydraulicRadio" type="radio" value="others">
+									<label class="control-label" for="reel-radio"><input disabled id="reel-radio" name="reelHydraulicRadio" type="radio" value="others">
 										Others</label>
 								</div>
 							</label>

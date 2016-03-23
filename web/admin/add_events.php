@@ -8,6 +8,7 @@ include ('header_after_login.php');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require ('../../mysqli_connect.php'); // Connect to the db.
         
+    $dbc = mysqli_connect("localhost", "username", "password", "machinovate");
     $errors = array(); // Initialize an error array.
     
      // Check for a event_date:
@@ -79,17 +80,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Register the event in the database...
         
         // Make the query: **made by drei*
-        $q = "INSERT INTO events (event_date, event_name, event_place) VALUES (?, ?, ?);
-            INSERT INTO event_pictures (event_id, image_name) VALUES ((SELECT event_id FROM events WHERE event_date=?), ?);
+        $q = "INSERT INTO events (event_date, event_name, event_place) VALUES (?, ?, ?);";
+        $q .= "INSERT INTO event_pictures (event_id, image_name) VALUES ((SELECT event_id FROM events WHERE event_date = ?), ?);";
 
-            ";
-        $stmt = mysqli_prepare($dbc, $q);
-        
-        mysqli_stmt_bind_param($stmt, 'ssss', $event_date, $event_name, $event_place, $event_date, $i);
+        $stmt = mysqli_multi_query($dbc, $q);
+
+        mysqli_stmt_bind_param($stmt, 'sssss', $event_date, $event_name, $event_place, $event_date, $i);
         mysqli_stmt_execute($stmt);
 
         //Check the results...
-        if (mysqli_stmt_affected_rows($stmt) == 1) 
+        if (mysqli_stmt_affected_rows($stmt) === 1) 
         { // If it ran OK.
         
             // Print a message:
@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p>An event has been added!!</p><p><br /></p>'; 
             
             // Rename the image:
-            $id = mysqli_stmt_insert_id($stmt); // Get the print ID.
+            $id = mysqli_stmt_insert_id($dbc); // Get the print ID.
            
             rename ($temp, "../../uploads/$id");
                 // Clear $_POST:
@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p class="error">The event could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
             
             // Debugging message:
-            echo '<p>' . mysqli_error($stmt) . '<br /><br />Query: ' . $q . '</p>';
+            echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
                         
         } // End of if ($r) IF.
         
