@@ -13,8 +13,8 @@
 		<div  id="order-slitter" class="container">
 			<h1 class="page-header">Paper Slitter Form Requirements</h1>
 			<p>Please bear with us. This is going to take long.</p>
-			<form action="shipment.php" role="form" class="form-horizontal">
-				<fieldset>
+			<form action="form_success.php" role="form" class="form-horizontal" method="post">
+				<fieldset> <!--General Section-->
 					<legend>General Section</legend>
 
 					<!-- Type -->
@@ -24,19 +24,19 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input class="type" name="typeRadio" type="radio" value="mach-msr standard">
+								<label><input class="type" name="slitterType" type="radio" value="Mach-MSR (Standard)">
 									MACH-MSR (Standard)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="typeRadio" type="radio" value="mach-msr heavy duty">
+								<label><input class="type" name="slitterType" type="radio" value="Mach-MSR (Heavy Duty)">
 									MACH-MSR (Heavy Duty)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="typeRadio" type="radio" value="mach-crs">
+								<label><input class="type" name="slitterType" type="radio" value="Mach-CRS">
 									MACH-CRS (Cash Register Slitter)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="typeRadio" type="radio" value="customized">
+								<label><input class="type" name="slitterType" type="radio" value="Customized">
 									Customized</label>
 							</div>
 						</div>
@@ -45,12 +45,12 @@
 					<!-- Production Vol. -->
 					<div class="form-group">
 
-						<label class="control-label col-sm-2" for="production-vol">Production Vol:</label>
+						<label class="control-label col-sm-2" for="production-vol">Production Volume:</label>
 
 						<div class="col-sm-10">
 							<div class="input-group">
 								
-								<input class="form-control" id="production-vol" min="0" name="productionVol" step=".01" type="number"/>
+								<input class="form-control" id="production-vol" min="0" name="productionVolume" step=".01" type="number"/>
 								<span class="input-group-addon">Tons per day</span>
 							</div>
 						</div>
@@ -131,7 +131,7 @@
 					</div>
 				</fieldset>
 
-				<fieldset>
+				<fieldset> <!--Cutting Section-->
 
 					<legend>Cutting Section</legend>
 
@@ -143,7 +143,7 @@
 						<div class="col-sm-10">
 							<div class="checkbox">
 								
-								<label>
+								<label> <!--required field-->
 									<input id="standard-checkbox" name="slitterCheckbox" type="checkbox" value="standard">
 									Standard[Five(5)] Set Male/Female Circular Blade with Trim Removal Blower
 								</label>
@@ -157,7 +157,7 @@
 										<div class="form-group">
 											
 											<label class="control-label" for"slitter-additional-text-field">Additional</label>
-											<input class="form-control" disabled id="slitter-additional-text-field" min="0" name="slitterAdditional" step=".01" type="number"> set of one pair male/female
+											<input class="form-control" disabled id="slitter-additional-text-field" min="0" name="addtlBlade" step=".01" type="number"> set of one pair male/female
 										</div>
 									</div>
 								</label>
@@ -166,7 +166,7 @@
 							<div class="checkbox">
 								
 								<label>
-									<input id="core-cutter-checkbox" name="slitterCheckbox" type="checkbox" value="core cutter">
+									<input id="core-cutter-checkbox" name="coreCutterMachine[]" type="checkbox" value="1">
 									Core Cutter Machine
 								</label>
 							</div>
@@ -174,7 +174,7 @@
 					</div>
 				</fieldset>
 
-				<fieldset>
+				<fieldset> <!--Unwind Roll Stand Section-->
 
 					<legend>Unwind Roll Stand Section</legend>
 
@@ -184,32 +184,32 @@
 						<div class="col-sm-10">
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="unwindRollStandCheckbox" value="hydraulic">
+								<label><input type="checkbox" name="reelStand[]" value="1">
 									Hydraulic Shaftless with Air Break</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="unwindRollStandCheckbox" value="single">
+								<label><input type="checkbox" name="reelStand[]" value="2">
 									Single</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="unwindRollStandCheckbox" value="customized">
+								<label><input type="checkbox" name="reelStand[]" value="3">
 									Customized</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="unwindRollStandCheckbox" value="stationary">
+								<label><input type="checkbox" name="reelStand[]" value="4">
 									Stationary Shaft Stand</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input id="reel-stand-others-checkbox" name="unwindRollStandCheckbox" type="checkbox"> 
+								<label><input id="reel-stand-others-checkbox" name="reelStand[]" type="checkbox" value="5"> 
 									<div class="form-inline">
 										<div class="form-group">
 											<label class="control-label" for="reel-stand-others-text-field">
 												Others:</label>
-											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers" type="text">
+											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers" value="<?php if (isset($_POST['reelStandOthers'])) echo $_POST['reelStandOthers']; ?>" type="text">
 										</div>
 									</div>
 								</label>
@@ -224,14 +224,14 @@
 
 						<div class="col-sm-10">
 							<div class="input-group">
-								<input class="form-control" id="ton-capacity"  name="tonCapacity"  type="text">
+								<input class="form-control" id="ton-capacity"  name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>" type="number">
 								<span class="input-group-addon">Tons</span>
 							</div>
 						</div>
 					</div>
 				</fieldset>
 
-				<fieldset>
+				<fieldset> <!--Systems Section-->
 
 					<legend>Systems Section</legend>
 
@@ -242,37 +242,37 @@
 
 						<div class="col-sm-10">
 							<div class="checkbox">
-							  <label><input name="systemsCheckbox" type="checkbox" value="heavy duty web">
+							  <label><input name="systems[]" type="checkbox" value="1">
 							  	Heavy Duty Web Guide Hydraulic EPC Control System 
 					with Automation – Centring Sensor and Control, 4 pieces Roller and Roll Steering Guiding with Base</label>
 							</div>
 							<div class="checkbox">
-							  <label><input name="systemsCheckbox" type="checkbox" value="heavy duty tension">
+							  <label><input name="systems[]" type="checkbox" value="2">
 							  	Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systemsCheckbox" type="checkbox" value="banana roll">
+							  <label><input name="systems[]" type="checkbox" value="3">
 							  	Banana Roll and Tension Roller</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systemsCheckbox" type="checkbox" value="water cooling">
+							  <label><input name="systems[]" type="checkbox" value="4">
 							  	Water Cooling Brake Systems</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systemsCheckbox" type="checkbox" value="fully computerized">
+							  <label><input name="systems[]" type="checkbox" value="5">
 							  	Fully Computerized Control System</label>
 							</div>
 							
 							<div class="checkbox">
-								<label><input id="systems-others-checkbox" name="systemsCheckbox" type="checkbox"> 
+								<label><input id="systems-others-checkbox" name="systems[]" type="checkbox" value="6"> 
 									<div class="form-inline">
 										<div class="form-group">
 											<label class="control-label" for="systems-others-text-field">
 												Others:</label>
-											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers" type="text">
+											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers" value="<?php if (isset($_POST['systemsOthers'])) echo $_POST['systemsOthers']; ?>" type="text">
 										</div>
 									</div>
 								</label>
@@ -281,13 +281,13 @@
 					</div>
 				</fieldset>
 
-				<fieldset>
+				<fieldset> <!--Other Details Section-->
 					<legend>Other Details</legend>
 
 					<div class="form-group">
 
 						<div class="col-sm-offset-2 col-sm-10">
-					  		<textarea class="form-control" id="comment" rows="8" ></textarea>
+					  		<textarea class="form-control" id="comment" rows="8" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
 						</div>
 					</div>
 				</fieldset>

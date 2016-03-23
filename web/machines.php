@@ -8,7 +8,6 @@
 		<title>Machinovate | Machines</title>
 	</head>
 	<body>
-		<?php include 'header_before_login.php';?>
 		
 		<div id="order-now-content" class="container">
 			<div class="row">
