@@ -13,8 +13,9 @@
 	</head>
 	<body>
 		<?php include 'header_before_login.php';?>
+
 	 <!-- Header -->
-    <header class="header-container">
+    <header>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
