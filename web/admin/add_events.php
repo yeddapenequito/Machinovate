@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } 
     else 
     {
-        $event_date =  trim($_POST['event_date']);
+        $event_date = mysqli_real_escape_string($dbc, trim($_POST['event_date']));
     }
     
 
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } 
     else 
     {
-        $event_name =trim($_POST['event_name']);
+        $event_name = mysqli_real_escape_string($dbc, trim($_POST['event_name']));
     }
     
    
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } 
     else 
     {
-        $event_place =trim($_POST['event_place']);
+        $event_place = mysqli_real_escape_string($dbc, trim($_POST['event_place']));
     }
     
     // Check for an image:
@@ -79,11 +79,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Register the event in the database...
         
         // Make the query: **made by drei*
-        $q = 'INSERT INTO events (event_date, event_name, event_place) VALUES (?,?,?);
-            INSERT INTO event_pictures (event_id, image_name) VALUES ((SELECT event_id FROM events WHERE ), ?);
-            ';
+        $q = "INSERT INTO events (event_date, event_name, event_place) VALUES (?, ?, ?);
+            INSERT INTO event_pictures (event_id, image_name) VALUES ((SELECT event_id FROM events WHERE event_date=?), ?);
+
+            ";
         $stmt = mysqli_prepare($dbc, $q);
-        mysqli_stmt_bind_param($stmt, 'ssss', $event_date, $event_name, $event_place, $i);
+        
+        mysqli_stmt_bind_param($stmt, 'ssss', $event_date, $event_name, $event_place, $event_date, $i);
         mysqli_stmt_execute($stmt);
 
         //Check the results...
@@ -109,15 +111,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p class="error">The event could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
             
             // Debugging message:
-            echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+            echo '<p>' . mysqli_error($stmt) . '<br /><br />Query: ' . $q . '</p>';
                         
         } // End of if ($r) IF.
         
-        mysqli_close($dbc);
+        mysqli_close($stmt);
         
     } //end of $errors IF 
 
-<<<<<<< HEAD
     // Delete the uploaded file if it still exists:
     if ( isset($temp) && file_exists ($temp) && is_file($temp) )
     {
@@ -137,59 +138,6 @@ if ( !empty($errors) && is_array($errors) )
     }
     echo 'Please reselect the print image and try again.</p>';
 }
-=======
-		if (mysqli_stmt_affected_rows($stmt) == 1) { // If it ran OK.
-		
-			// Print a message:
-			echo '<h1>Thank you!</h1>
-			<p>An event has been registered!</p><p><br /></p>';	
-			
-			
-			// Rename the image:
-			$id = mysqli_stmt_insert_id($stmt); // Get the print ID.
-			rename ($temp, "../uploads/$id");
-
-				// Print a message:
-				echo '<p>The print has been added.</p>';
-		
-				// Clear $_POST:
-				$_POST = array();
-		} 
-		else { // If it did not run OK.
-			
-			// Public message:
-			echo '<h1>System Error</h1>
-			<p class="error">The event could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
-			
-			// Debugging message:
-			echo '<p>' . mysqli_error($stmt) . '<br /><br />Query: ' . $q . '</p>';
-						
-		} // End of if ($r) IF.
-		
-		mysqli_stmt_close($stmt); // Close the database connection
-		
-	} 
-	else { // Report the errors.
-	
-		echo '<h1>Error!</h1>
-		<p class="error">The following error(s) occurred:<br />';
-		foreach ($errors as $msg) { // Print each error.
-			echo " - $msg<br />\n";
-		}
-		echo '</p><p>Please try again.</p><p><br /></p>';
-		
-	} // End of if (empty($errors)) IF.
-	
-	mysqli_close($dbc); // Close the database connection.
-
-	// Delete the uploaded file if it still exists:
-	if ( isset($temp) && file_exists ($temp) && is_file($temp) ) {
-		unlink ($temp);
-	}
-
-} // End of the main Submit conditional.
-
->>>>>>> branch 'master' of https://github.com/yeddapenequito/Machinovate.git
 
 ?>
 
