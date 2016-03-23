@@ -12,7 +12,10 @@
 	<div  id="order-sheeter" class="container">
 
 		<h1 class="page-header">Paper Sheeter Form Requirements</h1>
-		<p>Please bear with us. This is going to take long.</p>
+		<div class="text-info">
+			<p>Please bear with us. This is going to take long.</p>
+			<p>If you need any help, please feel free to contact these numbers: +404 6676/+355 4635</p>
+		</div>
 
 		<form action="shipment.php" role="form" class="form-horizontal">
 			<fieldset>

@@ -12,7 +12,11 @@
 
 		<div  id="order-slitter" class="container">
 			<h1 class="page-header">Paper Slitter Form Requirements</h1>
-			<p>Please bear with us. This is going to take long.</p>
+			<div class="text-info">
+				<p>Please bear with us. This is going to take long.</p>
+				<p>If you need any help, please feel free to contact these numbers: +404 6676/+355 4635</p>
+			</div>
+			
 			<form action="form_success.php" role="form" class="form-horizontal" method="post">
 				<fieldset> <!--General Section-->
 					<legend>General Section</legend>
