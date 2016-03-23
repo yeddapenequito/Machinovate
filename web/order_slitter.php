@@ -157,7 +157,7 @@
 										<div class="form-group">
 											
 											<label class="control-label" for"slitter-additional-text-field">Additional</label>
-											<input class="form-control" disabled id="slitter-additional-text-field" min="0" name="addtlBlade" step=".01" type="number"> set of one pair male/female
+											<input class="form-control" disabled id="slitter-additional-text-field" min="0" name="addtlBlade" type="number"> set/s of one pair male/female
 										</div>
 									</div>
 								</label>
