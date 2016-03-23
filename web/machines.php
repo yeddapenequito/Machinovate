@@ -8,6 +8,7 @@
 		<title>Machinovate | Machines</title>
 	</head>
 	<body>
+		<?php include 'header_before_login.php';?>
 		
 		<div id="machines-content" class="container">
 			<div class="row">
