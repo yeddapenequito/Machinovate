@@ -11,7 +11,7 @@
 <body>
     <?php include 'header_after_login.php';?>
     
-    <div class="container">
+    <div id="faq" class="container">
     <div class="panel-group" id="accordion">
         <div class="faqHeader">General</div>
         <div class="panel panel-default">
@@ -22,7 +22,7 @@
             </div>
             <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body">
-                   <p>lkjsdflbfj</p>
+                   <p>You could generate a report in the Generate Reports page.</p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
             </div>
             <div id="collapseTen" class="panel-collapse collapse">
                 <div class="panel-body">
-                   You could see the different specification of your preferred machines by going to the Machines page, and your desired machine.
+                  <p> You could change the status of the order in the tables...</p>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
             </div>
             <div id="collapseEleven" class="panel-collapse collapse">
                 <div class="panel-body">
-                    You could see our location by going to <strong>Contact Us</strong> page in the tab above.
+                    <p>You could edit the order by...</p> 
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse">
                 <div class="panel-body">
-                    Any registed user, who presents a work, which is genuine and appealing, can post it on <strong>PrepBootstrap</strong>.
+                   <p>Deleted orders would....</p> 
                 </div>
             </div>
         </div>
@@ -72,16 +72,54 @@
             </div>
             <div id="collapseThree" class="panel-collapse collapse">
                 <div class="panel-body">
-                    The steps involved in this process are really simple. All you need to do is:
+                  <p>  The steps involved in adding events and agents
                     <ul>
-                        <li>Register an account</li>
-                        <li>Activate your account</li>
-                        <li>Go to the <strong>Themes</strong> section and upload your theme</li>
-                        <li>The next step is the approval step, which usually takes about 72 hours.</li>
-                    </ul>
+                        <li>First click the Manage Websites tab.</li>
+                        <li>Choose your desired action.</li>
+                        <li>In adding events, fill up the necessary information and upload a picture file with a file type of blob.</li>
+                        <li>In adding agents, fill up the necessary information.</li>
+                        <li>Click Add Agents of Add Events button to finish.</li>
+                    </ul></p>
                 </div>
             </div>
-        
+        </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Will there be more than one admin account?</a>
+                </h4>
+            </div>
+
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>There would be only one admin account.</p>
+                </div>
+            </div>
+           </div>
+             <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How to recover forgotten password?</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                   <p>You could recover forgotten password by </p>
+                </div>
+            </div>
+           </div>
+             <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How to edit event descriptions?</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                   <p>You could edit event descriptions by..</p>
+                </div>
+            </div>
+           </div>
     </div>
     </div>
 </div>
@@ -122,7 +160,7 @@
     <script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
     <script type="text/javascript">
-        document.getElementById("order-list").className = "active";
+        document.getElementById("faq").className = "active";
     </script>
 </body>
 </html>

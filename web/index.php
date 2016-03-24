@@ -115,8 +115,8 @@
                     <div class="footer-col col-md-4">
                         <h3>FAQ</h3>
                         <p><a href="faq_order.php">How to Order?</a></p>
-                        <p><a href="#">Specifications of Machines</a></p>
-                        <p><a href="#">How can you contact us?</a></p>
+                        <p><a href="faq_order.php">Specifications of Machines</a></p>
+                        <p><a href="faq_order.php">How I contact your company?</a></p>
                         
                     </div>
                     <div class="footer-col col-md-4">
