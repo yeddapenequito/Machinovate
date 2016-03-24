@@ -83,17 +83,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $r = @mysqli_multi_query ($dbc, $q); // Run the query.
         if ($r) { // If it ran OK.
-        
+            // Rename the image:
+            $id = mysqli_stmt_insert_id($r); // Get the print ID.
+            rename ($temp, "../../uploads/$id");
             // Print a message:
             echo '<h1>Thank you!</h1>
-        <p>An agent has been registered!</p><p><br /></p>'; 
+        <p>An event has been added!</p><p><br /></p>'; 
         header('Location: /Machinovate/web/admin/account_successful.php');
         
         } else { // If it did not run OK.
             
             // Public message:
             echo '<h1>System Error</h1>
-            <p class="error">The agent could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
+            <p class="error">The event could not be added due to a system error. We apologize for any inconvenience.</p>'; 
             header('Location: /Machinovate/web/admin/account_failed.php');
             // Debugging message:
             echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';

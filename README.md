@@ -79,7 +79,7 @@ SURE TABLES NA UNG SA BABA :)
 
 CREATE TABLE events (
 	event_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-	event_date DATE NOT NULL,
+	event_date VARCHAR(30) NOT NULL,
 	event_name VARCHAR(60) NOT NULL,
 	event_place VARCHAR(60) NOT NULL,
 	PRIMARY KEY (event_id)
@@ -89,8 +89,7 @@ CREATE TABLE events (
 CREATE TABLE event_pictures (
 	pic_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	event_id INT UNSIGNED NOT NULL,
-	image blob NOT NULL,
-	caption VARCHAR(255) NOT NULL,
+	image VARCHAR(255) NOT NULL,
 	PRIMARY KEY (pic_id)
 	--
 ) ENGINE=MyISAM;
