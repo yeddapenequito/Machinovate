@@ -8,11 +8,6 @@
 		
         <!-- Custom CSS -->
     	<link href="styles/freelancer.css" rel="stylesheet">
-        <style type="text/css">
-        body {
-            padding-top: 0;
-        }
-        </style>
 		<title>Machinovate | Home</title>
 			
 	</head>
