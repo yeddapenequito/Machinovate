@@ -13,7 +13,7 @@ body {
 }
 
 .table-borderless td {
-  border: none;
+  border: none !important;
 }
 
 .table-borderless td:nth-child(2) {

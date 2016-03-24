@@ -13,24 +13,10 @@
 	<body>
 		<?php include 'header_before_login.php';?>
 
-		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
-		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-		<script type="text/javascript">
-		document.getElementById("agents").className = "active";
-		</script>
-	</body>
-</html>
-
-
-
 <?php # Script 9.4 - view_users.php
 // This script retrieves all the records from the users table.
 
 $page_title = 'View the Agent';
-
-
-// Page header:
-echo '<h1>Agents</h1>';
 
 require ('../mysqli_connect.php'); // Connect to the db.
 		
@@ -47,10 +33,23 @@ if ($r) { // If it ran OK, display the records.
 					<div class="col-xs-12 col-md-offset-3 col-md-6 agent">
 						<img class="col-xs-4" src="styles/flag-icon-css-master/flags/4x3/'. $row['country_num'] .'.svg">
 						<div class="col-xs-8">
-							<p><b><u>'. $row['country'] . '</u></b></p>
-							<p><b>Name: </b>  <a>' . $row['name'] . '</a></p>
-							<p><b>Email Address:</b> <a>' . $row['email'] . ' </a></p>
-							<p><b>Mobile No: </b> <a>' . $row['contact'] . '</a></p>
+							<p><strong class="text-uppercase"><u>'. $row['country'] . '</u></strong></p>
+							<table class="table table-borderless table-condensed">
+								<tbody>
+									<tr>
+										<td>Name</td>
+										<td class="text-info">: ' . $row['name'] . '</td>
+									</tr>
+									<tr>
+										<td>Email Address</td>
+										<td class="text-info">: ' . $row['email'] . '</td>
+									</tr>
+									<tr>
+										<td>Mobile No.</td>
+										<td class="text-info">: ' . $row['contact'] . '</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
@@ -75,3 +74,10 @@ if ($r) { // If it ran OK, display the records.
 mysqli_close($dbc); // Close the database connection.
 
 ?>
+		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		document.getElementById("agents").className = "active";
+		</script>
+	</body>
+</html>
