@@ -21,7 +21,7 @@
 						<h1>Choose your machine</h1>
 					</header>
 					<form>
-						<div class="btn-group btn-group-vertical">
+						<div id="vertical-box" class="btn-group btn-group-vertical">
 						  <a id="slitter" href="#" onclick="changeImage(0)" class="btn btn-primary">Slitter
 						  	<small>Slit down and wound up large rolls into several smaller rolls</small>
 						  </a>
