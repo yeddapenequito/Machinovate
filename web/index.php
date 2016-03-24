@@ -4,10 +4,15 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="styles/bootstrap.min.css">
-		 <link rel="stylesheet" href="styles/main.css">
-		 <!-- Custom CSS -->
+		<link rel="stylesheet" href="styles/main.css">
+		
+        <!-- Custom CSS -->
     	<link href="styles/freelancer.css" rel="stylesheet">
-
+        <style type="text/css">
+        body {
+            padding-top: 0;
+        }
+        </style>
 		<title>Machinovate | Home</title>
 			
 	</head>
@@ -19,11 +24,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="images/mach-colored.png" alt="">
+                    <img class="img-responsive" src="images/mach-colored.png" alt="mach logo">
                     <div class="intro-text">
                         <span class="name">Innovating Through Generation.</span>
-                        <hr>
-                        <span class="skills">Machinovate International Inc.</span>
                     </div>
                 </div>
             </div>
