@@ -112,7 +112,9 @@ CREATE TABLE shipping_details (
 	--
 ) ENGINE=MyISAM;
 
-CREATE TABLE users (
+
+
+CREATE TABLE users ( //see below for sample insert
 	user_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	first_name VARCHAR(20) NOT NULL,
 	last_name VARCHAR(40) NOT NULL,
@@ -121,3 +123,8 @@ CREATE TABLE users (
 	pass CHAR(40) NOT NULL,
 	PRIMARY KEY (user_id)
 );
+
+//insert your own users n lng ha :) follow this format
+INSERT INTO users (username, pass, first_name, last_name, email) VALUES 
+('abc', SHA1('123'), 'Larry', 'Ullman', 'lu@example.com');
+
