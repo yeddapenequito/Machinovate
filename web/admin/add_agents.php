@@ -2,7 +2,17 @@
 
 <?php # Script 9.5 - register.php #2
 // This script performs an INSERT query to add a record to the agents table
+session_start(); // Start the session.
 
+// If no session value is present, redirect the user:
+// Also validate the HTTP_USER_AGENT!
+if (!isset($_SESSION['agent']) OR ($_SESSION['agent'] != md5($_SERVER['HTTP_USER_AGENT']) )) {
+
+	// Need the functions:
+	require ('includes/login_functions.inc.php');
+	redirect_user();	
+
+}
 $page_title = 'Machinovate | Add Agent';
 include ('header_after_login.php');
 

@@ -29,8 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		// Assign $data to $errors for index.inc.php:
 		$errors = $data;
+		redirect_user('index.inc.php');
 		include('error_login.php');
-
 	}
 		
 	mysqli_close($dbc); // Close the database connection.
@@ -38,5 +38,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 } // End of the main submit conditional.
 
 // Create the page:
-include ('includes/index.inc.php');
+	
 ?>
