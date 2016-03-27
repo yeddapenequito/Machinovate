@@ -27,6 +27,8 @@
     <?php include 'header_after_login.php';?>
     
     <div id="faq" class="container">
+    <h2 style="text-align: center;">FAQ</h2>
+    <h1 style="text-align: center;"><small>Frequently Asked Questions</small></h1>
     <div class="panel-group" id="accordion">
         <div class="faqHeader">General</div>
         <div class="panel panel-default">

@@ -340,12 +340,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 	} else { // Report the errors.
 	
-		echo '<h1>Error!</h1>
+		echo '<div class="container"><h1>Error!</h1>
 		<p class="error">The following error(s) occurred:<br />';
 		foreach ($errors as $msg) { // Print each error.
 			echo " - $msg<br />\n";
 		}
-		echo '</p><p>Please try again.</p><p><br /></p>';
+		echo '</p><p>Please try again.</p><p><br /></p></div>';
 		
 	} // End of if (empty($errors)) IF.
 	

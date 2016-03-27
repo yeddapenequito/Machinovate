@@ -24,8 +24,8 @@ $page_title = 'Logged Out!';
 //include ('includes/header.html');
 
 // Print a customized message:
-echo "<h1>Logged Out!</h1>
-<p>You are now logged out!</p>";
+echo "<div class='container'><h1>Logged Out!</h1>
+<p>You are now logged out!</p></div>";
 
 include ('includes/index.inc.php');
 ?>
