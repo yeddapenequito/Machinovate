@@ -36,7 +36,7 @@
                         <li>Choose among Slitter, Sheeter, Cutter or Other products.</li>
                         <li>Click continue.</li>
                         <li>Choose your <strong>desired</strong> machine</li>
-                        <li>Press Add to Cart button</li>
+                        <li>Press Add to Cart button.</li>
                         <li>Fill up the form requirements.</li>
                         <li>Fill up the shipment details.</li>
                     </ul>
