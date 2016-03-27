@@ -70,10 +70,10 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">How can I contact your company?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve">How can I contact your company?</a>
                 </h4>
             </div>
-            <div id="collapseEleven" class="panel-collapse collapse">
+            <div id="collapseTwelve" class="panel-collapse collapse">
                 <div class="panel-body">
                     You could contact us by our telephone numbers located in the <strong>Contact Us</strong> page in the tab above.
                 </div>

@@ -86,11 +86,11 @@
          <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Will there be more than one admin account?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Will there be more than one admin account?</a>
                 </h4>
             </div>
 
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div id="collapseFour" class="panel-collapse collapse">
                 <div class="panel-body">
                     <p>There would be only one admin account.</p>
                 </div>
@@ -99,10 +99,10 @@
              <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How to recover forgotten password?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">How to recover forgotten password?</a>
                 </h4>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div id="collapseFive" class="panel-collapse collapse">
                 <div class="panel-body">
                    <p>You could recover forgotten password by </p>
                 </div>
@@ -111,10 +111,10 @@
              <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How to edit event descriptions?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">How to edit event descriptions?</a>
                 </h4>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div id="collapseSix" class="panel-collapse collapse">
                 <div class="panel-body">
                    <p>You could edit event descriptions by..</p>
                 </div>
