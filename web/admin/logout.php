@@ -20,12 +20,12 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Set the page title and include the HTML header:
-$page_title = 'Logged Out!';
+//$page_title = 'Logged Out!';
 //include ('includes/header.html');
 
 // Print a customized message:
-echo "<div class='container'><h1>Logged Out!</h1>
-<p>You are now logged out!</p></div>";
+//echo "<div class='container'><h1>Logged Out!</h1>
+//<p>You are now logged out!</p></div>";
 
-include ('includes/index.inc.php');
+include ('index.inc.php');
 ?>
