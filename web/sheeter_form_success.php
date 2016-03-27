@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
-				<form action="cart_summary.php?unitName=MACH-Sync (Twin Knife - Overlapping)" role="form" class="form-horizontal"method='post'>
+				<form action="cart_summary.php?unitName=MACH_SV" role="form" class="form-horizontal"method='post'>
 					<legend>Your Order has been added to your Cart!</legend>
 	<?php 
 		echo 'NO ERROR TRAPPING YET';
@@ -51,10 +51,10 @@
 			
 			////CUTTING SECTION
 			//main drive
-			'cs_mainDrive' => $_POST['mainDriveRadio'],
+			//'cs_mainDrive' => $_POST['mainDriveRadio'],
 			
 			//knife
-			'cs_knife' => $_POST['knifeRadio'],
+			//'cs_knife' => $_POST['knifeRadio'],
 
 			//slitter
 			'cs_slitter' => isChecked($_POST['slitterCheckbox'], 1),
@@ -63,10 +63,10 @@
 			////URS
 			//Reel Stand
 			'rs_hydraulicShaftless' => isChecked($_POST['reelStand'], 1),
-			'rs_hs' => $_POST['reelHydraulicRadio'],
+			//'rs_hs' => $_POST['reelHydraulicRadio'],
 
 			'rs_standard' =>isChecked($_POST['reelStand'], 2),
-			'rs_s' => $_POST['reelStandardRadio'],
+			//'rs_s' => $_POST['reelStandardRadio'],
 
 			'rs_autoTension' => isChecked($_POST['reelStand'], 3),
 			'rs_indivAutoTension' => isChecked($_POST['reelStand'], 4),
