@@ -264,7 +264,7 @@
 											<div class="form-inline">
 												
 												<input class="reel-standard-radio" disabled id="ten-rolls-radio" name="reelStandardRadio" type="radio" value="Ten(10) Rolls">
-												Ten(10) Rolls + <input class="form-control" disabled id="ten-rolls-text" name="noOfAdditionalRolls" type="number"  value="<?php if (isset($_POST['noOfAdditionalRolls'])) echo $_POST['noOfAdditionalRolls']; ?>> Rolls
+												Ten(10) Rolls + <input class="form-control" disabled id="ten-rolls-text" name="noOfAdditionalRolls" type="number"  value="<?php if (isset($_POST['noOfAdditionalRolls'])) echo $_POST['noOfAdditionalRolls']; ?>"> Rolls
 											</div>
 										</label>
 									</div>
@@ -364,10 +364,11 @@
 
 				<fieldset> <!--Other Details Section-->
 					<legend>Other Details</legend>
+
 					<div class="form-group">
 						<label for="comment" class="control-label col-sm-2">Details:</label>
 						<div class="col-sm-10">
-							<textarea class="form-control" rows="8" id="comment" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
+							<textarea class="form-control" rows="8" id="comment" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
 						</div>
 					</div>
 				</fieldset>
