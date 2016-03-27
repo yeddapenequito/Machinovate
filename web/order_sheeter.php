@@ -60,7 +60,7 @@
 						</div>
 					</div>
 
-					<!-- Cut Paper Type -->
+					<!-- Paper Type -->
 					<div class="form-group">
 
 						<label class="control-label col-sm-2" for="paper-type">Paper Type:</label>
@@ -264,7 +264,7 @@
 											<div class="form-inline">
 												
 												<input class="reel-standard-radio" disabled id="ten-rolls-radio" name="reelStandardRadio" type="radio" value="Ten(10) Rolls">
-												Ten(10) Rolls + <input class="form-control" disabled id="ten-rolls-text" name="noOfAdditionalRolls" type="number"> Rolls
+												Ten(10) Rolls + <input class="form-control" disabled id="ten-rolls-text" name="noOfAdditionalRolls" type="number"  value="<?php if (isset($_POST['noOfAdditionalRolls'])) echo $_POST['noOfAdditionalRolls']; ?>> Rolls
 											</div>
 										</label>
 									</div>

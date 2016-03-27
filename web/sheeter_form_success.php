@@ -51,22 +51,23 @@
 			
 			////CUTTING SECTION
 			//main drive
-			//'cs_mainDrive' => $_POST['mainDriveRadio'],
+			'cs_mainDrive' => $_POST['mainDriveRadio'],
 			
 			//knife
-			//'cs_knife' => $_POST['knifeRadio'],
+			'cs_knife' => $_POST['knifeRadio'],
 
 			//slitter
 			'cs_slitter' => isChecked($_POST['slitterCheckbox'], 1),
-			//'cs_slitterMax' => $_POST['slitterMax']
+			'cs_slitterMax' => $_POST['slitterMax'],
 
 			////URS
 			//Reel Stand
 			'rs_hydraulicShaftless' => isChecked($_POST['reelStand'], 1),
-			//'rs_hs' => $_POST['reelHydraulicRadio'],
+			'rs_hs' => $_POST['reelHydraulicRadio'],
 
 			'rs_standard' =>isChecked($_POST['reelStand'], 2),
-			//'rs_s' => $_POST['reelStandardRadio'],
+			'rs_s' => $_POST['reelStandardRadio'],
+			'rs_s_addRolls' => $_POST['noOfAdditionalRolls'],
 
 			'rs_autoTension' => isChecked($_POST['reelStand'], 3),
 			'rs_indivAutoTension' => isChecked($_POST['reelStand'], 4),
