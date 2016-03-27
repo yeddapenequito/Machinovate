@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		// Assign $data to $errors for index.inc.php:
 		$errors = $data;
+		include('error_login.php');
 
 	}
 		
