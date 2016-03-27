@@ -9,15 +9,15 @@
 	</head>
 	<body>
 		<?php include "header_on_form_completion.php";?>
+		
 		<div  id="order-sheeter" class="container">
-
 			<h1 class="page-header">Paper Sheeter Form Requirements</h1>
 			<div class="text-info">
 				<p>Please bear with us. This is going to take long.</p>
 				<p>If you need any help, please feel free to contact these numbers: +404 6676/+355 4635</p>
 			</div>
 
-			<form action="sheeter_form_success.php" role="form" class="form-horizontal">
+			<form action="sheeter_form_success.php" role="form" class="form-horizontal" method="post">
 				<fieldset>
 					<legend>General Section</legend>
 
@@ -32,15 +32,15 @@
 									MACH-SV (PIV - Overlapping)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="sheeterType" type="radio" value="MACH-SRV (Servo - Overlapping)">
+								<label><input class="type" name="sheeterType" type="radio" value="MACH-SRV">
 									MACH-SRV (Servo - Overlapping)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="sheeterType" type="radio" value="MACH-Compact (Standard)">
+								<label><input class="type" name="sheeterType" type="radio" value="MACH-Compact">
 									MACH-Compact (Standard)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="sheeterType" type="radio" value="MACH-Sync (Twin Knife - Overlapping)">
+								<label><input class="type" name="sheeterType" type="radio" value="MACH-Sync">
 									MACH-Sync (Twin Knife - Overlapping)</label>
 							</div>
 						</div>
@@ -297,19 +297,19 @@
 						<div class="col-sm-10">
 							<div class="checkbox">
 								<label>
-									<input disabled class="shaft-check" name="shaft[]" type="checkbox" value="1">
+									<input class="shaft-check" name="shaft[]" type="checkbox" value="1">
 									Mechanical Shaft
 								</label>
 							</div>	
 							<div class="checkbox">
 								<label>
-									<input disabled class="shaft-check" name="shaft[]" type="checkbox" value="2">
+									<input class="shaft-check" name="shaft[]" type="checkbox" value="2">
 									Air Shaft (Heavy Duty)
 								</label>
 							</div>	
 							<div class="checkbox">
 								<label>
-									<input disabled class="shaft-check" name="shaft[]" type="checkbox" value="3">
+									<input class="shaft-check" name="shaft[]" type="checkbox" value="3">
 									Others
 								</label>
 							</div>							

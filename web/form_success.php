@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
-				<form action="cart_summary.php?unitName=MACH_SV" role="form" class="form-horizontal"method='post'>
+				<form action="cart_summary.php?unitName=Customized" role="form" class="form-horizontal"method='post'>
 					<legend>Your Order has been added to your Cart!</legend>
 	<?php 
 		echo 'NO ERROR TRAPPING YET';
@@ -37,52 +37,36 @@
 		}
 		///end of functions
 
-		$modelName = $_POST['sheeterType'];	//can be $_GET
+		$modelName = $_POST['slitterType'];	//can be $_GET
 		$_SESSION['cart'][$modelName] = array(
 			////general section
-			'sheeterType' => $_POST['sheeterType'],
+			'slitterType' => $_POST['slitterType'],
 			'productionVolume' => $_POST['productionVolume'],
 			'paperType' => $_POST['paperType'],
 			'gsm' => $_POST['gsmMin']." - ".$_POST['gsmMax'],
 			//'gsmUnit' => $_POST['gsmUnit'], tanggalin to
 			'rollDiameter' => convertInchToMillimeter($_POST['rollDiameterMin'],$_POST['rollDiameterUnit'])." - ".convertInchToMillimeter($_POST['rollDiameterMax'],$_POST['rollDiameterUnit']),
-			'cuttOffLength' => convertInchToMillimeter($_POST['cutOffLengthMin'],$_POST['cutOffLengthUnit'])." - ".convertInchToMillimeter($_POST['cutOffLengthMax'],$_POST['cutOffLengthUnit']),
 			'slittingWidth' => convertInchToMillimeter($_POST['slittingWidthMin'],$_POST['slittingWidthUnit'])." - ".convertInchToMillimeter($_POST['slittingWidthMax'],$_POST['slittingWidthUnit']),
 			
-			////CUTTING SECTION
-			//main drive
-			//'cs_mainDrive' => $_POST['mainDriveRadio'],
+			////cutting
+			//'addtlBlade' => $_POST['addtlBlade'],
+			'coreCutterMachine' => isChecked($_POST['coreCutterMachine'], 1),
 			
-			//knife
-			//'cs_knife' => $_POST['knifeRadio'],
-
-			//slitter
-			'cs_slitter' => isChecked($_POST['slitterCheckbox'], 1),
-			//'cs_slitterMax' => $_POST['slitterMax']
-
 			////URS
-			//Reel Stand
-			'rs_hydraulicShaftless' => isChecked($_POST['reelStand'], 1),
-			//'rs_hs' => $_POST['reelHydraulicRadio'],
+			'rs_HydraulicShaftless' => isChecked($_POST['reelStand'], 1),
+			'rs_Single' => isChecked($_POST['reelStand'], 2),
+			'rs_Customized' => isChecked($_POST['reelStand'], 3),
+			'rs_ShaftStand' => isChecked($_POST['reelStand'], 4),
+			//'rs_Others' => isChecked($_POST['reelStand'], 5),
+			'tonCapacity' => $_POST['tonCapacity'],
 
-			'rs_standard' =>isChecked($_POST['reelStand'], 2),
-			//'rs_s' => $_POST['reelStandardRadio'],
-
-			'rs_autoTension' => isChecked($_POST['reelStand'], 3),
-			'rs_indivAutoTension' => isChecked($_POST['reelStand'], 4),
-
-			//Shaft
-			'sh_mechanical' =>isChecked($_POST['shaft'], 1),
-			'sh_airShaft' =>isChecked($_POST['shaft'], 2),
-			'sh_others' =>isChecked($_POST['shaft'], 3),
-
-			//Roll Weight
-			'rollWeight' => $_POST['rollWeight'],
-
-			////SYSTEMS
-			'sys_ComputerControl' => isChecked($_POST['systems'], 1),
-			'sys_WebGuideHydraulicEPC' => isChecked($_POST['systems'], 2),
-			'sys_Others' => isChecked($_POST['systems'], 3),
+			////systems
+			'sys_WebGuideHydraulicEPC' => isChecked($_POST['systems'], 1),
+			'sys_Tension' => isChecked($_POST['systems'], 2),
+			'sys_BananaRoll_TensionRoller' => isChecked($_POST['systems'], 3),
+			'sys_BrakeSystem' => isChecked($_POST['systems'], 4),
+			'sys_FullyComputerized' => isChecked($_POST['systems'], 5),
+			//'sys_Others' => isChecked($_POST['systems'], 12),
 
 			////other details
 			'otherDetails' => $_POST['otherDetails']
