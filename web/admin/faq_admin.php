@@ -21,13 +21,13 @@
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/admin.css">
-    <title>Machinovate | Order List</title>
+    <title>Machinovate | Help/FAQ</title>
 </head>
 <body>
     <?php include 'header_after_login.php';?>
     
     <div id="faq" class="container">
-    <h2 style="text-align: center;">FAQ</h2>
+    <h2 style="text-align: center;">Help/FAQ</h2>
     <h1 style="text-align: center;"><small>Frequently Asked Questions</small></h1>
     <div class="panel-group" id="accordion">
         <div class="faqHeader">General</div>
