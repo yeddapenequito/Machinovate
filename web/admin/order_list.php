@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../styles/bootstrap.min.css">
+	<link rel="stylesheet" href="../styles/main.css">
+	<link rel="stylesheet" href="../styles/admin.css">
+	<title>Machinovate | Order List</title>
+</head>
+<body>
+	<?php include 'header_after_login.php';?>
+	
+	<div id="order-list-content" class="container">
 <?php 
 // The user is redirected here AFTER SUCCESSFUL LOGIN
 
@@ -18,27 +32,17 @@ $page_title = 'Logged In!';
 //include ('header_after_login.php');
 
 // Print a customized message:
-echo "<h1>Logged In!</h1>
-<p>You are now logged in, {$_SESSION['first_name']}!</p>
-//<p><a href=\"logout.php\">Logout</a></p>";
+echo "
 
+	<h1>Logged In!</h1>
+	<p>You are now logged in, {$_SESSION['first_name']}!</p>";
 //include ('includes/footer.html');
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../styles/bootstrap.min.css">
-	<link rel="stylesheet" href="../styles/main.css">
-	<link rel="stylesheet" href="../styles/admin.css">
-	<title>Machinovate | Order List</title>
-</head>
-<body>
-	<?php include 'header_after_login.php';?>
-	
-	<div id="order-list-content" class="container">
+		<div id="employee-logout">
+				<a id="logout-btn" href="logout.php" class="btn btn-sm" role="button">Logout</a> 
+				</div>
+				<br>
 		<ul class="nav nav-tabs">
 		  <li><a data-toggle="tab" href="#menu1">All</a></li>
 		  <li class="active"><a data-toggle="tab" href="#home">Pending</a></li>
