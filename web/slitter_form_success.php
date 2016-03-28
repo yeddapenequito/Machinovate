@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
-				<form action="cart_summary.php?unitName=Customized" role="form" class="form-horizontal"method='post'>
+				<form action="cart_summary.php?unitName=SL_Customized" role="form" class="form-horizontal"method='post'>
 					<legend>Your Order has been added to your Cart!</legend>
 	<?php 
 		echo 'NO ERROR TRAPPING YET';
