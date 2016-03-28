@@ -13,7 +13,7 @@
 		<div  id="order-slitter" class="container">
 			<h1 class="page-header">Cutter Form Requirements</h1>
 			<p>Please bear with us.</p>
-			<form action="shipment.php" role="form" class="form-horizontal">
+			<form action="cutter_form_success.php" role="form" class="form-horizontal" method="post">
 				<fieldset>
 					<legend>General Section</legend>
 
@@ -24,31 +24,31 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input class="type" name="typeRadio" type="radio" value="115E">
+								<label><input class="type" name="cutterRadio" type="radio" value="115E">
 									CT-115E (115 cm/45.2in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="typeRadio" type="radio" value="137E">
+								<label><input class="type" name="cutterRadio" type="radio" value="137E">
 									CT-137E (137 cm/53.9in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="typeRadio" type="radio" value="155E">
+								<label><input class="type" name="cutterRadio" type="radio" value="155E">
 									CT-155E (155cm/61in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="typeRadio" type="radio" value="185E">
+								<label><input class="type" name="cutterRadio" type="radio" value="185E">
 									CT-185E (185cm/72.8in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="typeRadio" type="radio" value="220E">
+								<label><input class="type" name="cutterRadio" type="radio" value="220E">
 									CT-220E (220cm/86.6in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="typeRadio" type="radio" value="260E">
+								<label><input class="type" name="cutterRadio" type="radio" value="260E">
 									CT-260E (260cm/102.3in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="typeRadio" type="radio" value="300E">
+								<label><input class="type" name="cutterRadio" type="radio" value="300E">
 									CT-300E (300cm/118.1in)</label>
 							</div>
 						</div>
@@ -62,7 +62,7 @@
 					<div class="form-group">
 
 						<div class="col-sm-offset-2 col-sm-10">
-					  		<textarea class="form-control" id="comment" rows="8" ></textarea>
+					  		<textarea class="form-control" id="comment" rows="8"  name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
 						</div>
 					</div>
 				</fieldset>
