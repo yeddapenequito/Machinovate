@@ -28,9 +28,6 @@
 $page_title = 'View the event';
 
 
-// Page header:
-echo '<h1>events</h1>';
-
 require ('../mysqli_connect.php'); // Connect to the db.
 		
 // Make the query:
