@@ -16,6 +16,17 @@
 			<form action="cutter_form_success.php" role="form" class="form-horizontal" method="post">
 				<fieldset>
 					<legend>General Section</legend>
+					<div>
+					<img src="images/CT-115E.png" id="cutter-images" style="height: 
+					200px; width: 230px;">
+					<img src="images/CT-137E.png" id="cutter-images" style="height: 
+					200px; width: 230px;">
+					<img src="images/CT-155E.png" id="cutter-images" style="height: 
+					200px; width: 230px;">
+					<img src="images/CT-260E.png" id="cutter-images" style="height: 
+					200px; width: 230px;">
+					</div>
+					<br>
 
 					<!-- Type -->
 					<div class="form-group">
