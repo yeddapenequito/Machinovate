@@ -26,6 +26,7 @@
                 </div>
             </div>
         </div>
+        <a href="#portfolio"><span class="glyphicon glyphicon-chevron-down"></span></a>
     </header>
 
     <!-- Portfolio Grid Section -->
@@ -270,20 +271,14 @@
 		
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-		<script type="text/javascript">
-			document.getElementById("home").className = "active";
-		</script>
-		  <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/cbpAnimatedHeader.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="js/freelancer.js"></script>          
+
 	</body>
 </html>
