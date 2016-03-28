@@ -181,16 +181,11 @@
                                         <div class="col-sm-10 upload-img">
                                             <input name="image_name" id="image" type="file" class="form-control" value="Browse Image"/>
                                         </div>
-                                        <div class="col-sm-2 remove-img">
-                                            <button id="remove-img-btn" type="button" class="btn btn-default">
-                                                <span class="glyphicon glyphicon-remove"></span>
-                                            </button>
-                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- add another image button -->
-                                <button id="add-img-btn" type="button" class="btn btn-default">
+                                <button id="add-img-btn" type="button" title="Upload another image" class="btn btn-default">
                                     <span class="glyphicon glyphicon-plus"></span>
                                 </button>
                             </div>
