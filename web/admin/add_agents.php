@@ -1,8 +1,21 @@
 <!--PHP -->
 
 <?php # Script 9.5 - register.php #2
-// This script performs an INSERT query to add a record to the agents table
 
+	//session
+	session_start(); // Start the session.
+
+	// If no session value is present, redirect the user:
+	// Also validate the HTTP_USER_AGENT!
+	if (!isset($_SESSION['agent']) OR ($_SESSION['agent'] != md5($_SERVER['HTTP_USER_AGENT']) )) {
+
+		// Need the functions:
+		require ('includes/login_functions.inc.php');
+		redirect_user();	
+
+}
+
+// This script performs an INSERT query to add a record to the agents table
 $page_title = 'Machinovate | Add Agent';
 include ('header_after_login.php');
 
@@ -327,12 +340,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 	} else { // Report the errors.
 	
-		echo '<h1>Error!</h1>
+		echo '<div class="container"><h1>Error!</h1>
 		<p class="error">The following error(s) occurred:<br />';
 		foreach ($errors as $msg) { // Print each error.
 			echo " - $msg<br />\n";
 		}
-		echo '</p><p>Please try again.</p><p><br /></p>';
+		echo '</p><p>Please try again.</p><p><br /></p></div>';
 		
 	} // End of if (empty($errors)) IF.
 	

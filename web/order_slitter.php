@@ -17,7 +17,7 @@
 				<p>If you need any help, please feel free to contact these numbers: +404 6676/+355 4635</p>
 			</div>
 			
-			<form action="form_success.php" role="form" class="form-horizontal" method="post">
+			<form action="slitter_form_success.php" role="form" class="form-horizontal" method="post">
 				<fieldset> <!--General Section-->
 					<legend>General Section</legend>
 
@@ -289,7 +289,7 @@
 					<legend>Other Details</legend>
 
 					<div class="form-group">
-
+						<label for="comment" class="control-label col-sm-2">Details:</label>
 						<div class="col-sm-offset-2 col-sm-10">
 					  		<textarea class="form-control" id="comment" rows="8" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
 						</div>
@@ -308,6 +308,7 @@
 				</div>
 			</form>
 		</div> <!-- /.container -->
+		
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">

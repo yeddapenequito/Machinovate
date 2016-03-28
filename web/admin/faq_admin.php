@@ -1,3 +1,18 @@
+<?php
+
+    //session
+    session_start(); // Start the session.
+
+    // If no session value is present, redirect the user:
+    // Also validate the HTTP_USER_AGENT!
+    if (!isset($_SESSION['agent']) OR ($_SESSION['agent'] != md5($_SERVER['HTTP_USER_AGENT']) )) {
+
+        // Need the functions:
+        require ('includes/login_functions.inc.php');
+        redirect_user();    
+
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,12 +21,14 @@
     <link rel="stylesheet" href="../styles/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/admin.css">
-    <title>Machinovate | Order List</title>
+    <title>Machinovate | Help/FAQ</title>
 </head>
 <body>
     <?php include 'header_after_login.php';?>
     
     <div id="faq" class="container">
+    <h2 style="text-align: center;">Help/FAQ</h2>
+    <h1 style="text-align: center;"><small>Frequently Asked Questions</small></h1>
     <div class="panel-group" id="accordion">
         <div class="faqHeader">General</div>
         <div class="panel panel-default">
@@ -86,11 +103,11 @@
          <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Will there be more than one admin account?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Will there be more than one admin account?</a>
                 </h4>
             </div>
 
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div id="collapseFour" class="panel-collapse collapse">
                 <div class="panel-body">
                     <p>There would be only one admin account.</p>
                 </div>
@@ -99,10 +116,10 @@
              <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How to recover forgotten password?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">How to recover forgotten password?</a>
                 </h4>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div id="collapseFive" class="panel-collapse collapse">
                 <div class="panel-body">
                    <p>You could recover forgotten password by </p>
                 </div>
@@ -111,10 +128,10 @@
              <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How to edit event descriptions?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">How to edit event descriptions?</a>
                 </h4>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div id="collapseSix" class="panel-collapse collapse">
                 <div class="panel-body">
                    <p>You could edit event descriptions by..</p>
                 </div>

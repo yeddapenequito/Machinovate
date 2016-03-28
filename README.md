@@ -6,21 +6,6 @@ This git is for the creation of website for Machinovate
 SQL QUERIES
 ----------------------------------------------------*/
 
-USE machinovate;
-
-
-//AGENTS TABLE
-CREATE TABLE agents (
-	agent_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
-	first_name VARCHAR(20) NOT NULL,
-	last_name VARCHAR(40) NOT NULL,
-	country VARCHAR(30) NOT NULL,
-	country_num VARCHAR(2)NOT NULL,
-	email VARCHAR(60) NOT NULL,
-	contact VARCHAR(60),
-	PRIMARY KEY (agent_id)
-);
-
 /*----------------------------------------------
 TENTATIVE SQL QUERIES - DONT EXECUTE YET!!
 -----------------------------------------------*/
@@ -76,6 +61,21 @@ CREATE TABLE sheeter_specs(
 /*-------------------------------------------------------
 SURE TABLES NA UNG SA BABA :)
 -------------------------------------------------------*/
+USE machinovate;
+
+
+//AGENTS TABLE
+CREATE TABLE agents (
+	agent_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	first_name VARCHAR(20) NOT NULL,
+	last_name VARCHAR(40) NOT NULL,
+	country VARCHAR(30) NOT NULL,
+	country_num VARCHAR(2)NOT NULL,
+	email VARCHAR(60) NOT NULL,
+	contact VARCHAR(60),
+	PRIMARY KEY (agent_id)
+);
+
 
 CREATE TABLE events (
 	event_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -111,4 +111,20 @@ CREATE TABLE shipping_details (
 	PRIMARY KEY (shipping_id)
 	--
 ) ENGINE=MyISAM;
+
+
+
+CREATE TABLE users ( //see below for sample insert
+	user_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	first_name VARCHAR(20) NOT NULL,
+	last_name VARCHAR(40) NOT NULL,
+	username VARCHAR(40) NOT NULL,
+	email VARCHAR(60) NOT NULL,
+	pass CHAR(40) NOT NULL,
+	PRIMARY KEY (user_id)
+);
+
+//insert your own users n lng ha :) follow this format
+INSERT INTO users (username, pass, first_name, last_name, email) VALUES 
+('abc', SHA1('123'), 'Larry', 'Ullman', 'lu@example.com');
 
