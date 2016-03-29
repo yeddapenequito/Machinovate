@@ -28,19 +28,19 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input class="type" name="sheeterType" type="radio" value="MACH-SV (PIV - Overlapping)">
+								<label><input class="type" name="sheeterType" type="radio" value="SH_PIV">
 									MACH-SV (PIV - Overlapping)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="sheeterType" type="radio" value="MACH-SRV">
+								<label><input class="type" name="sheeterType" type="radio" value="SH_SRV">
 									MACH-SRV (Servo - Overlapping)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="sheeterType" type="radio" value="MACH-Compact">
+								<label><input class="type" name="sheeterType" type="radio" value="SH_Compact">
 									MACH-Compact (Standard)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="sheeterType" type="radio" value="MACH-Sync">
+								<label><input class="type" name="sheeterType" type="radio" value="SH_Sync">
 									MACH-Sync (Twin Knife - Overlapping)</label>
 							</div>
 						</div>
