@@ -22,13 +22,17 @@
 	<div class="container">
     <div class="panel-group" id="accordion">
         <div class="faqHeader">General</div>
+
+        <!-- question 1 -->
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">How to order machines?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        How to order machines?</a>
                 </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
+
+            <div id="collapseOne" class="panel-collapse collapse">
                 <div class="panel-body">
                     Steps in Ordering
                     <ul>
@@ -43,10 +47,13 @@
                 </div>
             </div>
         </div>
+
+        <!-- question 2 -->
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Where can I see specifications of different Machines?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
+                        Where can I see specifications of different Machines?</a>
                 </h4>
             </div>
             <div id="collapseTen" class="panel-collapse collapse">
@@ -55,10 +62,13 @@
                 </div>
             </div>
         </div>
+
+        <!-- question 3 -->
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">Where can I find your company?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">
+                        Where can I find your company?</a>
                 </h4>
             </div>
             <div id="collapseEleven" class="panel-collapse collapse">
@@ -67,6 +77,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- question 4 -->
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
@@ -222,5 +234,34 @@
    
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+        <script>
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1];
+                    }
+                }
+            };
+
+            var q = Number(getUrlParameter("q"));
+            switch (q) {
+                case 1:
+                    $('#collapseOne').addClass("in");
+                    break;
+                case 10:
+                    $('#collapseTen').addClass("in");
+                    break;
+                case 11:
+                    $('#collapseEleven').addClass("in");
+                    break;
+            }
+        </script>
 	</body>
 </html>

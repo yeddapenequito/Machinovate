@@ -33,7 +33,7 @@
 							</tr>
 							<tr>
 								 
-								<td>Telephone <a  class="glyphicon glyphicon-phone-alt"></a></td>
+								<td>Telephone</td>
 								<td>
 									<ul class="list-unstyled">
 										<li>+404 6676</li>
