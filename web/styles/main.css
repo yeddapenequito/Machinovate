@@ -406,6 +406,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     padding: 0;
     border: 1px solid silver;
     border-radius: 5px;
+    background-color: #eee;
   }
   #agents-content > .row .agent div {
     padding: .5em;
