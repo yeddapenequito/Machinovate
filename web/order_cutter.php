@@ -35,31 +35,31 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" value="115E">
+								<label><input class="type" name="cutterRadio" type="radio" value="CT_115E">
 									CT-115E (115 cm/45.2in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" value="137E">
+								<label><input class="type" name="cutterRadio" type="radio" value="CT_137E">
 									CT-137E (137 cm/53.9in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" value="155E">
+								<label><input class="type" name="cutterRadio" type="radio" value="CT_155E">
 									CT-155E (155cm/61in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" value="185E">
+								<label><input class="type" name="cutterRadio" type="radio" value="CT_185E">
 									CT-185E (185cm/72.8in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" value="220E">
+								<label><input class="type" name="cutterRadio" type="radio" value="CT_220E">
 									CT-220E (220cm/86.6in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" value="260E">
+								<label><input class="type" name="cutterRadio" type="radio" value="CT_260E">
 									CT-260E (260cm/102.3in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" value="300E">
+								<label><input class="type" name="cutterRadio" type="radio" value="CT_300E">
 									CT-300E (300cm/118.1in)</label>
 							</div>
 						</div>

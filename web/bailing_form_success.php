@@ -13,17 +13,20 @@
 	<div class="container">
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
-				<form action="cart_summary.php?unitName=CT_115E" role="form" class="form-horizontal"method='post'>
+				<form action="cart_summary.php?unitName=OT_Bailing" role="form" class="form-horizontal"method='post'>
 					<legend>Your Order has been added to your Cart!</legend>
 	<?php 
 		echo 'NO ERROR TRAPPING YET';
 		session_start();
-	
-		$modelName = $_POST['cutterRadio'];	//can be $_GET
+		
+		///end of functions
+
+		$modelName = 'OT_Bailing';	//can be $_GET
 		$_SESSION['cart'][$modelName] = array(
+			////general section
+			'bailing_Quantity' => $_POST['bailingQuantity'],
 			
 			////other details
-			'cutter_Type' => $_POST['cutterRadio'],
 			'otherDetails' => $_POST['otherDetails']
 			);
 	?>

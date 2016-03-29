@@ -12,37 +12,23 @@
 	<?php include 'header_after_login.php';?>
 	
 	<div id="order-list-content" class="container">
-<?php 
-// The user is redirected here AFTER SUCCESSFUL LOGIN
+	<?php 
+		// The user is redirected here AFTER SUCCESSFUL LOGIN
 
-session_start(); // Start the session.
+		session_start(); // Start the session.
 
-// If no session value is present, redirect the user:
-// Also validate the HTTP_USER_AGENT!
-if (!isset($_SESSION['agent']) OR ($_SESSION['agent'] != md5($_SERVER['HTTP_USER_AGENT']) )) {
+		// If no session value is present, redirect the user:
+		// Also validate the HTTP_USER_AGENT!
+		if (!isset($_SESSION['agent']) OR ($_SESSION['agent'] != md5($_SERVER['HTTP_USER_AGENT']) )) {
 
-	// Need the functions:
-	require ('includes/login_functions.inc.php');
-	redirect_user();	
+			// Need the functions:
+			require ('includes/login_functions.inc.php');
+			redirect_user();	
 
-}
+		}
 
-// Set the page title and include the HTML header:
-$page_title = 'Logged In!';
-//include ('header_after_login.php');
+	?>
 
-// Print a customized message:
-echo "
-
-	<h1>Logged In!</h1>
-	<p>You are now logged in, {$_SESSION['first_name']}!</p>";
-//include ('includes/footer.html');
-?>
-
-		<div id="employee-logout">
-				<a id="logout-btn" href="logout.php" class="btn btn-sm" role="button">Logout</a> 
-				</div>
-				<br>
 		<ul class="nav nav-tabs">
 		  <li><a data-toggle="tab" href="#menu1">All</a></li>
 		  <li class="active"><a data-toggle="tab" href="#home">Pending</a></li>

@@ -25,7 +25,8 @@
 	</div>  --><!-- /.container -->
 	<div id="faq" class="container">
 		<div class="panel-group" id="accordion">
-			<div class="faqHeader">Cart Accordion</div>
+			<div class="faqHeader">Machines Ordered</div>
+			
 			<?php
 
 			////sheeter
@@ -37,10 +38,10 @@
 				<div class=\"panel panel-default\">
 					<div class=\"panel-heading\">
 						<h4 class=\"panel-title\">
-							<a class=\"accordion-toggle collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseThree\">$modelName</a>
+							<a class=\"accordion-toggle collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseSlitter\">$modelName</a>
 						</h4>
 					</div>
-					<div id=\"collapseThree\" class=\"panel-collapse collapse\">
+					<div id=\"collapseSlitter\" class=\"panel-collapse collapse\">
 						<div class=\"panel-body\">
 							<p>  sheeter Specs
 								<ul>
@@ -89,10 +90,10 @@
 				<div class=\"panel panel-default\">
 					<div class=\"panel-heading\">
 						<h4 class=\"panel-title\">
-							<a class=\"accordion-toggle collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseT\">$modelName</a>
+							<a class=\"accordion-toggle collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseSheeter\">$modelName</a>
 						</h4>
 					</div>
-					<div id=\"collapseT\" class=\"panel-collapse collapse\">
+					<div id=\"collapseSheeter\" class=\"panel-collapse collapse\">
 						<div class=\"panel-body\">
 							<p>  Sheeter Specs
 								<ul>
@@ -145,6 +146,94 @@
 							</div>
 							";
 			}
+
+			////cutter
+			//CT_115E
+			if (isset($_SESSION['cart']['CT_115E']))
+			{
+				$modelName = "CT_115E";
+				echo "
+				<div class=\"panel panel-default\">
+					<div class=\"panel-heading\">
+						<h4 class=\"panel-title\">
+							<a class=\"accordion-toggle collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseCutter\">$modelName</a>
+						</h4>
+					</div>
+					<div id=\"collapseCutter\" class=\"panel-collapse collapse\">
+						<div class=\"panel-body\">
+							<p>  sheeter Specs
+								<ul>
+									<li>cutter_Type: {$_SESSION['cart'][$modelName]['cutter_Type']}</li>
+									
+											<li>Other_Details: {$_SESSION['cart'][$modelName]['otherDetails']}</li>
+
+										</ul></p>
+
+
+									</div>
+								</div>
+							</div>
+							";
+			}
+
+			////bailing
+			//OT_Bailing
+			if (isset($_SESSION['cart']['OT_Bailing']))
+			{
+				$modelName = "OT_Bailing";
+				echo "
+				<div class=\"panel panel-default\">
+					<div class=\"panel-heading\">
+						<h4 class=\"panel-title\">
+							<a class=\"accordion-toggle collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseBailing\">$modelName</a>
+						</h4>
+					</div>
+					<div id=\"collapseBailing\" class=\"panel-collapse collapse\">
+						<div class=\"panel-body\">
+							<p>  sheeter Specs
+								<ul>
+									<li>Bailing_Quantity: {$_SESSION['cart'][$modelName]['bailing_Quantity']}</li>
+									
+											<li>Other_Details: {$_SESSION['cart'][$modelName]['otherDetails']}</li>
+
+										</ul></p>
+
+
+									</div>
+								</div>
+							</div>
+							";
+			}
+
+			////Paper Roll
+			//OT_Pushcart
+			if (isset($_SESSION['cart']['OT_Pushcart']))
+			{
+				$modelName = "OT_Pushcart";
+				echo "
+				<div class=\"panel panel-default\">
+					<div class=\"panel-heading\">
+						<h4 class=\"panel-title\">
+							<a class=\"accordion-toggle collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapsePushcart\">$modelName</a>
+						</h4>
+					</div>
+					<div id=\"collapsePushcart\" class=\"panel-collapse collapse\">
+						<div class=\"panel-body\">
+							<p>  sheeter Specs
+								<ul>
+									<li>Bailing_Quantity: {$_SESSION['cart'][$modelName]['Paper_Roll_Quantity']}</li>
+									
+											<li>Other_Details: {$_SESSION['cart'][$modelName]['otherDetails']}</li>
+
+										</ul></p>
+
+
+									</div>
+								</div>
+							</div>
+							";
+			}
+
 			?>
 					</div>
 				</div>

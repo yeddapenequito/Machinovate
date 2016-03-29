@@ -14,7 +14,7 @@
 			<h1 class="page-header">Bailing Machine Form Requirements</h1>
 			<p>Please input the necessary information.</p>
 			<!-- please change the form action... to what name if ever wrong-->
-			<form action="bailing-mach_form_success.php" role="form" class="form-horizontal" method="post">
+			<form action="bailing_form_success.php" role="form" class="form-horizontal" method="post">
 				<fieldset>
 					<legend>General Section</legend>
 
@@ -24,7 +24,7 @@
 						<label for="type" class="control-label col-sm-2">Quantity:</label>
 
 						<div class="col-sm-10">
-							<input class="form-control" id="quantity" min="1" name="bailing-quantity" step="1" type="number" style="width:10%;" />
+							<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" style="width:10%;" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>'/>
 						</div>
 					</div>
 
