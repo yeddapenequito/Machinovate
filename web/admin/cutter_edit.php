@@ -68,19 +68,20 @@
                             </div>
                         </div>
                     </div>
+                </fieldset>
+
+                <fieldset> <!--Price Details Section-->
+                    <legend>Price Details</legend>
 
                     <div class="form-group">
-
-                        <label for="type" class="control-label col-sm-2">Price:</label>
-
+                        <label for="comment" class="control-label col-sm-2">Price:</label>
                         <div class="col-sm-10">
-                        <div class="input-group">
-                        <span class="input-group-addon">&#8369;</span>
-                          <input class="form-control" id="quantity" min="0" name="cutter-price" step="1" type="number" style="width:30%;" />
-                        </div>
+                           <div class="input-group">
+                             <span class="input-group-addon">&#8369;</span>
+                             <input class="form-control" id="quantity" min="0" name="cutter-price" step="1" type="number" style="width:30%;" />
+                               </div>
                         </div>
                     </div>
-
                 </fieldset>
 
                 <fieldset>
@@ -100,7 +101,7 @@
 
                         <button class="btn btn-default" id="add-to-cart-btn" type="submit">
                             Finish</button>
-                        <a class="btn btn-default" id="cancel-btn" href="cutter.php">
+                        <a class="btn btn-default" id="cancel-btn" href="order_list.php">
                             Cancel</a>
                     </div>
                 </div>
