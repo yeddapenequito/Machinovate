@@ -22,11 +22,14 @@
                     <img class="img-responsive" src="images/mach-colored.png" alt="mach logo">
                     <div class="intro-text">
                         <span class="name">Innovating Through Generation.</span>
+                        <a href="#portfolio">
+                            <p class="text-center">scroll down to see more</p>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <a href="#portfolio"><span class="glyphicon glyphicon-chevron-down"></span></a>
     </header>
 
     <!-- Portfolio Grid Section -->
