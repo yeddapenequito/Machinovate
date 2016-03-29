@@ -28,6 +28,8 @@
 			<div class="faqHeader">Cart Accordion</div>
 			<?php
 
+			////sheeter
+			//SL_Customized
 			if (isset($_SESSION['cart']['SL_Customized']))
 			{
 				$modelName = "SL_Customized";
@@ -40,9 +42,9 @@
 					</div>
 					<div id=\"collapseThree\" class=\"panel-collapse collapse\">
 						<div class=\"panel-body\">
-							<p>  Slitter Specs
+							<p>  sheeter Specs
 								<ul>
-									<li>Slitter_Type: {$_SESSION['cart'][$modelName]['slitterType']}</li>
+									<li>sheeter_Type: {$_SESSION['cart'][$modelName]['sheeterType']}</li>
 									<li>Production_Volume: {$_SESSION['cart'][$modelName]['productionVolume']}</li>
 									<li>Paper_Type: {$_SESSION['cart'][$modelName]['paperType']}</li>
 									<li>GSM: {$_SESSION['cart'][$modelName]['gsm']}</li>
@@ -67,6 +69,73 @@
 										<!-- 	<li>Sys_Others: {</li> -->
 
 											<li>Other_Details: {$_SESSION['cart'][$modelName]['otherDetails']}</li>
+
+										</ul></p>
+
+
+									</div>
+								</div>
+							</div>
+							";
+			}
+
+
+			////SHEETER
+			//SH_PIV
+			if (isset($_SESSION['cart']['SH_PIV']))
+			{
+				$modelName = "SH_PIV";
+				echo "
+				<div class=\"panel panel-default\">
+					<div class=\"panel-heading\">
+						<h4 class=\"panel-title\">
+							<a class=\"accordion-toggle collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseT\">$modelName</a>
+						</h4>
+					</div>
+					<div id=\"collapseT\" class=\"panel-collapse collapse\">
+						<div class=\"panel-body\">
+							<p>  Sheeter Specs
+								<ul>
+									<!--general section -->
+									<li>Sheeter_Type: {$_SESSION['cart'][$modelName]['sheeterType']}</li>
+									<li>Production_Volume: {$_SESSION['cart'][$modelName]['productionVolume']}</li>
+									<li>Paper_Type: {$_SESSION['cart'][$modelName]['paperType']}</li>
+									<li>GSM: {$_SESSION['cart'][$modelName]['gsm']}</li>
+									<li>Roll_Diameter: {$_SESSION['cart'][$modelName]['rollDiameter']}</li>
+									<li>Cut_Off_Length: {$_SESSION['cart'][$modelName]['cutOffLength']}</li>
+									<li>Slitting_Width: {$_SESSION['cart'][$modelName]['slittingWidth']}</li>
+
+									<!--cutting section-->
+									<li>Cutting_Main_Drive: {$_SESSION['cart'][$modelName]['cs_mainDrive']}</li>
+									<li>Cutting_Knife: {$_SESSION['cart'][$modelName]['cs_knife']}</li>
+									<li>Cutting_Slitter: {$_SESSION['cart'][$modelName]['cs_slitter']}</li>
+									<li>Cutting_Slitter_Max: {$_SESSION['cart'][$modelName]['cs_slitterMax']}</li>
+
+									<!--URS-Reel Stand-->
+									<li>URS_HydraulicShaftless: {$_SESSION['cart'][$modelName]['rs_hydraulicShaftless']}</li>
+									<li>URS_HydraulicShaftless_Type: {$_SESSION['cart'][$modelName]['rs_hs']}</li>
+									<li>URS_Standard: {$_SESSION['cart'][$modelName]['rs_standard']}</li>
+									<li>URS_Standard_Type: {$_SESSION['cart'][$modelName]['rs_s']}</li>
+									<li>URS_AddRolls: {$_SESSION['cart'][$modelName]['rs_addRolls']}</li>
+									<li>URS_AutoTension: {$_SESSION['cart'][$modelName]['rs_autoTension']}</li>
+									<li>URS_Indiv_AutoTension: {$_SESSION['cart'][$modelName]['rs_indivAutoTension']}</li>
+
+
+									<!--Shaft -->
+									<li>SHAFT_Mechanical: {$_SESSION['cart'][$modelName]['sh_mechanical']}</li>
+									<li>SHAFT_AirShaft: {$_SESSION['cart'][$modelName]['sh_airShaft']}</li>
+									<li>SHAFT_Others: {$_SESSION['cart'][$modelName]['sh_others']}</li>
+
+									<!--Roll Weight -->
+									<li>Roll_Weight: {$_SESSION['cart'][$modelName]['rollWeight']}</li>
+
+									<!--Systems-->
+									<li>Sys_Computer_Control: {$_SESSION['cart'][$modelName]['sys_ComputerControl']}</li>
+									<li>Sys_WebGuide_Hydraulic_EPC: {$_SESSION['cart'][$modelName]['sys_WebGuideHydraulicEPC']}</li>
+									<li>Sys_Others: {$_SESSION['cart'][$modelName]['sys_Others']}</li>
+
+									<!--Sys_Others:-->
+									<li>Other_Details: {$_SESSION['cart'][$modelName]['otherDetails']}</li>
 
 										</ul></p>
 
