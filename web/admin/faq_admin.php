@@ -63,7 +63,7 @@
             </div>
             <div id="collapseThree" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>You could edit the order by....</p> 
+                    <p> After submitting your order, you will be directed to a summary page which will show the details you have ordered. You will be able to review your order, and choose whether to change the specifications or finally submit your order. Worst case scenario, you can tell the administrator, during the phone call, of what changes you want to create.</p> 
                 </div>
             </div>
         </div>
@@ -72,12 +72,12 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Can you retrieve deleted orders?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">How can you retrieve deleted orders?</a>
                 </h4>
             </div>
             <div id="collapseFour" class="panel-collapse collapse">
                 <div class="panel-body">
-                   <p>Deleted orders would....</p> 
+                   <p>The orders would be only marked as "cancelled," giving you the option to void the deletion of the order.</p> 
                 </div>
             </div>
         </div>
@@ -136,8 +136,8 @@
                    <p>You could edit event descriptions by..</p>
                 </div>
             </div>
-           </div>
     </div>
+
 
      <div class="panel panel-default">
             <div class="panel-heading">
@@ -150,7 +150,10 @@
                    <p>Since there will be only one administrator account available, deletion would not be an option. This will be considered with the future improvements of the system regarding the addition of additional administrator accounts.</p>
                 </div>
             </div>
-           </div>
+    </div>
+    </div>
+
+    
     </div>
     </div>
 </div>
