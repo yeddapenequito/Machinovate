@@ -656,7 +656,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<div class="col-sm-9">
 							<input id="contact" class="form-control" type="text" name="contact" maxlength="60" value="<?php if (isset($_POST['contact'])) echo $_POST['contact']; ?>"  />
 						</div>
-					</div>
+					</div><!-- add button -->
 					<div class="form-group">
 						<div class="col-sm-9 col-sm-offset-3">
 							<button type="Add" class="btn btn-primary">Add agent</button>
