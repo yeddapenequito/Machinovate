@@ -136,10 +136,21 @@
                         
                             echo '<h1>Error!</h1>
                             <p class="error">The following error(s) occurred:<br />';
-                            foreach ($errors as $msg) { // Print each error.
-                                echo " - $msg<br />\n";
-                            }
-                            echo '</p><p>Please try again.</p><p><br /></p>';
+                            echo " <div class='form-group'>
+                                    <div class='alert alert-danger'>
+                                        
+                                        <strong>";
+                                        foreach ($errors as $msg) {
+                                        
+                                        echo " $msg<br />\n";
+                                     }
+                                       echo "<p>Please try again.</p>
+                                        
+                                        </strong> 
+                                    </div>
+                                </div>";
+                            
+                            
                             
                         } // End of if (empty($errors)) IF.
                         
@@ -185,14 +196,15 @@
                                 </div>
 
                                 <!-- add another image button -->
-                                <button id="add-img-btn" type="button" title="Upload another image" class="btn btn-default">
+                                <!-- <button id="add-img-btn" type="button" title="Upload another image" class="btn btn-default">
                                     <span class="glyphicon glyphicon-plus"></span>
-                                </button>
+                                </button> -->
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-9 col-sm-offset-3">
                                 <button type="Add" class="btn btn-primary">Add event</button>
+                                <a class="btn btn-default" id="cancel-btn" href="order_list.php">
                             </div>
                         </div>
                     </fieldset>
