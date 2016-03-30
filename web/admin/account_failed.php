@@ -29,7 +29,16 @@
 	<div class="container">
 		
 	<h1>System Error</h1>
-			<p class="error">The agent could not be registered due to a system error. We apologize for any inconvenience.</p>
+			<p class="error">It could not be registered due to a system error. We apologize for any inconvenience.</p>
+			 <div class="form-group">
+
+                    <div class="col-sm-10">
+
+                        <button class="btn btn-default" id="add-to-cart-btn" type="submit">
+                            
+                           <a href="order_list.php"> Go Back</a></button>
+                    </div>
+                </div>
 		
 	</div> <!-- /.container -->
 	<script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>

@@ -33,6 +33,11 @@ form legend {
   color: gray;
 }
 
+table {
+  background-color: white;
+  color: #153a7e;
+}
+
 /*=================================================================
   Navbar styles
   =================================================================*/
@@ -83,6 +88,9 @@ form legend {
     =================================================================*/
     #order-list-content .nav-tabs > li > a {
       color: white;
+    }
+    #order-list-content .nav-tabs > li > a:hover {
+      color: #153a7e;
     }
     #order-list-content .nav-tabs .active a {
       color: #153a7e;

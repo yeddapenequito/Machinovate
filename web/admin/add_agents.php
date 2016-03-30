@@ -342,10 +342,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 		echo '<div class="container"><h1>Error!</h1>
 		<p class="error">The following error(s) occurred:<br />';
-		foreach ($errors as $msg) { // Print each error.
-			echo " - $msg<br />\n";
-		}
-		echo '</p><p>Please try again.</p><p><br /></p></div>';
+		 // Print each error.
+			echo " <div class='form-group'>
+                                    <div class='alert alert-danger'>
+                                        
+                                        <strong>";
+                                        foreach ($errors as $msg) {
+                                        
+                                        echo " $msg<br />\n";
+                                     }
+                                       echo "<p>Please try again.</p>
+                                        
+                                        </strong> 
+                                    </div>
+                                </div>";
+		
+		
 		
 	} // End of if (empty($errors)) IF.
 	
@@ -646,10 +658,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<div class="col-sm-9">
 							<input id="contact" class="form-control" type="text" name="contact" maxlength="60" value="<?php if (isset($_POST['contact'])) echo $_POST['contact']; ?>"  />
 						</div>
-					</div>
+					</div><!-- add button -->
 					<div class="form-group">
 						<div class="col-sm-9 col-sm-offset-3">
 							<button type="Add" class="btn btn-primary">Add agent</button>
+							   <a href="order_list.php" Stype="cancel" id="cancel-btn" class="btn btn-default">Cancel</a>
+                        
 						</div>
 					</div>
 				</form>

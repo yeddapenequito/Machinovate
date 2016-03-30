@@ -46,24 +46,24 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">How to change status of the order?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">How to change status of the order?</a>
                 </h4>
             </div>
-            <div id="collapseTen" class="panel-collapse collapse">
+            <div id="collapseTwo" class="panel-collapse collapse">
                 <div class="panel-body">
-                  <p> You could change the status of the order in the tables...</p>
+                  <p> In the order list page where in the tables, there will be a "move" button available at the rightmost part of the table. This button will allow you to change the status of the order.</p>
                 </div>
             </div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">How to edit the orders?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How to edit the orders?</a>
                 </h4>
             </div>
-            <div id="collapseEleven" class="panel-collapse collapse">
+            <div id="collapseThree" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>You could edit the order by...</p> 
+                    <p> After submitting your order, you will be directed to a summary page which will show the details you have ordered. You will be able to review your order, and choose whether to change the specifications or finally submit your order. Worst case scenario, you can tell the administrator, during the phone call, of what changes you want to create.</p> 
                 </div>
             </div>
         </div>
@@ -72,30 +72,30 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Can you retrieve deleted orders?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">How can you retrieve deleted orders?</a>
                 </h4>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
+            <div id="collapseFour" class="panel-collapse collapse">
                 <div class="panel-body">
-                   <p>Deleted orders would....</p> 
+                   <p>The orders would be only marked as "cancelled," giving you the option to void the deletion of the order.</p> 
                 </div>
             </div>
         </div>
            <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How to add events and agents</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">How to add events and agents</a>
                 </h4>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div id="collapseFive" class="panel-collapse collapse">
                 <div class="panel-body">
                   <p>  The steps involved in adding events and agents
                     <ul>
-                        <li>First click the Manage Websites tab.</li>
-                        <li>Choose your desired action.</li>
-                        <li>In adding events, fill up the necessary information and upload a picture file with a file type of blob.</li>
-                        <li>In adding agents, fill up the necessary information.</li>
-                        <li>Click Add Agents of Add Events button to finish.</li>
+                      <a><li>First click the Manage Websites tab.</li></a>
+                        <a><li>Choose your desired action.</li></a>
+                        <a><li>In adding events, fill up the necessary information and upload a picture file with a file type of blob.</li></a>
+                        <a><li>In adding agents, fill up the necessary information.</li></a>
+                        <a><li>Click Add Agents of Add Events button to finish.</li></a>
                     </ul></p>
                 </div>
             </div>
@@ -103,40 +103,60 @@
          <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Will there be more than one admin account?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Will there be more than one admin account?</a>
                 </h4>
             </div>
 
-            <div id="collapseFour" class="panel-collapse collapse">
+            <div id="collapseSix" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>There would be only one admin account.</p>
+                    <p>This would be considered for future company requirements. As of now, only one account for all administrators, only one would be made available.</p>
                 </div>
             </div>
            </div>
              <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">How to recover forgotten password?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">How to recover forgotten password?</a>
                 </h4>
             </div>
-            <div id="collapseFive" class="panel-collapse collapse">
+            <div id="collapseSeven" class="panel-collapse collapse">
                 <div class="panel-body">
                    <p>You could recover forgotten password by </p>
                 </div>
             </div>
            </div>
-             <div class="panel panel-default">
+
+
+     <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">How to edit event descriptions?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">Will I be able to delete the admin account?</a>
                 </h4>
             </div>
-            <div id="collapseSix" class="panel-collapse collapse">
+            <div id="collapseNine" class="panel-collapse collapse">
                 <div class="panel-body">
-                   <p>You could edit event descriptions by..</p>
+                   <p>Since there will be only one administrator account available, deletion would not be an option. This will be considered with the future improvements of the system regarding the addition of additional administrator accounts.</p>
                 </div>
             </div>
-           </div>
+    </div>
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">Who can we contact for further improvements and questions where we can't find the answer in this FAQ?</a>
+                </h4>
+            </div>
+            <div id="collapseEight" class="panel-collapse collapse">
+                <div class="panel-body">
+                   <p>Shawn Relova (Project Manager)
+                   <p>Contact Details: </p>
+                   <a>09226150170</a>
+                   </p>
+                </div>
+            </div>
+    </div>
+    </div>
+
+    
     </div>
     </div>
 </div>

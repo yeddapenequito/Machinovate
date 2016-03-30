@@ -14,7 +14,7 @@
 		<?php include 'header_on_form_completion.php';?>
 		<div class="container">
 			<h1 class="page-header">Shipment Details</h1>
-			<p>Please fill up necessary details.</p>
+			<p class="text-danger">All fields are required.</p>
 	
 				<form role="form" id="slitter" method="post" 
 					role="form" class="form-horizontal">

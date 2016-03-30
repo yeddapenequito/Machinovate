@@ -39,6 +39,7 @@ function check_login($dbc, $username = '', $pass = '') {
 	if (empty($username)) {
 		$errors[] = 'You forgot to enter your username.';
 		
+		
 	} else {
 		$u = mysqli_real_escape_string($dbc, trim($username));
 	}
@@ -46,6 +47,7 @@ function check_login($dbc, $username = '', $pass = '') {
 	// Validate the password:
 	if (empty($pass)) {
 		$errors[] = 'You forgot to enter your password.';
+		
 		
 	} else {
 		$p = mysqli_real_escape_string($dbc, trim($pass));
@@ -72,7 +74,7 @@ function check_login($dbc, $username = '', $pass = '') {
 		}
 		
 	} // End of empty($errors) IF.
-	
+
 	// Return false and the errors:
 	return array(false, $errors);
 

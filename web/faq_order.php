@@ -43,6 +43,7 @@
                         <li>Press Add to Cart button.</li>
                         <li>Fill up the form requirements.</li>
                         <li>Fill up the shipment details.</li>
+                        <li>The process of payment will follow through.</li>
                     </ul>
                 </div>
             </div>
@@ -53,27 +54,39 @@
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
-                        Where can I see specifications of different Machines?</a>
+                        What are the "specifications" of machines?</a>
                 </h4>
             </div>
             <div id="collapseTen" class="panel-collapse collapse">
                 <div class="panel-body">
-                   You could see the different specification of your preferred machines by going to the Machines page, and choose your desired machine.
+                  The different specifications present the specification per product, which varies mostly in size. This would give the customer ideas for appropriate modification or customization of their desired product.
                 </div>
             </div>
         </div>
-
+         <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen">
+                                Where can I see specifications of different Machines?</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThirteen" class="panel-collapse collapse">
+                        <div class="panel-body">
+                           You could see the different specification of your preferred machines by going to the Machines page, and choose your desired machine.
+                        </div>
+                    </div>
+                </div>
         <!-- question 3 -->
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">
-                        Where can I find your company?</a>
+                        Where can I find the location of your company?</a>
                 </h4>
             </div>
             <div id="collapseEleven" class="panel-collapse collapse">
                 <div class="panel-body">
-                    You could see our location by going to <strong>Contact Us</strong> page in the tab above.
+                    You could see our location by going to <strong>Contact Us</strong> page in the tab above. Where a map is made available.
                 </div>
             </div>
         </div>
@@ -91,7 +104,55 @@
                 </div>
             </div>
         </div>
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">What are "agents"?</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                   The agents are the country representatives for the Machinovate International Inc. Their details are shown to give ease of communication from other countries concerning the company.
+                </div>
+            </div>
+        </div>
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen">How to edit my orders?</a>
+                </h4>
+            </div>
+            <div id="collapseFourteen" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p> After submitting your order, you will be directed to a summary page which will show the details you have ordered. You will be able to review your order, and choose whether to change the specifications or finally submit your order. Worst case scenario, you can tell the administrator, during the phone call, of what changes you want to create.</p> 
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">When I submit an order form, is it possible to withdraw the order? How?</a>
+                </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                   During the phone call for verification, you can tell the administrator that you are going to cancel your order.
+                </div>
+            </div>
+        </div>
 
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Will i be notified if there are unavailable parts?</a>
+                </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Everything regarding the machine production will be further explained by the administrator during the phone call.
+                </div>
+            </div>
+        </div>
         <div class="faqHeader">Payment</div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -101,67 +162,7 @@
             </div>
             <div id="collapseTwo" class="panel-collapse collapse">
                 <div class="panel-body">
-                    You could pay via Letter of Credit, Draft at Sight or via Telegraphic Transfer.
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">**</a>
-                </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-                <div class="panel-body">
-                   
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">**</a>
-                </h4>
-            </div>
-            <div id="collapseFive" class="panel-collapse collapse">
-                <div class="panel-body">
-                  
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">**</a>
-                </h4>
-            </div>
-            <div id="collapseSix" class="panel-collapse collapse">
-                <div class="panel-body">
-                    
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">**</a>
-                </h4>
-            </div>
-            <div id="collapseEight" class="panel-collapse collapse">
-                <div class="panel-body">
-                   
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">**</a>
-                </h4>
-            </div>
-            <div id="collapseNine" class="panel-collapse collapse">
-                <div class="panel-body">
-                    
+                   After submitting your order, an email of validation will be sent to the company administrator. After validating your request, the administrator will give you a call, regarding the details of your payment.
                 </div>
             </div>
         </div>
@@ -175,19 +176,7 @@
             </div>
             <div id="collapseFour" class="panel-collapse collapse">
                 <div class="panel-body">
-                    You could get your order on the time agreed upon which is after the order has been confirmed when our company contacts you via calls.
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">**</a>
-                </h4>
-            </div>
-            <div id="collapseSeven" class="panel-collapse collapse">
-                <div class="panel-body">
-                   
+                    During the verification of the administrator regarding your order, you will be discussed accordingly when your order would be completed and delivered.
                 </div>
             </div>
         </div>

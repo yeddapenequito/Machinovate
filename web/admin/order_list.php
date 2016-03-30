@@ -7,6 +7,15 @@
 	<link rel="stylesheet" href="../styles/main.css">
 	<link rel="stylesheet" href="../styles/admin.css">
 	<title>Machinovate | Order List</title>
+	<style>
+		form {
+			width: 100%;
+		}
+		form .form-group {
+			width: 20em;
+			float: right;
+		}
+	</style>
 </head>
 <body>
 	<?php include 'header_after_login.php';?>
@@ -28,7 +37,16 @@
 		}
 
 	?>
-
+		<form class="form" role="form">
+	        <div class="form-group text-right">
+	        	<div class="input-group">
+	        		<input placeholder="Search" id="search" name="search" type="text" class="form-control">
+	        		<div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+	        	</div>
+	        </div>
+		</form>
+		<br>
+		<br>
 		<ul class="nav nav-tabs">
 		  <li><a data-toggle="tab" href="#menu1">All</a></li>
 		  <li class="active"><a data-toggle="tab" href="#home">Pending</a></li>
@@ -38,25 +56,300 @@
 		</ul>
 
 		<div class="tab-content">
+		<!-- All -->
 		  <div id="menu1" class="tab-pane fade">
-		    <h3>Menu 1</h3>
-		    <p>Some content in menu 1.</p>
+		    <table class="table table-striped">
+		    	<thead>
+		    		<tr>
+		    			<th>Order No.</th>
+		    			<th>Order Status</th>
+		    			<th>Machine Type</th>
+		    			<th>Company Name</th>
+		    			<th>Contact Name</th>
+		    			<th>Date Ordered</th>
+		    			<th>Edit</th>
+		    			<th>Delete</th>
+		    		</tr>
+		    	</thead>
+		    	<tbody>
+		    		<tr>
+		    			<td>0001</td>
+		    			<td>Pending</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-remove"></span></button>
+		    			</td>
+			    	</tr>
+		    		<tr>
+		    			<td>0002</td>
+		    			<td>Pending</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-remove"></span></button>
+		    			</td>
+			    	</tr>
+		    	</tbody>
+		    </table>
 		  </div>
+
+		  <!-- Pending -->
 		  <div id="home" class="tab-pane fade in active">
-		    <h3>HOME</h3>
-		    <p>Some content.</p>
+		    <table class="table table-striped">
+		    	<thead>
+		    		<tr>
+		    			<th>Order No.</th>
+		    			<th>Machine Type</th>
+		    			<th>Company Name</th>
+		    			<th>Contact Name</th>
+		    			<th>Date Ordered</th>
+		    			<th>Move To</th>
+		    			<th>Edit</th>
+		    			<th>Delete</th>
+		    		</tr>
+		    	</thead>
+		    	<tbody>
+		    		<tr>
+		    			<td>0001</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
+		    			<td>
+						  <select class="form-control" id="move">
+						    <option value="">-- Move To --</option>
+						    <option value="cancelled">Cancelled</option>
+						    <option value="confirmed">Confirmed</option>
+						    <option value="completed">Completed</option>
+						  </select>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-remove"></span></button>
+		    			</td>
+		    		</tr>
+		    		<tr>
+		    			<td>0002</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
+		    			<td>
+						  <select class="form-control" id="move">
+						    <option value="">-- Move To --</option>
+						    <option value="cancelled">Cancelled</option>
+						    <option value="confirmed">Confirmed</option>
+						    <option value="completed">Completed</option>
+						  </select>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-remove"></span></button>
+		    			</td>
+		    		</tr>
+		    	</tbody>
+		    </table>
 		  </div>
+
+		  <!-- Cancelled -->
 		  <div id="menu2" class="tab-pane fade">
-		    <h3>Menu 2</h3>
-		    <p>Some content in menu 2.</p>
+		    <table class="table table-striped">
+		    	<thead>
+		    		<tr>
+		    			<th>Order No.</th>
+		    			<th>Machine Type</th>
+		    			<th>Company Name</th>
+		    			<th>Contact Name</th>
+		    			<th>Date Ordered</th>
+		    			<th>Move To</th>
+		    			<th>Edit</th>
+		    			<th>Delete</th>
+		    		</tr>
+		    	</thead>
+		    	<tbody>
+		    		<tr>
+		    			<td>0001</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
+		    			<td>
+						  <select class="form-control" id="move">
+						    <option value="">-- Move To --</option>
+						    <option value="cancelled">Cancelled</option>
+						    <option value="confirmed">Confirmed</option>
+						    <option value="completed">Completed</option>
+						  </select>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-remove"></span></button>
+		    			</td>
+		    		</tr>
+		    		<tr>
+		    			<td>0002</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
+		    			<td>
+						  <select class="form-control" id="move">
+						    <option value="">-- Move To --</option>
+						    <option value="cancelled">Pending</option>
+						    <option value="confirmed">Confirmed</option>
+						    <option value="completed">Completed</option>
+						  </select>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-remove"></span></button>
+		    			</td>
+		    		</tr>
+		    	</tbody>
+		    </table>
 		  </div>
+
+		  <!-- Confirmed -->
 		  <div id="menu3" class="tab-pane fade">
-		    <h3>Menu 3</h3>
-		    <p>Some content in menu 3.</p>
+		    <table class="table table-striped">
+		    	<thead>
+		    		<tr>
+		    			<th>Order No.</th>
+		    			<th>Machine Type</th>
+		    			<th>Company Name</th>
+		    			<th>Contact Name</th>
+		    			<th>Date Ordered</th>
+		    			<th>Move To</th>
+		    			<th>Edit</th>
+		    			<th>Delete</th>
+		    		</tr>
+		    	</thead>
+		    	<tbody>
+		    		<tr>
+		    			<td>0001</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
+		    			<td>
+						  <select class="form-control" id="move">
+						    <option value="">-- Move To --</option>
+						    <option value="cancelled">Cancelled</option>
+						    <option value="confirmed">Confirmed</option>
+						    <option value="completed">Completed</option>
+						  </select>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-remove"></span></button>
+		    			</td>
+		    		</tr>
+		    		<tr>
+		    			<td>0002</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
+		    			<td>
+						  <select class="form-control" id="move">
+						    <option value="">-- Move To --</option>
+						    <option value="cancelled">Pending</option>
+						    <option value="confirmed">Confirmed</option>
+						    <option value="completed">Completed</option>
+						  </select>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-remove"></span></button>
+		    			</td>
+		    		</tr>
+		    	</tbody>
+		    </table>
 		  </div>
+
+		  <!-- Completed -->
 		  <div id="menu4" class="tab-pane fade">
-		    <h3>Menu 4</h3>
-		    <p>Some content in menu 4.</p>
+		    <table class="table table-striped">
+		    	<thead>
+		    		<tr>
+		    			<th>Order No.</th>
+		    			<th>Machine Type</th>
+		    			<th>Company Name</th>
+		    			<th>Contact Name</th>
+		    			<th>Date Ordered</th>
+		    			<th>Move To</th>
+		    			<th>Edit</th>
+		    			<th>Delete</th>
+		    		</tr>
+		    	</thead>
+		    	<tbody>
+		    		<tr>
+		    			<td>0001</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
+		    			<td>
+						  <select class="form-control" id="move">
+						    <option value="">-- Move To --</option>
+						    <option value="cancelled">Cancelled</option>
+						    <option value="confirmed">Confirmed</option>
+						    <option value="completed">Completed</option>
+						  </select>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-remove"></span></button>
+		    			</td>
+		    		</tr>
+		    		<tr>
+		    			<td>0002</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
+		    			<td>
+						  <select class="form-control" id="move">
+						    <option value="">-- Move To --</option>
+						    <option value="cancelled">Pending</option>
+						    <option value="confirmed">Confirmed</option>
+						    <option value="completed">Completed</option>
+						  </select>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    			</td>
+		    			<td>
+		    				<button><span class="glyphicon glyphicon-remove"></span></button>
+		    			</td>
+		    		</tr>
+		    	</tbody>
+		    </table>
 		  </div>
 		</div> <!-- /.tab-content -->
 	</div> <!-- /.container -->

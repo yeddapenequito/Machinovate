@@ -112,9 +112,9 @@
                                 $id = mysqli_stmt_insert_id($r); // Get the print ID.
                                 rename ($temp, "../../uploads/$id");
                                 // Print a message:
-                                echo '<h1>Thank you!</h1>
-                            <p>An event has been added!</p><p><br /></p>'; 
-                            header('Location: /Machinovate/web/admin/account_successful.php');
+                                //echo '<h1>Thank you!</h1>
+                            //<p>An event has been added!</p><p><br /></p>'; 
+                            header('Location: /Machinovate/web/admin/account-edit_successful.php');
                             
                             } else { // If it did not run OK.
                                 
@@ -136,10 +136,21 @@
                         
                             echo '<h1>Error!</h1>
                             <p class="error">The following error(s) occurred:<br />';
-                            foreach ($errors as $msg) { // Print each error.
-                                echo " - $msg<br />\n";
-                            }
-                            echo '</p><p>Please try again.</p><p><br /></p>';
+                            echo " <div class='form-group'>
+                                    <div class='alert alert-danger'>
+                                        
+                                        <strong>";
+                                        foreach ($errors as $msg) {
+                                        
+                                        echo " $msg<br />\n";
+                                     }
+                                       echo "<p>Please try again.</p>
+                                        
+                                        </strong> 
+                                    </div>
+                                </div>";
+
+                            
                             
                         } // End of if (empty($errors)) IF.
                         
@@ -179,20 +190,21 @@
                                 <div class="img-input">
                                     <div class="row item">
                                         <div class="col-sm-10 upload-img">
-                                            <input name="image_name" id="image" type="file" class="form-control" value="Browse Image"/>
+                                            <input name="image" id="image" type="file" class="form-control" value="Browse Image"/>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- add another image button -->
-                                <button id="add-img-btn" type="button" title="Upload another image" class="btn btn-default">
+                                <!-- <button id="add-img-btn" type="button" title="Upload another image" class="btn btn-default">
                                     <span class="glyphicon glyphicon-plus"></span>
-                                </button>
+                                </button> -->
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-9 col-sm-offset-3">
                                 <button type="Add" class="btn btn-primary">Add event</button>
+                                <a href="order_list.php" Stype="cancel" id="cancel-btn" class="btn btn-default">Cancel</a>
                             </div>
                         </div>
                     </fieldset>
@@ -200,9 +212,9 @@
             </div> <!-- /.row -->
         </div> <!-- /.container -->
 
-       <!-- <script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
+       <script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
         <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
             $(document).ready(function() {
                 $(document).on('click', '#add-img-btn', function() {
                         $('.img-input').append($(
@@ -221,7 +233,7 @@
                 $(document).on('click', '.remove-img', function() {
                     $(this).parent('.item').remove();
                 });
-            });
-        </script> -->
+            });-->
+        </script>
     </body>
 </html>

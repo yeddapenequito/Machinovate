@@ -48,6 +48,8 @@ function check_login($dbc, $username = '', $pass = '') {
 	} else {
 		$p = mysqli_real_escape_string($dbc, trim($pass));
 	}
+	
+    
 
 	if (empty($errors)) { // If everything's OK.
 

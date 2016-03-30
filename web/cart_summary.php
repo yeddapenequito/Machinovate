@@ -25,7 +25,7 @@
 	</div>  --><!-- /.container -->
 	<div id="faq" class="container">
 		<div class="panel-group" id="accordion">
-			<div class="faqHeader">Machines Ordered</div>
+			<div class="faqHeader"><h2>Machines Ordered</h2></div>
 			
 			<?php
 
@@ -239,9 +239,17 @@
 			}
 
 			?>
+			<br>
+			<br>
+
+			<!--   <a id="cancel-btn" href="machines.php" class="btn btn-default">Cancel Order</a> -->
+			<a id="add-to-cart-btn" href="shipment.php"type="submit" class="btn btn-default">Proceed to Checkout</a>
 					</div>
 				</div>
 				<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 				<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+				<script>	
+					document.getElementById("your-shopping-cart-btn").remove();
+				</script>
 			</body>
 			</html>

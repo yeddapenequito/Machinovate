@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,12 +14,12 @@
 	
 	<div class="container">
 		
-	<h1>Login Failed!</h1>
-			<p class="error">Login couldn't be processed.</p>
-			<p class="error">Please check your username and password and try again.</p>
-			<div id="btn-group">
-				<p><a href="index.inc.php" class="btn btn-primary btn-lg">Login</a></p>
-			</div>
+		<h1>Login Failed!</h1>
+		<p class="error">Login couldn't be processed.</p>
+		<p class="error">Please check your username and password and try again.</p>
+		<?php 
+			include ("index.inc.php");
+		?>
 		
 	</div> <!-- /.container -->
 	

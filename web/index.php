@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Featured Machines</h2>
-                    <hr>
+                    <hr size="">
                 </div>
             </div>
             <div class="row">
@@ -89,7 +89,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Customization/Tailoring is the Key! That's what makes MACH brand stand out from all the rest in the market! With every MACH machine customers are assured that it has undergo the strict quality control, as all our engineering works are done in-house.</p>
+                    <p class="lead">Customization/Tailoring is the Key! That's what makes MACH brand stand out from all the rest in the market! </p>
+                        <p>With every MACH machine customers are assured that it has undergo the strict quality control, as all our engineering works are done in-house.</p>
                 </div>
                 <div class="col-lg-4">
                     <p>We use only the best Universal brands for all the essential parts like FESTO, HASBASIT, KLINGELNBERG, GATES, YASKAWA, PITTMAN, KOYO, FINDEVA, FAG, SKF and the like.Our computerized controls use only the most advanced IPC technology by Bekhoff, Germany.</p>
@@ -119,8 +120,8 @@
                     <div class="footer-col col-md-4">
                         <h3>FAQ</h3>
                         <p><a href="faq_order.php?q=1">How to Order?</a></p>
-                        <p><a href="faq_order.php?q=10">Specifications of Machines</a></p>
-                        <p><a href="faq_order.php?q=11">How I contact your company?</a></p>
+                        <p><a href="faq_order.php?q=10" class="small">What are the "specifications" of machines?</a></p>
+                        <p><a href="faq_order.php?q=11">How can I contact your company?</a></p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Location
@@ -280,7 +281,10 @@
         <script src="js/cbpAnimatedHeader.js"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="js/freelancer.js"></script>          
+        <script src="js/freelancer.js"></script> 
+        <script>
+            document.getElementById("home").className = "active";
+        </script>         
 
 	</body>
 </html>
