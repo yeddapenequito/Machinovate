@@ -8,7 +8,7 @@
     if (!isset($_SESSION['agent']) OR ($_SESSION['agent'] != md5($_SERVER['HTTP_USER_AGENT']) )) {
 
         // Need the functions:
-        require ('includes/login_functions.inc.php');
+        require ("includes/login_functions.inc.php");
         redirect_user();    
 
     }
@@ -28,12 +28,12 @@
 	
 	<div class="container">
 		
-	<h1>Login Failed!</h1>
-			<p class="error">Login couldn't be processed.</p>
-			<p class="error">Please check your username and password and try again.</p>
-			<?php 
-			include('index.inc.php');
-			?>
+		<h1>Login Failed!</h1>
+		<p class="error">Login couldn't be processed.</p>
+		<p class="error">Please check your username and password and try again.</p>
+		<?php 
+			include ("index.inc.php");
+		?>
 		
 	</div> <!-- /.container -->
 	
