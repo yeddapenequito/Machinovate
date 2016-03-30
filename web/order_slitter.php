@@ -148,14 +148,14 @@
 							<div class="checkbox">
 								
 								<label> <!--required field-->
-									<input id="standard-checkbox" name="slitterCheckbox" type="checkbox" value="standard">
-									Standard[Five(5)] Set Male/Female Circular Blade with Trim Removal Blower
+									<input id="standard-checkbox" name="slitterCheckbox" type="checkbox" value="standard" disabled checked="true">
+									Standard [Five(5)] Set Male/Female Circular Blade with Trim Removal Blower
 								</label>
 							</div>
 
 							<div class="checkbox">
 								
-								<label><input disabled id="slitter-additional-checkbox" name="slitterCheckbox" type="checkbox">
+								<label><input id="slitter-additional-checkbox" name="slitterCheckbox" type="checkbox">
 									<div class="form-inline">
 										
 										<div class="form-group">
@@ -312,21 +312,6 @@
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
-
-			document.getElementById("standard-checkbox").onchange = function() {
-				
-				if(document.getElementById("standard-checkbox").checked) {
-					document.getElementById("slitter-additional-checkbox").removeAttribute("disabled");
-				}
-				else {
-					document.getElementById("slitter-additional-checkbox").setAttribute("disabled", "disabled");
-					document.getElementById("slitter-additional-checkbox").checked = false;
-
-					document.getElementById("slitter-additional-text-field").setAttribute("disabled", "disabled");
-					document.getElementById("slitter-additional-text-field").value = "";
-				}
-			};
-
 			document.getElementById("slitter-additional-checkbox").onchange = function() {
 				
 				if(document.getElementById("slitter-additional-checkbox").checked) {
