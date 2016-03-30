@@ -15,6 +15,15 @@
 		
 		<h1>Thank you!</h1>
 		<p>An agent has been registered!</p><p><br /></p>
+		 <div class="form-group">
+
+                    <div class="col-sm-10">
+
+                        <button class="btn btn-default" id="add-to-cart-btn" type="submit">
+                            
+                           <a href="order_list.php"> Go Back</a></button>
+                    </div>
+                </div>
 		
 	</div> <!-- /.container -->
 	<script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>

@@ -15,7 +15,7 @@ if (isset($errors) && !empty($errors)) {
 	}
 	echo '</p><p>Please try again.</p>';
 }
-
+	
 // Display the form:
 ?>
 
