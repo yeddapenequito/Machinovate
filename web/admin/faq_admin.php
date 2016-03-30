@@ -91,11 +91,11 @@
                 <div class="panel-body">
                   <p>  The steps involved in adding events and agents
                     <ul>
-                        <li>First click the Manage Websites tab.</li>
-                        <li>Choose your desired action.</li>
-                        <li>In adding events, fill up the necessary information and upload a picture file with a file type of blob.</li>
-                        <li>In adding agents, fill up the necessary information.</li>
-                        <li>Click Add Agents of Add Events button to finish.</li>
+                      <a><li>First click the Manage Websites tab.</li></a>
+                        <a><li>Choose your desired action.</li></a>
+                        <a><li>In adding events, fill up the necessary information and upload a picture file with a file type of blob.</li></a>
+                        <a><li>In adding agents, fill up the necessary information.</li></a>
+                        <a><li>Click Add Agents of Add Events button to finish.</li></a>
                     </ul></p>
                 </div>
             </div>
@@ -125,18 +125,6 @@
                 </div>
             </div>
            </div>
-    <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">How to edit event descriptions?</a>
-                </h4>
-            </div>
-            <div id="collapseEight" class="panel-collapse collapse">
-                <div class="panel-body">
-                   <p>You could edit event descriptions by..</p>
-                </div>
-            </div>
-    </div>
 
 
      <div class="panel panel-default">

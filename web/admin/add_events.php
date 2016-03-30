@@ -112,9 +112,9 @@
                                 $id = mysqli_stmt_insert_id($r); // Get the print ID.
                                 rename ($temp, "../../uploads/$id");
                                 // Print a message:
-                                echo '<h1>Thank you!</h1>
-                            <p>An event has been added!</p><p><br /></p>'; 
-                            header('Location: /Machinovate/web/admin/account_successful.php');
+                                //echo '<h1>Thank you!</h1>
+                            //<p>An event has been added!</p><p><br /></p>'; 
+                            header('Location: /Machinovate/web/admin/account-edit_successful.php');
                             
                             } else { // If it did not run OK.
                                 
