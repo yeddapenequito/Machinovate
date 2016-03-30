@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<?php include 'header_on_form_completion.php';?>
 		<div class="container">
 			<h1 class="page-header">Shipment Details</h1>
-			<p>Please fill up necessary details.</p>
+			<p>Please fill up all fields.</p>
 	
 				<form role="form" action="shipment.php" method="post" 
 					role="form" class="form-horizontal">
