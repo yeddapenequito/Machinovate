@@ -53,9 +53,7 @@
 		    		</tr>
 		    	</thead>
 		    	<tbody>
-		    		<tr>
-		    			<td></td>
-		    		</tr>
+		    		<td></td>
 		    	</tbody>
 		    </table>
 		  </div>
@@ -75,7 +73,26 @@
 		    	</thead>
 		    	<tbody>
 		    		<tr>
+		    			<tr>
+		    			<td>0001</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
 		    			<td></td>
+		    			<td></td>
+		    			<td></td>
+		    		</tr>
+		    		<tr>
+		    			<td>0002</td>
+		    			<td>Slitter</td>
+		    			<td>University of Santo Tomas</td>
+		    			<td>Juan dela Cruz</td>
+		    			<td>3/30/2016</td>
+		    			<td></td>
+		    			<td></td>
+		    			<td></td>
+		    		</tr>
 		    		</tr>
 		    	</tbody>
 		    </table>

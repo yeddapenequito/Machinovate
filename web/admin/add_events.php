@@ -216,9 +216,9 @@
             </div> <!-- /.row -->
         </div> <!-- /.container -->
 
-       <!-- <script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
+       <script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
         <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
             $(document).ready(function() {
                 $(document).on('click', '#add-img-btn', function() {
                         $('.img-input').append($(
@@ -237,7 +237,7 @@
                 $(document).on('click', '.remove-img', function() {
                     $(this).parent('.item').remove();
                 });
-            });
-        </script> -->
+            });-->
+        </script>
     </body>
 </html>
