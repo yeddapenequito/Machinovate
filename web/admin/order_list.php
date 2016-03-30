@@ -127,6 +127,7 @@
 		    	<thead>
 		    		<tr>
 		    			<th>Order No.</th>
+		    			<th>Order Ststus</th>
 		    			<th>Machine Type</th>
 		    			<th>Company Name</th>
 		    			<th>Contact Name</th>
