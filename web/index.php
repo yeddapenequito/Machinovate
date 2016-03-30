@@ -89,7 +89,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Customization/Tailoring is the Key! That's what makes MACH brand stand out from all the rest in the market! With every MACH machine customers are assured that it has undergo the strict quality control, as all our engineering works are done in-house.</p>
+                    <p class="lead">Customization/Tailoring is the Key! That's what makes MACH brand stand out from all the rest in the market! </p>
+                        <p>With every MACH machine customers are assured that it has undergo the strict quality control, as all our engineering works are done in-house.</p>
                 </div>
                 <div class="col-lg-4">
                     <p>We use only the best Universal brands for all the essential parts like FESTO, HASBASIT, KLINGELNBERG, GATES, YASKAWA, PITTMAN, KOYO, FINDEVA, FAG, SKF and the like.Our computerized controls use only the most advanced IPC technology by Bekhoff, Germany.</p>
