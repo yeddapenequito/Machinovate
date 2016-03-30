@@ -662,8 +662,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<div class="form-group">
 						<div class="col-sm-9 col-sm-offset-3">
 							<button type="Add" class="btn btn-primary">Add agent</button>
-							  <a class="btn btn-default" id="cancel-btn" href="order_list.php">
-                            Cancel</a>
+							   <a href="order_list.php" Stype="cancel" id="cancel-btn" class="btn btn-default">Cancel</a>
+                        
 						</div>
 					</div>
 				</form>
