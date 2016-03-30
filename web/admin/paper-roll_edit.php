@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <!-- Price -->
-                 <div class="form-group">
+                    <div class="form-group">
                         <label for="comment" class="control-label col-sm-2">FOB Price:</label>
                         <div class="col-sm-10">
                             <div class="input-group">
@@ -48,6 +48,7 @@
                             </div>
                         </div>
                         <br>
+                        <div class="form-group">
                         <label for="comment" class="control-label col-sm-2">CIF Price:</label>
                         <div class="col-sm-10">
                             <div class="input-group">
@@ -55,6 +56,7 @@
                                 <input class="form-control" id="quantity" min="0" name="cif" step="1" type="number" style="width:30%;" />
                             </div>
                         </div>
+                    </div>
 
                     </div>
                     <div class="form-group">
