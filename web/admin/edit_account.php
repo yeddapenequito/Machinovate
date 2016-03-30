@@ -11,7 +11,7 @@
        <?php include 'header_after_login.php';?>
         <div class="container">
             <div class="row">
-                <form enctype="multipart/form-data" action="add_events.php" method="post" class="form-horizontal col-sm-6" role="form">
+                <form enctype="multipart/form-data" action="edit_events.php" method="post" class="form-horizontal col-sm-6" role="form">
                 <fieldset>
                         
                         <legend>Edit Account Credentials:</legend>
@@ -41,5 +41,9 @@
         </div>
     <script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        document.getElementById("edit-account").className = "active";
+    </script>
+
     </body>
  </html>
