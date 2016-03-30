@@ -61,7 +61,7 @@ if (isset($errors) && !empty($errors)) {
 						<div class="row">
 							<img src="captcha.php" alt="CAPTCHA" class="col-sm-6 control-label">
 							<div class="col-sm-6">
-								<input type="text" name="captcha" class="form-control">
+								<input id="captcha" type="text" name="captcha" class="form-control" required>
 								<small>Copy the digits from the image into this box</small>
 							</div>
 						</div>

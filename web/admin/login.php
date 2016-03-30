@@ -19,6 +19,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$_SESSION['user_id'] = $data['user_id'];
 		$_SESSION['first_name'] = $data['first_name'];
 		
+		 //session_start();
+    	if($_POST['captcha'] != $_SESSION['digit']){
+    		echo "Wrong Captcha!";
+    		redirect_user("index.inc.php");
+
+
+    	}
+    
+
 		// Store the HTTP_USER_AGENT:
 		$_SESSION['agent'] = md5($_SERVER['HTTP_USER_AGENT']);
 
