@@ -63,7 +63,7 @@
             </div>
             <div id="collapseThree" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>You could edit the order by...</p> 
+                    <p>You could edit the order by....</p> 
                 </div>
             </div>
         </div>
