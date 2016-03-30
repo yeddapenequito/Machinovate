@@ -18,6 +18,7 @@
 				<li><a id="events" href="events.php">Events</a></li>
 				<li><a id="contact-us" href="contact_us.php">Contact Us</a></li>
 				<li><a id="agents" href="agents.php">Agents</a></li>
+				<li><a id="agents" href="cart_summary.php">Shopping Cart</a></li>
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div><!--/.container-fluid -->

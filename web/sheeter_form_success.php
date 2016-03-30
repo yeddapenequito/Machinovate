@@ -27,10 +27,12 @@
 		}
 		function isChecked($checkboxName,$checkboxValue){
 			if (!empty($checkboxName)){
-				foreach($checkboxName as $value){
+				if(is_array($checkboxName)){
+					foreach($checkboxName as $value){
 					if($value == $checkboxValue){
 						return 1;
 					}
+				}
 				}
 			}
 			return 0;

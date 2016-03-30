@@ -34,6 +34,7 @@
 			if (isset($_SESSION['cart']['SL_Customized']))
 			{
 				$modelName = "SL_Customized";
+				$sheeterType = isset($_SESSION['cart'][$modelName]['sheeterType']) ? $_SESSION['cart'][$modelName]['sheeterType'] : "";
 				echo "
 				<div class=\"panel panel-default\">
 					<div class=\"panel-heading\">
@@ -45,7 +46,7 @@
 						<div class=\"panel-body\">
 							<p>  sheeter Specs
 								<ul>
-									<li>sheeter_Type: {$_SESSION['cart'][$modelName]['sheeterType']}</li>
+									<li>Sheeter_Type: {$sheeterType}</li>
 									<li>Production_Volume: {$_SESSION['cart'][$modelName]['productionVolume']}</li>
 									<li>Paper_Type: {$_SESSION['cart'][$modelName]['paperType']}</li>
 									<li>GSM: {$_SESSION['cart'][$modelName]['gsm']}</li>
@@ -67,7 +68,7 @@
 										<li>Sys_BananaRoll_TensionRoller: {$_SESSION['cart'][$modelName]['sys_BananaRoll_TensionRoller']}</li>
 										<li>Sys_BrakeSystem: {$_SESSION['cart'][$modelName]['sys_BrakeSystem']}</li>
 										<li>Sys_FullyComputerized: {$_SESSION['cart'][$modelName]['sys_FullyComputerized']}</li>
-										<!-- 	<li>Sys_Others: {</li> -->
+										<li>Sys_Others: {$_SESSION['cart'][$modelName]['sys_Others']}</li>
 
 											<li>Other_Details: {$_SESSION['cart'][$modelName]['otherDetails']}</li>
 
@@ -86,6 +87,9 @@
 			if (isset($_SESSION['cart']['SH_PIV']))
 			{
 				$modelName = "SH_PIV";
+				$cutOffLen = isset($_SESSION['cart'][$modelName]['cutOffLength']) ? $_SESSION['cart'][$modelName]['cutOffLength'] : "";
+				$addRolls = isset($_SESSION['cart'][$modelName]['rs_addRolls']) ? $_SESSION['cart'][$modelName]['rs_addRolls'] : "";
+				
 				echo "
 				<div class=\"panel panel-default\">
 					<div class=\"panel-heading\">
@@ -103,7 +107,7 @@
 									<li>Paper_Type: {$_SESSION['cart'][$modelName]['paperType']}</li>
 									<li>GSM: {$_SESSION['cart'][$modelName]['gsm']}</li>
 									<li>Roll_Diameter: {$_SESSION['cart'][$modelName]['rollDiameter']}</li>
-									<li>Cut_Off_Length: {$_SESSION['cart'][$modelName]['cutOffLength']}</li>
+									<li>Cut_Off_Length: {$cutOffLen}</li>
 									<li>Slitting_Width: {$_SESSION['cart'][$modelName]['slittingWidth']}</li>
 
 									<!--cutting section-->
@@ -117,7 +121,7 @@
 									<li>URS_HydraulicShaftless_Type: {$_SESSION['cart'][$modelName]['rs_hs']}</li>
 									<li>URS_Standard: {$_SESSION['cart'][$modelName]['rs_standard']}</li>
 									<li>URS_Standard_Type: {$_SESSION['cart'][$modelName]['rs_s']}</li>
-									<li>URS_AddRolls: {$_SESSION['cart'][$modelName]['rs_addRolls']}</li>
+									<li>URS_AddRolls: {$_SESSION['cart'][$modelName]['rs_s_addRolls']}</li>
 									<li>URS_AutoTension: {$_SESSION['cart'][$modelName]['rs_autoTension']}</li>
 									<li>URS_Indiv_AutoTension: {$_SESSION['cart'][$modelName]['rs_indivAutoTension']}</li>
 
