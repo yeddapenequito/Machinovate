@@ -35,20 +35,18 @@ if ($r) { // If it ran OK, display the records.
 						<div class="col-xs-8">
 							<p><strong class="text-uppercase"><u>'. $row['country'] . '</u></strong></p>
 							<table class="table table-borderless table-condensed">
-								<tbody>
-									<tr>
-										<td>Name</td>
-										<td class="text-info">: ' . $row['name'] . '</td>
-									</tr>
-									<tr>
-										<td>Email Address</td>
-										<td class="text-info">: ' . $row['email'] . '</td>
-									</tr>
-									<tr>
-										<td>Mobile No.</td>
-										<td class="text-info">: ' . $row['contact'] . '</td>
-									</tr>
-								</tbody>
+								<tr>
+									<th>Name</td>
+									<td class="text-info col-sm-9">: ' . $row['name'] . '</td>
+								</tr>
+								<tr>
+									<th>E-mail</td>
+									<td class="text-info">: ' . $row['email'] . '</td>
+								</tr>
+								<tr>
+									<th>Mobile No.</td>
+									<td class="text-info">: ' . $row['contact'] . '</td>
+								</tr>
 							</table>
 						</div>
 					</div>

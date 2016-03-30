@@ -414,6 +414,12 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   #agents-content > .row .agent img {
     padding: .3em;
   }
+  #agents-content table {
+    width: auto;
+  }
+  #agents-content table th {
+    border: none;
+  }
 
   /*=================================================================
   Order Summary styles
