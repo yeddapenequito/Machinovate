@@ -25,7 +25,7 @@
 	</div>  --><!-- /.container -->
 	<div id="faq" class="container">
 		<div class="panel-group" id="accordion">
-			<div class="faqHeader">Machines Ordered</div>
+			<div class="faqHeader"><h2>Machines Ordered</h2></div>
 			
 			<?php
 
