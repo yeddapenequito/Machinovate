@@ -49,7 +49,6 @@ function check_login($dbc, $username = '', $pass = '') {
 		$p = mysqli_real_escape_string($dbc, trim($pass));
 	}
 	
-    if($_POST['captcha'] != $_SESSION['digit']) die("Sorry, the CAPTCHA code entered was incorrect!");
     
 
 	if (empty($errors)) { // If everything's OK.
