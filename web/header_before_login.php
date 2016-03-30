@@ -19,6 +19,9 @@
 				<li><a id="contact-us" href="contact_us.php">Contact Us</a></li>
 				<li><a id="agents" href="agents.php">Agents</a></li>
 			</ul>
+			<div class="nav navbar-nav navbar-right">
+              <button action="cart-summary.php" type="button" class="btn btn-default" id="your-shopping-cart-btn"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Your Shopping Cart</button>
+            </div>
 		</div><!--/.nav-collapse -->
 	</div><!--/.container-fluid -->
 </nav>

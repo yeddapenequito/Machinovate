@@ -134,6 +134,18 @@ body {
     box-shadow: 0 8px 6px -6px #999;
   }
 
+  .navbar #your-shopping-cart-btn {
+    background-color: #bdc3c7;
+    color: #153a7e;
+    margin: 1em 3em;
+  }
+
+  .navbar #your-shopping-cart-btn:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+
 
 /*navbar brand styles
 ----------------------------------------------------------------*/
