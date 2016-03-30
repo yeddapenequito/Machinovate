@@ -18,7 +18,6 @@
 				<li><a id="events" href="events.php">Events</a></li>
 				<li><a id="contact-us" href="contact_us.php">Contact Us</a></li>
 				<li><a id="agents" href="agents.php">Agents</a></li>
-				<li><a id="agents" href="cart_summary.php">Shopping Cart</a></li>
 			</ul>
 			<div class="nav navbar-nav navbar-right">
               <a href="cart_summary.php" type="button" class="btn btn-default btn-lg" id="your-shopping-cart-btn"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Your Shopping Cart</a>
