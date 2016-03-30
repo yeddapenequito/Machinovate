@@ -196,9 +196,9 @@
                                 </div>
 
                                 <!-- add another image button -->
-                                <button id="add-img-btn" type="button" title="Upload another image" class="btn btn-default">
+                                <!-- <button id="add-img-btn" type="button" title="Upload another image" class="btn btn-default">
                                     <span class="glyphicon glyphicon-plus"></span>
-                                </button>
+                                </button> -->
                             </div>
                         </div>
                         <div class="form-group">
