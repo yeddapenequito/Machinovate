@@ -35,7 +35,10 @@
 			}
 			return 0;
 		}
-		///end of functions
+
+		if(isset($_POST['coreCutterMachine']))
+			$coreCutter = $_POST['coreCutterMachine'];
+		///end of functions	
 
 		$modelName = $_POST['slitterType'];	//can be $_GET
 		$_SESSION['cart'][$modelName] = array(
@@ -50,7 +53,7 @@
 			
 			////cutting
 			//'addtlBlade' => $_POST['addtlBlade'],
-			'coreCutterMachine' => isChecked($_POST['coreCutterMachine'], 1),
+			'coreCutterMachine' => isChecked($coreCutter, 1),
 			
 			////URS
 			'rs_HydraulicShaftless' => isChecked($_POST['reelStand'], 1),

@@ -28,19 +28,19 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input class="type" name="slitterType" type="radio" value="SL_Standard">
+								<label><input class="type" name="slitterType" type="radio" value="1::SL_Standard">
 									MACH-MSR (Standard)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="slitterType" type="radio" value="SL_Heavy Duty">
+								<label><input class="type" name="slitterType" type="radio" value="2::SL_HeavyDuty">
 									MACH-MSR (Heavy Duty)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="slitterType" type="radio" value="SL_CRS">
+								<label><input class="type" name="slitterType" type="radio" value="3::SL_CRS">
 									MACH-CRS (Cash Register Slitter)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="slitterType" type="radio" value="SL_Customized">
+								<label><input class="type" name="slitterType" type="radio" value="4::SL_Customized">
 									Customized</label>
 							</div>
 						</div>
@@ -54,7 +54,7 @@
 						<div class="col-sm-10">
 							<div class="input-group">
 								
-								<input class="form-control" id="production-vol" min="0" name="productionVolume" step=".01" type="number"/>
+								<input class="form-control" id="production-vol" min="0" name="productionVolume" step=".01" type="number" required/>
 								<span class="input-group-addon">Tons per day</span>
 							</div>
 						</div>
@@ -66,7 +66,7 @@
 						<label class="control-label col-sm-2" for="paper-type">Paper Type:</label>
 
 						<div class="col-sm-10">
-							<input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text"/>
+							<input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text" required/>
 						</div>
 					</div>
 
@@ -77,11 +77,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0" name="gsmMin" placeholder="Min" size="5" step=".01" type="number">
+								<input class="form-control" min="0" name="gsmMin" placeholder="Min" size="5" step=".01" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0" name="gsmMax" placeholder="Max" size="5" step=".01" type="number">
+								<input class="form-control" min="0" name="gsmMax" placeholder="Max" size="5" step=".01" type="number" required>
 
 								<select class="form-control" name="gsmUnit"> 
 									<option value="inches">inches</option>
@@ -99,11 +99,11 @@
 						<div class="col-sm-10">
 							<div class="form-inline">
 
-									<input class="form-control" min="0" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number">
+									<input class="form-control" min="0" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number" required>
 
 									<span>to</span>
 
-									<input class="form-control" min="0" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number">
+									<input class="form-control" min="0" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number" required>
 
 									<select class="form-control" name="rollDiameterUnit"> 
 										<option value="inches">inches</option>
@@ -120,11 +120,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number">
+								<input class="form-control" min="0" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number">
+								<input class="form-control" min="0" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number" required>
 
 								<select class="form-control" name="slittingWidthUnit"> 
 									<option value="inches">inches</option>
@@ -213,7 +213,7 @@
 										<div class="form-group">
 											<label class="control-label" for="reel-stand-others-text-field">
 												Others:</label>
-											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers" value="<?php if (isset($_POST['reelStandOthers'])) echo $_POST['reelStandOthers']; ?>" type="text">
+											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers" value="<?php if (isset($_POST['reelStandOthers'])) echo $_POST['reelStandOthers']; ?>" type="text" required>
 										</div>
 									</div>
 								</label>
@@ -228,7 +228,7 @@
 
 						<div class="col-sm-10">
 							<div class="input-group">
-								<input class="form-control" id="ton-capacity"  name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>" type="number">
+								<input class="form-control" id="ton-capacity"  name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>" type="number" required>
 								<span class="input-group-addon">Tons</span>
 							</div>
 						</div>
