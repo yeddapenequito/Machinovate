@@ -139,6 +139,21 @@
                 </div>
             </div>
     </div>
+    <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">Who can we contact for further improvements and questions where we can't find the answer in this FAQ?</a>
+                </h4>
+            </div>
+            <div id="collapseEight" class="panel-collapse collapse">
+                <div class="panel-body">
+                   <p>Shawn Relova (Project Manager)
+                   <p>Contact Details: </p>
+                   <a>09226150170</a>
+                   </p>
+                </div>
+            </div>
+    </div>
     </div>
 
     
