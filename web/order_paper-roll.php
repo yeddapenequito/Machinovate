@@ -12,7 +12,6 @@
 
 		<div  id="order-slitter" class="container">
 			<h1 class="page-header">Paper Roll Truck Form Requirements</h1>
-			<p>Please input the necessary information.</p>
 			<!-- please change the form action... to what name if ever wrong-->
 			<form action="paper_roll_form_success.php" role="form" class="form-horizontal" method="post">
 				<!-- Quantity -->
