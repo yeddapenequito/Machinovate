@@ -280,7 +280,10 @@
         <script src="js/cbpAnimatedHeader.js"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="js/freelancer.js"></script>          
+        <script src="js/freelancer.js"></script> 
+        <script>
+            document.getElementById("home").className = "active";
+        </script>         
 
 	</body>
 </html>
