@@ -31,19 +31,39 @@ model_type TINYTEXT
 CREATE TABLE cmsr_sheeter (
 	cmsr_sheeter_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	order_id SMALLINT UNSIGNED NOT NULL,
-	model_name TINYTEXT,
-	--General Section
-	sh_production_volume FLOAT(6,2) UNSIGNED NOT NULL,
-	sh_cut_paper_type TINYTEXT NOT NULL,
-	GSM
-	--Cutting Section
 	
-	--
+	Shitter_Type VARCHAR(20) NOT NULL,
+	Production_Volume FLOAT(6,2) UNSIGNED NOT NULL,
+	Paper_Type VARCHAR(32) NOT NULL,
+	GSM VARCHAR(20) NOT NULL,
+	Roll_Diameter VARCHAR(20) NOT NULL,
+	Cutt_Off_Length VARCHAR(20) NOT NULL,
+	Slitting_Width VARCHAR(20) NOT NULL,
 	
-	--
----------specs----------
--------------------------
-)
+	Cutting_MainDrive VARCHAR(20) NOT NULL,
+	Cutting_Knife VARCHAR(20) NOT NULL,
+	Cutting_Slitter Cutting_MainDrive VARCHAR(20) NULL,
+	Cutting_SlitterMax TINYINT(2) NULL DEFAULT 0,
+	
+	URS_HydraulicShaftless TINYINT(1) UNSIGNED NULL DEFAULT 0,
+	URS_HydraulicRadio VARCHAR(20) NULL DEFAULT 'N/A',
+	URS_StandardReel TINYINT(1) UNSIGNED NULL DEFAULT 0,
+	URS_StandardReelRadio VARCHAR(20) NULL DEFAULT 'N/A',
+	URS_AutoTension TINYINT(1) UNSIGNED NULL DEFAULT 0,
+	URS_IndivAutoTension TINYINT(1) UNSIGNED NULL DEFAULT 0,
+	
+	URS_RollWeight FLOAT(6,2) UNSIGNED NOT NULL,
+	
+	Sys_ComputerControl TINYINT(1) UNSIGNED NULL DEFAULT 0,
+	Sys_WebGuideHydraulicEPC TINYINT(1) UNSIGNED NULL DEFAULT 0,
+	Sys_Others VARCHAR(128) NULL DEFAULT 'N/A',
+
+	Other_Details VARCHAR(2048) NULL DEFAULT 'N/A',
+	
+	PRIMARY KEY (cmsr_sheeter_id)
+) ENGINE=InnoDB;
+
+
 
 CREATE TABLE cmsr_slitter (
 	cmsr_slitter_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -56,14 +76,15 @@ CREATE TABLE cmsr_slitter (
 	Roll_Diameter VARCHAR(20) NOT NULL,
 	Slitting_Width VARCHAR(20) NOT NULL,
 	
-	Cutting_AddtlBlade TINYINT(2) UNSIGNED NOT NULL DEFAULT 0,
-	Cutting_CoreCutterMachine TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
+	Cutting_AddtlBlade TINYINT(2) UNSIGNED NULL DEFAULT 0,
+	Cutting_CoreCutterMachine TINYINT(1) UNSIGNED NULL DEFAULT 0,
 	
 	URS_HydraulicShaftless TINYINT(1) UNSIGNED NULL DEFAULT 0,
 	URS_Single TINYINT(1) UNSIGNED NULL DEFAULT 0,
 	URS_Customized TINYINT(1) UNSIGNED NULL DEFAULT 0,
 	URS_ShaftStand TINYINT(1) UNSIGNED NULL DEFAULT 0,
 	URS_Others VARCHAR(128) NULL DEFAULT 'N/A',
+	
 	URS_TonCapacity FLOAT(6,2) UNSIGNED NOT NULL,
 	
 	Sys_WebGuideHydraulicEPC TINYINT(1) UNSIGNED NULL DEFAULT 0,
@@ -78,6 +99,42 @@ CREATE TABLE cmsr_slitter (
 	PRIMARY KEY (cmsr_slitter_id)
 ) ENGINE=InnoDB;
 INSERT INTO cmsr_slitter(order_id, Slitter_Type, Production_Volume, Paper_Type, GSM, Roll_Diameter, Slitting_Width, Cutting_AddtlBlade, Cutting_CoreCutterMachine, URS_HydraulicShaftless, URS_Single, URS_Customized, URS_ShaftStand, URS_Others, URS_TonCapacity, Sys_WebGuideHydraulicEPC, Sys_Tension, Sys_BananaRoll_TensionRoller, Sys_BrakeSystem, Sys_FullyComputerized, Sys_Others, Other_Details) VALUES(1, 'MSR', 6.02, 'carbon', '88 - 88', '88 - 88', '88 - 88', 123, 1, 1, 1, 1, 1, '0', 5, 0, 0, 0, 0, 0, '', 'asdf');
+
+CREATE TABLE cmsr_cutter {
+	cmsr_cutter_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	order_id SMALLINT UNSIGNED NOT NULL,
+
+	Cutter_Type VARCHAR(20) NOT NULL,
+
+	Other_Details VARCHAR(2048) NULL DEFAULT 'N/A',
+	
+	PRIMARY KEY (cmsr_slitter_id)
+
+} ENGINE=InnoDB;
+
+CREATE TABLE cmsr_bailing {
+	cmsr_bailing_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	order_id SMALLINT UNSIGNED NOT NULL,
+
+	Bailing_Quantity TINYINT(2) NOT NULL,
+
+	Other_Details VARCHAR(2048) NULL DEFAULT 'N/A',
+	
+	PRIMARY KEY (cmsr_bailing_id)
+
+} ENGINE=InnoDB;
+
+CREATE TABLE cmsr_paper_roll {
+	cmsr_paper_roll_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	order_id SMALLINT UNSIGNED NOT NULL,
+
+	Paper_Roll_Quantity TINYINT(2) NOT NULL,
+
+	Other_Details VARCHAR(2048) NULL DEFAULT 'N/A',
+	
+	PRIMARY KEY (cmsr_bailing_id)
+
+} ENGINE=InnoDB;
 --
 /*
 CREATE TABLE cmsr_slitter (
@@ -103,13 +160,13 @@ CREATE TABLE cmsr_slitter (
 	PRIMARY KEY (cmsr_slitter_id)
 ) ENGINE=InnoDB;
 */
-cmsr_misc_machines
+/*cmsr_misc_machines
 id SMALLINT
 order_id SMALLINT
 model_type TINYTEXT
 ---------specs----------
 -------------------------
-
+*/
 
 
 CREATE TABLE customers (

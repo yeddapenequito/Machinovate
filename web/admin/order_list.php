@@ -7,6 +7,15 @@
 	<link rel="stylesheet" href="../styles/main.css">
 	<link rel="stylesheet" href="../styles/admin.css">
 	<title>Machinovate | Order List</title>
+	<style>
+		form {
+			width: 100%;
+		}
+		form .form-group {
+			width: 20em;
+			float: right;
+		}
+	</style>
 </head>
 <body>
 	<?php include 'header_after_login.php';?>
@@ -28,7 +37,16 @@
 		}
 
 	?>
-
+		<form class="form" role="form">
+	        <div class="form-group text-right">
+	        	<div class="input-group">
+	        		<input placeholder="Search" id="search" name="search" type="text" class="form-control">
+	        		<div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+	        	</div>
+	        </div>
+		</form>
+		<br>
+		<br>
 		<ul class="nav nav-tabs">
 		  <li><a data-toggle="tab" href="#menu1">All</a></li>
 		  <li class="active"><a data-toggle="tab" href="#home">Pending</a></li>
