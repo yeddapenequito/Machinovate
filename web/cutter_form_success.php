@@ -18,7 +18,7 @@
 					<center><legend>Your Order has been added to your Cart!</legend>
 					
 	<?php 
-		//echo 'NO ERROR TRAPPING YET';
+		echo 'NO ERROR TRAPPING YET';
 		session_start();
 	
 		$modelName = $_POST['cutterRadio'];	//can be $_GET
