@@ -149,7 +149,7 @@
                                         </strong> 
                                     </div>
                                 </div>";
-                            
+
                             
                             
                         } // End of if (empty($errors)) IF.
@@ -204,7 +204,7 @@
                         <div class="form-group">
                             <div class="col-sm-9 col-sm-offset-3">
                                 <button type="Add" class="btn btn-primary">Add event</button>
-                                <a class="btn btn-default" id="cancel-btn" href="order_list.php">
+                                <a href="order_list.php" Stype="cancel" id="cancel-btn" class="btn btn-default">Cancel</a>
                             </div>
                         </div>
                     </fieldset>
