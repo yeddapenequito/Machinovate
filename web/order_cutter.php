@@ -12,7 +12,9 @@
 
 		<div  id="order-slitter" class="container">
 			<h1 class="page-header">Cutter Form Requirements</h1>
-			<p>Please bear with us.</p>
+			<div class="text-info">
+				<p>If you need any help, please feel free to contact these numbers: +404 6676/+355 4635</p>
+			</div>
 			<form action="cutter_form_success.php" role="form" class="form-horizontal" method="post">
 				<fieldset>
 					<legend>General Section</legend>
