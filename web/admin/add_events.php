@@ -190,7 +190,7 @@
                                 <div class="img-input">
                                     <div class="row item">
                                         <div class="col-sm-10 upload-img">
-                                            <input name="image_name" id="image" type="file" class="form-control" value="Browse Image"/>
+                                            <input name="image" id="image" type="file" class="form-control" value="Browse Image"/>
                                         </div>
                                     </div>
                                 </div>
