@@ -46,22 +46,22 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">How to change status of the order?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">How to change status of the order?</a>
                 </h4>
             </div>
-            <div id="collapseTen" class="panel-collapse collapse">
+            <div id="collapseTwo" class="panel-collapse collapse">
                 <div class="panel-body">
-                  <p> You could change the status of the order in the tables...</p>
+                  <p> In the order list page where in the tables, there will be a "move" button available at the rightmost part of the table. This button will allow you to change the status of the order.</p>
                 </div>
             </div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">How to edit the orders?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How to edit the orders?</a>
                 </h4>
             </div>
-            <div id="collapseEleven" class="panel-collapse collapse">
+            <div id="collapseThree" class="panel-collapse collapse">
                 <div class="panel-body">
                     <p>You could edit the order by...</p> 
                 </div>
@@ -72,10 +72,10 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Can you retrieve deleted orders?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Can you retrieve deleted orders?</a>
                 </h4>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
+            <div id="collapseFour" class="panel-collapse collapse">
                 <div class="panel-body">
                    <p>Deleted orders would....</p> 
                 </div>
@@ -84,10 +84,10 @@
            <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How to add events and agents</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">How to add events and agents</a>
                 </h4>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse">
+            <div id="collapseFive" class="panel-collapse collapse">
                 <div class="panel-body">
                   <p>  The steps involved in adding events and agents
                     <ul>
@@ -103,37 +103,51 @@
          <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Will there be more than one admin account?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Will there be more than one admin account?</a>
                 </h4>
             </div>
 
-            <div id="collapseFour" class="panel-collapse collapse">
+            <div id="collapseSix" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>There would be only one admin account.</p>
+                    <p>This would be considered for future company requirements. As of now, only one account for all administrators, only one would be made available.</p>
                 </div>
             </div>
            </div>
              <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">How to recover forgotten password?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">How to recover forgotten password?</a>
                 </h4>
             </div>
-            <div id="collapseFive" class="panel-collapse collapse">
+            <div id="collapseSeven" class="panel-collapse collapse">
                 <div class="panel-body">
                    <p>You could recover forgotten password by </p>
                 </div>
             </div>
            </div>
-             <div class="panel panel-default">
+    <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">How to edit event descriptions?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">How to edit event descriptions?</a>
                 </h4>
             </div>
-            <div id="collapseSix" class="panel-collapse collapse">
+            <div id="collapseEight" class="panel-collapse collapse">
                 <div class="panel-body">
                    <p>You could edit event descriptions by..</p>
+                </div>
+            </div>
+           </div>
+    </div>
+
+     <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">Will I be able to delete the admin account?</a>
+                </h4>
+            </div>
+            <div id="collapseNine" class="panel-collapse collapse">
+                <div class="panel-body">
+                   <p>Since there will be only one administrator account available, deletion would not be an option. This will be considered with the future improvements of the system regarding the addition of additional administrator accounts.</p>
                 </div>
             </div>
            </div>
