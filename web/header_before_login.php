@@ -20,7 +20,7 @@
 				<li><a id="agents" href="agents.php">Agents</a></li>
 			</ul>
 			<div class="nav navbar-nav navbar-right">
-              <a href="cart_summary.php" type="button" class="btn btn-default" id="your-shopping-cart-btn"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Your Shopping Cart</a>
+              <a href="cart_summary.php" type="button" class="btn btn-default btn-lg" id="your-shopping-cart-btn"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Your Shopping Cart</a>
             </div>
 		</div><!--/.nav-collapse -->
 	</div><!--/.container-fluid -->

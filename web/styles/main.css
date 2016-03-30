@@ -137,7 +137,7 @@ body {
   .navbar #your-shopping-cart-btn {
     background-color: #bdc3c7;
     color: #153a7e;
-    margin: 1em 3em;
+    margin: .75em 3em;
   }
 
   .navbar #your-shopping-cart-btn:hover {
