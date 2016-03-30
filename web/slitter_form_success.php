@@ -12,9 +12,10 @@
 
 	<div class="container">
 		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
+			<div class="col-sm-12">
 				<form action="cart_summary.php?unitName=SL_Customized" role="form" class="form-horizontal"method='post'>
-					<legend>Your Order has been added to your Cart!</legend>
+				<div class="jumbotron">
+				<center><legend>Your Order has been added to your Cart!</legend>
 	<?php 
 		echo 'NO ERROR TRAPPING YET';
 		session_start();
@@ -75,6 +76,9 @@
 
 			<a id="cancel-btn" href="machines.php" class="btn btn-default">Continue Browsing</a>
 			<button id="add-to-cart-btn" type="submit" class="btn btn-default">Proceed to Checkout</button>
+		</div>
+		</center>
+		</form>
 		</div>
 	</div>
 </div> <!-- /.container -->

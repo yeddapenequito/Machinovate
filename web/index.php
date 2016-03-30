@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Featured Machines</h2>
-                    <hr>
+                    <hr size="">
                 </div>
             </div>
             <div class="row">
@@ -120,8 +120,8 @@
                     <div class="footer-col col-md-4">
                         <h3>FAQ</h3>
                         <p><a href="faq_order.php?q=1">How to Order?</a></p>
-                        <p><a href="faq_order.php?q=10">Specifications of Machines</a></p>
-                        <p><a href="faq_order.php?q=11">How I contact your company?</a></p>
+                        <p><a href="faq_order.php?q=10" class="small">What are the "specifications" of machines?</a></p>
+                        <p><a href="faq_order.php?q=11">How can I contact your company?</a></p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Location
