@@ -69,12 +69,6 @@ if (isset($errors) && !empty($errors)) {
 				</fieldset>
 
 				<div class="form-group">
-					<div class="checkbox">
-						<label for="remember"><input id="remember" type="checkbox" value="remember">Remember Me</label>
-					</div>
-				</div>
-
-				<div class="form-group">
 					<input id="login-btn" type="submit" value="Login" class="btn btn-primary btn-block">
 				</div>
 

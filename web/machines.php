@@ -47,7 +47,7 @@
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			document.getElementById("machines").className = "active";
-			// document.getElementById("slitter").style.border = "2px solid #153a7e";
+			document.getElementById("slitter").style.border = "2px solid #153a7e";
 
 			var image;
 

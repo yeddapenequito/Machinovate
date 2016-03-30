@@ -132,6 +132,7 @@ if ($r) { // If it ran OK, display the records.
 						</div>
 						
 				</fieldset>
+				<a id="add-to-cart-btn" href="thankyou_page.php"type="submit" class="btn btn-default">Finish</a>
 				
 			</div> 
 		</div>
