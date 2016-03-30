@@ -15,7 +15,7 @@ if (isset($errors) && !empty($errors)) {
 	}
 	echo '</p><p>Please try again.</p>';
 }
-	
+
 // Display the form:
 ?>
 
@@ -67,6 +67,8 @@ if (isset($errors) && !empty($errors)) {
 						</div>
 					</div>
 				</fieldset>
+
+				
 
 				<div class="form-group">
 					<input id="login-btn" type="submit" value="Login" class="btn btn-primary btn-block">
