@@ -38,7 +38,7 @@
                             <input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" style="width:10%;" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>'/>
                         </div>
                     </div>
-
+                    <!-- Price -->
                  <div class="form-group">
                         <label for="comment" class="control-label col-sm-2">Price:</label>
                         <div class="col-sm-10">
