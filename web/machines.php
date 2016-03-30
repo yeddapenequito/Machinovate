@@ -45,7 +45,7 @@
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			document.getElementById("machines").className = "active";
-			document.getElementById("slitter").style.border = "2px solid #153a7e";
+			// document.getElementById("slitter").style.border = "2px solid #153a7e";
 
 			var image;
 
@@ -89,12 +89,6 @@
 			    		document.getElementById("continue-btn").href = "other_products.php";
 			    }
 			}	
-		</script>
-		<script>
-		$("a").hover(function(){
-		    $(this).css("border-color", "black");
-		    } 
-		});
 		</script>
 	</body>
 </html>

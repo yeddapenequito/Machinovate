@@ -278,7 +278,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     display: block;
   }
   #machines-content .btn-group > a {
-    background-color: transparent;
+    background-color: #eee;
     border-radius: 5px;
     border: 1px solid silver;
     color: black;
