@@ -29,10 +29,9 @@
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Accounts <b class="caret"></b></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Account <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="add_agents.php">Some dropdown menu</a></li>
-								<li><a href="add_events.php">Some dropdown menu</a></li>
+								<li><a href="edit_account.php">Change Username/Password</a></li>
 							</ul>
 						</li>
 						<li><a id="faq" href="faq_admin.php">Help/FAQ</a></li>
