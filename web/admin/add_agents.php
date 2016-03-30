@@ -343,9 +343,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		echo '<div class="container"><h1>Error!</h1>
 		<p class="error">The following error(s) occurred:<br />';
 		foreach ($errors as $msg) { // Print each error.
-			echo " - $msg<br />\n";
+			echo " <div class='form-group'>
+                                    <div class='alert alert-danger'>
+                                        
+                                        <strong>
+                                        
+                                         $msg<br />\n
+                                        <p>Please try again.</p>
+                                        
+                                        </strong> 
+                                    </div>
+                                </div>";
 		}
-		echo '</p><p>Please try again.</p><p><br /></p></div>';
+		
 		
 	} // End of if (empty($errors)) IF.
 	
@@ -650,6 +660,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<div class="form-group">
 						<div class="col-sm-9 col-sm-offset-3">
 							<button type="Add" class="btn btn-primary">Add agent</button>
+							  <a class="btn btn-default" id="cancel-btn" href="order_list.php">
+                            Cancel</a>
 						</div>
 					</div>
 				</form>

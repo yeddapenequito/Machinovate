@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		// Assign $data to $errors for index.inc.php:
 		$errors = $data;
-		redirect_user('index.inc.php');
+		
 		redirect_user('error_login.php');
 		
 	}
