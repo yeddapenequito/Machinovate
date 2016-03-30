@@ -1,9 +1,7 @@
 <?php # Script 12.12 - login.php #4
 // This page processes the login form submission.
 // The script now stores the HTTP_USER_AGENT value for added security.
-session_start();
-    if($_POST['captcha'] != $_SESSION['digit']) echo("Sorry, the CAPTCHA code entered was incorrect!");
-session_destroy();
+
 // Check if the form has been submitted:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -37,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 		
 	mysqli_close($dbc); // Close the database connection.
-
+	
 
 } // End of the main submit conditional.
 
