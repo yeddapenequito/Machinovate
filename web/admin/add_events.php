@@ -136,24 +136,20 @@
                         
                             echo '<h1>Error!</h1>
                             <p class="error">The following error(s) occurred:<br />';
-                            foreach ($errors as $msg) { // Print each error.
-                                echo "?>
-                               <div class='form-group'>
+                            echo " <div class='form-group'>
                                     <div class='alert alert-danger'>
                                         
-                                        <strong>
+                                        <strong>";
+                                        foreach ($errors as $msg) {
                                         
-                                         $msg<br />\n
-                                        <p>Please try again.</p>
+                                        echo " $msg<br />\n";
+                                     }
+                                       echo "<p>Please try again.</p>
                                         
                                         </strong> 
                                     </div>
                                 </div>";
-
-
-
                             
-                            }
                             
                             
                         } // End of if (empty($errors)) IF.
