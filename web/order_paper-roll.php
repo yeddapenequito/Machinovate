@@ -25,7 +25,7 @@
 					<div class="form-group">
 					<label for="type" class="control-label col-sm-2">Comments/Suggestions:</label>
 						<div class="col-sm-10">
-					  		<textarea class="form-control" id="comment" rows="8"  placeholder="Please input your comments/suggestions here" style="width:80%;" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
+					  		<textarea class="form-control" id="comment" rows="8"  placeholder="Please input your comments/suggestions here if any" style="width:80%;" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
 						</div>
 					</div>
 

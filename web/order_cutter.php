@@ -75,7 +75,7 @@
 					<div class="form-group">
 
 						<div class="col-sm-offset-2 col-sm-10">
-					  		<textarea placeholder="Place your additional requirements here." class="form-control" id="comment" rows="8"  name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
+					  		<textarea placeholder="Place your additional requirements here if any." class="form-control" id="comment" rows="8"  name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
 						</div>
 					</div>
 				</fieldset>
