@@ -33,7 +33,7 @@
 	?>
 
 			<a id="cancel-btn" href="machines.php" class="btn btn-default">Continue Browsing</a>
-			<button id="add-to-cart-btn" type="submit" class="btn btn-default">Proceed to Checkout</button>
+			<button id="add-to-cart-btn" type="submit" class="btn btn-default">View Your Cart</button>
 		</div>
 
 		</center>
