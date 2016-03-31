@@ -8,14 +8,14 @@ $page_title = 'Login';
 
 // Print any error messages, if they exist:
 if (isset($errors) && !empty($errors)) {
-	echo '<h1>Error!</h1>
-	<p class="error">The following error(s) occurred:<br />';
+	echo '<h1>Error!</h1>';
+	echo'<p class="error">The following error(s) occurred: <br/>';
 	foreach ($errors as $msg) {
-		echo " - $msg<br />\n";
+		echo ' - $msg <br/>\n';
 	}
 	echo '</p><p>Please try again.</p>';
 }
-	
+
 // Display the form:
 ?>
 
@@ -61,12 +61,14 @@ if (isset($errors) && !empty($errors)) {
 						<div class="row">
 							<img src="captcha.php" alt="CAPTCHA" class="col-sm-6 control-label">
 							<div class="col-sm-6">
-								<input type="text" name="captcha" class="form-control">
+								<input id="captcha" type="text" name="captcha" class="form-control" required>
 								<small>Copy the digits from the image into this box</small>
 							</div>
 						</div>
 					</div>
 				</fieldset>
+
+				
 
 				<div class="form-group">
 					<input id="login-btn" type="submit" value="Login" class="btn btn-primary btn-block">

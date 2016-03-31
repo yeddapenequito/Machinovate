@@ -38,8 +38,23 @@
 		}
 		///end of functions
 
+		$coreCutter = "";
+		if(isset($_POST['coreCutterMachine']))
+			$coreCutter = $_POST['coreCutterMachine'];
+
+		$systems = "";
+		if(isset($_POST['systems']))
+			$systems = $_POST['systems'];
+
 		$modelName = $_POST['slitterType'];	//can be $_GET
-		$_SESSION['cart'][$modelName] = array(
+
+		if(!is_array($_SESSION["selected_item"]))
+			$_SESSION["selected_item"] = array();
+
+		$split_mname = explode("::", $modelName);
+
+		$_SESSION["selected_item"][] = $split_mname[0];
+		$_SESSION['cart'][$split_mname[1]] = array(
 			////general section
 			'slitterType' => $_POST['slitterType'],
 			'productionVolume' => $_POST['productionVolume'],
@@ -51,7 +66,7 @@
 			
 			////cutting
 			//'addtlBlade' => $_POST['addtlBlade'],
-			'coreCutterMachine' => isChecked($_POST['coreCutterMachine'], 1),
+			'coreCutterMachine' => isChecked($coreCutter, 1),
 			
 			////URS
 			'rs_HydraulicShaftless' => isChecked($_POST['reelStand'], 1),
@@ -62,16 +77,17 @@
 			'tonCapacity' => $_POST['tonCapacity'],
 
 			////systems
-			'sys_WebGuideHydraulicEPC' => isChecked($_POST['systems'], 1),
-			'sys_Tension' => isChecked($_POST['systems'], 2),
-			'sys_BananaRoll_TensionRoller' => isChecked($_POST['systems'], 3),
-			'sys_BrakeSystem' => isChecked($_POST['systems'], 4),
-			'sys_FullyComputerized' => isChecked($_POST['systems'], 5),
-			//'sys_Others' => isChecked($_POST['systems'], 12),
+			'sys_WebGuideHydraulicEPC' => isChecked($systems, 1),
+			'sys_Tension' => isChecked($systems, 2),
+			'sys_BananaRoll_TensionRoller' => isChecked($systems, 3),
+			'sys_BrakeSystem' => isChecked($systems, 4),
+			'sys_FullyComputerized' => isChecked($systems, 5),
+			'sys_Others' => isset($_POST['systemsOthers']) ? $_POST['systemsOthers'] : "",
 
 			////other details
 			'otherDetails' => $_POST['otherDetails']
 			);
+			
 	?>
 
 			<a id="cancel-btn" href="machines.php" class="btn btn-default">Continue Browsing</a>
