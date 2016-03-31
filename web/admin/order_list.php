@@ -135,7 +135,56 @@
 						  </select>
 		    			</td>
 		    			<td>
-		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    				<button data-toggle="modal" href='#edit'>
+		    					<span class="glyphicon glyphicon-edit"></span></button>
+							<div class="modal fade" id="edit">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title">Edit</h4>
+										</div>
+										<div class="modal-body">
+											<div action="" method="POST" class="form-horizontal" role="form">
+												<div class="form-group">
+													<label for="machine-type" class="control-label col-sm-3">Order No.</label>
+													<div class="col-sm-9">
+														<p>0001</p>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="machine-type" class="control-label col-sm-3">Machine Type</label>
+													<div class="col-sm-9">
+														<input value="Slitter" type="text" id="machine-type" class="form-control">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="company-name" class="control-label col-sm-3">Company Name</label>
+													<div class="col-sm-9">
+														<input value="University of Santo Tomas" type="text" id="company-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="contact-name" class="control-label col-sm-3">Contact Name</label>
+													<div class="col-sm-9">
+														<input value="Juan Dela Cruz" type="text" id="contact-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="date-ordered" class="control-label col-sm-3">Date Ordered</label>
+													<div class="col-sm-9">
+														<input value="3/30/2016" type="date" id="date-ordered" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div> <!-- /.modal-body -->
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Save changes</button>
+										</div>
+									</div> <!-- /.modal-content -->
+								</div> <!-- /.modal-dialog -->
+							</div> <!-- /.modal -->
 		    			</td>
 		    			<td>
 		    				<button><span class="glyphicon glyphicon-remove"></span></button>
@@ -218,10 +267,59 @@
 						  </select>
 		    			</td>
 		    			<td>
-		    				<button><span class="glyphicon glyphicon-edit"></span></button>
+		    				<button data-toggle="modal" href='#edit1'>
+		    					<span class="glyphicon glyphicon-edit1"></span></button>
+							<div class="modal fade" id="edit">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title">Edit</h4>
+										</div>
+										<div class="modal-body">
+											<div action="" method="POST" class="form-horizontal" role="form">
+												<div class="form-group">
+													<label for="machine-type" class="control-label col-sm-3">Order No.</label>
+													<div class="col-sm-9">
+														<p>0002</p>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="machine-type" class="control-label col-sm-3">Machine Type</label>
+													<div class="col-sm-9">
+														<input value="Slitter" type="text" id="machine-type" class="form-control">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="company-name" class="control-label col-sm-3">Company Name</label>
+													<div class="col-sm-9">
+														<input value="University of Santo Tomas" type="text" id="company-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="contact-name" class="control-label col-sm-3">Contact Name</label>
+													<div class="col-sm-9">
+														<input value="Juan Dela Cruz" type="text" id="contact-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="date-ordered" class="control-label col-sm-3">Date Ordered</label>
+													<div class="col-sm-9">
+														<input value="3/30/2016" type="date" id="date-ordered" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div> <!-- /.modal-body -->
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Save changes</button>
+										</div>
+									</div> <!-- /.modal-content -->
+								</div> <!-- /.modal-dialog -->
+							</div> <!-- /.modal -->
 		    			</td>
 		    			<td>
-		    				<button><span class="glyphicon glyphicon-remove"></span></button>
+		    				<button class="delete"><span class="glyphicon glyphicon-remove"></span></button>
 		    			</td>
 		    		</tr>
 		    	</tbody>

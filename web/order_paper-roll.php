@@ -13,13 +13,13 @@
 		<div  id="order-slitter" class="container">
 			<h1 class="page-header">Paper Roll Truck Form Requirements</h1>
 			<!-- please change the form action... to what name if ever wrong-->
-			<form action="paper_roll_form_success.php" role="form" class="form-horizontal" method="post">
+			<form action="paper_roll_form_success.php" role="form" class="form form-horizontal" method="post">
 				<!-- Quantity -->
-					<div class="form-group">
-					<label for="type" class="control-label col-sm-2">Quantity:</label>
+					<div class="form-group has-error has-feedback">
+						<label for="type" class="control-label col-sm-2">Quantity:</label>
 						<div class="col-sm-10">
-						
-							<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" style="width:10%;" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>'/>
+							<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" style="width:10%;" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required/>
+							<div id="help-block" class="form-control-feedback" aria-hidden="true">This field is required.</div>
 						</div>
 					</div>
 					<div class="form-group">
@@ -33,7 +33,7 @@
 
 					<div class="col-sm-offset-2 col-sm-10">
 
-						<button class="btn btn-default" id="add-to-cart-btn" type="submit">
+						<button onclick="validateForm()" class="btn btn-default" id="add-to-cart-btn" type="submit">
 							Finish</button>
 						<a class="btn btn-default" id="cancel-btn" href="other_products.php">
 							Cancel</a>
@@ -44,7 +44,13 @@
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		
-
+		<script type="text/javascript">
+			var validateForm = function() {
+				var username = document.getElementById("username");
+				if(username.checkValidity() == false) {
+					document.getElementByClass("form-control-feedback").innerHTML = username.validationMessage
+				}
+			}
 		</script>
 	</body>
 </html>
