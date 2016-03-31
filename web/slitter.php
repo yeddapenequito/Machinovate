@@ -31,7 +31,8 @@
 					
 					<div id="description">
 						<p class="text-justify">
-							Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
+							The <strong>Slitter</strong> commonly referred to as <strong>Slitter Rewinder</strong>, is a primary machine used in the conversion of <strong>Paper, Film, and Foil</strong> material. 
+							Designed to convert a wide roll of material into several thinner rolls, the slitter starts by unwinding a master or mill roll, continues by slitting the unwound material into various widths, and finally completes the process by rewinding the slit material onto cores of various widths.
 						</p>
 					</div>
 
