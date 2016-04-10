@@ -111,3 +111,7 @@ table {
     text-decoration: underline;
     border: none;
   }
+
+input#login-btn {
+    margin-top: 4em;
+}
