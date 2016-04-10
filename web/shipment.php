@@ -125,15 +125,19 @@
 						<div class="col-sm-offset-2 col-sm-10">
 							<div class="input-group">
 								<input class="form-control" type="number" name="confirmation" required/>
-								<span class="input-group-addon">% downpayment upon confirmation</span>
+								<span class="input-group-addon">
+									% downpayment upon confirmation</span>
 							</div>
+						</div>
+					</div>
 
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
 							<div class="input-group">
 								<input class="form-control" type="number" name="shipment" required/>
-								<span class="input-group-addon">% before shipment</span>
+								<span class="input-group-addon">
+									% before shipment</span>
 							</div>
-
-							
 						</div>
 					</div>
 				</fieldset>		
