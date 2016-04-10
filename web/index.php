@@ -119,8 +119,8 @@
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+                <div class="lr"  style="width:5px;">
+                    <div class="rl" style="width:5px;">
                     </div>
                 </div>
             </div>
@@ -147,8 +147,8 @@
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+                <div class="lr"  style="width:5px;">
+                    <div class="rl" style="width:5px;">
                     </div>
                 </div>
             </div>
@@ -176,8 +176,8 @@
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+                <div class="lr"  style="width:5px;">
+                    <div class="rl" style="width:5px;">
                     </div>
                 </div>
             </div>

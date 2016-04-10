@@ -36,8 +36,8 @@
 								<td>Telephone</td>
 								<td>
 									<ul class="list-unstyled">
-										<li>+404 6676</li>
-										<li>+355 4635</li>
+										<li>(02) 404 6676</li>
+										<li>(02) 355 4635</li>
 										
 									</ul>
 								</td>

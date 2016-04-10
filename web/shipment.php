@@ -111,12 +111,12 @@
 							<label class="control-label col-sm-2" for="payment">
 								Payment Terms: </label>
 							<div class="col-sm-10">
-								<div class="radio">
-									<label><input type="radio" name="term" id= "credit" value="Letter of Credit, Draft at Sight"> Letter of Credit, Draft at Sight </label>
+								<div class="checkbox">
+									<label><input type="checkbox" name="term" id= "credit" value="Letter of Credit, Draft at Sight"> Letter of Credit, Draft at Sight </label>
 								</div>
 
-								<div class="radio">
-									<label><input type="radio" name="term" value="Telegraphic Transfer" id="transfer">Telegraphic Transfer </label>
+								<div class="checkbox">
+									<label><input type="checkbox" name="term" value="Telegraphic Transfer" id="transfer">Telegraphic Transfer </label>
 								</div>
 							</div>
 						</div>
@@ -133,10 +133,7 @@
 									<span class="input-group-addon">% before shipment</span>
 								</div>
 
-								<div class="input-group">
-									<input class="form-control" id="telegraphic-transfer-c"  disabled type="number" name="installation" required/>
-									<span class="input-group-addon">% upon installation</span>
-								</div>
+								
 							</div>
 						</div>
 					</fieldset>		
