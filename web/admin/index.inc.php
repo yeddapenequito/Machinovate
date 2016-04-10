@@ -56,7 +56,7 @@ if (isset($errors) && !empty($errors)) {
 				</div>
 
 				<!-- The following code for implementing captcha is obtained and modified from http://www.the-art-of-web.com/php/captcha/-->
-				<fieldset>
+				<!--<fieldset>
 					<div class="form-group" id="captcha">
 						<div class="row">
 							<img src="captcha.php" alt="CAPTCHA" class="col-sm-6 control-label">
@@ -66,7 +66,7 @@ if (isset($errors) && !empty($errors)) {
 							</div>
 						</div>
 					</div>
-				</fieldset>
+				</fieldset>-->
 
 				
 
