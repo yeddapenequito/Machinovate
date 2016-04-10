@@ -114,7 +114,7 @@
                                 // Print a message:
                                 //echo '<h1>Thank you!</h1>
                             //<p>An event has been added!</p><p><br /></p>'; 
-                            header('Location: /Machinovate/web/admin/account-edit_successful.php');
+                            header('Location: /Machinovate/web/admin/account_edit_successful.php');
                             
                             } else { // If it did not run OK.
                                 
