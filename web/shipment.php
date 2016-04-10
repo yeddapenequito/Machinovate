@@ -116,7 +116,7 @@
 								</div>
 
 								<div class="checkbox">
-									<label><input type="checkbox" name="term" value="Telegraphic Transfer" id="transfer">Telegraphic Transfer </label>
+									<label><input type="checkbox" name="term" id="transfer" value="Telegraphic Transfer">Telegraphic Transfer </label>
 								</div>
 							</div>
 						</div>
@@ -124,12 +124,12 @@
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
 								<div class="input-group">
-									<input class="form-control" id="telegraphic-transfer-a" disabled type="number" name="confirmation" required/>
+									<input class="form-control" type="number" name="confirmation" required/>
 									<span class="input-group-addon">% downpayment upon confirmation</span>
 								</div>
 
 								<div class="input-group">
-									<input class="form-control" id="telegraphic-transfer-b" disabled type="number" name="shipment" required/>
+									<input class="form-control" type="number" name="shipment" required/>
 									<span class="input-group-addon">% before shipment</span>
 								</div>
 
@@ -155,28 +155,5 @@
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="actionlistener.js"></script>
-		<script type="text/javascript">
-
-			document.getElementById("transfer").onchange = function() {
-			
-				if(document.getElementById("transfer").checked) {
-					document.getElementById("telegraphic-transfer-a").removeAttribute("disabled");
-					document.getElementById("telegraphic-transfer-b").removeAttribute("disabled");
-					document.getElementById("telegraphic-transfer-c").removeAttribute("disabled");
-				}
-				};
-			document.getElementById("credit").onchange = function() {
-				if(document.getElementById("credit").checked){
-					document.getElementById("telegraphic-transfer-a").setAttribute("disabled", "disabled");
-					document.getElementById("telegraphic-transfer-a").value = "";
-					document.getElementById("telegraphic-transfer-b").setAttribute("disabled", "disabled");
-					document.getElementById("telegraphic-transfer-b").value = "";
-					
-					document.getElementById("telegraphic-transfer-c").setAttribute("disabled", "disabled");
-					document.getElementById("telegraphic-transfer-c").value = "";
-			
-				}
-			};
-	    </script>
 	</body>
 </html>
