@@ -14,7 +14,7 @@
 			<h1 class="page-header">Paper Slitter Form Requirements</h1>
 			<div class="text-info">
 				<p>Please bear with us. This is going to take long.</p>
-				<p>If you need any help, please feel free to contact these numbers: +404 6676/+355 4635</p>
+				<p>If you need any help, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
 			</div>
 			
 			<form action="slitter_form_success.php" role="form" class="form-horizontal" method="post">
