@@ -96,22 +96,17 @@ table {
       color: #153a7e;
     }
 
-
-
-    /*=================================================================
-    Order now styles
-    =================================================================*/
-  
   form #cancel-btn {
     background-color: transparent;
     color: #bdc3c7;
   }
+
   form #cancel-btn:hover {
     color: #bdc3c7;
     text-decoration: underline;
     border: none;
   }
-
-input#login-btn {
+  
+  form #login-btn {
     margin-top: 4em;
-}
+  }
