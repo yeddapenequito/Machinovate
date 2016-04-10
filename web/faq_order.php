@@ -224,23 +224,9 @@
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
         <script>
-            var getUrlParameter = function getUrlParameter(sParam) {
-                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-                    sURLVariables = sPageURL.split('&'),
-                    sParameterName,
-                    i;
-
-                for (i = 0; i < sURLVariables.length; i++) {
-                    sParameterName = sURLVariables[i].split('=');
-
-                    if (sParameterName[0] === sParam) {
-                        return sParameterName[1] === undefined ? true : sParameterName[1];
-                    }
-                }
-            };
-
-            var q = Number(getUrlParameter("q"));
-            switch (q) {
+            var loc = window.location.href;
+            var q = loc.substr(loc.lastIndexOf("=") + 1);
+            switch (Number(q)) {
                 case 1:
                     $('#collapseOne').addClass("in");
                     break;
@@ -250,6 +236,8 @@
                 case 11:
                     $('#collapseEleven').addClass("in");
                     break;
+                default:
+                    alert(q + " is not in any of the cases")
             }
         </script>
 	</body>
