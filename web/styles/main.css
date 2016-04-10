@@ -138,12 +138,18 @@ body {
     background-color: #bdc3c7;
     color: #153a7e;
     margin: .75em 3em;
+    margin-left: 0;
   }
 
   .navbar #your-shopping-cart-btn:hover {
     background-color: transparent;
     border: 1px solid white;
     color: white;
+  }
+
+  .navbar span {
+    font-style: italic;
+    padding: 0 1em;
   }
 
 

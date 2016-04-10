@@ -20,7 +20,8 @@
 				<li><a id="agents" href="agents.php">Agents</a></li>
 			</ul>
 			<div class="nav navbar-nav navbar-right">
-              <a target="_blank" href="admin/index.inc.php" type="button" class="btn btn-default btn-lg" id="your-shopping-cart-btn">Login</a>
+				<span>Are you an employee?</span>
+                <a target="_blank" href="admin/index.inc.php" type="button" class="btn btn-default btn-lg" id="your-shopping-cart-btn">Login</a>
             </div>
 		</div><!--/.nav-collapse -->
 	</div><!--/.container-fluid -->
