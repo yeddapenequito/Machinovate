@@ -11,6 +11,12 @@
 		<?php include 'header_on_form_completion.php';?>
 
 		<div  id="order-slitter" class="container">
+		<ol class="breadcrumb">
+				<li><a href="machines.php">Machines</a></li>
+				<li><a href="other_products.php">Other Products</a></li>
+				<li><a href="bailing_machine.php">Bailing Machine</a></li>
+				<li class="active">Bailing Machine Form Requirements</li>
+			</ol>
 			<h1 class="page-header">Bailing Machine Form Requirements</h1>
 			<p>Please input the necessary information.</p>
 			<!-- please change the form action... to what name if ever wrong-->

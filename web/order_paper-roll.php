@@ -11,6 +11,12 @@
 		<?php include 'header_on_form_completion.php';?>
 
 		<div  id="order-slitter" class="container">
+		<ol class="breadcrumb">
+				<li><a href="machines.php">Machines</a></li>
+				<li><a href="other_products.php">Other Products</a></li>
+				<li><a href="paper_roll_truck.php">Paper Roll Truck</a></li>
+				<li class="active">Paper Sheeter Form Requirements</li>
+			</ol>
 			<h1 class="page-header">Paper Roll Truck Form Requirements</h1>
 			<!-- please change the form action... to what name if ever wrong-->
 			<form action="paper_roll_form_success.php" role="form" class="form form-horizontal" method="post">

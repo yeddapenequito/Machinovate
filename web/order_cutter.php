@@ -11,6 +11,11 @@
 		<?php include 'header_on_form_completion.php';?>
 
 		<div  id="order-slitter" class="container">
+		<ol class="breadcrumb">
+				<li><a href="machines.php">Machines</a></li>
+				<li><a href="cutter.php">Cutter</a></li>
+				<li class="active">Cutter Form Requirements</li>
+			</ol>
 			<h1 class="page-header">Cutter Form Requirements</h1>
 			<div class="text-info">
 				<p>If you need any help, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>

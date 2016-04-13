@@ -11,6 +11,11 @@
 		<?php include 'header_on_form_completion.php';?>
 
 		<div  id="order-slitter" class="container">
+		<ol class="breadcrumb">
+				<li><a href="machines.php">Machines</a></li>
+				<li><a href="slitter.php">Slitter</a></li>
+				<li class="active">Paper Slitter Form Requirements</li>
+			</ol>
 			<h1 class="page-header">Paper Slitter Form Requirements</h1>
 			<div class="text-info">
 				<p>Please bear with us. This is going to take long.</p>
