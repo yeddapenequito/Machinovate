@@ -134,14 +134,14 @@ body {
     box-shadow: 0 8px 6px -6px #999;
   }
 
-  .navbar #your-shopping-cart-btn {
+  .navbar #login-btn {
     background-color: #bdc3c7;
     color: #153a7e;
     margin: .75em 3em;
     margin-left: 0;
   }
 
-  .navbar #your-shopping-cart-btn:hover {
+  .navbar #login-btn:hover {
     background-color: transparent;
     border: 1px solid white;
     color: white;

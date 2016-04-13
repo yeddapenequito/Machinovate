@@ -21,7 +21,7 @@
 			</ul>
 			<div class="nav navbar-nav navbar-right">
 				<span>Are you an employee?</span>
-                <a target="_blank" href="admin/index.inc.php" type="button" class="btn btn-default btn-lg" id="your-shopping-cart-btn">Login</a>
+                <a href="admin/index.inc.php" type="button" class="btn btn-default btn-lg" id="login-btn">Login</a>
             </div>
 		</div><!--/.nav-collapse -->
 	</div><!--/.container-fluid -->
