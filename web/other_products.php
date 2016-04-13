@@ -20,7 +20,7 @@
 			<div class="row">
 				<div>
 					<a href="bailing_machine.php" class="col-xs-12 col-sm-3">
-						<img src="images/bailing_machine.png" alt="Bailing Machine">
+						<img src="images/bailing-machine.png" alt="Bailing Machine">
 						<h1>Bailing Machine</h1>
 					</a>
 				</div>
