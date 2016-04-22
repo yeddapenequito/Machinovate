@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="styles/bootstrap.min.css">
-		<link rel="stylesheet" href="styles/main.css">
-		<title>Machinovate | FAQ</title>
-	</head>
-	<body>
-		<?php include 'header_before_login.php';?>
-		
-	
-    <div class="container">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Machinovate | FAQ</title>
+</head>
+<body>
+  <?php include 'header_before_login.php';?>
 
-	<div class="page-header">
-	<h2 style="text-align: center;">FAQ</h2>
-    <h1 style="text-align: center;"><small>Frequently Asked Questions</small></h1>
-	</div>
 
-	<!-- FAQ - START -->
-	<div class="container">
+  <div class="container">
+
+   <div class="page-header">
+       <h2 style="text-align: center;">FAQ</h2>
+       <h1 style="text-align: center;"><small>Frequently Asked Questions</small></h1>
+   </div>
+
+   <!-- FAQ - START -->
+   <div class="container">
     <div class="panel-group" id="accordion">
         <div class="faqHeader">General</div>
 
@@ -27,192 +27,208 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-1">
                         How to order machines?</a>
-                </h4>
-            </div>
+                    </h4>
+                </div>
 
-            <div id="collapseOne" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Steps in Ordering
-                    <ul>
-                        <li>Go to Machines page.</li>
-                        <li>Choose among Slitter, Sheeter, Cutter or Other products.</li>
-                        <li>Click continue.</li>
-                        <li>Choose your <strong>desired</strong> machine</li>
-                        <li>Press Add to Cart button.</li>
-                        <li>Fill up the form requirements.</li>
-                        <li>Fill up the shipment details.</li>
-                        <li>The process of payment will follow through.</li>
-                    </ul>
+                <div id="question1-1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Steps in Ordering
+                        <ol>
+                            <li>Go to the <a href="machines.php">Machines</a> page.</li>
+                            <li>Choose among Slitter, Sheeter, Cutter or Other products.</li>
+                            <li>Click <a id="continue-btn" class="btn btn-primary btn-sm sample">Continue</a>.</li>
+                            <li>Search and choose your desired machine from our catalog</li>
+                            <li>Click <a class="btn btn-primary btn-sm sample">
+                            <i class="glyphicon glyphicon-shopping-cart"></i> Add to Shopping Cart</a> button.</li>
+                            <li>Fill up the form requirements.</li>
+                            <li>Fill up the shipment details.</li>
+                            <li>The process of payment will follow through.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- question 2 -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">
-                        What are the "specifications" of machines?</a>
-                </h4>
-            </div>
-            <div id="collapseTen" class="panel-collapse collapse">
-                <div class="panel-body">
-                  The different specifications present the specification per product, which varies mostly in size. This would give the customer ideas for appropriate modification or customization of their desired product.
-                </div>
-            </div>
-        </div>
-         <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen">
-                                Where can I see specifications of different Machines?</a>
+            <!-- question 2 -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-2">
+                            What are the "specifications" of machines?</a>
                         </h4>
                     </div>
-                    <div id="collapseThirteen" class="panel-collapse collapse">
+                    <div id="question1-2" class="panel-collapse collapse">
                         <div class="panel-body">
-                           You could see the different specification of your preferred machines by going to the Machines page, and choose your desired machine.
+                          The different specifications present the specification per product, which varies mostly in size. This would give the customer ideas for appropriate modification or customization of their desired product.
+                      </div>
+                  </div>
+              </div>
+
+              <!-- question 3 -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-3">
+                            Where can I see specifications of different Machines?</a>
+                        </h4>
+                    </div>
+                    <div id="question1-3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                         You could see the different specification of your preferred machines by going to the Machines page, and choose your desired machine.
+                     </div>
+                 </div>
+             </div>
+
+             <!-- question 4 -->
+             <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-4">
+                            Where can I find the location of your company?</a>
+                        </h4>
+                    </div>
+                    <div id="question1-4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            You could see our location by going to <strong>Contact Us</strong> page in the tab above. Where a map is made available.
                         </div>
                     </div>
                 </div>
-        <!-- question 3 -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">
-                        Where can I find the location of your company?</a>
-                </h4>
-            </div>
-            <div id="collapseEleven" class="panel-collapse collapse">
-                <div class="panel-body">
-                    You could see our location by going to <strong>Contact Us</strong> page in the tab above. Where a map is made available.
-                </div>
-            </div>
-        </div>
 
-        <!-- question 4 -->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve">How can I contact your company?</a>
-                </h4>
-            </div>
-            <div id="collapseTwelve" class="panel-collapse collapse">
-                <div class="panel-body">
-                    You could contact us by our telephone numbers located in the <strong>Contact Us</strong> page in the tab above.
+                <!-- question 5 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-5">How can I contact your company?</a>
+                        </h4>
+                    </div>
+                    <div id="question1-5" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            You could contact us by our telephone numbers located in the <strong>Contact Us</strong> page in the tab above.
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">What are "agents"?</a>
-                </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-                <div class="panel-body">
-                   The agents are the country representatives for the Machinovate International Inc. Their details are shown to give ease of communication from other countries concerning the company.
-                </div>
-            </div>
-        </div>
-    <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen">How to edit my orders?</a>
-                </h4>
-            </div>
-            <div id="collapseFourteen" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p> After submitting your order, you will be directed to a summary page which will show the details you have ordered. You will be able to review your order, and choose whether to change the specifications or finally submit your order. Worst case scenario, you can tell the administrator, during the phone call, of what changes you want to create.</p> 
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">When I submit an order form, is it possible to withdraw the order? How?</a>
-                </h4>
-            </div>
-            <div id="collapseFive" class="panel-collapse collapse">
-                <div class="panel-body">
-                   During the phone call for verification, you can tell the administrator that you are going to cancel your order.
-                </div>
-            </div>
-        </div>
 
-        <div class="panel panel-default">
+                <!-- question 6 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-6">What are "agents"?</a>
+                        </h4>
+                    </div>
+                    <div id="question1-6" class="panel-collapse collapse">
+                        <div class="panel-body">
+                         The agents are the country representatives for the Machinovate International Inc. Their details are shown to give ease of communication from other countries concerning the company.
+                     </div>
+                 </div>
+             </div>
+
+             <!-- question 7 -->
+             <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-7">How to edit my orders?</a>
+                    </h4>
+                </div>
+                <div id="question1-7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p> After submitting your order, you will be directed to a summary page which will show the details you have ordered. You will be able to review your order, and choose whether to change the specifications or finally submit your order. Worst case scenario, you can tell the administrator, during the phone call, of what changes you want to create.</p> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- question 8 -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-8">When I submit an order form, is it possible to withdraw the order? How?</a>
+                    </h4>
+                </div>
+                <div id="question1-8" class="panel-collapse collapse">
+                    <div class="panel-body">
+                     During the phone call for verification, you can tell the administrator that you are going to cancel your order.
+                 </div>
+             </div>
+         </div>
+    
+        <!-- question 9 -->
+         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Will i be notified if there are unavailable parts?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-9">Will i be notified if there are unavailable parts?</a>
                 </h4>
             </div>
-            <div id="collapseSix" class="panel-collapse collapse">
+            <div id="question1-9" class="panel-collapse collapse">
                 <div class="panel-body">
                     Everything regarding the machine production will be further explained by the administrator during the phone call.
                 </div>
             </div>
         </div>
-        <div class="faqHeader">Payment</div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">How will I pay?</a>
-                </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-                <div class="panel-body">
-                   After submitting your order, an email of validation will be sent to the company administrator. After validating your request, the administrator will give you a call, regarding the details of your payment.
-                </div>
-            </div>
-        </div>
 
-        <div class="faqHeader">Delivery</div>
+        <div class="faqHeader">Payment</div>
+
+        <!-- question 1 -->
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">When will I get my order?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question2-1">How will I pay?</a>
                 </h4>
             </div>
-            <div id="collapseFour" class="panel-collapse collapse">
+            <div id="question2-1" class="panel-collapse collapse">
                 <div class="panel-body">
-                    During the verification of the administrator regarding your order, you will be discussed accordingly when your order would be completed and delivered.
-                </div>
+                 After submitting your order, an email of validation will be sent to the company administrator. After validating your request, the administrator will give you a call, regarding the details of your payment.
+             </div>
+         </div>
+     </div>
+
+     <div class="faqHeader">Delivery</div>
+
+     <!-- question 1 -->
+     <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question3-1">When will I get my order?</a>
+            </h4>
+        </div>
+        <div id="question3-1" class="panel-collapse collapse">
+            <div class="panel-body">
+                During the verification of the administrator regarding your order, you will be discussed accordingly when your order would be completed and delivered.
             </div>
         </div>
     </div>
 </div>
+</div>
 
 <style>
-    .faqHeader {
-        font-size: 27px;
-        margin: 20px;
-    }
+.faqHeader {
+    font-size: 27px;
+    margin: 20px;
+}
 
-    .panel-heading [data-toggle="collapse"]:after {
-        font-family: 'Glyphicons Halflings';
-        content: "\e072"; /* "play" icon */
-        float: right;
-        color: #153a7e;
-        font-size: 18px;
-        line-height: 22px;
-        /* rotate "play" icon from > (right arrow) to down arrow */
-        -webkit-transform: rotate(-90deg);
-        -moz-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
-        transform: rotate(-90deg);
-    }
+.panel-heading [data-toggle="collapse"]:after {
+    font-family: 'Glyphicons Halflings';
+    content: "\e072"; /* "play" icon */
+    float: right;
+    color: #153a7e;
+    font-size: 18px;
+    line-height: 22px;
+    /* rotate "play" icon from > (right arrow) to down arrow */
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
 
-    .panel-heading [data-toggle="collapse"].collapsed:after {
-        /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        transform: rotate(90deg);
-        color: #454444;
-    }
+.panel-heading [data-toggle="collapse"].collapsed:after {
+    /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: #454444;
+}
 </style>
 
 <!-- FAQ - END -->
@@ -220,25 +236,23 @@
 </div>
 
 
-   
-		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
-		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-        <script>
-            var loc = window.location.href;
-            var q = loc.substr(loc.lastIndexOf("=") + 1);
-            switch (Number(q)) {
-                case 1:
-                    $('#collapseOne').addClass("in");
-                    break;
-                case 10:
-                    $('#collapseTen').addClass("in");
-                    break;
-                case 11:
-                    $('#collapseEleven').addClass("in");
-                    break;
-                default:
-                    alert(q + " is not in any of the cases")
-            }
-        </script>
-	</body>
+
+<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script>
+var loc = window.location.href;
+var q = loc.substr(loc.lastIndexOf("=") + 1);
+switch (Number(q)) {
+    case 1:
+        $('#question1-1').addClass("in");
+        break;
+    case 2:
+        $('#question1-2').addClass("in");
+        break;
+    case 4:
+        $('#question1-4').addClass("in");
+        break;
+}
+</script>
+</body>
 </html>

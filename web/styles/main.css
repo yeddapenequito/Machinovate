@@ -531,4 +531,13 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     text-align: center;
     top:0px;
    }
+
+   /*-----------------------------------------------------------------
+     Sample buttons
+     -----------------------------------------------------------------*/
+     .sample:hover{
+        background-color: #153a7e;
+        color: white;
+        border: 1px solid transparent;
+     }
    
