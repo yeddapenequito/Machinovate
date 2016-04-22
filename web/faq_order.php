@@ -33,18 +33,17 @@
                 </div>
 
                 <div id="question1-1" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        Steps in Ordering
+                    <div class="panel-body" style="line-height:2.5em">
                         <ol>
                             <li>Go to the <a href="machines.php">Machines</a> page.</li>
-                            <li>Choose among Slitter, Sheeter, Cutter or Other products.</li>
+                            <li>Choose among <strong>Slitter, Sheeter, Cutter or Other products</strong>.</li>
                             <li>Click <a id="continue-btn" class="btn btn-primary btn-sm sample">Continue</a>.</li>
-                            <li>Search and choose your desired machine from our catalog</li>
+                            <li>Navigate through your desired machine from our catalog</li>
                             <li>Click <a class="btn btn-primary btn-sm sample">
                             <i class="glyphicon glyphicon-shopping-cart"></i> Add to Shopping Cart</a> button.</li>
-                            <li>Fill up the form requirements.</li>
-                            <li>Fill up the shipment details.</li>
-                            <li>The process of payment will follow through.</li>
+                            <li>Fill up <strong>Machine Requirements</strong> form.</li>
+                            <li>Fill up <strong>Shipment Details</strong> form.</li>
+                            <li>You will receive a phone call shortly to discuss payment and delivery details.</li>
                         </ol>
                     </div>
                 </div>
@@ -75,7 +74,7 @@
                     </div>
                     <div id="question1-3" class="panel-collapse collapse">
                         <div class="panel-body">
-                         You could see the different specification of your preferred machines by going to the Machines page, and choose your desired machine.
+                         You can see the different specifications of your preferred machines by going to the <a href="machines.php">Machines</a> page, and navigating to page of your desired machine.
                      </div>
                  </div>
              </div>
@@ -90,7 +89,7 @@
                     </div>
                     <div id="question1-4" class="panel-collapse collapse">
                         <div class="panel-body">
-                            You could see our location by going to <strong>Contact Us</strong> page in the tab above. Where a map is made available.
+                            You can see our location by going to the <a href="contact_us.php">Contact Us</a> page in the tab above. Where a map is made available.
                         </div>
                     </div>
                 </div>
@@ -104,7 +103,7 @@
                     </div>
                     <div id="question1-5" class="panel-collapse collapse">
                         <div class="panel-body">
-                            You could contact us by our telephone numbers located in the <strong>Contact Us</strong> page in the tab above.
+                            You can contact us through our telephone numbers located in the <a href="contact_us.php">Contact Us</a> page in the tab above.
                         </div>
                     </div>
                 </div>
@@ -118,7 +117,7 @@
                     </div>
                     <div id="question1-6" class="panel-collapse collapse">
                         <div class="panel-body">
-                         The agents are the country representatives for the Machinovate International Inc. Their details are shown to give ease of communication from other countries concerning the company.
+                            The agents are representatives of Machinovate International Inc. on different countries. Clients from other countries can contact them for easier communication with us. You can view the list of agents <a href="agents.php">here</a>.
                      </div>
                  </div>
              </div>
@@ -155,7 +154,7 @@
          <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-9">Will i be notified if there are unavailable parts?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-9">Will I be notified if there are unavailable parts?</a>
                 </h4>
             </div>
             <div id="question1-9" class="panel-collapse collapse">
@@ -176,7 +175,7 @@
             </div>
             <div id="question2-1" class="panel-collapse collapse">
                 <div class="panel-body">
-                 After submitting your order, an email of validation will be sent to the company administrator. After validating your request, the administrator will give you a call, regarding the details of your payment.
+                 After submitting your order, the company administrator will validate your request and give you a call shortly regarding the details of your payment.
              </div>
          </div>
      </div>
@@ -192,7 +191,7 @@
         </div>
         <div id="question3-1" class="panel-collapse collapse">
             <div class="panel-body">
-                During the verification of the administrator regarding your order, you will be discussed accordingly when your order would be completed and delivered.
+                Completion and delivery of your machine/s will be discussed during the phone call.
             </div>
         </div>
     </div>
