@@ -21,10 +21,10 @@
 						<img id="focus-img" src="images/servo-drive-sheeter.jpg" alt="Servo Drive Sheeter Machine">
 					</div>
 					<div id="sm-img">
-						<img onclick="changeImage(0)" class="active" id="img0"alt="Servo Drive Sheeter Machine" src="images/servo-drive-sheeter.jpg"></img>
-						<img onclick="changeImage(1)" class="active" id="img1" alt="4 Rolls" src="images/servo_4rolls.jpg"></img>
-						<img onclick="changeImage(2)" id="img2" alt="4 Rolls Unwind (3)" src="images/4rolls_shaftless_unwind.png"></img>
-						<img onclick="changeImage(3)" id="img3" alt="Sheeter Paper Mill" src="images/sheeter_paper_mill.jpg"></img>
+						<img onclick="changeImageTo(1, 0, 2, servoImages)" class="active" id="img0"alt="Servo Drive Sheeter Machine" src="images/servo-drive-sheeter.jpg"></img>
+						<img onclick="changeImageTo(1, 1, 3, servoImages)" id="img1" alt="4 Rolls" src="images/servo_4rolls.jpg"></img>
+						<img onclick="changeImageTo(1, 2, 4, servoImages)" id="img2" alt="4 Rolls Unwind (3)" src="images/4rolls_shaftless_unwind.png"></img>
+						<img onclick="changeImageTo(1, 3, 5, servoImages)" id="img3" alt="Sheeter Paper Mill" src="images/sheeter_paper_mill.jpg"></img>
 					</div>
 				</div>
 				<div class="col-sm-8">
@@ -184,38 +184,14 @@
 		<?php include 'footer.php';?>
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/changeImageTo.js"></script>
 		<script type="text/javascript">
-			function changeImage(imgNum) {
-			    switch(imgNum) {
-			    	case 0:
-			    		document.getElementById("focus-img").src = "images/servo-drive-sheeter.jpg";
-			    		$("#img0").addClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 1: 
-			    		document.getElementById("focus-img").src = "images/servo_4rolls.jpg";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").addClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 2:
-			    		document.getElementById("focus-img").src = "images/4rolls_shaftless_unwind.png";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").addClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 3:
-			    		document.getElementById("focus-img").src = "images/sheeter_paper_mill.jpg";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").addClass("active");
-			    }
-			}	
+			var servoImages = [
+				"images/servo-drive-sheeter.jpg",
+				"images/servo_4rolls.jpg",
+				"images/4rolls_shaftless_unwind.png",
+				"images/sheeter_paper_mill.jpg"
+			];
 		</script>
 	</body>
 </html>

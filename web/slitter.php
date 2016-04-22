@@ -20,10 +20,10 @@
 						<img id="focus-img" src="images/slitter-front.png" alt="slitter">
 					</div>
 					<div id="sm-img">
-						<img onclick="changeImage(0)" class="active" id="img0" alt="slitter front" src="images/slitter-front.png"></img>
-						<img onclick="changeImage(1)" id="img1" alt="slitter back" src="images/slitter-back.png"></img>
-						<img onclick="changeImage(2)" id="img2" alt="slitter close up 1" src="images/slitter-close-up-1.jpg"></img>
-						<img onclick="changeImage(3)" id="img3" alt="slitter close up 2" src="images/slitter-close-up-2.jpg"></img>
+						<img onclick="changeImageTo(1, 0, 2, slitterImages)" class="active" id="img0" alt="slitter front" src="images/slitter-front.png"></img>
+						<img onclick="changeImageTo(1, 1, 3, slitterImages)" id="img1" alt="slitter back" src="images/slitter-back.png"></img>
+						<img onclick="changeImageTo(1, 2, 4, slitterImages)" id="img2" alt="slitter close up 1" src="images/slitter-close-up-1.jpg"></img>
+						<img onclick="changeImageTo(1, 3, 5, slitterImages)" id="img3" alt="slitter close up 2" src="images/slitter-close-up-2.jpg"></img>
 					</div>
 				</div>
 				<div class="col-sm-8">
@@ -169,38 +169,14 @@
 		<?php include 'footer.php';?>
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/changeImageTo.js"></script>
 		<script type="text/javascript">
-			function changeImage(imgNum) {
-			    switch(imgNum) {
-			    	case 0:
-			    		document.getElementById("focus-img").src = "images/slitter-front.png";
-			    		$("#img0").addClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 1: 
-			    		document.getElementById("focus-img").src = "images/slitter-back.png";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").addClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 2:
-			    		document.getElementById("focus-img").src = "images/slitter-close-up-1.jpg";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").addClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 3:
-			    		document.getElementById("focus-img").src = "images/slitter-close-up-2.jpg";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").addClass("active");
-			    }
-			}	
+			var slitterImages = [
+				"images/slitter-front.png",
+				"images/slitter-back.png",
+				"images/slitter-close-up-1.jpg",
+				"images/slitter-close-up-2.jpg"
+			];
 		</script>
 	</body>
 </html>
