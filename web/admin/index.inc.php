@@ -34,16 +34,13 @@ if (isset($errors) && !empty($errors)) {
 
 	<div id="login-content" class="container">
 		<div class="row">
+			<div class="form-group">
+				<div class="alert alert-danger">
+				  	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				  	<strong>Warning!</strong> This page is for authorized employees only.
+				</div>
+			</div>
 			<form role="form" action="login.php" method="post" class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
-				<div class="form-group">
-					<legend class="page-header">Login</legend>
-				</div>
-				<div class="form-group">
-					<div class="alert alert-danger">
-					  	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					  	<strong>Warning!</strong> This page is for authorized employees only.
-					</div>
-				</div>
 
 				<div class="form-group">
 					<label for="username">Username</label>
