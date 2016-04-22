@@ -95,7 +95,7 @@
                 <div class="col-lg-4">
                     <p>We use only the best Universal brands for all the essential parts like 
                         <a href="https://www.festo.com/net/startpage/" style="color: white;">FESTO</a>, 
-                        <a href="http://www.habasit.com/en/index.htm" style="color: white;">HASBASIT</a>, 
+                        <a href="http://www.habasit.com/en/index.htm" style="color: white;">HABASIT</a>, 
                         <a href="http://www.klingelnberg.com/" style="color: white;">KLINGELNBERG</a>,
                         <a href="http://www.gates.com/" style="color: white;"> GATES</a>,
                         <a href="https://www.yaskawa-global.com/" style="color: white;"> YASKAWA</a>, 
