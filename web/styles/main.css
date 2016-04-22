@@ -270,7 +270,17 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
 
   #contact-us-content #map {
   	min-width: 100%;
+    width:60%; 
+    height:325px; 
+    background:grey
   }
+
+  #contact-us-content #panel {
+    width:60%; 
+    height:75px; 
+    background:inherit
+  }
+  
   #contact-us-content table td {
   	border: none;
   }
