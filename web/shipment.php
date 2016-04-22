@@ -14,12 +14,12 @@
 		<?php include 'header_on_form_completion.php';?>
 		<div class="container">
 			<h1 class="page-header">Shipment Details</h1>
-			<p class="text-danger">All fields are required.</p>
+			<p style="color:red;font-style:italic">* Required fields.</p>
 	
 			<form role="form" id="slitter" method="post" 
 				role="form" class="form-horizontal">
 				<fieldset>	
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="col-sm-2 control-label">
 							Name:</label>
@@ -31,7 +31,7 @@
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="col-sm-2 control-label">
 							Company Name:</label>
@@ -40,7 +40,7 @@
 						</div>
 					</div>
 					
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="col-sm-2 control-label">
 							Address:</label>
@@ -49,7 +49,7 @@
 						</div>
 					</div>
 				
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="col-sm-2 control-label">
 							Mobile Number:</label>
@@ -58,7 +58,7 @@
 						</div>
 					</div>
 				
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="col-sm-2 control-label">
 							Email Address:</label>
@@ -73,7 +73,7 @@
 					<legend>Shipping Terms Section:</legend>
 
 					<!-- Shipping Delivery Basis -->
-					<div class="form-group">
+					<div class="form-group required">
 						<label class="control-label col-sm-2" for="ship-basis">
 							Shipping Delivery Basis: </label>
 						<div class="col-sm-10">
@@ -93,7 +93,7 @@
 					</div>	
 
 					<!--Shipment -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="shipment">
 							Shipment: </label>
@@ -106,7 +106,7 @@
 					</div>
 
 					<!-- Payment Terms -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="payment">
 							Payment Terms: </label>
@@ -121,7 +121,7 @@
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group required">
 						<div class="col-sm-offset-2 col-sm-10">
 							<div class="input-group">
 								<input class="form-control" type="number" name="confirmation" required/>
@@ -131,7 +131,7 @@
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group required">
 						<div class="col-sm-offset-2 col-sm-10">
 							<div class="input-group">
 								<input class="form-control" type="number" name="shipment" required/>

@@ -24,6 +24,11 @@ body {
   font-weight: bolder;
 }
 
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}
+
 /*=================================================================
   Footer styles
   =================================================================*/
@@ -529,6 +534,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
     text-decoration: underline;
     border: none;
   }
+
 /*=================================================================
     FAQ styles
     =================================================================*/
