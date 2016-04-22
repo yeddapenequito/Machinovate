@@ -24,7 +24,7 @@ body {
   font-weight: bolder;
 }
 
-.form-group.required .control-label:after {
+.form-group.required > .control-label:after {
   content:"*";
   color:red;
 }

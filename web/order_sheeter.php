@@ -11,29 +11,36 @@
 		<?php include "header_on_form_completion.php";?>
 		
 		<div  id="order-sheeter" class="container">
-		<ol class="breadcrumb">
+			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="sheeter.php">Sheeter</a></li>
-				<li class="active">Paper Sheeter Form Requirements</li>
+				<li class="active">Sheeter Machine Requirements Form</li>
 			</ol>
-			<h1 class="page-header">Paper Sheeter Form Requirements</h1>
-			<div class="text-info">
-				<p>Please bear with us. This is going to take long.</p>
-				<p>If you need any help, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
-			</div>
 
-			<form action="sheeter_form_success.php" role="form" class="form-horizontal" method="post">
+			<form id="sheeter-form" action="sheeter_form_success.php" role="form" class="form-horizontal" method="post">
+				<legend>
+					<h1>Sheeter Machine Requirements Form</h1>
+				</legend>
+				<div class="form-group">
+					<div class="alert alert-info">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					  	<p>Please bear with us. This is going to take long.</p>
+						<p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
+					</div>
+				</div>
+				<p style="color:red;font-style:italic">* Required fields.</p>
+
 				<fieldset>
 					<legend>General Section</legend>
 
 					<!-- Type -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label for="type" class="control-label col-sm-2">Type:</label>
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input class="type" name="sheeterType" type="radio" value="SH_PIV">
+								<label><input class="type" name="sheeterType" type="radio" value="SH_PIV" checked="checked">
 									MACH-SV (PIV - Overlapping)</label>
 							</div>
 							<div class="radio">
@@ -52,111 +59,117 @@
 					</div>
 
 					<!-- Production Vol. -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="production-vol">Production Volume:</label>
 
 						<div class="col-sm-10">
 							<div class="input-group">
 								
-								<input class="form-control" id="production-vol" min="0" name="productionVolume" step=".01" type="number"/>
+								<input class="form-control" id="production-vol" min="0" name="productionVolume" step=".01" type="number" required/>
 								<span class="input-group-addon">Tons per day</span>
 							</div>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 
 					<!-- Paper Type -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="paper-type">Paper Type:</label>
 
 						<div class="col-sm-10">
-							<input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text"/>
+							<input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text" required/>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 
 					<!-- GSM -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label  class="control-label col-sm-2" for="gsm">GSM:</label>
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0" name="gsmMin" placeholder="Min" size="5" step=".01" type="number">
+								<input class="form-control" min="0" name="gsmMin" placeholder="Min" size="5" step=".01" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0" name="gsmMax" placeholder="Max" size="5" step=".01" type="number">
+								<input class="form-control" min="0" name="gsmMax" placeholder="Max" size="5" step=".01" type="number" required>
 
 								<select class="form-control" name="gsmUnit"> 
 									<option value="inches">inches</option>
 									<option value="millimeters">millimeters</option>
 								</select>
+								<div class="help-block with-errors"></div>
 							</div>
 						</div>
 					</div>
 
 
 					<!-- Roll Diameter -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="roll-diameter">Roll Diameter:</label>
 
 						<div class="col-sm-10">
 							<div class="form-inline">
 
-									<input class="form-control" min="0" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number">
+									<input class="form-control" min="0" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number" required>
 
 									<span>to</span>
 
-									<input class="form-control" min="0" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number">
+									<input class="form-control" min="0" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number" required>
 
 									<select class="form-control" name="rollDiameterUnit"> 
 										<option value="inches">inches</option>
 										<option value="millimeters">millimeters</option>
 									</select>
+									<div class="help-block with-errors"></div>
 							</div>
 						</div>
 					</div>
 
 					<!-- Cut off Length -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label  class="control-label col-sm-2" for="gsm">Cut off Length:</label>
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0" name="cutOffLengthMin" placeholder="Min" size="5" step=".01" type="number">
+								<input class="form-control" min="0" name="cutOffLengthMin" placeholder="Min" size="5" step=".01" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0" name="cutOffLengthMax" placeholder="Max" size="5" step=".01" type="number">
+								<input class="form-control" min="0" name="cutOffLengthMax" placeholder="Max" size="5" step=".01" type="number" required>
 
 								<select class="form-control" name="cutOffLengthUnit"> 
 									<option value="inches">inches</option>
 									<option value="millimeters">millimeters</option>
 								</select>
+								<div class="help-block with-errors"></div>
 							</div>
 						</div>
 					</div>
 
 					<!-- Slitting Width -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="slitting-width">Slitting Width:</label>
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number">
+								<input class="form-control" min="0" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number">
+								<input class="form-control" min="0" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number" required>
 
 								<select class="form-control" name="slittingWidthUnit"> 
 									<option value="inches">inches</option>
 									<option value="millimeters">millimeters</option>
 								</select>
+								<div class="help-block with-errors"></div>
 							</div>
 						</div>
 					</div>
@@ -166,13 +179,13 @@
 					<legend>Cutting Section</legend>
 					
 					<!-- Main Drive -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label for="main-drive" class="control-label col-sm-2">Main Drive:</label>
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input id="main-drive" name="mainDriveRadio" type="radio" value="Inverter">
+								<label><input id="main-drive" name="mainDriveRadio" type="radio" value="Inverter" checked="checked">
 									Inverter</label>
 							</div>
 							<div class="radio">
@@ -183,13 +196,13 @@
 					</div>
 
 					<!-- Knife -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label for="knife" class="control-label col-sm-2">Knife:</label>
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input id="knife" name="knifeRadio" type="radio" value="Single Knife">
+								<label><input id="knife" name="knifeRadio" type="radio" value="Single Knife" checked="checked">
 									Single Knife</label>
 							</div>
 							<div class="radio">
@@ -200,7 +213,7 @@
 					</div>
 
 					<!-- Slitter -->
-					<div class="form-group">
+					<div class="form-group required">
 						<label class="control-label col-sm-2">Slitter:</label>
 						<div class="col-sm-10">
 							
@@ -227,7 +240,7 @@
 					<legend>Unwind Roll Stand Section</legend>
 					
 					<!-- Reel Stand -->
-					<div class="form-group">
+					<div class="form-group required">
 						<label for="sheeter" class="control-label col-sm-2">Reel Stand:</label>
 						<div class="col-sm-10">
 							<div class="checkbox">
@@ -295,7 +308,7 @@
 					</div>
 
 					<!-- Shaft -->
-					<div class="form-group">
+					<div class="form-group required">
 						
 						<label for="sheeter" class="col-sm-2 control-label">Shaft:</label>
 
@@ -322,15 +335,16 @@
 					</div>
 
 					<!-- Roll Weight -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label for="roll-weight" class="col-sm-2 control-label">Roll Weight:</label>
 						
 						<div class="col-sm-10">
 							<div class="input-group">
-								<input class="form-control" id="roll-weight"  name="rollWeight"  value="<?php if (isset($_POST['rollWeight'])) echo $_POST['rollWeight']; ?>" type="number">
+								<input class="form-control" id="roll-weight"  name="rollWeight"  value="<?php if (isset($_POST['rollWeight'])) echo $_POST['rollWeight']; ?>" type="number" required>
 								<span class="input-group-addon">Tons</span>
 							</div>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 
@@ -338,7 +352,7 @@
 
 				<fieldset>
 					<legend>Systems Section</legend>
-						<div class="form-group">
+						<div class="form-group required">
 							<label for="sheeter" class="col-sm-2 control-label ">Systems:</label>
 							<div class="col-sm-10">
 								<div class="checkbox">
@@ -366,8 +380,8 @@
 						</div>
 				</fieldset>
 
-
-				<fieldset> <!--Other Details Section-->
+				<!--Other Details Section-->
+				<fieldset> 
 					<legend>Other Details</legend>
 
 					<div class="form-group">
@@ -378,14 +392,12 @@
 					</div>
 				</fieldset>
 
-				<div class="form-group">
+				<div class="form-group required">
 
 					<div class="col-sm-offset-2 col-sm-10">
 
-						<button class="btn btn-default" id="add-to-cart-btn" type="submit">
-							Finish</button>
-						<a class="btn btn-default" id="cancel-btn" href="sheeter.php">
-							Cancel</a>
+						<input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Finish">
+						<a class="btn btn-default" id="cancel-btn" href="sheeter.php">Cancel</a>
 					</div>
 				</div>
 			</form>
@@ -393,14 +405,19 @@
 
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/validator.min.js"></script>
 		<script type="text/javascript">
+			$("#sheeter-form").validator();
+
 			document.getElementById("slitter").onchange = function() {
 					
 				if(document.getElementById("slitter").checked) {
 					document.getElementById("slitter-max").removeAttribute("disabled");
+					document.getElementById("slitter-max").setAttribute("required", "required");
 				}
 				else {
 					document.getElementById("slitter-max").setAttribute("disabled", "disabled");
+					document.getElementById("slitter-max").removeAttribute("required");
 					document.getElementById("slitter-max").value = "";
 				}
 			};
@@ -409,9 +426,11 @@
 					
 				if(document.getElementById("ten-rolls-radio").checked) {
 					document.getElementById("ten-rolls-text").removeAttribute("disabled");
+					document.getElementById("ten-rolls-text").setAttribute("required", "required");
 				}
 				else {
 					document.getElementById("ten-rolls-text").setAttribute("disabled", "disabled");
+					document.getElementById("ten-rolls-text").removeAttribute("required");
 					document.getElementById("ten-rolls-text").value = "";
 				}
 			};
@@ -420,9 +439,11 @@
 					
 				if(document.getElementById("systems-others-check").checked) {
 					document.getElementById("systems-others-text").removeAttribute("disabled");
+					document.getElementById("systems-others-text").setAttribute("required", "required");
 				}
 				else {
 					document.getElementById("systems-others-text").setAttribute("disabled", "disabled");
+					document.getElementById("systems-others-text").removeAttribute("required");
 					document.getElementById("systems-others-text").value = "";
 				}
 			};
@@ -433,6 +454,7 @@
 					for (var i = 0; i < radioButtons.length; i++) {
 						radioButtons[i].removeAttribute("disabled");
 					};
+					radioButtons[0].checked = true;
 				}
 				else {
 					for (var i = 0; i < radioButtons.length; i++) {
@@ -452,6 +474,7 @@
 					for (var i = 0; i < checkBox.length; i++) {
 						checkBox[i].removeAttribute("disabled");
 					};
+					radioButtons[0].checked = true;
 				}
 				else {
 					for (var i = 0; i < radioButtons.length; i++) {
