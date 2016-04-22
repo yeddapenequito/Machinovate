@@ -214,11 +214,11 @@
 
         <!-- Plugin JavaScript -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        <script src="js/classie.js"></script>
-        <script src="js/cbpAnimatedHeader.js"></script>
+        <script src="scripts/classie.js"></script>
+        <script src="scripts/cbpAnimatedHeader.js"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="js/freelancer.js"></script> 
+        <script src="scripts/freelancer.js"></script> 
         <script>
             document.getElementById("home").className = "active";
         </script>         
