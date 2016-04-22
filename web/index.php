@@ -97,8 +97,8 @@
                         <a href="https://www.festo.com/net/startpage/" style="color: white;">FESTO</a>, 
                         <a href="http://www.habasit.com/en/index.htm" style="color: white;">HABASIT</a>, 
                         <a href="http://www.klingelnberg.com/" style="color: white;">KLINGELNBERG</a>,
-                        <a href="http://www.gates.com/" style="color: white;"> GATES</a>,
-                        <a href="https://www.yaskawa-global.com/" style="color: white;"> YASKAWA</a>, 
+                        <a href="http://www.gates.com/" style="color: white;">GATES</a>,
+                        <a href="https://www.yaskawa-global.com/" style="color: white;">YASKAWA</a>, 
                         PITTMAN, KOYO, FINDEVA, FAG, SKF 
                         and the like. Our computerized controls use only the most advanced IPC technology by Bekhoff, Germany.</p>
                 </div>
