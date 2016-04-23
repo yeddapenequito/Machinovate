@@ -40,32 +40,19 @@ if (isset($errors) && !empty($errors)) {
 				  	<strong>Warning!</strong> This page is for authorized employees only.
 				</div>
 			</div>
-			<form role="form" action="login.php" method="post" class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+			<form id="form" role="form" action="login.php" method="post" class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
 
 				<div class="form-group">
 					<label for="username">Username</label>
 					<input id="username" name="username" type="text" placeholder="Enter username" class="form-control" required autofocus> 
+					<div style="color:white" class="help-block with-errors"></div>
 				</div>
 
 				<div class="form-group">
 					<label for="password">Password</label>
-					<input id="pass" name="pass" type="password" placeholder="Enter password" class="form-control" required> 
+					<input id="pass" name="pass" type="password" placeholder="Enter password" class="form-control" required>
+					<div style="color:white" class="help-block with-errors"></div> 
 				</div>
-
-				<!-- The following code for implementing captcha is obtained and modified from http://www.the-art-of-web.com/php/captcha/-->
-				<!--<fieldset>
-					<div class="form-group" id="captcha">
-						<div class="row">
-							<img src="captcha.php" alt="CAPTCHA" class="col-sm-6 control-label">
-							<div class="col-sm-6">
-								<input id="captcha" type="text" name="captcha" class="form-control" required>
-								<small>Copy the digits from the image into this box</small>
-							</div>
-						</div>
-					</div>
-				</fieldset>-->
-
-				
 
 				<div class="form-group">
 					<input id="login-btn" type="submit" value="Login" class="btn btn-primary btn-block">
@@ -77,5 +64,6 @@ if (isset($errors) && !empty($errors)) {
 
 	<script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../scripts/validator.min.js"></script>
 </body>
 </html>
