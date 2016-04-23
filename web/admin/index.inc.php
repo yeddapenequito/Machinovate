@@ -40,19 +40,16 @@ if (isset($errors) && !empty($errors)) {
 				  	<strong>Warning!</strong> This page is for authorized employees only.
 				</div>
 			</div>
-
-			<form id="form" role="form" action="login.php" method="post" class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+			<form role="form" action="login.php" method="post" class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
 
 				<div class="form-group">
 					<label for="username">Username</label>
 					<input id="username" name="username" type="text" placeholder="Enter username" class="form-control" required autofocus> 
-					<div style="color:white;" class="help-block with-errors"></div>
 				</div>
 
 				<div class="form-group">
 					<label for="password">Password</label>
 					<input id="pass" name="pass" type="password" placeholder="Enter password" class="form-control" required> 
-					<div class="help-block with-errors"></div>
 				</div>
 
 				<!-- The following code for implementing captcha is obtained and modified from http://www.the-art-of-web.com/php/captcha/-->
@@ -80,6 +77,5 @@ if (isset($errors) && !empty($errors)) {
 
 	<script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
 	<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../scripts/validator.min.js"></script>
 </body>
 </html>
