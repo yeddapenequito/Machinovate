@@ -97,7 +97,7 @@ lon=34.81773" width="300" height="400"></iframe> -->
 		</div>	
 		
 		<?php include 'footer.php';?>
-		<script type="text/javascript" src="./scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="./scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			document.getElementById("contact-us").className = "active";
