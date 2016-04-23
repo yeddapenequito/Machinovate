@@ -10,14 +10,14 @@
 	<body>
 		<?php include "header_on_form_completion.php";?>
 		
-		<div  id="order-sheeter" class="container">
+		<div class="container">
 			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="sheeter.php">Sheeter</a></li>
 				<li class="active">Sheeter Machine Requirements Form</li>
 			</ol>
 
-			<form id="sheeter-form" action="sheeter_form_success.php" role="form" class="form-horizontal" method="post">
+			<form id="form" action="sheeter_form_success.php" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Sheeter Machine Requirements Form</h1>
 				</legend>
@@ -407,7 +407,6 @@
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="scripts/validator.min.js"></script>
 		<script type="text/javascript">
-			$("#sheeter-form").validator();
 
 			document.getElementById("slitter").onchange = function() {
 					

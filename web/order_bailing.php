@@ -10,15 +10,15 @@
 	<body>
 		<?php include 'header_on_form_completion.php';?>
 
-		<div  id="order-bailing" class="container">
-		<ol class="breadcrumb">
+		<div class="container">
+			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="other_products.php">Other Products</a></li>
 				<li><a href="bailing_machine.php">Bailing Machine</a></li>
 				<li class="active">Bailing Machine Requirements Form</li>
 			</ol>
 
-			<form id="bailing-form" action="bailing_form_success.php" role="form" class="form-horizontal" method="post">
+			<form id="form" action="bailing_form_success.php" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Bailing Machine Requirements Form</h1>
 				</legend>
@@ -61,8 +61,5 @@
 		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="scripts/validator.min.js"></script>
-		<script type="text/javascript">
-			$("#bailing-form").validator();
-		</script>
 	</body>
 </html>

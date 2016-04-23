@@ -10,13 +10,13 @@
 	<body>
 		<?php include 'header_on_form_completion.php';?>
 
-		<div  id="order-slitter" class="container">
+		<div class="container">
 			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="slitter.php">Slitter</a></li>
 				<li class="active">Slitter Machine Requirements Form</li>
 			</ol>
-			<form id="slitter-form" action="slitter_form_success.php" name="form" role="form" class="form-horizontal" method="post">
+			<form id="form" action="slitter_form_success.php" name="form" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Slitter Machine Requirements Form</h1>
 				</legend>
@@ -327,7 +327,6 @@
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="scripts/validator.min.js"></script>
 		<script type="text/javascript">
-			$("#slitter-form").validator();
 
 			document.getElementById("slitter-additional-checkbox").onchange = function() {
 				

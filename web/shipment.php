@@ -16,7 +16,7 @@
 			<h1 class="page-header">Shipment Details</h1>
 			<p style="color:red;font-style:italic">* Required fields.</p>
 	
-			<form id="shipment-form" role="form" id="slitter" method="post" 
+			<form id="form" role="form" id="slitter" method="post" 
 				role="form" class="form-horizontal">
 				<fieldset>	
 					<div class="form-group required">
@@ -161,8 +161,5 @@
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="actionlistener.js"></script>
 		<script type="text/javascript" src="scripts/validator.min.js"></script>
-		<script type="text/javascript">
-			$("#shipment-form").validator();
-		</script>
 	</body>
 </html>
