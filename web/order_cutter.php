@@ -4,38 +4,46 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	require ('../../mysqli_connect.php'); // Connect to the db.
 		
 	$errors = array(); // Initialize an error array.
-	if (empty($_POST['cutterRadio'])) {
-		$errors[] = 'You forgot to enter the first name.';
-	} else {
-		$cutterRadio = $_POST['cutterRadio'];
-		
-	}
-
+	
+	$cutterRadio = $_POST['cutterRadio'];
 	$otherDetails = $_POST['otherDetails'];
 
-if(isset($_POST['submit']))
-{
-$q = "INSERT INTO cutter (cutterRadio, otherDetails) VALUES ('$cutterRadio', '$otherDetails')";		
+	if($cutterRadio!="")
+	{
+		$q = "INSERT INTO cutter (Cutter_Type, Other_Details) VALUES ('$cutterRadio', '$otherDetails');";		
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 		if ($r) { // If it ran OK.
 		
 			// Print a message:
 			echo '<h1>Thank you!</h1>
 		<p>Cutter has been added!</p><p><br /></p>';	
-		//header('Location: /Machinovate/web/admin/account_successful.php');
 		
-		}
-else
-{
-echo "there is a problem in Databse";
-}
-} // End of if (empty($errors)) IF.
+		header('Location: /Machinovate/web/admin/account_successful.php');
+		
+		} 
+		else 
+		{ // If it did not run OK.
+				
+				// Public message:
+				echo '<h1>System Error</h1>
+				<p class="error">The agent could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
+				header('Location: /Machinovate/web/admin/account_failed.php');
+				// Debugging message:
+				echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+							
+		} // End of if ($r) IF.
+		mysqli_close($dbc); // Close the database connection.
+
+	}
+	else 
+	{
+		$errors[] = 'You forgot to choose a cutter machine.';
+
+	}
 	
 	mysqli_close($dbc); // Close the database connection.
 
-}
-
- 
+} // End of the main Submit conditional.
 
 
 ?>
@@ -90,38 +98,31 @@ echo "there is a problem in Databse";
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_115E"  value="<?php if (isset($_POST['cutterRadio'])) echo 
-								$_POST['cutterRadio']; ?>">
+								<label><input class="type" name="cutterRadio" type="radio" id="CT_115E"  value="CT_115E">
 									CT-115E (115 cm/45.2in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_137E" value="<?php if (isset($_POST['cutterRadio'])) echo 
-								$_POST['cutterRadio']; ?>">
+								<label><input class="type" name="cutterRadio" type="radio" id="CT_137E" value="CT_137E">
 									CT-137E (137 cm/53.9in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_155E" value="<?php if (isset($_POST['cutterRadio'])) echo 
-								$_POST['cutterRadio']; ?>">
+								<label><input class="type" name="cutterRadio" type="radio" id="CT_155E" value="CT_155E">
 									CT-155E (155cm/61in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_185E" value="<?php if (isset($_POST['cutterRadio'])) echo 
-								$_POST['cutterRadio']; ?>">
+								<label><input class="type" name="cutterRadio" type="radio" id="CT_185E" value="CT_185E">
 									CT-185E (185cm/72.8in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_220E" value="<?php if (isset($_POST['cutterRadio'])) echo 
-								$_POST['cutterRadio']; ?>">
+								<label><input class="type" name="cutterRadio" type="radio" id="CT_220E" value="CT_220E">
 									CT-220E (220cm/86.6in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_260E" value="<?php if (isset($_POST['cutterRadio'])) echo 
-								$_POST['cutterRadio']; ?>">
+								<label><input class="type" name="cutterRadio" type="radio" id="CT_260E" value="CT_260E">
 									CT-260E (260cm/102.3in)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_300E" value="<?php if (isset($_POST['cutterRadio'])) echo 
-								$_POST['cutterRadio']; ?>">
+								<label><input class="type" name="cutterRadio" type="radio" id="CT_300E" value="CT_300E">
 									CT-300E (300cm/118.1in)</label>
 							</div>
 						
@@ -133,7 +134,7 @@ echo "there is a problem in Databse";
 				<div class="form-group">
 					<label for="type" class="control-label col-sm-2">Other Details:</label>
 					<div class="col-sm-10">
-				  		<textarea class="form-control" id="comment" rows="8"  placeholder="Place your additional requirements here if any." style="width:80%;" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
+				  		<textarea class="form-control" id="comment" rows="8"  placeholder="Place your additional requirements here if any." style="width:80%;" name="otherDetails" ></textarea>
 					</div>
 				</div>
 
