@@ -1,3 +1,37 @@
+<?php 
+		
+	$page_title = 'Machinovate | Order Slitter';
+	include ('header.php');
+
+	// Check for form submission:
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+		require ('../mysqli_connect.php'); // Connect to the db.
+			
+		$errors = array(); // Initialize an error array.
+		
+		// Check for a first name:
+		if (empty($_POST['first_name'])) {
+			$errors[] = 'You forgot to enter the first name.';
+		} else {
+			$fn = mysqli_real_escape_string($dbc, trim($_POST['first_name']));
+		}
+		
+		// Check for a last name:
+		if (empty($_POST['last_name'])) {
+			$errors[] = 'You forgot to enter the last name.';
+		} else {
+			$ln = mysqli_real_escape_string($dbc, trim($_POST['last_name']));
+		}
+		
+		// Check for the country
+		if (empty($_POST['country'])) {
+			$errors[] = 'You forgot to enter the country.';
+		} else {
+			$countrynum = $_POST['country'];
+?>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -164,14 +198,14 @@
 							<div class="checkbox">
 								
 								<label> <!--required field-->
-									<input id="standard-checkbox" name="slitterCheckbox" type="checkbox" value="standard" disabled checked="true">
+									<input id="standard-checkbox" name="slitterCheckbox[]" type="checkbox" value="standard" disabled checked="true">
 									Standard [Five(5)] Set Male/Female Circular Blade with Trim Removal Blower
 								</label>
 							</div>
 
 							<div class="checkbox">
 								
-								<label><input id="slitter-additional-checkbox" name="slitterCheckbox" type="checkbox">
+								<label><input id="slitter-additional-checkbox" name="slitterCheckbox[]" type="checkbox">
 									<div class="form-inline">
 										
 										<div class="form-group">
@@ -186,7 +220,7 @@
 							<div class="checkbox">
 								
 								<label>
-									<input id="core-cutter-checkbox" name="coreCutterMachine[]" type="checkbox" value="1">
+									<input id="core-cutter-checkbox" name="slitterCheckbox[]" type="checkbox" value="1">
 									Core Cutter Machine
 								</label>
 							</div>
