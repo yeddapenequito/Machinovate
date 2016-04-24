@@ -18,14 +18,13 @@
 				<li class="active">Paper Sheeter Form Requirements</li>
 			</ol>
 			<h1 class="page-header">Paper Roll Truck Form Requirements</h1>
-			<!-- please change the form action... to what name if ever wrong-->
-			<form action="paper_roll_form_success.php" role="form" class="form form-horizontal" method="post">
+			<form id="form" action="paper_roll_form_success.php" role="form" class="form form-horizontal" method="post">
 				<!-- Quantity -->
-					<div class="form-group has-error has-feedback">
+					<div class="form-group required">
 						<label for="type" class="control-label col-sm-2">Quantity:</label>
 						<div class="col-sm-10">
 							<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" style="width:10%;" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required/>
-							<div id="help-block" class="form-control-feedback" aria-hidden="true">This field is required.</div>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 					<div class="form-group">
@@ -49,14 +48,6 @@
 		</div> <!-- /.container -->
 		<script type="text/javascript" src="scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-		
-		<script type="text/javascript">
-			var validateForm = function() {
-				var username = document.getElementById("username");
-				if(username.checkValidity() == false) {
-					document.getElementByClass("form-control-feedback").innerHTML = username.validationMessage
-				}
-			}
-		</script>
+		<script type="text/javascript" src="scripts/validator.min.js"></script>
 	</body>
 </html>

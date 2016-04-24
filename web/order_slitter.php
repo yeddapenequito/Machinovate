@@ -99,7 +99,7 @@
 						<div class="col-sm-10">
 							<div class="input-group">
 								
-								<input class="form-control" id="production-vol" min="0.01" name="productionVolume" step=".01" type="number" required/>
+								<input class="form-control" id="production-vol" min="0.001" name="productionVolume" step="0.001" type="number" required/>
 								<span class="input-group-addon">Tons per day</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -124,11 +124,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0.01" name="gsmMin" placeholder="Min" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0.01" name="gsmMax" placeholder="Max" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 								<select class="form-control" name="gsmUnit"> 
 									<option value="inches">inches</option>
@@ -147,11 +147,11 @@
 						<div class="col-sm-10">
 							<div class="form-inline">
 
-									<input class="form-control" min="0.01" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number" required>
+									<input class="form-control" min="0.001" name="rollDiameterMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 									<span>to</span>
 
-									<input class="form-control" min="0.01" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number" required>
+									<input class="form-control" min="0.001" name="rollDiameterMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 									<select class="form-control" name="rollDiameterUnit"> 
 										<option value="inches">inches</option>
@@ -169,11 +169,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0.01" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="slittingWidthMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0.01" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="slittingWidthMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 								<select class="form-control" name="slittingWidthUnit"> 
 									<option value="inches">inches</option>
@@ -278,7 +278,7 @@
 
 						<div class="col-sm-10">
 							<div class="input-group">
-								<input class="form-control" id="ton-capacity"  min="0.01"  step="0.01" name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>" type="number" required>
+								<input class="form-control" id="ton-capacity"  min="0.001"  step="0.01" name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>" type="number" required>
 								<span class="input-group-addon">Tons</span>
 							</div>
 							<div class="help-block with-errors"></div>

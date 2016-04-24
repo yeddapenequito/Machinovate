@@ -44,7 +44,7 @@
                         <div class="col-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon">&#8369;</span>
-                                <input class="form-control" id="quantity" min="0" name="fob" step="1" type="number" style="width:30%;" />
+                                <input class="form-control" id="quantity" min="0.001" name="fob" step="1" type="number" style="width:30%;" />
                             </div>
                         </div>
                         <br>
@@ -53,7 +53,7 @@
                         <div class="col-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon">&#8369;</span>
-                                <input class="form-control" id="quantity" min="0" name="cif" step="1" type="number" style="width:30%;" />
+                                <input class="form-control" id="quantity" min="0.001" name="cif" step="1" type="number" style="width:30%;" />
                             </div>
                         </div>
                     </div>

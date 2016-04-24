@@ -66,7 +66,7 @@
                         <div class="col-sm-10">
                             <div class="input-group">
                                 
-                                <input class="form-control" id="production-vol" min="0" name="productionVolume" step=".01" type="number"/>
+                                <input class="form-control" id="production-vol" min="0.001" name="productionVolume" step=".01" type="number"/>
                                 <span class="input-group-addon">Tons per day</span>
                             </div>
                         </div>
@@ -89,11 +89,11 @@
 
                         <div class="col-sm-10">
                             <div class="form-inline">
-                                <input class="form-control" min="0" name="gsmMin" placeholder="Min" size="5" step=".01" type="number">
+                                <input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step=".01" type="number">
 
                                 <span>to</span>
 
-                                <input class="form-control" min="0" name="gsmMax" placeholder="Max" size="5" step=".01" type="number">
+                                <input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step=".01" type="number">
 
                                 <select class="form-control" name="gsmUnit"> 
                                     <option value="inches">inches</option>
@@ -112,11 +112,11 @@
                         <div class="col-sm-10">
                             <div class="form-inline">
 
-                                    <input class="form-control" min="0" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number">
+                                    <input class="form-control" min="0.001" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number">
 
                                     <span>to</span>
 
-                                    <input class="form-control" min="0" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number">
+                                    <input class="form-control" min="0.001" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number">
 
                                     <select class="form-control" name="rollDiameterUnit"> 
                                         <option value="inches">inches</option>
@@ -133,11 +133,11 @@
 
                         <div class="col-sm-10">
                             <div class="form-inline">
-                                <input class="form-control" min="0" name="cutOffLengthMin" placeholder="Min" size="5" step=".01" type="number">
+                                <input class="form-control" min="0.001" name="cutOffLengthMin" placeholder="Min" size="5" step=".01" type="number">
 
                                 <span>to</span>
 
-                                <input class="form-control" min="0" name="cutOffLengthMax" placeholder="Max" size="5" step=".01" type="number">
+                                <input class="form-control" min="0.001" name="cutOffLengthMax" placeholder="Max" size="5" step=".01" type="number">
 
                                 <select class="form-control" name="cutOffLengthUnit"> 
                                     <option value="inches">inches</option>
@@ -154,11 +154,11 @@
 
                         <div class="col-sm-10">
                             <div class="form-inline">
-                                <input class="form-control" min="0" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number">
+                                <input class="form-control" min="0.001" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number">
 
                                 <span>to</span>
 
-                                <input class="form-control" min="0" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number">
+                                <input class="form-control" min="0.001" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number">
 
                                 <select class="form-control" name="slittingWidthUnit"> 
                                     <option value="inches">inches</option>
@@ -382,7 +382,7 @@
                         <div class="col-sm-10">
                            <div class="input-group">
                                 <span class="input-group-addon">&#8369;</span>
-                                <input class="form-control" id="quantity" min="0" name="fob" step="1" type="number" style="width:30%;" />
+                                <input class="form-control" id="quantity" min="0.001" name="fob" step="1" type="number" style="width:30%;" />
                             </div>
                         </div>
                     </div>
@@ -392,7 +392,7 @@
                         <div class="col-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon">&#8369;</span>
-                                <input class="form-control" id="quantity" min="0" name="cif" step="1" type="number" style="width:30%;" />
+                                <input class="form-control" id="quantity" min="0.001" name="cif" step="1" type="number" style="width:30%;" />
                             </div>
                         </div>
                     </div>
