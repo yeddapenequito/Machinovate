@@ -21,10 +21,7 @@
 						<img id="focus-img" src="images/sheeter-machine-with-h-type-reel-stand.png" alt="Sheeter Machine with H-Type Reel Stand">
 					</div>
 					<div id="sm-img">
-						<img onclick="changeImage(0)" class="active" id="img0" src="images/sheeter-machine-with-h-type-reel-stand.png" alt="Sheeter Machine with H-Type Reel Stand"></img>
-						<!-- <img onclick="changeImage(1)" id="img1" alt="Sheeter Shaftless" src="images/compact-sheeter-shaftless.png"></img>
-						<img onclick="changeImage(2)" id="img2" alt="Sheeter Htype-1" src="images/compact-sheeter-htype1.png"></img>
-						<img onclick="changeImage(3)" id="img3" alt="Sheeter Htype-2" src="images/compact-sheeter-htype2.png"></img> -->
+						<img onclick="changeImageTo(1, 0, 2, htypeImages)" class="active" id="img0" src="images/sheeter-machine-with-h-type-reel-stand.png" alt="Sheeter Machine with H-Type Reel Stand"></img>
 					</div>
 				</div>
 				<div class="col-sm-8">
@@ -182,40 +179,11 @@
 		</div>
 		
 		<?php include 'footer.php';?>
-		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/changeImageTo.js"></script>
 		<script type="text/javascript">
-			function changeImage(imgNum) {
-			    switch(imgNum) {
-			    	case 0:
-			    		document.getElementById("focus-img").src = "images/sheeter-machine-with-h-type-reel-stand.png";
-			    		$("#img0").addClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 1: 
-			    		document.getElementById("focus-img").src = "images/compact-sheeter-shaftless.png";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").addClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 2:
-			    		document.getElementById("focus-img").src = "images/compact-sheeter-htype1.png";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").addClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 3:
-			    		document.getElementById("focus-img").src = "images/compact-sheeter-htype2.png";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").addClass("active");
-			    }
-			}	
+			var htypeImages = ["images/sheeter-machine-with-h-type-reel-stand.png"];
 		</script>
 	</body>
 </html>

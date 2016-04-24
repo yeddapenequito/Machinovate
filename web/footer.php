@@ -12,9 +12,9 @@
                 </div>
                 <div class="footer-col col-md-4">
                     <h3>FAQ</h3>
-                    <p><a href="faq_order.php#collapseOne?q=1">How to Order?</a></p>
-                    <p><a href="faq_order.php#collapseTen?q=10" class="small">What are the "specifications" of machines?</a></p>
-                    <p><a href="faq_order.php#collapseEleven?q=11">How can I contact your company?</a></p>
+                    <p><a href="faq_order.php#question1?q=1">How to Order?</a></p>
+                    <p><a href="faq_order.php#question2?q=2" class="small">What are the "specifications" of machines?</a></p>
+                    <p><a href="faq_order.php#question4?q=4">How can I contact your company?</a></p>
                 </div>
                 <div class="footer-col col-md-4">
                     <h3>Location

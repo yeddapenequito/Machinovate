@@ -14,56 +14,61 @@
 		<?php include 'header_on_form_completion.php';?>
 		<div class="container">
 			<h1 class="page-header">Shipment Details</h1>
-			<p class="text-danger">All fields are required.</p>
+			<p style="color:red;font-style:italic">* Required fields.</p>
 	
-			<form role="form" id="slitter" method="post" 
+			<form id="form" role="form" id="slitter" method="post" 
 				role="form" class="form-horizontal">
 				<fieldset>	
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="col-sm-2 control-label">
 							Name:</label>
 						<div class="col-sm-10">
 							<div class="form-inline">	
-						 		<input autofocus class="form-control" required name="last_name" placeholder="Last Name" type="text">
-						 		<input class="form-control" name="first_name" placeholder="First Name" required type="text"> 
-							</div>	
+						 		<input id="first-name" autofocus class="form-control" required name="last_name" placeholder="Last Name" type="text" size="25em">
+						 		<input id="last-name" class="form-control" name="first_name" placeholder="First Name" required type="text" size="35em"> 
+						 		<div class="help-block with-errors"></div>
+							</div>
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="col-sm-2 control-label">
 							Company Name:</label>
 						<div class="col-sm-10">	
 							<input class="form-control" name="company_name" required type="text"> 
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 					
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="col-sm-2 control-label">
 							Address:</label>
 						<div class="col-sm-10">	
-							<input class="form-control" name="address" placeholder="[Building House_No Street_Name District_Name] Barangay, Municipality/Province" required type="text"> 
+							<input class="form-control" name="address" required type="text"> 
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 				
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="col-sm-2 control-label">
 							Mobile Number:</label>
 						<div class="col-sm-10">	
-							<input class="form-control" name="contact_details" required type="text"> 
+							<input class="form-control" name="contact_details" required type="tel" placeholder="09XXXXXXXXX" minLength="11"> 
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 				
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="col-sm-2 control-label">
 							Email Address:</label>
 						<div class="col-sm-10">	
 							<input class="form-control" name="email" required type="email"> 
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 				</fieldset>
@@ -73,12 +78,12 @@
 					<legend>Shipping Terms Section:</legend>
 
 					<!-- Shipping Delivery Basis -->
-					<div class="form-group">
+					<div class="form-group required">
 						<label class="control-label col-sm-2" for="ship-basis">
 							Shipping Delivery Basis: </label>
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input type="radio" name="delivery_basis" value="Free On Board">
+								<label><input type="radio" name="delivery_basis" value="Free On Board" checked="checked">
 									Free on Board (FOB) </label>
 							</div>
 							<div class="radio">
@@ -93,20 +98,18 @@
 					</div>	
 
 					<!--Shipment -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="shipment">
-							Shipment: </label>
+							Shipment Date: </label>
 						<div class="col-sm-10">
-							<div class="input-group">
-								<input class="form-control"  placeholder="No. of Days" min="1" type="number" name="ship_day"  required>
-								<span class="input-group-addon">Working days after initial payment.</span>
-							</div>
+							<input class="form-control"  placeholder="No. of Days" min="1" type="date" name="ship_day"  required>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 
 					<!-- Payment Terms -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="payment">
 							Payment Terms: </label>
@@ -121,20 +124,20 @@
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group required">
 						<div class="col-sm-offset-2 col-sm-10">
 							<div class="input-group">
-								<input class="form-control" type="number" name="confirmation" required/>
+								<input class="form-control" type="number" name="confirmation"/>
 								<span class="input-group-addon">
 									% downpayment upon confirmation</span>
 							</div>
 						</div>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group required">
 						<div class="col-sm-offset-2 col-sm-10">
 							<div class="input-group">
-								<input class="form-control" type="number" name="shipment" required/>
+								<input class="form-control" type="number" name="shipment"/>
 								<span class="input-group-addon">
 									% before shipment</span>
 							</div>
@@ -154,8 +157,9 @@
 			</form>
 		</div> <!-- /.container -->
 
-		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="actionlistener.js"></script>
+		<script type="text/javascript" src="scripts/validator.min.js"></script>
 	</body>
 </html>

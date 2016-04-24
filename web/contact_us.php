@@ -57,11 +57,8 @@ lon=34.81773" width="300" height="400"></iframe> -->
 					<div id="mapdiv">
 					<div class="row">
 						<div align=center style="width:100%; height:100%;">
-						  <div id="map" style="position:absolute; width:60%; height:325px; background:grey" ></div>
-						  <div id="panel" style="position:absolute; width:60%; height:325px; background:inherit; " >
-						  					  
-						  
-						  </div>
+						  <div id="map"></div>
+						  <div id="panel"></div>
 						</div>
 						  <script  type="text/javascript" charset="UTF-8" >
 
@@ -100,7 +97,7 @@ lon=34.81773" width="300" height="400"></iframe> -->
 		</div>	
 		
 		<?php include 'footer.php';?>
-		<script type="text/javascript" src="./scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="./scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="./scripts/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			document.getElementById("contact-us").className = "active";

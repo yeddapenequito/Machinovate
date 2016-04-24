@@ -93,7 +93,14 @@
                         <p>With every MACH machine customers are assured that it has undergo the strict quality control, as all our engineering works are done in-house.</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>We use only the best Universal brands for all the essential parts like <a href="https://www.festo.com/net/startpage/" style="color: white;">FESTO</a>, <a href="http://www.habasit.com/en/index.htm" style="color: white;">HABASIT</a>, <a href="http://www.klingelnberg.com/" style="color: white;">KLINGELNBERG</a>,<a href="http://www.gates.com/" style="color: white;"> GATES</a>,<a href="https://www.yaskawa-global.com/" style="color: white;"> YASKAWA</a>, PITTMAN, KOYO, FINDEVA, FAG, SKF and the like.Our computerized controls use only the most advanced IPC technology by Bekhoff, Germany.</p>
+                    <p>We use only the best Universal brands for all the essential parts like 
+                        <a href="https://www.festo.com/net/startpage/" style="color: white;">FESTO</a>, 
+                        <a href="http://www.habasit.com/en/index.htm" style="color: white;">HABASIT</a>, 
+                        <a href="http://www.klingelnberg.com/" style="color: white;">KLINGELNBERG</a>,
+                        <a href="http://www.gates.com/" style="color: white;">GATES</a>,
+                        <a href="https://www.yaskawa-global.com/" style="color: white;">YASKAWA</a>, 
+                        PITTMAN, KOYO, FINDEVA, FAG, SKF 
+                        and the like. Our computerized controls use only the most advanced IPC technology by Bekhoff, Germany.</p>
                 </div>
                 <!-- <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">
@@ -209,16 +216,16 @@
 
 
 		
-		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 
         <!-- Plugin JavaScript -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        <script src="js/classie.js"></script>
-        <script src="js/cbpAnimatedHeader.js"></script>
+        <script src="scripts/classie.js"></script>
+        <script src="scripts/cbpAnimatedHeader.js"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="js/freelancer.js"></script> 
+        <script src="scripts/freelancer.js"></script> 
         <script>
             document.getElementById("home").className = "active";
         </script>         

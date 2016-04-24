@@ -21,10 +21,7 @@
 						<img id="focus-img" src="images/cutter.png" alt="cutter">
 					</div>
 					<div id="sm-img">
-						<img onclick="changeImage(0)" class="active" id="img0" alt="cutter" src="images/cutter.png"></img>
-						<!-- <img onclick="changeImage(1)" id="img1" alt="slitter back" src="images/slitter-back.png"></img>
-						<img onclick="changeImage(2)" id="img2" alt="slitter close up 1" src="images/slitter-close-up-1.jpg"></img>
-						<img onclick="changeImage(3)" id="img3" alt="slitter close up 2" src="images/slitter-close-up-2.jpg"></img> -->
+						<img onclick="changeImageTo(1, 0, 2, cutterImages)" class="active" id="img0" alt="cutter" src="images/cutter.png"></img>
 					</div>
 				</div>
 				<div class="col-sm-8">
@@ -240,40 +237,11 @@
 		</div>
 		
 		<?php include 'footer.php';?>
-		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/changeImageTo.js"></script>
 		<script type="text/javascript">
-			function changeImage(imgNum) {
-			    switch(imgNum) {
-			    	case 0:
-			    		document.getElementById("focus-img").src = "images/cutter.png";
-			    		$("#img0").addClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 1: 
-			    		document.getElementById("focus-img").src = "images/slitter-back.png";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").addClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 2:
-			    		document.getElementById("focus-img").src = "images/slitter-close-up-1.jpg";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").addClass("active");
-			    		$("#img3").removeClass("active");
-			    		break;
-			    	case 3:
-			    		document.getElementById("focus-img").src = "images/slitter-close-up-2.jpg";
-			    		$("#img0").removeClass("active");
-			    		$("#img1").removeClass("active");
-			    		$("#img2").removeClass("active");
-			    		$("#img3").addClass("active");
-			    }
-			}	
+			var cutterImages = ["images/cutter.png"];
 		</script>
 	</body>
 </html>

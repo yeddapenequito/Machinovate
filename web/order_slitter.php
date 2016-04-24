@@ -10,30 +10,36 @@
 	<body>
 		<?php include 'header_on_form_completion.php';?>
 
-		<div  id="order-slitter" class="container">
-		<ol class="breadcrumb">
+		<div class="container">
+			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="slitter.php">Slitter</a></li>
-				<li class="active">Paper Slitter Form Requirements</li>
+				<li class="active">Slitter Machine Requirements Form</li>
 			</ol>
-			<h1 class="page-header">Paper Slitter Form Requirements</h1>
-			<div class="text-info">
-				<p>Please bear with us. This is going to take long.</p>
-				<p>If you need any help, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
-			</div>
-			
-			<form action="slitter_form_success.php" role="form" class="form-horizontal" method="post">
+			<form id="form" action="slitter_form_success.php" name="form" role="form" class="form-horizontal" method="post">
+				<legend>
+					<h1>Slitter Machine Requirements Form</h1>
+				</legend>
+				<div class="form-group">
+					<div class="alert alert-info">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					  	<p>Please bear with us. This is going to take long.</p>
+						<p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
+					</div>
+				</div>
+				<p style="color:red;font-style:italic">* Required fields.</p>
+
 				<fieldset> <!--General Section-->
 					<legend>General Section</legend>
 
 					<!-- Type -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label for="type" class="control-label col-sm-2">Type:</label>
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input class="type" name="slitterType" type="radio" value="1::SL_Standard">
+								<label><input class="type" name="slitterType" type="radio" value="1::SL_Standard" checked="checked">
 									MACH-MSR (Standard)</label>
 							</div>
 							<div class="radio">
@@ -52,89 +58,94 @@
 					</div>
 
 					<!-- Production Vol. -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="production-vol">Production Volume:</label>
 
 						<div class="col-sm-10">
 							<div class="input-group">
 								
-								<input class="form-control" id="production-vol" min="0" name="productionVolume" step=".01" type="number" required/>
+								<input class="form-control" id="production-vol" min="0.01" name="productionVolume" step=".01" type="number" required/>
 								<span class="input-group-addon">Tons per day</span>
 							</div>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 
 					<!-- Paper Type -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="paper-type">Paper Type:</label>
 
 						<div class="col-sm-10">
 							<input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text" required/>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 
 					<!-- GSM -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label  class="control-label col-sm-2" for="gsm">GSM:</label>
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0" name="gsmMin" placeholder="Min" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.01" name="gsmMin" placeholder="Min" size="5" step=".01" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0" name="gsmMax" placeholder="Max" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.01" name="gsmMax" placeholder="Max" size="5" step=".01" type="number" required>
 
 								<select class="form-control" name="gsmUnit"> 
 									<option value="inches">inches</option>
 									<option value="millimeters">millimeters</option>
 								</select>
+								<div class="help-block with-errors"></div>
 							</div>
 						</div>
 					</div>
 
 					<!-- Roll Diameter -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="roll-diameter">Roll Diameter:</label>
 
 						<div class="col-sm-10">
 							<div class="form-inline">
 
-									<input class="form-control" min="0" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number" required>
+									<input class="form-control" min="0.01" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number" required>
 
 									<span>to</span>
 
-									<input class="form-control" min="0" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number" required>
+									<input class="form-control" min="0.01" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number" required>
 
 									<select class="form-control" name="rollDiameterUnit"> 
 										<option value="inches">inches</option>
 										<option value="millimeters">millimeters</option>
 									</select>
+									<div class="help-block with-errors"></div>
 							</div>
 						</div>
 					</div>
 
 					<!-- Slitting Width -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="slitting-width">Slitting Width:</label>
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.01" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.01" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number" required>
 
 								<select class="form-control" name="slittingWidthUnit"> 
 									<option value="inches">inches</option>
 									<option value="millimeters">millimeters</option>
 								</select>
+								<div class="help-block with-errors"></div>
 							</div>
 						</div>
 					</div>
@@ -145,7 +156,7 @@
 					<legend>Cutting Section</legend>
 
 					<!-- Slitter -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label  class="control-label col-sm-2" for="slitter">Slitter:</label>
 
@@ -188,7 +199,7 @@
 					<legend>Unwind Roll Stand Section</legend>
 
 					<!-- Reel Stand -->
-					<div class="form-group">
+					<div class="form-group required">
 						<label class="control-label col-sm-2">Reel Stand:</label>
 						<div class="col-sm-10">
 
@@ -227,15 +238,16 @@
 					</div>
 
 					<!-- Ton Capacity -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="ton-capacity">Ton Capacity:</label>
 
 						<div class="col-sm-10">
 							<div class="input-group">
-								<input class="form-control" id="ton-capacity"  name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>" type="number" required>
+								<input class="form-control" id="ton-capacity"  min="0.01"  step="0.01" name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>" type="number" required>
 								<span class="input-group-addon">Tons</span>
 							</div>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 				</fieldset>
@@ -245,7 +257,7 @@
 					<legend>Systems Section</legend>
 
 					<!-- Systems -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2">Systems:</label>
 
@@ -295,7 +307,7 @@
 
 					<div class="form-group">
 						<label for="comment" class="control-label col-sm-2">Details:</label>
-						<div class="col-sm-offset-2 col-sm-10">
+						<div class="col-sm-10">
 					  		<textarea placeholder="Place your additional requirements here if any." class="form-control" id="comment" rows="8" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
 						</div>
 					</div>
@@ -304,26 +316,28 @@
 				<div class="form-group">
 
 					<div class="col-sm-offset-2 col-sm-10">
-
-						<button class="btn btn-default" id="add-to-cart-btn" type="submit">
-							Finish</button>
-						<a class="btn btn-default" id="cancel-btn" href="slitter.php">
-							Cancel</a>
+						<input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Finish">
+						<a class="btn btn-default" id="cancel-btn" href="slitter.php">Cancel</a>
 					</div>
 				</div>
 			</form>
 		</div> <!-- /.container -->
 		
-		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/validator.min.js"></script>
 		<script type="text/javascript">
+
 			document.getElementById("slitter-additional-checkbox").onchange = function() {
 				
 				if(document.getElementById("slitter-additional-checkbox").checked) {
 					document.getElementById("slitter-additional-text-field").removeAttribute("disabled");
+					document.getElementById("slitter-additional-text-field").setAttribute("required", "required");
 				}
 				else {
 					document.getElementById("slitter-additional-text-field").setAttribute("disabled", "disabled");
+					document.getElementById("slitter-additional-text-field").removeAttribute("required");
+
 					document.getElementById("slitter-additional-text-field").value = "";
 				}
 			};
@@ -332,9 +346,11 @@
 			
 				if(document.getElementById("reel-stand-others-checkbox").checked) {
 					document.getElementById("reel-stand-others-text-field").removeAttribute("disabled");
+					document.getElementById("reel-stand-others-text-field").setAttribute("required", "required");
 				}
 				else {
 					document.getElementById("reel-stand-others-text-field").setAttribute("disabled", "disabled");
+					document.getElementById("reel-stand-others-text-field").removeAttribute("required");
 					document.getElementById("reel-stand-others-text-field").value = "";
 				}
 			};
@@ -343,9 +359,11 @@
 				
 				if(document.getElementById("systems-others-checkbox").checked) {
 					document.getElementById("systems-others-text-field").removeAttribute("disabled");
+					document.getElementById("systems-others-text-field").setAttribute("required", "required");
 				}
 				else {
 					document.getElementById("systems-others-text-field").setAttribute("disabled", "disabled");
+					document.getElementById("systems-others-text-field").removeAttribute("required");
 					document.getElementById("systems-others-text-field").value = "";
 				}
 			};
