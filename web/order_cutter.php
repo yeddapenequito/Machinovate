@@ -9,15 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (empty($_POST['cutterRadio'])) {
 		$errors[] = 'You forgot to choose a cutter machine.';
 	} else {
+		
 		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
 	}
 	
-	// Check for comments:
-	if (empty($_POST['otherDetails'])) {
-		$errors[] = 'You forgot to enter comments.';
-	} else {
-		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
-	}
+	
+	$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
+	
 	if (empty($errors)) { // If everything's OK.
 	
 		// Register the agent in the database...
