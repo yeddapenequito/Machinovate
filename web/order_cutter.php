@@ -1,47 +1,81 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-	require ('../../mysqli_connect.php'); // Connect to the db.
+	require ('../mysqli_connect.php'); // Connect to the db.
 		
 	$errors = array(); // Initialize an error array.
 	
-	$cutterRadio = $_POST['cutterRadio'];
-	$otherDetails = $_POST['otherDetails'];
-
-	if($cutterRadio!="")
-	{
-		$q = "INSERT INTO cutter (Cutter_Type, Other_Details) VALUES ('$cutterRadio', '$otherDetails');";		
+	// Check for a first name:
+	if (empty($_POST['cutterRadio'])) {
+		$errors[] = 'You forgot to choose a cutter machine.';
+	} else {
+		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
+	}
+	
+	// Check for a last name:
+	if (empty($_POST['otherDetails'])) {
+		$errors[] = 'You forgot to enter comments.';
+	} else {
+		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
+	}
+	if (empty($errors)) { // If everything's OK.
+	
+		// Register the agent in the database...
+		
+		// Make the query:
+		$q = "INSERT INTO cutter (Cutter_Type, Other_Details) VALUES ('$cutterRadio', '$otherDetails');";
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 		if ($r) { // If it ran OK.
 		
 			// Print a message:
 			echo '<h1>Thank you!</h1>
-		<p>Cutter has been added!</p><p><br /></p>';	
+		<p>An order has been added!</p><p><br /></p>';	
 		
-		header('Location: /Machinovate/web/admin/account_successful.php');
 		
-		} 
-		else 
-		{ // If it did not run OK.
-				
-				// Public message:
-				echo '<h1>System Error</h1>
-				<p class="error">The agent could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
-				header('Location: /Machinovate/web/admin/account_failed.php');
-				// Debugging message:
-				echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
-							
+		} else { // If it did not run OK.
+			
+			// Public message:
+			echo '<h1>System Error</h1>
+			<p class="error">The order could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
+			
+			// Debugging message:
+			echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+						
 		} // End of if ($r) IF.
+		
 		mysqli_close($dbc); // Close the database connection.
 
-	}
-	else 
-	{
-		$errors[] = 'You forgot to choose a cutter machine.';
-
-	}
+		// Include the footer and quit the script:
+		exit();
+		
+	} else { // Report the errors.
+	
+		echo '<div class="container"><h1>Error!</h1>
+		<p class="error">The following error(s) occurred:<br />';
+		 // Print each error.
+			echo " <div class='form-group'>
+                                    <div class='alert alert-danger'>
+                                        
+                                        <strong>";
+                                        foreach ($errors as $msg) {
+                                        
+                                        echo " $msg<br />\n";
+                                     }
+                                       echo "<p>Please try again.</p>
+                                        
+                                        </strong> 
+                                    </div>
+                                </div>";
+		
+		
+		
+	} // End of if (empty($errors)) IF.
 	
 	mysqli_close($dbc); // Close the database connection.
+
+	
+		
+		
 
 } // End of the main Submit conditional.
 
@@ -65,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<li><a href="cutter.php">Cutter</a></li>
 				<li class="active">Cutter Machine Requirements Form</li>
 			</ol>
-			<form id="form" action="cutter_form_success.php" role="form" class="form-horizontal" method="post">
+			<form id="form" action="order_cutter.php" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Cutter Machine Requirements Form</h1>
 				</legend>
