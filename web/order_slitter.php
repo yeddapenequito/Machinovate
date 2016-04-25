@@ -235,7 +235,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				</legend>
 				<div class="form-group">
 					<div class="alert alert-info">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						
 					  	<p>Please bear with us. This is going to take long.</p>
 						<p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
 					</div>
@@ -278,7 +278,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<div class="col-sm-10">
 							<div class="input-group">
 								
-								<input class="form-control" id="production-vol" min="0.01" name="productionVolume" step=".01" type="number" required/>
+								<input class="form-control" id="production-vol" min="0.001" name="productionVolume" step="0.001" type="number" required/>
 								<span class="input-group-addon">Tons per day</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -303,11 +303,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0.01" name="gsmMin" placeholder="Min" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0.01" name="gsmMax" placeholder="Max" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 								<select class="form-control" name="gsmUnit"> 
 									<option value="inches">inches</option>
@@ -326,11 +326,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<div class="col-sm-10">
 							<div class="form-inline">
 
-									<input class="form-control" min="0.01" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number" required>
+									<input class="form-control" min="0.001" name="rollDiameterMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 									<span>to</span>
 
-									<input class="form-control" min="0.01" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number" required>
+									<input class="form-control" min="0.001" name="rollDiameterMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 									<select class="form-control" name="rollDiameterUnit"> 
 										<option value="inches">inches</option>
@@ -348,11 +348,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0.01" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="slittingWidthMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0.01" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="slittingWidthMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 								<select class="form-control" name="slittingWidthUnit"> 
 									<option value="inches">inches</option>
@@ -457,7 +457,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 						<div class="col-sm-10">
 							<div class="input-group">
+<<<<<<< HEAD
 								<input class="form-control" id="ton-capacity"  min="0.01"  step="0.01" name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>"> type="number" required>
+=======
+								<input class="form-control" id="ton-capacity"  min="0.001"  step="0.01" name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>" type="number" required>
+>>>>>>> branch 'master' of https://github.com/yeddapenequito/Machinovate.git
 								<span class="input-group-addon">Tons</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -526,11 +530,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					</div>
 				</fieldset>
 
+				<!-- Submit and Cancel Buttons -->
 				<div class="form-group">
-
 					<div class="col-sm-offset-2 col-sm-10">
-						<input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Finish">
-						<a class="btn btn-default" id="cancel-btn" href="slitter.php">Cancel</a>
+						<input class="btn btn-primary" type="submit">
+						<a id="cancel-btn" onclick="window.history.back()">Cancel</a>
 					</div>
 				</div>
 			</form>
@@ -580,7 +584,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					document.getElementById("systems-others-text-field").value = "";
 				}
 			};
-
 		</script>
 	</body>
 </html>

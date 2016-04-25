@@ -129,7 +129,7 @@
 							<div class="input-group">
 								<input class="form-control" type="number" name="confirmation"/>
 								<span class="input-group-addon">
-									% downpayment upon confirmation</span>
+									% downpayment</span>
 							</div>
 						</div>
 					</div>
@@ -145,13 +145,11 @@
 					</div>
 				</fieldset>		
 
-				<!-- Submit Button -->
+				<!-- Submit and Cancel Buttons -->
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button class="btn btn-primary" value="Submit" type="submit">
-								Submit</button>
-						<a class="btn btn-default" id="cancel-btn" href="machines.php">
-								Cancel</a>
+						<input class="btn btn-primary" type="submit">
+						<a id="cancel-btn" onclick="window.history.back()">Cancel</a>
 					</div>
 				</div>
 			</form>

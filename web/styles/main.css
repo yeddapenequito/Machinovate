@@ -32,96 +32,82 @@ body {
 /*=================================================================
   Footer styles
   =================================================================*/
-    footer {
-        color: #fff;
-        padding-top: 4em;
-        bottom: 0;
-    }
+  footer {
+    color: #fff;
+    padding-top: 4em;
+    bottom: 0;
+  }
 
-    footer h3 {
-        margin-bottom: 30px;
-        text-align: justify;
-        text-justify: inter-word;
-    }
+  footer h3 {
+    margin-bottom: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
 
-    footer .footer-above {
-        padding-top: 50px;
-        background-color: #eee;
-    }
-    
-    footer .footer-above,
-    footer .footer-above a {
-        color: #153a7e;
-    }
+  footer .footer-above {
+    padding-top: 50px;
+    background-color: #eee;
+  }
 
-    footer .footer-col {
-        margin-bottom: 50px;
-    }
-    footer .footer-col h3 {
-      color: black;
-    }
+  footer .footer-above,
+  footer .footer-above a {
+    color: #153a7e;
+  }
 
-    footer .footer-below {
-        padding: 1em 0;
-        background-color: #132c55;
-    }
-    footer p {
+  footer .footer-col {
+    margin-bottom: 50px;
+  }
+  footer .footer-col h3 {
+    color: black;
+  }
+
+  footer .footer-below {
+    padding: 1em 0;
+    background-color: #132c55;
+  }
+  footer p {
     font-size: 20px;
     text-align: justify;
     text-justify: inter-word;
-    }
+  }
 
-    footer p.small {
-        font-size: 16px;
-    }
+  footer p.small {
+    font-size: 16px;
+  }
 
 /*=================================================================
   Override bootstrap styles
   =================================================================*/
 
-.breadcrumb .active {
-  color: #153a7e;
-  font-weight: bold;
-}
+  .breadcrumb .active {
+    color: #153a7e;
+    font-weight: bold;
+  }
 
-.btn {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background-color: #153a7e;
-  color: white;
-  border: 1px solid transparent;
-  border-radius: 0;
-  font-weight: bold;
-  font-size: .85em;
-  margin-right: .5em;
-}
+  .btn {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #153a7e;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: .85em;
+    margin-right: .5em;
+  }
 
-.btn:hover {
-  background-color: transparent;
-  border: 1px solid silver;
-  color: #153a7e;
-}
+  .btn:hover {
+    background-color: transparent;
+    border: 1px solid silver;
+    color: #153a7e;
+  }
 
-.btn:active {
-  background-color: transparent;
-  border: 1px solid gray;
-  color: gray;
-}
+  .btn:active {
+    background-color: transparent;
+    border: 1px solid gray;
+    color: gray;
+  }
 
-/*=================================================================
-   header styles
-   =================================================================*/
-
-   /*header {
-   	background-color: #153a7e;
-   	border: none;
-   	border-bottom: none;
-   }
-   header #logo {
-   	height: 125px;
-   	width: 350px;
-   }*/
-    
 
 /*=================================================================
   navbar styles
@@ -455,7 +441,7 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   /*-----------------------------------------------------------------
     Machine categories styles
     -----------------------------------------------------------------*/
-     #machine-category .row div a {
+    #machine-category .row div a {
      border: 1px solid silver;
      border-radius: 5px;
      width: 25em;
@@ -524,36 +510,52 @@ http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstr
   /*=================================================================
     Order now styles
     =================================================================*/
-  
-  form #cancel-btn {
-    background-color: transparent;
-    color: #153a7e;
-  }
-  form #cancel-btn:hover {
-    color: #153a7e;
-    text-decoration: underline;
-    border: none;
-  }
 
-/*=================================================================
+    form #cancel-btn {
+      background-color: transparent;
+      color: #153a7e;
+    }
+    form #cancel-btn:hover {
+      color: #153a7e;
+      text-decoration: underline;
+      border: none;
+    }
+
+  /*=================================================================
     FAQ styles
     =================================================================*/
 
-  .faq {
-    background-color:none;
-    border: none;
-    border-top: none;
-    border-bottom: none;
-    text-align: center;
-    top:0px;
-   }
+    .faq {
+      background-color:none;
+      border: none;
+      border-top: none;
+      border-bottom: none;
+      text-align: center;
+      top:0px;
+    }
 
    /*-----------------------------------------------------------------
      Sample buttons
      -----------------------------------------------------------------*/
      .sample:hover{
-        background-color: #153a7e;
-        color: white;
-        border: 1px solid transparent;
+      background-color: #153a7e;
+      color: white;
+      border: 1px solid transparent;
+    }
+
+
+   /*=================================================================
+     Form styles
+     =================================================================*/
+
+     form #quantity {
+      width: 8em;
      }
-   
+     form input[type="tel"],
+     form input[type="date"] {
+      width: 15em;
+     }
+
+     form .input-group {
+      width: 20em;
+     }
