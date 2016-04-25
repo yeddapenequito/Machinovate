@@ -13,14 +13,17 @@
 	<?php include 'header_on_login.php';?>
 	
 	<div class="container">
-		
-		<h1>Login Failed!</h1>
-		<p class="error">Login couldn't be processed.</p>
-		<p class="error">Please check your username and password and try again.</p>
+		<div class="row">
+			<div class="alert alert-danger">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Login Failed!</strong> Please check your username and password combination and try again.
+			</div>
+			
 		<?php 
 			include ("index.inc.php");
 		?>
 		
+		</div> <!-- .row -->
 	</div> <!-- /.container -->
 	
 </body>
