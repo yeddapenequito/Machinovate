@@ -50,7 +50,7 @@ if (isset($errors) && !empty($errors)) {
 
 				<div class="form-group">
 					<label for="password">Password</label>
-					<input id="pass" name="pass" type="password" placeholder="Enter password" class="form-control" required>
+					<input id="pass" name="password" type="password" placeholder="Enter password" class="form-control" required>
 					<div style="color:white" class="help-block with-errors"></div> 
 				</div>
 

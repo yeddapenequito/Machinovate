@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	require ('../../mysqli_connect.php');
 		
 	// Check the login:
-	list ($check, $data) = check_login($dbc, $_POST['username'], $_POST['pass']);
+	list ($check, $data) = check_login($dbc, $_POST['username'], $_POST['password']);
 	
 	if ($check) { // OK!
 		
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		// Assign $data to $errors for index.inc.php:
 		$errors = $data;
-		redirect_user('error_login.php');
+		redirect_user('error_login.php?username=' + $_POST['username']);
 		
 	}
 		
