@@ -15,24 +15,32 @@
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="other_products.php">Other Products</a></li>
 				<li><a href="paper_roll_truck.php">Paper Roll Truck</a></li>
-				<li class="active">Paper Sheeter Form Requirements</li>
+				<li class="active">Paper Roll Truck Requirements Form</li>
 			</ol>
-			<h1 class="page-header">Paper Roll Truck Form Requirements</h1>
+			<h1 class="page-header">Paper Roll Truck Requirements Form</h1>
 			<form id="form" action="paper_roll_form_success.php" role="form" class="form form-horizontal" method="post">
+				<div class="form-group">
+					<div class="alert alert-info">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
+					</div>
+				</div>
+				<p style="color:red;font-style:italic">* Required fields.</p>
+
 				<!-- Quantity -->
-					<div class="form-group required">
-						<label for="type" class="control-label col-sm-2">Quantity:</label>
-						<div class="col-sm-10">
-							<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" style="width:10%;" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required/>
-							<div class="help-block with-errors"></div>
-						</div>
+				<div class="form-group required">
+					<label for="type" class="control-label col-sm-2">Quantity:</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" style="width:10%;" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required/>
+						<div class="help-block with-errors"></div>
 					</div>
-					<div class="form-group">
-					<label for="type" class="control-label col-sm-2">Comments/Suggestions:</label>
-						<div class="col-sm-10">
-					  		<textarea class="form-control" id="comment" rows="8"  placeholder="Please input your comments/suggestions here if any" style="width:80%;" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
-						</div>
+				</div>
+				<div class="form-group">
+				<label for="type" class="control-label col-sm-2">Comments/Suggestions:</label>
+					<div class="col-sm-10">
+				  		<textarea class="form-control" id="comment" rows="8"  placeholder="Please input your comments/suggestions here if any" style="width:80%;" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
 					</div>
+				</div>
 
 				<div class="form-group">
 
@@ -40,7 +48,7 @@
 
 						<button onclick="validateForm()" class="btn btn-default" id="add-to-cart-btn" type="submit">
 							Finish</button>
-						<a class="btn btn-default" id="cancel-btn" href="other_products.php">
+						<a class="btn btn-default" id="cancel-btn" href="paper_roll_truck.php">
 							Cancel</a>
 					</div>
 				</div>
