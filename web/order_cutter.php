@@ -5,14 +5,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 	$errors = array(); // Initialize an error array.
 	
-	// Check for a first name:
+	// Check for a cutter
 	if (empty($_POST['cutterRadio'])) {
 		$errors[] = 'You forgot to choose a cutter machine.';
 	} else {
 		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
 	}
 	
-	// Check for a last name:
+	// Check for comments:
 	if (empty($_POST['otherDetails'])) {
 		$errors[] = 'You forgot to enter comments.';
 	} else {
