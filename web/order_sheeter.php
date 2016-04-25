@@ -17,7 +17,7 @@
 				<li class="active">Sheeter Machine Requirements Form</li>
 			</ol>
 
-			<form id="form" action="sheeter_form_success.php" role="form" class="form-horizontal" method="post">
+			<form name="form" id="form" action="sheeter_form_success.php" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Sheeter Machine Requirements Form</h1>
 				</legend>
@@ -406,6 +406,14 @@
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="scripts/validator.min.js"></script>
 		<script type="text/javascript">
+
+			var type = form.sheeterType;
+			var loc = window.location.href;
+			var code = Number(loc.substr(loc.lastIndexOf("=") + 1));
+
+			if (code != -1) {
+				type[code].checked = true;
+			} 
 
 			document.getElementById("slitter").onchange = function() {
 					
