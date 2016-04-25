@@ -117,7 +117,7 @@
                     </div>
                     <div id="question1-6" class="panel-collapse collapse">
                         <div class="panel-body">
-                            The agents are representatives of Machinovate International Inc. on different countries. Clients from other countries can contact them for easier communication with us. You can view the list of agents <a href="agents.php">here</a>.
+                            The agents are representatives of Machinovate International Inc. on different countries. Clients from other countries can contact them to communicate easily with us. You can view the list of agents <a href="agents.php">here</a>.
                      </div>
                  </div>
              </div>
