@@ -56,7 +56,7 @@
 				</legend>
 				<div class="form-group">
 					<div class="alert alert-info">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						
 					  	<p>Please bear with us. This is going to take long.</p>
 						<p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
 					</div>
@@ -347,11 +347,11 @@
 					</div>
 				</fieldset>
 
+				<!-- Submit and Cancel Buttons -->
 				<div class="form-group">
-
 					<div class="col-sm-offset-2 col-sm-10">
-						<input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Finish">
-						<a class="btn btn-default" id="cancel-btn" href="slitter.php">Cancel</a>
+						<input class="btn btn-primary" type="submit">
+						<a id="cancel-btn" onclick="window.history.back()">Cancel</a>
 					</div>
 				</div>
 			</form>
@@ -401,7 +401,6 @@
 					document.getElementById("systems-others-text-field").value = "";
 				}
 			};
-
 		</script>
 	</body>
 </html>

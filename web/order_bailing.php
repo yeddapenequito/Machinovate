@@ -14,7 +14,7 @@
 			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="other_products.php">Other Products</a></li>
-				<li><a href="bailing_machine.php">Bailing Machine</a></li>
+				<li><a onclick="window.history.back()">Bailing Machine</a></li>
 				<li class="active">Bailing Machine Requirements Form</li>
 			</ol>
 
@@ -24,7 +24,7 @@
 				</legend>
 				<div class="form-group">
 					<div class="alert alert-info">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						
 						<p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
 					</div>
 				</div>
@@ -35,7 +35,7 @@
 					<label for="type" class="control-label col-sm-2">Quantity:</label>
 					<div class="col-sm-10">
 					
-						<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" style="width:10%;" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required/>
+						<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required autofocus/>
 						<div class="help-block with-errors"></div>
 					</div>
 				</div>
@@ -47,13 +47,12 @@
 				  		<textarea class="form-control" id="comment" rows="8"  placeholder="Place your additional requirements here if any." style="width:80%;" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
 					</div>
 				</div>
-
+				
+				<!-- Submit and Cancel Buttons -->
 				<div class="form-group">
-
 					<div class="col-sm-offset-2 col-sm-10">
-
-						<input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Finish">
-						<a class="btn btn-default" id="cancel-btn" href="bailing_machine.php">Cancel</a>
+						<input class="btn btn-primary" type="submit">
+						<a id="cancel-btn" onclick="window.history.back()">Cancel</a>
 					</div>
 				</div>
 			</form>

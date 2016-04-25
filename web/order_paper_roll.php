@@ -21,7 +21,7 @@
 			<form id="form" action="paper_roll_form_success.php" role="form" class="form form-horizontal" method="post">
 				<div class="form-group">
 					<div class="alert alert-info">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						
 						<p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
 					</div>
 				</div>
@@ -31,7 +31,7 @@
 				<div class="form-group required">
 					<label for="type" class="control-label col-sm-2">Quantity:</label>
 					<div class="col-sm-10">
-						<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" style="width:10%;" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required/>
+						<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required autofocus/>
 						<div class="help-block with-errors"></div>
 					</div>
 				</div>
@@ -42,14 +42,11 @@
 					</div>
 				</div>
 
+				<!-- Submit and Cancel Buttons -->
 				<div class="form-group">
-
 					<div class="col-sm-offset-2 col-sm-10">
-
-						<button onclick="validateForm()" class="btn btn-default" id="add-to-cart-btn" type="submit">
-							Finish</button>
-						<a class="btn btn-default" id="cancel-btn" href="paper_roll_truck.php">
-							Cancel</a>
+						<input class="btn btn-primary" type="submit">
+						<a id="cancel-btn" onclick="window.history.back()">Cancel</a>
 					</div>
 				</div>
 			</form>
