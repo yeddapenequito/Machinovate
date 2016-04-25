@@ -14,7 +14,7 @@
 			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="other_products.php">Other Products</a></li>
-				<li><a onclick="window.history.back()">Bailing Machine</a></li>
+				<li><a href="bailing_machine.php">Bailing Machine</a></li>
 				<li class="active">Bailing Machine Requirements Form</li>
 			</ol>
 
