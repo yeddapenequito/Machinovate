@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				</legend>
 				<div class="form-group">
 					<div class="alert alert-info">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						
 						<p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
 					</div>
 				</div>
@@ -89,43 +89,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						200px; width: 230px;">
 					</div>
 				</div>
+
 				<!-- Type -->
 				<div class="form-group required">
+					<label for="type" class="control-label col-sm-2">Type:</label>
 
-
-
-						<label for="type" class="control-label col-sm-2">Type:</label>
-
-						<div class="col-sm-10">
-							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_115E"  value="CT_115E">
-									CT-115E (115 cm/45.2in)</label>
-							</div>
-							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_137E" value="CT_137E">
-									CT-137E (137 cm/53.9in)</label>
-							</div>
-							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_155E" value="CT_155E">
-									CT-155E (155cm/61in)</label>
-							</div>
-							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_185E" value="CT_185E">
-									CT-185E (185cm/72.8in)</label>
-							</div>
-							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_220E" value="CT_220E">
-									CT-220E (220cm/86.6in)</label>
-							</div>
-							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_260E" value="CT_260E">
-									CT-260E (260cm/102.3in)</label>
-							</div>
-							<div class="radio">
-								<label><input class="type" name="cutterRadio" type="radio" id="CT_300E" value="CT_300E">
-									CT-300E (300cm/118.1in)</label>
-							</div>
-						
+					<div class="col-sm-10">
+						<div class="radio">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_115E" value="CT_115E" checked="checked">
+								CT-115E (115 cm/45.2in)</label>
+						</div>
+						<div class="radio">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_137E" value="CT_137E">
+								CT-137E (137 cm/53.9in)</label>
+						</div>
+						<div class="radio">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_155E" value="CT_155E">
+								CT-155E (155cm/61in)</label>
+						</div>
+						<div class="radio">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_185E" value="CT_185E">
+								CT-185E (185cm/72.8in)</label>
+						</div>
+						<div class="radio">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_220E" value="CT_220E">
+								CT-220E (220cm/86.6in)</label>
+						</div>
+						<div class="radio">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_260E" value="CT_260E">
+								CT-260E (260cm/102.3in)</label>
+						</div>
+						<div class="radio">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_300E" value="CT_300E">
+								CT-300E (300cm/118.1in)</label>
 						</div>
 					</div>
 				</div>
@@ -138,14 +134,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					</div>
 				</div>
 
+				<!-- Submit and Cancel Buttons -->
 				<div class="form-group">
-
 					<div class="col-sm-offset-2 col-sm-10">
-
-						<input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Finish">
-						<a class="btn btn-default" id="cancel-btn" href="cutter.php">Cancel</a>
+						<input class="btn btn-primary" type="submit">
+						<a id="cancel-btn" onclick="window.history.back()">Cancel</a>
 					</div>
-
 				</div>
 			</form>
 			
