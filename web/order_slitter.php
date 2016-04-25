@@ -9,141 +9,122 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (empty($_POST['slitterType'])) {
 		$errors[] = 'You forgot to choose a cutter machine.';
 	} else {
-		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['slitterType']));
+		$slitterType = mysqli_real_escape_string($dbc, trim($_POST['slitterType']));
 	}
 	
 	// 2
 	if (empty($_POST['productionVolume'])) {
 		$errors[] = 'You forgot to enter comments.';
 	} else {
-		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
+		$productionVolume = mysqli_real_escape_string($dbc, trim($_POST['productionVolume']));
 	}
 
 	// 3
 	if (empty($_POST['paperType'])) {
 		$errors[] = 'You forgot to choose a cutter machine.';
 	} else {
-		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
+		$paperType = mysqli_real_escape_string($dbc, trim($_POST['paperType']));
 	}
 	
-	// 4
+	//4
 	if (empty($_POST['gsmMin'])) {
 		$errors[] = 'You forgot to enter comments.';
 	} else {
-		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
+		$gsmMin = mysqli_real_escape_string($dbc, trim($_POST['gsmMin']));
 	}
 
 	// 5
 	if (empty($_POST['gsmMax'])) {
 		$errors[] = 'You forgot to choose a cutter machine.';
 	} else {
-		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
+		$gsmMax = mysqli_real_escape_string($dbc, trim($_POST['gsmMax']));
 	}
 	
 	// 6
 	if (empty($_POST['gsmUnit'])) {
 		$errors[] = 'You forgot to enter comments.';
 	} else {
-		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
+		$gsmUnit = mysqli_real_escape_string($dbc, trim($_POST['gsmUnit']));
 	}
 
 	// 7
 	if (empty($_POST['rollDiameterMin'])) {
 		$errors[] = 'You forgot to choose a cutter machine.';
 	} else {
-		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
+		$rollDiameterMin = mysqli_real_escape_string($dbc, trim($_POST['rollDiameterMin']));
 	}
 	
 	// 8
 	if (empty($_POST['rollDiameterMax'])) {
 		$errors[] = 'You forgot to enter comments.';
 	} else {
-		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
+		$rollDiameterMax = mysqli_real_escape_string($dbc, trim($_POST['rollDiameterMax']));
 	}
 
 	// 9
 	if (empty($_POST['rollDiameterUnit'])) {
 		$errors[] = 'You forgot to choose a cutter machine.';
 	} else {
-		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
+		$rollDiameterUnit = mysqli_real_escape_string($dbc, trim($_POST['rollDiameterUnit']));
 	}
 	
-	// 10
+	// 11
 	if (empty($_POST['slittingWidthMin'])) {
 		$errors[] = 'You forgot to enter comments.';
 	} else {
-		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
+		$slittingWidthMin = mysqli_real_escape_string($dbc, trim($_POST['slittingWidthMin']));
 	}
 
-	// 11
+	
 	if (empty($_POST['slittingWidthMax'])) {
 		$errors[] = 'You forgot to choose a cutter machine.';
 	} else {
-		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
+		$slittingWidthMax = mysqli_real_escape_string($dbc, trim($_POST['slittingWidthMax']));
 	}
 	
-	// 12
+	// 1
 	if (empty($_POST['slittingWidthUnit'])) {
 		$errors[] = 'You forgot to enter comments.';
 	} else {
-		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
+		$slittingWidthUnit = mysqli_real_escape_string($dbc, trim($_POST['slittingWidthUnit']));
 	}
 
-	// 13 APPLY FOR LOOP
-	if (empty($_POST['slitterCheckbox[]'])) {
-		$errors[] = 'You forgot to choose a cutter machine.';
-	} else {
-		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
-	}
+	//4
+	$standardCheckbox = mysqli_real_escape_string($dbc, trim($_POST['standardCheckbox']));
+	$addtlCheckbox = mysqli_real_escape_string($dbc, trim($_POST['addtlCheckbox']));
+	$addtlBlade = mysqli_real_escape_string($dbc, trim($_POST['addtlBlade']));
+	$coreCutterCheckbox = mysqli_real_escape_string($dbc, trim($_POST['coreCutterCheckbox']));
 	
-	// 14
-	if (empty($_POST['addtlBlade'])) {
-		$errors[] = 'You forgot to enter comments.';
-	} else {
-		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
-	}
-
-	// 15 APPLY FOR LOOP
-	if (empty($_POST['reelStand[]'])) {
-		$errors[] = 'You forgot to choose a cutter machine.';
-	} else {
-		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
-	}
 	
-	// 16
-	if (empty($_POST['reelStandOthers'])) {
-		$errors[] = 'You forgot to enter comments.';
-	} else {
-		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
-	}
-
-	// 17
+	//6
+	$hydraulicShaftlessCheckbox = mysqli_real_escape_string($dbc, trim($_POST['hydraulicShaftlessCheckbox']));
+	$singleCheckbox= mysqli_real_escape_string($dbc, trim($_POST['singleCheckbox']));
+	$customizedCheckbox = mysqli_real_escape_string($dbc, trim($_POST['customizedCheckbox']));
+	$stationaryShaftCheckbox = mysqli_real_escape_string($dbc, trim($_POST['stationaryShaftCheckbox']));
+	$otherReelCheckbox = mysqli_real_escape_string($dbc, trim($_POST['otherReelCheckbox']));
+	$reelStandOthers = mysqli_real_escape_string($dbc, trim($_POST['reelStandOthers']));
+	
+	// 1
 	if (empty($_POST['tonCapacity'])) {
 		$errors[] = 'You forgot to choose a cutter machine.';
 	} else {
-		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
+		$tonCapacity = mysqli_real_escape_string($dbc, trim($_POST['tonCapacity']));
 	}
 	
-	// 18 APPLY FOR LOOP
-	if (empty($_POST['systems[]'])) {
-		$errors[] = 'You forgot to enter comments.';
-	} else {
-		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
+	//7
+	$webGuideHydraulicEPCCheckbox = mysqli_real_escape_string($dbc, trim($_POST['webGuideHydraulicEPCCheckbox']));
+	$tensionCheckbox = mysqli_real_escape_string($dbc, trim($_POST['tensionCheckbox']));
+	$bananaRollCheckbox = mysqli_real_escape_string($dbc, trim($_POST['bananaRollCheckbox']));
+	$breakSystemCheckbox = mysqli_real_escape_string($dbc, trim($_POST['breakSystemCheckbox']));
+	$fullyComputerizedCheckbox = mysqli_real_escape_string($dbc, trim($_POST['fullyComputerizedCheckbox']));
+	$systemOthersCheckbox= mysqli_real_escape_string($dbc, trim($_POST['systemOthersCheckbox']));
+	$systemsOthers= mysqli_real_escape_string($dbc, trim($_POST['systemsOthers']));
+	
+	//1
+	$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
 	}
 
-	// 19
-	if (empty($_POST['systemsOthers'])) {
-		$errors[] = 'You forgot to choose a cutter machine.';
-	} else {
-		$cutterRadio = mysqli_real_escape_string($dbc, trim($_POST['cutterRadio']));
-	}
 	
-	// 20
-	if (empty($_POST['otherDetails'])) {
-		$errors[] = 'You forgot to enter comments.';
-	} else {
-		$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
-	}
 
 
 
@@ -152,7 +133,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Register the agent in the database...
 		
 		// Make the query:
-		$q = "INSERT INTO cutter (Cutter_Type, Other_Details) VALUES ('$cutterRadio', '$otherDetails');";
+		$q = "INSERT INTO slitter(Slitter_Type, Production_Volume, Paper_Type, GSM_Min, GSM_Max, GSM_Unit, Roll_Diameter_Min, Roll_Diameter_Max, Roll_Diameter_Unit, Slitting_Width_Min, Slitting_Width_Max, Slitting_Width_Unit, Cutting_Standard, Cutting_Additional_CB, Cutting_AddtlBlade, Cutting_CoreCutterMachine, URS_HydraulicShaftless, URS_Single, URS_Customized, URS_ShaftStand, URS_OtherReel, URS_Others, URS_TonCapacity, Sys_WebGuideHydraulicEPC, Sys_Tension, Sys_BananaRoll_TensionRoller, Sys_BrakeSystem, Sys_FullyComputerized, Sys_OthersCheckbox, Sys_Others, Other_Details) VALUES('$slitterType', '$productionVolume', '$paperType','$gsmMin','$gsmMax','$gsmUnit', '$rollDiameterMin','$rollDiameterMax','$rollDiamterUnit','$slittingWidthMin','$slittingWidthMax','$slittingWidthUnit','$standardCheckbox ','$addtlCheckbox','$addtlBlade ','$coreCutterCheckbox ','$hydraulicShaftlessCheckbox ','$singleCheckbox','$customizedCheckbox','$stationaryShaftCheckbox','$otherReelCheckbox ','$reelStandOthers ','$tonCapacity','$webGuideHydraulicEPCCheckbox  ','$tensionCheckbox','$bananaRollCheckbox','$breakSystemCheckbox','$fullyComputerizedCheckbox','$systemOthersCheckbox','$systemsOthers','$otherDetails',
+
+ );";
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 		if ($r) { // If it ran OK.
 		
@@ -384,7 +367,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 							<div class="checkbox">
 								
-								<label><input id="slitter-additional-checkbox" name="addtlCheckbox" type="checkbox">
+								<label><input id="slitter-additional-checkbox" name="addtlCheckbox" value="additional" type="checkbox">
 									<div class="form-inline">
 										
 										<div class="form-group">
@@ -399,7 +382,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 							<div class="checkbox">
 								
 								<label>
-									<input id="core-cutter-checkbox" name="coreCutterCheckbox" type="checkbox" value="1">
+									<input id="core-cutter-checkbox" name="coreCutterCheckbox" type="checkbox" value="Core Cutter Machine">
 									Core Cutter Machine
 								</label>
 							</div>
@@ -417,27 +400,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<div class="col-sm-10">
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="reelStand[]" value="1">
+								<label><input type="checkbox" name="hydraulicShaftlessCheckbox" value="1">
 									Hydraulic Shaftless with Air Break</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="reelStand[]" value="2">
+								<label><input type="checkbox" name="singleCheckbox" value="2">
 									Single</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="reelStand[]" value="3">
+								<label><input type="checkbox" name="customizedCheckbox" value="3">
 									Customized</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="reelStand[]" value="4">
+								<label><input type="checkbox" name="stationaryShaftCheckbox" value="4">
 									Stationary Shaft Stand</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input id="reel-stand-others-checkbox" name="reelStand[]" type="checkbox" value="5"> 
+								<label><input id="reel-stand-others-checkbox" name="otherReelCheckbox" type="checkbox" value="5"> 
 									<div class="form-inline">
 										<div class="form-group">
 											<label class="control-label" for="reel-stand-others-text-field">
@@ -457,11 +440,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 						<div class="col-sm-10">
 							<div class="input-group">
-<<<<<<< HEAD
-								<input class="form-control" id="ton-capacity"  min="0.01"  step="0.01" name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>"> type="number" required>
-=======
-								<input class="form-control" id="ton-capacity"  min="0.001"  step="0.01" name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>" type="number" required>
->>>>>>> branch 'master' of https://github.com/yeddapenequito/Machinovate.git
+
+								<input class="form-control" id="ton-capacity"  min="0.001"  step="0.01" name="tonCapacity"  type="number" required>
 								<span class="input-group-addon">Tons</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -480,37 +460,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 						<div class="col-sm-10">
 							<div class="checkbox">
-							  <label><input name="systems[]" type="checkbox" value="1">
+							  <label><input name="webGuideHydraulicEPCCheckbox" type="checkbox" value="1">
 							  	Heavy Duty Web Guide Hydraulic EPC Control System 
 					with Automation – Centring Sensor and Control, 4 pieces Roller and Roll Steering Guiding with Base</label>
 							</div>
 							<div class="checkbox">
-							  <label><input name="systems[]" type="checkbox" value="2">
+							  <label><input name="tensionCheckbox" type="checkbox" value="2">
 							  	Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systems[]" type="checkbox" value="3">
+							  <label><input name="bananaRollCheckbox" type="checkbox" value="3">
 							  	Banana Roll and Tension Roller</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systems[]" type="checkbox" value="4">
+							  <label><input name="breakSystemCheckbox" type="checkbox" value="4">
 							  	Water Cooling Brake Systems</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systems[]" type="checkbox" value="5">
+							  <label><input name="fullyComputerizedCheckbox" type="checkbox" value="5">
 							  	Fully Computerized Control System</label>
 							</div>
 							
 							<div class="checkbox">
-								<label><input id="systems-others-checkbox" name="systems[]" type="checkbox" value="6"> 
+								<label><input id="systems-others-checkbox" name="systemOthersCheckbox" type="checkbox" value="6"> 
 									<div class="form-inline">
 										<div class="form-group">
 											<label class="control-label" for="systems-others-text-field">
 												Others:</label>
-											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers" value="<?php if (isset($_POST['systemsOthers'])) echo $_POST['systemsOthers']; ?>" type="text">
+											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers"  type="text">
 										</div>
 									</div>
 								</label>

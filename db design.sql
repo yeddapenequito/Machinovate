@@ -65,7 +65,7 @@ CREATE TABLE cmsr_sheeter (
 
 
 
-CREATE TABLE cmsr_slitter (
+CREATE TABLE slitter (
 	
 	order_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	
@@ -92,15 +92,16 @@ CREATE TABLE cmsr_slitter (
 	URS_Single VARCHAR(20) NULL,
 	URS_Customized VARCHAR(20) NULL,
 	URS_ShaftStand VARCHAR(20) NULL,
-	URS_OtherReelVARCHAR(20) NULL,
+	URS_OtherReel VARCHAR(20) NULL,
 	URS_Others VARCHAR(128) NULL DEFAULT 'N/A',
-	URS_TonCapacity FLOAT(6,2) UNSIGNED NOT NULL,
+	URS_TonCapacity SMALLINT UNSIGNED NOT NULL,
 	
 	Sys_WebGuideHydraulicEPC VARCHAR(255) NULL,
 	Sys_Tension VARCHAR(255) NULL,
 	Sys_BananaRoll_TensionRoller VARCHAR(255) NULL,
 	Sys_BrakeSystem VARCHAR(255) NULL,
 	Sys_FullyComputerized VARCHAR(255)  NULL,
+	Sys_OthersCheckbox VARCHAR(255)  NULL,
 	Sys_Others VARCHAR(128) NULL DEFAULT 'N/A',
 
 	Other_Details VARCHAR(2048) NULL DEFAULT 'N/A',
