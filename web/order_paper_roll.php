@@ -31,7 +31,7 @@
 				<div class="form-group required">
 					<label for="type" class="control-label col-sm-2">Quantity:</label>
 					<div class="col-sm-10">
-						<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required autofocus/>
+						<input value="1" class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required autofocus/>
 						<div class="help-block with-errors"></div>
 					</div>
 				</div>

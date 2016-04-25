@@ -18,7 +18,7 @@
 				<li class="active">Bailing Machine Requirements Form</li>
 			</ol>
 
-			<form id="form" action="bailing_form_success.php" role="form" class="form-horizontal" method="post">
+			<form name="form" id="form" action="bailing_form_success.php" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Bailing Machine Requirements Form</h1>
 				</legend>
@@ -35,7 +35,7 @@
 					<label for="type" class="control-label col-sm-2">Quantity:</label>
 					<div class="col-sm-10">
 					
-						<input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required autofocus/>
+						<input value="1" class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required autofocus/>
 						<div class="help-block with-errors"></div>
 					</div>
 				</div>
