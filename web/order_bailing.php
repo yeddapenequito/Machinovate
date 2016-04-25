@@ -53,7 +53,7 @@
 					<div class="col-sm-offset-2 col-sm-10">
 
 						<input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Finish">
-						<a class="btn btn-default" id="cancel-btn" href="other_products.php">Cancel</a>
+						<a class="btn btn-default" id="cancel-btn" href="bailing_machine.php">Cancel</a>
 					</div>
 				</div>
 			</form>

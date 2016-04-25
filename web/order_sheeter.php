@@ -397,7 +397,7 @@
 					<div class="col-sm-offset-2 col-sm-10">
 
 						<input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Finish">
-						<a class="btn btn-default" id="cancel-btn" href="sheeter.php">Cancel</a>
+						<a class="btn btn-default" id="cancel-btn" onclick="window.history.back()">Cancel</a>
 					</div>
 				</div>
 			</form>
