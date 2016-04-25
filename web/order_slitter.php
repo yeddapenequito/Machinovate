@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	//1
 	$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
-	}
+	
 
 	
 
@@ -133,10 +133,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Register the agent in the database...
 		
 		// Make the query:
-		$q = "INSERT INTO slitter(Slitter_Type, Production_Volume, Paper_Type, GSM_Min, GSM_Max, GSM_Unit, Roll_Diameter_Min, Roll_Diameter_Max, Roll_Diameter_Unit, Slitting_Width_Min, Slitting_Width_Max, Slitting_Width_Unit, Cutting_Standard, Cutting_Additional_CB, Cutting_AddtlBlade, Cutting_CoreCutterMachine, URS_HydraulicShaftless, URS_Single, URS_Customized, URS_ShaftStand, URS_OtherReel, URS_Others, URS_TonCapacity, Sys_WebGuideHydraulicEPC, Sys_Tension, Sys_BananaRoll_TensionRoller, Sys_BrakeSystem, Sys_FullyComputerized, Sys_OthersCheckbox, Sys_Others, Other_Details) VALUES('$slitterType', '$productionVolume', '$paperType','$gsmMin','$gsmMax','$gsmUnit', '$rollDiameterMin','$rollDiameterMax','$rollDiamterUnit','$slittingWidthMin','$slittingWidthMax','$slittingWidthUnit','$standardCheckbox ','$addtlCheckbox','$addtlBlade ','$coreCutterCheckbox ','$hydraulicShaftlessCheckbox ','$singleCheckbox','$customizedCheckbox','$stationaryShaftCheckbox','$otherReelCheckbox ','$reelStandOthers ','$tonCapacity','$webGuideHydraulicEPCCheckbox  ','$tensionCheckbox','$bananaRollCheckbox','$breakSystemCheckbox','$fullyComputerizedCheckbox','$systemOthersCheckbox','$systemsOthers','$otherDetails',
+		$q = "INSERT INTO slitter(Slitter_Type, Production_Volume, Paper_Type, GSM_Min, GSM_Max, GSM_Unit, Roll_Diameter_Min, Roll_Diameter_Max, Roll_Diameter_Unit, Slitting_Width_Min, Slitting_Width_Max, Slitting_Width_Unit, Cutting_Standard, Cutting_Additional_CB, Cutting_AddtlBlade, Cutting_CoreCutterMachine, URS_HydraulicShaftless, URS_Single, URS_Customized, URS_ShaftStand, URS_OtherReel, URS_Others, URS_TonCapacity, Sys_WebGuideHydraulicEPC, Sys_Tension, Sys_BananaRoll_TensionRoller, Sys_BrakeSystem, Sys_FullyComputerized, Sys_OthersCheckbox, Sys_Others, Other_Details) VALUES('$slitterType', '$productionVolume', '$paperType','$gsmMin','$gsmMax','$gsmUnit', '$rollDiameterMin','$rollDiameterMax','$rollDiamterUnit','$slittingWidthMin','$slittingWidthMax','$slittingWidthUnit','$standardCheckbox ','$addtlCheckbox','$addtlBlade ','$coreCutterCheckbox ','$hydraulicShaftlessCheckbox ','$singleCheckbox','$customizedCheckbox','$stationaryShaftCheckbox','$otherReelCheckbox ','$reelStandOthers ','$tonCapacity','$webGuideHydraulicEPCCheckbox  ','$tensionCheckbox','$bananaRollCheckbox','$breakSystemCheckbox','$fullyComputerizedCheckbox','$systemOthersCheckbox','$systemsOthers','$otherDetails');";
 
- );";
 		$r = @mysqli_query ($dbc, $q); // Run the query.
+
 		if ($r) { // If it ran OK.
 		
 			// Print a message:
@@ -212,7 +212,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<li><a href="slitter.php">Slitter</a></li>
 				<li class="active">Slitter Machine Requirements Form</li>
 			</ol>
-			<form id="form" action="slitter_form_success.php" name="form" role="form" class="form-horizontal" method="post">
+			<form id="form" action="order_slitter.php" name="form" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Slitter Machine Requirements Form</h1>
 				</legend>
