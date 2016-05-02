@@ -133,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Register the agent in the database...
 		
 		// Make the query:
-		$q = "INSERT INTO slitter(Slitter_Type, Production_Volume, Paper_Type, GSM_Min, GSM_Max, GSM_Unit, Roll_Diameter_Min, Roll_Diameter_Max, Roll_Diameter_Unit, Slitting_Width_Min, Slitting_Width_Max, Slitting_Width_Unit, Cutting_Standard, Cutting_Additional_CB, Cutting_AddtlBlade, Cutting_CoreCutterMachine, URS_HydraulicShaftless, URS_Single, URS_Customized, URS_ShaftStand, URS_OtherReel, URS_Others, URS_TonCapacity, Sys_WebGuideHydraulicEPC, Sys_Tension, Sys_BananaRoll_TensionRoller, Sys_BrakeSystem, Sys_FullyComputerized, Sys_OthersCheckbox, Sys_Others, Other_Details) VALUES('$slitterType', '$productionVolume', '$paperType','$gsmMin','$gsmMax','$gsmUnit', '$rollDiameterMin','$rollDiameterMax','$rollDiameterUnit','$slittingWidthMin','$slittingWidthMax','$slittingWidthUnit','$standardCheckbox ','$addtlCheckbox','$addtlBlade ','$coreCutterCheckbox ','$hydraulicShaftlessCheckbox ','$singleCheckbox','$customizedCheckbox','$stationaryShaftCheckbox','$otherReelCheckbox ','$reelStandOthers ','$tonCapacity','$webGuideHydraulicEPCCheckbox  ','$tensionCheckbox','$bananaRollCheckbox','$breakSystemCheckbox','$fullyComputerizedCheckbox','$systemOthersCheckbox','$systemsOthers','$otherDetails');";
+		$q = "INSERT INTO slitter(Slitter_Type, Production_Volume, Paper_Type, GSM_Min, GSM_Max, GSM_Unit, Roll_Diameter_Min, Roll_Diameter_Max, Roll_Diameter_Unit, Slitting_Width_Min, Slitting_Width_Max, Slitting_Width_Unit, Cutting_Standard, Cutting_Additional_CB, Cutting_AddtlBlade, Cutting_CoreCutterMachine, URS_HydraulicShaftless, URS_Single, URS_Customized, URS_ShaftStand, URS_OtherReel, URS_Others, URS_TonCapacity, Sys_WebGuideHydraulicEPC, Sys_Tension, Sys_BananaRoll_TensionRoller, Sys_BrakeSystem, Sys_FullyComputerized, Sys_OthersCheckbox, Sys_Others, Other_Details) VALUES('$slitterType', '$productionVolume', '$paperType','$gsmMin','$gsmMax','$gsmUnit', '$rollDiameterMin','$rollDiameterMax','$rollDiamterUnit','$slittingWidthMin','$slittingWidthMax','$slittingWidthUnit','$standardCheckbox ','$addtlCheckbox','$addtlBlade ','$coreCutterCheckbox ','$hydraulicShaftlessCheckbox ','$singleCheckbox','$customizedCheckbox','$stationaryShaftCheckbox','$otherReelCheckbox ','$reelStandOthers ','$tonCapacity','$webGuideHydraulicEPCCheckbox  ','$tensionCheckbox','$bananaRollCheckbox','$breakSystemCheckbox','$fullyComputerizedCheckbox','$systemOthersCheckbox','$systemsOthers','$otherDetails');";
 
 		$r = @mysqli_query ($dbc, $q); // Run the query.
 
@@ -360,25 +360,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 							<div class="checkbox">
 								
 								<label> <!--required field-->
-									<input id="standard-checkbox" name="standardCheckbox" type="checkbox" value="Standard" disabled checked="true">
+									<input id="standard-checkbox" name="standardCheckbox" type="checkbox" value="standard" disabled checked="true">
 									Standard [Five(5)] Set Male/Female Circular Blade with Trim Removal Blower
-
-									<input id="standard-checkbox" name="standardCheckbox" type="hidden" value="Standard">
 								</label>
 							</div>
 
 							<div class="checkbox">
 								
 								<label><input id="slitter-additional-checkbox" name="addtlCheckbox" value="additional" type="checkbox">
-									<input id="slitter-additional-checkbox" name="addtlCheckbox" value="NO" type="hidden">
 									<div class="form-inline">
 										
 										<div class="form-group">
 											
 											<label class="control-label" for"slitter-additional-text-field">Additional</label>
 											<input class="form-control" disabled id="slitter-additional-text-field" min="1" name="addtlBlade" type="number"> set/s of one pair male/female
-
-											<input class="form-control" name="addtlBlade" type="hidden" value="NO">
 										</div>
 									</div>
 								</label>
@@ -390,9 +385,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 									<input id="core-cutter-checkbox" name="coreCutterCheckbox" type="checkbox" value="Core Cutter Machine">
 									Core Cutter Machine
 								</label>
-
-								<input id="core-cutter-checkbox" name="coreCutterCheckbox" type="hidden" value="NO">
-
 							</div>
 						</div>
 					</div>
@@ -408,45 +400,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						<div class="col-sm-10">
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="hydraulicShaftlessCheckbox" value="Hydraulic Shaftless with Air Brake">
+								<label><input type="checkbox" name="hydraulicShaftlessCheckbox" value="1">
 									Hydraulic Shaftless with Air Break</label>
 							</div>
 
-							<input type="hidden" name="hydraulicShaftlessCheckbox" value="NO">
-
 							<div class="checkbox">
-								<label><input type="checkbox" name="singleCheckbox" value="Single">
+								<label><input type="checkbox" name="singleCheckbox" value="2">
 									Single</label>
 							</div>
 
-							<input type="hidden" name="singleCheckbox" value="NO">
-
 							<div class="checkbox">
-								<label><input type="checkbox" name="customizedCheckbox" value="Customized">
+								<label><input type="checkbox" name="customizedCheckbox" value="3">
 									Customized</label>
 							</div>
 
-							<input type="hidden" name="customizedCheckbox" value="NO">
-
 							<div class="checkbox">
-								<label><input type="checkbox" name="stationaryShaftCheckbox" value="Stationary Shaft Stand">
+								<label><input type="checkbox" name="stationaryShaftCheckbox" value="4">
 									Stationary Shaft Stand</label>
 							</div>
 
-							<input type="hidden" name="stationaryShaftCheckbox" value="NO">
-
 							<div class="checkbox">
-								<label><input id="reel-stand-others-checkbox" name="otherReelCheckbox" type="checkbox" value="Others"> 
-
-									<input id="reel-stand-others-checkbox" name="otherReelCheckbox" type="hidden" value="NO"> 
-
+								<label><input id="reel-stand-others-checkbox" name="otherReelCheckbox" type="checkbox" value="5"> 
 									<div class="form-inline">
 										<div class="form-group">
 											<label class="control-label" for="reel-stand-others-text-field">
 												Others:</label>
 											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers"  type="text" required>
-
-											<input class="form-control" name="reelStandOthers"  type="hidden" value="NO">
 										</div>
 									</div>
 								</label>
@@ -481,57 +460,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 						<div class="col-sm-10">
 							<div class="checkbox">
-							  <label><input name="webGuideHydraulicEPCCheckbox" type="checkbox" value="Heavy Duty Web Guide EPC System">
+							  <label><input name="webGuideHydraulicEPCCheckbox" type="checkbox" value="1">
 							  	Heavy Duty Web Guide Hydraulic EPC Control System 
 					with Automation – Centring Sensor and Control, 4 pieces Roller and Roll Steering Guiding with Base</label>
-
-								<input name="webGuideHydraulicEPCCheckbox" type="hidden" value="NO">
-
 							</div>
 							<div class="checkbox">
-							  <label><input name="tensionCheckbox" type="checkbox" value="Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing">
+							  <label><input name="tensionCheckbox" type="checkbox" value="2">
 							  	Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing</label>
-
-							  	<input name="tensionCheckbox" type="hidden" value="NO">
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="bananaRollCheckbox" type="checkbox" value="Banana Roll and Tension Roller">
+							  <label><input name="bananaRollCheckbox" type="checkbox" value="3">
 							  	Banana Roll and Tension Roller</label>
-
-							  	<input name="bananaRollCheckbox" type="hidden" value="NO">
-
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="breakSystemCheckbox" type="checkbox" value="Water Cooling Brake Systems">
+							  <label><input name="breakSystemCheckbox" type="checkbox" value="4">
 							  	Water Cooling Brake Systems</label>
-
-							  	<input name="breakSystemCheckbox" type="hidden" value="NO">
-
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="fullyComputerizedCheckbox" type="checkbox" value="Fully Computerized Control System">
+							  <label><input name="fullyComputerizedCheckbox" type="checkbox" value="5">
 							  	Fully Computerized Control System</label>
-
-							  	<input name="fullyComputerizedCheckbox" type="hidden" value="NO">
-
 							</div>
 							
 							<div class="checkbox">
-								<label><input id="systems-others-checkbox" name="systemOthersCheckbox" type="checkbox" value="System Others">
-
-								<input id="systems-others-checkbox" name="systemOthersCheckbox" type="hidden" value="NO">
-
+								<label><input id="systems-others-checkbox" name="systemOthersCheckbox" type="checkbox" value="6"> 
 									<div class="form-inline">
 										<div class="form-group">
 											<label class="control-label" for="systems-others-text-field">
 												Others:</label>
 											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers"  type="text">
-
-											<input id="systems-others-text-field"  name="systemsOthers"  type="hidden" value="NO">
-
 										</div>
 									</div>
 								</label>
