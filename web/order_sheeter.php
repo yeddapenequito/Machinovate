@@ -17,13 +17,13 @@
 				<li class="active">Sheeter Machine Requirements Form</li>
 			</ol>
 
-			<form id="form" action="sheeter_form_success.php" role="form" class="form-horizontal" method="post">
+			<form name="form" id="form" action="sheeter_form_success.php" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Sheeter Machine Requirements Form</h1>
 				</legend>
 				<div class="form-group">
 					<div class="alert alert-info">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						
 					  	<p>Please bear with us. This is going to take long.</p>
 						<p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
 					</div>
@@ -66,7 +66,7 @@
 						<div class="col-sm-10">
 							<div class="input-group">
 								
-								<input class="form-control" id="production-vol" min="0" name="productionVolume" step=".01" type="number" required/>
+								<input class="form-control" id="production-vol" min="0.001" name="productionVolume" step="0.001" type="number" required/>
 								<span class="input-group-addon">Tons per day</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -91,11 +91,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0" name="gsmMin" placeholder="Min" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0" name="gsmMax" placeholder="Max" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 								<select class="form-control" name="gsmUnit"> 
 									<option value="inches">inches</option>
@@ -115,11 +115,11 @@
 						<div class="col-sm-10">
 							<div class="form-inline">
 
-									<input class="form-control" min="0" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number" required>
+									<input class="form-control" min="0.001" name="rollDiameterMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 									<span>to</span>
 
-									<input class="form-control" min="0" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number" required>
+									<input class="form-control" min="0.001" name="rollDiameterMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 									<select class="form-control" name="rollDiameterUnit"> 
 										<option value="inches">inches</option>
@@ -137,11 +137,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0" name="cutOffLengthMin" placeholder="Min" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="cutOffLengthMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0" name="cutOffLengthMax" placeholder="Max" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="cutOffLengthMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 								<select class="form-control" name="cutOffLengthUnit"> 
 									<option value="inches">inches</option>
@@ -159,11 +159,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="slittingWidthMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="slittingWidthMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 								<select class="form-control" name="slittingWidthUnit"> 
 									<option value="inches">inches</option>
@@ -341,7 +341,7 @@
 						
 						<div class="col-sm-10">
 							<div class="input-group">
-								<input class="form-control" id="roll-weight"  name="rollWeight"  value="<?php if (isset($_POST['rollWeight'])) echo $_POST['rollWeight']; ?>" type="number" required>
+								<input class="form-control" min="0.001" step="0.001" id="roll-weight"  name="rollWeight"  value="<?php if (isset($_POST['rollWeight'])) echo $_POST['rollWeight']; ?>" type="number" required>
 								<span class="input-group-addon">Tons</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -392,12 +392,11 @@
 					</div>
 				</fieldset>
 
-				<div class="form-group required">
-
+				<!-- Submit and Cancel Buttons -->
+				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-
-						<input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Finish">
-						<a class="btn btn-default" id="cancel-btn" href="sheeter.php">Cancel</a>
+						<input class="btn btn-primary" type="submit">
+						<a id="cancel-btn" onclick="window.history.back()">Cancel</a>
 					</div>
 				</div>
 			</form>
@@ -407,6 +406,14 @@
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="scripts/validator.min.js"></script>
 		<script type="text/javascript">
+
+			var type = form.sheeterType;
+			var loc = window.location.href;
+			var code = Number(loc.substr(loc.lastIndexOf("=") + 1));
+
+			if (code != -1) {
+				type[code].checked = true;
+			} 
 
 			document.getElementById("slitter").onchange = function() {
 					

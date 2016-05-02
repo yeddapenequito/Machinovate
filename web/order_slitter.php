@@ -1,36 +1,198 @@
-<?php 
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+	require ('../mysqli_connect.php'); // Connect to the db.
 		
-	$page_title = 'Machinovate | Order Slitter';
-	include ('header.php');
+	$errors = array(); // Initialize an error array.
+	
+	// 1
+	if (empty($_POST['slitterType'])) {
+		$errors[] = 'You forgot to choose a cutter machine.';
+	} else {
+		$slitterType = mysqli_real_escape_string($dbc, trim($_POST['slitterType']));
+	}
+	
+	// 2
+	if (empty($_POST['productionVolume'])) {
+		$errors[] = 'You forgot to enter comments.';
+	} else {
+		$productionVolume = mysqli_real_escape_string($dbc, trim($_POST['productionVolume']));
+	}
 
-	// Check for form submission:
-	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	// 3
+	if (empty($_POST['paperType'])) {
+		$errors[] = 'You forgot to choose a cutter machine.';
+	} else {
+		$paperType = mysqli_real_escape_string($dbc, trim($_POST['paperType']));
+	}
+	
+	//4
+	if (empty($_POST['gsmMin'])) {
+		$errors[] = 'You forgot to enter comments.';
+	} else {
+		$gsmMin = mysqli_real_escape_string($dbc, trim($_POST['gsmMin']));
+	}
 
-		require ('../mysqli_connect.php'); // Connect to the db.
+	// 5
+	if (empty($_POST['gsmMax'])) {
+		$errors[] = 'You forgot to choose a cutter machine.';
+	} else {
+		$gsmMax = mysqli_real_escape_string($dbc, trim($_POST['gsmMax']));
+	}
+	
+	// 6
+	if (empty($_POST['gsmUnit'])) {
+		$errors[] = 'You forgot to enter comments.';
+	} else {
+		$gsmUnit = mysqli_real_escape_string($dbc, trim($_POST['gsmUnit']));
+	}
+
+	// 7
+	if (empty($_POST['rollDiameterMin'])) {
+		$errors[] = 'You forgot to choose a cutter machine.';
+	} else {
+		$rollDiameterMin = mysqli_real_escape_string($dbc, trim($_POST['rollDiameterMin']));
+	}
+	
+	// 8
+	if (empty($_POST['rollDiameterMax'])) {
+		$errors[] = 'You forgot to enter comments.';
+	} else {
+		$rollDiameterMax = mysqli_real_escape_string($dbc, trim($_POST['rollDiameterMax']));
+	}
+
+	// 9
+	if (empty($_POST['rollDiameterUnit'])) {
+		$errors[] = 'You forgot to choose a cutter machine.';
+	} else {
+		$rollDiameterUnit = mysqli_real_escape_string($dbc, trim($_POST['rollDiameterUnit']));
+	}
+	
+	// 11
+	if (empty($_POST['slittingWidthMin'])) {
+		$errors[] = 'You forgot to enter comments.';
+	} else {
+		$slittingWidthMin = mysqli_real_escape_string($dbc, trim($_POST['slittingWidthMin']));
+	}
+
+	
+	if (empty($_POST['slittingWidthMax'])) {
+		$errors[] = 'You forgot to choose a cutter machine.';
+	} else {
+		$slittingWidthMax = mysqli_real_escape_string($dbc, trim($_POST['slittingWidthMax']));
+	}
+	
+	// 1
+	if (empty($_POST['slittingWidthUnit'])) {
+		$errors[] = 'You forgot to enter comments.';
+	} else {
+		$slittingWidthUnit = mysqli_real_escape_string($dbc, trim($_POST['slittingWidthUnit']));
+	}
+
+	//4
+	$standardCheckbox = mysqli_real_escape_string($dbc, trim($_POST['standardCheckbox']));
+	$addtlCheckbox = mysqli_real_escape_string($dbc, trim($_POST['addtlCheckbox']));
+	$addtlBlade = mysqli_real_escape_string($dbc, trim($_POST['addtlBlade']));
+	$coreCutterCheckbox = mysqli_real_escape_string($dbc, trim($_POST['coreCutterCheckbox']));
+	
+	
+	//6
+	$hydraulicShaftlessCheckbox = mysqli_real_escape_string($dbc, trim($_POST['hydraulicShaftlessCheckbox']));
+	$singleCheckbox= mysqli_real_escape_string($dbc, trim($_POST['singleCheckbox']));
+	$customizedCheckbox = mysqli_real_escape_string($dbc, trim($_POST['customizedCheckbox']));
+	$stationaryShaftCheckbox = mysqli_real_escape_string($dbc, trim($_POST['stationaryShaftCheckbox']));
+	$otherReelCheckbox = mysqli_real_escape_string($dbc, trim($_POST['otherReelCheckbox']));
+	$reelStandOthers = mysqli_real_escape_string($dbc, trim($_POST['reelStandOthers']));
+	
+	// 1
+	if (empty($_POST['tonCapacity'])) {
+		$errors[] = 'You forgot to choose a cutter machine.';
+	} else {
+		$tonCapacity = mysqli_real_escape_string($dbc, trim($_POST['tonCapacity']));
+	}
+	
+	//7
+	$webGuideHydraulicEPCCheckbox = mysqli_real_escape_string($dbc, trim($_POST['webGuideHydraulicEPCCheckbox']));
+	$tensionCheckbox = mysqli_real_escape_string($dbc, trim($_POST['tensionCheckbox']));
+	$bananaRollCheckbox = mysqli_real_escape_string($dbc, trim($_POST['bananaRollCheckbox']));
+	$breakSystemCheckbox = mysqli_real_escape_string($dbc, trim($_POST['breakSystemCheckbox']));
+	$fullyComputerizedCheckbox = mysqli_real_escape_string($dbc, trim($_POST['fullyComputerizedCheckbox']));
+	$systemOthersCheckbox= mysqli_real_escape_string($dbc, trim($_POST['systemOthersCheckbox']));
+	$systemsOthers= mysqli_real_escape_string($dbc, trim($_POST['systemsOthers']));
+	
+	//1
+	$otherDetails = mysqli_real_escape_string($dbc, trim($_POST['otherDetails']));
+	
+
+	
+
+
+
+	if (empty($errors)) { // If everything's OK.
+	
+		// Register the agent in the database...
+		
+		// Make the query:
+		$q = "INSERT INTO slitter(Slitter_Type, Production_Volume, Paper_Type, GSM_Min, GSM_Max, GSM_Unit, Roll_Diameter_Min, Roll_Diameter_Max, Roll_Diameter_Unit, Slitting_Width_Min, Slitting_Width_Max, Slitting_Width_Unit, Cutting_Standard, Cutting_Additional_CB, Cutting_AddtlBlade, Cutting_CoreCutterMachine, URS_HydraulicShaftless, URS_Single, URS_Customized, URS_ShaftStand, URS_OtherReel, URS_Others, URS_TonCapacity, Sys_WebGuideHydraulicEPC, Sys_Tension, Sys_BananaRoll_TensionRoller, Sys_BrakeSystem, Sys_FullyComputerized, Sys_OthersCheckbox, Sys_Others, Other_Details) VALUES('$slitterType', '$productionVolume', '$paperType','$gsmMin','$gsmMax','$gsmUnit', '$rollDiameterMin','$rollDiameterMax','$rollDiamterUnit','$slittingWidthMin','$slittingWidthMax','$slittingWidthUnit','$standardCheckbox ','$addtlCheckbox','$addtlBlade ','$coreCutterCheckbox ','$hydraulicShaftlessCheckbox ','$singleCheckbox','$customizedCheckbox','$stationaryShaftCheckbox','$otherReelCheckbox ','$reelStandOthers ','$tonCapacity','$webGuideHydraulicEPCCheckbox  ','$tensionCheckbox','$bananaRollCheckbox','$breakSystemCheckbox','$fullyComputerizedCheckbox','$systemOthersCheckbox','$systemsOthers','$otherDetails');";
+
+		$r = @mysqli_query ($dbc, $q); // Run the query.
+
+		if ($r) { // If it ran OK.
+		
+			// Print a message:
+			echo '<h1>Thank you!</h1>
+		<p>An order has been added!</p><p><br /></p>';	
+		
+		
+		} else { // If it did not run OK.
 			
-		$errors = array(); // Initialize an error array.
+			// Public message:
+			echo '<h1>System Error</h1>
+			<p class="error">The order could not be registered due to a system error. We apologize for any inconvenience.</p>'; 
+			
+			// Debugging message:
+			echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+						
+		} // End of if ($r) IF.
 		
-		// Check for a first name:
-		if (empty($_POST['first_name'])) {
-			$errors[] = 'You forgot to enter the first name.';
-		} else {
-			$fn = mysqli_real_escape_string($dbc, trim($_POST['first_name']));
-		}
-		
-		// Check for a last name:
-		if (empty($_POST['last_name'])) {
-			$errors[] = 'You forgot to enter the last name.';
-		} else {
-			$ln = mysqli_real_escape_string($dbc, trim($_POST['last_name']));
-		}
-		
-		// Check for the country
-		if (empty($_POST['country'])) {
-			$errors[] = 'You forgot to enter the country.';
-		} else {
-			$countrynum = $_POST['country'];
-?>
+		mysqli_close($dbc); // Close the database connection.
 
+		// Include the footer and quit the script:
+		exit();
+		
+	} else { // Report the errors.
+	
+		echo '<div class="container"><h1>Error!</h1>
+		<p class="error">The following error(s) occurred:<br />';
+		 // Print each error.
+			echo " <div class='form-group'>
+                                    <div class='alert alert-danger'>
+                                        
+                                        <strong>";
+                                        foreach ($errors as $msg) {
+                                        
+                                        echo " $msg<br />\n";
+                                     }
+                                       echo "<p>Please try again.</p>
+                                        
+                                        </strong> 
+                                    </div>
+                                </div>";
+		
+		
+		
+	} // End of if (empty($errors)) IF.
+	
+	mysqli_close($dbc); // Close the database connection.
+
+	
+		
+		
+
+} // End of the main Submit conditional.
+
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -50,13 +212,13 @@
 				<li><a href="slitter.php">Slitter</a></li>
 				<li class="active">Slitter Machine Requirements Form</li>
 			</ol>
-			<form id="form" action="slitter_form_success.php" name="form" role="form" class="form-horizontal" method="post">
+			<form id="form" action="order_slitter.php" name="form" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Slitter Machine Requirements Form</h1>
 				</legend>
 				<div class="form-group">
 					<div class="alert alert-info">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						
 					  	<p>Please bear with us. This is going to take long.</p>
 						<p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
 					</div>
@@ -73,19 +235,19 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input class="type" name="slitterType" type="radio" value="1::SL_Standard" checked="checked">
+								<label><input class="type" name="slitterType" type="radio" value="SL_Standard" checked="checked">
 									MACH-MSR (Standard)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="slitterType" type="radio" value="2::SL_HeavyDuty">
+								<label><input class="type" name="slitterType" type="radio" value="SL_HeavyDuty">
 									MACH-MSR (Heavy Duty)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="slitterType" type="radio" value="3::SL_CRS">
+								<label><input class="type" name="slitterType" type="radio" value="SL_CRS">
 									MACH-CRS (Cash Register Slitter)</label>
 							</div>
 							<div class="radio">
-								<label><input class="type" name="slitterType" type="radio" value="4::SL_Customized">
+								<label><input class="type" name="slitterType" type="radio" value="SL_Customized">
 									Customized</label>
 							</div>
 						</div>
@@ -99,7 +261,7 @@
 						<div class="col-sm-10">
 							<div class="input-group">
 								
-								<input class="form-control" id="production-vol" min="0.01" name="productionVolume" step=".01" type="number" required/>
+								<input class="form-control" id="production-vol" min="0.001" name="productionVolume" step="0.001" type="number" required/>
 								<span class="input-group-addon">Tons per day</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -124,11 +286,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0.01" name="gsmMin" placeholder="Min" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0.01" name="gsmMax" placeholder="Max" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 								<select class="form-control" name="gsmUnit"> 
 									<option value="inches">inches</option>
@@ -147,11 +309,11 @@
 						<div class="col-sm-10">
 							<div class="form-inline">
 
-									<input class="form-control" min="0.01" name="rollDiameterMin" placeholder="Min" size="5" step=".01" type="number" required>
+									<input class="form-control" min="0.001" name="rollDiameterMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 									<span>to</span>
 
-									<input class="form-control" min="0.01" name="rollDiameterMax" placeholder="Max" size="5" step=".01" type="number" required>
+									<input class="form-control" min="0.001" name="rollDiameterMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 									<select class="form-control" name="rollDiameterUnit"> 
 										<option value="inches">inches</option>
@@ -169,11 +331,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0.01" name="slittingWidthMin" placeholder="Min" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="slittingWidthMin" placeholder="Min" size="5" step="0.001" type="number" required>
 
 								<span>to</span>
 
-								<input class="form-control" min="0.01" name="slittingWidthMax" placeholder="Max" size="5" step=".01" type="number" required>
+								<input class="form-control" min="0.001" name="slittingWidthMax" placeholder="Max" size="5" step="0.001" type="number" required>
 
 								<select class="form-control" name="slittingWidthUnit"> 
 									<option value="inches">inches</option>
@@ -198,14 +360,14 @@
 							<div class="checkbox">
 								
 								<label> <!--required field-->
-									<input id="standard-checkbox" name="slitterCheckbox[]" type="checkbox" value="standard" disabled checked="true">
+									<input id="standard-checkbox" name="standardCheckbox" type="checkbox" value="standard" disabled checked="true">
 									Standard [Five(5)] Set Male/Female Circular Blade with Trim Removal Blower
 								</label>
 							</div>
 
 							<div class="checkbox">
 								
-								<label><input id="slitter-additional-checkbox" name="slitterCheckbox[]" type="checkbox">
+								<label><input id="slitter-additional-checkbox" name="addtlCheckbox" value="additional" type="checkbox">
 									<div class="form-inline">
 										
 										<div class="form-group">
@@ -220,7 +382,7 @@
 							<div class="checkbox">
 								
 								<label>
-									<input id="core-cutter-checkbox" name="slitterCheckbox[]" type="checkbox" value="1">
+									<input id="core-cutter-checkbox" name="coreCutterCheckbox" type="checkbox" value="Core Cutter Machine">
 									Core Cutter Machine
 								</label>
 							</div>
@@ -238,32 +400,32 @@
 						<div class="col-sm-10">
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="reelStand[]" value="1">
+								<label><input type="checkbox" name="hydraulicShaftlessCheckbox" value="1">
 									Hydraulic Shaftless with Air Break</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="reelStand[]" value="2">
+								<label><input type="checkbox" name="singleCheckbox" value="2">
 									Single</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="reelStand[]" value="3">
+								<label><input type="checkbox" name="customizedCheckbox" value="3">
 									Customized</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input type="checkbox" name="reelStand[]" value="4">
+								<label><input type="checkbox" name="stationaryShaftCheckbox" value="4">
 									Stationary Shaft Stand</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input id="reel-stand-others-checkbox" name="reelStand[]" type="checkbox" value="5"> 
+								<label><input id="reel-stand-others-checkbox" name="otherReelCheckbox" type="checkbox" value="5"> 
 									<div class="form-inline">
 										<div class="form-group">
 											<label class="control-label" for="reel-stand-others-text-field">
 												Others:</label>
-											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers" value="<?php if (isset($_POST['reelStandOthers'])) echo $_POST['reelStandOthers']; ?>" type="text" required>
+											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers"  type="text" required>
 										</div>
 									</div>
 								</label>
@@ -278,7 +440,8 @@
 
 						<div class="col-sm-10">
 							<div class="input-group">
-								<input class="form-control" id="ton-capacity"  min="0.01"  step="0.01" name="tonCapacity" value="<?php if (isset($_POST['tonCapacity'])) echo $_POST['tonCapacity']; ?>" type="number" required>
+
+								<input class="form-control" id="ton-capacity"  min="0.001"  step="0.01" name="tonCapacity"  type="number" required>
 								<span class="input-group-addon">Tons</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -297,37 +460,37 @@
 
 						<div class="col-sm-10">
 							<div class="checkbox">
-							  <label><input name="systems[]" type="checkbox" value="1">
+							  <label><input name="webGuideHydraulicEPCCheckbox" type="checkbox" value="1">
 							  	Heavy Duty Web Guide Hydraulic EPC Control System 
 					with Automation – Centring Sensor and Control, 4 pieces Roller and Roll Steering Guiding with Base</label>
 							</div>
 							<div class="checkbox">
-							  <label><input name="systems[]" type="checkbox" value="2">
+							  <label><input name="tensionCheckbox" type="checkbox" value="2">
 							  	Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systems[]" type="checkbox" value="3">
+							  <label><input name="bananaRollCheckbox" type="checkbox" value="3">
 							  	Banana Roll and Tension Roller</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systems[]" type="checkbox" value="4">
+							  <label><input name="breakSystemCheckbox" type="checkbox" value="4">
 							  	Water Cooling Brake Systems</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input name="systems[]" type="checkbox" value="5">
+							  <label><input name="fullyComputerizedCheckbox" type="checkbox" value="5">
 							  	Fully Computerized Control System</label>
 							</div>
 							
 							<div class="checkbox">
-								<label><input id="systems-others-checkbox" name="systems[]" type="checkbox" value="6"> 
+								<label><input id="systems-others-checkbox" name="systemOthersCheckbox" type="checkbox" value="6"> 
 									<div class="form-inline">
 										<div class="form-group">
 											<label class="control-label" for="systems-others-text-field">
 												Others:</label>
-											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers" value="<?php if (isset($_POST['systemsOthers'])) echo $_POST['systemsOthers']; ?>" type="text">
+											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers"  type="text">
 										</div>
 									</div>
 								</label>
@@ -347,11 +510,11 @@
 					</div>
 				</fieldset>
 
+				<!-- Submit and Cancel Buttons -->
 				<div class="form-group">
-
 					<div class="col-sm-offset-2 col-sm-10">
-						<input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Finish">
-						<a class="btn btn-default" id="cancel-btn" href="slitter.php">Cancel</a>
+						<input class="btn btn-primary" type="submit">
+						<a id="cancel-btn" onclick="window.history.back()">Cancel</a>
 					</div>
 				</div>
 			</form>
@@ -401,7 +564,6 @@
 					document.getElementById("systems-others-text-field").value = "";
 				}
 			};
-
 		</script>
 	</body>
 </html>

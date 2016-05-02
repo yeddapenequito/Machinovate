@@ -65,38 +65,48 @@ CREATE TABLE cmsr_sheeter (
 
 
 
-CREATE TABLE cmsr_slitter (
-	cmsr_slitter_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
-	order_id SMALLINT UNSIGNED NOT NULL,
+CREATE TABLE slitter (
+	
+	order_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	
 	Slitter_Type VARCHAR(20) NOT NULL,
 	Production_Volume FLOAT(6,2) UNSIGNED NOT NULL,
 	Paper_Type VARCHAR(32) NOT NULL,
-	GSM VARCHAR(20) NOT NULL,
-	Roll_Diameter VARCHAR(20) NOT NULL,
+	GSM_Min SMALLINT UNSIGNED NOT NULL,
+	GSM_Max  SMALLINT UNSIGNED NOT NULL,
+	GSM_Unit  VARCHAR(20) NOT NULL,
+	Roll_Diameter_Min SMALLINT UNSIGNED NOT NULL,
+	Roll_Diameter_Max SMALLINT UNSIGNED NOT NULL,
+	Roll_Diameter_Unit  VARCHAR(20) NOT NULL,
+	Slitting_Width_Min SMALLINT UNSIGNED NOT NULL,
+	Slitting_Width_Max SMALLINT UNSIGNED NOT NULL,
+	Slitting_Width_Unit  VARCHAR(20) NOT NULL,
 	Slitting_Width VARCHAR(20) NOT NULL,
 	
+	Cutting_Standard VARCHAR(20) NULL DEFAULT 'N/A',
+	Cutting_Additional_CB VARCHAR(20) NULL DEFAULT 'N/A',
 	Cutting_AddtlBlade TINYINT(2) UNSIGNED NULL DEFAULT 0,
-	Cutting_CoreCutterMachine TINYINT(1) UNSIGNED NULL DEFAULT 0,
+	Cutting_CoreCutterMachine VARCHAR(20) NULL DEFAULT 'N/A',
 	
-	URS_HydraulicShaftless TINYINT(1) UNSIGNED NULL DEFAULT 0,
-	URS_Single TINYINT(1) UNSIGNED NULL DEFAULT 0,
-	URS_Customized TINYINT(1) UNSIGNED NULL DEFAULT 0,
-	URS_ShaftStand TINYINT(1) UNSIGNED NULL DEFAULT 0,
+	URS_HydraulicShaftless VARCHAR(20) NULL DEFAULT 'N/A',
+	URS_Single VARCHAR(20) NULL DEFAULT 'N/A',
+	URS_Customized VARCHAR(20) NULL DEFAULT 'N/A', 
+	URS_ShaftStand VARCHAR(20) NULL DEFAULT 'N/A',
+	URS_OtherReel VARCHAR(20) NULL DEFAULT 'N/A',
 	URS_Others VARCHAR(128) NULL DEFAULT 'N/A',
+	URS_TonCapacity SMALLINT UNSIGNED NOT NULL,
 	
-	URS_TonCapacity FLOAT(6,2) UNSIGNED NOT NULL,
-	
-	Sys_WebGuideHydraulicEPC TINYINT(1) UNSIGNED NULL DEFAULT 0,
-	Sys_Tension TINYINT(1) UNSIGNED NULL DEFAULT 0,
-	Sys_BananaRoll_TensionRoller TINYINT(1) UNSIGNED NULL DEFAULT 0,
-	Sys_BrakeSystem TINYINT(1) UNSIGNED NULL DEFAULT 0,
-	Sys_FullyComputerized TINYINT(1) UNSIGNED NULL DEFAULT 0,
+	Sys_WebGuideHydraulicEPC VARCHAR(255) NULL DEFAULT 'N/A',
+	Sys_Tension VARCHAR(255) NULL DEFAULT 'N/A',
+	Sys_BananaRoll_TensionRoller VARCHAR(255) NULL DEFAULT 'N/A',
+	Sys_BrakeSystem VARCHAR(255) NULL DEFAULT 'N/A',
+	Sys_FullyComputerized VARCHAR(255)  NULL DEFAULT 'N/A',
+	Sys_OthersCheckbox VARCHAR(255)  NULL DEFAULT 'N/A',
 	Sys_Others VARCHAR(128) NULL DEFAULT 'N/A',
 
 	Other_Details VARCHAR(2048) NULL DEFAULT 'N/A',
 	
-	PRIMARY KEY (cmsr_slitter_id)
+	PRIMARY KEY (order_id)
 ) ENGINE=InnoDB;
 INSERT INTO cmsr_slitter(order_id, Slitter_Type, Production_Volume, Paper_Type, GSM, Roll_Diameter, Slitting_Width, Cutting_AddtlBlade, Cutting_CoreCutterMachine, URS_HydraulicShaftless, URS_Single, URS_Customized, URS_ShaftStand, URS_Others, URS_TonCapacity, Sys_WebGuideHydraulicEPC, Sys_Tension, Sys_BananaRoll_TensionRoller, Sys_BrakeSystem, Sys_FullyComputerized, Sys_Others, Other_Details) VALUES(1, 'MSR', 6.02, 'carbon', '88 - 88', '88 - 88', '88 - 88', 123, 1, 1, 1, 1, 1, '0', 5, 0, 0, 0, 0, 0, '', 'asdf');
 
