@@ -37,8 +37,13 @@
 					</div>
 
 					<div id="btn-group">
+<<<<<<< HEAD
+						<p><a href="order_paper-roll.php" class="btn btn-primary btn-block btn-lg">
+							<i class="glyphicon glyphicon-shopping-cart"></i> Buy this product</a></p>
+=======
 						<p><a href="order_paper_roll.php" class="btn btn-primary btn-block btn-lg">
 							<i class="glyphicon glyphicon-shopping-cart"></i> Add to Shopping Cart</a></p>
+>>>>>>> refs/remotes/origin/master
 						<p><a id="contact-us-btn"  href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
 					</div>
 					
