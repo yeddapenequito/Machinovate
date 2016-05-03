@@ -1,3 +1,19 @@
+<?php # Script 19.6 - browse_prints.php
+// This page displays the available prints (products).
+
+// Set the page title and include the HTML header:
+$page_title = 'Browse the Prints';
+//include ('includes/header.html');
+
+require ('../../mysqli_connect.php');
+ 
+// Default query for this page:
+$q = "SELECT artists.artist_id, CONCAT_WS(' ', first_name, middle_name, last_name) AS artist, print_name, price, description, print_id FROM artists, prints WHERE artists.artist_id = prints.artist_id ORDER BY artists.last_name ASC, prints.print_name ASC";
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,6 +87,27 @@
 		    			<th>Delete</th>
 		    		</tr>
 		    	</thead>
+
+		    	<?php
+					// Display all the prints, linked to URLs:
+					$r = mysqli_query ($dbc, $q);
+					while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
+
+						// Display each record:
+						echo "\t<tr>
+							<td align=\"left\"><a href=\"browse_prints.php?aid={$row['artist_id']}\">{$row['artist']}</a></td>
+							<td align=\"left\"><a href=\"view_print.php?pid={$row['print_id']}\">{$row['print_name']}</a></td>
+							<td align=\"left\">{$row['description']}</td>
+							<td align=\"right\">\${$row['price']}</td>
+						</tr>\n";
+
+					} // End of while loop.
+
+					echo '</table>';
+					mysqli_close($dbc);
+					include ('includes/footer.html');
+				?>
+
 		    	<tbody>
 		    		<tr>
 		    			<td>0001</td>
