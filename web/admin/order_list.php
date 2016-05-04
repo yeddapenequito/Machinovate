@@ -8,7 +8,7 @@ $page_title = 'Browse the Prints';
 require ('../../mysqli_connect.php');
  
 // Default query for this page:
-$q = "SELECT artists.artist_id, CONCAT_WS(' ', first_name, middle_name, last_name) AS artist, print_name, price, description, print_id FROM artists, prints WHERE artists.artist_id = prints.artist_id ORDER BY artists.last_name ASC, prints.print_name ASC";
+$q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus FROM orders, orderlist, clients, cmsr_cutter, misc_bailmach, misc_rolltruck WHERE orders.order_id = orderlist.order_id AND clients.client_id = orders.client_id AND (cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id ) ORDER BY orderlist.order_id ASC;";
 
 ?>
 
@@ -66,9 +66,10 @@ $q = "SELECT artists.artist_id, CONCAT_WS(' ', first_name, middle_name, last_nam
 		<ul class="nav nav-tabs">
 		  <li><a data-toggle="tab" href="#menu1">All</a></li>
 		  <li class="active"><a data-toggle="tab" href="#home">Pending</a></li>
-		  <li><a data-toggle="tab" href="#menu2">Cancelled</a></li>
-		  <li><a data-toggle="tab" href="#menu3">Confirmed</a></li>
-		  <li><a data-toggle="tab" href="#menu4">Completed</a></li>
+		  <li><a data-toggle="tab" href="#menu2">Slitter</a></li>
+		  <li><a data-toggle="tab" href="#menu3">Sheeter</a></li>
+		  <li><a data-toggle="tab" href="#menu4">Cutter</a></li>
+		  <li><a data-toggle="tab" href="#menu4">Misc</a></li>
 		</ul>
 
 		<div class="tab-content">
@@ -78,11 +79,10 @@ $q = "SELECT artists.artist_id, CONCAT_WS(' ', first_name, middle_name, last_nam
 		    	<thead>
 		    		<tr>
 		    			<th>Order No.</th>
-		    			<th>Order Status</th>
 		    			<th>Machine Type</th>
 		    			<th>Company Name</th>
-		    			<th>Contact Name</th>
 		    			<th>Date Ordered</th>
+		    			<th>Order Status</th>
 		    			<th>Edit</th>
 		    			<th>Delete</th>
 		    		</tr>
@@ -95,49 +95,27 @@ $q = "SELECT artists.artist_id, CONCAT_WS(' ', first_name, middle_name, last_nam
 
 						// Display each record:
 						echo "\t<tr>
-							<td align=\"left\"><a href=\"browse_prints.php?aid={$row['artist_id']}\">{$row['artist']}</a></td>
-							<td align=\"left\"><a href=\"view_print.php?pid={$row['print_id']}\">{$row['print_name']}</a></td>
-							<td align=\"left\">{$row['description']}</td>
-							<td align=\"right\">\${$row['price']}</td>
+							<td align=\"left\">{$row['order_id']}</a></td>
+							<td align=\"left\">{$row['machineType']}</a></td>
+							<td align=\"left\">{$row['companyName']}</td>
+							<td align=\"left\">{$row['date']}</td>
+							<td align=\"left\">{$row['orderStatus']}</td>
+							<td>
+		    					<button><span class='glyphicon glyphicon-edit'></span></button>
+		    				</td>
+		    				<td>
+		    					<button><span class='glyphicon glyphicon-remove'></span></button>
+		    				</td>
 						</tr>\n";
 
 					} // End of while loop.
 
 					echo '</table>';
 					mysqli_close($dbc);
-					include ('includes/footer.html');
+				//	include ('includes/footer.html');
 				?>
 
-		    	<tbody>
-		    		<tr>
-		    			<td>0001</td>
-		    			<td>Pending</td>
-		    			<td>Slitter</td>
-		    			<td>University of Santo Tomas</td>
-		    			<td>Juan dela Cruz</td>
-		    			<td>3/30/2016</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-edit"></span></button>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-remove"></span></button>
-		    			</td>
-			    	</tr>
-		    		<tr>
-		    			<td>0002</td>
-		    			<td>Pending</td>
-		    			<td>Slitter</td>
-		    			<td>University of Santo Tomas</td>
-		    			<td>Juan dela Cruz</td>
-		    			<td>3/30/2016</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-edit"></span></button>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-remove"></span></button>
-		    			</td>
-			    	</tr>
-		    	</tbody>
+		    	
 		    </table>
 		  </div>
 
