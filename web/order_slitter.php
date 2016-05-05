@@ -10,11 +10,17 @@
 	<body>
 		<?php include 'header_on_form_completion.php';
 			session_start();
-		?>
-		<?php
+
 			function setStickyRadio($x, $y){
-				if (isset($_SESSION["cart"]["mach-slitter"][$x]) && $_SESSION["cart"]["mach-slitter"][$x] == $y) echo 'checked="checked"';
+				if (isset($_SESSION["cart"]["mach-slitter"][$x]) && $_SESSION["cart"]["mach-slitter"][$x] == $y)
+					echo 'checked="checked"';
 			}
+
+			function setStickyText($x){
+				if (isset($_SESSION["cart"]["mach-slitter"][$x]))
+					echo $_SESSION["cart"]["mach-slitter"][$x];
+			}
+			
 		?>
 		<div class="container">
 			<ol class="breadcrumb">
@@ -73,7 +79,7 @@
 						<div class="col-sm-10">
 							<div class="input-group">
 								
-								<input class="form-control" id="production-vol" min="0.001" name="productionVolume" step="0.001" type="number" required/>
+								<input class="form-control" id="production-vol" min="0.001" name="productionVolume" step="0.001" type="number" required value='<?php setStickyText("productionVolume")?>'/>
 								<span class="input-group-addon">Tons per day</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -86,7 +92,7 @@
 						<label class="control-label col-sm-2" for="paper-type">Paper Type:</label>
 
 						<div class="col-sm-10">
-							<input value='<?php if (isset($_SESSION["cart"]["mach-slitter"]["paperType"])) echo $_SESSION["cart"]["mach-slitter"]["paperType"];?>' class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text" required/>
+							<input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text" required value='<?php setStickyText("paperType")?>'/>
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
@@ -98,16 +104,16 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step="0.001" type="number" required>
+								<input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("gsmMin")?>'/>
 
 								<span>to</span>
 
-								<input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" required>
+								<input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("gsmMax")?>'/>
 
-								<select class="form-control" name="gsmUnit"> 
+								<!-- <select class="form-control" name="gsmUnit"> 
 									<option value="inches">inches</option>
 									<option value="mm">millimeters</option>
-								</select>
+								</select> -->
 								<div class="help-block with-errors"></div>
 							</div>
 						</div>
@@ -121,11 +127,11 @@
 						<div class="col-sm-10">
 							<div class="form-inline">
 
-									<input class="form-control" min="0.001" name="rollDiameterMin" placeholder="Min" size="5" step="0.001" type="number" required>
+									<input class="form-control" min="0.001" name="rollDiameterMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("rollDiameterMin")?>'/>
 
 									<span>to</span>
 
-									<input class="form-control" min="0.001" name="rollDiameterMax" placeholder="Max" size="5" step="0.001" type="number" required>
+									<input class="form-control" min="0.001" name="rollDiameterMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("rollDiameterMax")?>'/>
 
 									<select id="rdUnit" class="form-control" name="rollDiameterUnit"> 
 										<option value="&quot;">inches</option>
@@ -185,7 +191,7 @@
 										
 										<div class="form-group">
 											
-											<label class="control-label" for"slitter-additional-text-field">Additional</label>
+											<label class="control-label" for="slitter-additional-text-field">Additional</label>
 											<input class="form-control" disabled id="slitter-additional-text-field" min="1" name="addtlBlade" type="number"> set/s of one pair male/female
 										</div>
 									</div>
