@@ -366,7 +366,7 @@ require ('../../mysqli_connect.php');
 					} // End of while loop.
 
 					echo '</table>';
-					//mysqli_close($dbc);
+					mysqli_close($dbc);
 				
 				?>
 		    	</tbody>
