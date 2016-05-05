@@ -20,6 +20,7 @@
 				<li><a id="agents" href="agents.php">Agents</a></li>
 			</ul>
 			<div class="nav navbar-nav navbar-right">
+				<a href="cart_summary.php" type="button" class="btn btn-default btn-lg" id="login-btn">Shopping Cart</a>
 				<span>Are you an employee?</span>
                 <a href="admin/index.inc.php" type="button" class="btn btn-default btn-lg" id="login-btn">Login</a>
             </div>
