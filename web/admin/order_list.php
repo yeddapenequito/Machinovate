@@ -2,13 +2,11 @@
 // This page displays the available prints (products).
 
 // Set the page title and include the HTML header:
-$page_title = 'Browse the Prints';
+$page_title = 'Order List';
 //include ('includes/header.html');
 
 require ('../../mysqli_connect.php');
  
-// Default query for this page:
-$q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus FROM orders, orderlist, clients, cmsr_cutter, misc_bailmach, misc_rolltruck WHERE orders.order_id = orderlist.order_id AND clients.client_id = orders.client_id AND (cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id ) ORDER BY orderlist.order_id ASC;";
 
 ?>
 
@@ -64,16 +62,77 @@ $q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.compan
 		<br>
 		<br>
 		<ul class="nav nav-tabs">
-		  <li><a data-toggle="tab" href="#menu1">All</a></li>
-		  <li class="active"><a data-toggle="tab" href="#home">Pending</a></li>
-		  <li><a data-toggle="tab" href="#menu2">Slitter</a></li>
-		  <li><a data-toggle="tab" href="#menu3">Sheeter</a></li>
-		  <li><a data-toggle="tab" href="#menu4">Cutter</a></li>
+		  <li class="active"><a data-toggle="tab" href="#home">All</a></li>
+		  <li><a data-toggle="tab" href="#menu1">Slitter</a></li>
+		  <li><a data-toggle="tab" href="#menu2">Sheeter</a></li>
+		  <li><a data-toggle="tab" href="#menu3">Cutter</a></li>
 		  <li><a data-toggle="tab" href="#menu4">Misc</a></li>
 		</ul>
 
 		<div class="tab-content">
 		<!-- All -->
+		  
+
+		  <!-- All -->
+		  <div id="home" class="tab-pane fade in active">
+		    <table class="table table-striped">
+		    	<thead>
+		    		<tr>
+		    			<th>Order No.</th>
+		    			<th>Machine Type</th>
+		    			<th>Company Name</th>
+		    			<th>Contact Name</th>
+		    			<th>Date Ordered</th>
+		    			<th>Move To</th>
+		    			<th>Edit</th>
+		    			<th>Delete</th>
+		    		</tr>
+		    	</thead>
+		    	<tbody>
+		    		<?php
+		    		// Default query for this page:
+					$a = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus 
+						FROM orders, orderlist, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailmach, misc_rolltruck
+					    WHERE 
+					    orders.order_id = orderlist.order_id AND 
+					    clients.client_id = orders.client_id AND     
+							(cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR 
+					        cmsr_slitter.cmsr_slitter_id = orderlist.cmsr_slitter_id OR 
+							cmsr_sheeter.cmsr_sheeter_id = orderlist.cmsr_sheeter_id OR 
+							misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR 
+					        misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id )
+						ORDER BY orderlist.order_id ASC;";
+
+					// Display all the prints, linked to URLs:
+					$r = mysqli_query ($dbc, $a);
+					while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
+
+						// Display each record:
+						echo "\t<tr>
+							<td align=\"left\">{$row['order_id']}</a></td>
+							<td align=\"left\">{$row['machineType']}</a></td>
+							<td align=\"left\">{$row['companyName']}</td>
+							<td align=\"left\">{$row['date']}</td>
+							<td align=\"left\">{$row['orderStatus']}</td>
+							<td>
+		    					<button><span class='glyphicon glyphicon-edit'></span></button>
+		    				</td>
+		    				<td>
+		    					<button><span class='glyphicon glyphicon-remove'></span></button>
+		    				</td>
+						</tr>\n";
+
+					} // End of while loop.
+
+					echo '</table>';
+					//mysqli_close($dbc);
+				
+				?>
+		    	</tbody>
+		    </table>
+		  </div>
+
+		  <!--Slitter -->
 		  <div id="menu1" class="tab-pane fade">
 		    <table class="table table-striped">
 		    	<thead>
@@ -89,6 +148,20 @@ $q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.compan
 		    	</thead>
 
 		    	<?php
+		    		// Default query for this page:
+					$q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus 
+						FROM orders, orderlist, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailmach, misc_rolltruck
+					    WHERE 
+					    orders.order_id = orderlist.order_id AND 
+					    clients.client_id = orders.client_id AND     
+							(cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR 
+					        cmsr_slitter.cmsr_slitter_id = orderlist.cmsr_slitter_id OR 
+							cmsr_sheeter.cmsr_sheeter_id = orderlist.cmsr_sheeter_id OR 
+							misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR 
+					        misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id )
+					        AND orderlist.machineType = 'Slitter' 
+						ORDER BY orderlist.order_id ASC;";
+
 					// Display all the prints, linked to URLs:
 					$r = mysqli_query ($dbc, $q);
 					while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
@@ -111,143 +184,15 @@ $q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.compan
 					} // End of while loop.
 
 					echo '</table>';
-					mysqli_close($dbc);
-				//	include ('includes/footer.html');
+					//mysqli_close($dbc);
+				
 				?>
 
 		    	
 		    </table>
 		  </div>
 
-		  <!-- Pending -->
-		  <div id="home" class="tab-pane fade in active">
-		    <table class="table table-striped">
-		    	<thead>
-		    		<tr>
-		    			<th>Order No.</th>
-		    			<th>Machine Type</th>
-		    			<th>Company Name</th>
-		    			<th>Contact Name</th>
-		    			<th>Date Ordered</th>
-		    			<th>Move To</th>
-		    			<th>Edit</th>
-		    			<th>Delete</th>
-		    		</tr>
-		    	</thead>
-		    	<tbody>
-		    		<tr>
-		    			<td>0001</td>
-		    			<td>Slitter</td>
-		    			<td>University of Santo Tomas</td>
-		    			<td>Juan dela Cruz</td>
-		    			<td>3/30/2016</td>
-		    			<td>
-						  <select class="form-control" id="move">
-						    <option value="">-- Move To --</option>
-						    <option value="cancelled">Cancelled</option>
-						    <option value="confirmed">Confirmed</option>
-						    <option value="completed">Completed</option>
-						  </select>
-		    			</td>
-		    			<td>
-		    				<button data-toggle="modal" href='#edit'>
-		    					<span class="glyphicon glyphicon-edit"></span></button>
-							<div class="modal fade" id="edit">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h4 class="modal-title">Edit</h4>
-										</div>
-										<div class="modal-body">
-											<div action="" method="POST" class="form-horizontal" role="form">
-												<div class="form-group">
-													<label for="machine-type" class="control-label col-sm-3">Order No.</label>
-													<div class="col-sm-9">
-														<p>0001</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="machine-type" class="control-label col-sm-3">Machine Type</label>
-													<div class="col-sm-9">
-														<input value="Slitter" type="text" id="machine-type" class="form-control">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="company-name" class="control-label col-sm-3">Company Name</label>
-													<div class="col-sm-9">
-														<input value="University of Santo Tomas" type="text" id="company-name" class="form-control">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="contact-name" class="control-label col-sm-3">Contact Name</label>
-													<div class="col-sm-9">
-														<input value="Juan Dela Cruz" type="text" id="contact-name" class="form-control">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="date-ordered" class="control-label col-sm-3">Date Ordered</label>
-													<div class="col-sm-9">
-														<input value="3/30/2016" type="date" id="date-ordered" class="form-control">
-													</div>
-												</div>
-											</div>
-										</div> <!-- /.modal-body -->
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-											<button type="button" class="btn btn-primary">Save changes</button>
-										</div>
-									</div> <!-- /.modal-content -->
-								</div> <!-- /.modal-dialog -->
-							</div> <!-- /.modal -->
-		    			</td>
-		    			<td>
-		    				<button data-toggle="modal" href='#delete'><span class="glyphicon glyphicon-remove"></span></button>
-		    				<div class="modal fade" id="delete">
-		    					<div class="modal-dialog">
-		    						<div class="modal-content">
-		    							<div class="modal-header">
-		    								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		    								<h4 class="modal-title text-danger">Delete</h4>
-		    							</div>
-		    							<div class="modal-body">
-		    								<p class="text-danger">Are your sure you want to delete Order No. 0001</p>
-		    							</div>
-		    							<div class="modal-footer">
-		    								<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-		    								<button type="button" class="btn btn-primary">Yes</button>
-		    							</div>
-		    						</div>
-		    					</div>
-		    				</div>
-		    			</td>
-		    		</tr>
-		    		<tr>
-		    			<td>0002</td>
-		    			<td>Slitter</td>
-		    			<td>University of Santo Tomas</td>
-		    			<td>Juan dela Cruz</td>
-		    			<td>3/30/2016</td>
-		    			<td>
-						  <select class="form-control" id="move">
-						    <option value="">-- Move To --</option>
-						    <option value="cancelled">Cancelled</option>
-						    <option value="confirmed">Confirmed</option>
-						    <option value="completed">Completed</option>
-						  </select>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-edit"></span></button>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-remove"></span></button>
-		    			</td>
-		    		</tr>
-		    	</tbody>
-		    </table>
-		  </div>
-
-		  <!-- Cancelled -->
+		  <!-- Sheeter -->
 		  <div id="menu2" class="tab-pane fade">
 		    <table class="table table-striped">
 		    	<thead>
@@ -263,102 +208,51 @@ $q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.compan
 		    		</tr>
 		    	</thead>
 		    	<tbody>
-		    		<tr>
-		    			<td>0001</td>
-		    			<td>Slitter</td>
-		    			<td>University of Santo Tomas</td>
-		    			<td>Juan dela Cruz</td>
-		    			<td>3/30/2016</td>
-		    			<td>
-						  <select class="form-control" id="move">
-						    <option value="">-- Move To --</option>
-						    <option value="cancelled">Cancelled</option>
-						    <option value="confirmed">Confirmed</option>
-						    <option value="completed">Completed</option>
-						  </select>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-edit"></span></button>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-remove"></span></button>
-		    			</td>
-		    		</tr>
-		    		<tr>
-		    			<td>0002</td>
-		    			<td>Slitter</td>
-		    			<td>University of Santo Tomas</td>
-		    			<td>Juan dela Cruz</td>
-		    			<td>3/30/2016</td>
-		    			<td>
-						  <select class="form-control" id="move">
-						    <option value="">-- Move To --</option>
-						    <option value="cancelled">Pending</option>
-						    <option value="confirmed">Confirmed</option>
-						    <option value="completed">Completed</option>
-						  </select>
-		    			</td>
-		    			<td>
-		    				<button data-toggle="modal" href='#edit1'>
-		    					<span class="glyphicon glyphicon-edit1"></span></button>
-							<div class="modal fade" id="edit">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h4 class="modal-title">Edit</h4>
-										</div>
-										<div class="modal-body">
-											<div action="" method="POST" class="form-horizontal" role="form">
-												<div class="form-group">
-													<label for="machine-type" class="control-label col-sm-3">Order No.</label>
-													<div class="col-sm-9">
-														<p>0002</p>
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="machine-type" class="control-label col-sm-3">Machine Type</label>
-													<div class="col-sm-9">
-														<input value="Slitter" type="text" id="machine-type" class="form-control">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="company-name" class="control-label col-sm-3">Company Name</label>
-													<div class="col-sm-9">
-														<input value="University of Santo Tomas" type="text" id="company-name" class="form-control">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="contact-name" class="control-label col-sm-3">Contact Name</label>
-													<div class="col-sm-9">
-														<input value="Juan Dela Cruz" type="text" id="contact-name" class="form-control">
-													</div>
-												</div>
-												<div class="form-group">
-													<label for="date-ordered" class="control-label col-sm-3">Date Ordered</label>
-													<div class="col-sm-9">
-														<input value="3/30/2016" type="date" id="date-ordered" class="form-control">
-													</div>
-												</div>
-											</div>
-										</div> <!-- /.modal-body -->
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-											<button type="button" class="btn btn-primary">Save changes</button>
-										</div>
-									</div> <!-- /.modal-content -->
-								</div> <!-- /.modal-dialog -->
-							</div> <!-- /.modal -->
-		    			</td>
-		    			<td>
-		    				<button class="delete"><span class="glyphicon glyphicon-remove"></span></button>
-		    			</td>
-		    		</tr>
+		    		<?php
+		    		// Default query for this page:
+					$q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus 
+						FROM orders, orderlist, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailmach, misc_rolltruck
+					    WHERE 
+					    orders.order_id = orderlist.order_id AND 
+					    clients.client_id = orders.client_id AND     
+							(cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR 
+					        cmsr_slitter.cmsr_slitter_id = orderlist.cmsr_slitter_id OR 
+							cmsr_sheeter.cmsr_sheeter_id = orderlist.cmsr_sheeter_id OR 
+							misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR 
+					        misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id )
+					        AND orderlist.machineType = 'Sheeter' 
+						ORDER BY orderlist.order_id ASC; ";
+
+					// Display all the prints, linked to URLs:
+					$r = mysqli_query ($dbc, $q);
+					while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
+
+						// Display each record:
+						echo "\t<tr>
+							<td align=\"left\">{$row['order_id']}</a></td>
+							<td align=\"left\">{$row['machineType']}</a></td>
+							<td align=\"left\">{$row['companyName']}</td>
+							<td align=\"left\">{$row['date']}</td>
+							<td align=\"left\">{$row['orderStatus']}</td>
+							<td>
+		    					<button><span class='glyphicon glyphicon-edit'></span></button>
+		    				</td>
+		    				<td>
+		    					<button><span class='glyphicon glyphicon-remove'></span></button>
+		    				</td>
+						</tr>\n";
+
+					} // End of while loop.
+
+					echo '</table>';
+					//mysqli_close($dbc);
+				
+				?>
 		    	</tbody>
 		    </table>
 		  </div>
 
-		  <!-- Confirmed -->
+		  <!-- Cutter -->
 		  <div id="menu3" class="tab-pane fade">
 		    <table class="table table-striped">
 		    	<thead>
@@ -374,53 +268,51 @@ $q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.compan
 		    		</tr>
 		    	</thead>
 		    	<tbody>
-		    		<tr>
-		    			<td>0001</td>
-		    			<td>Slitter</td>
-		    			<td>University of Santo Tomas</td>
-		    			<td>Juan dela Cruz</td>
-		    			<td>3/30/2016</td>
-		    			<td>
-						  <select class="form-control" id="move">
-						    <option value="">-- Move To --</option>
-						    <option value="cancelled">Cancelled</option>
-						    <option value="confirmed">Confirmed</option>
-						    <option value="completed">Completed</option>
-						  </select>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-edit"></span></button>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-remove"></span></button>
-		    			</td>
-		    		</tr>
-		    		<tr>
-		    			<td>0002</td>
-		    			<td>Slitter</td>
-		    			<td>University of Santo Tomas</td>
-		    			<td>Juan dela Cruz</td>
-		    			<td>3/30/2016</td>
-		    			<td>
-						  <select class="form-control" id="move">
-						    <option value="">-- Move To --</option>
-						    <option value="cancelled">Pending</option>
-						    <option value="confirmed">Confirmed</option>
-						    <option value="completed">Completed</option>
-						  </select>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-edit"></span></button>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-remove"></span></button>
-		    			</td>
-		    		</tr>
+		    		<?php
+		    		// Default query for this page:
+					$b = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus 
+	FROM orders, orderlist, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailmach, misc_rolltruck
+    WHERE 
+    orders.order_id = orderlist.order_id AND 
+    clients.client_id = orders.client_id AND     
+		(cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR 
+        cmsr_slitter.cmsr_slitter_id = orderlist.cmsr_slitter_id OR 
+		cmsr_sheeter.cmsr_sheeter_id = orderlist.cmsr_sheeter_id OR 
+		misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR 
+        misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id )
+        AND orderlist.machineType = 'Cutter' 
+	ORDER BY orderlist.order_id ASC;";
+
+					// Display all the prints, linked to URLs:
+					$r = mysqli_query ($dbc, $b);
+					while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
+
+						// Display each record:
+						echo "\t<tr>
+							<td align=\"left\">{$row['order_id']}</a></td>
+							<td align=\"left\">{$row['machineType']}</a></td>
+							<td align=\"left\">{$row['companyName']}</td>
+							<td align=\"left\">{$row['date']}</td>
+							<td align=\"left\">{$row['orderStatus']}</td>
+							<td>
+		    					<button><span class='glyphicon glyphicon-edit'></span></button>
+		    				</td>
+		    				<td>
+		    					<button><span class='glyphicon glyphicon-remove'></span></button>
+		    				</td>
+						</tr>\n";
+
+					} // End of while loop.
+
+					echo '</table>';
+					//mysqli_close($dbc);
+				
+				?>
 		    	</tbody>
 		    </table>
 		  </div>
 
-		  <!-- Completed -->
+		  <!-- MISC-->
 		  <div id="menu4" class="tab-pane fade">
 		    <table class="table table-striped">
 		    	<thead>
@@ -436,48 +328,47 @@ $q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.compan
 		    		</tr>
 		    	</thead>
 		    	<tbody>
-		    		<tr>
-		    			<td>0001</td>
-		    			<td>Slitter</td>
-		    			<td>University of Santo Tomas</td>
-		    			<td>Juan dela Cruz</td>
-		    			<td>3/30/2016</td>
-		    			<td>
-						  <select class="form-control" id="move">
-						    <option value="">-- Move To --</option>
-						    <option value="cancelled">Cancelled</option>
-						    <option value="confirmed">Confirmed</option>
-						    <option value="completed">Completed</option>
-						  </select>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-edit"></span></button>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-remove"></span></button>
-		    			</td>
-		    		</tr>
-		    		<tr>
-		    			<td>0002</td>
-		    			<td>Slitter</td>
-		    			<td>University of Santo Tomas</td>
-		    			<td>Juan dela Cruz</td>
-		    			<td>3/30/2016</td>
-		    			<td>
-						  <select class="form-control" id="move">
-						    <option value="">-- Move To --</option>
-						    <option value="cancelled">Pending</option>
-						    <option value="confirmed">Confirmed</option>
-						    <option value="completed">Completed</option>
-						  </select>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-edit"></span></button>
-		    			</td>
-		    			<td>
-		    				<button><span class="glyphicon glyphicon-remove"></span></button>
-		    			</td>
-		    		</tr>
+		    		<?php
+		    		// Default query for this page:
+					$q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus 
+						FROM orders, orderlist, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailmach, misc_rolltruck
+					    WHERE 
+					    orders.order_id = orderlist.order_id AND 
+					    clients.client_id = orders.client_id AND     
+							(cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR 
+					        cmsr_slitter.cmsr_slitter_id = orderlist.cmsr_slitter_id OR 
+							cmsr_sheeter.cmsr_sheeter_id = orderlist.cmsr_sheeter_id OR 
+							misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR 
+					        misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id )
+					        AND (orderlist.machineType = 'Paper Roll Truck' OR 
+					        	orderlist.machineType = 'Bailing Machine')
+							ORDER BY orderlist.order_id ASC;";
+
+					// Display all the prints, linked to URLs:
+					$r = mysqli_query ($dbc, $q);
+					while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
+
+						// Display each record:
+						echo "\t<tr>
+							<td align=\"left\">{$row['order_id']}</a></td>
+							<td align=\"left\">{$row['machineType']}</a></td>
+							<td align=\"left\">{$row['companyName']}</td>
+							<td align=\"left\">{$row['date']}</td>
+							<td align=\"left\">{$row['orderStatus']}</td>
+							<td>
+		    					<button><span class='glyphicon glyphicon-edit'></span></button>
+		    				</td>
+		    				<td>
+		    					<button><span class='glyphicon glyphicon-remove'></span></button>
+		    				</td>
+						</tr>\n";
+
+					} // End of while loop.
+
+					echo '</table>';
+					//mysqli_close($dbc);
+				
+				?>
 		    	</tbody>
 		    </table>
 		  </div>
