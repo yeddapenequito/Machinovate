@@ -1,3 +1,6 @@
+<center><h2>MACHINOVATE INTERNATIONAL INC. </h2>
+	<p><i> Summary of Orders </i> </p>
+
 <table class="table table-striped">
 		    	<thead>
 		    		<tr>
@@ -36,7 +39,7 @@
 							<td align=\"left\">{$row['machineType']}</a></td>
 							<td align=\"left\">{$row['companyName']}</td>
 							<td align=\"left\">{$row['date']}</td>
-							<td align=\"left\">{$row['orderStatus']}</td>"
+							<td align=\"left\">{$row['orderStatus']}</td>";
 					} // End of while loop.
 
 					echo '</table>';
@@ -45,3 +48,4 @@
 				?>
 		    	</tbody>
 		    </table>
+</center>
