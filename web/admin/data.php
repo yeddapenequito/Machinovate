@@ -1,7 +1,8 @@
 <center><h2>MACHINOVATE INTERNATIONAL INC. </h2>
 	<p><i> Summary of Orders </i> </p>
 
-<table class="table table-striped">
+
+			<table class="table table-striped table-bordered">
 		    	<thead>
 		    		<tr>
 		    			<th>Order No.</th>
