@@ -273,7 +273,7 @@
 						<div class="col-sm-10">
 							<div class="input-group">
 
-								<input class="form-control" id="ton-capacity"  min="0.001"  step="0.01" name="tonCapacity"  type="number" required value='<?php setStickyText("tonCapacity");?>'/>
+								<input class="form-control" id="ton-capacity"  min="0.001" name="tonCapacity"  type="number" required value='<?php setStickyText("tonCapacity");?>'/>
 								<span class="input-group-addon">Tons</span>
 							</div>
 							<div class="help-block with-errors"></div>
