@@ -67,7 +67,7 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input class="type" name="slitterType" type="radio" value="SL_Standard" <?php setStickyRadio("slitterType", "SL_Standard");?>/>
+								<label><input class="type" name="slitterType" type="radio" checked value="SL_Standard" <?php setStickyRadio("slitterType", "SL_Standard");?>/>
 									MACH-MSR (Standard)</label>
 							</div>
 							<div class="radio">
