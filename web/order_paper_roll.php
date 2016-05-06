@@ -25,7 +25,7 @@
 				<li class="active">Paper Roll Truck Requirements Form</li>
 			</ol>
 			<h1 class="page-header">Paper Roll Truck Requirements Form</h1>
-			<form id="formrolltruck" action="paper_roll_form_success.php" role="form" class="form form-horizontal" method="post">
+			<form id="form" action="paper_roll_form_success.php" role="form" class="form form-horizontal" method="post">
 				<div class="form-group">
 					<div class="alert alert-info">
 						

@@ -25,7 +25,7 @@
 				<li class="active">Bailing Machine Requirements Form</li>
 			</ol>
 
-			<form name="form" id="formbailing" action="bailing_form_success.php" role="form" class="form-horizontal" method="post">
+			<form name="form" id="form" action="bailing_form_success.php" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Bailing Machine Requirements Form</h1>
 				</legend>
