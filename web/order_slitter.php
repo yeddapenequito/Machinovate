@@ -11,14 +11,29 @@
 		<?php include 'header_on_form_completion.php';
 			session_start();
 
+			function setStickyText($x){
+				if (isset($_SESSION["cart"]["mach-slitter"][$x]))
+					echo $_SESSION["cart"]["mach-slitter"][$x];
+			}
+
 			function setStickyRadio($x, $y){
 				if (isset($_SESSION["cart"]["mach-slitter"][$x]) && $_SESSION["cart"]["mach-slitter"][$x] == $y)
 					echo 'checked="checked"';
 			}
 
-			function setStickyText($x){
-				if (isset($_SESSION["cart"]["mach-slitter"][$x]))
-					echo $_SESSION["cart"]["mach-slitter"][$x];
+			function setStickyChkbox($x){
+				if (isset($_SESSION["cart"]["mach-slitter"][$x]) && $_SESSION["cart"]["mach-slitter"][$x] == "1")
+					echo 'checked="checked"';
+			}
+
+			function setStickyCheckWithText($x){
+				if (isset($_SESSION["cart"]["mach-slitter"][$x]) && $_SESSION["cart"]["mach-slitter"][$x] !== "0")
+					echo 'checked="checked"';
+			}
+
+			function setStickyOption($x, $y){
+				if (isset($_SESSION["cart"]["mach-slitter"][$x]) && $_SESSION["cart"]["mach-slitter"][$x] == $y)
+					echo 'selected="selected"';
 			}
 			
 		?>
@@ -79,7 +94,7 @@
 						<div class="col-sm-10">
 							<div class="input-group">
 								
-								<input class="form-control" id="production-vol" min="0.001" name="productionVolume" step="0.001" type="number" required value='<?php setStickyText("productionVolume")?>'/>
+								<input class="form-control" id="production-vol" min="0.001" name="productionVolume" step="0.001" type="number" required value='<?php setStickyText("productionVolume");?>'/>
 								<span class="input-group-addon">Tons per day</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -92,7 +107,7 @@
 						<label class="control-label col-sm-2" for="paper-type">Paper Type:</label>
 
 						<div class="col-sm-10">
-							<input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text" required value='<?php setStickyText("paperType")?>'/>
+							<input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text" required value='<?php setStickyText("paperType");?>'/>
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
@@ -104,11 +119,11 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("gsmMin")?>'/>
+								<input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("gsm_min");?>'/>
 
 								<span>to</span>
 
-								<input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("gsmMax")?>'/>
+								<input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("gsm_max");?>'/>
 
 								<!-- <select class="form-control" name="gsmUnit"> 
 									<option value="inches">inches</option>
@@ -127,15 +142,15 @@
 						<div class="col-sm-10">
 							<div class="form-inline">
 
-									<input class="form-control" min="0.001" name="rollDiameterMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("rollDiameterMin")?>'/>
+									<input class="form-control" min="0.001" name="rollDiameterMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("rollDiameter_min");?>'/>
 
 									<span>to</span>
 
-									<input class="form-control" min="0.001" name="rollDiameterMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("rollDiameterMax")?>'/>
+									<input class="form-control" min="0.001" name="rollDiameterMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("rollDiameter_max");?>'/>
 
 									<select id="rdUnit" class="form-control" name="rollDiameterUnit"> 
-										<option value="&quot;">inches</option>
-										<option value="mm">millimeters</option>
+										<option value="&quot;" <?php setStickyOption("rollDiameter_unit", "\"");?>>inches</option>
+										<option value="mm" <?php setStickyOption("rollDiameter_unit", "mm");?>>millimeters</option>
 									</select>
 									<div class="help-block with-errors"></div>
 							</div>
@@ -149,15 +164,15 @@
 
 						<div class="col-sm-10">
 							<div class="form-inline">
-								<input class="form-control" min="0.001" name="slittingWidthMin" placeholder="Min" size="5" step="0.001" type="number" required>
+								<input class="form-control" min="0.001" name="slittingWidthMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("slittingWidth_min");?>'/>
 
 								<span>to</span>
 
-								<input class="form-control" min="0.001" name="slittingWidthMax" placeholder="Max" size="5" step="0.001" type="number" required>
+								<input class="form-control" min="0.001" name="slittingWidthMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("slittingWidth_max");?>'/>
 
 								<select id="swUnit" class="form-control" name="slittingWidthUnit"> 
-									<option value="&quot;">inches</option>
-									<option value="mm">millimeters</option>
+									<option value="&quot;" <?php setStickyOption("slittingWidth_unit", "\"");?>>inches</option>
+									<option value="mm" <?php setStickyOption("slittingWidth_unit", "mm");?>>millimeters</option>
 								</select>
 								<div class="help-block with-errors"></div>
 							</div>
@@ -185,14 +200,14 @@
 
 							<div class="checkbox">
 								
-								<label><input id="slitter-additional-checkbox" name="addtlCheckbox" value="additional" type="checkbox">								</label>
+								<label><input id="slitter-additional-checkbox" name="addtlCheckbox" value="additional" type="checkbox" <?php setStickyCheckWithText("addtlBlade");?>/>								</label>
 
 								<div class="form-inline">
 										
 										<div class="form-group">
 											
 											<label class="control-label" for="slitter-additional-text-field">Additional</label>
-											<input class="form-control" disabled id="slitter-additional-text-field" min="1" name="addtlBlade" type="number"> set/s of one pair male/female
+											<input class="form-control" disabled id="slitter-additional-text-field" min="1" name="addtlBlade" type="number" value='<?php setStickyText("addtlBlade");?>'/> set/s of one pair male/female
 										</div>
 									</div>
 							</div>
@@ -200,7 +215,7 @@
 							<div class="checkbox">
 								
 								<label>
-									<input id="core-cutter-checkbox" name="coreCutterCheckbox" type="checkbox" value="Core Cutter Machine">
+									<input id="core-cutter-checkbox" name="coreCutterCheckbox" type="checkbox" value="Core Cutter Machine" <?php setStickyChkbox("coreCutterMachine");?>/>
 									Core Cutter Machine
 								</label>
 							</div>
@@ -218,32 +233,32 @@
 						<div class="col-sm-10">
 
 							<div class="checkbox">
-								<label><input id="rs-HydraulicShaftless" type="checkbox" name="hydraulicShaftlessCheckbox" value="1">
+								<label><input id="rs-HydraulicShaftless" type="checkbox" name="hydraulicShaftlessCheckbox" value="1" <?php setStickyChkbox("rs_HydraulicShaftless");?>/>
 									Hydraulic Shaftless with Air Break</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input id="rs-Single"type="checkbox" name="singleCheckbox" value="2">
+								<label><input id="rs-Single"type="checkbox" name="singleCheckbox" value="2" <?php setStickyChkbox("rs_Single");?>>
 									Single</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input id="rs-Customized" type="checkbox" name="customizedCheckbox" value="3">
+								<label><input id="rs-Customized" type="checkbox" name="customizedCheckbox" value="3" <?php setStickyChkbox("rs_Customized");?>>
 									Customized</label>
 							</div>
 
 							<div class="checkbox">
-								<label><input id="rs-ShaftStand" type="checkbox" name="stationaryShaftCheckbox" value="4">
+								<label><input id="rs-ShaftStand" type="checkbox" name="stationaryShaftCheckbox" value="4" <?php setStickyChkbox("rs_ShaftStand");?>>
 									Stationary Shaft Stand</label>
 							</div>
 
 							<div class="checkbox">
-								<input id="reel-stand-others-checkbox" name="otherReelCheckbox" type="checkbox" value="5">
+								<input id="reel-stand-others-checkbox" name="otherReelCheckbox" type="checkbox" value="5" <?php setStickyCheckWithText("rs_Others");?>/>
 								<div class="form-inline">
 										<div class="form-group">
 											<label class="control-label" for="reel-stand-others-text-field">
 												Others:</label>
-											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers"  type="text" required>
+											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers"  type="text" required value='<?php setStickyText("rs_Others");?>'/>
 										</div>
 									</div>
 							</div>
@@ -258,7 +273,7 @@
 						<div class="col-sm-10">
 							<div class="input-group">
 
-								<input class="form-control" id="ton-capacity"  min="0.001"  step="0.01" name="tonCapacity"  type="number" required>
+								<input class="form-control" id="ton-capacity"  min="0.001"  step="0.01" name="tonCapacity"  type="number" required value='<?php setStickyText("tonCapacity");?>'/>
 								<span class="input-group-addon">Tons</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -277,37 +292,37 @@
 
 						<div class="col-sm-10">
 							<div class="checkbox">
-							  <label><input id="sys-WebGuideHydraulicEPC" name="webGuideHydraulicEPCCheckbox" type="checkbox" value="1">
+							  <label><input id="sys-WebGuideHydraulicEPC" name="webGuideHydraulicEPCCheckbox" type="checkbox" value="1" <?php setStickyChkbox("sys_WebGuideHydraulicEPC");?>>
 							  	Heavy Duty Web Guide Hydraulic EPC Control System 
 					with Automation – Centring Sensor and Control, 4 pieces Roller and Roll Steering Guiding with Base</label>
 							</div>
 							<div class="checkbox">
-							  <label><input id="sys-Tension" name="tensionCheckbox" type="checkbox" value="2">
+							  <label><input id="sys-Tension" name="tensionCheckbox" type="checkbox" value="2" <?php setStickyChkbox("sys_Tension");?>>
 							  	Heavy Duty Tension Control System with Auto Tension Controller, Auto Tension Sensor, Air Pressure Transducer and Tension Roller with Bearing Housing</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input id="sys-BananaRoll-TensionRoller" name="bananaRollCheckbox" type="checkbox" value="3">
+							  <label><input id="sys-BananaRoll-TensionRoller" name="bananaRollCheckbox" type="checkbox" value="3" <?php setStickyChkbox("sys_BananaRoll_TensionRoller");?>>
 							  	Banana Roll and Tension Roller</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input id="sys-BrakeSystem" name="breakSystemCheckbox" type="checkbox" value="4">
+							  <label><input id="sys-BrakeSystem" name="breakSystemCheckbox" type="checkbox" value="4" <?php setStickyChkbox("sys_BrakeSystem");?>>
 							  	Water Cooling Brake Systems</label>
 							</div>
 
 							<div class="checkbox">
-							  <label><input id="sys-FullyComputerized" name="fullyComputerizedCheckbox" type="checkbox" value="5">
+							  <label><input id="sys-FullyComputerized" name="fullyComputerizedCheckbox" type="checkbox" value="5" <?php setStickyChkbox("sys_FullyComputerized");?>>
 							  	Fully Computerized Control System</label>
 							</div>
 							
 							<div class="checkbox">
-								<input id="systems-others-checkbox" name="systemOthersCheckbox" type="checkbox" value="6">
+								<input id="systems-others-checkbox" name="systemOthersCheckbox" type="checkbox" value="6" <?php setStickyCheckWithText("sys_Others");?>/>
 									<div class="form-inline">
 										<div class="form-group">
 											<label class="control-label" for="systems-others-text-field">
 												Others:</label>
-											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers"  type="text">
+											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers"  type="text" value='<?php setStickyText("sys_Others");?>'/>
 										</div>
 									</div>
 
@@ -322,7 +337,7 @@
 					<div class="form-group">
 						<label for="comment" class="control-label col-sm-2">Details:</label>
 						<div class="col-sm-10">
-					  		<textarea placeholder="Place your additional requirements here if any." class="form-control" id="comment" rows="8" name="otherDetails"></textarea>
+					  		<textarea placeholder="Place your additional requirements here if any." class="form-control" id="comment" rows="8" name="otherDetails"><?php setStickyText("sl_Details");?></textarea>
 						</div>
 					</div>
 				</fieldset>

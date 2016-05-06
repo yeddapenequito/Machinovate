@@ -17,7 +17,8 @@
 		
 		<?php
 			////sheeter
-			if (!isset($_SESSION["cart"])) {
+		echo count($_SESSION["cart"]);
+			if (count($_SESSION["cart"])==0) {
 				echo "Your cart is empty.";
 			}
 			else {
@@ -31,14 +32,16 @@
 					</div>
 				<div id='collapseSlitter' class='panel-collapse collapse'>
 					<div class='panel-body'>
-						<p>  Slitter Specifications
+						<p>  Slitter Specifications 
+						<a href='javascript:deleteSlitter()' id='deleteSlitter'>Delete Item</a>
+						<a href='order_slitter.php' target='_blank'>Edit Item</a>
 						<ul>"
 						. "<li>Slitter Type:" . $_SESSION['cart']['mach-slitter']['slitterType'] . "</li>"
 						. "<li>Production Volume:" . $_SESSION['cart']['mach-slitter']['productionVolume'] . "</li>"
 						. "<li>Paper_Type:" . $_SESSION['cart']['mach-slitter']['paperType'] . "</li>"
-						. "<li>GSM:" . $_SESSION['cart']['mach-slitter']['gsm'] . "</li>"
-						. "<li>Roll_Diameter:" . $_SESSION['cart']['mach-slitter']['rollDiameter'] . "</li>"
-						. "<li>Slitting_Width:" . $_SESSION['cart']['mach-slitter']['slittingWidth'] . "</li>"
+						. "<li>GSM:" . $_SESSION['cart']['mach-slitter']['gsm_min'] . " - " . $_SESSION['cart']['mach-slitter']['gsm_max'] . "</li>"
+						. "<li>Roll_Diameter:" . $_SESSION['cart']['mach-slitter']['rollDiameter_min'] . " - " . $_SESSION['cart']['mach-slitter']['rollDiameter_max'] . $_SESSION['cart']['mach-slitter']['rollDiameter_unit'] . "</li>"
+						. "<li>Slitting_Width:" . $_SESSION['cart']['mach-slitter']['slittingWidth_min'] . " - " . $_SESSION['cart']['mach-slitter']['slittingWidth_max'] . $_SESSION['cart']['mach-slitter']['slittingWidth_unit'] . "</li>"
 
 						. "<li>Cutting_AddtlBlade:" . $_SESSION['cart']['mach-slitter']['addtlBlade'] . "</li>"
 						. "<li>Cutting_CoreCutterMachine:" . $_SESSION['cart']['mach-slitter']['coreCutterMachine'] . "</li>"
@@ -62,8 +65,121 @@
 						</div>
 					</div>
 				</div>";
-					echo "<a href='javascript:deleteSlitter()' id='deleteSlitter'>Delete Item</a>";
-					echo "<a href='order_slitter.php' target='_blank'>Edit Item</a>";
+				}
+
+				if (isset($_SESSION["cart"]["mach-sheeter"])) {
+					echo "
+				<div class='panel panel-default'>
+					<div class='panel-heading'>
+						<h4 class='panel-title'>
+							<a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#collapseSlitter'>Sheeter: " . $_SESSION['cart']['mach-sheeter']['sheeterType'] . "</a>
+						</h4>
+					</div>
+				<div id='collapsesheeter' class='panel-collapse collapse'>
+					<div class='panel-body'>
+						<p>  Sheeter Specifications 
+						<a href='javascript:deleteSheeter()' id='deleteSheeter'>Delete Item</a>
+						<a href='order_sheeter.php' target='_blank'>Edit Item</a>
+						<ul>"
+						. "<li>Sheeter Type:" . $_SESSION['cart']['mach-sheeter']['sheeterType'] . "</li>"
+						. "<li>Production Volume:" . $_SESSION['cart']['mach-sheeter']['productionVolume'] . "</li>"
+						. "<li>Paper_Type:" . $_SESSION['cart']['mach-sheeter']['paperType'] . "</li>"
+						. "<li>GSM:" . $_SESSION['cart']['mach-sheeter']['gsm_min'] . " - " . $_SESSION['cart']['mach-sheeter']['gsm_max'] . "</li>"
+						. "<li>Roll_Diameter:" . $_SESSION['cart']['mach-sheeter']['rollDiameter_min'] . " - " . $_SESSION['cart']['mach-sheeter']['rollDiameter_max'] . $_SESSION['cart']['mach-sheeter']['rollDiameter_unit'] . "</li>"
+						. "<li>Slitting_Width:" . $_SESSION['cart']['mach-sheeter']['slittingWidth_min'] . " - " . $_SESSION['cart']['mach-sheeter']['slittingWidth_max'] . $_SESSION['cart']['mach-sheeter']['slittingWidth_unit'] . "</li>"
+						. "<li>Cut-off Length:" . $_SESSION['cart']['mach-sheeter']['cutOffLength_min'] . " - " . $_SESSION['cart']['mach-sheeter']['cutOffLength_max'] . $_SESSION['cart']['mach-sheeter']['cutOffLength_unit'] . "</li>"
+
+						. "<li>Cutting_MainDrive:" . $_SESSION['cart']['mach-sheeter']['cutting_mainDrive'] . "</li>"
+						. "<li>Cutting_Knife:" . $_SESSION['cart']['mach-sheeter']['cutting_knife'] . "</li>"
+						. "<li>Cutting_SL_Attach:" . $_SESSION['cart']['mach-sheeter']['cutting_sl_attach'] . "</li>"
+
+						. "<li>URS_HydraulicShaftless:" . $_SESSION['cart']['mach-sheeter']['urs_hydraulicShaftless'] . "</li>"
+						. "<li>URS_HTypeStand:" . $_SESSION['cart']['mach-sheeter']['urs_hTypeStand'] . "</li>"
+						. "<li>URS_TensionDecurler:" . $_SESSION['cart']['mach-sheeter']['urs_tensionDecurler'] . "</li>"
+						. "<li>URS_IndividualTension:" . $_SESSION['cart']['mach-sheeter']['urs_individualTension'] . "</li>"
+						. "<li>URS_Mechanical:" . $_SESSION['cart']['mach-sheeter']['urs_mechanical'] . "</li>"
+						. "<li>URS_AirHD:" . $_SESSION['cart']['mach-sheeter']['urs_airHD'] . "</li>"
+						. "<li>URS_Others:" . $_SESSION['cart']['mach-sheeter']['urs_others'] . "</li>"
+						. "<li>URS_RollWeight:" . $_SESSION['cart']['mach-sheeter']['urs_rollWeight'] . "</li>"
+
+						. "<li>SYS_ComputerControl:" . $_SESSION['cart']['mach-sheeter']['sys_computerControl'] . "</li>"
+						. "<li>SYS_WebGuideHydraulicEPC:" . $_SESSION['cart']['mach-sheeter']['sys_webGuideHydraulicEPC'] . "</li>"
+						. "<li>SYS_Others:" . $_SESSION['cart']['mach-sheeter']['sys_others'] . "</li>"
+						. "<li>SH_Details:" . $_SESSION['cart']['mach-sheeter']['sh_Details'] . "</li>"
+
+						. "</ul></p>
+						</div>
+					</div>
+				</div>";
+				}
+
+				if (isset($_SESSION["cart"]["mach-cutter"])) {
+					echo "
+				<div class='panel panel-default'>
+					<div class='panel-heading'>
+						<h4 class='panel-title'>
+							<a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#collapseSlitter'>Cutter: " . $_SESSION['cart']['mach-cutter']['cutterType'] . "</a>
+						</h4>
+					</div>
+				<div id='collapseSlitter' class='panel-collapse collapse'>
+					<div class='panel-body'>
+						<p>  Cutter Specifications 
+						<a href='javascript:deleteCutter()' id='deleteCutter'>Delete Item</a>
+						<a href='order_cutter.php' target='_blank'>Edit Item</a>
+						<ul>"
+						. "<li>Cutter Type:" . $_SESSION['cart']['mach-cutter']['cutterType'] . "</li>"
+						. "<li>CT_Details:" . $_SESSION['cart']['mach-cutter']['ct_Details'] . "</li>"
+
+						. "</ul></p>
+						</div>
+					</div>
+				</div>";
+				}
+
+				if (isset($_SESSION["cart"]["mach-bailing"])) {
+					echo "
+				<div class='panel panel-default'>
+					<div class='panel-heading'>
+						<h4 class='panel-title'>
+							<a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#collapseSlitter'>Bailing Machine</a>
+						</h4>
+					</div>
+				<div id='collapseSlitter' class='panel-collapse collapse'>
+					<div class='panel-body'>
+						<p>  Bailing Machine Specifications 
+						<a href='javascript:deleteBailing()' id='deleteBailing'>Delete Item</a>
+						<a href='order_bailing.php' target='_blank'>Edit Item</a>
+						<ul>"
+						. "<li>BM_Quantity:" . $_SESSION['cart']['mach-bailing']['bm_quantity'] . "</li>"
+						. "<li>BM_Details:" . $_SESSION['cart']['mach-bailing']['bm_Details'] . "</li>"
+
+						. "</ul></p>
+						</div>
+					</div>
+				</div>";
+				}
+
+				if (isset($_SESSION["cart"]["mach-rolltruck"])) {
+					echo "
+				<div class='panel panel-default'>
+					<div class='panel-heading'>
+						<h4 class='panel-title'>
+							<a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#collapseSlitter'>Paper Roll Truck</a>
+						</h4>
+					</div>
+				<div id='collapseSlitter' class='panel-collapse collapse'>
+					<div class='panel-body'>
+						<p>  Paper Roll Truck Specifications 
+						<a href='javascript:deleteRollTruck()' id='deleteRollTruck'>Delete Item</a>
+						<a href='order_bailing.php' target='_blank'>Edit Item</a>
+						<ul>"
+						. "<li>PRT_Quantity:" . $_SESSION['cart']['mach-rolltruck']['prt_quantity'] . "</li>"
+						. "<li>PRT_Details:" . $_SESSION['cart']['mach-rolltruck']['prt_Details'] . "</li>"
+
+						. "</ul></p>
+						</div>
+					</div>
+				</div>";
 				}
 
 

@@ -8,7 +8,14 @@
 		<title>Machinovate | Order Now</title>
 	</head>
 	<body>
-		<?php include 'header_on_form_completion.php';?>
+		<?php include 'header_on_form_completion.php';
+			session_start();
+
+			function setStickyText($x){
+				if (isset($_SESSION["cart"]["mach-rolltruck"][$x]))
+					echo $_SESSION["cart"]["mach-rolltruck"][$x];
+			}
+		?>
 
 		<div  id="order-slitter" class="container">
 		<ol class="breadcrumb">
@@ -18,7 +25,7 @@
 				<li class="active">Paper Roll Truck Requirements Form</li>
 			</ol>
 			<h1 class="page-header">Paper Roll Truck Requirements Form</h1>
-			<form id="form" action="paper_roll_form_success.php" role="form" class="form form-horizontal" method="post">
+			<form id="formrolltruck" action="paper_roll_form_success.php" role="form" class="form form-horizontal" method="post">
 				<div class="form-group">
 					<div class="alert alert-info">
 						
@@ -31,14 +38,14 @@
 				<div class="form-group required">
 					<label for="type" class="control-label col-sm-2">Quantity:</label>
 					<div class="col-sm-10">
-						<input value="1" class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>' required autofocus/>
+						<input class="form-control" id="quantity" min="1" name="rollTruckQuantity" step="1" type="number" required autofocus value='<?php setStickyText("prt_quantity");?>'/>
 						<div class="help-block with-errors"></div>
 					</div>
 				</div>
 				<div class="form-group">
 				<label for="type" class="control-label col-sm-2">Comments/Suggestions:</label>
 					<div class="col-sm-10">
-				  		<textarea class="form-control" id="comment" rows="8"  placeholder="Please input your comments/suggestions here if any" style="width:80%;" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
+				  		<textarea class="form-control" id="comment" rows="8"  placeholder="Please input your comments/suggestions here if any" style="width:80%;" name="otherDetails"><?php setStickyText("prt_Details");?></textarea>
 					</div>
 				</div>
 
@@ -54,5 +61,6 @@
 		<script type="text/javascript" src="scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="scripts/validator.min.js"></script>
+		<script type="text/javascript" src="formlistener.js"></script>
 	</body>
 </html>
