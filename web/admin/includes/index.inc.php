@@ -71,7 +71,7 @@ if (isset($errors) && !empty($errors)) {
 				
 
 				<div class="form-group">
-					<input id="login-btn" type="submit" value="Login" class="btn btn-primary btn-block">
+					<input id="primary-btn" type="submit" value="Login" class="btn btn-primary btn-block">
 				</div>
 
 			</form>
