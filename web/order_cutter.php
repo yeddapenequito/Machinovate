@@ -1,5 +1,5 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+<!-- if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	require ('../mysqli_connect.php'); // Connect to the db.
 		
@@ -75,10 +75,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 		
 
-} // End of the main Submit conditional.
+} // End of the main Submit conditional. -->
 
-
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -89,7 +87,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<title>Machinovate | Order Now</title>
 	</head>
 	<body>
-		<?php include 'header_on_form_completion.php';?>
+		<?php include 'header_on_form_completion.php';
+			session_start();
+
+			function setStickyRadio($x, $y){
+				if (isset($_SESSION["cart"]["mach-cutter"][$x]) && $_SESSION["cart"]["mach-cutter"][$x] == $y)
+					echo 'checked="checked"';
+			}
+
+			function setStickyText($x){
+				if (isset($_SESSION["cart"]["mach-cutter"][$x]))
+					echo $_SESSION["cart"]["mach-cutter"][$x];
+			}
+		?>
 
 		<div class="container">
 			<ol class="breadcrumb">
@@ -97,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<li><a href="cutter.php">Cutter</a></li>
 				<li class="active">Cutter Machine Requirements Form</li>
 			</ol>
-			<form id="form" action="order_cutter.php" role="form" class="form-horizontal" method="post">
+			<form id="formcutter" action="order_cutter.php" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Cutter Machine Requirements Form</h1>
 				</legend>
@@ -128,31 +138,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 					<div class="col-sm-10">
 						<div class="radio">
-							<label><input class="type" name="cutterRadio" type="radio" id="CT_115E" value="CT_115E" checked="checked">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_115E" value="CT_115E" <?php setStickyRadio("cutterType", "CT_115E");?>/>
 								CT-115E (115 cm/45.2in)</label>
 						</div>
 						<div class="radio">
-							<label><input class="type" name="cutterRadio" type="radio" id="CT_137E" value="CT_137E">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_137E" value="CT_137E" <?php setStickyRadio("cutterType", "CT_137E");?>/>
 								CT-137E (137 cm/53.9in)</label>
 						</div>
 						<div class="radio">
-							<label><input class="type" name="cutterRadio" type="radio" id="CT_155E" value="CT_155E">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_155E" value="CT_155E" <?php setStickyRadio("cutterType", "CT_155E");?>/>
 								CT-155E (155cm/61in)</label>
 						</div>
 						<div class="radio">
-							<label><input class="type" name="cutterRadio" type="radio" id="CT_185E" value="CT_185E">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_185E" value="CT_185E" <?php setStickyRadio("cutterType", "CT_185E");?>/>
 								CT-185E (185cm/72.8in)</label>
 						</div>
 						<div class="radio">
-							<label><input class="type" name="cutterRadio" type="radio" id="CT_220E" value="CT_220E">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_220E" value="CT_220E" <?php setStickyRadio("cutterType", "CT_220E");?>/>
 								CT-220E (220cm/86.6in)</label>
 						</div>
 						<div class="radio">
-							<label><input class="type" name="cutterRadio" type="radio" id="CT_260E" value="CT_260E">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_260E" value="CT_260E" <?php setStickyRadio("cutterType", "CT_260E");?>/>
 								CT-260E (260cm/102.3in)</label>
 						</div>
 						<div class="radio">
-							<label><input class="type" name="cutterRadio" type="radio" id="CT_300E" value="CT_300E">
+							<label><input class="type" name="cutterRadio" type="radio" id="CT_300E" value="CT_300E" <?php setStickyRadio("cutterType", "CT_300E");?>/>
 								CT-300E (300cm/118.1in)</label>
 						</div>
 					</div>
@@ -162,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<div class="form-group">
 					<label for="type" class="control-label col-sm-2">Other Details:</label>
 					<div class="col-sm-10">
-				  		<textarea class="form-control" id="comment" rows="8"  placeholder="Place your additional requirements here if any." style="width:80%;" name="otherDetails" ></textarea>
+				  		<textarea class="form-control" id="comment" rows="8"  placeholder="Place your additional requirements here if any." style="width:80%;" name="otherDetails"><?php setStickyText("ct_Details");?></textarea>
 					</div>
 				</div>
 
@@ -179,5 +189,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<script type="text/javascript" src="scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="scripts/validator.min.js"></script>
+		<script type="text/javascript" src="formlistener.js"></script>
 	</body>
 </html>

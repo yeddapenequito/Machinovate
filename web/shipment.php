@@ -16,7 +16,7 @@
 			<h1 class="page-header">Shipment Details</h1>
 			<p style="color:red;font-style:italic">* Required fields.</p>
 	
-			<form id="form" role="form" id="slitter" method="post" 
+			<form id="formshipment" role="form" method="post" 
 				role="form" class="form-horizontal">
 				<fieldset>	
 					<div class="form-group required">
@@ -25,8 +25,8 @@
 							Name:</label>
 						<div class="col-sm-10">
 							<div class="form-inline">	
-						 		<input id="first-name" autofocus class="form-control" required name="last_name" placeholder="Last Name" type="text" size="25em">
-						 		<input id="last-name" class="form-control" name="first_name" placeholder="First Name" required type="text" size="35em"> 
+						 		<input id="last-name" autofocus class="form-control" required name="last_name" placeholder="Last Name" type="text" size="25em">
+						 		<input id="first-name" class="form-control" name="first_name" placeholder="First Name" required type="text" size="35em"> 
 						 		<div class="help-block with-errors"></div>
 							</div>
 						</div>
@@ -159,5 +159,6 @@
 		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 		<script type="text/javascript" src="actionlistener.js"></script>
 		<script type="text/javascript" src="scripts/validator.min.js"></script>
+		<script type="text/javascript" src="formlistener.js"></script>
 	</body>
 </html>
