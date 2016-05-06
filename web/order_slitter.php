@@ -41,7 +41,7 @@
 			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="slitter.php">Slitter</a></li>
-				<li class="active">Slitter Machine Requirements Form</li>
+				<li class="active">Machine Order Form</li>
 			</ol>
 			<!-- <form id="form-slitter" action="order_slitter.php" name="form" role="form" class="form-horizontal" method="post"> -->
 			<form id="formslitter" role="form" class="form-horizontal" method="post">

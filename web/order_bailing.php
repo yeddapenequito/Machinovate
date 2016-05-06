@@ -22,7 +22,7 @@
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="other_products.php">Other Products</a></li>
 				<li><a href="bailing_machine.php">Bailing Machine</a></li>
-				<li class="active">Bailing Machine Requirements Form</li>
+				<li class="active">Machine Order Form</li>
 			</ol>
 
 			<form name="form" id="formbailing" action="bailing_form_success.php" role="form" class="form-horizontal" method="post">

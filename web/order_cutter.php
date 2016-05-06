@@ -105,7 +105,8 @@
 			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="cutter.php">Cutter</a></li>
-				<li class="active">Cutter Machine Requirements Form</li>
+				<li class="active">Machine Order Form</li>
+				
 			</ol>
 			<form id="formcutter" action="order_cutter.php" role="form" class="form-horizontal" method="post">
 				<legend>

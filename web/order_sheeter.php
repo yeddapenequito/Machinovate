@@ -42,7 +42,7 @@
 			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="sheeter.php">Sheeter</a></li>
-				<li class="active">Sheeter Machine Requirements Form</li>
+				<li class="active">Machine Order Form</li>
 			</ol>
 
 			<form name="form" id="formsheeter" role="form" class="form-horizontal" method="post">
