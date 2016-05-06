@@ -31,45 +31,42 @@ $page_title = 'View the event';
 require ('../mysqli_connect.php'); // Connect to the db.
 		
 // Make the query:
-$q = "SELECT event_name, event_date, event_place, image_name FROM events, event_pictures";		
+$q = "SELECT DISTINCT events.event_name, events.event_date, events.event_place, event_pictures.image FROM events, event_pictures WHERE events.event_id = event_pictures.event_id;";		
 $r = @mysqli_query ($dbc, $q); // Run the query.
 
 if ($r) { // If it ran OK, display the records.
 	// Fetch and print all the records:
 	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-		echo '
+		echo ' <center>
 			<div id="event-content" class="container">
 			<div class="row">
 					<ul class="nav nav-pills nav-stacked col-xs-12 col-sm-4">
 						<li class="active">
 							<a data-toggle="pill" href="#menu0">
-								<p id="event-name">'. $row['event_name'] . ' <span class="label label-success">Coming Soon</span></p>
-								<p>'. $row['event_place'] . '</p>
-								<p>'. $row['event_date'] . '</p>
+								<p id="event-name">'. $row['event_name'] . '
+</p>
+								<p>Venue: '. $row['event_place'] . '</p>
+								<p>Date:'. $row['event_date'] . '</p>
+
+							<figure>
+								<img src="uploads/'. $row['image'] . '" alt="event picture">
+								
+							</figure>
 							</a>
 						</li>
-						<li><a data-toggle="pill" href="#menu1">2014 - Event Name</a></li>
-						<li><a data-toggle="pill" href="#menu2">2013 - Event Name</a></li>
-						<li><a data-toggle="pill" href="#menu3">2012 - Event Name</a></li>
-						<li><a data-toggle="pill" href="#menu4">2011 - Event Name</a></li>
-						<li><a data-toggle="pill" href="#menu5">2010 - Event Name</a></li>					
+						
 					</ul> <!-- /.nav -->
 
 					<div class="tab-content col-xs-12 col-sm-8">
 						<div id="menu0" class="tab-pane fade in active">
-							<div class="page-header">
-								<h3>'. $row['event_name'] . '</h3>
-							</div>
-							<figure>
-								<img src="uploads/'. $row['image_name'] . '" alt="event picture">
-								<figcaption>Fig1. - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu auctor ex, nec mattis nulla.</figcaption>
-							</figure>
+							
 							
 						</div>
 						
 					</div> <!-- /.tab-content -->
 				</div> <!-- /.row -->
 			</div>	<!-- /.container -->
+</center>
 		';
 	}
 

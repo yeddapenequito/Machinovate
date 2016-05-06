@@ -104,7 +104,7 @@
                             
                             // Make the query:
                             $q = "INSERT INTO events (event_date, event_name, event_place) VALUES ('$event_date', '$event_name', '$event_place');";
-                            $q .= "INSERT INTO event_pictures (event_id, image_name) VALUES ((SELECT event_id FROM events WHERE event_date='$event_date' ), '$i');";
+                            $q .= "INSERT INTO event_pictures (event_id, image) VALUES ((SELECT event_id FROM events WHERE event_date='$event_date' ), '$temp');";
 
                             $r = @mysqli_multi_query ($dbc, $q); // Run the query.
                             if ($r) { // If it ran OK.
@@ -112,9 +112,9 @@
                                 $id = mysqli_stmt_insert_id($r); // Get the print ID.
                                 rename ($temp, "../../uploads/$id");
                                 // Print a message:
-                                //echo '<h1>Thank you!</h1>
-                            //<p>An event has been added!</p><p><br /></p>'; 
-                            header('Location: /Machinovate/web/admin/account_edit_successful.php');
+                                echo '<h1>Thank you!</h1>
+                            <p>An event has been added!</p><p><br /></p>'; 
+                            
                             
                             } else { // If it did not run OK.
                                 
@@ -212,7 +212,7 @@
             </div> <!-- /.row -->
         </div> <!-- /.container -->
 
-       <script type="text/javascript" src="../scripts/jquery.min.js"></script>
+       <script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
         <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
         <!--<script type="text/javascript">
             $(document).ready(function() {

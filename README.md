@@ -126,5 +126,5 @@ CREATE TABLE users ( //see below for sample insert
 
 //insert your own users n lng ha :) follow this format
 INSERT INTO users (username, pass, first_name, last_name, email) VALUES 
-('abc', SHA1('123'), 'Larry', 'Ullman', 'lu@example.com');
+('admin', SHA1('adminadmin'), 'Marilyn', 'Go', 'lu@example.com');
 
