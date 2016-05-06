@@ -7,8 +7,8 @@
 		    			<th>Order No.</th>
 		    			<th>Machine Type</th>
 		    			<th>Company Name</th>
-		    			<th>Contact Name</th>
 		    			<th>Date Ordered</th>
+		    			<th>Order Status</th>
 		    		</tr>
 		    	</thead>
 		    	<tbody>
