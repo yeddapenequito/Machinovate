@@ -199,17 +199,13 @@
 							</div>
 
 							<div class="checkbox">
-								
-								<label><input id="slitter-additional-checkbox" name="addtlCheckbox" value="additional" type="checkbox" <?php setStickyCheckWithText("addtlBlade");?>/>								</label>
-
-								<div class="form-inline">
-										
-										<div class="form-group">
-											
-											<label class="control-label" for="slitter-additional-text-field">Additional</label>
-											<input class="form-control" disabled id="slitter-additional-text-field" min="1" name="addtlBlade" type="number" value='<?php setStickyText("addtlBlade");?>'/> set/s of one pair male/female
-										</div>
+								<label>
+									<input id="slitter-additional-checkbox" name="addtlCheckbox" value="additional" type="checkbox" <?php setStickyCheckWithText("addtlBlade");?>/>
+									<div class="form-inline">
+										Additional
+										<input class="form-control" disabled id="slitter-additional-text-field" min="1" name="addtlBlade" type="number" value='<?php setStickyText("addtlBlade");?>'/> set/s of one pair male/female
 									</div>
+								</label>
 							</div>
 
 							<div class="checkbox">
@@ -253,14 +249,13 @@
 							</div>
 
 							<div class="checkbox">
-								<input id="reel-stand-others-checkbox" name="otherReelCheckbox" type="checkbox" value="5" <?php setStickyCheckWithText("rs_Others");?>/>
-								<div class="form-inline">
-									<div class="form-group">
-										<label class="control-label" for="reel-stand-others-text-field">
-											Others:</label>
+								<label>
+									<input id="reel-stand-others-checkbox" name="otherReelCheckbox" type="checkbox" value="5" <?php setStickyCheckWithText("rs_Others");?>/>
+									<div class="form-inline">
+										Others
 										<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers"  type="text" required value='<?php setStickyText("rs_Others");?>'/>
 									</div>
-								</div>
+								</label>
 							</div>
 						</div>
 					</div>
@@ -272,8 +267,7 @@
 
 						<div class="col-sm-10">
 							<div class="input-group">
-
-								<input class="form-control" id="ton-capacity"  min="0.001" name="tonCapacity"  type="number" required value='<?php setStickyText("tonCapacity");?>'/>
+								<input class="form-control" id="ton-capacity" min="0.001"  step="0.001" name="tonCapacity"  type="number" required value='<?php setStickyText("tonCapacity");?>'/>
 								<span class="input-group-addon">Tons</span>
 							</div>
 							<div class="help-block with-errors"></div>
@@ -317,15 +311,13 @@
 							</div>
 							
 							<div class="checkbox">
-								<input id="systems-others-checkbox" name="systemOthersCheckbox" type="checkbox" value="6" <?php setStickyCheckWithText("sys_Others");?>/>
+								<label>
+									<input id="systems-others-checkbox" name="systemOthersCheckbox" type="checkbox" value="6" <?php setStickyCheckWithText("sys_Others");?>/>
 									<div class="form-inline">
-										<div class="form-group">
-											<label class="control-label" for="systems-others-text-field">
-												Others:</label>
-											<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers"  type="text" value='<?php setStickyText("sys_Others");?>'/>
-										</div>
+										Others:
+										<input disabled class="form-control" id="systems-others-text-field"  name="systemsOthers"  type="text" value='<?php setStickyText("sys_Others");?>'/>
 									</div>
-
+								</label>
 							</div>
 						</div>
 					</div>
