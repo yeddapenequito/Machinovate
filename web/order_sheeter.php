@@ -45,7 +45,7 @@
 				<li class="active">Machine Order Form</li>
 			</ol>
 
-			<form name="form" id="formsheeter" role="form" class="form-horizontal" method="post">
+			<form name="form" id="form" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Sheeter Machine Requirements Form</h1>
 				</legend>

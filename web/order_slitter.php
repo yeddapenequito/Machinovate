@@ -44,7 +44,7 @@
 				<li class="active">Machine Order Form</li>
 			</ol>
 			<!-- <form id="form-slitter" action="order_slitter.php" name="form" role="form" class="form-horizontal" method="post"> -->
-			<form id="formslitter" role="form" class="form-horizontal" method="post">
+			<form id="form" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Slitter Machine Requirements Form</h1>
 				</legend>
@@ -255,12 +255,12 @@
 							<div class="checkbox">
 								<input id="reel-stand-others-checkbox" name="otherReelCheckbox" type="checkbox" value="5" <?php setStickyCheckWithText("rs_Others");?>/>
 								<div class="form-inline">
-										<div class="form-group">
-											<label class="control-label" for="reel-stand-others-text-field">
-												Others:</label>
-											<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers"  type="text" required value='<?php setStickyText("rs_Others");?>'/>
-										</div>
+									<div class="form-group">
+										<label class="control-label" for="reel-stand-others-text-field">
+											Others:</label>
+										<input class="form-control" disabled id="reel-stand-others-text-field" name="reelStandOthers"  type="text" required value='<?php setStickyText("rs_Others");?>'/>
 									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -273,7 +273,7 @@
 						<div class="col-sm-10">
 							<div class="input-group">
 
-								<input class="form-control" id="ton-capacity"  min="0.001"  step="0.01" name="tonCapacity"  type="number" required value='<?php setStickyText("tonCapacity");?>'/>
+								<input class="form-control" id="ton-capacity"  min="0.001" name="tonCapacity"  type="number" required value='<?php setStickyText("tonCapacity");?>'/>
 								<span class="input-group-addon">Tons</span>
 							</div>
 							<div class="help-block with-errors"></div>

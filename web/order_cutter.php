@@ -108,7 +108,7 @@
 				<li class="active">Machine Order Form</li>
 				
 			</ol>
-			<form id="formcutter" action="order_cutter.php" role="form" class="form-horizontal" method="post">
+			<form id="form" action="order_cutter.php" role="form" class="form-horizontal" method="post">
 				<legend>
 					<h1>Cutter Machine Requirements Form</h1>
 				</legend>
