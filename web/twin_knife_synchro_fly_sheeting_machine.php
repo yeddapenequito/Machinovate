@@ -39,7 +39,7 @@
 					</div>
 
 					<div id="btn-group">
-						<p><a href="order_sheeter.php" class="btn btn-primary btn-block btn-lg">
+						<p><a href="order_sheeter.php?code=3" class="btn btn-primary btn-block btn-lg">
 							Buy this product</a></p>
 						<p><a id="contact-us-btn"  href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
 					</div>

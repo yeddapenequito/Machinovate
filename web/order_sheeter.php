@@ -434,11 +434,13 @@
 
 			var type = form.sheeterType;
 			var loc = window.location.href;
-			// var code = Number(loc.substr(loc.lastIndexOf("=") + 1));
+			var code = Number(loc.substr(loc.lastIndexOf("=") + 1));
 
-			// if (code != -1) {
-			// 	type[code].checked = true;
-			// } 
+			if (code) {
+				type[code].checked = true;
+			} else {
+				type[0].checked = true;
+			}
 
 			document.getElementById("slitter").onchange = function() {
 					
