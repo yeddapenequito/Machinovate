@@ -81,8 +81,8 @@ require ('../../mysqli_connect.php');
 		    			<th>Order No.</th>
 		    			<th>Machine Type</th>
 		    			<th>Company Name</th>
-		    			<th>Contact Name</th>
 		    			<th>Date Ordered</th>
+		    			<th>Order Status</th>
 		    			<th>Move To</th>
 		    			<th>Edit</th>
 		    			<th>Delete</th>
@@ -142,6 +142,7 @@ require ('../../mysqli_connect.php');
 		    			<th>Company Name</th>
 		    			<th>Date Ordered</th>
 		    			<th>Order Status</th>
+		    			<th>Move To</th>
 		    			<th>Edit</th>
 		    			<th>Delete</th>
 		    		</tr>
@@ -200,8 +201,8 @@ require ('../../mysqli_connect.php');
 		    			<th>Order No.</th>
 		    			<th>Machine Type</th>
 		    			<th>Company Name</th>
-		    			<th>Contact Name</th>
 		    			<th>Date Ordered</th>
+		    			<th>Order Status</th>
 		    			<th>Move To</th>
 		    			<th>Edit</th>
 		    			<th>Delete</th>
@@ -260,8 +261,8 @@ require ('../../mysqli_connect.php');
 		    			<th>Order No.</th>
 		    			<th>Machine Type</th>
 		    			<th>Company Name</th>
-		    			<th>Contact Name</th>
 		    			<th>Date Ordered</th>
+		    			<th>Order Status</th>
 		    			<th>Move To</th>
 		    			<th>Edit</th>
 		    			<th>Delete</th>
@@ -320,8 +321,8 @@ require ('../../mysqli_connect.php');
 		    			<th>Order No.</th>
 		    			<th>Machine Type</th>
 		    			<th>Company Name</th>
-		    			<th>Contact Name</th>
 		    			<th>Date Ordered</th>
+		    			<th>Order Status</th>
 		    			<th>Move To</th>
 		    			<th>Edit</th>
 		    			<th>Delete</th>
