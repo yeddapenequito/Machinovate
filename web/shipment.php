@@ -57,7 +57,7 @@
 						<label class="col-sm-2 control-label">
 							Mobile Number:</label>
 						<div class="col-sm-10">	
-							<input class="form-control" name="contact_details" required type="tel" placeholder="09XXXXXXXXX" minLength="11"> 
+							<input class="form-control" name="contact_details" required type="tel" placeholder="09XXXXXXXXX" pattern="09\d{9}"> 
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
@@ -98,7 +98,7 @@
 					</div>	
 
 					<!--Shipment -->
-					<div class="form-group required">
+					<div class="form-group">
 
 						<label class="control-label col-sm-2" for="shipment">
 							Shipment Date: </label>
