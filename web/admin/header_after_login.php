@@ -40,7 +40,8 @@
 						<li>
 							<div id="employee-logout">
 								<span id="hello-user" class="hidden-xs">Hello, admin</span>
-								<a id="logout-btn" href="logout.php" class="btn btn-sm" role="button">Logout</a> 
+								<a id="logout-btn" href="logout.php" class="btn btn-lg" role="button">
+									<i class="glyphicon glyphicon-log-out" aria-hidden="true"></i> Logout</a> 
 							</div>
 						</li>
 					</ul>
