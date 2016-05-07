@@ -36,12 +36,16 @@
                     <div class="panel-body" style="line-height:2.5em">
                         <ol>
                             <li>Go to the <a href="machines.php">Machines</a> page.</li>
-                            <li>Choose among <strong>Slitter, Sheeter, Cutter or Other products</strong>.</li>
+                            <li>Choose among <strong>Slitter, Sheeter, Cutter, or Other products</strong>.</li>
                             <li>Click <a id="continue-btn" class="btn btn-primary btn-sm sample">Continue</a>.</li>
                             <li>Navigate through your desired machine from our catalog</li>
-                            <li>Click <a class="btn btn-primary btn-sm sample">
-                            <i class="glyphicon glyphicon-shopping-cart"></i> Add to Shopping Cart</a> button.</li>
+                            <li>Click <a class="btn btn-primary btn-sm sample">Add to cart</a> button.</li>
                             <li>Fill up <strong>Machine Requirements</strong> form.</li>
+                            <li>When your done choosing your machine/s, go to 
+                              <a class="btn btn-primary btn-sm sample" style="background-color:#16a085;color:white">
+                                <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Your Shopping Cart
+                              </a>.
+                            </li>
                             <li>Fill up <strong>Shipment Details</strong> form.</li>
                             <li>You will receive a phone call shortly to discuss payment and delivery details.</li>
                         </ol>
