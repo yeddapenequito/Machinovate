@@ -103,7 +103,7 @@
 						<label class="control-label col-sm-2" for="shipment">
 							Shipment Date: </label>
 						<div class="col-sm-10">
-							<input class="form-control"  placeholder="No. of Days" min="1" type="date" name="ship_day"  required>
+							<input class="form-control"  placeholder="No. of Days" min="<?php echo date("Y-m-d"); ?>" type="date" name="ship_day"  required>
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
