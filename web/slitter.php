@@ -42,7 +42,7 @@
 
 					<div id="btn-group">
 						<p><a href="order_slitter.php" class="btn btn-primary btn-block btn-lg">
-							Buy this product</a></p>
+							Add to Cart</a></p>
 						<p><a id="contact-us-btn"  href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
 					</div>
 					
