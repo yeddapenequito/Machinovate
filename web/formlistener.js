@@ -235,6 +235,7 @@ $(document).ready(function(){
 			success : function(data){
 				console.log("x");
 				window.alert(data)
+				window.location("shipment.php")
 			},
 			error : function(data){
 				console.log("y");
@@ -335,7 +336,7 @@ $(document).ready(function(){
 
 
 function deleteSlitter(){
-	var r = confirm("Are you sure you want to delete the item?");
+	var r = confirm("Are you sure you want to delete this item?");
 		if (r == true) {
 			$.ajax({
 				url : "formlistener.php?deleteSlitter",
@@ -361,7 +362,7 @@ function deleteSlitter(){
 }
 
 function deleteSheeter(){
-	var r = confirm("Are you sure you want to delete the item?");
+	var r = confirm("Are you sure you want to delete this item?");
 		if (r == true) {
 			$.ajax({
 				url : "formlistener.php?deleteSheeter",
@@ -387,7 +388,7 @@ function deleteSheeter(){
 }
 
 function deleteCutter(){
-	var r = confirm("Are you sure you want to delete the item?");
+	var r = confirm("Are you sure you want to delete this item?");
 		if (r == true) {
 			$.ajax({
 				url : "formlistener.php?deleteCutter",
@@ -413,7 +414,7 @@ function deleteCutter(){
 }
 
 function deleteBailing(){
-	var r = confirm("Are you sure you want to delete the item?");
+	var r = confirm("Are you sure you want to delete this item?");
 		if (r == true) {
 			$.ajax({
 				url : "formlistener.php?deleteBailing",
@@ -439,7 +440,7 @@ function deleteBailing(){
 }
 
 function deleteRollTruck(){
-	var r = confirm("Are you sure you want to delete the item?");
+	var r = confirm("Are you sure you want to delete this item?");
 		if (r == true) {
 			$.ajax({
 				url : "formlistener.php?deleteRollTruck",

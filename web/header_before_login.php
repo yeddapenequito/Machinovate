@@ -21,7 +21,7 @@
 			</ul>
 			<div class="nav navbar-nav navbar-right">
 				<a href="cart_summary.php" type="button" class="btn btn-default btn-lg" id="primary-btn" style="background-color:#16a085;color:white">
-					<i  class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Your Shopping Cart</a>
+					<span class="badge"><?php session_start(); echo count($_SESSION["cart"]);?></span> <i  class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Your Shopping Cart</a>
 				<span>Are you an employee?</span>
                 <a href="admin/index.inc.php" type="button" class="btn btn-default btn-lg" id="primary-btn">
                 	<i class="glyphicon glyphicon-log-in" aria-hidden="true"></i> Login</a>

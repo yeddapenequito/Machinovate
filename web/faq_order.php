@@ -29,8 +29,8 @@
                 <h4 class="panel-title">
                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#question1-1">
                         How to order machines?</a>
-                    </h4>
-                </div>
+                </h4>
+            </div>
 
                 <div id="question1-1" class="panel-collapse collapse">
                     <div class="panel-body" style="line-height:2.5em">
