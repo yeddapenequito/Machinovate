@@ -248,7 +248,7 @@
 				</div>";
 				}
 
-				echo "<a id='add-to-cart-btn' href='shipment.php'type='submit' class='btn btn-default'>Proceed to Checkout</a>";
+				echo "<a id='add-to-cart-btn' href='shipment.php'type='submit' style='float:right' class='btn btn-default'>Proceed to Checkout</a>";
 			}
 			?>
 			<br>
