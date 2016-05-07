@@ -98,7 +98,7 @@
 					</div>	
 
 					<!--Shipment -->
-					<div class="form-group">
+					<div class="form-group required">
 
 						<label class="control-label col-sm-2" for="shipment">
 							Shipment Date: </label>
@@ -109,7 +109,7 @@
 					</div>
 
 					<!-- Payment Terms -->
-					<div class="form-group required">
+					<div class="form-group">
 
 						<label class="control-label col-sm-2" for="payment">
 							Payment Terms: </label>
