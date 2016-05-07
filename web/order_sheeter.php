@@ -209,7 +209,7 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input id="main-drive" name="mainDriveRadio" type="radio" value="Inverter" <?php setStickyRadio("cutting_mainDrive", "Inverter");?>>
+								<label><input checked id="main-drive" name="mainDriveRadio" type="radio" value="Inverter" <?php setStickyRadio("cutting_mainDrive", "Inverter");?>>
 									Inverter</label>
 							</div>
 							<div class="radio">
@@ -226,7 +226,7 @@
 
 						<div class="col-sm-10">
 							<div class="radio">
-								<label><input id="knife" name="knifeRadio" type="radio" value="Single Knife" <?php setStickyRadio("cutting_knife", "Single Knife");?>>
+								<label><input checked id="knife" name="knifeRadio" type="radio" value="Single Knife" <?php setStickyRadio("cutting_knife", "Single Knife");?>>
 									Single Knife</label>
 							</div>
 							<div class="radio">
