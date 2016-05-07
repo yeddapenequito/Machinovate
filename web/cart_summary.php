@@ -190,6 +190,8 @@
 			<br>
 			<br>
 
+				<a id="cancel-btn" href="machines.php" class="btn btn-default">Cancel Order</a>
+				<a id="add-to-cart-btn" href="shipment.php"type="submit" class="btn btn-default">Proceed to Checkout</a>
 					</div>
 				</div>
 				<script type="text/javascript" src="scripts/jquery.min.js"></script>
