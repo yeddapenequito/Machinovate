@@ -16,6 +16,11 @@ form legend {
 	color: white;
 }
 
+.form-group.required > .control-label:after {
+  content:"*";
+  color:red;
+}
+
 .btn {
   background-color: #bdc3c7;
   color: #153a7e;

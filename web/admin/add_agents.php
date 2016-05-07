@@ -379,15 +379,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<body>
 		<div class="container">
 			<div class="row">
-				<form action="add_agents.php" method="post" class="form-horizontal col-sm-6" role="form">
+				<form action="add_agents.php" method="post" class="form form-horizontal col-sm-6" role="form">
 					<div class="form-group">
 						<legend>Add Agents</legend>
+						<p style="color:red;font-style:italic">* Required fields.</p>
 					</div>
-					<div class="form-group">
+					<div class="form-group required">
 						<label for="country" class="col-sm-3 control-label">Country:</label>
 						<div class="col-sm-9">
-							<select class="form-control" id="<?php if (isset($_POST['country'])) echo $country; ?>" name="country">
-								<option> Select Country... </option>
+							<select required class="form-control" id="<?php if (isset($_POST['country'])) echo $country; ?>" name="country">
+								<option value="">Select country...</option>
 								<option value="af">Afghanistan </option>
 								<option value="ax">Åland Islands </option>
 								<option value="al">Albania </option>
@@ -633,37 +634,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 								<option value="zm">Zambia </option>
 								<option value="zw">Zimbabwe </option>
 							</select>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group required">
 						<label for="last-name" class="col-sm-3 control-label">Last Name:</label>
 						<div class="col-sm-9">
-							<input placeholder="Enter agent's last name"type="text" class="form-control" id="last-name" name="last_name" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" />
+							<input placeholder="Enter agent's last name"type="text" class="form-control" id="last-name" name="last_name" maxlength="40" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" required/>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group required">
 						<label for="first-name" class="col-sm-3 control-label">First Name:</label>
 						<div class="col-sm-9">
-							<input placeholder="Enter agent's first name"type="text" class="form-control" id="first-name" name="first_name" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" />
+							<input placeholder="Enter agent's first name"type="text" class="form-control" id="first-name" name="first_name" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" required/>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group required">
 						<label for="email" class="col-sm-3 control-label">Email Address:</label>
 						<div class="col-sm-9">
-							<input type="email" class="form-control" id="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"  />
+							<input type="email" class="form-control" id="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"  required/>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group required">
 						<label for="contact" class="col-sm-3 control-label">Mobile Number:</label>
 						<div class="col-sm-9">
-							<input id="contact" class="form-control" type="text" name="contact" maxlength="60" value="<?php if (isset($_POST['contact'])) echo $_POST['contact']; ?>"  />
+							<input id="contact" class="form-control" type="text" name="contact" maxlength="60" value="<?php if (isset($_POST['contact'])) echo $_POST['contact']; ?>"  minLength="10" required/>
+							<div class="help-block with-errors"></div>
 						</div>
 					</div><!-- add button -->
 					<div class="form-group">
 						<div class="col-sm-9 col-sm-offset-3">
-							<button type="Add" class="btn btn-primary">Add agent</button>
-							   <a href="order_list.php" Stype="cancel" id="cancel-btn" class="btn btn-default">Cancel</a>
-                        
+							<input type="submit" class="btn btn-primary" value="Add Agent"></input>
+							<a href="order_list.php" Stype="cancel" id="cancel-btn" class="btn btn-default">Cancel</a>
 						</div>
 					</div>
 				</form>
@@ -672,6 +677,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 		<script type="text/javascript" src="../scripts/jquery.min.js"></script>
 		<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../scripts/validator.min.js"></script>
 	</body>
 </html>
 

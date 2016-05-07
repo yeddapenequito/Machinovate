@@ -40,7 +40,7 @@ if (isset($errors) && !empty($errors)) {
 				  	<strong>Warning!</strong> This page is for authorized employees only.
 				</div>
 			</div>
-			<form id="form" role="form" action="login.php" method="post" class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+			<form role="form" action="login.php" method="post" class="form col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
 
 				<div class="form-group">
 					<label for="username">Username</label>

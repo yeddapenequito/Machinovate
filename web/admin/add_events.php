@@ -23,7 +23,7 @@
         
         <div class="container">
             <div class="row">
-                <form enctype="multipart/form-data" action="add_events.php" method="post" class="form-horizontal col-sm-6" role="form">
+                <form enctype="multipart/form-data" action="add_events.php" method="post" class="form form-horizontal col-sm-6" role="form">
                     <!--PHP -->
                     <?php # Script 9.5 - register.php #2
                     // This script performs an INSERT query to add a record to the events table
@@ -161,36 +161,42 @@
                     ?>
                     <input type="hidden" name="MAX_FILE_SIZE" value="524288" />
                     <fieldset>
-                        
-                        <legend>Add Events</legend>
-                        <p>Fill out this form to add an event</p>
                         <div class="form-group">
-                            <label for="last-name" class="col-sm-3 control-label">Starting Date:</label>
+                            <legend>Add Events</legend>
+                            <p style="color:red;font-style:italic">* Required fields.</p>
+                        </div>
+
+                        <div class="form-group required">
+                            <label for="starting-date" class="col-sm-3 control-label">Starting Date:</label>
                             <div class="col-sm-9">
-                                <input type="date" class="form-control" id="date-start" name="event_date" maxlength="40" value="<?php if (isset($_POST['event_date'])) echo $_POST['event_date']; ?>" />
+                                <input required id="starting-date" type="date" class="form-control" name="event_date" maxlength="40" min="<?php echo date("Y-m-d"); ?>" value="<?php if (isset($_POST['event_date'])) echo $_POST['event_date']; ?>" />
+                                <div class="help-block with-errors"></div>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="last-name" class="col-sm-3 control-label">Event Name:</label>
+                        <div class="form-group required">
+                            <label for="event-name" class="col-sm-3 control-label">Event Name:</label>
                             <div class="col-sm-9">
-                                <input placeholder="Enter the name of the event" type="text" class="form-control" id="event-name" name="event_name" maxlength="40" value="<?php if (isset($_POST['event_name'])) echo $_POST['event_name']; ?>" />
+                                <input required placeholder="Enter the name of the event" type="text" class="form-control" id="event-name" name="event_name" maxlength="40" value="<?php if (isset($_POST['event_name'])) echo $_POST['event_name']; ?>" />
+                                <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="event_place" class="col-sm-3 control-label">Event Venue: </label>
+                        <div class="form-group required">
+                            <label for="event-venue" class="col-sm-3 control-label">Event Venue: </label>
                             <div class="col-sm-9">
-                                <input placeholder="Enter the event's venue" type="event_place" class="form-control" id="event-place" name="event_place" maxlength="20" value="<?php if (isset($_POST['event_place'])) echo $_POST['event_place']; ?>"  />
+                                <input required placeholder="Enter the event's venue" type="text" class="form-control" id="event-venue" name="event_place" maxlength="20" value="<?php if (isset($_POST['event_place'])) echo $_POST['event_place']; ?>"  />
+                                <div class="help-block with-errors"></div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="image_name" class="col-sm-3 control-label">Upload Image:</label>
+                        <div class="form-group required">
+                            <label for="upload-image" class="col-sm-3 control-label">Upload Image:</label>
                             <div class="col-sm-9">
                                 <div class="img-input">
                                     <div class="row item">
                                         <div class="col-sm-10 upload-img">
-                                            <input name="image" id="image" type="file" class="form-control" value="Browse Image"/>
+                                            <input required name="image" id="upload-image" type="file" class="form-control" value="Browse Image"/>
+                                            <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -203,7 +209,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-9 col-sm-offset-3">
-                                <button type="Add" class="btn btn-primary">Add event</button>
+                                <input type="submit" class="btn btn-primary" value="Add Event">
                                 <a href="order_list.php" Stype="cancel" id="cancel-btn" class="btn btn-default">Cancel</a>
                             </div>
                         </div>
@@ -212,8 +218,9 @@
             </div> <!-- /.row -->
         </div> <!-- /.container -->
 
-       <script type="text/javascript" src="../scripts/jquery-2.2.0.min.js"></script>
+       <script type="text/javascript" src="../scripts/jquery.min.js"></script>
         <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../scripts/validator.min.js"></script>
         <!--<script type="text/javascript">
             $(document).ready(function() {
                 $(document).on('click', '#add-img-btn', function() {

@@ -120,7 +120,7 @@
  <?php include 'header_after_login.php';?>
  <div class="container">
     <div class="row">
-        <form enctype="multipart/form-data" action="edit_account.php" method="post" class="form-horizontal col-sm-6" role="form">
+        <form enctype="multipart/form-data" action="edit_account.php" method="post" class="form form-horizontal col-sm-6" role="form">
             <fieldset>
 
                 <legend>Edit Account Credentials:</legend>
@@ -129,6 +129,7 @@
                      <label class="col-sm-3" for="username">Username</label>
                      <div class="col-sm-9">
                         <input id="username" name="username" type="text" placeholder="Enter new username" class="form-control" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>" required autofocus > 
+                        <div class="help-block with-errors"></div>
                      </div>
                 </div>
                 <br>
@@ -137,6 +138,7 @@
                      <label class="col-sm-3" for="password">Old Password</label>
                      <div class="col-sm-9">
                         <input id="pass" name="pass" type="password" placeholder="Enter old password" class="form-control" value="<?php if (isset($_POST['pass'])) echo $_POST['pass']; ?>" required>
+                        <div class="help-block with-errors"></div>
                      </div>
                 </div>
 
@@ -144,20 +146,21 @@
                      <label class="col-sm-3" for="password">New Password</label>
                      <div class="col-sm-9">
                         <input id="pass1" name="pass1" type="password" placeholder="Enter new password" class="form-control" value="<?php if (isset($_POST['pass1'])) echo $_POST['pass1']; ?>"  required>
+                        <div class="help-block with-errors"></div>
                      </div>
                 </div>
 
                 <div class="form-group">
                      <label class="col-sm-3" for="password">Confirm Password</label>
                      <div class="col-sm-9">
-                        <input id="pass2" name="pass2" type="password" placeholder="Confirm new password" class="form-control" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" required> 
+                        <input data-match="pass1" id="pass2" name="pass2" type="password" placeholder="Confirm new password" class="form-control" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" required> 
+                        <div class="help-block with-errors"></div>
                      </div>
                 </div>
                 <br>
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-9">
-                        <button class="btn btn-default" id="add-to-cart-btn" type="submit">
-                            Edit Account</button>
+                        <input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Edit Account">
                         <a class="btn btn-default" id="cancel-btn" href="order_list.php">
                             Cancel</a>
                     </div>
@@ -168,6 +171,7 @@
 </div> <!-- /.container -->
 <script type="text/javascript" src="../scripts/jquery.min.js"></script>
 <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="../scripts/validator.min.js"></script>
 <script type="text/javascript">
 document.getElementById("edit-account").className = "active";
 </script>

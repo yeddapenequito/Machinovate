@@ -12,24 +12,14 @@
 	<?php include 'header_after_login.php';?>
 	
 	<div class="container">
-		
 		<h1>Thank you!</h1>
-		<p>An agent has been registered!</p><p><br /></p>
-		 <div class="form-group">
-
-                    <div class="col-sm-10">
-
-                        <button class="btn btn-default" id="add-to-cart-btn" type="submit">
-                            
-                           <a href="order_list.php"> Go Back</a></button>
-                    </div>
-                </div>
-		
+		<h3>An agent has been successfully registered.</h3>
+		<br/>
+		<a class="btn btn-default" href="add_agents.php">Add another agent</a>
+		or  
+		<a class="btn btn-default" href="order_list.php">Go back to Order List</a>		
 	</div> <!-- /.container -->
 	<script type="text/javascript" src="../scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
-	<script type="text/javascript">
-		document.getElementById("order-list").className = "active";
-	</script>
 </body>
 </html>
