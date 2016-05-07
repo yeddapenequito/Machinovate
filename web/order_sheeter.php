@@ -434,7 +434,7 @@
 			var loc = window.location.href;
 			var code = Number(loc.substr(loc.lastIndexOf("=") + 1));
 
-			if (code) {
+			if (code && code < type.length) {
 				type[code].checked = true;
 			} else {
 				type[0].checked = true;
