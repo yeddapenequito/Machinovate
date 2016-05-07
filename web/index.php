@@ -99,7 +99,12 @@
                         <a href="http://www.klingelnberg.com/" style="color: white;">KLINGELNBERG</a>,
                         <a href="http://www.gates.com/" style="color: white;">GATES</a>,
                         <a href="https://www.yaskawa-global.com/" style="color: white;">YASKAWA</a>, 
-                        PITTMAN, KOYO, FINDEVA, FAG, SKF 
+                        <a href="http://www.pittman-motors.com/" style="color: white;">PITTMAN
+                        </a>,
+                         <a href="http://www.koyo.eu/en/" style="color: white;">KOYO </a>,
+                         <a href="http://www.findeva.com/en/" style="color: white;">FINDEVA</a>,
+                         <a href="http://www.fag.de/content.fag.de/en/" style="color: white;"> FAG</a>, 
+                         <a href="http://www.skf.com/ph/index.html" style="color: white;">SKF</a> 
                         and the like. Our computerized controls use only the most advanced IPC technology by Bekhoff, Germany.</p>
                 </div>
                 <!-- <div class="col-lg-8 col-lg-offset-2 text-center">
