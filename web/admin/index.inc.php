@@ -57,7 +57,12 @@ if (isset($errors) && !empty($errors)) {
 				<div class="form-group">
 					<input id="primary-btn" type="submit" value="Login" class="btn btn-primary btn-block">
 				</div>
-
+				
+				<div class="form-group">
+					<div class="text-center">
+						Click <a href="/Machinovate/web/index.php">here</a> to go back to main website.
+					</div>
+				</div>
 			</form>
 		</div> <!-- /.row -->
 	</div> <!-- /.container -->

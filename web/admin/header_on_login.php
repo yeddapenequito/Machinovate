@@ -10,18 +10,8 @@
 				<div class="navbar-header">
 					<div class="navbar-brand">
 						<a href="index.inc.php"><img src="../images/machinovate-logo-colored-with-border.png"></a>
-
-			
 					</div>
 				</div>
-				<div class="nav navbar-nav navbar-right">
-				<li>
-							<div id="employee-logout">
-								<span id="hello-user" class="hidden-xs" style="color: black;">Want to go back to website?</span>
-								<a id="logout-btn" href="/Machinovate/web/index.php" class="btn btn-sm" role="button">Back to Website</a> 
-							</div>
-				</li>
-        </div>
 			</div><!--/.container-fluid -->
 		</nav>
 
