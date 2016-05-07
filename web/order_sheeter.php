@@ -120,11 +120,9 @@
 						<div class="col-sm-10">
 							<div class="form-inline">
 								<input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("gsm_min");?>'/>
-
 								<span>to</span>
-
 								<input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("gsm_max");?>'/>
-
+								grams per square meter
 								<div class="help-block with-errors"></div>
 							</div>
 						</div>

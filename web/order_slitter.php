@@ -124,11 +124,7 @@
 								<span>to</span>
 
 								<input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("gsm_max");?>'/>
-
-								<select class="form-control" name="gsmUnit"> 
-									<option value="inches">inches</option>
-									<option value="mm">millimeters</option>
-								</select>
+								grams per square meter
 								<div class="help-block with-errors"></div>
 							</div>
 						</div>
