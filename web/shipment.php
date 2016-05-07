@@ -17,7 +17,7 @@
 			<p style="color:red;font-style:italic">* Required fields.</p>
 	
 			<form id="formshipment" role="form" method="post" 
-				role="form" class="form-horizontal">
+				role="form" class="form form-horizontal">
 				<fieldset>	
 					<div class="form-group required">
 

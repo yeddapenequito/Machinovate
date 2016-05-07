@@ -44,7 +44,7 @@
 				<li class="active">Machine Order Form</li>
 			</ol>
 			<!-- <form id="form-slitter" action="order_slitter.php" name="form" role="form" class="form-horizontal" method="post"> -->
-			<form id="form" role="form" class="form-horizontal" method="post">
+			<form id="formslitter" role="form" class="form form-horizontal" method="post">
 				<legend>
 					<h1>Slitter Machine Requirements Form</h1>
 				</legend>
