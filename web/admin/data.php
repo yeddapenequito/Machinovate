@@ -41,6 +41,9 @@
 
 					// Display all the prints, linked to URLs:
 					$r = mysqli_query ($dbc, $a);
+					$t=time();
+						//echo($t . "<br>");
+						echo(date("Y-m-d",$t));
 					while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
 
 						// Display each record:
