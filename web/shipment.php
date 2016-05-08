@@ -13,6 +13,10 @@
 	<body>
 		<?php include 'header_on_form_completion.php';?>
 		<div class="container">
+		<ol class="breadcrumb">
+				<li><a href="cart_summary.php">Your Cart</a></li>
+				<li class="active">Shipment Details</li>
+			</ol>
 			<h1 class="page-header">Shipment Details</h1>
 			<p style="color:red;font-style:italic">* Required fields.</p>
 	
