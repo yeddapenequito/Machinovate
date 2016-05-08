@@ -91,17 +91,17 @@ require ('../../mysqli_connect.php');
 		    	<tbody>
 		    		<?php
 		    		// Default query for this page:
-					$a = "SELECT DISTINCT orderList.order_id, orderList.machineType , clients.companyName, orders.date , orders.orderStatus 
-						FROM orders, orderList, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailMach, misc_rollTruck
+					$a = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus 
+						FROM orders, orderlist, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailmach, misc_rolltruck
 					    WHERE 
-					    orders.order_id = orderList.order_id AND 
+					    orders.order_id = orderlist.order_id AND 
 					    clients.client_id = orders.client_id AND     
-							(cmsr_cutter.cmsr_cutter_id = orderList.cmsr_cutter_id OR 
-					        cmsr_slitter.cmsr_slitter_id = orderList.cmsr_slitter_id OR 
-							cmsr_sheeter.cmsr_sheeter_id = orderList.cmsr_sheeter_id OR 
-							misc_bailMach.misc_bailMach_id = orderList.misc_bailMach_id OR 
-					        misc_rollTruck.misc_rollTruck_id = orderList.misc_rollTruck_id )
-						ORDER BY orderList.order_id ASC;";
+							(cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR 
+					        cmsr_slitter.cmsr_slitter_id = orderlist.cmsr_slitter_id OR 
+							cmsr_sheeter.cmsr_sheeter_id = orderlist.cmsr_sheeter_id OR 
+							misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR 
+					        misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id )
+						ORDER BY orderlist.order_id ASC;";
 
 					// Display all the prints, linked to URLs:
 					$r = mysqli_query ($dbc, $a);
@@ -157,18 +157,18 @@ require ('../../mysqli_connect.php');
 
 		    	<?php
 		    		// Default query for this page:
-					$q = "SELECT DISTINCT orderList.order_id, orderList.machineType , clients.companyName, orders.date , orders.orderStatus 
-						FROM orders, orderList, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailMach, misc_rollTruck
+					$q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus 
+						FROM orders, orderlist, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailmach, misc_rolltruck
 					    WHERE 
-					    orders.order_id = orderList.order_id AND 
+					    orders.order_id = orderlist.order_id AND 
 					    clients.client_id = orders.client_id AND     
-							(cmsr_cutter.cmsr_cutter_id = orderList.cmsr_cutter_id OR 
-					        cmsr_slitter.cmsr_slitter_id = orderList.cmsr_slitter_id OR 
-							cmsr_sheeter.cmsr_sheeter_id = orderList.cmsr_sheeter_id OR 
-							misc_bailMach.misc_bailMach_id = orderList.misc_bailMach_id OR 
-					        misc_rollTruck.misc_rollTruck_id = orderList.misc_rollTruck_id )
-					        AND orderList.machineType = 'Slitter' 
-						ORDER BY orderList.order_id ASC;";
+							(cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR 
+					        cmsr_slitter.cmsr_slitter_id = orderlist.cmsr_slitter_id OR 
+							cmsr_sheeter.cmsr_sheeter_id = orderlist.cmsr_sheeter_id OR 
+							misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR 
+					        misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id )
+					        AND orderlist.machineType = 'Slitter' 
+						ORDER BY orderlist.order_id ASC;";
 
 					// Display all the prints, linked to URLs:
 					$r = mysqli_query ($dbc, $q);
@@ -225,18 +225,18 @@ require ('../../mysqli_connect.php');
 		    	<tbody>
 		    		<?php
 		    		// Default query for this page:
-					$q = "SELECT DISTINCT orderList.order_id, orderList.machineType , clients.companyName, orders.date , orders.orderStatus 
-						FROM orders, orderList, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailMach, misc_rollTruck
+					$q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus 
+						FROM orders, orderlist, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailmach, misc_rolltruck
 					    WHERE 
-					    orders.order_id = orderList.order_id AND 
+					    orders.order_id = orderlist.order_id AND 
 					    clients.client_id = orders.client_id AND     
-							(cmsr_cutter.cmsr_cutter_id = orderList.cmsr_cutter_id OR 
-					        cmsr_slitter.cmsr_slitter_id = orderList.cmsr_slitter_id OR 
-							cmsr_sheeter.cmsr_sheeter_id = orderList.cmsr_sheeter_id OR 
-							misc_bailMach.misc_bailMach_id = orderList.misc_bailMach_id OR 
-					        misc_rollTruck.misc_rollTruck_id = orderList.misc_rollTruck_id )
-					        AND orderList.machineType = 'Sheeter' 
-						ORDER BY orderList.order_id ASC; ";
+							(cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR 
+					        cmsr_slitter.cmsr_slitter_id = orderlist.cmsr_slitter_id OR 
+							cmsr_sheeter.cmsr_sheeter_id = orderlist.cmsr_sheeter_id OR 
+							misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR 
+					        misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id )
+					        AND orderlist.machineType = 'Sheeter' 
+						ORDER BY orderlist.order_id ASC; ";
 
 					// Display all the prints, linked to URLs:
 					$r = mysqli_query ($dbc, $q);
@@ -292,18 +292,18 @@ require ('../../mysqli_connect.php');
 		    	<tbody>
 		    		<?php
 		    		// Default query for this page:
-					$b = "SELECT DISTINCT orderList.order_id, orderList.machineType , clients.companyName, orders.date , orders.orderStatus 
-	FROM orders, orderList, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailMach, misc_rollTruck
+					$b = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus 
+	FROM orders, orderlist, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailmach, misc_rolltruck
     WHERE 
-    orders.order_id = orderList.order_id AND 
+    orders.order_id = orderlist.order_id AND 
     clients.client_id = orders.client_id AND     
-		(cmsr_cutter.cmsr_cutter_id = orderList.cmsr_cutter_id OR 
-        cmsr_slitter.cmsr_slitter_id = orderList.cmsr_slitter_id OR 
-		cmsr_sheeter.cmsr_sheeter_id = orderList.cmsr_sheeter_id OR 
-		misc_bailMach.misc_bailMach_id = orderList.misc_bailMach_id OR 
-        misc_rollTruck.misc_rollTruck_id = orderList.misc_rollTruck_id )
-        AND orderList.machineType = 'Cutter' 
-	ORDER BY orderList.order_id ASC;";
+		(cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR 
+        cmsr_slitter.cmsr_slitter_id = orderlist.cmsr_slitter_id OR 
+		cmsr_sheeter.cmsr_sheeter_id = orderlist.cmsr_sheeter_id OR 
+		misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR 
+        misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id )
+        AND orderlist.machineType = 'Cutter' 
+	ORDER BY orderlist.order_id ASC;";
 
 					// Display all the prints, linked to URLs:
 					$r = mysqli_query ($dbc, $b);
@@ -359,19 +359,19 @@ require ('../../mysqli_connect.php');
 		    	<tbody>
 		    		<?php
 		    		// Default query for this page:
-					$q = "SELECT DISTINCT orderList.order_id, orderList.machineType , clients.companyName, orders.date , orders.orderStatus 
-						FROM orders, orderList, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailMach, misc_rollTruck
+					$q = "SELECT DISTINCT orderlist.order_id, orderlist.machineType , clients.companyName, orders.date , orders.orderStatus 
+						FROM orders, orderlist, clients, cmsr_slitter, cmsr_sheeter, cmsr_cutter, misc_bailmach, misc_rolltruck
 					    WHERE 
-					    orders.order_id = orderList.order_id AND 
+					    orders.order_id = orderlist.order_id AND 
 					    clients.client_id = orders.client_id AND     
-							(cmsr_cutter.cmsr_cutter_id = orderList.cmsr_cutter_id OR 
-					        cmsr_slitter.cmsr_slitter_id = orderList.cmsr_slitter_id OR 
-							cmsr_sheeter.cmsr_sheeter_id = orderList.cmsr_sheeter_id OR 
-							misc_bailMach.misc_bailMach_id = orderList.misc_bailMach_id OR 
-					        misc_rollTruck.misc_rollTruck_id = orderList.misc_rollTruck_id )
-					        AND (orderList.machineType = 'Paper Roll Truck' OR 
-					        	orderList.machineType = 'Bailing Machine')
-							ORDER BY orderList.order_id ASC;";
+							(cmsr_cutter.cmsr_cutter_id = orderlist.cmsr_cutter_id OR 
+					        cmsr_slitter.cmsr_slitter_id = orderlist.cmsr_slitter_id OR 
+							cmsr_sheeter.cmsr_sheeter_id = orderlist.cmsr_sheeter_id OR 
+							misc_bailmach.misc_bailMach_id = orderlist.misc_bailMach_id OR 
+					        misc_rolltruck.misc_rollTruck_id = orderlist.misc_rollTruck_id )
+					        AND (orderlist.machineType = 'Paper Roll Truck' OR 
+					        	orderlist.machineType = 'Bailing Machine')
+							ORDER BY orderlist.order_id ASC;";
 
 					// Display all the prints, linked to URLs:
 					$r = mysqli_query ($dbc, $q);
