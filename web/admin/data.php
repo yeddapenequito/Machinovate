@@ -8,7 +8,7 @@
 
 <center>
 <p style="text-align:left;"><img src='C:\xampp\htdocs\Machinovate\web\images\mach-summary.png'
-		height = "200" width = "500" padding="0" align="left"></p>
+		height = "200" width = "880" padding="0" align="left"></p>
 			<i><b><font size="5">SUMMARY OF ORDERS</font></b></i>
 
 			<table class="table table-striped table-bordered" border="1" style="width:100%">
@@ -51,7 +51,14 @@
 							<td align=\"left\">{$row['date']}</td>
 							<td align=\"left\">{$row['orderStatus']}</td>";
 					} // End of while loop.
+										$b = "SELECT order_id FROM orderlist WHERE order_id = (SELECT MAX(order_id) FROM orderlist)";
+					$s = mysqli_query ($dbc, $b);
+					
+					while ($row = mysqli_fetch_array ($s, MYSQLI_ASSOC)) {	
 
+						// Display each record:
+						echo "\t<tr><td align=\"center\"> Total Number of Orders: <b> {$row['order_id']}</b></tr> </td>";
+					} // End of while loop.
 					echo '</table>';
 					mysqli_close($dbc);
 				
