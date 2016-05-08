@@ -1,15 +1,18 @@
-<center><h2>MACHINOVATE INTERNATIONAL INC. </h2>
-	<p><i> Summary of Orders </i> </p>
+<!-- Change the img src accdng sa directory nyo -->
+<p style="text-align:center;"><img src='C:/xampp/htdocs/Machinovate/web/images//Machinovate/web/images/machinovate-logo-white-with-border.png'
+		height = "200" width = "500" padding="0" align="middle"></p>
+	
+		<center>
+			<i><b><font size="5">SUMMARY OF ORDERS</font></b></i>
 
-
-			<table class="table table-striped table-bordered">
+			<table class="table table-striped table-bordered" border="1" style="width:100%">
 		    	<thead>
 		    		<tr>
-		    			<th>Order No.</th>
-		    			<th>Machine Type</th>
-		    			<th>Company Name</th>
-		    			<th>Date Ordered</th>
-		    			<th>Order Status</th>
+		    			<th><font size="4">Order No.</font></th>
+		    			<th><font size="4">Machine Type    		</font></th>
+		    			<th><font size="4">Company Name    		</font></th>
+		    			<th><font size="4">Date Ordered    		</font></th>
+		    			<th><font size="4">Order Status    		</font></th>
 		    		</tr>
 		    	</thead>
 		    	<tbody>
@@ -42,11 +45,23 @@
 							<td align=\"left\">{$row['date']}</td>
 							<td align=\"left\">{$row['orderStatus']}</td>";
 					} // End of while loop.
+					
+					
+					$b = "SELECT order_id FROM orderlist WHERE order_id = (SELECT MAX(order_id) FROM orderlist)";
+					$s = mysqli_query ($dbc, $b);
+					
+					while ($row = mysqli_fetch_array ($s, MYSQLI_ASSOC)) {	
 
+						// Display each record:
+						echo "\t<tr><td> Total Number of Orders: <b> {$row['order_id']}</b></tr> </td>";
+					} // End of while loop.
+					
+					
 					echo '</table>';
 					mysqli_close($dbc);
 				
 				?>
+				
 		    	</tbody>
 		    </table>
 </center>
