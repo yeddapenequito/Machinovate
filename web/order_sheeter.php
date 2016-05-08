@@ -246,7 +246,7 @@
 
 											<label class="control-label" for="slitter-max">
 												3 Station Slitter Attachment with
-												<input class="form-control" disabled id="slitter-max" name="slitterMax" type="text" value='<?php setStickyText("cutting_sl_attach");?>'/>
+												<input class="form-control" disabled id="slitter-max" name="slitterMax" type="number" value='<?php setStickyText("cutting_sl_attach");?>'/>
 												max. Side Trim Removal Blower w/ Tab Inserter Unit
 											</label>
 										</div>
