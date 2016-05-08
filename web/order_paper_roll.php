@@ -17,15 +17,19 @@
 			}
 		?>
 
-		<div  id="order-slitter" class="container">
-		<ol class="breadcrumb">
+		<div class="container">
+			<ol class="breadcrumb">
 				<li><a href="machines.php">Machines</a></li>
 				<li><a href="other_products.php">Other Products</a></li>
 				<li><a href="paper_roll_truck.php">Paper Roll Truck</a></li>
 				<li class="active">Machine Order Form</li>
 			</ol>
-			<h1 class="page-header">Paper Roll Truck Requirements Form</h1>
-			<form id="formpaperroll" action="paper_roll_form_success.php" role="form" class="form form-horizontal" method="post">
+
+			<form id="formrolltruck" action="order_paper_roll.php" role="form" class="form form-horizontal" method="post">
+				<legend>
+					<h1>Paper Roll Truck Machine Requirements Form</h1>
+				</legend>
+
 				<div class="form-group">
 					<div class="alert alert-info">
 						

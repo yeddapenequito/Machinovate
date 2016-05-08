@@ -145,8 +145,8 @@
 					<div class='panel-heading'>
 						<h4 class='panel-title'>
 							<a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#collapseSheeter'>Sheeter: " . $_SESSION['cart']['mach-sheeter']['sheeterType'] . "
-								<a href='javascript:deleteSlitter()' id='deleteSlitter' style='float:right'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span> Delete This Item</a>
-								<a href='order_slitter.php' target='_blank' style='float:right;margin-right:1em'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> Edit This Item</a>
+								<a href='javascript:deleteSlitter()' id='deleteSheeter' style='float:right'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span> Delete This Item</a>
+								<a href='order_sheeter.php' target='_blank' style='float:right;margin-right:1em'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> Edit This Item</a>
 							</a>
 						</h4>
 					</div>
@@ -193,14 +193,14 @@
 				<div class='panel panel-default'>
 					<div class='panel-heading'>
 						<h4 class='panel-title'>
-							<a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#collapseSlitter'>Cutter: " . $_SESSION['cart']['mach-cutter']['cutterType'] . "</a>
+							<a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#collapseCutter'>Cutter: " . $_SESSION['cart']['mach-cutter']['cutterType'] . "</a>
+							<a href='javascript:deleteCutter()' id='deleteCutter' style='float:right'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span> Delete This Item</a>
+							<a href='order_cutter.php' target='_blank' style='float:right;margin-right:1em'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> Edit This Item</a>
 						</h4>
 					</div>
-				<div id='collapseSlitter' class='panel-collapse collapse'>
+				<div id='collapseCutter' class='panel-collapse collapse'>
 					<div class='panel-body'>
 						<p>  Cutter Specifications 
-						<a href='javascript:deleteCutter()' id='deleteCutter'>Delete Item</a>
-						<a href='order_cutter.php' target='_blank'>Edit Item</a>
 						<ul>"
 						. "<li>Cutter Type: " . $_SESSION['cart']['mach-cutter']['cutterType'] . "</li>"
 						. "<li>CT_Details: " . $_SESSION['cart']['mach-cutter']['ct_Details'] . "</li>"
@@ -216,14 +216,14 @@
 				<div class='panel panel-default'>
 					<div class='panel-heading'>
 						<h4 class='panel-title'>
-							<a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#collapseSlitter'>Bailing Machine</a>
+							<a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#collapseBailing'>Bailing Machine</a>
+							<a href='javascript:deleteBailing()' id='deleteBailing' style='float:right'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span> Delete This Item</a>
+							<a href='order_bailing.php' target='_blank' style='float:right;margin-right:1em'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> Edit This Item</a>
 						</h4>
 					</div>
-				<div id='collapseSlitter' class='panel-collapse collapse'>
+				<div id='collapseBailing' class='panel-collapse collapse'>
 					<div class='panel-body'>
 						<p>  Bailing Machine Specifications 
-						<a href='javascript:deleteBailing()' id='deleteBailing'>Delete Item</a>
-						<a href='order_bailing.php' target='_blank'>Edit Item</a>
 						<ul>"
 						. "<li>BM_Quantity: " . $_SESSION['cart']['mach-bailing']['bm_quantity'] . "</li>"
 						. "<li>BM_Details: " . $_SESSION['cart']['mach-bailing']['bm_Details'] . "</li>"
@@ -239,14 +239,14 @@
 				<div class='panel panel-default'>
 					<div class='panel-heading'>
 						<h4 class='panel-title'>
-							<a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#collapseSlitter'>Paper Roll Truck</a>
+							<a class='accordion-toggle collapsed' data-toggle='collapse' data-parent='#accordion' href='#collapseRollTruck'>Paper Roll Truck</a>
+							<a href='javascript:deleteRollTruck()' id='deleteRollTruck' style='float:right'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span> Delete This Item</a>
+							<a href='order_paper_roll.php' target='_blank' style='float:right;margin-right:1em'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> Edit This Item</a>
 						</h4>
 					</div>
-				<div id='collapseSlitter' class='panel-collapse collapse'>
+				<div id='collapseRollTruck' class='panel-collapse collapse'>
 					<div class='panel-body'>
 						<p>  Paper Roll Truck Specifications 
-						<a href='javascript:deleteRollTruck()' id='deleteRollTruck'>Delete Item</a>
-						<a href='order_bailing.php' target='_blank'>Edit Item</a>
 						<ul>"
 						. "<li>PRT_Quantity: " . $_SESSION['cart']['mach-rolltruck']['prt_quantity'] . "</li>"
 						. "<li>PRT_Details: " . $_SESSION['cart']['mach-rolltruck']['prt_Details'] . "</li>"

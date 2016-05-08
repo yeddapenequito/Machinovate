@@ -25,7 +25,7 @@
 				<li class="active">Machine Order Form</li>
 			</ol>
 
-			<form name="formbailing" id="form" action="bailing_form_success.php" role="form" class="form form-horizontal" method="post">
+			<form id="formbailing" action="order_bailing.php" role="form" class="form form-horizontal" method="post">
 				<legend>
 					<h1>Bailing Machine Requirements Form</h1>
 				</legend>
