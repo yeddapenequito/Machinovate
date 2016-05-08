@@ -15,8 +15,17 @@
 		
 		<?php
 			////sheeter
-		echo "<p class='text-info'>Your cart contains <strong>" . count($_SESSION["cart"]) . "</strong> item/s</p>";
-			if (count($_SESSION["cart"])==0) {
+		echo "<p class='text-info'>Your cart contains <strong>";
+
+		if(session_status() == PHP_SESSION_NONE) {
+		   	echo "0";
+		} else {
+	    	echo count($_SESSION["cart"]);
+		} 
+
+		echo "</strong> item/s</p>";
+		
+			if (session_status() == PHP_SESSION_NONE) {
 				echo "<h3 class='text-primary'>Your cart is empty :(</h3>
 					  <p>
 						Go to the <a href='machines.php'>Machines</a> page and add some now. 
