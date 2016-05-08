@@ -1,8 +1,17 @@
-<center><h2>MACHINOVATE INTERNATIONAL INC. </h2>
-	<p><i> Summary of Orders </i> </p>
+<<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="container">
 
+<center>
+<p style="text-align:left;"><img src='C:\xampp\htdocs\Machinovate\web\images\mach-summary.png'
+		height = "200" width = "500" padding="0" align="left"></p>
+			<i><b><font size="5">SUMMARY OF ORDERS</font></b></i>
 
-			<table class="table table-striped table-bordered">
+			<table class="table table-striped table-bordered" border="1" style="width:100%">
 		    	<thead>
 		    		<tr>
 		    			<th>Order No.</th>
@@ -36,7 +45,7 @@
 
 						// Display each record:
 						echo "\t<tr>
-							<td align=\"left\">{$row['order_id']}</a></td>
+							<td align=\"center\">{$row['order_id']}</a></td>
 							<td align=\"left\">{$row['machineType']}</a></td>
 							<td align=\"left\">{$row['companyName']}</td>
 							<td align=\"left\">{$row['date']}</td>
@@ -50,3 +59,8 @@
 		    	</tbody>
 		    </table>
 </center>
+</div>
+
+
+</body>
+</html>
