@@ -25,7 +25,7 @@
 
 		echo "</strong> item/s</p>";
 		
-			if (session_status() == PHP_SESSION_NONE) {
+			if (session_status() == PHP_SESSION_NONE || count($_SESSION["cart"]) == "0") {
 				echo "<h3 class='text-primary'>Your cart is empty :(</h3>
 					  <p>
 						Go to the <a href='machines.php'>Machines</a> page and add some now. 
