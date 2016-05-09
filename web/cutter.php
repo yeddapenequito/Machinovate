@@ -29,8 +29,8 @@
 					
 					<div id="description">
 						<p class="text-justify">
-							Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
-						</p>
+							With enriched industrial experience and knowledge, we are providing a wide range of Hydraulic Paper Cutting Machine. Available in different models, our provided machine is well designed and manufactured under the supervision of our skilled professionals using optimum grade components and latest technology. Owing to its optimum functionality and superb performance, our provided machine is well acknowledged among our clients. Offered machine can be availed by our valuable clients at most reasonable price.
+							</p>
 					</div>
 
 					<div id="application">

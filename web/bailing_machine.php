@@ -28,8 +28,11 @@
 					
 					<div id="description">
 						<p class="text-justify">
-							Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac. Arcu es massa vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi. Nulla wisi laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget.
-						</p>
+							This machine is a kind of developed packing machine digesting American technique, designing 
+ 
+and producing according to our country`s condition and is completed set product with new technology of cotton processing.
+ 
+With opencase structure, simple operation and maintenance, it is suited to different classes and water-content cotton and compressed packing of chemical fiber, fluff, feather, hemp and grass etc.</p>
 					</div>
 
 					<div id="application">
