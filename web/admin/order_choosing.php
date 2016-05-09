@@ -29,6 +29,10 @@ require ('../../mysqli_connect.php');
 			width: 20em;
 			float: right;
 		}
+		option {
+		font-color: blue;
+		}
+		
 	</style>
 </head>
 <body>
@@ -85,6 +89,7 @@ require ('../../mysqli_connect.php');
 								</select>
 		    	</tbody>
 		    </table>
+		    
 		  </div>
 		</div> <!-- /.tab-content -->
 	</div> <!-- /.container -->
