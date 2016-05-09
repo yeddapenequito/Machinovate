@@ -10,7 +10,7 @@
 <body>
 	<?php include 'header_before_login.php';?>
 
-	
+	<center></center>
 	
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
@@ -37,7 +37,7 @@ $r = @mysqli_query ($dbc, $q); // Run the query.
 if ($r) { // If it ran OK, display the records.
 	// Fetch and print all the records:
 	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-		echo ' <center>
+		echo ' 
 			<div id="event-content" class="container">
 			<div class="row">
 					<ul class="nav nav-pills nav-stacked col-xs-12 col-sm-4">
@@ -49,13 +49,14 @@ if ($r) { // If it ran OK, display the records.
 								<p>Date:'. $row['event_date'] . '</p>
 
 							<figure>
-								<img src="uploads/'. $row['image'] . '" alt="event picture">
+								<img src="uploads/'. $row['image'] . '" alt="event picture" height = 175px width 350px >
 								
 							</figure>
 							</a>
 						</li>
 						
 					</ul> <!-- /.nav -->
+
 
 					<div class="tab-content col-xs-12 col-sm-8">
 						<div id="menu0" class="tab-pane fade in active">
@@ -65,6 +66,7 @@ if ($r) { // If it ran OK, display the records.
 						
 					</div> <!-- /.tab-content -->
 				</div> <!-- /.row -->
+
 			</div>	<!-- /.container -->
 </center>
 		';
