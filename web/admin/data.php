@@ -7,7 +7,7 @@
 <div class="container">
 
 <center>
-<p style="text-align:left;"><img src='C:\Users\Angela\Documents\3CSC\ICS114\_installers\XAMPP\htdocs\mach-summary.png'
+<p style="text-align:left;"><img src='C:\Users\Angela\Documents\3CSC\ICS114\_installers\XAMPP\htdocs\Machinovate\web\images\mach-summary.png'
 		height = "200" width = "880" padding="0" align="left"></p>
 			<i><b><font size="5">SUMMARY OF ORDERS</font></b></i>
 
