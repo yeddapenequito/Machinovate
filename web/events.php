@@ -31,7 +31,8 @@ $page_title = 'View the event';
 require ('../mysqli_connect.php'); // Connect to the db.
 		
 // Make the query:
-$q = "SELECT DISTINCT events.event_name, events.event_date, events.event_place, event_pictures.image FROM events, event_pictures WHERE events.event_id = event_pictures.event_id;";		
+$q = "SELECT DISTINCT events.event_name, events.event_date, events.event_place, event_pictures.image 
+	FROM events, event_pictures WHERE events.event_id = event_pictures.event_id ORDER BY events.event_date DESC;";		
 $r = @mysqli_query ($dbc, $q); // Run the query.
 
 if ($r) { // If it ran OK, display the records.
