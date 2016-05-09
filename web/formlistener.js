@@ -84,21 +84,6 @@ $(document).ready(function(){
 
 	$("#formslitter").submit(function(){
 		
-		/*var _rdUnit = document.getElementById("rdUnit");
-		var _rollDiameterUnit = _rdUnit.options[_rdUnit.selectedIndex].value;
-		var _rollDiameterMin = convertInchMillimeter($("input[name=rollDiameterMin]").val(), _rollDiameterUnit);
-		var _rollDiameterMax = convertInchMillimeter($("input[name=rollDiameterMax]").val(), _rollDiameterUnit);
-		var _rollDiam= _rollDiameterMin.toString() + _rollDiameterUnit + " - " + _rollDiameterMax.toString() + _rollDiameterUnit;
-
-		var _swUnit = document.getElementById("swUnit");
-		var _slittingWidthUnit = _swUnit.options[_swUnit.selectedIndex].value;
-		var _slittingWidthMin = convertInchMillimeter($("input[name=slittingWidthMin]").val(), _slittingWidthUnit);
-		var _slittingWidthMax = convertInchMillimeter($("input[name=slittingWidthMax]").val(), _slittingWidthUnit);
-		var _slitWidth = _slittingWidthMin.toString() + _slittingWidthUnit + " - " + _slittingWidthMax.toString() + _slittingWidthUnit;
-
-		var _gsmMin = $("input[name=gsmMin]").val().toString();
-		var _gsmMax = $("input[name=gsmMax]").val().toString();*/
-
 		var _rdUnit = document.getElementById("rdUnit");
 		var _swUnit = document.getElementById("swUnit");
 
@@ -150,7 +135,7 @@ $(document).ready(function(){
 			},
 			error : function(data){
 				console.log("y");
-				window.alert(data)
+				window.alert("Something went wrong with the server. Please Try Again Later. - Machinovate, Inc.")
 			}
 		});
 
@@ -181,8 +166,8 @@ $(document).ready(function(){
 				_slittingWidth_max: $("input[name=slittingWidthMax]").val() ,
 				_slittingWidth_unit: _swUnit.options[_swUnit.selectedIndex].value ,
 				
-				_cutOffLength_min: $("input[name=slittingWidthMax]").val() ,
-				_cutOffLength_max: $("input[name=slittingWidthMax]").val() ,
+				_cutOffLength_min: $("input[name=cutOffLengthMin]").val() ,
+				_cutOffLength_max: $("input[name=cutOffLengthMax]").val() ,
 				_cutOffLength_unit: _cutLenUnit.options[_cutLenUnit.selectedIndex].value ,
 
 				_cutting_mainDrive: getRadioValue("mainDriveRadio") ,
@@ -212,7 +197,7 @@ $(document).ready(function(){
 			},
 			error : function(data){
 				console.log("y");
-				window.alert(data)
+				window.alert("Something went wrong with the server. Please Try Again Later. - Machinovate, Inc.")
 			}
 		});
 
@@ -234,12 +219,12 @@ $(document).ready(function(){
 			complete : function(){},
 			success : function(data){
 				console.log("x");
-				window.alert(data)
-				window.location("shipment.php")
+				window.alert(data);
+				window.location("shipment.php");
 			},
 			error : function(data){
 				console.log("y");
-				window.alert(data)
+				window.alert("Something went wrong with the server. Please Try Again Later. - Machinovate, Inc.");
 			}
 		});
 
@@ -265,7 +250,7 @@ $(document).ready(function(){
 			},
 			error : function(data){
 				console.log("y");
-				window.alert(data)
+				window.alert("Something went wrong with the server. Please Try Again Later. - Machinovate, Inc.")
 			}
 		});
 
@@ -290,7 +275,7 @@ $(document).ready(function(){
 			},
 			error : function(data){
 				console.log("y");
-				window.alert(data)
+				window.alert("Something went wrong with the server. Please Try Again Later. - Machinovate, Inc.")
 			}
 		});
 
@@ -323,7 +308,7 @@ $(document).ready(function(){
 			},
 			error : function(data){
 				console.log("y");
-				window.alert(data)
+				window.alert("Something went wrong with the server. Please Try Again Later. - Machinovate, Inc.")
 			}
 		});
 
