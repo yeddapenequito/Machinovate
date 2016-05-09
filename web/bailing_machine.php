@@ -28,7 +28,7 @@
 					
 					<div id="description">
 						<p class="text-justify">
-							This machine is a kind of developed packing machine digesting American technique, designing 
+							   This machine is a kind of developed packing machine digesting American technique, designing 
  
 and producing according to our country`s condition and is completed set product with new technology of cotton processing.
  
