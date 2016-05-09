@@ -24,11 +24,14 @@
 					<span class="badge">
 						<?php 
 							if(session_status() == PHP_SESSION_NONE) {
-							   	echo "0";
-							} else {
-						    	echo count($_SESSION["cart"]);
-							} 
- 
+							  	session_start(); 
+							  	echo "0";
+						    		
+						    	
+							   } else {
+						    		echo count($_SESSION["cart"]);
+
+							}; 
 						?>
 						
 					</span> <i  class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Your Shopping Cart</a>
