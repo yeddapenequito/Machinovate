@@ -29,6 +29,10 @@ require ('../../mysqli_connect.php');
 			width: 20em;
 			float: right;
 		}
+		option {
+		font-color: blue;
+		}
+		
 	</style>
 </head>
 <body>
@@ -84,9 +88,10 @@ require ('../../mysqli_connect.php');
 								<option value='YEAR'>YEAR</a>
 								</select>
 
+
 		    
 		</form>
-	</div> <!-- /.container -->
+	</div> 
 	<script type="text/javascript" src="../scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
 	<script type="text/javascript">

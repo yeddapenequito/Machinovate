@@ -83,7 +83,7 @@ require ('../../mysqli_connect.php');
 		    			<th>Company Name</th>
 		    			<th>Date Ordered</th>
 		    			<th>Order Status</th>
-		    			<th>Move To</th>
+		    			<!--  -->
 		    			<th>Edit</th>
 		    			<th>Delete</th>
 		    		</tr>
@@ -114,13 +114,7 @@ require ('../../mysqli_connect.php');
 							<td align=\"left\">{$row['companyName']}</td>
 							<td align=\"left\">{$row['date']}</td>
 							<td align=\"left\">{$row['orderStatus']}</td>
-							<td>
-							  <select>
-							    <option value='COMPLETED'>COMPLETED</a>
-							    <option value='CANCELLED'>CANCELLED</a>
-							    <option value='PENDING'>PENDING</a>
-							    </select>
-		    				</td>
+							
 		    				<td>
 		    				<button><span class='glyphicon glyphicon-edit'></span></button>
 		    				</td>
@@ -149,7 +143,7 @@ require ('../../mysqli_connect.php');
 		    			<th>Company Name</th>
 		    			<th>Date Ordered</th>
 		    			<th>Order Status</th>
-		    			<th>Move To</th>
+		    			
 		    			<th>Edit</th>
 		    			<th>Delete</th>
 		    		</tr>
@@ -181,13 +175,7 @@ require ('../../mysqli_connect.php');
 							<td align=\"left\">{$row['companyName']}</td>
 							<td align=\"left\">{$row['date']}</td>
 							<td align=\"left\">{$row['orderStatus']}</td>
-							<td>
-							  <select>
-							    <option value='COMPLETED'>COMPLETED</a>
-							    <option value='CANCELLED'>CANCELLED</a>
-							    <option value='PENDING'>PENDING</a>
-							    </select>
-		    				</td>
+							
 							<td>
 		    					<button><span class='glyphicon glyphicon-edit'></span></button>
 		    				</td>
@@ -217,7 +205,7 @@ require ('../../mysqli_connect.php');
 		    			<th>Company Name</th>
 		    			<th>Date Ordered</th>
 		    			<th>Order Status</th>
-		    			<th>Move To</th>
+		    			
 		    			<th>Edit</th>
 		    			<th>Delete</th>
 		    		</tr>
@@ -249,13 +237,7 @@ require ('../../mysqli_connect.php');
 							<td align=\"left\">{$row['companyName']}</td>
 							<td align=\"left\">{$row['date']}</td>
 							<td align=\"left\">{$row['orderStatus']}</td>
-							<td>
-							  <select>
-							    <option value='COMPLETED'>COMPLETED</a>
-							    <option value='CANCELLED'>CANCELLED</a>
-							    <option value='PENDING'>PENDING</a>
-							    </select>
-		    				</td>
+							
 							<td>
 		    					<button><span class='glyphicon glyphicon-edit'></span></button>
 		    				</td>
@@ -284,7 +266,7 @@ require ('../../mysqli_connect.php');
 		    			<th>Company Name</th>
 		    			<th>Date Ordered</th>
 		    			<th>Order Status</th>
-		    			<th>Move To</th>
+		    			
 		    			<th>Edit</th>
 		    			<th>Delete</th>
 		    		</tr>
@@ -316,13 +298,7 @@ require ('../../mysqli_connect.php');
 							<td align=\"left\">{$row['companyName']}</td>
 							<td align=\"left\">{$row['date']}</td>
 							<td align=\"left\">{$row['orderStatus']}</td>
-							<td>
-							  <select>
-							    <option value='COMPLETED'>COMPLETED</a>
-							    <option value='CANCELLED'>CANCELLED</a>
-							    <option value='PENDING'>PENDING</a>
-							    </select>
-		    				</td>
+							
 							<td>
 		    					<button><span class='glyphicon glyphicon-edit'></span></button>
 		    				</td>
@@ -351,7 +327,7 @@ require ('../../mysqli_connect.php');
 		    			<th>Company Name</th>
 		    			<th>Date Ordered</th>
 		    			<th>Order Status</th>
-		    			<th>Move To</th>
+		    			
 		    			<th>Edit</th>
 		    			<th>Delete</th>
 		    		</tr>
@@ -384,13 +360,7 @@ require ('../../mysqli_connect.php');
 							<td align=\"left\">{$row['companyName']}</td>
 							<td align=\"left\">{$row['date']}</td>
 							<td align=\"left\">{$row['orderStatus']}</td>
-							<td>
-							  <select>
-							    <option value='COMPLETED'>COMPLETED</a>
-							    <option value='CANCELLED'>CANCELLED</a>
-							    <option value='PENDING'>PENDING</a>
-							    </select>
-		    				</td>
+							
 							<td>
 		    					<button><span class='glyphicon glyphicon-edit'></span></button>
 		    				</td>
