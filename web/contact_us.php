@@ -49,12 +49,17 @@
 						</tbody>
 					</table>
 				</address>
+				
 				<div class="col-sm-12 col-md-8">
-					
-					<!-- <iframe src="https://embed.waze.com/iframe?zoom=12&lat=32.10911&
-lon=34.81773" width="300" height="400"></iframe> -->
-					
-					<div id="mapdiv">
+					<!-- 
+					 <iframe src="https://embed.waze.com/iframe?zoom=12&lat=14.724387&
+lon=120.985198" width="420" height="300"></iframe>  -->
+					 <!-- <iframe src="https://maps.here.com/iframe?zoom=12&lat=14.724387&
+lon=120.985198" width="520" height="300"></iframe> -->
+ <!-- <iframe src="https://maps.here.com/iframe?zoom=12&lat=14.724387&
+lon=120.985198" width="520" height="300"></iframe> -->
+				<img src="images/maps.png">
+					<!-- <div id="mapdiv">
 					<div class="row">
 						<div align=center style="width:100%; height:100%;">
 						  <div id="map"></div>
@@ -68,6 +73,7 @@ lon=34.81773" width="300" height="400"></iframe> -->
 						  app_code: 'AJKnXv84fjrb0KIHawS0Tg',
 						  useCIT: true,
 						  useHTTPS: true
+						  
 						});
 						var defaultLayers = platform.createDefaultLayers();
 						
@@ -89,7 +95,7 @@ lon=34.81773" width="300" height="400"></iframe> -->
 						}
 						addMarkersToMap(map);
 						  </script>
-					</div>
+					</div> -->
 			</div>
 					
 				</div>
