@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="styles/bootstrap.min.css">
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<title>Machinovate | Events</title>
 </head>
 <body>
@@ -12,8 +16,7 @@
 
 	<center></center>
 	
-	<script type="text/javascript" src="scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+	
 	<script type="text/javascript">
 	document.getElementById("events").className = "active";
 	</script>
@@ -41,8 +44,10 @@ if ($r) { // If it ran OK, display the records.
 		echo ' 
 			<div id="event-content" class="container">
 			<div class="row">
+
 					<ul class="nav nav-pills nav-stacked col-xs-12 col-sm-4">
 						<li class="active">
+
 							<a data-toggle="pill" href="#menu0">
 								<p id="event-name">'. $row['event_name'] . '
 </p>
@@ -50,8 +55,23 @@ if ($r) { // If it ran OK, display the records.
 								<p>Date:'. $row['event_date'] . '</p>
 
 							<figure>
-								<img src="uploads/'. $row['image'] . '" alt="event picture" height = 175px width 350px >
+
+							
 								
+
+
+
+						 <div id="pageone" data-role="main" class="ui-content">
+					    
+					    <a href="#myPopup" data-rel="popup" data-position-to="window">
+					    <img src="uploads/'. $row['image'] . '" alt="event picture" height = 175px width 350px >
+
+					    <div data-role="popup" id="myPopup">
+					      <p>This is my picture!</p> 
+					      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="uploads/'. $row['image'] . '" alt="event picture" height = 375px width 350px >
+					    </div>
+
+
 							</figure>
 							</a>
 						</li>
