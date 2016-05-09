@@ -7,7 +7,7 @@
 <div class="container">
 
 <center>
-<p style="text-align:left;"><img src='C:\Users\Angela\Documents\3CSC\ICS114\_installers\XAMPP\htdocs\Machinovate\web\images\mach-summary.png'
+<p style="text-align:left;"><img src='C:\xampp\htdocs\Machinovate\web\images\mach-summary.png'
 		height = "200" width = "880" padding="0" align="left"></p>
 			<i><b><font size="5">SUMMARY OF ORDERS</font></b></i>
 
@@ -43,7 +43,8 @@
 					$r = mysqli_query ($dbc, $a);
 					$t=time();
 						//echo($t . "<br>");
-						echo(date("Y-m-d",$t));
+						date_default_timezone_set("Asia/Manila");
+						echo "Downloaded on: " . date("m-d-y") . "  " . date("h:i:sa");
 					while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
 
 						// Display each record:
@@ -54,7 +55,7 @@
 							<td align=\"left\">{$row['date']}</td>
 							<td align=\"left\">{$row['orderStatus']}</td>";
 					} // End of while loop.
-										$b = "SELECT order_id FROM orderlist WHERE order_id = (SELECT MAX(order_id) FROM orderlist)";
+					$b = "SELECT order_id FROM orderlist WHERE order_id = (SELECT MAX(order_id) FROM orderlist)";
 					$s = mysqli_query ($dbc, $b);
 					
 					while ($row = mysqli_fetch_array ($s, MYSQLI_ASSOC)) {	
