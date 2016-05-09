@@ -87,18 +87,11 @@ require ('../../mysqli_connect.php');
 								<option value='MONTH'>MONTH</a>
 								<option value='YEAR'>YEAR</a>
 								</select>
-<<<<<<< HEAD
-		    	</tbody>
-		    </table>
-		    
-		  </div>
-		</div> <!-- /.tab-content -->
-=======
+
 
 		    
 		</form>
->>>>>>> branch 'master' of https://github.com/yeddapenequito/Machinovate
-	</div> <!-- /.container -->
+	</div> 
 	<script type="text/javascript" src="../scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
 	<script type="text/javascript">
