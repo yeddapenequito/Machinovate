@@ -157,6 +157,7 @@
                         mysqli_close($dbc); // Close the database connection.
 
                     } // End of the main Submit conditional.
+                    //min="<?php echo date("Y-m-d");" - to prevent past dates
 
                     ?>
                     <input type="hidden" name="MAX_FILE_SIZE" value="524288" />
@@ -169,7 +170,7 @@
                         <div class="form-group required">
                             <label for="starting-date" class="col-sm-3 control-label">Starting Date:</label>
                             <div class="col-sm-9">
-                                <input required id="starting-date" type="date" class="form-control" name="event_date" maxlength="40" min="<?php echo date("Y-m-d"); ?>" value="<?php if (isset($_POST['event_date'])) echo $_POST['event_date']; ?>" />
+                                <input required id="starting-date" type="date" class="form-control" name="event_date" maxlength="40"  value="<?php if (isset($_POST['event_date'])) echo $_POST['event_date']; ?>" />
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -241,6 +242,14 @@
                     $(this).parent('.item').remove();
                 });
             });-->
+            <script type="text/javascript">
+                    $(function () {
+                $("event_date").datepicker({
+                    dateFormat: "yy-mm-dd",changeYear:true
+                });
+            });
         </script>
+
+
     </body>
 </html>

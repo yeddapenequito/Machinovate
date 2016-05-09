@@ -1,18 +1,24 @@
-<!-- Change the img src accdng sa directory nyo -->
-<p style="text-align:center;"><img src='C:/xampp/htdocs/Machinovate/web/images//Machinovate/web/images/machinovate-logo-white-with-border.png'
-		height = "200" width = "500" padding="0" align="middle"></p>
-	
-		<center>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="container">
+
+<center>
+<p style="text-align:left;"><img src='C:\Users\Angela\Documents\3CSC\ICS114\_installers\XAMPP\htdocs\mach-summary.png'
+		height = "200" width = "880" padding="0" align="left"></p>
 			<i><b><font size="5">SUMMARY OF ORDERS</font></b></i>
 
 			<table class="table table-striped table-bordered" border="1" style="width:100%">
 		    	<thead>
 		    		<tr>
-		    			<th><font size="4">Order No.</font></th>
-		    			<th><font size="4">Machine Type    		</font></th>
-		    			<th><font size="4">Company Name    		</font></th>
-		    			<th><font size="4">Date Ordered    		</font></th>
-		    			<th><font size="4">Order Status    		</font></th>
+		    			<th>Order No.</th>
+		    			<th>Machine Type</th>
+		    			<th>Company Name</th>
+		    			<th>Date Ordered</th>
+		    			<th>Order Status</th>
 		    		</tr>
 		    	</thead>
 		    	<tbody>
@@ -35,33 +41,36 @@
 
 					// Display all the prints, linked to URLs:
 					$r = mysqli_query ($dbc, $a);
+					$t=time();
+						//echo($t . "<br>");
+						echo(date("Y-m-d",$t));
 					while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
 
 						// Display each record:
 						echo "\t<tr>
-							<td align=\"left\">{$row['order_id']}</a></td>
+							<td align=\"center\">{$row['order_id']}</a></td>
 							<td align=\"left\">{$row['machineType']}</a></td>
 							<td align=\"left\">{$row['companyName']}</td>
 							<td align=\"left\">{$row['date']}</td>
 							<td align=\"left\">{$row['orderStatus']}</td>";
 					} // End of while loop.
-					
-					
-					$b = "SELECT order_id FROM orderlist WHERE order_id = (SELECT MAX(order_id) FROM orderlist)";
+										$b = "SELECT order_id FROM orderlist WHERE order_id = (SELECT MAX(order_id) FROM orderlist)";
 					$s = mysqli_query ($dbc, $b);
 					
 					while ($row = mysqli_fetch_array ($s, MYSQLI_ASSOC)) {	
 
 						// Display each record:
-						echo "\t<tr><td> Total Number of Orders: <b> {$row['order_id']}</b></tr> </td>";
+						echo "\t<tr><td align=\"center\"> Total Number of Orders: <b> {$row['order_id']}</b></tr> </td>";
 					} // End of while loop.
-					
-					
 					echo '</table>';
 					mysqli_close($dbc);
 				
 				?>
-				
 		    	</tbody>
 		    </table>
-</center>
+		</center>
+	</div>
+
+
+</body>
+</html>

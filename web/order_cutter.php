@@ -139,7 +139,7 @@
 
 					<div class="col-sm-10">
 						<div class="radio">
-							<label><input class="type" name="cutterRadio" type="radio" id="CT_115E" value="CT_115E" <?php setStickyRadio("cutterType", "CT_115E");?>/>
+							<label><input  checked class="type" name="cutterRadio" type="radio" id="CT_115E" value="CT_115E" <?php setStickyRadio("cutterType", "CT_115E");?>/>
 								CT-115E (115 cm/45.2in)</label>
 						</div>
 						<div class="radio">
