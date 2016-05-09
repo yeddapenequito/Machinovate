@@ -52,17 +52,17 @@ require ('../../mysqli_connect.php');
 
 	?>
 		<form class="form" role="form">
-	        <div class="form-group text-right">
+	       
 	        	<div class="input-group">
 	        		<input placeholder="Search" id="search" name="search" type="text" class="form-control">
 	        		<div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
 	        	</div>
-	        </div>
-		</form>
+	        
+		
 		<br>
 		<br>Order Status:
 								<select>
-							    <option value='COMPLETED'>COMPLETED</a>
+							    <option value="COMPLETED">COMPLETED</a>
 							    <option value='CANCELLED'>CANCELLED</a>
 							    <option value='PENDING'>PENDING</a>
 							    </select>
@@ -83,15 +83,14 @@ require ('../../mysqli_connect.php');
 								<option value='MONTH'>MONTH</a>
 								<option value='YEAR'>YEAR</a>
 								</select>
-		    	</tbody>
-		    </table>
-		  </div>
-		</div> <!-- /.tab-content -->
+
+		    
+		</form>
 	</div> <!-- /.container -->
 	<script type="text/javascript" src="../scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
 	<script type="text/javascript">
-		document.getElementById("order-list").className = "active";
+		document.getElementById("order-summary").className = "active";
 	</script>
 </body>
 </html>

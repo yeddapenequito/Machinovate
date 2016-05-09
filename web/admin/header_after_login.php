@@ -20,7 +20,7 @@
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
 						<li><a id="order-list" href="order_list.php">Order List</a></li>
-						<li><a id="order-list" href="generate_report.php">Download Order Summary</a></li>
+						<li><a id="order-summary" href="order_choosing.php">Download Order Summary</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Website <b class="caret"></b></a>
 							<ul class="dropdown-menu">

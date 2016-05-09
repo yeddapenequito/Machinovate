@@ -67,8 +67,9 @@ if ($r) { // If it ran OK, display the records.
 					    <img src="uploads/'. $row['image'] . '" alt="event picture" height = 175px width 350px >
 
 					    <div data-role="popup" id="myPopup">
-					      <p>This is my picture!</p> 
-					      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="uploads/'. $row['image'] . '" alt="event picture" height = 375px width 350px >
+					      
+					      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="uploads/'. $row['image'] . '" alt="event picture" height = 375px width 350px ></a>
+					    </div>
 					    </div>
 
 
