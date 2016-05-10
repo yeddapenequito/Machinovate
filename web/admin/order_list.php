@@ -65,11 +65,13 @@ require ('../../mysqli_connect.php');
 	?>
 		<form class="form" role="form">
 	        <div class="form-group text-right">
-	        	<div class="input-group">
-	        		
-	        		<a href="generate_report.php">Print Order </a>
+	        	<div class="input-group">	
 	        			
-	        		
+	        		<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<a id="print-btn"  class="btn btn-primary" href="generate_report.php" >Print Order</a>
+					</div>
+				</div>
 	        		
 	        	</div>
 	        </div>
