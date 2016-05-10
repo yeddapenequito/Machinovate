@@ -32,7 +32,7 @@ require ('../../mysqli_connect.php');
 	
 </head>
 <body>
-	<?php include 'header_after_login.php';?>
+	<?php include "header_after_login.php";?>
 	<?php 
 		// The user is redirected here AFTER SUCCESSFUL LOGIN
 
@@ -40,26 +40,34 @@ require ('../../mysqli_connect.php');
 
 		// If no session value is present, redirect the user:
 		// Also validate the HTTP_USER_AGENT!
-		if (!isset($_SESSION['agent']) OR ($_SESSION['agent'] != md5($_SERVER['HTTP_USER_AGENT']) )) {
+		if (!isset($_SESSION["agent"]) OR ($_SESSION["agent"] != md5($_SERVER["HTTP_USER_AGENT"]) )) {
 
 			// Need the functions:
-			require ('includes/login_functions.inc.php');
+			require ("includes/login_functions.inc.php");
 			redirect_user();	
 
 		}
 
+		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		
+			$_SESSION['os'] = mysqli_real_escape_string($dbc, trim($_POST["orderStatus"]));
+			$_SESSION['mt'] = mysqli_real_escape_string($dbc, trim($_POST["machineType"]));
+			$_SESSION['od'] = mysqli_real_escape_string($dbc, trim($_POST["orderDate"]));
+			$_SESSION['sd'] = mysqli_real_escape_string($dbc, trim($_POST["shippingDate"]));
+
+		}	
 	?>
  <div class="container">
     <div class="row">
-        <form enctype="multipart/form-data" action="add_account.php" method="post" class="form form-horizontal col-sm-6" role="form">
+        <form enctype="multipart/form-data" action="generate_report.php" method="post" class="form form-horizontal col-sm-6" role="form">
             <fieldset>
 
-                <legend>Edit Status:</legend>
+                <legend>Print Order Summary Filters:</legend>
                 
                 <div class="form-group">
-                     <label class="col-sm-3" for="last_name">Order Status: </label>
+                     <label class="col-sm-3" for="last_name" >Order Status: </label>
                      <div class="col-sm-9">
-                     <select class="form-control">
+                     <select class="form-control" id="orderStatus" name="orderStatus" maxlength="40" value="<?php if (isset($_POST['orderStatus'])) echo $_POST['orderStatus']; ?>">
 					    <option value="COMPLETED">COMPLETED</a>
 					    <option value='CANCELLED'>CANCELLED</a>
 					    <option value='PENDING'>PENDING</a>
@@ -72,7 +80,7 @@ require ('../../mysqli_connect.php');
                  <div class="form-group">
                      <label class="col-sm-3" for="first_name">Machine Type: </label>
                      <div class="col-sm-9">
-                       <select class="form-control">
+                       <select class="form-control" id="machineType" name="machineType" maxlength="40" value="<?php if (isset($_POST['machineType'])) echo $_POST['machineType']; ?>">
 					    <option value='SLITTER'>SLITTER</a>
 					    <option value='SHEETER'>SHEETER</a>
 					    <option value='CUTTER'>CUTTER</a>
@@ -85,7 +93,7 @@ require ('../../mysqli_connect.php');
                <div class="form-group">
                      <label class="col-sm-3" for="username">Order's Date by: </label>
                      <div class="col-sm-9">
-                     <input type="date" class="form-control" id="date-start" name="event_date" maxlength="40"/>
+                     <input type="date" class="form-control" id="orderDate" name="orderDate" maxlength="40" value="<?php if (isset($_POST['orderDate'])) echo $_POST['orderDate']; ?>"/>
                     <!--  <select class="form-control" style="width:30%;" id="select1">
 						<option value=''>Month</a>
 						<option value='1'>January</a>
@@ -116,7 +124,7 @@ require ('../../mysqli_connect.php');
                 <div class="form-group">
                      <label class="col-sm-3" for="password">Shipping Date: </label>
                      <div class="col-sm-9">
-                     <input type="date" class="form-control" id="date-start" name="event_date" maxlength="40"/>
+                     <input type="date" class="form-control" id="shippingDate" name="shippingDate" maxlength="40" value="<?php if (isset($_POST['shippingDate'])) echo $_POST['shippingDate']; ?>"/>
                        <!--  <select class="form-control" style="width:30%;" id="select1" >
 				<option value=''>Month</a>
 				<option value='1'>January</a>
@@ -145,7 +153,7 @@ require ('../../mysqli_connect.php');
 
               <div class="form-group">
 		    <div class="col-sm-offset-3 col-sm-9">
-		        <input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Edit Status">
+		        <input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Print Report">
 		        <a class="btn btn-default" id="cancel-btn" href="order_list.php">
 		            Cancel</a>
             </div>
