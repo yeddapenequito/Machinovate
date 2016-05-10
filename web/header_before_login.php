@@ -28,8 +28,8 @@
 							  	echo "0";
 						    		
 						    	
-							   } else {
-						    		echo count($_SESSION["cart"]);
+							} else {
+						    	echo count($_SESSION["cart"]);
 
 							}; 
 						?>

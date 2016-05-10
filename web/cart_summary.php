@@ -14,10 +14,10 @@
 		<h1>Your Shopping Cart</h1>
 		
 		<?php
-			////sheeter
+
 		echo "<p class='text-info'>Your cart contains <strong>";
 
-		if(session_status() == PHP_SESSION_NONE) {
+		if(session_status() == PHP_SESSION_NONE ) {
 		   	echo "0";
 		} else {
 	    	echo count($_SESSION["cart"]);
