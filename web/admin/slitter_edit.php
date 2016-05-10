@@ -34,7 +34,7 @@
                     <legend>General Section</legend>
 
                     <!-- Type -->
-                    <div class="form-group">
+                    <div class="form-group required">
 
                         <label for="type" class="control-label col-sm-2">Type:</label>
 
@@ -59,7 +59,7 @@
                     </div>
 
                     <!-- Production Vol. -->
-                    <div class="form-group">
+                    <div class="form-group required">
 
                         <label class="control-label col-sm-2" for="production-vol">Production Volume:</label>
 
@@ -73,7 +73,7 @@
                     </div>
 
                     <!-- Paper Type -->
-                    <div class="form-group">
+                    <div class="form-group required">
 
                         <label class="control-label col-sm-2" for="paper-type">Paper Type:</label>
 
@@ -83,7 +83,7 @@
                     </div>
 
                     <!-- GSM -->
-                    <div class="form-group">
+                    <div class="form-group required">
 
                         <label  class="control-label col-sm-2" for="gsm">GSM:</label>
 
@@ -104,7 +104,7 @@
                     </div>
 
                     <!-- Roll Diameter -->
-                    <div class="form-group">
+                    <div class="form-group required">
 
                         <label class="control-label col-sm-2" for="roll-diameter">Roll Diameter:</label>
 
@@ -126,7 +126,7 @@
                     </div>
 
                     <!-- Slitting Width -->
-                    <div class="form-group">
+                    <div class="form-group required">
 
                         <label class="control-label col-sm-2" for="slitting-width">Slitting Width:</label>
 
@@ -152,7 +152,7 @@
                     <legend>Cutting Section</legend>
 
                     <!-- Slitter -->
-                    <div class="form-group">
+                    <div class="form-group required">
 
                         <label  class="control-label col-sm-2" for="slitter">Slitter:</label>
 
@@ -195,7 +195,7 @@
                     <legend>Unwind Roll Stand Section</legend>
 
                     <!-- Reel Stand -->
-                    <div class="form-group">
+                    <div class="form-group required">
                         <label class="control-label col-sm-2">Reel Stand:</label>
                         <div class="col-sm-10">
 
@@ -234,7 +234,7 @@
                     </div>
 
                     <!-- Ton Capacity -->
-                    <div class="form-group">
+                    <div class="form-group required">
 
                         <label class="control-label col-sm-2" for="ton-capacity">Ton Capacity:</label>
 
@@ -252,7 +252,7 @@
                     <legend>Systems Section</legend>
 
                     <!-- Systems -->
-                    <div class="form-group">
+                    <div class="form-group required">
 
                         <label class="control-label col-sm-2">Systems:</label>
 
@@ -296,34 +296,10 @@
                         </div>
                     </div>
                 </fieldset>
-                <fieldset> <!--Price Details Section-->
-                    <legend>Price Details</legend>
-
-                    <div class="form-group">
-                        <label for="comment" class="control-label col-sm-2">FOB Price:</label>
-                        <div class="col-sm-10">
-                           <div class="input-group">
-                                <span class="input-group-addon">&#8369;</span>
-                                <input class="form-control" id="quantity" min="0.001" name="fob" step="1" type="number" style="width:30%;" />
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="comment" class="control-label col-sm-2">CIF Price:</label>
-                        <div class="col-sm-10">
-                            <div class="input-group">
-                                <span class="input-group-addon">&#8369;</span>
-                                <input class="form-control" id="quantity" min="0.001" name="cif" step="1" type="number" style="width:30%;" />
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-
                 <fieldset> <!--Other Details Section-->
                     <legend>Other Details</legend>
 
-                    <div class="form-group">
+                    <div class=" required">
                         <label for="comment" class="control-label col-sm-2">Details:</label>
                         <div class="col-sm-offset-2 col-sm-10">
                             <textarea placeholder="Place your additional requirements here." class="form-control" id="comment" rows="8" name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
@@ -347,14 +323,19 @@
         
         <script type="text/javascript" src="../scripts/jquery.min.js"></script>
        <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
-        <script type="text/javascript">
+       <script type="text/javascript" src="../scripts/validator.min.js"></script>
+       <script type="text/javascript">
+
             document.getElementById("slitter-additional-checkbox").onchange = function() {
                 
                 if(document.getElementById("slitter-additional-checkbox").checked) {
                     document.getElementById("slitter-additional-text-field").removeAttribute("disabled");
+                    document.getElementById("slitter-additional-text-field").setAttribute("required", "required");
                 }
                 else {
                     document.getElementById("slitter-additional-text-field").setAttribute("disabled", "disabled");
+                    document.getElementById("slitter-additional-text-field").removeAttribute("required");
+
                     document.getElementById("slitter-additional-text-field").value = "";
                 }
             };
@@ -363,9 +344,11 @@
             
                 if(document.getElementById("reel-stand-others-checkbox").checked) {
                     document.getElementById("reel-stand-others-text-field").removeAttribute("disabled");
+                    document.getElementById("reel-stand-others-text-field").setAttribute("required", "required");
                 }
                 else {
                     document.getElementById("reel-stand-others-text-field").setAttribute("disabled", "disabled");
+                    document.getElementById("reel-stand-others-text-field").removeAttribute("required");
                     document.getElementById("reel-stand-others-text-field").value = "";
                 }
             };
@@ -374,13 +357,14 @@
                 
                 if(document.getElementById("systems-others-checkbox").checked) {
                     document.getElementById("systems-others-text-field").removeAttribute("disabled");
+                    document.getElementById("systems-others-text-field").setAttribute("required", "required");
                 }
                 else {
                     document.getElementById("systems-others-text-field").setAttribute("disabled", "disabled");
+                    document.getElementById("systems-others-text-field").removeAttribute("required");
                     document.getElementById("systems-others-text-field").value = "";
                 }
             };
-
         </script>
 </body>
 </html>
