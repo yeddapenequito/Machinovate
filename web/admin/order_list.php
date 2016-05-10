@@ -32,13 +32,25 @@ require ('../../mysqli_connect.php');
 	</style>
 </head>
 <body>
-	<?php include 'header_after_login.php';?>
+	
+	<?php 
+
+	session_start(); // Start the session.
+		
+	 if (($_SESSION['user_id'] != 1)){
+		include 'header_after_login_nonadmin.php';
+	}
+	else{
+		include 'header_after_login.php';
+	}
+
+	?>
 	
 	<div id="order-list-content" class="container">
 	<?php 
 		// The user is redirected here AFTER SUCCESSFUL LOGIN
 
-		session_start(); // Start the session.
+		
 
 		// If no session value is present, redirect the user:
 		// Also validate the HTTP_USER_AGENT!
