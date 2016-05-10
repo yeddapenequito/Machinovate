@@ -31,7 +31,8 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" id="edit-account" data-toggle="dropdown">Manage Account <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="edit_account.php">Change Username and Password</a></li>
+								<li><a href="edit_account.php">Change Password</a></li>
+								<li><a href="add_account.php">Add New Account</a></li>
 							</ul>
 						</li>
 						<li><a id="faq" href="faq_admin.php">Help/FAQ</a></li>
