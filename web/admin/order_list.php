@@ -189,7 +189,7 @@ require ('../../mysqli_connect.php');
 							<td align=\"left\">{$row['orderStatus']}</td>
 							
 							<td>
-		    					<button><span class='glyphicon glyphicon-edit'></span></button>
+		    					<button><a href='slitter_edit.php' target='_blank' style='float:right;margin-right:1em'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> </a></button>
 		    				</td>
 		    				<td>
 		    					<button><span class='glyphicon glyphicon-remove'></span></button>
@@ -251,7 +251,7 @@ require ('../../mysqli_connect.php');
 							<td align=\"left\">{$row['orderStatus']}</td>
 							
 							<td>
-		    					<button><span class='glyphicon glyphicon-edit'></span></button>
+		    					<button><a href='sheeter_edit.php' target='_blank' style='float:right;margin-right:1em'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> </a></button>
 		    				</td>
 		    				<td>
 		    					<button><span class='glyphicon glyphicon-remove'></span></button>
@@ -312,7 +312,7 @@ require ('../../mysqli_connect.php');
 							<td align=\"left\">{$row['orderStatus']}</td>
 							
 							<td>
-		    					<button><span class='glyphicon glyphicon-edit'></span></button>
+		    					<button><a href='cutter_edit.php' target='_blank' style='float:right;margin-right:1em'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> </a></button>
 		    				</td>
 		    				<td>
 		    					<button><span class='glyphicon glyphicon-remove'></span></button>
@@ -374,7 +374,14 @@ require ('../../mysqli_connect.php');
 							<td align=\"left\">{$row['orderStatus']}</td>
 							
 							<td>
-		    					<button><span class='glyphicon glyphicon-edit'></span></button>
+							if ([orderlist.machineType = 'Paper Roll Truck']){
+								<button><a href='paper-roll_edit.php' target='_blank' style='float:right;margin-right:1em'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> </a></button>
+							}
+							else{
+								<button><a href='bailing_edit.php' target='_blank' style='float:right;margin-right:1em'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> </a></button>
+							}
+		    					
+							
 		    				</td>
 		    				<td>
 		    					<button><span class='glyphicon glyphicon-remove'></span></button>
@@ -394,6 +401,7 @@ require ('../../mysqli_connect.php');
 	</div> <!-- /.container -->
 	<script type="text/javascript" src="../scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../scripts/validator.min.js"></script>
 	<script type="text/javascript">
 		document.getElementById("order-list").className = "active";
 	</script>

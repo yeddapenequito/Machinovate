@@ -26,102 +26,94 @@
 <body>
     <?php include 'header_after_login.php';?>
     
-   <div  id="order-slitter" class="container">
-            <h1 class="page-header">Cutter Form Requirements</h1>
-            <form action="cutter_form_success.php" role="form" class="form-horizontal" method="post">
-                <fieldset>
-                    <legend>General Section</legend>
-
-                    <!-- Type -->
-                    <div class="form-group">
-
-                        <label for="type" class="control-label col-sm-2">Type:</label>
-
-                        <div class="col-sm-10">
-                            <div class="radio">
-                                <label><input class="type" name="cutterRadio" type="radio" value="115E">
-                                    CT-115E (115 cm/45.2in)</label>
-                            </div>
-                            <div class="radio">
-                                <label><input class="type" name="cutterRadio" type="radio" value="137E">
-                                    CT-137E (137 cm/53.9in)</label>
-                            </div>
-                            <div class="radio">
-                                <label><input class="type" name="cutterRadio" type="radio" value="155E">
-                                    CT-155E (155cm/61in)</label>
-                            </div>
-                            <div class="radio">
-                                <label><input class="type" name="cutterRadio" type="radio" value="185E">
-                                    CT-185E (185cm/72.8in)</label>
-                            </div>
-                            <div class="radio">
-                                <label><input class="type" name="cutterRadio" type="radio" value="220E">
-                                    CT-220E (220cm/86.6in)</label>
-                            </div>
-                            <div class="radio">
-                                <label><input class="type" name="cutterRadio" type="radio" value="260E">
-                                    CT-260E (260cm/102.3in)</label>
-                            </div>
-                            <div class="radio">
-                                <label><input class="type" name="cutterRadio" type="radio" value="300E">
-                                    CT-300E (300cm/118.1in)</label>
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-
-                <fieldset> <!--Price Details Section-->
-                    <legend>Price Details</legend>
-
-                    <div class="form-group">
-                        <label for="comment" class="control-label col-sm-2">FOB Price:</label>
-                        <div class="col-sm-10">
-                           <div class="input-group">
-                                <span class="input-group-addon">&#8369;</span>
-                                <input class="form-control" id="quantity" min="0.001" name="fob" step="1" type="number" style="width:30%;" />
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="comment" class="control-label col-sm-2">CIF Price:</label>
-                        <div class="col-sm-10">
-                            <div class="input-group">
-                                <span class="input-group-addon">&#8369;</span>
-                                <input class="form-control" id="quantity" min="0.001" name="cif" step="1" type="number" style="width:30%;" />
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-                <br>
+   <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="machines.php">Machines</a></li>
+                <li><a href="cutter.php">Cutter</a></li>
+                <li class="active">Machine Order Form</li>
                 
-                <fieldset>
-                    <legend>Other Details</legend>
+            </ol>
+            <form id="formcutter" action="order_list.php" role="form" class="form form-horizontal" method="post">
+                <legend>
+                    <h1>Cutter Machine Requirements Form</h1>
+                </legend>
+                <div class="form-group">
+                    <div class="alert alert-info">
+                        
+                        <p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
+                    </div>
+                </div>
+                <p style="color:red;font-style:italic">* Required fields.</p>
+                
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <img src="../images/CT-115E.png" id="cutter-images" style="height: 
+                        200px; width: 230px;">
+                        <img src="../images/CT-137E.png" id="cutter-images" style="height: 
+                        200px; width: 230px;">
+                        <img src="../images/CT-155E.png" id="cutter-images" style="height: 
+                        200px; width: 230px;">
+                        <img src="../images/CT-260E.png" id="cutter-images" style="height: 
+                        200px; width: 230px;">
+                    </div>
+                </div>
 
-                    <div class="form-group">
+                <!-- Type -->
+                <div class="form-group required">
+                    <label for="type" class="control-label col-sm-2">Type:</label>
 
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <textarea class="form-control" id="comment" rows="8"  name="otherDetails" value="<?php if (isset($_POST['otherDetails'])) echo $_POST['otherDetails']; ?>"></textarea>
+                    <div class="col-sm-10">
+                        <div class="radio">
+                            <label><input  checked class="type" name="cutterRadio" type="radio" id="CT_115E" value="CT_115E"/>
+                                CT-115E (115 cm/45.2in)</label>
+                        </div>
+                        <div class="radio">
+                            <label><input class="type" name="cutterRadio" type="radio" id="CT_137E" value="CT_137E"/>
+                                CT-137E (137 cm/53.9in)</label>
+                        </div>
+                        <div class="radio">
+                            <label><input class="type" name="cutterRadio" type="radio" id="CT_155E" value="CT_155E"/>
+                                CT-155E (155cm/61in)</label>
+                        </div>
+                        <div class="radio">
+                            <label><input class="type" name="cutterRadio" type="radio" id="CT_185E" value="CT_185E"/>
+                                CT-185E (185cm/72.8in)</label>
+                        </div>
+                        <div class="radio">
+                            <label><input class="type" name="cutterRadio" type="radio" id="CT_220E" value="CT_220E"/>
+                                CT-220E (220cm/86.6in)</label>
+                        </div>
+                        <div class="radio">
+                            <label><input class="type" name="cutterRadio" type="radio" id="CT_260E" value="CT_260E"/>
+                                CT-260E (260cm/102.3in)</label>
+                        </div>
+                        <div class="radio">
+                            <label><input class="type" name="cutterRadio" type="radio" id="CT_300E" value="CT_300E"/>
+                                CT-300E (300cm/118.1in)</label>
                         </div>
                     </div>
-                </fieldset>
+                </div>
 
+                <!-- Other Details -->
                 <div class="form-group">
+                    <label for="type" class="control-label col-sm-2">Other Details:</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="comment" rows="8"  placeholder="Place your additional requirements here if any." style="width:80%;" name="otherDetails"></textarea>
+                    </div>
+                </div>
 
+                <!-- Submit and Cancel Buttons -->
+                <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-
-                        <button class="btn btn-default" id="add-to-cart-btn" type="submit">
-                            Finish</button>
-                        <a class="btn btn-default" id="cancel-btn" href="order_list.php">
-                            Cancel</a>
+                        <input class="btn btn-primary" type="submit">
+                        <a id="cancel-btn" onclick="window.history.back()">Cancel</a>
                     </div>
                 </div>
             </form>
+            
         </div> <!-- /.container -->
-    <script type="text/javascript" src="../scripts/jquery.min.js"></script>
-    <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
-    <style>
-   
-    </style>
+        <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/validator.min.js"></script>
 </body>
 </html>
