@@ -57,38 +57,43 @@ require ('../../mysqli_connect.php');
 	?>
 		<form class="form" role="form">
 	       
-	        	<div class="input-group">
-	        		<input placeholder="Search" id="search" name="search" type="text" class="form-control">
-	        		<div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
-	        	</div>
-	        
+	        <div class="input-group">
+	        	<input placeholder="Search" id="search" name="search" type="text" class="form-control">
+	        	<div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+	        </div>	    
 		
 		<br>
 		<br>Order Status:
-								<select>
-							    <option value="COMPLETED">COMPLETED</a>
-							    <option value='CANCELLED'>CANCELLED</a>
-							    <option value='PENDING'>PENDING</a>
-							    </select>
-		<hr></hr>
+			<select>
+			    <option value="COMPLETED">COMPLETED</a>
+			    <option value='CANCELLED'>CANCELLED</a>
+			    <option value='PENDING'>PENDING</a>
+			</select>
+	
 		<br>
 		<br>Machine Type:
-								<select>
-							    <option value='SLITTER'>SLITTER</a>
-							    <option value='SHEETER'>SHEETER</a>
-							    <option value='CUTTER'>CUTTER</a>
-							    <option value='BAILING'>BAILING MACHINE</a>
-							    <option value='ROLL'>PAPER ROLL TRUCK</a>
-							    </select> 
-		<hr></hr>
+			<select>
+			    <option value='SLITTER'>SLITTER</a>
+			    <option value='SHEETER'>SHEETER</a>
+			    <option value='CUTTER'>CUTTER</a>
+			    <option value='BAILING'>BAILING MACHINE</a>
+			    <option value='ROLL'>PAPER ROLL TRUCK</a>
+			</select> 
+	
 		<br>
 		<br>Order's Date by:
-								<select>
-								<option value='MONTH'>MONTH</a>
-								<option value='YEAR'>YEAR</a>
-								</select>
+			<select>
+				<option value='MONTH'>MONTH</a>
+				<option value='YEAR'>YEAR</a>
+			</select>
 
-
+		<div class="form-group">
+		    <div class="col-sm-offset-3 col-sm-9">
+		        <input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Edit Account">
+		        <a class="btn btn-default" id="cancel-btn" href="order_list.php">
+		            Cancel</a>
+            </div>
+        </div>
 		    
 		</form>
 	</div> 
