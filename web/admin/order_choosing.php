@@ -20,6 +20,8 @@ require ('../../mysqli_connect.php');
 	<link rel="stylesheet" href="../styles/bootstrap.min.css">
 	<link rel="stylesheet" href="../styles/main.css">
 	<link rel="stylesheet" href="../styles/admin.css">
+	
+
 	<title>Machinovate | Order List</title>
 	<style>
 		form {
@@ -63,7 +65,7 @@ require ('../../mysqli_connect.php');
 	        </div>	    
 		
 		<br>
-		<br>Order Status:
+		<br>Order Status:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 			<select>
 			    <option value="COMPLETED">COMPLETED</a>
 			    <option value='CANCELLED'>CANCELLED</a>
@@ -71,7 +73,7 @@ require ('../../mysqli_connect.php');
 			</select>
 	
 		<br>
-		<br>Machine Type:
+		<br>Machine Type:&nbsp&nbsp&nbsp&nbsp
 			<select>
 			    <option value='SLITTER'>SLITTER</a>
 			    <option value='SHEETER'>SHEETER</a>
@@ -81,12 +83,56 @@ require ('../../mysqli_connect.php');
 			</select> 
 	
 		<br>
-		<br>Order's Date by:
+		<br>Order's Date by:&nbsp&nbsp
 			<select>
-				<option value='MONTH'>MONTH</a>
-				<option value='YEAR'>YEAR</a>
+				<option value=''>&nbsp&nbsp&nbsp&nbsp&nbspMonth&nbsp&nbsp&nbsp&nbsp</a>
+				<option value='1'>&nbsp&nbspJanuary</a>
+				<option value='2'>&nbsp&nbspFebruary</a>
+				<option value='3'>&nbsp&nbsp&nbspMarch</a>
+				<option value='4'>&nbsp&nbsp&nbsp&nbspApril</a>
+				<option value='5'>May</a>
+				<option value='6'>June</a>
+				<option value='7'>July</a>
+				<option value='8'>August</a>
+				<option value='9'>September</a>
+				<option value='10'>October</a>
+				<option value='11'>November</a>
+				<option value='12'>December</a>
 			</select>
-
+			<select>
+				
+				<option value=''>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspYEAR&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+				<option value='2013'>2013</a>
+				<option value='2014'>2014</a>
+				<option value='2015'>2015</a>
+				<option value='2016'>2016</a>
+				
+			</select>
+			<br>
+			
+		<br> Shipping Date: &nbsp&nbsp&nbsp  
+			<select>
+				<option value=''>&nbsp&nbsp&nbsp&nbsp&nbspMonth&nbsp&nbsp&nbsp&nbsp</a>
+				<option value='1'>January</a>
+				<option value='2'>February</a>
+				<option value='3'>March</a>
+				<option value='4'>April</a>
+				<option value='5'>May</a>
+				<option value='6'>June</a>
+				<option value='7'>July</a>
+				<option value='8'>August</a>
+				<option value='9'>September</a>
+				<option value='10'>October</a>
+				<option value='11'>November</a>
+				<option value='12'>December</a>
+        	</select>
+			<select>
+				<option value=''>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspYEAR&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+				<option value='2013'>2013</a>
+				<option value='2014'>2014</a>
+				<option value='2015'>2015</a>
+				<option value='2016'>2016</a>
+			</select>
 		<div class="form-group">
 		    <div class="col-sm-offset-3 col-sm-9">
 		        <input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Edit Account">
@@ -102,5 +148,7 @@ require ('../../mysqli_connect.php');
 	<script type="text/javascript">
 		document.getElementById("order-summary").className = "active";
 	</script>
+	
 </body>
 </html>
+
