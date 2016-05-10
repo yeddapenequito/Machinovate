@@ -29,7 +29,7 @@
   <div  id="order-slitter" class="container">
             <h1 class="page-header">Paper Roll Truck Form Requirements</h1>
             <!-- please change the form action... to what name if ever wrong-->
-            <form action="paper_roll_form_success.php" role="form" class="form-horizontal" method="post">
+            <form action="order_list.php" role="form" class="form-horizontal" method="post">
                 <!-- Quantity -->
                     <div class="form-group">
                     <label for="type" class="control-label col-sm-2">Quantity:</label>
@@ -38,27 +38,8 @@
                             <input class="form-control" id="quantity" min="1" name="bailingQuantity" step="1" type="number" style="width:10%;" value='<?php if (isset($_POST['bailingQuantity'])) echo $_POST['bailingQuantity']; ?>'/>
                         </div>
                     </div>
-                    <!-- Price -->
-                    <div class="form-group">
-                        <label for="comment" class="control-label col-sm-2">FOB Price:</label>
-                        <div class="col-sm-10">
-                            <div class="input-group">
-                                <span class="input-group-addon">&#8369;</span>
-                                <input class="form-control" id="quantity" min="0.001" name="fob" step="1" type="number" style="width:30%;" />
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                        <label for="comment" class="control-label col-sm-2">CIF Price:</label>
-                        <div class="col-sm-10">
-                            <div class="input-group">
-                                <span class="input-group-addon">&#8369;</span>
-                                <input class="form-control" id="quantity" min="0.001" name="cif" step="1" type="number" style="width:30%;" />
-                            </div>
-                        </div>
-                    </div>
-
-                    </div>
+                    
+                  
                     <div class="form-group">
                     <label for="type" class="control-label col-sm-2">Comments/Suggestions:</label>
                         <div class="col-sm-10">
@@ -80,6 +61,8 @@
         </div> <!-- /.container -->
     <script type="text/javascript" src="../scripts/jquery.min.js"></script>
     <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/validator.min.js"></script>
+       
     <style>
    
     </style>

@@ -27,22 +27,12 @@
     <?php include 'header_after_login.php';?>
     
    <div class="container">
-            <ol class="breadcrumb">
-                <li><a href="machines.php">Machines</a></li>
-                <li><a href="cutter.php">Cutter</a></li>
-                <li class="active">Machine Order Form</li>
-                
-            </ol>
+            
             <form id="formcutter" action="order_list.php" role="form" class="form form-horizontal" method="post">
                 <legend>
                     <h1>Cutter Machine Requirements Form</h1>
                 </legend>
-                <div class="form-group">
-                    <div class="alert alert-info">
-                        
-                        <p>If you have any concerns, please feel free to contact any of these numbers: (02) 404 6676/(02) 355 4635</p>
-                    </div>
-                </div>
+                
                 <p style="color:red;font-style:italic">* Required fields.</p>
                 
                 <div class="form-group">
@@ -112,8 +102,8 @@
             </form>
             
         </div> <!-- /.container -->
-        <script type="text/javascript" src="scripts/jquery.min.js"></script>
-        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-        <script type="text/javascript" src="scripts/validator.min.js"></script>
+        <script type="text/javascript" src="../scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../scripts/validator.min.js"></script>
 </body>
 </html>

@@ -192,7 +192,8 @@ require ('../../mysqli_connect.php');
 		    					<button><a href='slitter_edit.php' target='_blank' style='float:right;margin-right:1em'><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> </a></button>
 		    				</td>
 		    				<td>
-		    					<button><span class='glyphicon glyphicon-remove'></span></button>
+
+		    					<button><a href='javascript:deleteSlitter()' id='deleteSlitter'><span class='glyphicon glyphicon-remove'></span></a></button>
 		    				</td>
 						</tr>\n";
 
@@ -402,6 +403,7 @@ require ('../../mysqli_connect.php');
 	<script type="text/javascript" src="../scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../scripts/validator.min.js"></script>
+	<script type="text/javascript" src="../formlistener.js"></script>
 	<script type="text/javascript">
 		document.getElementById("order-list").className = "active";
 	</script>
