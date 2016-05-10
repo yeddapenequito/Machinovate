@@ -77,7 +77,8 @@
     
             // Print a message.
             echo '<h1>Thank you!</h1>
-            <p>An account has been added. Please logout to use your new account.  </p><p><br /></p>';    
+            <p>An account has been added. Please logout to use your new account.  </p><p><br /></p>';
+            header('Location: /Machinovate/web/admin/new-account.php');    
 
         } else { // If it did not run OK.
 
@@ -172,7 +173,7 @@
                
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-9">
-                        <input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Edit Account">
+                        <input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Add Account">
                         <a class="btn btn-default" id="cancel-btn" href="order_list.php">
                             Cancel</a>
                     </div>
