@@ -20,27 +20,19 @@ require ('../../mysqli_connect.php');
 	<link rel="stylesheet" href="../styles/bootstrap.min.css">
 	<link rel="stylesheet" href="../styles/main.css">
 	<link rel="stylesheet" href="../styles/admin.css">
-	
+	<style type="text/css">
+	#select1, #select2{
+		display: inline;
+	}
+
+
+	</style>
 
 	<title>Machinovate | Order List</title>
-	<style>
-		form {
-			width: 100%;
-		}
-		form .form-group {
-			width: 20em;
-			float: right;
-		}
-		option {
-		font-color: blue;
-		}
-		
-	</style>
+	
 </head>
 <body>
 	<?php include 'header_after_login.php';?>
-	
-	<div id="order-list-content" class="container">
 	<?php 
 		// The user is redirected here AFTER SUCCESSFUL LOGIN
 
@@ -57,62 +49,74 @@ require ('../../mysqli_connect.php');
 		}
 
 	?>
-		<form class="form" role="form">
-	       
-	        <div class="input-group">
-	        	<input placeholder="Search" id="search" name="search" type="text" class="form-control">
-	        	<div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
-	        </div>	    
-		
-		<br>
-		<br>Order Status:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-			<select>
-			    <option value="COMPLETED">COMPLETED</a>
-			    <option value='CANCELLED'>CANCELLED</a>
-			    <option value='PENDING'>PENDING</a>
-			</select>
+ <div class="container">
+    <div class="row">
+        <form enctype="multipart/form-data" action="add_account.php" method="post" class="form form-horizontal col-sm-6" role="form">
+            <fieldset>
+
+                <legend>Edit Status:</legend>
+                
+                <div class="form-group">
+                     <label class="col-sm-3" for="last_name">Order Status: </label>
+                     <div class="col-sm-9">
+                     <select class="form-control">
+					    <option value="COMPLETED">COMPLETED</a>
+					    <option value='CANCELLED'>CANCELLED</a>
+					    <option value='PENDING'>PENDING</a>
+					</select>
 	
-		<br>
-		<br>Machine Type:&nbsp&nbsp&nbsp&nbsp
-			<select>
-			    <option value='SLITTER'>SLITTER</a>
-			    <option value='SHEETER'>SHEETER</a>
-			    <option value='CUTTER'>CUTTER</a>
-			    <option value='BAILING'>BAILING MACHINE</a>
-			    <option value='ROLL'>PAPER ROLL TRUCK</a>
-			</select> 
-	
-		<br>
-		<br>Order's Date by:&nbsp&nbsp
-			<select>
-				<option value=''>&nbsp&nbsp&nbsp&nbsp&nbspMonth&nbsp&nbsp&nbsp&nbsp</a>
-				<option value='1'>&nbsp&nbspJanuary</a>
-				<option value='2'>&nbsp&nbspFebruary</a>
-				<option value='3'>&nbsp&nbsp&nbspMarch</a>
-				<option value='4'>&nbsp&nbsp&nbsp&nbspApril</a>
-				<option value='5'>May</a>
-				<option value='6'>June</a>
-				<option value='7'>July</a>
-				<option value='8'>August</a>
-				<option value='9'>September</a>
-				<option value='10'>October</a>
-				<option value='11'>November</a>
-				<option value='12'>December</a>
-			</select>
-			<select>
+                        <div class="help-block with-errors"></div>
+                     </div>
+                </div>
+                <br>
+                 <div class="form-group">
+                     <label class="col-sm-3" for="first_name">Machine Type: </label>
+                     <div class="col-sm-9">
+                       <select class="form-control">
+					    <option value='SLITTER'>SLITTER</a>
+					    <option value='SHEETER'>SHEETER</a>
+					    <option value='CUTTER'>CUTTER</a>
+					    <option value='BAILING'>BAILING MACHINE</a>
+					    <option value='ROLL'>PAPER ROLL TRUCK</a>
+					</select> 
+                     </div>
+                </div>
+                <br>
+               <div class="form-group">
+                     <label class="col-sm-3" for="username">Order's Date by: </label>
+                     <div class="col-sm-9">
+                     <select class="form-control" style="width:30%;" id="select1">
+						<option value=''>Month</a>
+						<option value='1'>January</a>
+						<option value='2'>February</a>
+						<option value='3'>March</a>
+						<option value='4'>April</a>
+						<option value='5'>May</a>
+						<option value='6'>June</a>
+						<option value='7'>July</a>
+						<option value='8'>August</a>
+						<option value='9'>September</a>
+						<option value='10'>October</a>
+						<option value='11'>November</a>
+						<option value='12'>December</a>
+					</select>
+					<select class="form-control" style="width:30%;" id="select2">
 				
-				<option value=''>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspYEAR&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-				<option value='2013'>2013</a>
-				<option value='2014'>2014</a>
-				<option value='2015'>2015</a>
-				<option value='2016'>2016</a>
-				
-			</select>
-			<br>
-			
-		<br> Shipping Date: &nbsp&nbsp&nbsp  
-			<select>
-				<option value=''>&nbsp&nbsp&nbsp&nbsp&nbspMonth&nbsp&nbsp&nbsp&nbsp</a>
+						<option value=''>YEAR</a>
+						<option value='2013'>2013</a>
+						<option value='2014'>2014</a>
+						<option value='2015'>2015</a>
+						<option value='2016'>2016</a>
+						
+					</select>
+                     </div>
+                </div>
+                <br>
+                <div class="form-group">
+                     <label class="col-sm-3" for="password">Shipping Date: </label>
+                     <div class="col-sm-9">
+                        <select class="form-control" style="width:30%;" id="select1" >
+				<option value=''>Month</a>
 				<option value='1'>January</a>
 				<option value='2'>February</a>
 				<option value='3'>March</a>
@@ -126,23 +130,28 @@ require ('../../mysqli_connect.php');
 				<option value='11'>November</a>
 				<option value='12'>December</a>
         	</select>
-			<select>
-				<option value=''>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspYEAR&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+			<select  class="form-control" style="width:30%;" id="select2">
+				<option value=''>YEAR</a>
 				<option value='2013'>2013</a>
 				<option value='2014'>2014</a>
 				<option value='2015'>2015</a>
 				<option value='2016'>2016</a>
 			</select>
-		<div class="form-group">
+                        <div class="help-block with-errors"></div>
+                     </div>
+                </div>
+
+              <div class="form-group">
 		    <div class="col-sm-offset-3 col-sm-9">
-		        <input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Edit Account">
+		        <input class="btn btn-default" id="add-to-cart-btn" type="submit" value="Edit Status">
 		        <a class="btn btn-default" id="cancel-btn" href="order_list.php">
 		            Cancel</a>
             </div>
         </div>
-		    
-		</form>
-	</div> 
+            </fieldset>
+        </form>
+    </div> <!-- /.row -->
+</div> <!-- /.container -->
 	<script type="text/javascript" src="../scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
 	<script type="text/javascript">
@@ -151,4 +160,3 @@ require ('../../mysqli_connect.php');
 	
 </body>
 </html>
-
