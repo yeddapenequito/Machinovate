@@ -50,11 +50,21 @@ require ('../../mysqli_connect.php');
 
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
-			$_SESSION['os'] = mysqli_real_escape_string($dbc, trim($_POST["orderStatus"]));
-			$_SESSION['mt'] = mysqli_real_escape_string($dbc, trim($_POST["machineType"]));
-			$_SESSION['od'] = mysqli_real_escape_string($dbc, trim($_POST["orderDate"]));
-			$_SESSION['sd'] = mysqli_real_escape_string($dbc, trim($_POST["shippingDate"]));
+			if(isset($_POST['orderStatus'])){
+				$_SESSION['orderStatus'] = mysqli_real_escape_string($dbc, trim($_POST["orderStatus"]));
+			}
 
+			if(isset($_POST['machineType'])){
+				$_SESSION['machineType'] = mysqli_real_escape_string($dbc, trim($_POST["machineType"]));
+			}
+
+			if(isset($_POST['orderDate'])){
+				$_SESSION['orderDate'] = mysqli_real_escape_string($dbc, trim($_POST["orderDate"]));
+			}
+
+			if(isset($_POST['shippingDate'])){
+				$_SESSION['shippingDate'] = mysqli_real_escape_string($dbc, trim($_POST["shippingDate"]));
+			}
 		}	
 	?>
  <div class="container">

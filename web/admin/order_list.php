@@ -66,8 +66,11 @@ require ('../../mysqli_connect.php');
 		<form class="form" role="form">
 	        <div class="form-group text-right">
 	        	<div class="input-group">
-	        		<input placeholder="Search" id="search" name="search" type="text" class="form-control">
-	        		<div class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+	        		
+	        		<a href="generate_report.php">Print Order </a>
+	        			
+	        		
+	        		
 	        	</div>
 	        </div>
 		</form>
