@@ -40,19 +40,19 @@
 
                         <div class="col-sm-10">
                             <div class="radio">
-                                <label><input class="type" name="sheeterType" type="radio" value="SH_PIV" <?php setStickyRadio("sheeterType", "SH_PIV");?>/>
+                                <label><input class="type" name="sheeterType" type="radio" value="SH_PIV"/>
                                     MACH-SV (PIV - Overlapping)</label>
                             </div>
                             <div class="radio">
-                                <label><input class="type" name="sheeterType" type="radio" value="SH_SRV" <?php setStickyRadio("sheeterType", "SH_SRV");?>/>
+                                <label><input class="type" name="sheeterType" type="radio" value="SH_SRV"/> 
                                     MACH-SRV (Servo - Overlapping)</label>
                             </div>
                             <div class="radio">
-                                <label><input class="type" name="sheeterType" type="radio" value="SH_Compact" <?php setStickyRadio("sheeterType", "SH_Compact");?>/>
+                                <label><input class="type" name="sheeterType" type="radio" value="SH_Compact" />
                                     MACH-Compact (Standard)</label>
                             </div>
                             <div class="radio">
-                                <label><input class="type" name="sheeterType" type="radio" value="SH_Sync" <?php setStickyRadio("sheeterType", "SH_Sync");?>/>
+                                <label><input class="type" name="sheeterType" type="radio" value="SH_Sync" />
                                     MACH-Sync (Twin Knife - Overlapping)</label>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                         <div class="col-sm-10">
                             <div class="input-group">
                                 
-                                <input class="form-control" id="production-vol" min="0.001" name="productionVolume" step="0.001" type="number" required value='<?php setStickyText("productionVolume");?>'/>
+                                <input class="form-control" id="production-vol" min="0.001" name="productionVolume" step="0.001" type="number" />
                                 <span class="input-group-addon">Tons per day</span>
                             </div>
                             <div class="help-block with-errors"></div>
@@ -79,7 +79,7 @@
                         <label class="control-label col-sm-2" for="paper-type">Paper Type:</label>
 
                         <div class="col-sm-10">
-                            <input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text" required value='<?php setStickyText("paperType");?>'/>
+                            <input class="form-control" id="paper-type" name="paperType" placeholder="e.g. Ledger, Newsprint, Carbonless" type="text" />
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -91,9 +91,9 @@
 
                         <div class="col-sm-10">
                             <div class="form-inline">
-                                <input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("gsm_min");?>'/>
+                                <input class="form-control" min="0.001" name="gsmMin" placeholder="Min" size="5" step="0.001" type="number"/>
                                 <span>to</span>
-                                <input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("gsm_max");?>'/>
+                                <input class="form-control" min="0.001" name="gsmMax" placeholder="Max" size="5" step="0.001" type="number" />
                                 grams per square meter
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -109,15 +109,15 @@
                         <div class="col-sm-10">
                             <div class="form-inline">
 
-                                    <input class="form-control" min="0.001" name="rollDiameterMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("rollDiameter_min");?>'/>
+                                    <input class="form-control" min="0.001" name="rollDiameterMin" placeholder="Min" size="5" step="0.001" type="number" />
 
                                     <span>to</span>
 
-                                    <input class="form-control" min="0.001" name="rollDiameterMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("rollDiameter_max");?>'/>
+                                    <input class="form-control" min="0.001" name="rollDiameterMax" placeholder="Max" size="5" step="0.001" type="number" />
 
                                     <select id="rdUnit" class="form-control" name="rollDiameterUnit"> 
-                                        <option value="&quot;" <?php setStickyOption("rollDiameter_unit", "\"");?>>inches</option>
-                                        <option value="mm" <?php setStickyOption("rollDiameter_unit", "mm");?>>millimeters</option>
+                                        <option value="&quot;" >inches</option>
+                                        <option value="mm" >millimeters</option>
                                     </select>
                                     <div class="help-block with-errors"></div>
                             </div>
@@ -131,15 +131,15 @@
 
                         <div class="col-sm-10">
                             <div class="form-inline">
-                                <input class="form-control" min="0.001" name="cutOffLengthMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("slittingWidth_min");?>'/>
+                                <input class="form-control" min="0.001" name="cutOffLengthMin" placeholder="Min" size="5" step="0.001" type="number" />
 
                                 <span>to</span>
 
-                                <input class="form-control" min="0.001" name="cutOffLengthMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("slittingWidth_max");?>'/>
+                                <input class="form-control" min="0.001" name="cutOffLengthMax" placeholder="Max" size="5" step="0.001" type="number" />
 
                                 <select  id="cutLenUnit" class="form-control" name="cutOffLengthUnit"> 
-                                    <option value="&quot;" <?php setStickyOption("cutOffLength_unit", "\"");?>>inches</option>
-                                    <option value="mm" <?php setStickyOption("cutOffLength_unit", "mm");?>>millimeters</option>
+                                    <option value="&quot;" >inches</option>
+                                    <option value="mm" >millimeters</option>
                                 </select>
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -153,15 +153,15 @@
 
                         <div class="col-sm-10">
                             <div class="form-inline">
-                                <input class="form-control" min="0.001" name="slittingWidthMin" placeholder="Min" size="5" step="0.001" type="number" required value='<?php setStickyText("cutOffLength_min");?>'/>
+                                <input class="form-control" min="0.001" name="slittingWidthMin" placeholder="Min" size="5" step="0.001" type="number" />
 
                                 <span>to</span>
 
-                                <input class="form-control" min="0.001" name="slittingWidthMax" placeholder="Max" size="5" step="0.001" type="number" required value='<?php setStickyText("cutOffLength_max");?>'/>
+                                <input class="form-control" min="0.001" name="slittingWidthMax" placeholder="Max" size="5" step="0.001" type="number" />
 
                                 <select id="swUnit" class="form-control" name="slittingWidthUnit"> 
-                                    <option value="&quot;" <?php setStickyOption("slittingWidth_unit", "\"");?>>inches</option>
-                                    <option value="mm" <?php setStickyOption("slittingWidth_unit", "mm");?>>millimeters</option>
+                                    <option value="&quot;" >inches</option>
+                                    <option value="mm" >millimeters</option>
                                 </select>
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -179,11 +179,11 @@
 
                         <div class="col-sm-10">
                             <div class="radio">
-                                <label><input checked id="main-drive" name="mainDriveRadio" type="radio" value="Inverter" <?php setStickyRadio("cutting_mainDrive", "Inverter");?>>
+                                <label><input checked id="main-drive" name="mainDriveRadio" type="radio" value="Inverter" >
                                     Inverter</label>
                             </div>
                             <div class="radio">
-                                <label><input id="main-drive" name="mainDriveRadio" type="radio" value="Servo Motor and Touch Screen" <?php setStickyRadio("cutting_mainDrive", "Servo Motor and Touch Screen");?>>
+                                <label><input id="main-drive" name="mainDriveRadio" type="radio" value="Servo Motor and Touch Screen" >
                                     Servo Motor and Touch Screen</label>
                             </div>
                         </div>
@@ -196,11 +196,11 @@
 
                         <div class="col-sm-10">
                             <div class="radio">
-                                <label><input checked id="knife" name="knifeRadio" type="radio" value="Single Knife" <?php setStickyRadio("cutting_knife", "Single Knife");?>>
+                                <label><input checked id="knife" name="knifeRadio" type="radio" value="Single Knife" >
                                     Single Knife</label>
                             </div>
                             <div class="radio">
-                                <label><input id="knife" name="knifeRadio" type="radio" value="Twin Knife" <?php setStickyRadio("cutting_knife", "Twin Knife");?>>
+                                <label><input id="knife" name="knifeRadio" type="radio" value="Twin Knife">
                                     Twin Knife</label>
                             </div>
                         </div>
@@ -212,13 +212,13 @@
                         <div class="col-sm-10">
                             
                             <div class="checkbox">
-                                <label><input id="slitter" name="slitterCheckbox" type="checkbox" <?php setStickyCheckWithText("cutting_sl_attach");?>/>
+                                <label><input id="slitter" name="slitterCheckbox" type="checkbox"/>
                                     <div class="form-inline">
                                         <div class="form-group">
 
                                             <label class="control-label" for="slitter-max">
                                                 3 Station Slitter Attachment with
-                                                <input class="form-control" disabled id="slitter-max" name="slitterMax" type="number" value='<?php setStickyText("cutting_sl_attach");?>'/>
+                                                <input class="form-control" disabled id="slitter-max" name="slitterMax" type="number"/>
                                                 max. Side Trim Removal Blower w/ Tab Inserter Unit
                                             </label>
                                         </div>
@@ -286,7 +286,7 @@
                             <div class="checkbox">
                                 
                                 <label>
-                                    <input id='atcds' class="reel-stand-checkbox" name="reelStand[]" type="checkbox" value="3" <?php setStickyChkbox("urs_tensionDecurler");?>/>
+                                    <input id='atcds' class="reel-stand-checkbox" name="reelStand[]" type="checkbox" value="3" />
                                     Auto Tension Control with Decurler System
                                 </label>
                             </div>
@@ -294,7 +294,7 @@
                             <div class="checkbox">
                                 
                                 <label>
-                                    <input id='iatss' class="reel-stand-checkbox" name="reelStand[]" type="checkbox" value="4" <?php setStickyChkbox("urs_individualTension");?>/>
+                                    <input id='iatss' class="reel-stand-checkbox" name="reelStand[]" type="checkbox" value="4" />
                                     Individual Auto Tension for Stationary Stand
                                 </label>
                             </div>
@@ -309,19 +309,19 @@
                         <div class="col-sm-10">
                             <div class="checkbox">
                                 <label>
-                                    <input id='ms' class="shaft-check" name="shaft[]" type="checkbox" value="1" <?php setStickyChkbox("urs_mechanical");?>/>
+                                    <input id='ms' class="shaft-check" name="shaft[]" type="checkbox" value="1" />
                                     Mechanical Shaft
                                 </label>
                             </div>  
                             <div class="checkbox">
                                 <label>
-                                    <input id='as' class="shaft-check" name="shaft[]" type="checkbox" value="2" <?php setStickyChkbox("urs_airHD");?>/>
+                                    <input id='as' class="shaft-check" name="shaft[]" type="checkbox" value="2" />
                                     Air Shaft (Heavy Duty)
                                 </label>
                             </div>  
                             <div class="checkbox">
                                 <label>
-                                    <input id='oth' class="shaft-check" name="shaft[]" type="checkbox" value="3" <?php setStickyChkbox("urs_others");?>/>
+                                    <input id='oth' class="shaft-check" name="shaft[]" type="checkbox" value="3" />
                                     Others
                                 </label>
                             </div>                          
@@ -335,7 +335,7 @@
                         
                         <div class="col-sm-10">
                             <div class="input-group">
-                                <input class="form-control" min="0.001" step="0.001" id="roll-weight"  name="rollWeight" type="number" required value='<?php setStickyText("urs_rollWeight");?>'/>
+                                <input class="form-control" min="0.001" step="0.001" id="roll-weight"  name="rollWeight" type="number" />
                                 <span class="input-group-addon">Tons</span>
                             </div>
                             <div class="help-block with-errors"></div>
@@ -351,22 +351,22 @@
                             <div class="col-sm-10">
                                 <div class="checkbox">
                                     <label>
-                                        <input id='ccalsasaqc' name="systems[]" type="checkbox" value="1" <?php setStickyChkbox("sys_computerControl");?>/>
+                                        <input id='ccalsasaqc' name="systems[]" type="checkbox" value="1"/>
                                         Computer Control with Auto Length Setting with Auto Squareness and Auto Quantity Control
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input id='wghepc' name="systems[]" type="checkbox" value="2" <?php setStickyChkbox("sys_webGuideHydraulicEPC");?>/>
+                                        <input id='wghepc' name="systems[]" type="checkbox" value="2" />
                                         Web Guide Hydraulic EPC Control and Mechanism
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input id="systems-others-check" name="systems[]" type="checkbox" value="3" <?php setStickyCheckWithText("sys_others");?>>
+                                        <input id="systems-others-check" name="systems[]" type="checkbox" value="3" >
                                         <div class="form-inline">
                                             Others
-                                            <input name='sysOthers'disabled class="form-control" id="systems-others-text" type="text" value='<?php setStickyText("sys_others");?>'>
+                                            <input name='sysOthers'disabled class="form-control" id="systems-others-text" type="text" >
                                         </div>
                                     </label>
                                 </div>
@@ -381,7 +381,7 @@
                     <div class="form-group">
                         <label for="comment" class="control-label col-sm-2">Details:</label>
                         <div class="col-sm-10">
-                            <textarea placeholder="Place your additional requirements here if any." class="form-control" rows="8" id="comment" name="otherDetails"><?php setStickyText("sh_Details");?></textarea>
+                            <textarea placeholder="Place your additional requirements here if any." class="form-control" rows="8" id="comment" name="otherDetails"></textarea>
                         </div>
                     </div>
                 </fieldset>
