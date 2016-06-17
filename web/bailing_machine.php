@@ -40,8 +40,7 @@ With opencase structure, simple operation and maintenance, it is suited to diffe
 					</div>
 
 					<div id="btn-group">
-						<p><a  href="order_bailing.php" class="btn btn-primary btn-block btn-lg">
-							Add to Cart</a></p>
+						
 						<p><a id="contact-us-btn"  href="contact_us.php" class="btn btn-primary btn-block btn-lg">Contact Us for More Details</a></p>
 					</div>
 					
