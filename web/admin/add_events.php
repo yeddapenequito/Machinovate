@@ -21,14 +21,30 @@
     </head>
     <body>
         
+<?php # Script 9.5 - register.php #2
+
+    //session
+    session_start(); // Start the session.
+
+    // If no session value is present, redirect the user:
+    // Also validate the HTTP_USER_AGENT!
+    if (!isset($_SESSION['agent']) OR ($_SESSION['agent'] != md5($_SERVER['HTTP_USER_AGENT']) )) {
+
+        // Need the functions:
+        require ('includes/login_functions.inc.php');
+        redirect_user();    
+
+    }
+        $page_title = 'Machinovate | Add Events';
+        include ('header_after_login.php');
+?>
         <div class="container">
             <div class="row">
                 <form enctype="multipart/form-data" action="add_events.php" method="post" class="form-horizontal col-sm-6" role="form">
                     <!--PHP -->
                     <?php # Script 9.5 - register.php #2
                     // This script performs an INSERT query to add a record to the events table
-                    $page_title = 'Machinovate | Add Events';
-                    include ('header_after_login.php');
+                   
                     // Check for form submission:
                     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         require ('../../mysqli_connect.php'); // Connect to the db.

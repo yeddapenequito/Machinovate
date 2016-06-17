@@ -20,9 +20,9 @@
 				<li><a id="agents" href="agents.php">Agents</a></li>
 			</ul>
 			<div class="nav navbar-nav navbar-right">
-				<a href="cart_summary.php" type="button" class="btn btn-default btn-lg" id="primary-btn" style="background-color:#16a085;color:white">
+				<!-- <a href="cart_summary.php" type="button" class="btn btn-default btn-lg" id="primary-btn" style="background-color:#16a085;color:white">
 					<span class="badge">
-						<?php 
+						<!--<?php 
 							if(session_status() == PHP_SESSION_NONE) {
 							  	session_start(); 
 							  	echo "0";
@@ -34,7 +34,7 @@
 							}; 
 						?>
 						
-					</span> <i  class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Your Shopping Cart</a>
+					</span> <i  class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i> Your Shopping Cart</a> -->
 				<span>Are you an employee?</span>
                 <a href="admin/index.inc.php" type="button" class="btn btn-default btn-lg" id="primary-btn">
                 	<i class="glyphicon glyphicon-log-in" aria-hidden="true"></i> Login</a>

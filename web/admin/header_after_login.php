@@ -19,7 +19,7 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li><a id="order-list" href="order_list.php">Order List</a></li>
+						<!--<li><a id="order-list" href="order_list.php">Order List</a></li>-->
 						
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Website <b class="caret"></b></a>
