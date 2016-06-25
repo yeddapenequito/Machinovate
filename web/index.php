@@ -82,18 +82,24 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>About Machinovate</h2>
+                <h2>Company Profile</h2>
                 <hr>
                 
             </div>
         </div>
         <div class="row">
             <div class="col-lg-4 col-lg-offset-2">
-                <p class="lead">Customization/Tailoring is the Key! That's what makes MACH brand stand out from all the rest in the market! </p>
+                <!--<p class="lead">Customization/Tailoring is the Key! That's what makes MACH brand stand out from all the rest in the market! </p>
                 <p>With every MACH machine customers are assured that it has undergo the strict quality control, as all our engineering works are done in-house.</p>
+            -->
+                <p><Strong>Machinovate International Inc.</strong> is the Philippines' leading manufacturer and exporter of wide range of paper and board converting machines such as High Speed Computerized Slitter Rewinder and High Speed Single/Synchro-Fly Rotary Folio Sheeting Machine under the brand name, <strong>MACH</strong>. A revolutionary team that tied up with Taiwanese technology for over 2 decades of vast experienced in the field made MACH to be a reliable product. Our Products serve the need of Paper Mills, Paper Converters/Traders, and Printing Houses.</p>
+
             </div>
             <div class="col-lg-4">
-                <p>We use only the best Universal brands for all the essential parts like 
+                <p>Entering the world market, Machinovate International Inc. has actively participated in the most prestigious exhibitions associated with paper and printing industries both local and abroad.  </p>
+                <p> Seeking to provide better solutions to its' clients need, Machinovate also do various machine trading related to Pre-Press and Post Press. </p>
+                <p> Making its mark in the industry, MACH has undergone the certification process of SGS, TUV and CE. These global benchmarks of integrity and quality are testaments to MACHS's commitment to provide only the best. <p>
+                <!-- <p>We use only the best Universal brands for all the essential parts like 
                     <a href="https://www.festo.com/net/startpage/" style="color: white;">FESTO</a>, 
                     <a href="http://www.habasit.com/en/index.htm" style="color: white;">HABASIT</a>, 
                     <a href="http://www.klingelnberg.com/" style="color: white;">KLINGELNBERG</a>,
@@ -105,7 +111,7 @@
                     <a href="http://www.fag.de/content.fag.de/en/" style="color: white;">FAG</a>, 
                     <a href="http://www.skf.com/ph/index.html" style="color: white;">SKF</a> 
                     and the like. Our computerized controls use only the most advanced IPC technology by Bekhoff, Germany.</p>
-                </div>
+                </div> -->
                 <!-- <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">
                         <i class="fa fa-download"></i> Download Theme
@@ -141,12 +147,7 @@
                         <div class="modal-body">
                             <h2>Heavy Duty Surface Rewind Slitter</h2>
                             <img src="images/picture1.jpg" class="img-responsive img-centered" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            
                                 
                                 <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
@@ -170,12 +171,7 @@
                                 <h2>Sheeter</h2>
                                 
                                 <img src="images/picture2.jpg"  class="img-responsive img-centered" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                
                                     
                                     <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                                 </div>
@@ -198,12 +194,7 @@
                                 <div class="modal-body">
                                     <h2>Control Panel: BEHOFF IPC and YASKAWA Inverters</h2>
                                     <img src="images/cover-picture-3.jpg" class="img-responsive img-centered" alt="">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                   
                                         
                                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                                     </div>
